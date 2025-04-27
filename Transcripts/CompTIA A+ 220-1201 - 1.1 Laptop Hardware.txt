@@ -1,0 +1,442 @@
+the laptop has become the standard
+Computing platform for almost anyone
+who's mobile and that's mostly because
+you're able to fit so much technology
+into such a small place but there is a
+trade-off when it comes to
+troubleshooting or dealing with these
+very small components inside of a laptop
+computer it is built to very precise
+specifications and therefore it requires
+a very precise form of troubleshooting
+you'll find that certain laptops are
+much easier to work on than others some
+have been engineered so that you can get
+inside of the system and replace memory
+or storage devices other laptops are
+built so that it's very difficult to
+gain access to the inside of that device
+and even more difficult to be able to
+swap out some of those components for
+that reason you'll find that different
+laptop manufacturers will have very
+different processes for managing and
+troubleshooting their particular systems
+a good example of this is how different
+laptop manufacturers might handle
+batteries with some laptops the
+batteries are very modular and can be
+removed from the laptop and replaced
+with a different battery very very
+easily other laptops have the battery
+built into the system and it's not
+designed to be swapped out by the user
+this may make it very difficult if you
+have to swap out a battery that's in a
+system that is not designed for a
+modular battery replacement you'll
+generally find two different types of
+batteries being used in our laptops one
+is a lithium ion and the other is a
+lithium ion polymer both of these are
+designs that they don't have the
+traditional memory effect that we had
+with older battery technologies this
+means you can recharge the battery at
+any time and not worry that you're
+affecting the overall capacity of that
+particular battery you'll also find that
+different manufacturers use different
+types of battery form factors this means
+that if you need a battery for your
+laptop you need to make sure that you're
+getting exactly the right battery for
+that specific laptop model you'll find
+that if you grab a laptop battery from a
+different make model that it's not going
+to fit into the battery slot of your
+laptop with modular batteries it's very
+easy for the enduser to be able to
+remove and replace the batteries inside
+of that laptop usually they have a
+button that you can press that will pop
+out One battery and then you can slide
+another battery directly into that same
+slot if the battery is built into the
+laptop itself this type of modularity is
+not available and usually you would have
+to have a tech completely take apart the
+laptop just to replace the
+battery if you've maintained a group of
+laptops then you know one of the most
+used components on that laptop is the
+keyboard This commonly means that the
+keyboard is probably going to be swapped
+out more than any other component on
+that particular device fortunately most
+laptop manufacturers make this process
+relatively easy you can usually remove a
+bezel on the laptop or a few screws and
+the laptop keyboard will pop out as a
+single unit it very often is connected
+to the system board of the laptop using
+a ribbon cable there's usually a
+connector on the end that allows you to
+easily disconnect and then reconnect a
+new keyboard if you do have a user that
+is having problems with their laptop
+keyboard or you'd like to perform some
+Diagnostics of that keyboard you could
+plug in an external USB keyboard to see
+what the results might be this might
+allow you to work around problems that
+may exist in the laptop's primary
+keyboard and it can also help you
+troubleshoot whether the problem is with
+the hardware of the keyboard itself or
+with the operating system inside of the
+laptop laptop keyboards are designed to
+be compact so that you can fit
+everything that would be on a regular
+size keyboard inside of a very small
+space often there will be special keys
+available such as a Windows keys or a
+function key that can be used
+simultaneously with other keys on the
+laptop to perform secondary functions
+and if the laptop is wide enough you may
+find there's enough room to have numeric
+keypad built into the laptop itself
+extending the functionality of this
+portable
+platform you may find that the problem
+you're having is not with the entire
+keyboard but only with one key or key
+cap on the keyboard this means that you
+may need to replace a single key on that
+keyboard on desktop systems these keys
+are relatively robust you can work with
+them to remove a key cap and replace the
+key cap relatively easily but on a
+laptop these keys are often very fragile
+schule and you have to take special care
+to make sure that you don't damage the
+keys as you are replacing them make sure
+you follow the instructions from the
+manufacturer so that you don't damage
+anything that may be underneath that key
+cap there are different components that
+are used across different laptop
+keyboards and as you can see it's a very
+delicate device that could be very
+easily damaged so make sure you follow
+those instructions you'll have no
+problem replacing that keyboard
+component because laptops obviously have
+a relatively smaller form factor than
+something we would use on a desktop that
+means that we also have the internal
+components with a smaller form factor an
+example of this would be the memory that
+we use inside of our laptop which is a
+smaller form factor than what you would
+find on a traditional desktop
+motherboard we refer to this dual inline
+memory module in a laptop as a small
+outline dual inline memory module or
+sodm on laptops that use these sodm
+modules it's very easy to moove the
+module and replace it with a new one but
+not all laptops provide this level of
+modularity you may find that the memory
+in your laptop is soldered to the
+motherboard and is not in this modular
+form that means that you would have to
+replace the entire system board if you
+need to upgrade the memory of that
+system to add or replace memory inside
+of one of these systems there's usually
+a place where you can open up a window
+into the back of the laptop remove any
+memory that might be there or add
+additional memory in into the slots that
+are available once you push down on that
+particular module it locks in place with
+clips that are on the motherboard and
+that memory is now upgraded inside of
+that
+laptop just as our desktop computers
+have a place where we can store
+operating system files and user
+documents we have the same requirement
+for our laptop computers many of our
+older laptops will use a traditional
+hard drive or spinning drive that has
+platters to be able to store that
+information on desktop computers you may
+have seen 3 and 1/2 in drives being used
+for storage and on laptops because they
+are a smaller form factor you'll find a
+smaller storage device and that is a 2
+and 1/2 in hard drive but these days we
+have rapidly moved away from a spinning
+drive inside of a laptop computer to a
+much faster and much more reliable SSD
+or solid state drive a solid state drive
+is simply memory and it has no moving
+Parts at all this allows us to have very
+fast access to this memory and also
+provides additional reliability because
+we don't have to worry about that
+spinning Drive failing on a laptop
+device on older laptops you may see the
+SSD in that same 2 and 1/2 in form
+factor but newer laptops tend to have an
+m.2 interface which provides a much
+smaller form factor on the system board
+this also makes it a much easier
+installation because we simply need to
+plug in that m.2 interface to be able to
+have access to the data and to power up
+the drive itself with the older 2 and
+1/2 in form factor there were two
+separate connections one for data and
+one for power here's a good example of
+both of these storage Drive types the 2
+and 1/2 in form factor is on the left
+and the m.2 interface is on the right
+you can see that you have a much smaller
+form factor for the m.2 over the 2 and
+1/2 in which makes it very attractive
+for laptops and other mobile
+devices on some laptops replacing the 2
+and 1/2 in storage drive or an m .2
+Drive can be relatively easy there may
+be a cover on the back of the laptop
+that you can remove you take out a
+couple of screws on the drive and you're
+able to remove that drive very easily
+installing an m.2 Drive is often easier
+because there is a single screw where
+you can install and fasten down that
+particular m.2 Drive here's how easy it
+is to install an m.2 interface you
+simply slide in the m.2 interface card
+it goes into a specific slot that is on
+the m.2 interface itself you push it in
+so that it's able to get a good
+connection with none of this copper
+showing once you have it connected and
+then you can push it down and screw it
+into the system board so that it will
+stay in
+place installing or replacing a 2 and
+1/2 in formfactor drive is relatively
+easy there are usually a couple of
+screws that you can remove this
+technician is using a special pad that
+allows them to save those very tiny
+screws into this little area and then
+once they have that they can simply pull
+it out of the interface and now your
+Drive is free to add another drive back
+you simply reverse the process and once
+you're done installing either the 2 and
+1/2 in drive or the m.2 drive you can
+replace the cover on the top and your
+installation is
+done many users with older laptops may
+want to replace the spinning hard drive
+that's inside of that laptop with a
+solid state drive not only is this a
+more reliable form of storage it also is
+a much faster form of storage it's
+almost like upgrading getting a brand
+new laptop just by replacing a single
+component you could certainly install a
+brand new operating system on the SSD
+and then manually transfer all of the
+user documents from one device to the
+other and then install any of the
+applications that they need to use this
+is obviously much more timec consuming
+than backing up everything that's on the
+original drive and copying it over to
+the new SSD to be able to do that easily
+we may want to use specialized software
+this is usually referred to as imaging
+software or cloning software because we
+are creating an exact duplicate of the
+data from one storage drive to the new
+one many SSD manufacturers recognize
+this is a very common task and they will
+include imaging software with the SSD
+itself you could also use thirdparty
+software like the one you see here to be
+able to copy everything from one drive
+or one partition into a new drive or a
+new Partition sometimes this requires
+you to create an entire image of the
+system and you store that image on a
+separate storage device then you would
+install your new drive and then copy
+everything from that image back to the
+new drive to do this even faster you may
+be able to install both the old drive
+and the new drive at the same time and
+use that same imaging software to Simply
+image from one device to the other in
+real
+time many laptops today don't even have
+a separate wired network connection on
+the laptop itself to be able have any
+connectivity to the rest of the world
+that laptop uses some type of wireless
+connection such as 802.11 or Bluetooth
+the wireless components that provide you
+with this connectivity are usually on
+the motherboard itself but older laptops
+may have separate interface cards that
+provide this Wireless connectivity for
+example you may be using 802.11 for your
+local area network wireless connections
+inside of a building and there may be a
+mini PCI or a mini PCI Express card that
+provides that 802.11 functionality you
+can see that these cards are designed to
+be modular so you can install and
+uninstall them from the laptop system
+board these cards often have small
+connectors on them that you plug in the
+wireless antennas that are already built
+into your laptop Bluetooth is often used
+as a short range network communication
+and you'll often see it referred to as a
+pan or a personal area network Bluetooth
+allows you to connect an external Mouse
+an external keyboard or any other type
+of peripheral
+often they are provided with separate
+interface cards but most newer laptops
+also have this Bluetooth functionality
+built into the laptop system board
+itself installing these modular cards is
+very similar to the process of
+installing additional memory modules
+onto the system board there's very often
+a panel that you can remove on the back
+of the laptop and there'll be a place
+where you can install that particular
+component once you place the card in the
+laptop it usually locks down into the
+laptop with connectors that are built
+into the interface and in this
+particular case it's an 802.11 card so
+you'll need to also connect the wireless
+antenna wires you can see them down here
+with the gray and the black wire and
+they will connect to these smaller
+connectors on the interface card
+itself many of these 802.11 interfaces
+whether they are on the system board
+itself or an external card will usually
+have two separate connectors one of them
+is a main connector and the other is an
+auxiliary connector you might also find
+a third antenna being used for all of
+your Bluetooth connections these antenna
+wires commonly wrap around the outside
+of the display itself this allows you to
+get those antenna wires as high as
+possible when you open up the screen of
+your laptop and if you've ever replaced
+a laptop screen you'll notice that the
+antenna wires are coming right out of
+the bottom of that screen so that you
+can then connect them to the existing
+antenna connectors on your system board
+if you were to follow those wires you'd
+see that they would probably go behind
+your keyboard to the the system board
+itself where they are connecting to the
+802.11 and the Bluetooth antenna
+connectors many of our modern Operating
+Systems Support authentication to our
+laptop using methods other than a
+password for example you may have the
+option to use Biometrics to be able to
+unlock or gain access to your laptop
+computer these Biometrics allow you to
+use a fingerprint or face recognition
+which means that this laptop will only
+be available if you've configured your
+face or your fingerprint for that laptop
+operating system this means that you'll
+need an operating system that is able to
+use these biometric features and you'll
+need the biometric Hardware to be able
+to take advantage of that function this
+means that you may need a fingerprint
+reader on the laptop itself or you may
+need a webcam or camera built into the
+laptop that's able to do face
+recognition this type of biometric
+authentication has become relatively
+secure in recent years and you'll often
+find that using a face ID or some other
+type a fingerprint reader is a very
+secure way to lock down your laptop
+computer for example if you're running
+the Windows operating system there are
+two biometric functions available for
+authentication there's Windows hello
+face which is face recognition and
+windows hello fingerprint which allows
+you to use a fingerprint reader you may
+want to look at your laptop and see if
+you have one of those fingerprint
+readers built into the hardware itself
+so that you can use that as additional
+authentication into your laptop
+computer if you if you've ever paid for
+something at a point of sale terminal
+using your phone or your Smartwatch then
+you were using a network type known as
+NFC or near field communication NFC is a
+very short range networking function so
+usually you have to be relatively close
+often 4 cm or less just to be able to
+use that function and of course we can
+use NFC for more than just purchases at
+a point of sale terminal we can use this
+on a hospital workstation so that any
+nurse that walks up to the work station
+is able to authenticate using their
+access card or their NFC device this is
+also used for warehouses manufacturing
+shipping and receiving and anywhere that
+you may need to easily authenticate
+wirelessly if you have a laptop and
+you've used it to be in a meeting then
+you've probably taken advantage of the
+camera that is often built into the
+laptop itself it's usually right in the
+center at the very top of the screen
+this not only allows you to capture
+video to a file but you can also use it
+for real-time video on things like a
+video conference call on most laptops
+not only will you have the camera right
+in the middle but often there is a
+microphone to the left and right so that
+you're able to not only show the video
+but people are able to hear exactly what
+you're saying these built-in cameras are
+certainly convenient and allow you to
+use this functionality without carrying
+around any other equipment but if you
+find you need additional functionality
+or a higher definition camera you may
+want to use an external camera and
+attach it to the top of your laptop
+display

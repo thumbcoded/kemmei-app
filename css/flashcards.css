@@ -1,0 +1,276 @@
+/* -------- Base Layout -------- */
+body.flashcards-page {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  padding: 2rem;
+}
+
+.flashcards-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* -------- Header Bar -------- */
+.flashcards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.flashcards-header.locked {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.selectors {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.selectors label {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.selectors select,
+.selectors input[type="checkbox"] {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.back-btn,
+.settings-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* -------- Session Controls -------- */
+.session-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.session-left,
+.session-right {
+  display: flex;
+  gap: 1rem;
+}
+
+/* -------- Card Container -------- */
+.flashcard-box {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-question {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: 0.2s ease;
+}
+
+.option:hover {
+  background-color: #e2e8f0;
+}
+
+.option.selected {
+  background: #d0ebff;
+}
+
+.option.correct {
+  background: #b2f2bb;
+}
+
+.option.incorrect {
+  background: #ffa8a8;
+}
+
+/* -------- Action Buttons -------- */
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.btn:disabled {
+  background-color: #e9ecef !important;
+  color: #6c757d !important;
+  cursor: default;
+  opacity: 1;
+  box-shadow: none;
+}
+
+/* -------- Color Variants -------- */
+.btn.primary {
+  background-color: #d0ebff;
+  color: #004085;
+}
+
+.btn.abort {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.btn.exit {
+  background-color: #d4edda;
+  color: #155724;
+  border: none;
+  font-weight: 500;
+}
+
+.btn.skip {
+  background-color: #ffe9cc;
+  color: #7f4f00;
+}
+
+.btn.reset {
+  background-color: #ece0ff;
+  color: #4b006e;
+}
+
+/* -------- Utility Buttons -------- */
+.card-utils {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.utility-group .btn {
+  min-width: auto;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+}
+
+.utility-group .btn.note {
+  background-color: #fce4ec;
+  color: #880e4f;
+}
+
+.utility-group .btn.save {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+.utility-group .btn.report {
+  background-color: #fdecea;
+  color: #b71c1c;
+}
+
+/* -------- End Message -------- */
+.end-message {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* -------- Meta Info -------- */
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* -------- Floating Kanji (Optional) -------- */
+.kanji-scatter {
+  position: absolute;
+  font-size: 6rem;
+  color: rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+  animation: float 60s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+/* -------- Tooltip Styling -------- */
+.btn-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-wrapper .tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.btn-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

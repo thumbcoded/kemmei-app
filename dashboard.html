@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kemmei — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script defer src="js/dashboard.js"></script>
+</head>
+<body class="dashboard-page">
+
+  <!-- Floating kanji -->
+  <span class="kanji-scatter" style="top:5%; left:10%;">賢明</span>
+  <span class="kanji-scatter" style="top:20%; left:70%;">懸命</span>
+  <span class="kanji-scatter" style="top:50%; left:30%;">懸命</span>
+  <span class="kanji-scatter" style="top:80%; left:50%;">賢明</span>
+  <span class="kanji-scatter" style="top:65%; left:15%;">懸命</span>
+  <span class="kanji-scatter" style="top:35%; left:85%;">賢明</span>
+
+  <!-- Settings cog (optional) -->
+  <button class="settings-cog">⚙</button>
+
+  <!-- Dashboard box -->
+  <div class="dashboard">
+    <h2 id="greeting">Hello 👋</h2>
+    <p id="today-date"></p>
+    <p>🔥 Study streak: 2 day(s)</p>
+    <p>Welcome to your training zone. Pick your next move:</p>
+
+    <div class="actions">
+      <a href="flashcards.html" class="btn btn-flashcards">📘 Flashcards</a>
+      <a href="tests.html" class="btn btn-tests">📝 Practice tests</a>
+      <a href="progress.html" class="btn btn-progress">📊 Progress tracker</a>
+      <a href="admin.html" class="btn btn-admin">🛠 Admin Panel</a>
+      <a href="#" id="logout-btn" class="btn btn-logout">🔓 Log out</a>
+    </div>
+  </div>
+
+</body>
+</html>

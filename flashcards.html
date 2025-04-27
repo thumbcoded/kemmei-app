@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kemmei — Flashcards</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/flashcards.css" />
+  <script defer src="js/flashcards.js"></script>
+</head>
+<body class="flashcards-page">
+
+  <div class="flashcards-layout">
+
+    <!-- Header bar -->
+    <header class="flashcards-header">
+      <button onclick="goBack()" class="back-btn">← Dashboard</button>
+
+      <div class="selectors">
+        <label>
+          Mode:
+          <select id="mode-select">
+            <option value="simple">Simple</option>
+            <option value="test">Test</option>
+          </select>
+        </label>
+
+        <label>
+          <input type="checkbox" id="random-toggle" />
+          Randomize
+        </label>
+
+        <label>
+          Deck:
+          <select id="deck-select">
+            <option>CompTIA A+ Core 1</option>
+            <option>CompTIA A+ Core 2</option>
+            <option>CompTIA Network+</option>
+            <option>CompTIA Security+</option>
+          </select>
+        </label>
+
+        <label>
+          Domain:
+          <select id="domain-select">
+            <option>All</option>
+            <option>1.0 Mobile Devices</option>
+            <option>2.0 Networking</option>
+            <option>3.0 Hardware</option>
+            <option>4.0 Virtualization & Cloud</option>
+            <option>5.0 Troubleshooting</option>
+          </select>
+        </label>
+
+        <label>
+          Difficulty:
+          <select id="difficulty-select">
+            <option>All</option>
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+          </select>
+        </label>
+
+        <span class="future-placeholder">+ Filters</span>
+      </div>
+
+      <button class="settings-btn">⚙️</button>
+    </header>
+
+<!-- Start / Abort / Exit buttons -->
+<div class="session-controls">
+  <div class="session-left">
+    <button id="startSessionBtn" class="btn primary">Start</button>
+  </div>
+  <div class="session-right">
+    <button id="abortBtn" class="btn abort hidden">Abort</button>
+    <button id="exitBtn" class="btn exit hidden">Exit</button>
+  </div>
+</div>
+
+
+    <!-- Session progress -->
+    <div class="card-meta hidden">
+      <span id="progressCounter">Card 1 of 2</span>
+      <span id="correctCounter">Correct answers: 0 / 0</span>
+    </div>
+
+    <!-- Flashcard content -->
+    <main class="flashcard-box">
+      <div id="cardContainer" class="card-question">Loading...</div>
+      <form id="answer-form" class="card-answers"></form>
+
+      <div class="card-buttons">
+        <!-- Custom Tooltip Wrapper for Check Answer -->
+        <div class="btn-wrapper">
+          <button id="checkAnswerBtn" class="btn primary" disabled>Check answer</button>
+          <div id="check-tooltip" class="tooltip-text">Select more answers</div>
+        </div>
+
+        <!-- Custom Tooltip Wrapper for Next -->
+        <div class="btn-wrapper">
+          <button id="nextBtn" class="btn" disabled>Next</button>
+          <div id="next-tooltip" class="tooltip-text">Check answer first</div>
+        </div>
+
+        <button id="skipBtn" class="btn skip">Skip</button>
+        <button id="resetBtn" class="btn reset">Reset</button>
+      </div>
+
+      <!-- Utility buttons -->
+      <div class="card-utils hidden">
+        <div class="utility-group">
+          <button class="btn utility note">📝 Note</button>
+          <button class="btn utility save">💾 Save</button>
+          <button class="btn utility report">🚩 Report</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Completion screen -->
+    <div id="endMessage" class="hidden end-message">
+      <h2>🎉 You’ve completed the deck!</h2>
+      <p id="finalStats">Correct: 0 / 0 (0%)</p>
+      <button id="restartBtn" class="btn primary">Restart</button>
+    </div>
+
+  </div>
+
+  <!-- Dashboard redirect -->
+  <script>
+    function goBack() {
+      window.location.href = "dashboard.html";
+    }
+  </script>
+
+</body>
+</html>

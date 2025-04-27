@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kemmei Admin Panel 🛠️</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <script defer src="js/admin.js"></script>
+
+  <style>
+    .admin-panel-container {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .admin-header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .back-btn {
+      font-size: 1rem;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    #submitMessage {
+      margin-top: 0.5rem;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="admin-page">
+
+  <!-- Main content layout -->
+  <div class="admin-toggle-layout">
+
+    <!-- LEFT PANEL: Submission Form -->
+    <div class="admin-panel-container left-panel">
+
+      <div class="admin-header">
+        <div class="header-top">
+          <div class="left-header">
+            <a href="dashboard.html" class="back-btn">← Back</a>
+          </div>
+      
+          <div class="right-header">
+            <div class="backend-toggle">
+              <label class="switch">
+                <input type="checkbox" id="toggleEditor">
+                <span class="slider"></span>
+              </label>
+              <span class="backend-label">Backend Browser</span>
+            </div>
+          </div>
+        </div>
+      
+        <h1 class="header-title">
+          Kemmei Admin Panel <span class="emoji">🛠️</span>
+        </h1>
+        
+      </div>
+      
+      
+      <div class="admin-content">
+
+        <!-- JSON input -->
+        <textarea id="jsonInput" placeholder="Paste JSON here..."></textarea>
+
+        <!-- Import buttons -->
+        <div class="import-buttons">
+          <button id="importBtn">📥 Import</button>
+          <button id="clearBtn">🧹 Clear</button>
+        </div>
+
+        <!-- Card data form -->
+        <form id="cardForm">
+          <label>Topic:
+            <input id="certId" type="text" placeholder="e.g. A+_1101" />
+          </label>
+          <label>Domain ID:
+            <input id="domainId" type="text" placeholder="e.g. 3" />
+          </label>
+          <label>Domain Title:
+            <input id="domainTitle" type="text" placeholder="e.g. Hardware" />
+          </label>
+          <label>Difficulty:
+            <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+          <label for="questionType">Question Type:</label>
+          <select id="questionType">
+            <option value="multiple_choice">Multiple Choice</option>
+            <option value="select_multiple">Select Multiple</option>
+            <option value="select_all">Select All That Apply</option>
+            <option value="pbq">Performance-Based Question (PBQ)</option>
+          </select>
+          <label>Question Text:
+            <textarea id="questionText" placeholder="Enter the question..."></textarea>
+          </label>
+          <label>Options (one per line):
+            <textarea id="options" placeholder="Option A&#10;Option B"></textarea>
+          </label>
+          <label>Correct Answers (one per line):
+            <textarea id="correctAnswers" placeholder="Correct A&#10;Correct B"></textarea>
+          </label>
+          <label>Explanation:
+            <textarea id="explanation" placeholder="Why this is the right answer..."></textarea>
+          </label>
+          <label>Tags (comma-separated):
+            <input id="tags" type="text" placeholder="e.g. RAID,Storage,1101" />
+          </label>
+          <label>Status:
+            <input id="status" type="text" value="approved" />
+          </label>
+        </form>
+
+        <!-- Action buttons -->
+        <div class="card-actions">
+          <button id="addAnswerBtn">➕ Add Answer</button>
+          <button id="addImageBtn">🖼️ Add Image</button>
+          <button id="addCardBtn">✅ Add Card</button>
+          <button id="saveChangesBtn" style="display:none;">💾 Save changes</button>
+          <button id="cancelEditBtn" style="display:none;">❌ Discard</button>
+        </div>
+
+        <!-- Preview section -->
+        <h3>🧾 Card Preview:</h3>
+        <div id="cardPreviewList" class="card-preview-list"></div>
+        <p id="cardCount">Cards created: 0</p>
+
+        <!-- Submit -->
+        <button id="submitToBackendBtn">📤 Submit to Backend</button>
+        <p id="submitMessage">✔️ Card(s) submitted to backend!</p>
+
+        <!-- Export -->
+        <div class="export-buttons">
+          <button id="exportFileBtn">💾 Export to File</button>
+        </div>
+
+      </div>
+    </div>
+
+<!-- RIGHT PANEL: Browser/Editor -->
+<div class="admin-panel-container right-panel" id="editorPanel" style="display: none;">
+  <h2>🧩 Card Browser</h2>
+
+  <!-- Filters -->
+  <div class="card-browser-filters">
+    <select id="filterCert">
+      <option value="All">All titles</option>
+      <option value="220-1201">220-1201</option>
+      <option value="220-1202">220-1202</option>
+    </select>
+
+    <select id="filterDomain">
+      <option value="All">All domains</option>
+      <option value="1.1">1.1</option>
+      <option value="4.1">4.1</option>
+    </select>
+
+    <select id="filterDifficulty">
+      <option value="All">All difficulty levels</option>
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+
+    <div class="search-wrapper">
+      <input type="text" id="filterKeyword" placeholder="🔍 Search..." />
+      <span id="clearSearch" class="clear-btn" style="display: none;">×</span>
+    </div>
+
+    <div id="suggestions" class="keyword-suggestions"></div>
+  </div>
+
+  <!-- Select All + Bulk Delete -->
+  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+    <div style="display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; white-space: nowrap;">
+      <label class="select-all-wrapper">
+        <input type="checkbox" id="selectAllCheckbox" />
+        <span>Select all</span>
+      </label>
+    </div>
+  
+    <button id="bulkDeleteBtn" style="display: none; background-color: #dc3545; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer;">
+      🗑️ Delete Selected
+    </button>
+  </div>
+  
+
+  <!-- Cards Grid -->
+  <div id="cardGrid" class="card-browser-grid"></div>
+</div>
+
+
+  </div>
+</body>
+</html>

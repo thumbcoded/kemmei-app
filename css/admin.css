@@ -1,0 +1,451 @@
+body.admin-page {
+    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+    padding: 2rem;
+  }
+  
+  /* Sidebar & Layout */
+  .admin-layout {
+    display: flex;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  
+  .admin-sidebar {
+    min-width: 220px;
+    padding-top: 1rem;
+    background-color: transparent;
+  }
+  
+  .admin-main {
+    flex: 1;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Main Panel */
+  .admin-content {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Form elements */
+  textarea,
+  input,
+  select {
+    display: block;
+    width: 100%;
+    margin: 0.6rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Buttons */
+  button {
+    margin-right: 10px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Back link */
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .back-btn:hover {
+    text-decoration: underline;
+  }
+  
+  /* Import buttons */
+  #importBtn,
+  #clearBtn {
+    background-color: #007bff;
+  }
+  
+  .import-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Card actions */
+  .card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-actions button {
+    background-color: #17a2b8;
+  }
+  
+  /* Card preview grid */
+  .card-preview-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .card-preview {
+    background: #f8f9fa;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 260px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 0.9rem;
+  }
+  
+  .card-preview h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-preview p {
+    font-size: 0.85rem;
+    margin: 0.2rem 0;
+  }
+  
+  /* Export buttons */
+  .export-buttons {
+    margin-top: 1.5rem;
+  }
+  
+  .export-buttons button {
+    background-color: #28a745;
+  }
+  .admin-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* <-- Force it to fill full row */
+  }  
+  
+  .left-header {
+    display: flex;
+    align-items: center;
+  }
+  .right-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Add breathing room */
+  }
+  
+  .backend-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .header-title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  
+  .emoji {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+  
+  
+  
+  /* Switch styling (you already mostly have this) */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 34px;
+  }
+  
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+  }
+  
+  .switch input:checked + .slider {
+    background-color: #28a745;
+  }
+  
+  .switch input:checked + .slider::before {
+    transform: translateX(22px);
+  }
+  
+  
+  /* Center the admin panel with a max-width */
+  .admin-panel-container {
+    width: 50%;
+    min-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }  
+  .admin-toggle-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .right-panel {
+    flex: 1;
+    min-width: 450px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    overflow-y: auto; /* Allow vertical scroll only if needed */
+    overflow-x: hidden; /* Force NO horizontal scrolling */
+    height: auto; /* Unlimited vertical growth */
+    max-height: none; /* Remove any max-height cap */
+  }
+  
+  
+  .switch-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 34px;
+  }
+  
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+  }
+  
+  .switch input:checked + .slider {
+    background-color: #28a745;
+  }
+  
+  .switch input:checked + .slider::before {
+    transform: translateX(22px);
+  }
+  .card-browser-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-browser-filters select,
+  .card-browser-filters input {
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    min-width: 140px;
+  }
+  
+  /* Card thumbnails */
+  .card-browser-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card-thumb {
+    background: #f8f9fa;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+  }
+  
+  .card-thumb .question-text {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .card-thumb .meta {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-thumb button {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .card-thumb button.edit-card {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .card-thumb button.delete-card {
+    background-color: #dc3545;
+    color: white;
+  }
+  .keyword-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .keyword-suggestions .chip {
+    background-color: #e0f7fa;
+    color: #007bff;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .keyword-suggestions .chip:hover {
+    background-color: #c4eaf0;
+  }
+  .search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  #filterKeyword {
+    flex: 1;
+    padding-right: 2rem; /* leave space for the X */
+  }
+  
+  .clear-btn {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.2s;
+  }
+  
+  .clear-btn:hover {
+    color: #555;
+  }
+  .select-all-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .select-all-wrapper:hover {
+    background-color: #f1f1f1;
+  }
+  .edit-card, .delete-card {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Optional: card background soft change */
+  .card-thumb.selected {
+    background-color: #f0f8ff;
+    transition: background-color 0.2s;
+  }
+  
