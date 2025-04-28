@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const abortBtn = document.getElementById("abortBtn");
   const exitBtn = document.getElementById("exitBtn");
   const headerBar = document.querySelector(".flashcards-header");
-
+  const cardCountDisplay = document.getElementById("cardCountDisplay");
   const cardContainer = document.getElementById("cardContainer");
   const answerForm = document.getElementById("answer-form");
   const checkBtn = document.getElementById("checkAnswerBtn");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardUtils = document.querySelector(".card-utils");
   const progressCounter = document.getElementById("progressCounter");
   const correctCounter = document.getElementById("correctCounter");
-
+  const randomToggle = document.getElementById("random-toggle");
   const checkTooltip = document.getElementById("check-tooltip");
   const nextTooltip = document.getElementById("next-tooltip");
 
@@ -26,26 +26,40 @@ document.addEventListener("DOMContentLoaded", () => {
   let correctCount = 0;
 
   async function fetchCards() {
-    const deck = document.getElementById("deck-select").value;
-    const domain = document.getElementById("domain-select").value;
-    const difficulty = document.getElementById("difficulty-select").value;
-
+    const deck = document.getElementById("deck-select").value.trim();
+    const domain = document.getElementById("domain-select").value.trim();
+    const difficulty = document.getElementById("difficulty-select").value.trim();
+  
+    console.log("🔎 Fetching cards with:", { deck, domain, difficulty });
+  
     const certMap = {
       "CompTIA A+ Core 1": "220-1201",
-      "CompTIA A+ Core 2": "220-1202"
+      "CompTIA A+ Core 2": "220-1202",
+      "CompTIA Network+": "N10-009",
+      "CompTIA Security+": "SY0-701"
     };
-
+  
     const query = new URLSearchParams();
-    if (certMap[deck]) query.append("cert_id", certMap[deck]);
-    if (!domain.startsWith("All")) query.append("domain_id", domain.split(" ")[0]);
-    if (difficulty !== "All") query.append("difficulty", difficulty.toLowerCase());
-
+    if (deck && certMap[deck]) {
+      query.append("cert_id", certMap[deck]);
+    }
+    if (domain && domain !== "All" && !domain.startsWith("All")) {
+      const domainValue = domain.split(" ")[0]; // Extract "3.0" from "3.0 Hardware"
+      query.append("domain_id", domainValue);
+    }
+    if (difficulty && difficulty !== "All") {
+      query.append("difficulty", difficulty.toLowerCase());
+    }
+  
     const url = `http://localhost:3000/api/cards?${query.toString()}`;
+    console.log("🌎 Querying URL:", url);
+  
     const res = await fetch(url);
     const data = await res.json();
-
+  
+    console.log("📥 Received data:", data);
+  
     questions = data.map(card => {
-      console.log("📥 Loaded card from backend:", card);
       return {
         question: card.question_text,
         options: shuffleArray(card.answer_options || card.options || []),
@@ -58,15 +72,46 @@ document.addEventListener("DOMContentLoaded", () => {
         type: card.question_type
       };
     });
+  
+    console.log("🗂️ Updated questions array:", questions);
+  }
+  
+
+  async function fetchCardsAndUpdateCount() {
+    await fetchCards();
+    updateCardCount();
   }
 
-  async function startSession() {
-    await fetchCards();
+  function updateCardCount() {
+    cardCountDisplay.textContent = `Cards: ${questions.length}`;
+    console.log("🆙 Updated card count display:", questions.length);
+  
+    if (questions.length === 0) {
+      startBtn.disabled = true;
+      randomToggle.disabled = true;
+      randomToggle.checked = false; // uncheck shuffle when disabled
+    } else if (questions.length === 1) {
+      startBtn.disabled = false;
+      randomToggle.disabled = true;
+      randomToggle.checked = false;
+    } else {
+      startBtn.disabled = false;
+      randomToggle.disabled = false;
+    }
+  }
+  
 
+  document.getElementById("deck-select").addEventListener("change", fetchCardsAndUpdateCount);
+  document.getElementById("domain-select").addEventListener("change", fetchCardsAndUpdateCount);
+  document.getElementById("difficulty-select").addEventListener("change", fetchCardsAndUpdateCount);
+
+  async function startSession() {
     if (questions.length === 0) {
       alert("No cards found for this deck/domain/difficulty.");
       return;
     }
+
+    cardCountDisplay.style.display = "none"; 
 
     startBtn.classList.add("hidden");
     abortBtn.classList.remove("hidden");
@@ -99,13 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const maxSelections = q.required;
 
         if (q.required === 1) {
-          // For multiple_choice
           answerForm.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
           div.classList.toggle("selected");
         } else {
-          // For select_multiple
           if (isSelected) {
-            div.classList.remove("selected"); // Allow deselect
+            div.classList.remove("selected");
           } else if (selectedCount < maxSelections) {
             div.classList.add("selected");
           }
@@ -136,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let isReady = false;
   
     if (q.type === "select_all") {
-      isReady = selectedCount > 0; // allow any number ≥1
+      isReady = selectedCount > 0;
     } else if (q.required === 1) {
       isReady = selectedCount === 1;
     } else {
@@ -147,7 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
     checkBtn.classList.toggle("primary", isReady);
     checkTooltip.style.display = isReady ? "none" : "block";
   }
-  
 
   function updateMeta() {
     progressCounter.textContent = `Card ${currentIndex + 1} of ${questions.length}`;
@@ -244,10 +286,13 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(({ value }) => value);
   
     if (allOfTheAbove) {
-      shuffled.push(allOfTheAbove); // always last
+      shuffled.push(allOfTheAbove);
     }
   
     return shuffled;
   }
-  
+
+  // 🆕 Important: Fetch immediately when page loads
+  fetchCardsAndUpdateCount();
+
 });

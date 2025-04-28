@@ -14,64 +14,70 @@
 
     <!-- Header bar -->
     <header class="flashcards-header">
-      <button onclick="goBack()" class="back-btn">← Dashboard</button>
-
-      <div class="selectors">
-        <label>
-          Mode:
-          <select id="mode-select">
-            <option value="simple">Simple</option>
-            <option value="test">Test</option>
-          </select>
-        </label>
-
-        <label>
-          <input type="checkbox" id="random-toggle" />
-          Randomize
-        </label>
-
-        <label>
-          Deck:
-          <select id="deck-select">
-            <option>CompTIA A+ Core 1</option>
-            <option>CompTIA A+ Core 2</option>
-            <option>CompTIA Network+</option>
-            <option>CompTIA Security+</option>
-          </select>
-        </label>
-
-        <label>
-          Domain:
-          <select id="domain-select">
-            <option>All</option>
-            <option>1.0 Mobile Devices</option>
-            <option>2.0 Networking</option>
-            <option>3.0 Hardware</option>
-            <option>4.0 Virtualization & Cloud</option>
-            <option>5.0 Troubleshooting</option>
-          </select>
-        </label>
-
-        <label>
-          Difficulty:
-          <select id="difficulty-select">
-            <option>All</option>
-            <option>Easy</option>
-            <option>Medium</option>
-            <option>Hard</option>
-          </select>
-        </label>
-
-        <span class="future-placeholder">+ Filters</span>
+      <div class="header-left">
+        <button onclick="goBack()" class="back-btn">← Dashboard</button>
       </div>
-
-      <button class="settings-btn">⚙️</button>
+    
+      <div class="header-center">
+        <div class="selectors">
+          <label>
+            Mode:
+            <select id="mode-select">
+              <option value="simple">Simple</option>
+              <option value="test">Test</option>
+            </select>
+          </label>
+    
+          <label>
+            Deck:
+            <select id="deck-select">
+              <option selected>CompTIA A+ Core 1</option>
+              <option>CompTIA A+ Core 2</option>
+              <option>CompTIA Network+</option>
+              <option>CompTIA Security+</option>
+            </select>
+          </label>
+    
+          <label>
+            Domain:
+            <select id="domain-select">
+              <option>All</option>
+              <option selected>1.0 Mobile Devices</option>
+              <option>2.0 Networking</option>
+              <option>3.0 Hardware</option>
+              <option>4.0 Virtualization & Cloud</option>
+              <option>5.0 Troubleshooting</option>
+            </select>
+          </label>
+    
+          <label>
+            Difficulty:
+            <select id="difficulty-select">
+              <option>All</option>
+              <option selected>Easy</option>
+              <option>Medium</option>
+              <option>Hard</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    
+      <div class="header-right">
+        <!-- Empty for now -->
+      </div>
     </header>
+    
 
 <!-- Start / Abort / Exit buttons -->
 <div class="session-controls">
-  <div class="session-left">
+  <div class="session-left" style="display: flex; align-items: center; gap: 1rem;">
+    <div id="cardCountDisplay">Cards: 0</div>
     <button id="startSessionBtn" class="btn primary">Start</button>
+      <label style="display: flex; align-items: center; gap: 0.5rem;">
+      <input type="checkbox" id="random-toggle" />
+      Shuffle
+    </label>
+
   </div>
   <div class="session-right">
     <button id="abortBtn" class="btn abort hidden">Abort</button>

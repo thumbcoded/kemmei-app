@@ -24,6 +24,17 @@ body.flashcards-page {
   color: white;
 }
 
+.header-left, .header-center, .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-center {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+
 .flashcards-header.locked {
   opacity: 0.5;
   pointer-events: none;
@@ -273,4 +284,28 @@ body.flashcards-page {
 .btn-wrapper:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+#cardCountDisplay {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.back-btn {
+  background: none;
+  border: 1px solid white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+  background-color: white;
+  color: #007bff;
 }

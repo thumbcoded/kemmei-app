@@ -26,12 +26,26 @@ app.get("/", (req, res) => {
   res.send("Kemmei backend is up and running! 🚀");
 });
 
-// Get all cards
+// 🛠 Get filtered cards
 app.get("/api/cards", async (req, res) => {
   try {
-    const cards = await Card.find().limit(50);
+    const { cert_id, domain_id, difficulty } = req.query;
+    const filter = {};
+
+    if (cert_id) {
+      filter.cert_id = { $in: [cert_id] }; // cert_id is an array in the Card model
+    }
+    if (domain_id) {
+      filter.domain_id = domain_id;
+    }
+    if (difficulty) {
+      filter.difficulty = difficulty.toLowerCase(); // enforce lowercase for matching
+    }
+
+    const cards = await Card.find(filter).limit(50);
     res.json(cards);
   } catch (err) {
+    console.error("❌ Error fetching cards:", err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
