@@ -1,0 +1,320 @@
+0:02
+with every person you know and everyone
+0:04
+in your organization walking around with
+0:06
+a phone a tablet or even both of those
+0:09
+we need to have different ways to be
+0:10
+able to connect these devices back to
+0:13
+the computers and networks that we
+0:15
+normally use and of course it seems that
+0:17
+each device has a different way of
+0:19
+connecting and communicating back to
+0:21
+your computer in this video we'll look
+0:23
+at wired connectivity Wireless
+0:25
+connectivity and all of the different
+0:27
+standards and options that you might
+0:28
+have available on today's mobile devices
+0:31
+you'll find that these connections that
+0:33
+we use for these mobile devices are used
+0:35
+for more than simply charging the
+0:37
+battery we often might use them for
+0:39
+connectivity and synchronization of the
+0:41
+data on these devices you might want to
+0:43
+back up what's on that device or use it
+0:46
+as a way to identify that the device is
+0:48
+really
+0:49
+yours one of the most common ways to
+0:51
+connect these mobile devices is using
+0:54
+USB or the universal serial bus these
+0:57
+are standard connections that we've used
+0:59
+for years and years and of course the
+1:01
+connectors themselves have changed a bit
+1:03
+as time has gone on you'll find that
+1:06
+there are different types of connections
+1:08
+for USB for older devices you may find
+1:10
+the mini and micro USB plugs are very
+1:13
+popular these were certainly used on
+1:15
+older mobile devices but you may find
+1:18
+even devices in use today are still
+1:20
+using these very specific USB types you
+1:23
+may find of course that our mobile
+1:24
+devices are getting smaller and smaller
+1:27
+but these interfaces are made for a much
+1:29
+larger style of interface and although
+1:32
+many of our modern devices have migrated
+1:34
+away from the micro b plug or the mini B
+1:37
+plug you may still use the USB type a
+1:40
+connection to plug into your Computing
+1:42
+device like your desktop computer or
+1:44
+your laptop computer more modern devices
+1:47
+are still using the universal serial bus
+1:50
+but they're using a newer version
+1:51
+referred to as
+1:53
+USBC this describes this physical
+1:55
+connection of a USBC plug inside of this
+1:58
+connection are 24 pins and they have the
+2:02
+same style of connection regardless of
+2:04
+how you might plug it in this can easily
+2:06
+replace the older USB 2.0 connection all
+2:10
+the way up to the latest standard of USB
+2:13
+and we can even put different types of
+2:15
+signals on this wire even though they
+2:17
+are all using the same type of connector
+2:19
+as its physical interface for example
+2:22
+you might find that this USB connection
+2:24
+is used for more than just serial
+2:26
+connectivity you could see display port
+2:28
+HDMI and Thunderbolt all can use that
+2:31
+single connector to be able to transmit
+2:33
+video data and other information USBC
+2:37
+was designed to be a connector that's
+2:39
+easy to use because you can plug it in
+2:41
+in any orientation and it also supports
+2:44
+a higher speed than the older USB style
+2:46
+connectors that we used to
+2:48
+use if you're using an older mobile
+2:50
+device used by Apple you may not be
+2:52
+using a USB connection you may instead
+2:55
+be using a proprietary connection from
+2:57
+Apple known as a lightning connector
+3:00
+this lightning connector has eight pins
+3:02
+and it's commonly used for older iPhone
+3:04
+and iPad devices lightning was
+3:07
+introduced to resolve a number of
+3:08
+problems with the older USB connection
+3:11
+standard for example it supported a
+3:13
+higher power output so it could charge
+3:15
+your phones and your tablets a little
+3:16
+bit faster it can be inserted either way
+3:19
+so you don't have to keep moving the
+3:20
+connector back and forth and up and down
+3:22
+to try to find the right connection and
+3:24
+this relatively simple design made it
+3:26
+easy to be able to use this across many
+3:28
+different devices the challenge of
+3:30
+course is that you might be using or
+3:32
+supporting a number of different mobile
+3:34
+devices from a number of different
+3:36
+manufacturers so you may be walking
+3:38
+around with a lot of different connector
+3:39
+types and cables inside of your bag just
+3:42
+to be able to support all of these
+3:44
+different components this might change
+3:46
+going forward as we move towards a
+3:48
+single USBC connector type instead of
+3:50
+using these many and very different
+3:54
+connections if you want to communicate
+3:56
+wirelessly there are also a number of
+3:58
+options available on your mobile device
+3:59
+one of those options is NFC or near
+4:02
+field communication NFC is commonly used
+4:05
+to transmit a little bit of data over a
+4:08
+very short connection NFC is often built
+4:10
+into your phone your tablet and your
+4:12
+Smartwatch and it's often used as
+4:14
+payment systems for paying something at
+4:16
+a point of sale terminal or you might
+4:18
+use it as identification to be able to
+4:20
+gain access through a particular door or
+4:23
+to be able to transfer information from
+4:25
+one phone to another some organizations
+4:28
+might have a sensor on on the wall and
+4:30
+they use NFC in a watch or phone to be
+4:33
+able to act as an access control so
+4:35
+instead of walking around with an ID
+4:37
+card or a separate access card you could
+4:39
+simply use the phone that you're
+4:41
+carrying
+4:42
+anyway if you're using wireless headsets
+4:45
+or wireless keyboards and mice then
+4:47
+you're probably using Bluetooth
+4:49
+Bluetooth allows us to connect devices
+4:51
+over a high-speed Network at relatively
+4:53
+short distances often we refer to this
+4:56
+as a personal area network or a pan this
+4:59
+is is commonly used for devices that we
+5:01
+would personally use on that mobile
+5:03
+device things like tethering your
+5:05
+smartphone to be able to connect
+5:06
+wirelessly or using it to connect
+5:08
+wireless headphones or headsets all of
+5:11
+these types of Bluetooth Communications
+5:13
+are designed for the individual although
+5:15
+it is possible to connect multiple
+5:17
+phones and devices together using this
+5:19
+Bluetooth networking
+5:21
+technology another useful mobile
+5:23
+connection type is to use your mobile
+5:25
+phone as an internet router if we have
+5:28
+many people connecting to our mobile
+5:30
+phone for internet access we refer to
+5:32
+that as a hotspot if we simply have one
+5:35
+device that is connecting to this mobile
+5:37
+phone and that is the only device that's
+5:38
+able to use that phone we often refer to
+5:41
+that as tethering this is functionality
+5:43
+that's commonly associated with the
+5:45
+software in your phone and the
+5:47
+capabilities from your phone provider so
+5:49
+you may want to contact your mobile
+5:51
+provider for your telephone and find out
+5:53
+if a hotspot functionality is something
+5:55
+that you can use on your mobile device

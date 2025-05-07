@@ -1,0 +1,441 @@
+
+0:02
+if you have an organization and you need
+0:03
+to manage all of the mobile phones used
+0:06
+in the organization then you need a
+0:08
+mobile device manager or MDM this allows
+0:12
+you to manage devices that may be owned
+0:14
+by your company or devices that are
+0:16
+personally owned this would be a b yod
+0:19
+where someone is bringing their own
+0:21
+device to use at work when that occurs
+0:24
+you need some way to be able to
+0:26
+centrally manage all of your mobile
+0:28
+devices from one place this is a
+0:31
+relatively specialized function and so
+0:33
+you need specialized software to be able
+0:35
+to do this an MDM allows you as the
+0:37
+system administrator to set certain
+0:39
+rules and parameters on how these mobile
+0:41
+devices are used so you could set
+0:43
+policies on which applications are
+0:45
+allowed or not allowed you can configure
+0:48
+or disable functionality of things like
+0:50
+your camera or GPS and effectively
+0:53
+control almost every aspect of these
+0:56
+mobile devices this also allows you as a
+0:59
+company to set up a partitioned area on
+1:02
+someone's personal phone for use by the
+1:05
+organization this allows your users to
+1:07
+have their own private data that is
+1:09
+protected and private to them and have a
+1:11
+different part of the phone that is
+1:13
+partitioned off just for corporate data
+1:16
+and from a security perspective you can
+1:18
+require the use of certain security
+1:20
+policies for example you may require
+1:22
+everyone in your organization to use
+1:24
+screen locks and those screen locks need
+1:26
+to have a personal identification number
+1:28
+or other type of access in order to
+1:31
+unlock that phone BYOD is a interesting
+1:35
+challenge for organizations this of
+1:37
+course stands for bring your own device
+1:39
+you may see this also referred to as
+1:41
+bring your own technology the employee
+1:44
+owns the phone and since they already
+1:46
+have a phone that simplifies things for
+1:48
+the employee so that they don't have to
+1:49
+carry around two different mobile
+1:51
+devices but we need to have some way to
+1:54
+protect the company data that is stored
+1:56
+in that phone and to make sure that all
+1:58
+the users personal information remains
+2:00
+personal and private this allows you to
+2:03
+configure from the mobile device manager
+2:05
+what part of that device is home or
+2:07
+private and what part of that device is
+2:09
+used for work purposes you can also set
+2:12
+different parameters for how the data is
+2:14
+protected on that device and you also
+2:16
+need to set policies on what happens to
+2:18
+the data on that device if the phone is
+2:21
+upgraded traded in or if the phone is
+2:24
+lost some organizations don't allow user
+2:27
+phones to be used inside of the company
+2:30
+instead the company will provide the
+2:32
+phones through cope this is corporate
+2:34
+owned personally enabled the company
+2:38
+purchases the phone they assign that
+2:40
+phone to a user and then they manage
+2:42
+that as a corporate device although the
+2:44
+corporation does have full control of
+2:46
+that device in many organizations they
+2:48
+allow the user to use it as a personal
+2:51
+device as well since the company is
+2:53
+purchased the phone they have complete
+2:55
+control over the phone and they manage
+2:57
+every aspect of how that particular
+2:59
+device managed this is very similar to
+3:02
+how organizations might manage laptops
+3:04
+desktops and other Computing devices the
+3:07
+company determines how information is
+3:09
+stored on the device what type of
+3:11
+information is stored on the device or
+3:13
+perhaps more importantly what happens to
+3:15
+that data if the device is changed out
+3:18
+or if the device is lost some
+3:20
+organizations will add some flexibility
+3:22
+to the process and allow the user to
+3:25
+choose from a selection of devices we
+3:28
+refer to that as CYO or choose your own
+3:32
+device having management of all of your
+3:34
+mobile devices from a central MDM policy
+3:37
+screen provides a lot of flexibility and
+3:40
+saves a lot of time for example you can
+3:42
+configure your Corporate email settings
+3:44
+on the mobile device manager that's
+3:46
+pushed down to everyone's phone and so
+3:49
+they don't have to make any changes at
+3:51
+all to gain access to their inbox they
+3:53
+simply turn on their phone and
+3:55
+everything works as it should the
+3:57
+security team may decide that they would
+3:59
+like additional Security on these mobile
+4:01
+devices since they are outside of the
+4:03
+company and can be lost easily so they
+4:05
+may require things like two-factor
+4:07
+authentication and they can specify what
+4:10
+type of multiactor authentication they
+4:12
+would like and from the MDM you can
+4:14
+determine what applications are allowed
+4:17
+on that device if there are certain
+4:18
+applications that are forbidden to be
+4:20
+installed on that device and you can
+4:22
+even push those applications to be
+4:24
+installed
+4:26
+automatically here's a view from an MDM
+4:28
+console we can see that we are looking
+4:30
+at a number of devices inside of the
+4:32
+organization we can see the device name
+4:35
+the platform that it uses we can see
+4:37
+usernames associated with that phone and
+4:39
+even know the email and contact
+4:41
+information for the phone and if you
+4:43
+need the IMI which is a unique
+4:46
+identifier that's also listed in the
+4:48
+mobile device manager you can drill down
+4:51
+on one of those devices to get more
+4:52
+information about it for example this is
+4:54
+an Apple iOS device specifically an
+4:57
+iPhone 13 you can see the version of I
+4:59
+OS that's being used we also have
+5:01
+information about the operating system
+5:03
+running on that device different device
+5:05
+Security Options that may be enabled or
+5:07
+disabled and you can see the network
+5:09
+summary that's currently in use for that
+5:11
+particular unit if we click over on the
+5:13
+restrictions tab you can see all of the
+5:16
+settings that you can enable or disable
+5:19
+since you are the manager of this
+5:21
+particular phone you can enable or
+5:23
+disable the camera FaceTime you can
+5:25
+change if voice dialing is enabled or
+5:27
+disabled if you want to get rid of Siri
+5:30
+you can turn that off inside of the MDM
+5:32
+and different Security Options printing
+5:34
+options and application options are also
+5:37
+configured from this restriction
+5:40
+screen the MDM also allows you to
+5:43
+configure how this device will be
+5:44
+synchronized over the air since these
+5:46
+devices are rarely plugged into a
+5:49
+central facility we need some way to
+5:51
+back up the data that's being stored on
+5:53
+these mobile phones some of these
+5:55
+settings are already preconfigured for
+5:57
+example your telephone information and
+5:59
+message mesages is something that we
+6:00
+know will always be configured and set
+6:03
+up on these devices but different
+6:05
+organizations might use different types
+6:07
+of email one organization might use
+6:09
+Gmail another organization might use
+6:11
+Microsoft Outlook each organization does
+6:14
+things a different way with different
+6:16
+settings and so the MDM allows you to
+6:18
+have all of those configured in one
+6:20
+central place it also allows you to turn
+6:22
+on how the data will be synchronized you
+6:25
+can specify whether data will be
+6:27
+synchronized over the Wi-Fi network only
+6:29
+or if it will use the cellular network
+6:31
+as well this is also important for
+6:33
+understanding how this data will also be
+6:35
+restored if this device fails is damaged
+6:38
+or you need to replace it you can also
+6:41
+get into the granular settings of the
+6:43
+synchronization for example you can
+6:45
+specify what specific types of data will
+6:48
+be synchronized will we synchronize
+6:50
+calendar settings will we synchronize
+6:52
+contact details and we may want to even
+6:54
+change how the data is going to be
+6:56
+synchronized at different times of the
+6:59
+day for example some organizations may
+7:01
+not want to use the cellular network due
+7:03
+to cost limitations maybe you can only
+7:06
+synchronize this data if it's on an
+7:08
+802.11 or local network fortunately most
+7:12
+of our mobile devices have settings
+7:14
+where we can specify how much of this
+7:16
+cellular network can be used and for
+7:18
+what purposes you want to check with the
+7:20
+contract that you have with your
+7:22
+cellular provider to see how much data
+7:24
+would be allowed over this network and
+7:27
+at what particular time and you as the
+7:29
+the administrator could configure for
+7:31
+example if automatic downloads are
+7:33
+configured and if they are configured
+7:35
+what size applications can be downloaded
+7:38
+over the mobile
+7:39
+network when you're setting up business
+7:42
+applications on these devices you're
+7:44
+often configuring things like Outlook
+7:46
+email cloud storage and other services
+7:49
+you would commonly set those up in the
+7:51
+account setting of that device where you
+7:53
+would need to provide a username a
+7:56
+password or some other type of
+7:58
+authentication Factor from there you can
+8:00
+get even more granular control over
+8:02
+exactly what will be synchronized and
+8:04
+you can choose mail contacts calendars
+8:07
+reminders notes or other settings you
+8:09
+can also set this up to be different
+8:11
+from other services so your
+8:13
+synchronization settings for Microsoft
+8:15
+Exchange might be very different than
+8:17
+the synchronizations that you configure
+8:19
+for Google Mail

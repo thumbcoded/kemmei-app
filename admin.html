@@ -8,7 +8,6 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/admin.css" />
-  <script defer src="js/admin.js"></script>
 
   <style>
     .admin-panel-container {
@@ -76,8 +75,10 @@
         </h1>
         
       </div>
-      
-      
+
+<div id="globalMessageArea" class="system-message hidden"></div> <!-- GLOBAL MSG AREA -->
+
+
       <div class="admin-content">
 
         <!-- JSON input -->
@@ -89,17 +90,51 @@
           <button id="clearBtn">🧹 Clear</button>
         </div>
 
-        <!-- Card data form -->
-        <form id="cardForm">
-          <label>Topic:
-            <input id="certId" type="text" placeholder="e.g. A+_1101" />
-          </label>
-          <label>Domain ID:
-            <input id="domainId" type="text" placeholder="e.g. 3" />
-          </label>
-          <label>Domain Title:
-            <input id="domainTitle" type="text" placeholder="e.g. Hardware" />
-          </label>
+<!-- Card data form -->
+
+<!-- Title -->
+<label for="certIdInput">Title:</label>
+<div id="certIdInputGroup" class="inline-input-group" style="display: none; gap: 0.5rem;">
+  <input id="certIdInput" type="text" placeholder="Short ID (e.g., 220-1201)" />
+  <input id="certTitleInput" type="text" placeholder="Enter title name (e.g., CompTIA A+)" />
+  <button type="button" class="save-btn" id="saveCertBtn">✔</button>
+  <button type="button" class="cancel-btn" id="cancelCertBtn">✖</button>
+</div>
+<div id="certIdSelectGroup" class="inline-input-group">
+  <select id="certIdSelect">
+    <option value="">Select a title...</option>
+  </select>
+</div>
+
+<!-- Domain -->
+<label for="domainTitleInput">Domain:</label>
+<div id="domainTitleSelectGroup" class="inline-input-group">
+  <select id="domainTitleSelect" disabled>
+    <option value="">Select domain...</option>
+  </select>
+</div>
+<div id="domainTitleInputGroup" class="inline-input-group" style="display: none; gap: 0.5rem;">
+  <input id="domainIdDisplay" type="text" placeholder="Auto ID" readonly style="width: 8ch;" />
+  <input id="domainTitleInput" type="text" placeholder="Enter domain name (e.g., Mobile Devices)" />
+  <button type="button" class="save-btn" id="saveDomainTitleBtn">✔</button>
+  <button type="button" class="cancel-btn" id="cancelDomainTitleBtn">✖</button>
+</div>
+
+<!-- Subdomain -->
+<label for="subdomainIdInput">Subdomain:</label>
+<div id="subdomainIdSelectGroup" class="inline-input-group">
+  <select id="subdomainIdSelect" disabled>
+    <option value="">Select subdomain...</option>
+  </select>
+</div>
+<div id="subdomainIdInputGroup" class="inline-input-group" style="display: none; gap: 0.5rem;">
+  <input id="subdomainIdDisplay" type="text" placeholder="Auto ID" readonly style="width: 8ch;" />
+  <input id="subdomainIdInput" type="text" placeholder="Enter subdomain name (e.g., Mobile device connectors)" />
+  <button type="button" class="save-btn" id="saveSubdomainIdBtn">✔</button>
+  <button type="button" class="cancel-btn" id="cancelSubdomainIdBtn">✖</button>
+</div>
+
+
           <label>Difficulty:
             <select id="difficulty">
               <option value="easy">Easy</option>
@@ -168,21 +203,18 @@
   <div class="card-browser-filters">
     <select id="filterCert">
       <option value="All">All titles</option>
-      <option value="220-1201">220-1201</option>
-      <option value="220-1202">220-1202</option>
     </select>
 
     <select id="filterDomain">
       <option value="All">All domains</option>
-      <option value="1.1">1.1</option>
-      <option value="4.1">4.1</option>
+    </select>
+
+    <select id="filterSubdomain" disabled>
+      <option value="">All Subdomains</option>
     </select>
 
     <select id="filterDifficulty">
-      <option value="All">All difficulty levels</option>
-      <option value="easy">Easy</option>
-      <option value="medium">Medium</option>
-      <option value="hard">Hard</option>
+      <option value="All">All Difficulty Levels</option>
     </select>
 
     <div class="search-wrapper">
@@ -214,5 +246,6 @@
 
 
   </div>
+  <script type="module" src="js/admin.js"></script>
 </body>
 </html>

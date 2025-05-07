@@ -10,11 +10,16 @@ const CardSchema = new mongoose.Schema({
 
   domain_id: {
     type: String,
-    required: true
+    required: true // E.g. "3.0"
   },
 
   domain_title: {
     type: String,
+    required: true
+  },
+
+  subdomain_id: {
+    type: String, // E.g. "3.2"
     required: true
   },
 

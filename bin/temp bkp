@@ -1,0 +1,139 @@
+function setupCreateNewSwitch(selectId, inputId) {
+  const select = document.getElementById(selectId);
+  const input = document.getElementById(inputId);
+  const cancelBtn = document.getElementById("cancel" + inputId.replace("Input", "") + "Btn");
+  const saveBtn = document.getElementById("save" + inputId.replace("Input", "") + "Btn");
+  const selectWrapper = document.getElementById(selectId + "Group");
+  const inputWrapper = document.getElementById(inputId + "Group");
+
+  if (!select || !input || !cancelBtn || !saveBtn || !selectWrapper || !inputWrapper) {
+    console.warn(`Missing elements for ${selectId} / ${inputId}`);
+    return;
+  }
+
+  select.addEventListener("change", () => {
+    if (select.value === "create_new") {
+      selectWrapper.style.display = "none";
+      inputWrapper.style.display = "flex";
+      input.disabled = false;
+      input.focus();
+    }
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    input.value = "";
+    inputWrapper.style.display = "none";
+    selectWrapper.style.display = "flex";
+    
+    select.selectedIndex = 0;
+  
+  });
+  
+  
+} // ✅ Close setupCreateNewSwitch here
+
+
+function populateAdminFormDropdownsFromMaps() {
+  console.log("💡 Populating form dropdowns from domainmap.js");
+  console.log("certNames:", certNames);
+  if (!certNames || typeof certNames !== "object") {
+    console.error("❌ certNames not loaded or invalid");
+    return;
+  }
+
+  const certIdSelect = document.getElementById("certIdSelect");
+  const domainTitleSelect = document.getElementById("domainTitleSelect");
+  const subdomainIdSelect = document.getElementById("subdomainIdSelect");
+
+  // Reset all
+  [certIdSelect, domainTitleSelect, subdomainIdSelect].forEach(sel => {
+    sel.innerHTML = `<option value="">Select...</option>`;
+  });
+
+  // Populate certs
+  Object.entries(certNames).forEach(([certId, label]) => {
+    const opt = document.createElement("option");
+    opt.value = certId;
+    opt.textContent = label;
+    certIdSelect.appendChild(opt);
+  });
+
+  // Add static "create new" options
+  [certIdSelect, domainTitleSelect, subdomainIdSelect].forEach(sel => {
+    const opt = document.createElement("option");
+    opt.value = "create_new";
+    opt.textContent = "➕ Create new...";
+    sel.appendChild(opt);
+  });
+
+  // Handle cert selection
+  certIdSelect.addEventListener("change", () => {
+    const selectedCert = certIdSelect.value;
+  
+    // 🛠️ Show create-new input fields
+    if (selectedCert === "create_new") {
+      document.getElementById("certIdSelectGroup").style.display = "none";
+      document.getElementById("certIdInputGroup").style.display = "flex";
+      document.getElementById("certIdInput").focus();
+      return;
+    }
+  
+    // ✅ Reset dropdowns
+    domainTitleSelect.innerHTML = `<option value="">Select domain...</option>`;
+    subdomainIdSelect.innerHTML = `<option value="">Select subdomain...</option>`;
+    domainTitleSelect.disabled = true;
+    subdomainIdSelect.disabled = true;
+  
+    if (!selectedCert || !domainMaps[selectedCert]) return;
+  
+    Object.entries(domainMaps[selectedCert]).forEach(([domainId, domainTitle]) => {
+      const opt = document.createElement("option");
+      opt.value = `${domainId} ${domainTitle}`;
+      opt.textContent = `${domainId} ${domainTitle}`;
+      domainTitleSelect.appendChild(opt);
+    });
+  
+    // ➕ Add "Create new..." option
+    const createNewOpt = document.createElement("option");
+    createNewOpt.value = "create_new";
+    createNewOpt.textContent = "➕ Create new...";
+    domainTitleSelect.appendChild(createNewOpt);
+  
+    domainTitleSelect.disabled = domainTitleSelect.options.length <= 1;
+  });
+  
+
+  // Handle domain selection → populate subdomains
+  domainTitleSelect.addEventListener("change", () => {
+    const selectedCert = certIdSelect.value;
+    const selectedValue = domainTitleSelect.value;
+    subdomainIdSelect.innerHTML = `<option value="">Select subdomain...</option>`;
+
+    if (!selectedCert || selectedValue === "create_new") {
+      subdomainIdSelect.disabled = true;
+      return;
+    }
+
+    const selectedDomain = selectedValue.split(" ")[0]; // e.g. "1.0"
+    const subMap = subdomainMaps[selectedCert]?.[selectedDomain];
+    if (!subMap) {
+      subdomainIdSelect.disabled = true;
+      return;
+    }
+
+    Object.entries(subMap).forEach(([subId, subTitle]) => {
+      const opt = document.createElement("option");
+      opt.value = subId;
+      opt.textContent = `${subId} ${subTitle}`;
+      subdomainIdSelect.appendChild(opt);
+    });
+
+    // ✅ Always append "Create new..." at the end
+    const createNew = document.createElement("option");
+    createNew.value = "create_new";
+    createNew.textContent = "➕ Create new...";
+    subdomainIdSelect.appendChild(createNew);
+
+    subdomainIdSelect.disabled = subdomainIdSelect.options.length <= 1;
+  });
+}

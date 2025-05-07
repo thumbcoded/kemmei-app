@@ -1,0 +1,115 @@
+{
+  "certNames": {
+    "2233": "calls removed",
+    "new2": "title02",
+    "001": "New test title 01",
+    "220-1201": "CompTIA A+ Core 1 (220-1201)",
+    "220-1202": "CompTIA A+ Core 2 (220-1202)",
+    "N10-009": "CompTIA Network+ (N10-009)",
+    "SY0-701": "CompTIA Security+ (SY0-701)"
+  },
+  "domainMaps": {
+    "220-1201": {
+      "1.0": "Mobile Devices",
+      "2.0": "Networking",
+      "3.0": "Hardware",
+      "4.0": "Virtualization and Cloud Computing",
+      "5.0": "Hardware and Network Troubleshooting"
+    },
+    "220-1202": {
+      "1.0": "Operating Systems",
+      "2.0": "Security",
+      "3.0": "Software Troubleshooting",
+      "4.0": "Operational Procedures"
+    },
+    "N10-009": {
+      "1.0": "Networking Concepts",
+      "2.0": "Network Implementation",
+      "3.0": "Network Operations",
+      "4.0": "Network Security",
+      "5.0": "Network Troubleshooting"
+    },
+    "SY0-701": {
+      "1.0": "General Security Concepts",
+      "2.0": "Threats, Vulnerabilities, and Mitigations",
+      "3.0": "Security Architecture",
+      "4.0": "Security Operations",
+      "5.0": "Security Program Management and Oversight"
+    }
+  },
+  "subdomainMaps": {
+    "220-1201": {
+      "1.0": {
+        "1.1": "Monitor mobile device hardware and use appropriate replacement techniques",
+        "1.2": "Compare accessories and connectivity options",
+        "1.3": "Configure mobile network connectivity and application support"
+      },
+      "2.0": {
+        "2.1": "Compare TCP and UDP ports and protocols",
+        "2.2": "Explain wireless technologies",
+        "2.3": "Summarize services provided by networked hosts"
+      },
+      "3.0": {
+        "3.1": "Compare display components and attributes",
+        "3.2": "Summarize basic cable types and connectors",
+        "3.3": "Compare RAM characteristics"
+      },
+      "4.0": {
+        "4.1": "Explain virtualization concepts",
+        "4.2": "Summarize cloud computing concepts"
+      },
+      "5.0": {
+        "5.1": "Troubleshoot motherboards, RAM, CPUs, and power",
+        "5.2": "Troubleshoot drive and RAID issues"
+      }
+    },
+    "220-1202": {
+      "1.0": {
+        "1.1": "Perform OS installations and upgrades",
+        "1.2": "Compare Windows editions",
+        "1.3": "Use Windows features and tools",
+        "1.4": "Use command-line tools",
+        "1.5": "Configure Windows settings",
+        "1.6": "Configure networking features",
+        "1.7": "Explain macOS features",
+        "1.8": "Identify Linux tools",
+        "1.9": "Install applications",
+        "1.10": "Install cloud-based tools",
+        "1.11": "Summarize OS types"
+      },
+      "2.0": {
+        "2.1": "Apply OS security settings",
+        "2.2": "Compare wireless security protocols",
+        "2.3": "Summarize malware types",
+        "2.4": "Identify threats and vulnerabilities",
+        "2.5": "Remove malware in SOHO",
+        "2.6": "Apply workstation hardening",
+        "2.7": "Secure mobile devices",
+        "2.8": "Compare disposal methods",
+        "2.9": "Apply SOHO network security",
+        "2.10": "Configure browser settings",
+        "2.11": "Summarize security measures"
+      },
+      "3.0": {
+        "3.1": "Troubleshoot Windows OS",
+        "3.2": "Troubleshoot mobile OS/apps",
+        "3.3": "Troubleshoot mobile security",
+        "3.4": "Troubleshoot PC security"
+      },
+      "4.0": {
+        "4.1": "Implement documentation",
+        "4.2": "Apply change management",
+        "4.3": "Implement backup and recovery",
+        "4.4": "Use safety procedures",
+        "4.5": "Summarize environmental controls",
+        "4.6": "Explain compliance concepts",
+        "4.7": "Demonstrate professionalism",
+        "4.8": "Explain scripting basics",
+        "4.9": "Use remote access tools",
+        "4.10": "Explain AI-related concepts"
+      }
+    },
+    "N10-009": {},
+    "SY0-701": {}
+  }
+}
