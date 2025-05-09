@@ -47,44 +47,51 @@
 
 <body class="admin-page">
 
-  <!-- Main content layout -->
-  <div class="admin-toggle-layout">
+<div style="display: flex; align-items: center; gap: 2rem; padding: 1rem 2rem; justify-content: center; flex-wrap: wrap;">
+  <a href="index.html" class="back-btn">← Back</a>
 
-    <!-- LEFT PANEL: Submission Form -->
-    <div class="admin-panel-container left-panel">
-
-<div class="admin-header" style="display: flex; align-items: center; gap: 2rem; padding: 1rem 2rem;">
-  <h1 style="margin: 0; font-size: 1.8rem; display: flex; align-items: center; gap: 1rem;">
+  <div style="font-size: 1.6rem; font-weight: bold; display: flex; align-items: center; gap: 0.5rem;">
     Kemmei Admin Panel <span class="emoji">🛠️</span>
+  </div>
 
+  <div style="display: flex; align-items: center; gap: 0.5rem;">
     <label class="switch">
       <input type="checkbox" id="toggleEditor" />
       <span class="slider"></span>
     </label>
     <span class="backend-label">Card Browser</span>
+  </div>
 
+  <div style="display: flex; align-items: center; gap: 0.5rem;">
     <label class="switch">
       <input type="checkbox" id="toggleManager" />
       <span class="slider"></span>
     </label>
     <span class="backend-label">Title Manager</span>
-  </h1>
+  </div>
 </div>
 
 
+
+<!-- Main content layout -->
+<div class="admin-toggle-layout">
+
+<!-- /////////////// CARD SUBMIT PANEL ///////////////// -->
+
+<div class="admin-panel-container left-panel">
+
 <div id="globalMessageArea" class="system-message hidden"></div> <!-- GLOBAL MSG AREA -->
 
+<div class="admin-content">
 
-      <div class="admin-content">
+<!-- JSON input -->
+<textarea id="jsonInput" placeholder="Paste JSON here..."></textarea>
 
-        <!-- JSON input -->
-        <textarea id="jsonInput" placeholder="Paste JSON here..."></textarea>
-
-        <!-- Import buttons -->
-        <div class="import-buttons">
-          <button id="importBtn">📥 Import</button>
-          <button id="clearBtn">🧹 Clear</button>
-        </div>
+<!-- Import buttons -->
+<div class="import-buttons">
+<button id="importBtn">📥 Import</button>
+<button id="clearBtn">🧹 Clear</button>
+</div>
 
 <!-- Card data form -->
 
