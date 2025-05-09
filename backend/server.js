@@ -16,7 +16,7 @@ mongoose.connect("mongodb://localhost:27017/kemmei")
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
 const Card = require("./models/card");
-const domainMapPath = path.join(__dirname, "..", "js", "domainmap.js");
+const domainMapPath = path.join(__dirname, "..", "js", "domainmap.json");
 
 // Test route
 app.get("/", (req, res) => {
@@ -97,28 +97,21 @@ app.delete("/api/cards/:id", async (req, res) => {
 // DOMAINMAP ROUTES
 // ==============================
 
-app.post("/api/add-title", async (req, res) => {
+app.post("/api/add-title", (req, res) => {
   const { _id, title } = req.body;
   if (!_id || !title) return res.status(400).json({ error: "Missing _id or title" });
 
   try {
-    let contents = fs.readFileSync(domainMapPath, "utf8");
-    const certNameRegex = /export const certNames\s*=\s*{([\s\S]*?)}/m;
-    const match = certNameRegex.exec(contents);
-    if (!match) return res.status(500).send("certNames not found");
+    const data = JSON.parse(fs.readFileSync(domainMapPath, "utf8"));
 
-    const exists = new RegExp(`["']${_id}["']:`).test(match[1]);
-    if (exists) return res.status(409).send("Title already exists");
+    if (data.certNames[_id]) return res.status(409).json({ error: "Title already exists" });
 
-    const newEntry = `  "${_id}": "${title}",\n`;
-    const updated = contents.replace(certNameRegex, (full, inner) =>
-      `export const certNames = {\n${newEntry}${inner}}`
-    );
+    data.certNames[_id] = title;
 
-    fs.writeFileSync(domainMapPath, updated, "utf8");
+    fs.writeFileSync(domainMapPath, JSON.stringify(data, null, 2));
     res.status(201).json({ success: true });
   } catch (err) {
-    console.error(err);
+    console.error("❌ Failed to update certNames:", err);
     res.status(500).json({ error: "Failed to update certNames" });
   }
 });
@@ -130,22 +123,18 @@ app.post("/api/add-domain", (req, res) => {
   }
 
   try {
-    let raw = fs.readFileSync(domainMapPath, "utf8");
-    const domainRegex = /export const domainMaps\s*=\s*({[\s\S]*?});/m;
-    const match = domainRegex.exec(raw);
-    if (!match) return res.status(500).send("domainMaps not found");
+    const data = JSON.parse(fs.readFileSync(domainMapPath, "utf8"));
 
-    const obj = eval(`(${match[1]})`);
-    if (!obj[cert_id]) obj[cert_id] = {};
-    obj[cert_id][domain_id] = domain_title;
+    if (!data.domainMaps[cert_id]) {
+      data.domainMaps[cert_id] = {};
+    }
 
-    const newBlock = `export const domainMaps = ${JSON.stringify(obj, null, 2)};`;
-    const updated = raw.replace(domainRegex, newBlock);
-    fs.writeFileSync(domainMapPath, updated, "utf8");
+    data.domainMaps[cert_id][domain_id] = domain_title;
 
+    fs.writeFileSync(domainMapPath, JSON.stringify(data, null, 2));
     res.json({ success: true });
   } catch (err) {
-    console.error("Failed to update domain:", err);
+    console.error("❌ Failed to update domain:", err);
     res.status(500).json({ error: "Failed to update domain" });
   }
 });
@@ -157,24 +146,34 @@ app.post("/api/add-subdomain", (req, res) => {
   }
 
   try {
-    let raw = fs.readFileSync(domainMapPath, "utf8");
-    const subdomainRegex = /export const subdomainMaps\s*=\s*({[\s\S]*?});/m;
-    const match = subdomainRegex.exec(raw);
-    if (!match) return res.status(500).send("subdomainMaps not found");
+    const data = JSON.parse(fs.readFileSync(domainMapPath, "utf8"));
 
-    const obj = eval(`(${match[1]})`);
-    if (!obj[cert_id]) obj[cert_id] = {};
-    if (!obj[cert_id][domain_id]) obj[cert_id][domain_id] = {};
-    obj[cert_id][domain_id][sub_id] = sub_title;
+    if (!data.subdomainMaps[cert_id]) {
+      data.subdomainMaps[cert_id] = {};
+    }
 
-    const newBlock = `export const subdomainMaps = ${JSON.stringify(obj, null, 2)};`;
-    const updated = raw.replace(subdomainRegex, newBlock);
-    fs.writeFileSync(domainMapPath, updated, "utf8");
+    if (!data.subdomainMaps[cert_id][domain_id]) {
+      data.subdomainMaps[cert_id][domain_id] = {};
+    }
 
+    data.subdomainMaps[cert_id][domain_id][sub_id] = sub_title;
+
+    fs.writeFileSync(domainMapPath, JSON.stringify(data, null, 2));
     res.json({ success: true });
   } catch (err) {
-    console.error("Failed to update subdomain:", err);
+    console.error("❌ Failed to update subdomain:", err);
     res.status(500).json({ error: "Failed to update subdomain" });
+  }
+});
+
+app.get("/api/domainmap", (req, res) => {
+  try {
+    const raw = fs.readFileSync(domainMapPath, "utf8");
+    const json = JSON.parse(raw);
+    res.json(json);
+  } catch (err) {
+    console.error("❌ Failed to load domainmap.json:", err);
+    res.status(500).json({ error: "Failed to load domain map" });
   }
 });
 
