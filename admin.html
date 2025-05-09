@@ -53,28 +53,24 @@
     <!-- LEFT PANEL: Submission Form -->
     <div class="admin-panel-container left-panel">
 
-      <div class="admin-header">
-        <div class="header-top">
-          <div class="left-header">
-            <a href="dashboard.html" class="back-btn">← Back</a>
-          </div>
-      
-          <div class="right-header">
-            <div class="backend-toggle">
-              <label class="switch">
-                <input type="checkbox" id="toggleEditor">
-                <span class="slider"></span>
-              </label>
-              <span class="backend-label">Backend Browser</span>
-            </div>
-          </div>
-        </div>
-      
-        <h1 class="header-title">
-          Kemmei Admin Panel <span class="emoji">🛠️</span>
-        </h1>
-        
-      </div>
+<div class="admin-header" style="display: flex; align-items: center; gap: 2rem; padding: 1rem 2rem;">
+  <h1 style="margin: 0; font-size: 1.8rem; display: flex; align-items: center; gap: 1rem;">
+    Kemmei Admin Panel <span class="emoji">🛠️</span>
+
+    <label class="switch">
+      <input type="checkbox" id="toggleEditor" />
+      <span class="slider"></span>
+    </label>
+    <span class="backend-label">Card Browser</span>
+
+    <label class="switch">
+      <input type="checkbox" id="toggleManager" />
+      <span class="slider"></span>
+    </label>
+    <span class="backend-label">Title Manager</span>
+  </h1>
+</div>
+
 
 <div id="globalMessageArea" class="system-message hidden"></div> <!-- GLOBAL MSG AREA -->
 
@@ -239,13 +235,37 @@
     </button>
   </div>
   
-
   <!-- Cards Grid -->
   <div id="cardGrid" class="card-browser-grid"></div>
 </div>
 
+<!-- /////////////////// DELETE/EXPORT PANEL ////////////////////// -->
 
+<!-- THIRD PANEL: Title Manager -->
+<div class="admin-panel-container right-panel" id="managerPanel" style="display: none;">
+  <h2>🗂️ Title Manager</h2>
+
+
+
+  <!-- Built-in Titles -->
+  <h3>Built-in Titles</h3>
+  <ul id="builtinTitleList" class="title-list"></ul>
+
+  <!-- User Titles -->
+  <h3>User-created Titles</h3>
+  <ul id="userTitleList" class="title-list"></ul>
+
+    <!-- Bulk Action Buttons -->
+  <div style="margin-bottom: 1rem; display: flex; gap: 1rem;">
+    <button id="deleteSelectedBtn" style="background-color: #dc3545; color: white;">🗑️ Delete Selected</button>
+    <button id="exportAllBtn" style="background-color: #28a745; color: white;">📤 Export All User Data</button>
   </div>
-  <script type="module" src="js/admin.js"></script>
+  
+</div>
+</div>
+
+<script type="module" src="js/admin.js"></script>
+
 </body>
+
 </html>

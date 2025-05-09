@@ -139,6 +139,7 @@ app.post("/api/add-domain", (req, res) => {
   }
 });
 
+
 app.post("/api/add-subdomain", (req, res) => {
   const { cert_id, domain_id, sub_id, sub_title } = req.body;
   if (!cert_id || !domain_id || !sub_id || !sub_title) {
@@ -166,6 +167,7 @@ app.post("/api/add-subdomain", (req, res) => {
   }
 });
 
+
 app.get("/api/domainmap", (req, res) => {
   try {
     const raw = fs.readFileSync(domainMapPath, "utf8");
@@ -176,6 +178,8 @@ app.get("/api/domainmap", (req, res) => {
     res.status(500).json({ error: "Failed to load domain map" });
   }
 });
+
+
 
 app.listen(PORT, () => {
   console.log(`🧠 Kemmei API is listening at http://localhost:${PORT}`);

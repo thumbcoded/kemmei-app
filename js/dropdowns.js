@@ -17,21 +17,18 @@ function getNextSubdomainId(certId, domainId, subdomainMaps) {
   return `${domainId.split(".")[0]}.${next}`;
 }
   
-function setupCreateNewSwitch(selectId, inputId) {
-  console.log(`🧩 setupCreateNewSwitch: selectId=${selectId}, inputId=${inputId}`);
-  console.log("➡ select element:", document.getElementById(selectId));
-  console.log("➡ input element:", document.getElementById(inputId));
+function setupCreateNewSwitch({ selectId, inputId, saveBtnId, cancelBtnId }) {
+  const select = document.getElementById(selectId);
+  const input = document.getElementById(inputId);
+  const saveBtn = document.getElementById(saveBtnId);
+  const cancelBtn = document.getElementById(cancelBtnId);
+  const selectWrapper = document.getElementById(selectId + "Group");
+  const inputWrapper = document.getElementById(inputId + "Group");
 
-    const select = document.getElementById(selectId);
-    const input = document.getElementById(inputId);
-    const cancelBtn = document.getElementById("cancel" + inputId.replace("Input", "") + "Btn");
-    const saveBtn = document.getElementById("save" + inputId.replace("Input", "") + "Btn");
-    const selectWrapper = document.getElementById(selectId + "Group");
-    const inputWrapper = document.getElementById(inputId + "Group");
-  
-    if (!select || !input || !cancelBtn || !saveBtn || !selectWrapper || !inputWrapper) {
-      console.warn(`Missing elements for ${selectId} / ${inputId}`);
-      return;
+  if (!select || !input || !cancelBtn || !saveBtn || !selectWrapper || !inputWrapper) {
+    console.warn(`Missing elements for ${selectId} / ${inputId}`);
+    return;
+      
     }
   
     select.addEventListener("change", () => {
@@ -56,7 +53,7 @@ function setupCreateNewSwitch(selectId, inputId) {
 
 function populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps) {
 
-    console.log("💡 Populating form dropdowns from domainmap.js");
+    console.log("💡 Populating form dropdowns from domainmap.json");
     console.log("certNames:", certNames);
   
     const certIdSelect = document.getElementById("certIdSelect");
@@ -175,35 +172,6 @@ function populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps
   });
   
   }
-
-// DOMAIN — show input group when "Create new..." selected
-
-// domainTitleSelect.addEventListener("change", () => {
-//     if (domainTitleSelect.value === "create_new") {
-//       const certId = certIdSelect.value;
-//       const nextDomainId = getNextDomainId(certId);
-//       document.getElementById("domainIdDisplay").value = nextDomainId;
-  
-//       domainTitleSelectGroup.style.display = "none";
-//       domainTitleInputGroup.style.display = "flex";
-//       domainTitleInput.focus();
-//     }
-//   });
-  
-// subdomainIdSelect.addEventListener("change", () => {
-//   if (subdomainIdSelect.value === "create_new") {
-//     const certId = certIdSelect.value;
-//     const domainRaw = domainTitleSelect.value;
-//     const domainId = domainRaw.split(" ")[0]; // expects "1.0 Mobile Devices"
-//     const nextSubId = getNextSubdomainId(certId, domainId);
-//     document.getElementById("subdomainIdDisplay").value = nextSubId;
-
-//     subdomainIdSelectGroup.style.display = "none";
-//     subdomainIdInputGroup.style.display = "flex";
-//     subdomainIdInput.focus();
-//   }
-// });
-  
 
 function resetDropdownToDefault(selectElement) {
     if (!selectElement || selectElement.tagName !== "SELECT") {
@@ -345,9 +313,12 @@ function resetDropdownToDefault(selectElement) {
   }
   
   
-export {
+const dropdowns = {
   setupCreateNewSwitch,
   populateAdminFormDropdownsFromMaps,
   wireDomainConfirmCancelButtons,
-  wireSubdomainConfirmCancelButtons
+  wireSubdomainConfirmCancelButtons,
+  getNextSubdomainId
 };
+
+export default dropdowns;

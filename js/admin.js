@@ -1,11 +1,6 @@
 let certNames = {}, domainMaps = {}, subdomainMaps = {};
-
-import {
-  populateAdminFormDropdownsFromMaps,
-  setupCreateNewSwitch,
-  wireDomainConfirmCancelButtons,
-  wireSubdomainConfirmCancelButtons
-} from './dropdowns.js';
+import { fetchDomainMap } from './domaindelete.js';
+import dropdowns from "./dropdowns.js";
 
 async function loadDomainMap() {
   console.log("🔍 loadDomainMap called");
@@ -22,11 +17,6 @@ async function loadDomainMap() {
     console.error("❌ Failed to load domainmap.json:", err);
   }
 }
-
-// moving inside dom setupCreateNewSwitch("domainTitleSelect", "domainTitleInput");
-// setupCreateNewSwitch("subdomainIdSelect", "subdomainIdInput");
-// wireDomainConfirmCancelButtons();
-// wireSubdomainConfirmCancelButtons();
 
 let allCards = [];
 
@@ -125,14 +115,19 @@ document.addEventListener("DOMContentLoaded", () => {
     await loadDomainMap();  // ✅ wait for domain data to load
     console.log("certNames after load:", certNames);  // check it's non-empty
 
-    populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
+    dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
+
  // ✅ now safe to call
     
-    setupCreateNewSwitch("domainTitleSelect", "domainTitleInput");
-    setupCreateNewSwitch("subdomainIdSelect", "subdomainIdInput");
+dropdowns.setupCreateNewSwitch({
+  selectId: "subdomainIdSelect",
+  inputId: "subdomainIdInput",
+  saveBtnId: "saveSubdomainIdBtn",
+  cancelBtnId: "cancelSubdomainIdBtn",
+});
 
-    wireDomainConfirmCancelButtons();
-    wireSubdomainConfirmCancelButtons();
+    dropdowns.wireDomainConfirmCancelButtons();
+    dropdowns.wireSubdomainConfirmCancelButtons();
 
     console.log("📦 certNames at load:", certNames);
 
@@ -141,12 +136,34 @@ document.addEventListener("DOMContentLoaded", () => {
 const toggleEditor = document.getElementById("toggleEditor");
 const editorPanel = document.getElementById("editorPanel");
 
+const toggleManager = document.getElementById("toggleManager");
+const managerPanel = document.getElementById("managerPanel");
+
 toggleEditor.addEventListener("change", () => {
-  editorPanel.style.display = toggleEditor.checked ? "block" : "none";
-  if (toggleEditor.checked) {
-    fetchAllCards(); // Load cards when toggle is turned on
+  const isEditorOn = toggleEditor.checked;
+  editorPanel.style.display = isEditorOn ? "block" : "none";
+
+  if (isEditorOn) {
+    fetchAllCards(); // Only fetch if showing
+    // Turn off Manager
+    toggleManager.checked = false;
+    managerPanel.style.display = "none";
   }
 });
+
+toggleManager.addEventListener("change", () => {
+  const isManagerOn = toggleManager.checked;
+  managerPanel.style.display = isManagerOn ? "block" : "none";
+
+  if (isManagerOn) {
+    // Turn off Editor
+    toggleEditor.checked = false;
+    editorPanel.style.display = "none";
+  }
+});
+
+
+
 const importBtn = document.getElementById("importBtn");
   const clearBtn = document.getElementById("clearBtn");
   const addCardBtn = document.getElementById("addCardBtn");
@@ -226,6 +243,12 @@ generateSuggestions(allCards);
 renderCardGrid(allCards);
 
 // SUBDOMAIN — show input group when "Create new..." selected
+
+const subdomainIdSelect = document.getElementById("subdomainIdSelect");
+const subdomainIdInput = document.getElementById("subdomainIdInput");
+const subdomainIdInputGroup = document.getElementById("subdomainIdInputGroup");
+const subdomainIdSelectGroup = document.getElementById("subdomainIdSelectGroup");
+
 subdomainIdSelect.addEventListener("change", () => {
   if (subdomainIdSelect.value === "create_new") {
     const certId = certIdSelect.value;
@@ -291,7 +314,8 @@ const cancelCertBtn = document.getElementById("cancelCertBtn");
           document.getElementById("certIdSelectGroup").style.display = "flex";
       
           showGlobalMessage("✅ Title added.", "success");
-          populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
+          dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
+
  // Refresh dropdowns
         })
         .catch(err => {
