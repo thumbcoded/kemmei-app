@@ -159,9 +159,11 @@ toggleManager.addEventListener("change", () => {
     // Turn off Editor
     toggleEditor.checked = false;
     editorPanel.style.display = "none";
+
+    // 🔥 Now fetch domain map for Title Manager panel
+    fetchDomainMap();
   }
 });
-
 
 
 const importBtn = document.getElementById("importBtn");
