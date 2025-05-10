@@ -1,0 +1,37 @@
+🧾 Essential Git Commands
+🔍 Check Status & Changes
+git status – Show file change status
+git diff – Show unstaged changes
+git diff --cached – Show staged (ready to commit) changes
+
+💾 Save Your Work
+git add . – Stage all files
+git add path/to/file.js – Stage one file
+git commit -m "Describe change" – Commit staged changes
+
+📜 View History
+git log – View commit history
+git log path/to/file.js – View history of a specific file
+git blame file.js – See who last modified each line
+
+🔙 Undo / Rewind
+git reset --soft HEAD~1 – Undo last commit (keep changes)
+git restore --staged file.js – Unstage a file
+git restore file.js – Restore file to last committed state
+
+📥 Stash = Quicksave
+git stash save "Note" – Stash all changes with a note
+git stash push -m "Note" file.js – Stash one file with a message
+git stash list – View all stashed items
+git stash apply – Apply stash (keep in list)
+git stash pop – Apply and remove the last stash
+
+🧾 Git: Track & Save One File
+git status path/to/file.js – Check file status
+git diff path/to/file.js – See changes (diff)
+git add path/to/file.js – Stage the file
+git commit -m "Describe change" – Commit after staging
+git commit -m "Describe change" path/to/file.js – Commit directly (less common)
+git log path/to/file.js – View commit history for the file
+git blame path/to/file.js – View line-by-line change history
+git stash push -m "Note" path/to/file.js – Temporarily stash changes for one file
