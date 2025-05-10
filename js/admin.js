@@ -1,5 +1,5 @@
 let certNames = {}, domainMaps = {}, subdomainMaps = {};
-import { fetchDomainMap } from './domaindelete.js';
+// import { fetchDomainMap } from './domaindelete.js';
 import dropdowns from "./dropdowns.js";
 
 async function loadDomainMap() {
@@ -92,6 +92,8 @@ function wireSaveButton(inputId) {
         document.getElementById("certIdSelectGroup").style.display = "flex";
 
         showGlobalMessage("✅ New title added.");
+        refreshTitleManager?.();
+
       })
       .catch((err) => {
         if (err.message !== "duplicate") {
@@ -161,7 +163,7 @@ toggleManager.addEventListener("change", () => {
     editorPanel.style.display = "none";
 
     // 🔥 Now fetch domain map for Title Manager panel
-    fetchDomainMap();
+    // fetchDomainMap();
   }
 });
 
@@ -317,6 +319,7 @@ const cancelCertBtn = document.getElementById("cancelCertBtn");
       
           showGlobalMessage("✅ Title added.", "success");
           dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
+refreshTitleManager?.();
 
  // Refresh dropdowns
         })

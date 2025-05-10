@@ -9,6 +9,9 @@
     "SY0-701": "CompTIA Security+ (SY0-701)"
   },
   "domainMaps": {
+    "2233": {
+      "1.0": "calls sub1"
+    },
     "220-1201": {
       "1.0": "Mobile Devices",
       "2.0": "Networking",
@@ -38,6 +41,12 @@
     }
   },
   "subdomainMaps": {
+    "2233": {
+      "1.0": {
+        "1.1": "calls sub2",
+        "1.2": "sub22"
+      }
+    },
     "220-1201": {
       "1.0": {
         "1.1": "Monitor mobile device hardware and use appropriate replacement techniques",

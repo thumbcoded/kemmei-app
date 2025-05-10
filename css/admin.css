@@ -561,53 +561,66 @@ font-weight: normal;
 
 /* DELETE/EXPORT PANEL */
 
-.title-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0 0 2rem 0;
-}
-
+/* Title rows — align flush left */
 .title-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  list-style: none;
   margin-bottom: 0.5rem;
-  background: #f9f9f9;
+  padding-left: 0;  /* remove any offset */
 }
 
+.title-item ul {
+  margin: 0.25rem 0 0.5rem 1rem;
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+/* Cert header (level 1) */
 .title-main {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.actions button {
-  font-size: 0.85rem;
-  padding: 0.3rem 0.5rem;
+  background: #f4f4f4;
+  padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  border: none;
-  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+  margin-left: 0; /* flush left */
 }
 
-.actions .edit-btn {
-  background-color: #ffc107;
-  color: black;
+.title-item,
+.domain-section {
+  list-style: none;
+  margin-bottom: 0.5rem;
 }
 
-.actions .delete-btn {
-  background-color: #dc3545;
-  color: white;
+/* Domain header (level 2) */
+.domain-main {
+  background: #f9f9f9;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+  margin-left: 1rem; /* slight indent */
+  font-weight: 500;
+  user-select: none;
 }
 
-.actions .reset-btn {
-  background-color: #6c757d;
-  color: white;
+.title-main:hover,
+.domain-main:hover {
+  background-color: #eaeaea;
 }
+
+/* Subdomain rows (level 3) */
+.subdomain-list {
+  margin-left: 2rem;
+  margin-top: 0.3rem;
+}
+
+.subdomain-item {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.2rem 0;
+}
+
+.toggle-arrow {
+  display: inline-block;
+  width: 1.2rem;
+  text-align: center;
+}
+
