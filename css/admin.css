@@ -623,3 +623,49 @@ font-weight: normal;
   width: 1.2rem;
   text-align: center;
 }
+
+.gear-btn {
+  margin-left: auto;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+}
+
+/* ACTION BUTTONS FOR TIT MGR */
+
+.action-row button {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.3rem;
+  line-height: 1;
+  height: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.action-row button:hover {
+  background-color: #0056b3;
+}
+
+.gear-btn {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.action-row {
+  display: flex;
+  gap: 0.4rem;
+  background: #f9f9f9;
+  padding: 0.3rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: absolute;
+  top: 100%;
+  right: 0; /* attach below cog */
+  z-index: 10;
+}
