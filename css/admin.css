@@ -587,7 +587,7 @@ font-weight: normal;
 .title-item,
 .domain-section {
   list-style: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 /* Domain header (level 2) */
@@ -623,4 +623,3 @@ font-weight: normal;
   width: 1.2rem;
   text-align: center;
 }
-

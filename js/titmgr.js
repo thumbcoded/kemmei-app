@@ -23,7 +23,17 @@ function renderTitleTree(certNames, domainMaps, subdomainMaps) {
 
     const certHeader = document.createElement("div");
     certHeader.className = "title-main";
-    certHeader.innerHTML = `<span class="toggle-arrow">▶</span> <strong>${certId}:</strong> ${certTitle}`;
+    const toggle = document.createElement("span");
+toggle.className = "toggle-arrow";
+toggle.textContent = "▶";
+
+const label = document.createElement("span");
+label.textContent = certTitle;
+
+certHeader.appendChild(toggle);
+certHeader.appendChild(label);
+
+
     certHeader.style.cursor = "pointer";
 
     const domainContainer = document.createElement("div");
@@ -40,6 +50,7 @@ function renderTitleTree(certNames, domainMaps, subdomainMaps) {
       domainHeader.innerHTML = `<span class="toggle-arrow">▶</span> <strong>${domainId}:</strong> ${domainTitle}`;
       domainHeader.style.cursor = "pointer";
 
+
       const subdomainList = document.createElement("div");
       subdomainList.className = "subdomain-list";
       subdomainList.style.display = "none";
@@ -49,6 +60,9 @@ function renderTitleTree(certNames, domainMaps, subdomainMaps) {
         const subItem = document.createElement("div");
         subItem.className = "subdomain-item";
         subItem.textContent = `${subId}: ${subTitle}`;
+        subItem.innerHTML = `${subId}: ${subTitle}`;
+
+
         subdomainList.appendChild(subItem);
       });
 

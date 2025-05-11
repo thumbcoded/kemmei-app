@@ -1,4 +1,6 @@
-🧾 Essential Git Commands
+RETURN TO LAST COMMIT - HARD
+git restore .
+
 🔍 Check Status & Changes
 git status – Show file change status
 git diff – Show unstaged changes
