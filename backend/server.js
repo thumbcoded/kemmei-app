@@ -16,7 +16,17 @@ mongoose.connect("mongodb://localhost:27017/kemmei")
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
 const Card = require("./models/card");
-const domainMapPath = path.join(__dirname, "..", "js", "domainmap.json");
+const domainMapPath = path.join(__dirname, "..", "data", "domainmap.json");
+
+console.log("📁 domainMapPath resolved to:", domainMapPath);
+try {
+  fs.accessSync(domainMapPath, fs.constants.R_OK);
+  console.log("✅ domainmap.json is readable");
+} catch (err) {
+  console.error("❌ domainmap.json is missing or unreadable:", err);
+  process.exit(1); // crash hard so we know
+}
+
 
 // Test route
 app.get("/", (req, res) => {
@@ -164,6 +174,100 @@ app.post("/api/add-subdomain", (req, res) => {
   } catch (err) {
     console.error("❌ Failed to update subdomain:", err);
     res.status(500).json({ error: "Failed to update subdomain" });
+  }
+});
+
+app.put("/api/domainmap", (req, res) => {
+  const { type, cert_id, domain_id, sub_id, new_title } = req.body;
+
+  if (!type || !cert_id || !new_title) {
+    return res.status(400).json({ error: "Missing required fields." });
+  }
+
+  try {
+    const data = JSON.parse(fs.readFileSync(domainMapPath, "utf8"));
+
+    if (type === "title") {
+      if (!data.certNames[cert_id]) {
+        return res.status(404).json({ error: "Title not found." });
+      }
+      data.certNames[cert_id] = new_title;
+    }
+
+    else if (type === "domain") {
+      if (!domain_id || !data.domainMaps[cert_id]?.[domain_id]) {
+        return res.status(404).json({ error: "Domain not found." });
+      }
+      data.domainMaps[cert_id][domain_id] = new_title;
+    }
+
+    else if (type === "subdomain") {
+      if (!domain_id || !sub_id || !data.subdomainMaps[cert_id]?.[domain_id]?.[sub_id]) {
+        return res.status(404).json({ error: "Subdomain not found." });
+      }
+      data.subdomainMaps[cert_id][domain_id][sub_id] = new_title;
+    }
+
+    else {
+      return res.status(400).json({ error: "Invalid type." });
+    }
+
+    fs.writeFileSync(domainMapPath, JSON.stringify(data, null, 2));
+    res.json({ success: true });
+  } catch (err) {
+    console.error("❌ Failed to rename:", err);
+    res.status(500).json({ error: "Failed to update domain map." });
+  }
+});
+
+app.delete("/api/domainmap", async (req, res) => {
+  const { type, cert_id, domain_id, sub_id } = req.body;
+
+  if (!type || !cert_id) return res.status(400).json({ error: "Missing required fields" });
+
+  try {
+    const data = JSON.parse(fs.readFileSync(domainMapPath, "utf8"));
+
+    const cards = await Card.find({}).lean();
+
+    if (type === "title") {
+      const used = cards.some(c => c.cert_id.includes(cert_id));
+      if (used) return res.status(409).json({ error: "Cards still exist under this title." });
+
+      delete data.certNames[cert_id];
+      delete data.domainMaps[cert_id];
+      delete data.subdomainMaps[cert_id];
+    }
+
+    else if (type === "domain") {
+      if (!domain_id) return res.status(400).json({ error: "Missing domain_id." });
+
+      const used = cards.some(c => c.cert_id.includes(cert_id) && c.domain_id === domain_id);
+      if (used) return res.status(409).json({ error: "Cards still exist under this domain." });
+
+      delete data.domainMaps[cert_id]?.[domain_id];
+      delete data.subdomainMaps[cert_id]?.[domain_id];
+    }
+
+    else if (type === "subdomain") {
+      if (!domain_id || !sub_id) return res.status(400).json({ error: "Missing domain_id or sub_id." });
+
+      const used = cards.some(c => c.cert_id.includes(cert_id) && c.domain_id === sub_id);
+      if (used) return res.status(409).json({ error: "Cards still exist under this subdomain." });
+
+      delete data.subdomainMaps[cert_id]?.[domain_id]?.[sub_id];
+    }
+
+    else {
+      return res.status(400).json({ error: "Invalid type." });
+    }
+
+    fs.writeFileSync(domainMapPath, JSON.stringify(data, null, 2));
+    res.json({ success: true });
+
+  } catch (err) {
+    console.error("❌ Failed to delete from domainmap:", err);
+    res.status(500).json({ error: "Failed to update domain map." });
   }
 });
 

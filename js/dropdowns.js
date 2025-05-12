@@ -246,7 +246,10 @@ function resetDropdownToDefault(selectElement) {
         // Refresh subdomains
         select.dispatchEvent(new Event("change", { bubbles: true }));
   
-        showGlobalMessage("✅ Domain saved.", "success");
+await window.refreshAllPanels?.();
+
+showGlobalMessage("✅ Domain saved.", "success");
+
       } catch (err) {
         console.error(err);
         showGlobalMessage("❌ Failed to save domain.", "error");
@@ -297,7 +300,10 @@ function resetDropdownToDefault(selectElement) {
         document.getElementById("subdomainIdSelectGroup").style.display = "flex";
         document.getElementById("subdomainIdInputGroup").style.display = "none";
   
-        showGlobalMessage("✅ Subdomain saved.", "success");
+await window.refreshAllPanels?.();
+
+showGlobalMessage("✅ Subdomain saved.", "success");
+
       } catch (err) {
         console.error(err);
         showGlobalMessage("❌ Failed to save subdomain.", "error");

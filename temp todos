@@ -1,12 +1,21 @@
-🔧 Next Step
-Would you like me to now update:
+🧠 On deck for tomorrow:
+🧲 Preserve dropdown selection after refresh
 
-The cert creation form to require both ID and name?
+💨 Fade-out animation on item delete
 
-The domain/subdomain forms to only accept name and auto-assign ID?
+🔍 Search/filter in Title Manager (right panel)
 
-A small function to suggest the next available domain/subdomain ID?
+✏️ Name for the left panel
 
-Also: do you want the editor (the new bottom panel) to reflect this structure for editing existing entries as well?
+🎁 Suggested name for the left panel:
+Since it’s where users add new cards (title/domain/sub/etc), how about:
 
-Let’s lock it in.
+🔸 Card Editor (simple, direct)
+🔸 Deck Builder (if you lean gamified/study-ish)
+🔸 Flashcard Designer
+🔸 Content Composer
+🔸 Editor Panel (if you just want consistency)
+
+6. Make cog child buttons prettier
+1. Get the left panel a separate name
+

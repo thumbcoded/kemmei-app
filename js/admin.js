@@ -1,22 +1,37 @@
 let certNames = {}, domainMaps = {}, subdomainMaps = {};
-// import { fetchDomainMap } from './domaindelete.js';
+window.certNames = certNames;
+window.domainMaps = domainMaps;
+window.subdomainMaps = subdomainMaps;
 import dropdowns from "./dropdowns.js";
+window.dropdowns = dropdowns;
+
 
 async function loadDomainMap() {
   console.log("🔍 loadDomainMap called");
   try {
-    const res = await fetch("js/domainmap.json");
+    const res = await fetch("http://localhost:3000/api/domainmap");
     console.log("🧪 Raw fetch response:", res);
+
     const data = await res.json();
+
+    // Update local vars
     certNames = data.certNames || {};
-    console.log("Loaded certNames:", certNames);
     domainMaps = data.domainMaps || {};
     subdomainMaps = data.subdomainMaps || {};
+
+    // Sync with window for global access (e.g. from titmgr)
+    window.certNames = certNames;
+    window.domainMaps = domainMaps;
+    window.subdomainMaps = subdomainMaps;
+
     console.log("✅ Loaded domain map JSON");
   } catch (err) {
     console.error("❌ Failed to load domainmap.json:", err);
   }
 }
+
+
+window.loadDomainMap = loadDomainMap;
 
 let allCards = [];
 
@@ -278,59 +293,57 @@ const certTitleInput = document.getElementById("certTitleInput");
 const saveCertBtn = document.getElementById("saveCertBtn");
 const cancelCertBtn = document.getElementById("cancelCertBtn");
       
-      saveCertBtn.addEventListener("click", () => {
-        const certId = certIdInput.value.trim();
-        const certTitle = certTitleInput.value.trim();
-      
-        if (!certId || !certTitle) {
-          showGlobalMessage("⚠️ Both ID and title are required.", "warning");
-          return;
-        }
-      
-        const existingIds = [...document.getElementById("certIdSelect").options].map(opt => opt.value);
-        if (existingIds.includes(certId)) {
-          showGlobalMessage("⚠️ This cert ID already exists.", "warning");
-          return;
-        }
-      
-        fetch("http://localhost:3000/api/add-title", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ _id: certId, title: certTitle })
-        })
-        .then(res => {
-          if (res.status === 409) {
-            showGlobalMessage("⚠️ That ID already exists.", "warning");
-            throw new Error("duplicate");
-          }
-          if (!res.ok) throw new Error("Server error " + res.status);
-          return res.json();
-        })
-        .then(() => {
-          const select = document.getElementById("certIdSelect");
-          const option = new Option(certTitle, certId);
-          select.appendChild(option);
-          select.value = certId;
-      
-          certIdInput.value = "";
-          certTitleInput.value = "";
-          document.getElementById("certIdInputGroup").style.display = "none";
-          document.getElementById("certIdSelectGroup").style.display = "flex";
-      
-          showGlobalMessage("✅ Title added.", "success");
-          dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
-refreshTitleManager?.();
+saveCertBtn.addEventListener("click", async () => {
+  const certId = certIdInput.value.trim();
+  const certTitle = certTitleInput.value.trim();
 
- // Refresh dropdowns
-        })
-        .catch(err => {
-          if (err.message !== "duplicate") {
-            console.error("❌ Error adding title:", err);
-            showGlobalMessage("❌ Failed to add title.", "error");
-          }
-        });
-      });
-      
+  // 🔒 Basic input validation
+  if (!certId || !certTitle) {
+    showGlobalMessage("⚠️ Both ID and title are required.", "warning");
+    return;
+  }
+
+  // ❌ Check for duplicate ID in dropdown
+  const existingIds = [...document.getElementById("certIdSelect").options].map(opt => opt.value);
+  if (existingIds.includes(certId)) {
+    showGlobalMessage("⚠️ This cert ID already exists.", "warning");
+    return;
+  }
+
+  try {
+    const res = await fetch("http://localhost:3000/api/add-title", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ _id: certId, title: certTitle })
+    });
+
+    if (res.status === 409) {
+      showGlobalMessage("⚠️ That ID already exists.", "warning");
+      return;
+    }
+    if (!res.ok) throw new Error("Server error " + res.status);
+
+    // 🔄 Refresh updated domain map and dropdowns
+await window.refreshAllPanels?.();
+
+
+    // 🧼 Reset UI
+    certIdInput.value = "";
+    certTitleInput.value = "";
+    document.getElementById("certIdInputGroup").style.display = "none";
+    document.getElementById("certIdSelectGroup").style.display = "flex";
+
+    // ✅ Show success
+    showGlobalMessage("✅ Title added.", "success");
+
+  } catch (err) {
+    console.error("❌ Error adding title:", err);
+    showGlobalMessage("❌ Failed to add title.", "error");
+  }
+});
+
+
+
       cancelCertBtn.addEventListener("click", () => {
         certIdInput.value = "";
         certTitleInput.value = "";
@@ -1003,3 +1016,9 @@ function renderCardGrid(cards) {
   });
 
 });
+
+window.refreshAllPanels = async function () {
+  await loadDomainMap();
+  dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
+  refreshTitleManager?.();
+};

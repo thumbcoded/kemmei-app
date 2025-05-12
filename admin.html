@@ -80,6 +80,8 @@
 
 <div class="admin-panel-container left-panel">
 
+  <h2>📝 Title Manager</h2>
+
 <div id="globalMessageArea" class="system-message hidden"></div> <!-- GLOBAL MSG AREA -->
 
 <div class="admin-content">
@@ -246,9 +248,12 @@
   <div id="cardGrid" class="card-browser-grid"></div>
 </div>
 
-<!-- /////////////////// DELETE/EXPORT PANEL ////////////////////// -->
 
-<div class="admin-panel-container right-panel" id="managerPanel" style="display: none;">
+<!-- /////////////////// TITLE MANAGER PANEL ////////////////////// -->
+
+<div class="admin-panel-container right-panel" id="managerPanel"
+     style="display: none; position: relative; padding-bottom: 4rem;">
+
   <h2>🗂️ Title Manager</h2>
 
   <!-- Built-in Titles -->
@@ -257,15 +262,22 @@
 
   <!-- User Titles -->
   <h3>User-created Titles</h3>
-  <ul id="userTitleList" class="title-list"></ul>
+  <ul id="userTitleList" class="title-list" style="margin-bottom: 0;"></ul>
 
-    <!-- Bulk Action Buttons -->
-  <div style="margin-bottom: 1rem; display: flex; gap: 1rem;">
-    <button id="deleteSelectedBtn" style="background-color: #dc3545; color: white;">🗑️ Delete Selected</button>
-    <button id="exportAllBtn" style="background-color: #28a745; color: white;">📤 Export All User Data</button>
-  </div>
-  
+  <!-- Spacer to prevent overlap with footer -->
+  <div style="height: 3.5rem;"></div>
+
+  <!-- Fixed Footer UI -->
+  <div id="managerMessageArea"
+       class="system-message hidden"
+       style="position: absolute; bottom: 1rem; left: 1.5rem; max-width: 65%; z-index: 10;"></div>
+
+  <button id="exportAllBtn"
+          style="position: absolute; bottom: 1rem; right: 1.5rem; background-color: #28a745; color: white; z-index: 10;">
+    📤 Export All User Data
+  </button>
 </div>
+
 
 
 
