@@ -1,5 +1,7 @@
 RETURN TO LAST COMMIT - HARD
 git restore .
+COMMIT-AMEND WITH SAME MGG
+git commit --amend --no-edit
 
 🔍 Check Status & Changes
 git status – Show file change status

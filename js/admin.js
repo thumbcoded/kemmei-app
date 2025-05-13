@@ -698,29 +698,48 @@ function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-  function loadCardIntoForm(card) {
-    document.getElementById("certId").value = Array.isArray(card.cert_id) ? card.cert_id.join(", ") : card.cert_id;
-    document.getElementById("domainId").value = card.domain_id || "";
-    document.getElementById("subdomainId").value = card.subdomain_id || "";
-    document.getElementById("domainTitle").value = card.domain_title || "";
-    document.getElementById("difficulty").value = card.difficulty || "easy";
-    document.getElementById("questionType").value = card.question_type || "multiple_choice";
-    document.getElementById("questionText").value = card.question_text || "";
-    document.getElementById("options").value = (card.answer_options || []).join("\n");
-    document.getElementById("correctAnswers").value = (Array.isArray(card.correct_answer) ? card.correct_answer : [card.correct_answer]).join("\n");
-    document.getElementById("explanation").value = card.explanation || "";
-    document.getElementById("tags").value = (card.tags || []).join(", ");
-    document.getElementById("status").value = card.status || "approved";
-  
-    editingCardId = card._id;
-  
-    // Switch button visibility
-    document.getElementById("addCardBtn").style.display = "none";
-    document.getElementById("submitToBackendBtn").style.display = "none";
-    document.getElementById("saveChangesBtn").style.display = "inline-block";
-    document.getElementById("cancelEditBtn").style.display = "inline-block"; 
+function loadCardIntoForm(card) {
+  const certIdSelect = document.getElementById("certIdSelect");
+  const domainTitleSelect = document.getElementById("domainTitleSelect");
+  const subdomainIdSelect = document.getElementById("subdomainIdSelect");
+
+  if (!certIdSelect || !domainTitleSelect || !subdomainIdSelect) {
+    console.warn("❌ One or more form dropdowns are missing. Aborting edit.");
+    return;
   }
-  
+
+  // 🔁 Populate dropdowns
+  certIdSelect.value = Array.isArray(card.cert_id) ? card.cert_id[0] : card.cert_id || "";
+
+  // Match domain by ID
+  const domainOpt = [...domainTitleSelect.options].find(opt => opt.value.startsWith(card.domain_id));
+  if (domainOpt) domainTitleSelect.value = domainOpt.value;
+
+  // Match subdomain by ID
+  const subOpt = [...subdomainIdSelect.options].find(opt => opt.value === card.subdomain_id);
+  if (subOpt) subdomainIdSelect.value = subOpt.value;
+
+  // 🔁 Populate text fields
+  document.getElementById("difficulty").value = card.difficulty || "easy";
+  document.getElementById("questionType").value = card.question_type || "multiple_choice";
+  document.getElementById("questionText").value = card.question_text || "";
+  document.getElementById("options").value = (card.answer_options || []).join("\n");
+  document.getElementById("correctAnswers").value = (Array.isArray(card.correct_answer) ? card.correct_answer : [card.correct_answer]).join("\n");
+  document.getElementById("explanation").value = card.explanation || "";
+  document.getElementById("tags").value = (card.tags || []).join(", ");
+  document.getElementById("status").value = card.status || "approved";
+
+  editingCardId = card._id;
+
+  // Toggle buttons
+  document.getElementById("addCardBtn").style.display = "none";
+  document.getElementById("submitToBackendBtn").style.display = "none";
+  document.getElementById("saveChangesBtn").style.display = "inline-block";
+  document.getElementById("cancelEditBtn").style.display = "inline-block";
+
+  console.log("📝 Loaded card for editing:", card);
+}
+
   
   const saveChangesBtn = document.getElementById("saveChangesBtn");
 
@@ -790,12 +809,39 @@ const subdomain_id_raw = document.getElementById("subdomainIdSelect").value === 
 }
 
 function clearForm() {
-  document.getElementById("cardForm").reset();
+  const form = document.getElementById("cardForm");
+  if (form) form.reset(); // If you're wrapping the whole form (optional)
+
+  // Text inputs and textareas
+  ["questionText", "options", "correctAnswers", "explanation", "tags"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+
+  // Dropdowns: difficulty, questionType, status
+  ["difficulty", "questionType", "status"].forEach(id => {
+    const sel = document.getElementById(id);
+    if (sel) sel.selectedIndex = 0;
+  });
+
+  // Create-mode fields
   ["certIdInput", "domainIdInput", "domainTitleInput", "subdomainIdInput"].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.value = "";
   });
+
+  // Dropdown selects for cert/domain/subdomain
+  ["certIdSelect", "domainTitleSelect", "subdomainIdSelect"].forEach(id => {
+    const sel = document.getElementById(id);
+    if (sel) {
+      sel.selectedIndex = 0;
+      sel.dispatchEvent(new Event("change"));
+    }
+  });
+
+  console.log("🧹 Full left panel cleared");
 }
+
 
 
 cancelEditBtn.addEventListener("click", () => {

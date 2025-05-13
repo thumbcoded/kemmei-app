@@ -103,6 +103,25 @@ app.delete("/api/cards/:id", async (req, res) => {
   }
 });
 
+app.put("/api/cards/:id", async (req, res) => {
+  const cardId = req.params.id;
+  const updatedCard = req.body;
+
+  try {
+    const result = await Card.findByIdAndUpdate(cardId, updatedCard, { new: true });
+
+    if (!result) {
+      return res.status(404).json({ success: false, error: "Card not found" });
+    }
+
+    res.json({ success: true });
+  } catch (err) {
+    console.error("❌ Error updating card:", err);
+    res.status(500).json({ success: false, error: "Failed to update card" });
+  }
+});
+
+
 // ==============================
 // DOMAINMAP ROUTES
 // ==============================
