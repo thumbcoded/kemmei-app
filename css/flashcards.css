@@ -16,7 +16,7 @@ body.flashcards-page {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #007bff;
+  background-color: #a611b9;
   padding: 1rem;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -24,42 +24,9 @@ body.flashcards-page {
   color: white;
 }
 
-.header-left, .header-center, .header-right {
-  display: flex;
-  align-items: center;
-}
-
-.header-center {
-  flex-grow: 1;
-  justify-content: center;
-}
-
-
 .flashcards-header.locked {
   opacity: 0.5;
   pointer-events: none;
-}
-
-.selectors {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.selectors label {
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  color: white;
-}
-
-.selectors select,
-.selectors input[type="checkbox"] {
-  padding: 0.3rem 0.5rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  border: none;
 }
 
 .back-btn,
@@ -293,19 +260,103 @@ body.flashcards-page {
   color: #555;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
+
 .back-btn {
-  background: none;
-  border: 1px solid white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
+  background: white;
+  color: #007bff;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
 }
 
 .back-btn:hover {
-  background-color: white;
-  color: #007bff;
+  background-color: #e3f2ff;
 }
+
+
+.filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.left-group,
+.right-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 200px;
+}
+
+.left-group label,
+.right-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+}
+
+.left-group select,
+.right-group select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .filter-row {
+    flex-direction: column;
+  }
+
+  .right-group {
+    align-items: flex-start;
+  }
+}
+
+.flashcards-header {
+  display: flex;
+  padding: 1rem 1.5rem;
+  background-color: #007bff;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.header-inner {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header-left {
+  flex-shrink: 0;
+}
+
+.header-main {
+  flex-grow: 1;
+}
+
+.left-group {
+  flex: 1;
+  align-items: flex-start;
+}
+
+.right-group {
+  flex: 1;
+  align-items: flex-end;
+}
+

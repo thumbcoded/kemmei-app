@@ -1,5 +1,45 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startSessionBtn");
+let domainMaps = {};
+let subdomainMaps = {};
+
+async function loadDomainMap() {
+  try {
+    const res = await fetch("http://localhost:3000/api/domainmap");
+    const data = await res.json();
+    domainMaps = data.domainMaps || {};
+    subdomainMaps = data.subdomainMaps || {};
+    console.log("🌍 Loaded domain map:", domainMaps, subdomainMaps);
+  } catch (err) {
+    console.error("❌ Failed to load domainmap.json:", err);
+  }
+}
+
+function populateDeckDropdown(certNames) {
+  const deckSelect = document.getElementById("deck-select");
+  deckSelect.innerHTML = ""; // Clear old static options
+
+  Object.entries(certNames).forEach(([id, title]) => {
+    const opt = new Option(title, id); // title as text, id as value
+    deckSelect.appendChild(opt);
+  });
+}
+
+
+(async () => {
+  await loadDomainMap();
+  const res = await fetch("http://localhost:3000/api/domainmap");
+  const data = await res.json();
+  populateDeckDropdown(data.certNames);
+  document.getElementById("deck-select").dispatchEvent(new Event("change"));
+
+  fetchCardsAndUpdateCount();
+})();
+
+
+
+const startBtn = document.getElementById("startSessionBtn");
   const abortBtn = document.getElementById("abortBtn");
   const exitBtn = document.getElementById("exitBtn");
   const headerBar = document.querySelector(".flashcards-header");
@@ -29,20 +69,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const deck = document.getElementById("deck-select").value.trim();
     const domain = document.getElementById("domain-select").value.trim();
     const difficulty = document.getElementById("difficulty-select").value.trim();
-  
+
+
     console.log("🔎 Fetching cards with:", { deck, domain, difficulty });
   
-    const certMap = {
-      "CompTIA A+ Core 1": "220-1201",
-      "CompTIA A+ Core 2": "220-1202",
-      "CompTIA Network+": "N10-009",
-      "CompTIA Security+": "SY0-701"
-    };
-  
+
     const query = new URLSearchParams();
-    if (deck && certMap[deck]) {
-      query.append("cert_id", certMap[deck]);
-    }
+      const subdomain = document.getElementById("subdomain-select")?.value.trim();
+if (subdomain && subdomain !== "All") {
+  query.append("subdomain_id", subdomain);
+}
+if (deck) {
+  query.append("cert_id", deck);
+}
+
     if (domain && domain !== "All" && !domain.startsWith("All")) {
       const domainValue = domain.split(" ")[0]; // Extract "3.0" from "3.0 Hardware"
       query.append("domain_id", domainValue);
@@ -75,7 +115,54 @@ document.addEventListener("DOMContentLoaded", () => {
   
     console.log("🗂️ Updated questions array:", questions);
   }
-  
+
+document.getElementById("deck-select").addEventListener("change", () => {
+  const certLabel = document.getElementById("deck-select").value;
+  const certId = certLabel; // ✅ correct way
+
+  const domainSelect = document.getElementById("domain-select");
+  const subSelect = document.getElementById("subdomain-select");
+
+  domainSelect.innerHTML = `<option>All</option>`;
+  subSelect.innerHTML = `<option>All</option>`;
+
+  if (certId && domainMaps[certId]) {
+    Object.entries(domainMaps[certId]).forEach(([domainId, domainTitle]) => {
+      const opt = new Option(`${domainId} ${domainTitle}`, `${domainId} ${domainTitle}`);
+      domainSelect.appendChild(opt);
+    });
+  }
+
+  domainSelect.disabled = false;
+subSelect.disabled = !(
+  certId && domainMaps[certId] && Object.keys(subdomainMaps[certId] || {}).length
+);
+
+
+  fetchCardsAndUpdateCount();
+});
+
+
+
+  document.getElementById("domain-select").addEventListener("change", () => {
+  const certLabel = document.getElementById("deck-select").value;
+  const domainSelect = document.getElementById("domain-select");
+  const subSelect = document.getElementById("subdomain-select");
+
+
+  const certId = certLabel;
+  const domainId = domainSelect.value.split(" ")[0];
+
+  subSelect.innerHTML = `<option>All</option>`;
+
+  if (certId && domainId && subdomainMaps[certId]?.[domainId]) {
+    const subMap = subdomainMaps[certId][domainId];
+    Object.entries(subMap).forEach(([subId, subTitle]) => {
+      const opt = new Option(`${subId} ${subTitle}`, subId);
+      subSelect.appendChild(opt);
+    });
+  }
+});
 
   async function fetchCardsAndUpdateCount() {
     await fetchCards();

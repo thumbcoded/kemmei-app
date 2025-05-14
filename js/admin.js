@@ -555,8 +555,9 @@ function applyFilters() {
 
   const subdomain = document.getElementById("filterSubdomain").value;
 if (subdomain) {
-  filtered = filtered.filter(card => card.domain_id === subdomain);
+  filtered = filtered.filter(card => card.subdomain_id === subdomain);
 }
+
   // Step 4: keyword filter
   if (keyword) {
     filtered = filtered.filter(card =>

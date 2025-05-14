@@ -6,11 +6,15 @@
     "220-1201": "CompTIA A+ Core 1 (220-1201)",
     "220-1202": "CompTIA A+ Core 2 (220-1202)",
     "N10-009": "CompTIA Network+ (N10-009)",
-    "SY0-701": "CompTIA Security+ (SY0-701)"
+    "SY0-701": "CompTIA Security+ (SY0-701)",
+    "aaddssggff": "afafafafwfwfawawa"
   },
   "domainMaps": {
     "2233": {
       "1.0": "calls sub1"
+    },
+    "44111": {
+      "1.0": "wawawaw"
     },
     "220-1201": {
       "1.0": "Mobile Devices",
@@ -45,6 +49,11 @@
       "1.0": {
         "1.1": "calls sub2",
         "1.2": "afafafafa"
+      }
+    },
+    "44111": {
+      "1.0": {
+        "1.1": "asdfasdf"
       }
     },
     "220-1201": {

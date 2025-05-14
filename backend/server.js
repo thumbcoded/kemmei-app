@@ -39,10 +39,12 @@ app.get("/", (req, res) => {
 
 app.get("/api/cards", async (req, res) => {
   try {
-    const { cert_id, domain_id, difficulty } = req.query;
+    const { cert_id, domain_id, subdomain_id, difficulty } = req.query;
+
     const filter = {};
     if (cert_id) filter.cert_id = { $in: [cert_id] };
     if (domain_id) filter.domain_id = domain_id;
+    if (subdomain_id) filter.subdomain_id = subdomain_id;
     if (difficulty) filter.difficulty = difficulty.toLowerCase();
 
     const cards = await Card.find(filter).limit(50);
@@ -52,6 +54,7 @@ app.get("/api/cards", async (req, res) => {
     res.status(500).json({ success: false, error: err.message });
   }
 });
+
 
 app.get("/api/cards/ids", async (req, res) => {
   try {
@@ -301,7 +304,6 @@ app.get("/api/domainmap", (req, res) => {
     res.status(500).json({ error: "Failed to load domain map" });
   }
 });
-
 
 
 app.listen(PORT, () => {

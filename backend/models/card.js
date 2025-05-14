@@ -10,7 +10,7 @@ const CardSchema = new mongoose.Schema({
 
   domain_id: {
     type: String,
-    required: true // E.g. "3.0"
+    required: true
   },
 
   domain_title: {
@@ -19,7 +19,7 @@ const CardSchema = new mongoose.Schema({
   },
 
   subdomain_id: {
-    type: String, // E.g. "3.2"
+    type: String,
     required: true
   },
 
@@ -31,7 +31,7 @@ const CardSchema = new mongoose.Schema({
 
   question_type: {
     type: String,
-    enum: ["multiple_choice", "select_multiple", "select_all"],
+    enum: ["multiple_choice", "select_multiple", "select_all", "pbq"],
     required: true
   },
 
@@ -62,20 +62,22 @@ const CardSchema = new mongoose.Schema({
   status: {
     type: String,
     default: "approved"
-  }
-});
+  },
 
-// Optional: Block "All of the above" if question type is not select_all
-CardSchema.pre("save", function (next) {
-  if (
-    this.answer_options.includes("All of the above") &&
-    this.question_type !== "select_all"
-  ) {
-    return next(
-      new Error("'All of the above' is only allowed in select_all questions.")
-    );
+  image: {
+    type: String,
+    default: null
+  },
+
+  media: {
+    type: mongoose.Schema.Types.Mixed,
+    default: null
+  },
+
+  requiredCount: {
+    type: Number,
+    default: null
   }
-  next();
 });
 
 module.exports = mongoose.model("Card", CardSchema);
