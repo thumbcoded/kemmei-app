@@ -197,16 +197,6 @@ const importBtn = document.getElementById("importBtn");
       return;
     }
   
-      // Fetch fresh batch of unique IDs
-            if (ids.length !== cards.length) {
-        showGlobalMessage("❌ Failed to allocate unique IDs for all cards.");
-        return;
-      }
-  
-      for (let i = 0; i < cards.length; i++) {
-        cards[i]._id = ids[i];
-      }
-  
       for (const card of cards) {
         try {
           const res = await fetch("http://localhost:3000/api/cards", {
@@ -227,6 +217,24 @@ const importBtn = document.getElementById("importBtn");
           console.error("❌ Network error:", err);
         }
       }
+
+      // 🔁 Reset all inputs except dropdowns
+["questionText", "options", "correctAnswers", "explanation", "tags"].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.value = "";
+});
+
+// Reset difficulty, question type, status
+["difficulty", "questionType", "status"].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.selectedIndex = 0;
+});
+
+// ✅ Clear card preview list
+cardPreviewList.innerHTML = "";
+cards.length = 0;
+cardCount.textContent = "Cards created: 0";
+
   
       successMessage.textContent = "✔️ Card(s) submitted to backend!";
       successMessage.style.display = "block";
@@ -965,12 +973,16 @@ function renderCardGrid(cards) {
       const jsonInput = document.getElementById("jsonInput").value.trim();
       const data = JSON.parse(jsonInput);
 
-      document.getElementById("certIdSelect").value = Array.isArray(data.cert_id)
-      ? data.cert_id[0] || ""
-      : data.cert_id || "";
-        document.getElementById("domainIdSelect").value = data.domain_id || "";
-    document.getElementById("domainTitleSelect").value = data.domain_title || "";
-    document.getElementById("subdomainIdSelect").value = data.subdomain_id || "";
+      // Populate domain dropdown by matching ID prefix
+const domainSelect = document.getElementById("domainTitleSelect");
+const domainOpt = [...domainSelect.options].find(opt => opt.value.startsWith(data.domain_id));
+if (domainOpt) domainSelect.value = domainOpt.value;
+
+// Populate subdomain dropdown directly
+const subdomainSelect = document.getElementById("subdomainIdSelect");
+const subOpt = [...subdomainSelect.options].find(opt => opt.value === data.subdomain_id);
+if (subOpt) subdomainSelect.value = subOpt.value;
+
 
       const difficultySelect = document.getElementById("difficulty");
       const difficultyValue = (data.difficulty || "easy").toLowerCase();
@@ -1002,7 +1014,7 @@ function renderCardGrid(cards) {
 
   clearBtn.addEventListener("click", () => {
     document.getElementById("jsonInput").value = "";
-    document.getElementById("cardForm").reset();
+    clearForm();
   });
 
   addCardBtn.addEventListener("click", () => {

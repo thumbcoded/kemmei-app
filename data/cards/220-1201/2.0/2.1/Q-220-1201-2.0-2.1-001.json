@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "2.0 Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which port is used by the Secure Shell (SSH) protocol?",
+  "answer_options": [
+    "21",
+    "22",
+    "23",
+    "443"
+  ],
+  "correct_answer": [
+    "22"
+  ],
+  "explanation": "SSH uses TCP port 22 for secure remote login and other encrypted communications.",
+  "tags": [
+    "SSH",
+    "ports",
+    "networking"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

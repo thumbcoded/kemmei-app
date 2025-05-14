@@ -86,15 +86,51 @@ app.get("/api/cards/next-ids/:count", async (req, res) => {
   }
 });
 
+function generateCardId(certId, domainId, subId, existingIds) {
+  const prefix = `Q-${certId}-${domainId}-${subId}`;
+  let counter = 1;
+
+  while (true) {
+    const candidate = `${prefix}-${String(counter).padStart(3, "0")}`;
+    if (!existingIds.has(candidate)) return candidate;
+    counter++;
+  }
+}
+
+// Inside your POST /api/cards handler
 app.post("/api/cards", async (req, res) => {
   try {
+    const certId = req.body.cert_id[0];         // e.g., "220-1201"
+    const domainId = req.body.domain_id;        // e.g., "2.0"
+    const subId = req.body.subdomain_id;        // e.g., "2.1"
+
+    // Load existing card IDs from Mongo
+    const existing = await Card.find({}, "_id").lean();
+    const usedIds = new Set(existing.map(c => c._id));
+
+    // Generate safe, unique ID
+    const uniqueId = generateCardId(certId, domainId, subId, usedIds);
+    req.body._id = uniqueId;
+
+    // Save to Mongo
     const newCard = new Card(req.body);
     await newCard.save();
+
+    // Auto-create backup folder
+    const cardFolder = path.join(__dirname, "..", "data", "cards", certId, domainId, subId);
+    fs.mkdirSync(cardFolder, { recursive: true });
+
+    // Write card file to disk
+    const filename = path.join(cardFolder, `${uniqueId}.json`);
+    fs.writeFileSync(filename, JSON.stringify(newCard.toObject(), null, 2));
+
     res.json({ success: true, card: newCard });
   } catch (err) {
+    console.error("❌ Error saving card:", err);
     res.status(400).json({ success: false, error: err.message });
   }
 });
+
 
 app.delete("/api/cards/:id", async (req, res) => {
   try {
