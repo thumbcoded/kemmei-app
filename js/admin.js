@@ -230,6 +230,11 @@ const importBtn = document.getElementById("importBtn");
   if (el) el.selectedIndex = 0;
 });
 
+document.getElementById("jsonInput").value = "";
+
+fetchAllCards(); // 🔁 Refresh card browser grid
+
+
 // ✅ Clear card preview list
 cardPreviewList.innerHTML = "";
 cards.length = 0;
@@ -254,9 +259,10 @@ cardCount.textContent = "Cards created: 0";
 
   const cards = [];
 
-  ["filterCert", "filterDomain", "filterDifficulty", "filterKeyword"].forEach(id => {
-    document.getElementById(id).addEventListener("input", applyFilters);
-  });
+["filterCert", "filterDomain", "filterSubdomain", "filterDifficulty", "filterKeyword"].forEach(id => {
+  document.getElementById(id).addEventListener("input", applyFilters);
+});
+
 
 
   async function fetchAllCards() {
@@ -510,32 +516,41 @@ domainSelect.addEventListener("change", () => {
 
   if (!selectedCert || !selectedDomain || !subdomainMaps[selectedCert]) return;
 
-  // Get subdomain usage
+  // ✅ Get list of used subdomain IDs under this domain
   const subdomainsUsed = new Set(
     allCards
       .filter(card =>
         card.cert_id.includes(selectedCert) &&
         card.domain_id === selectedDomain &&
-        card._id && card.question_text // sanity check
+        card.subdomain_id && card._id && card.question_text
       )
-      .map(card => {
-        // Expect domain_id to be "4.1", "4.2", etc.
-        return card.domain_id;
-      })
+      .map(card => card.subdomain_id)
   );
 
-  const subMap = subdomainMaps[selectedCert];
+  const subMap = subdomainMaps[selectedCert]?.[selectedDomain];
+  if (!subMap) return;
+
+  const currentSelectedSub = subdomainSelect.value;
+
   Object.entries(subMap).forEach(([subId, subTitle]) => {
-    if (subId.startsWith(selectedDomain + ".") && subdomainsUsed.has(subId)) {
-      const opt = document.createElement("option");
-      opt.value = subId;
-      opt.textContent = `${subId} ${subTitle}`;
+    if (subdomainsUsed.has(subId)) {
+      const opt = new Option(`${subId} ${subTitle}`, subId);
       subdomainSelect.appendChild(opt);
     }
   });
 
+  // ➕ Always add "Create new..."
+  const createNew = new Option("➕ Create new...", "create_new");
+  subdomainSelect.appendChild(createNew);
+
+  // ✅ Restore previous selection if it's still valid
+  if ([...subdomainSelect.options].some(opt => opt.value === currentSelectedSub)) {
+    subdomainSelect.value = currentSelectedSub;
+  }
+
   subdomainSelect.disabled = subdomainSelect.options.length <= 1;
 });
+
 
   
 function applyFilters() {
@@ -544,55 +559,115 @@ function applyFilters() {
   const difficulty = document.getElementById("filterDifficulty").value;
   const keyword = document.getElementById("filterKeyword").value.toLowerCase();
 
-  let filtered = allCards;
+let filtered = allCards;
 
-  // Step 1: cert filter
-  if (cert) {
-    filtered = filtered.filter(card => card.cert_id.includes(cert));
-  }
-
-  // Step 2: difficulty filter
-  if (difficulty) {
-    filtered = filtered.filter(card => card.difficulty === difficulty);
-  }
-
-  // Step 3: domain filter
-  if (domain) {
-    filtered = filtered.filter(card => card.domain_id === domain);
-  }
-
-  const subdomain = document.getElementById("filterSubdomain").value;
-if (subdomain) {
-  filtered = filtered.filter(card => card.subdomain_id === subdomain);
+// Step 1: cert filter
+if (cert) {
+  filtered = filtered.filter(card => card.cert_id.includes(cert));
+  console.log("🎯 Cert filter:", cert, "| remaining:", filtered.length);
 }
 
-  // Step 4: keyword filter
-  if (keyword) {
-    filtered = filtered.filter(card =>
-      card.question_text.toLowerCase().includes(keyword) ||
-      (card.tags || []).some(tag => tag.toLowerCase().includes(keyword))
-    );
+// Step 2: domain filter
+if (domain) {
+  filtered = filtered.filter(card => card.domain_id === domain);
+  console.log("🎯 Domain filter:", domain, "| remaining:", filtered.length);
+}
+
+// Step 3: subdomain filter
+const selectedSub = document.getElementById("filterSubdomain").value;
+if (selectedSub) {
+  console.log("🎯 Subdomain filter:", selectedSub);
+  filtered = filtered.filter(card => {
+    const match = card.subdomain_id === selectedSub;
+    console.log(`   - ${card.subdomain_id} === ${selectedSub} → ${match}`);
+    return match;
+  });
+  console.log("🔎 Subdomain-filtered cards:", filtered.length);
+}
+
+// Step 4: difficulty filter
+if (difficulty) {
+  filtered = filtered.filter(card => card.difficulty === difficulty);
+  console.log("🎯 Difficulty filter:", difficulty, "| remaining:", filtered.length);
+}
+
+// Step 5: keyword filter
+if (keyword) {
+  filtered = filtered.filter(card =>
+    card.question_text.toLowerCase().includes(keyword) ||
+    (card.tags || []).some(tag => tag.toLowerCase().includes(keyword))
+  );
+  console.log("🎯 Keyword filter:", keyword, "| remaining:", filtered.length);
+}
+
+
+// 🔁 Always repopulate domain list based on selected cert
+const domainSelect = document.getElementById("filterDomain");
+const currentSelectedDomain = domainSelect.value;
+
+domainSelect.innerHTML = `<option value="">All domains</option>`;
+
+if (cert && domainMaps[cert]) {
+  const domains = domainMaps[cert];
+  Object.entries(domains).forEach(([id, title]) => {
+    const option = document.createElement("option");
+    option.value = id;
+    option.textContent = `${id} ${title}`;
+    domainSelect.appendChild(option);
+  });
+
+  // ✅ Restore previously selected domain (if it's still in list)
+  if ([...domainSelect.options].some(opt => opt.value === currentSelectedDomain)) {
+    domainSelect.value = currentSelectedDomain;
   }
 
-  // 🔁 Always repopulate domain list based on selected cert
-  const domainSelect = document.getElementById("filterDomain");
-  domainSelect.innerHTML = `<option value="">All domains</option>`;
+  domainSelect.disabled = false;
+} else {
+  domainSelect.disabled = true;
+}
 
-  if (cert && domainMaps[cert]) {
-    const domains = domainMaps[cert];
-    Object.entries(domains).forEach(([id, title]) => {
-      const option = document.createElement("option");
-      option.value = id;
-      option.textContent = `${id} ${title}`;
-      domainSelect.appendChild(option);
-    });
-    domainSelect.disabled = false;
-  } else {
-    domainSelect.disabled = true;
+// 🔁 Always repopulate subdomain list based on selected domain
+const subdomainSelect = document.getElementById("filterSubdomain");
+const currentSelectedSub = subdomainSelect.value;
+
+subdomainSelect.innerHTML = `<option value="">All Subdomains</option>`;
+
+if (cert && domain && subdomainMaps[cert]?.[domain]) {
+  const subMap = subdomainMaps[cert][domain];
+
+const subdomainsUsed = new Set(
+  allCards
+    .filter(card => card.cert_id.includes(cert) && card.domain_id === domain)
+    .map(card => card.subdomain_id)
+    .filter(Boolean)
+);
+
+
+  Object.entries(subMap).forEach(([subId, subTitle]) => {
+    if (subdomainsUsed.has(subId)) {
+      const opt = new Option(`${subId} ${subTitle}`, subId);
+      subdomainSelect.appendChild(opt);
+    }
+  });
+
+  const createNew = new Option("➕ Create new...", "create_new");
+  subdomainSelect.appendChild(createNew);
+
+  if ([...subdomainSelect.options].some(opt => opt.value === currentSelectedSub)) {
+    subdomainSelect.value = currentSelectedSub;
   }
+
+  subdomainSelect.disabled = false;
+} else {
+  subdomainSelect.disabled = true;
+}
+console.log("🔍 Filtered cards:", filtered.map(c => `${c.domain_id} / ${c.subdomain_id} / ${c.question_text}`));
 
   renderCardGrid(filtered);
 }
+
+
+
 
     let editingCardId = null; // Tracks if we are editing existing card
 
@@ -707,28 +782,38 @@ function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-function loadCardIntoForm(card) {
+async function loadCardIntoForm(card) {
   const certIdSelect = document.getElementById("certIdSelect");
   const domainTitleSelect = document.getElementById("domainTitleSelect");
   const subdomainIdSelect = document.getElementById("subdomainIdSelect");
 
   if (!certIdSelect || !domainTitleSelect || !subdomainIdSelect) {
-    console.warn("❌ One or more form dropdowns are missing. Aborting edit.");
+    console.warn("❌ Dropdowns missing");
     return;
   }
 
-  // 🔁 Populate dropdowns
-  certIdSelect.value = Array.isArray(card.cert_id) ? card.cert_id[0] : card.cert_id || "";
+  const certId = Array.isArray(card.cert_id) ? card.cert_id[0] : card.cert_id;
+  const domainId = card.domain_id;
+  const subdomainId = card.subdomain_id;
 
-  // Match domain by ID
-  const domainOpt = [...domainTitleSelect.options].find(opt => opt.value.startsWith(card.domain_id));
-  if (domainOpt) domainTitleSelect.value = domainOpt.value;
+  // 1. Set cert and trigger domain population
+  certIdSelect.value = certId;
+  certIdSelect.dispatchEvent(new Event("change"));
 
-  // Match subdomain by ID
-  const subOpt = [...subdomainIdSelect.options].find(opt => opt.value === card.subdomain_id);
-  if (subOpt) subdomainIdSelect.value = subOpt.value;
+  // 2. Wait until domain dropdown is populated
+  await waitUntilOption(domainTitleSelect, domainId);
 
-  // 🔁 Populate text fields
+  // 3. Set domain
+  domainTitleSelect.value = [...domainTitleSelect.options].find(opt => opt.value.startsWith(domainId))?.value || "";
+  domainTitleSelect.dispatchEvent(new Event("change"));
+
+  // 4. Wait until subdomain dropdown is populated
+  await waitUntilOption(subdomainIdSelect, subdomainId);
+
+  // 5. Set subdomain
+  subdomainIdSelect.value = subdomainId;
+
+  // 6. Fill in form fields
   document.getElementById("difficulty").value = card.difficulty || "easy";
   document.getElementById("questionType").value = card.question_type || "multiple_choice";
   document.getElementById("questionText").value = card.question_text || "";
@@ -739,8 +824,6 @@ function loadCardIntoForm(card) {
   document.getElementById("status").value = card.status || "approved";
 
   editingCardId = card._id;
-
-  // Toggle buttons
   document.getElementById("addCardBtn").style.display = "none";
   document.getElementById("submitToBackendBtn").style.display = "none";
   document.getElementById("saveChangesBtn").style.display = "inline-block";
@@ -748,6 +831,19 @@ function loadCardIntoForm(card) {
 
   console.log("📝 Loaded card for editing:", card);
 }
+
+function waitUntilOption(selectEl, matchId, timeout = 1000) {
+  return new Promise((resolve, reject) => {
+    const start = Date.now();
+    (function check() {
+      const found = [...selectEl.options].some(opt => opt.value === matchId || opt.value.startsWith(matchId + " "));
+      if (found) return resolve();
+      if (Date.now() - start > timeout) return reject(`❌ Option ${matchId} not found in ${selectEl.id}`);
+      setTimeout(check, 50);
+    })();
+  });
+}
+
 
   
   const saveChangesBtn = document.getElementById("saveChangesBtn");
@@ -1012,21 +1108,75 @@ if (subOpt) subdomainSelect.value = subOpt.value;
     }
   });
 
-  clearBtn.addEventListener("click", () => {
-    document.getElementById("jsonInput").value = "";
-    clearForm();
+clearBtn.addEventListener("click", () => {
+  document.getElementById("jsonInput").value = "";
+
+  // partial clear — keep title/domain/sub
+  ["questionText", "options", "correctAnswers", "explanation", "tags"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
   });
 
-  addCardBtn.addEventListener("click", () => {
-    const data = collectFormData();
-    if (!data.cert_id[0] || !data.question_text) {
-      showGlobalMessage("❗ Please enter at least a title and a question.");
-      return;
-    }
-  
-    cards.push(data);
-    renderCardPreviews();
+  ["difficulty", "questionType", "status"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.selectedIndex = 0;
   });
+});
+
+const clearAllBtn = document.getElementById("clearAllBtn");
+
+clearAllBtn.addEventListener("click", () => {
+  // Clear JSON input
+  document.getElementById("jsonInput").value = "";
+
+  // Clear form fields
+  ["questionText", "options", "correctAnswers", "explanation", "tags"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+
+  ["difficulty", "questionType", "status"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.selectedIndex = 0;
+  });
+
+  // Reset dropdowns to default
+  ["certIdSelect", "domainTitleSelect", "subdomainIdSelect"].forEach(id => {
+    const sel = document.getElementById(id);
+    if (sel) {
+      sel.selectedIndex = 0;
+      sel.dispatchEvent(new Event("change"));
+    }
+  });
+
+  showGlobalMessage("🧨 All fields cleared");
+});
+
+
+addCardBtn.addEventListener("click", () => {
+  const data = collectFormData();
+if (!data.cert_id[0] || !data.domain_id || !data.subdomain_id || !data.question_text) {
+  showGlobalMessage("❗ Title, domain, subdomain, and question text are required.");
+  return;
+}
+
+
+  cards.push(data);
+  renderCardPreviews();
+
+  // 🧼 Clear inputs but keep title/domain/sub
+  document.getElementById("jsonInput").value = "";
+  ["questionText", "options", "correctAnswers", "explanation", "tags"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+
+  ["difficulty", "questionType", "status"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.selectedIndex = 0;
+  });
+});
+
   
   function formatType(type) {
     switch (type) {

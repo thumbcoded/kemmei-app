@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
+
 
 const app = express();
 const PORT = 3000;
@@ -116,14 +118,6 @@ app.post("/api/cards", async (req, res) => {
     const newCard = new Card(req.body);
     await newCard.save();
 
-    // Auto-create backup folder
-    const cardFolder = path.join(__dirname, "..", "data", "cards", certId, domainId, subId);
-    fs.mkdirSync(cardFolder, { recursive: true });
-
-    // Write card file to disk
-    const filename = path.join(cardFolder, `${uniqueId}.json`);
-    fs.writeFileSync(filename, JSON.stringify(newCard.toObject(), null, 2));
-
     res.json({ success: true, card: newCard });
   } catch (err) {
     console.error("❌ Error saving card:", err);
@@ -159,6 +153,90 @@ app.put("/api/cards/:id", async (req, res) => {
     res.status(500).json({ success: false, error: "Failed to update card" });
   }
 });
+
+// 🔁 Sync cards from MongoDB to /data/cards folder
+function hashCard(card) {
+  return crypto.createHash("sha256").update(JSON.stringify(card)).digest("hex");
+}
+
+async function syncCardsToDisk() {
+  try {
+    const allCards = await Card.find({}).lean();
+    const existingPaths = new Set();
+    let writeCount = 0;
+    let deleteCount = 0;
+
+    for (const card of allCards) {
+      const certId = card.cert_id[0];
+      const domainId = card.domain_id;
+      const subId = card.subdomain_id;
+      const cardId = card._id;
+
+      const dirPath = path.join(__dirname, "..", "data", "cards", certId, domainId, subId);
+      fs.mkdirSync(dirPath, { recursive: true });
+
+      const filePath = path.join(dirPath, `${cardId}.json`);
+      existingPaths.add(filePath);
+
+      const newHash = hashCard(card);
+      let existingHash = null;
+
+      if (fs.existsSync(filePath)) {
+        try {
+          const existing = fs.readFileSync(filePath, "utf8");
+          existingHash = hashCard(JSON.parse(existing));
+        } catch (err) {
+          console.warn("⚠️ Couldn't parse existing file:", filePath);
+        }
+      }
+
+      if (newHash !== existingHash) {
+        fs.writeFileSync(filePath, JSON.stringify(card, null, 2));
+        writeCount++;
+      }
+    }
+
+    // Delete orphaned files
+    const rootDir = path.join(__dirname, "..", "data", "cards");
+    const walkAndDelete = (dir) => {
+      fs.readdirSync(dir, { withFileTypes: true }).forEach(entry => {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+          walkAndDelete(fullPath);
+          if (fs.readdirSync(fullPath).length === 0) {
+            fs.rmdirSync(fullPath);
+          }
+        } else if (entry.isFile() && entry.name.endsWith(".json") && !existingPaths.has(fullPath)) {
+          fs.unlinkSync(fullPath);
+          deleteCount++;
+        }
+      });
+    };
+    walkAndDelete(rootDir);
+
+    if (writeCount || deleteCount) {
+      console.log(`🕒 [Sync] ${writeCount} written, ${deleteCount} deleted.`);
+    }
+  } catch (err) {
+    console.error("❌ [Sync error]:", err.message);
+  }
+}
+
+
+
+// 🌐 Manual trigger route
+app.get("/api/sync-cards-to-disk", async (req, res) => {
+  try {
+    await syncCardsToDisk();
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 🕒 Auto sync every 60 seconds
+setInterval(syncCardsToDisk, 60 * 1000);
+
 
 
 // ==============================
