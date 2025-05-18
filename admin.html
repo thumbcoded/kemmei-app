@@ -92,9 +92,14 @@
 <!-- Import buttons -->
 <div class="import-buttons">
   <button id="importBtn">📥 Import</button>
+  <button id="importManyBtn">📥 Import Many</button>
   <button id="clearBtn">🧹 Clear</button>
   <button id="clearAllBtn">🧨 Clear All</button>
 </div>
+
+<!-- Bulk import status message -->
+<div id="bulkImportStatus" class="system-message hidden" style="margin-top: 0.5rem;"></div>
+
 
 <!-- Card data form -->
 
@@ -191,6 +196,7 @@
 
         <!-- Submit -->
         <button id="submitToBackendBtn">📤 Submit to Backend</button>
+        <button id="bulkSubmitBtn">🚀 Submit as Bulk</button>
         <p id="submitMessage">✔️ Card(s) submitted to backend!</p>
 
         <!-- Export -->

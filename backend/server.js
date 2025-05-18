@@ -222,8 +222,6 @@ async function syncCardsToDisk() {
   }
 }
 
-
-
 // 🌐 Manual trigger route
 app.get("/api/sync-cards-to-disk", async (req, res) => {
   try {
@@ -233,6 +231,35 @@ app.get("/api/sync-cards-to-disk", async (req, res) => {
     res.status(500).json({ success: false, error: err.message });
   }
 });
+
+app.post("/api/cards/bulk", async (req, res) => {
+  try {
+    const cards = req.body;
+
+    if (!Array.isArray(cards) || cards.length === 0) {
+      return res.status(400).json({ success: false, error: "No cards provided." });
+    }
+
+    const existing = await Card.find({}, "_id").lean();
+    const usedIds = new Set(existing.map(c => c._id));
+
+    const newCards = cards.map(card => {
+      const certId = card.cert_id[0];
+      const domainId = card.domain_id;
+      const subId = card.subdomain_id;
+      const uniqueId = generateCardId(certId, domainId, subId, usedIds);
+      usedIds.add(uniqueId);
+      return { ...card, _id: uniqueId };
+    });
+
+    await Card.insertMany(newCards);
+    res.json({ success: true, inserted: newCards.length });
+  } catch (err) {
+    console.error("❌ Bulk insert failed:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 
 // 🕒 Auto sync every 60 seconds
 setInterval(syncCardsToDisk, 60 * 1000);

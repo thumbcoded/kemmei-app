@@ -35,6 +35,22 @@ window.loadDomainMap = loadDomainMap;
 
 let allCards = [];
 
+function isValidCard(card) {
+  const validTypes = ["multiple_choice", "select_multiple", "select_all", "pbq"];
+  const validDiff = ["easy", "medium", "hard"];
+  return (
+    Array.isArray(card.cert_id) &&
+    typeof card.domain_id === "string" &&
+    typeof card.domain_title === "string" &&
+    typeof card.subdomain_id === "string" &&
+    typeof card.question_text === "string" &&
+    validTypes.includes(card.question_type) &&
+    validDiff.includes(card.difficulty) &&
+    Array.isArray(card.answer_options) && card.answer_options.length >= 2 &&
+    Array.isArray(card.correct_answer) && card.correct_answer.length >= 1
+  );
+}
+
 function showGlobalMessage(message, type = "info") {
   const el = document.getElementById("globalMessageArea");
   if (!el) return;
@@ -191,6 +207,39 @@ const importBtn = document.getElementById("importBtn");
   const exportFileBtn = document.getElementById("exportFileBtn");
   const submitBtn = document.getElementById("submitToBackendBtn");
 
+const bulkSubmitBtn = document.getElementById("bulkSubmitBtn");
+
+bulkSubmitBtn.addEventListener("click", async () => {
+  if (cards.length === 0) {
+    showGlobalMessage("❗ No cards to submit.");
+    return;
+  }
+
+  try {
+    const res = await fetch("http://localhost:3000/api/cards/bulk", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cards)
+    });
+
+    const result = await res.json();
+    if (result.success) {
+      showGlobalMessage(`✅ ${result.inserted} cards submitted!`);
+      cards.length = 0;
+      cardCount.textContent = "Cards created: 0";
+      document.getElementById("jsonInput").value = "";
+      document.getElementById("bulkImportStatus").classList.add("hidden");
+      fetchAllCards();
+    } else {
+      showGlobalMessage("❌ Bulk submission failed: " + result.error);
+    }
+  } catch (err) {
+    console.error("❌ Network error during bulk submit:", err);
+    showGlobalMessage("❌ Network error submitting cards.");
+  }
+});
+
+
   submitBtn.addEventListener("click", async () => {
     if (cards.length === 0) {
       showGlobalMessage("No cards to submit.");
@@ -241,12 +290,14 @@ cards.length = 0;
 cardCount.textContent = "Cards created: 0";
 
   
-      successMessage.textContent = "✔️ Card(s) submitted to backend!";
-      successMessage.style.display = "block";
-      setTimeout(() => {
-        successMessage.style.display = "none";
-      }, 2500);
-    });
+    successMessage.textContent = "✔️ Card(s) submitted to backend!";
+    successMessage.style.display = "block";
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 2500);
+  });
+
+
   const cardPreviewList = document.getElementById("cardPreviewList");
   const cardCount = document.getElementById("cardCount");
   const cancelEditBtn = document.getElementById("cancelEditBtn");
@@ -1107,6 +1158,46 @@ if (subOpt) subdomainSelect.value = subOpt.value;
       showGlobalMessage("Invalid JSON: " + err.message);
     }
   });
+
+document.getElementById("importManyBtn").addEventListener("click", () => {
+  const jsonInput = document.getElementById("jsonInput").value.trim();
+  const bulkStatus = document.getElementById("bulkImportStatus");
+  bulkStatus.classList.add("hidden");
+
+  try {
+    const parsed = JSON.parse(jsonInput);
+    const data = Array.isArray(parsed) ? parsed : [parsed];
+
+    const valid = [];
+    const invalid = [];
+
+    data.forEach(card => {
+      if (isValidCard(card)) valid.push(card);
+      else invalid.push(card);
+    });
+
+    // Push only valid cards to buffer
+    cards.push(...valid);
+
+    // Show summary
+    const msg = [
+      `✅ ${valid.length} valid card(s) ready to submit.`,
+      invalid.length ? `❌ ${invalid.length} invalid card(s) skipped.` : null
+    ].filter(Boolean).join(" ");
+
+    bulkStatus.textContent = msg;
+    bulkStatus.className = "system-message info";
+    bulkStatus.classList.remove("hidden");
+
+    cardCount.textContent = `Cards created: ${cards.length}`;
+
+  } catch (err) {
+    bulkStatus.textContent = "❌ Invalid JSON: " + err.message;
+    bulkStatus.className = "system-message error";
+    bulkStatus.classList.remove("hidden");
+  }
+});
+
 
 clearBtn.addEventListener("click", () => {
   document.getElementById("jsonInput").value = "";
