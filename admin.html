@@ -235,7 +235,10 @@
     </div>
 
     <div id="suggestions" class="keyword-suggestions"></div>
+    <div id="cardBrowserMessage" class="system-message hidden" style="margin-top: 0.5rem;"></div>
+
   </div>
+  
 
   <!-- Select All + Bulk Delete -->
   <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
@@ -245,6 +248,15 @@
         <span>Select all</span>
       </label>
     </div>
+
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+  <label class="switch">
+    <input type="checkbox" id="toggleDeletedMode" />
+    <span class="slider"></span>
+  </label>
+  <span class="backend-label">Show Deleted</span>
+</div>
+
   
     <button id="bulkDeleteBtn" style="display: none; background-color: #dc3545; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer;">
       🗑️ Delete Selected

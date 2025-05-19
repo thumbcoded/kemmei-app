@@ -41,9 +41,15 @@ app.get("/", (req, res) => {
 
 app.get("/api/cards", async (req, res) => {
   try {
-    const { cert_id, domain_id, subdomain_id, difficulty } = req.query;
+    const { cert_id, domain_id, subdomain_id, difficulty, include_deleted } = req.query;
 
     const filter = {};
+
+    // Exclude soft-deleted cards unless explicitly included
+    if (include_deleted !== "true") {
+      filter.status = { $ne: "deleted" };
+    }
+
     if (cert_id) filter.cert_id = { $in: [cert_id] };
     if (domain_id) filter.domain_id = domain_id;
     if (subdomain_id) filter.subdomain_id = subdomain_id;
@@ -117,6 +123,7 @@ app.post("/api/cards", async (req, res) => {
     // Save to Mongo
     const newCard = new Card(req.body);
     await newCard.save();
+console.log(`🆕 Created card ${newCard._id}`);
 
     res.json({ success: true, card: newCard });
   } catch (err) {
@@ -125,11 +132,19 @@ app.post("/api/cards", async (req, res) => {
   }
 });
 
-
 app.delete("/api/cards/:id", async (req, res) => {
   try {
-    const deleted = await Card.findByIdAndDelete(req.params.id);
-    if (!deleted) return res.status(404).json({ success: false, message: "Card not found" });
+    const updated = await Card.findByIdAndUpdate(
+      
+      req.params.id,
+      { status: "deleted" },
+      { new: true }
+    );
+console.log(`🗑️ Soft-deleted card ${updated._id}`);
+    if (!updated) {
+      return res.status(404).json({ success: false, message: "Card not found" });
+    }
+
     res.json({ success: true });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
@@ -142,6 +157,11 @@ app.put("/api/cards/:id", async (req, res) => {
 
   try {
     const result = await Card.findByIdAndUpdate(cardId, updatedCard, { new: true });
+if (updatedCard.status === "approved") {
+  console.log(`♻️ Restored card ${cardId}`);
+} else {
+  console.log(`✏️ Updated card ${cardId}`);
+}
 
     if (!result) {
       return res.status(404).json({ success: false, error: "Card not found" });
@@ -253,6 +273,8 @@ app.post("/api/cards/bulk", async (req, res) => {
     });
 
     await Card.insertMany(newCards);
+    console.log(`🚀 Bulk insert: ${newCards.length} cards`);
+
     res.json({ success: true, inserted: newCards.length });
   } catch (err) {
     console.error("❌ Bulk insert failed:", err);

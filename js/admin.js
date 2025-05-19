@@ -166,6 +166,11 @@ dropdowns.setupCreateNewSwitch({
 
   })();
 
+const toggleDeletedMode = document.getElementById("toggleDeletedMode");
+toggleDeletedMode.addEventListener("change", () => {
+  fetchAllCards(toggleDeletedMode.checked);
+});
+
 const toggleEditor = document.getElementById("toggleEditor");
 const editorPanel = document.getElementById("editorPanel");
 
@@ -177,7 +182,8 @@ toggleEditor.addEventListener("change", () => {
   editorPanel.style.display = isEditorOn ? "block" : "none";
 
   if (isEditorOn) {
-    fetchAllCards(); // Only fetch if showing
+    fetchAllCards(toggleDeletedMode.checked);
+
     // Turn off Manager
     toggleManager.checked = false;
     managerPanel.style.display = "none";
@@ -315,43 +321,48 @@ cardCount.textContent = "Cards created: 0";
 });
 
 
+async function fetchAllCards(showDeleted = false) {
+  try {
+    const url = showDeleted
+      ? "http://localhost:3000/api/cards?include_deleted=true"
+      : "http://localhost:3000/api/cards";
 
-  async function fetchAllCards() {
-    try {
-      const res = await fetch("http://localhost:3000/api/cards");
-      const data = await res.json();
-      allCards = data;
+    const res = await fetch(url);
+    const data = await res.json();
 
-populateDropdownFilters(allCards);
-generateSuggestions(allCards); 
-renderCardGrid(allCards);
+    allCards = showDeleted
+      ? data.filter(card => card.status === "deleted")
+      : data.filter(card => card.status !== "deleted");
 
-// SUBDOMAIN — show input group when "Create new..." selected
+    populateDropdownFilters(allCards);
+    generateSuggestions(allCards);
+    renderCardGrid(allCards, showDeleted);
 
-const subdomainIdSelect = document.getElementById("subdomainIdSelect");
-const subdomainIdInput = document.getElementById("subdomainIdInput");
-const subdomainIdInputGroup = document.getElementById("subdomainIdInputGroup");
-const subdomainIdSelectGroup = document.getElementById("subdomainIdSelectGroup");
+    const subdomainIdSelect = document.getElementById("subdomainIdSelect");
+    const subdomainIdInput = document.getElementById("subdomainIdInput");
+    const subdomainIdInputGroup = document.getElementById("subdomainIdInputGroup");
+    const subdomainIdSelectGroup = document.getElementById("subdomainIdSelectGroup");
 
-subdomainIdSelect.addEventListener("change", () => {
-  if (subdomainIdSelect.value === "create_new") {
-    const certId = certIdSelect.value;
-    const domainRaw = domainTitleSelect.value;
-    const domainId = domainRaw.split(" ")[0]; // expects "1.0 Mobile Devices"
-    const nextSubId = getNextSubdomainId(certId, domainId);
-    document.getElementById("subdomainIdDisplay").value = nextSubId;
+    subdomainIdSelect.addEventListener("change", () => {
+      if (subdomainIdSelect.value === "create_new") {
+        const certId = certIdSelect.value;
+        const domainRaw = domainTitleSelect.value;
+        const domainId = domainRaw.split(" ")[0]; // expects "1.0 Mobile Devices"
+        const nextSubId = getNextSubdomainId(certId, domainId);
+        document.getElementById("subdomainIdDisplay").value = nextSubId;
 
-    subdomainIdSelectGroup.style.display = "none";
-    subdomainIdInputGroup.style.display = "flex";
-    subdomainIdInput.focus();
-  }
-});
-
-
-} catch (err) {
-      console.error("❌ Failed to load cards:", err);
-    }
+        subdomainIdSelectGroup.style.display = "none";
+        subdomainIdInputGroup.style.display = "flex";
+        subdomainIdInput.focus();
       }
+    });
+
+  } catch (err) {
+    console.error("❌ Failed to load cards:", err);
+    showGlobalMessage("❌ Failed to load cards from backend", "error");
+  }
+}
+
 
 const certIdInput = document.getElementById("certIdInput");
 const certTitleInput = document.getElementById("certTitleInput");
@@ -732,25 +743,84 @@ function updateBulkDeleteButton() {
     bulkDeleteBtn.style.display = "none";
   }
 }
-bulkDeleteBtn.addEventListener("click", async () => {
-  if (!confirm(`❗ Are you sure you want to delete ${selectedCardIds.length} cards? This cannot be undone.`)) {
-    return;
-  }
 
-  try {
-    for (const id of selectedCardIds) {
-      await fetch(`http://localhost:3000/api/cards/${id}`, {
-        method: "DELETE"
-      });
+bulkDeleteBtn.addEventListener("click", async () => {
+  if (selectedCardIds.length < 1) return;
+
+  const isTrashMode = toggleDeletedMode.checked;
+  const action = isTrashMode ? "Restore" : "Delete";
+  const messageEl = document.getElementById("cardBrowserMessage");
+  if (!messageEl) return;
+
+  messageEl.innerHTML = `
+    <strong>⚠️ ${action} ${selectedCardIds.length} selected cards?</strong>
+    <button id="confirmBulkActionBtn" style="margin-left: 1rem;">✅ Confirm</button>
+    <button id="cancelBulkActionBtn">✖ Cancel</button>
+  `;
+  messageEl.className = "system-message warning";
+  messageEl.classList.remove("hidden");
+
+  document.getElementById("cancelBulkActionBtn").addEventListener("click", () => {
+    messageEl.classList.add("hidden");
+  });
+
+  document.getElementById("confirmBulkActionBtn").addEventListener("click", async () => {
+    const backup = allCards.filter(card => selectedCardIds.includes(card._id));
+
+    try {
+      for (const card of backup) {
+        const endpoint = `http://localhost:3000/api/cards/${card._id}`;
+        if (isTrashMode) {
+          await fetch(endpoint, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ status: "approved" })
+          });
+        } else {
+          await fetch(endpoint, { method: "DELETE" });
+        }
+      }
+
+      messageEl.innerHTML = isTrashMode
+        ? `✅ ${selectedCardIds.length} cards restored.`
+        : `🗑️ ${selectedCardIds.length} cards deleted. <button id="undoDeleteBtn">Undo</button>`;
+      messageEl.className = "system-message success";
+
+      if (!isTrashMode) {
+        const undoTimer = setTimeout(() => {
+          messageEl.classList.add("hidden");
+        }, 7000);
+
+        document.getElementById("undoDeleteBtn").addEventListener("click", async () => {
+          clearTimeout(undoTimer);
+          for (const card of backup) {
+            await fetch("http://localhost:3000/api/cards", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(card)
+            });
+          }
+          selectedCardIds = [];
+          messageEl.textContent = "✅ Cards restored!";
+          fetchAllCards(toggleDeletedMode.checked);
+          setTimeout(() => messageEl.classList.add("hidden"), 3000);
+        });
+      } else {
+        setTimeout(() => messageEl.classList.add("hidden"), 3000);
+      }
+
+      selectedCardIds = [];
+      fetchAllCards(toggleDeletedMode.checked);
+
+    } catch (err) {
+      console.error("❌ Bulk action failed:", err);
+      messageEl.className = "system-message error";
+      messageEl.textContent = `❌ Failed to ${action.toLowerCase()} cards.`;
     }
-    showGlobalMessage("✔️ Selected cards deleted.");
-    selectedCardIds = [];
-    fetchAllCards(); // Reload
-  } catch (err) {
-    console.error("❌ Bulk delete failed:", err);
-    showGlobalMessage("❌ Failed to delete cards.");
-  }
+  });
 });
+
+
 
 function updateSelectAllCheckbox() {
   const allCheckboxes = document.querySelectorAll(".select-card-checkbox");
@@ -1015,11 +1085,14 @@ cancelEditBtn.addEventListener("click", () => {
   
 let selectedCardIds = [];
 
-function renderCardGrid(cards) {
+function renderCardGrid(cards, isDeletedMode = false) {
   const grid = document.getElementById("cardGrid");
   grid.innerHTML = "";
+  selectedCardIds = [];
+bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️ Delete Selected";
 
-  selectedCardIds = []; // Reset selection
+
+  bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️ Delete Selected";
 
   cards.forEach(card => {
     const div = document.createElement("div");
@@ -1035,11 +1108,15 @@ function renderCardGrid(cards) {
           <div style="display: flex; gap: 0.5rem; align-items: center;">
             <button class="edit-card" data-id="${card._id}">Edit</button>
             <div class="delete-wrapper">
-              <button class="delete-card" data-id="${card._id}">Delete</button>
-              <div class="confirm-cancel hidden">
-               <button class="confirm-btn">✔ Confirm</button>
-               <button class="cancel-btn">✖ Cancel</button>
-              </div>
+              ${isDeletedMode
+                ? `<button class="restore-card" data-id="${card._id}">♻️ Restore</button>`
+                : `
+                  <button class="delete-card" data-id="${card._id}">Delete</button>
+                  <div class="confirm-cancel hidden">
+                    <button class="confirm-btn">✔ Confirm</button>
+                    <button class="cancel-btn">✖ Cancel</button>
+                  </div>
+                `}
             </div>
           </div>
           <input type="checkbox" class="select-card-checkbox" data-id="${card._id}" />
@@ -1047,11 +1124,12 @@ function renderCardGrid(cards) {
       </div>
     `;
 
-    const editBtn = div.querySelector(".edit-card");
-    editBtn.addEventListener("click", () => {
+    // Edit
+    div.querySelector(".edit-card").addEventListener("click", () => {
       loadCardIntoForm(card);
     });
 
+    // Checkbox select
     const checkbox = div.querySelector(".select-card-checkbox");
     checkbox.addEventListener("change", (e) => {
       const id = e.target.dataset.id;
@@ -1066,36 +1144,54 @@ function renderCardGrid(cards) {
       updateSelectAllCheckbox();
     });
 
-    // NEW: Single delete handling
-    const deleteBtn = div.querySelector(".delete-card");
-    const confirmCancelDiv = div.querySelector(".confirm-cancel");
-
-    deleteBtn.addEventListener("click", () => {
-      deleteBtn.classList.add("hidden");
-      confirmCancelDiv.classList.remove("hidden");
-    });
-
-    confirmCancelDiv.querySelector(".cancel-btn").addEventListener("click", () => {
-      confirmCancelDiv.classList.add("hidden");
-      deleteBtn.classList.remove("hidden");
-    });
-
-    confirmCancelDiv.querySelector(".confirm-btn").addEventListener("click", async () => {
-      try {
-        const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
-          method: "DELETE"
-        });
-        if (res.ok) {
-          div.remove();
-          console.log(`🗑️ Deleted ${card._id}`);
-        } else {
-          showGlobalMessage("❌ Failed to delete card.");
+    if (isDeletedMode) {
+      // Restore button logic
+      div.querySelector(".restore-card").addEventListener("click", async () => {
+        try {
+          await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ status: "approved" })
+          });
+          showGlobalMessage("♻️ Card restored!", "success");
+          fetchAllCards(true);
+        } catch (err) {
+          console.error("❌ Restore failed:", err);
+          showGlobalMessage("❌ Failed to restore card.", "error");
         }
-      } catch (err) {
-        console.error(err);
-        showGlobalMessage("❌ Network error deleting card.");
-      }
-    });
+      });
+    } else {
+      // Delete confirmation logic
+      const deleteBtn = div.querySelector(".delete-card");
+      const confirmCancelDiv = div.querySelector(".confirm-cancel");
+
+      deleteBtn.addEventListener("click", () => {
+        deleteBtn.classList.add("hidden");
+        confirmCancelDiv.classList.remove("hidden");
+      });
+
+      confirmCancelDiv.querySelector(".cancel-btn").addEventListener("click", () => {
+        confirmCancelDiv.classList.add("hidden");
+        deleteBtn.classList.remove("hidden");
+      });
+
+      confirmCancelDiv.querySelector(".confirm-btn").addEventListener("click", async () => {
+        try {
+          const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+            method: "DELETE"
+          });
+          if (res.ok) {
+            div.remove();
+            console.log(`🗑️ Deleted ${card._id}`);
+          } else {
+            showGlobalMessage("❌ Failed to delete card.");
+          }
+        } catch (err) {
+          console.error(err);
+          showGlobalMessage("❌ Network error deleting card.");
+        }
+      });
+    }
 
     grid.appendChild(div);
   });
@@ -1103,6 +1199,7 @@ function renderCardGrid(cards) {
   updateBulkDeleteButton();
   updateSelectAllCheckbox();
 }
+
 
   async function fetchNextCardIds(count) {
     try {
