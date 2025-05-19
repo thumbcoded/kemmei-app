@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A projector shuts down after a few minutes of use. What’s the MOST likely cause?",
+  "answer_options": [
+    "Incorrect resolution",
+    "Driver issue",
+    "Overheating",
+    "Low input signal"
+  ],
+  "correct_answer": [
+    "Overheating"
+  ],
+  "explanation": "Projectors often shut down automatically when they detect unsafe operating temperatures.",
+  "tags": [
+    "troubleshooting",
+    "display",
+    "projector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

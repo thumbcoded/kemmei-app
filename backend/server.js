@@ -151,6 +151,20 @@ console.log(`🗑️ Soft-deleted card ${updated._id}`);
   }
 });
 
+app.delete("/api/cards/:id/permanent", async (req, res) => {
+  try {
+    const result = await Card.findByIdAndDelete(req.params.id);
+    if (!result) {
+      return res.status(404).json({ success: false, error: "Card not found" });
+    }
+    console.log(`💀 Permanently deleted card ${req.params.id}`);
+    res.json({ success: true });
+  } catch (err) {
+    console.error("❌ Permanent delete failed:", err);
+    res.status(500).json({ success: false, error: "Failed to delete permanently" });
+  }
+});
+
 app.put("/api/cards/:id", async (req, res) => {
   const cardId = req.params.id;
   const updatedCard = req.body;
@@ -168,6 +182,8 @@ if (updatedCard.status === "approved") {
     }
 
     res.json({ success: true });
+    console.log(`✅ PUT completed for card ${cardId}`);
+
   } catch (err) {
     console.error("❌ Error updating card:", err);
     res.status(500).json({ success: false, error: "Failed to update card" });

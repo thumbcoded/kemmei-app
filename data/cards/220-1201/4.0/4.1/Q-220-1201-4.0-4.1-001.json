@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of hypervisor runs directly on hardware without a host OS?",
+  "answer_options": [
+    "Type 1",
+    "Type 2",
+    "Hosted",
+    "VirtualBox"
+  ],
+  "correct_answer": [
+    "Type 1"
+  ],
+  "explanation": "Type 1 hypervisors (aka bare metal) run directly on the system hardware.",
+  "tags": [
+    "virtualization",
+    "hypervisor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

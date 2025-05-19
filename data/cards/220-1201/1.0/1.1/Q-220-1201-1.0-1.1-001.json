@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Select all accessories commonly used with mobile devices.",
+  "answer_options": [
+    "Docking station",
+    "Stylus",
+    "USB Type-C adapter",
+    "Printer",
+    "External GPU",
+    "All of the above"
+  ],
+  "correct_answer": [
+    "Docking station",
+    "Stylus",
+    "USB Type-C adapter",
+    "Printer",
+    "External GPU",
+    "All of the above"
+  ],
+  "explanation": "All listed items can be paired or used with mobile devices directly or indirectly.",
+  "tags": [
+    "accessories",
+    "mobile"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

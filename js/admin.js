@@ -1089,9 +1089,6 @@ function renderCardGrid(cards, isDeletedMode = false) {
   const grid = document.getElementById("cardGrid");
   grid.innerHTML = "";
   selectedCardIds = [];
-bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️ Delete Selected";
-
-
   bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️ Delete Selected";
 
   cards.forEach(card => {
@@ -1109,7 +1106,10 @@ bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️
             <button class="edit-card" data-id="${card._id}">Edit</button>
             <div class="delete-wrapper">
               ${isDeletedMode
-                ? `<button class="restore-card" data-id="${card._id}">♻️ Restore</button>`
+                ? `
+                  <button class="restore-card" data-id="${card._id}">♻️ Restore</button>
+                  <button class="delete-forever-card" data-id="${card._id}">💀 Delete Forever</button>
+                `
                 : `
                   <button class="delete-card" data-id="${card._id}">Delete</button>
                   <div class="confirm-cancel hidden">
@@ -1124,12 +1124,12 @@ bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️
       </div>
     `;
 
-    // Edit
+    // Edit button
     div.querySelector(".edit-card").addEventListener("click", () => {
       loadCardIntoForm(card);
     });
 
-    // Checkbox select
+    // Checkbox selection
     const checkbox = div.querySelector(".select-card-checkbox");
     checkbox.addEventListener("change", (e) => {
       const id = e.target.dataset.id;
@@ -1145,7 +1145,7 @@ bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️
     });
 
     if (isDeletedMode) {
-      // Restore button logic
+      // ♻️ Restore
       div.querySelector(".restore-card").addEventListener("click", async () => {
         try {
           await fetch(`http://localhost:3000/api/cards/${card._id}`, {
@@ -1160,8 +1160,29 @@ bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️
           showGlobalMessage("❌ Failed to restore card.", "error");
         }
       });
+
+      // 💀 Delete Forever
+      div.querySelector(".delete-forever-card")?.addEventListener("click", async () => {
+        if (!confirm("⚠️ This will permanently delete the card. Are you sure?")) return;
+
+        try {
+          const res = await fetch(`http://localhost:3000/api/cards/${card._id}/permanent`, {
+            method: "DELETE"
+          });
+          if (res.ok) {
+            showGlobalMessage("💀 Card permanently deleted.", "success");
+            fetchAllCards(true);
+          } else {
+            showGlobalMessage("❌ Failed to delete forever.", "error");
+          }
+        } catch (err) {
+          console.error("❌ Delete forever failed:", err);
+          showGlobalMessage("❌ Network error.", "error");
+        }
+      });
+
     } else {
-      // Delete confirmation logic
+      // 🗑️ Soft delete
       const deleteBtn = div.querySelector(".delete-card");
       const confirmCancelDiv = div.querySelector(".confirm-cancel");
 
@@ -1199,6 +1220,7 @@ bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️
   updateBulkDeleteButton();
   updateSelectAllCheckbox();
 }
+
 
 
   async function fetchNextCardIds(count) {

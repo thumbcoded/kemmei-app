@@ -687,3 +687,13 @@ font-weight: normal;
   padding: 2px 6px;
   font-size: 0.85rem;
 }
+
+button.delete-forever-card {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
