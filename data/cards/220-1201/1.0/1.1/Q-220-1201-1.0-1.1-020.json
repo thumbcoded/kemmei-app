@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "If a user’s laptop keyboard is not responding, what is a quick way to test if the issue is hardware or software related?",
+  "answer_options": [
+    "Run a full system restore",
+    "Update the BIOS",
+    "Use an external USB keyboard",
+    "Reset the display settings"
+  ],
+  "correct_answer": [
+    "Use an external USB keyboard"
+  ],
+  "explanation": "Plugging in an external keyboard helps determine if the issue is the laptop's built-in keyboard or a software problem.",
+  "tags": [
+    "keyboard",
+    "troubleshooting",
+    "usb"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

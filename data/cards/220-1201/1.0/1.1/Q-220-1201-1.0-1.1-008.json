@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "1.0 Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements about laptop RAM are true? (Select all that apply)",
+  "answer_options": [
+    "Laptop RAM uses the SODIMM form factor",
+    "Laptop RAM is always soldered to the motherboard",
+    "Some laptops allow you to upgrade RAM by removing a panel",
+    "All laptops have two RAM slots"
+  ],
+  "correct_answer": [
+    "Laptop RAM uses the SODIMM form factor",
+    "Some laptops allow you to upgrade RAM by removing a panel"
+  ],
+  "explanation": "SODIMM is the typical laptop memory form factor. Some laptops allow upgrades, while others have RAM soldered to the board.",
+  "tags": [
+    "RAM",
+    "memory",
+    "hardware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

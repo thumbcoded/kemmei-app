@@ -360,3 +360,8 @@ body.flashcards-page {
   align-items: flex-end;
 }
 
+#filterWrapper.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+  filter: grayscale(50%);
+}

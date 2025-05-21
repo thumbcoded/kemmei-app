@@ -18,10 +18,10 @@ export const cardTemplate = {
   question_text: "",            // main text
   image: null,                  // string or null — image URL/path
   media: null,                  // optional: for video/audio/PBQ interactive objects
-  options: [                    // visible answers
+  answer_options: [             // ✅ must be this to match backend
     "Option A", "Option B", "Option C"
   ],
-  correct_answer: [             // must match one or more from options
+  correct_answer: [             // must match one or more from answer_options
     "Option B"
   ],
   requiredCount: null,          // number or null — only for select_multiple types

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which laptop storage device has no moving parts and offers faster access times?",
+  "answer_options": [
+    "2.5\" HDD",
+    "3.5\" HDD",
+    "SSD",
+    "Tape drive"
+  ],
+  "correct_answer": [
+    "SSD"
+  ],
+  "explanation": "Solid-state drives (SSDs) use flash memory and have no moving parts, leading to faster performance and reliability.",
+  "tags": [
+    "storage",
+    "ssd"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

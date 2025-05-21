@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which action is required after inserting an M.2 SSD into its slot?",
+  "answer_options": [
+    "Apply thermal paste",
+    "Attach an IDE ribbon cable",
+    "Screw it down to the board",
+    "Format it in BIOS first"
+  ],
+  "correct_answer": [
+    "Screw it down to the board"
+  ],
+  "explanation": "After inserting an M.2 drive, you typically screw it down to secure it in place.",
+  "tags": [
+    "storage",
+    "m.2",
+    "installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

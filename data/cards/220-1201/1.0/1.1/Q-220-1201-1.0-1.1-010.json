@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "You are replacing a wireless card in an older laptop. Which two steps are typically part of the process?",
+  "answer_options": [
+    "Connect main and auxiliary antenna wires",
+    "Run a full system restore",
+    "Open the display bezel to access the screen",
+    "Remove the back panel to access the card"
+  ],
+  "correct_answer": [
+    "Connect main and auxiliary antenna wires",
+    "Remove the back panel to access the card"
+  ],
+  "explanation": "Older laptops may use mini PCIe wireless cards, which require antenna connections and access from a back panel.",
+  "tags": [
+    "wireless",
+    "wifi",
+    "hardware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

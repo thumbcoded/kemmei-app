@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What would be a valid reason to use an external webcam with a laptop?",
+  "answer_options": [
+    "The laptop is overheating",
+    "The built-in webcam is physically damaged",
+    "The operating system doesn't support video",
+    "The SSD is full"
+  ],
+  "correct_answer": [
+    "The built-in webcam is physically damaged"
+  ],
+  "explanation": "External webcams are commonly used when the built-in one is damaged or if higher quality is needed.",
+  "tags": [
+    "webcam",
+    "hardware",
+    "video"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

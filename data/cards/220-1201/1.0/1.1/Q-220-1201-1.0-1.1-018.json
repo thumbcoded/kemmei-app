@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is typically required to replace a 2.5\" SATA hard drive in a laptop?",
+  "answer_options": [
+    "Disassemble the LCD bezel",
+    "Remove the motherboard",
+    "Remove a back panel and screws securing the drive",
+    "Install a new battery first"
+  ],
+  "correct_answer": [
+    "Remove a back panel and screws securing the drive"
+  ],
+  "explanation": "Accessing a 2.5\" SATA drive usually involves removing a back panel and a couple screws holding the drive.",
+  "tags": [
+    "storage",
+    "sata",
+    "replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

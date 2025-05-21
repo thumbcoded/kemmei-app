@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of the 'Fn' (Function) key on a laptop keyboard?",
+  "answer_options": [
+    "It opens Task Manager",
+    "It toggles BIOS settings",
+    "It enables secondary functions for other keys",
+    "It acts as a power button"
+  ],
+  "correct_answer": [
+    "It enables secondary functions for other keys"
+  ],
+  "explanation": "The Function key allows users to access alternate operations for keys, such as adjusting brightness or volume.",
+  "tags": [
+    "keyboard",
+    "function key"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

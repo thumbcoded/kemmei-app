@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two components that can be used for biometric authentication on a laptop.",
+  "answer_options": [
+    "Fingerprint reader",
+    "Camera",
+    "Speakers",
+    "Trackpad"
+  ],
+  "correct_answer": [
+    "Fingerprint reader",
+    "Camera"
+  ],
+  "explanation": "Modern laptops may use fingerprint readers and cameras for biometric authentication via Windows Hello.",
+  "tags": [
+    "biometrics",
+    "security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

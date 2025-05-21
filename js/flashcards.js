@@ -204,6 +204,8 @@ subSelect.disabled = !(
     abortBtn.classList.remove("hidden");
     exitBtn.classList.add("hidden");
     headerBar.classList.add("dimmed");
+    document.getElementById("filterWrapper").classList.add("disabled");
+
 
     flashcardBox.classList.remove("hidden");
     cardMeta.classList.remove("hidden");
@@ -215,48 +217,66 @@ subSelect.disabled = !(
     loadCard();
   }
 
-  function loadCard() {
-    const q = questions[currentIndex];
-    cardContainer.textContent = q.question;
-    answerForm.innerHTML = "";
+function loadCard() {
+  const q = questions[currentIndex];
+  cardContainer.textContent = q.question;
+  answerForm.innerHTML = "";
 
-    q.options.forEach(option => {
-      const div = document.createElement("div");
-      div.className = "option";
-      div.textContent = option;
+  q.options.forEach(option => {
+    const div = document.createElement("div");
+    div.className = "option";
+    div.textContent = option;
 
-      div.addEventListener("click", () => {
-        const isSelected = div.classList.contains("selected");
-        const selectedCount = answerForm.querySelectorAll(".option.selected").length;
-        const maxSelections = q.required;
+    div.addEventListener("click", () => {
+      const isSelected = div.classList.contains("selected");
+      const selectedCount = answerForm.querySelectorAll(".option.selected").length;
+      const maxSelections = q.required;
 
-        if (q.required === 1) {
-          answerForm.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
-          div.classList.toggle("selected");
-        } else {
-          if (isSelected) {
-            div.classList.remove("selected");
-          } else if (selectedCount < maxSelections) {
-            div.classList.add("selected");
-          }
-        }
+      // if (q.required === 1) {
+      //   answerForm.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
+      //   div.classList.toggle("selected");
+      // } else {
+      //   if (isSelected) {
+      //     div.classList.remove("selected");
+      //   } else if (selectedCount < maxSelections) {
+      //     div.classList.add("selected");
+      //   }
+      // }
 
-        updateCheckState();
-      });
+      if (q.type === "multiple_choice") {
+  answerForm.querySelectorAll(".option").forEach(opt => opt.classList.remove("selected"));
+  div.classList.toggle("selected");
+} else if (q.type === "select_multiple") {
+  if (isSelected) {
+    div.classList.remove("selected");
+  } else if (selectedCount < q.required) {
+    div.classList.add("selected");
+  }
+} else {
+  // select_all: no limit
+  if (isSelected) {
+    div.classList.remove("selected");
+  } else {
+    div.classList.add("selected");
+  }
+}
 
-      answerForm.appendChild(div);
+      updateCheckState();
     });
 
-    checkBtn.disabled = true;
-    checkBtn.classList.remove("primary");
-    checkTooltip.style.display = "block";
+    answerForm.appendChild(div);
+  });
 
-    nextBtn.disabled = true;
-    nextBtn.classList.remove("primary");
-    nextTooltip.style.display = "block";
+  checkBtn.disabled = true;
+  checkBtn.classList.remove("primary");
+  checkTooltip.style.display = "block";
 
-    updateMeta();
-  }
+  nextBtn.disabled = true;
+  nextBtn.classList.remove("primary");
+  nextTooltip.style.display = "block";
+
+  updateMeta();
+}
 
   function updateCheckState() {
     const q = questions[currentIndex];
@@ -349,7 +369,11 @@ subSelect.disabled = !(
   }
 
   startBtn.addEventListener("click", startSession);
-  abortBtn.addEventListener("click", () => window.location.href = "flashcards.html");
+ abortBtn.addEventListener("click", () => {
+  document.getElementById("filterWrapper").classList.remove("disabled");
+  window.location.href = "flashcards.html";
+});
+
   exitBtn.addEventListener("click", () => window.location.href = "flashcards.html");
 
   checkBtn.addEventListener("click", checkAnswer);
