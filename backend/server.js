@@ -5,9 +5,10 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-
 const app = express();
 const PORT = 3000;
+
+app.use(express.static(path.join(__dirname, "..")));
 
 app.use(cors());
 app.use(express.json());

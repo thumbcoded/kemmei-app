@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f6f8fa;
+  color: #333;
+}
+
+#concurWrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#concurTree {
+  width: 320px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+#concurDetails {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.cert-node {
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+}
+
+.domain-node {
+  margin-left: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.subdomain-list {
+  margin-left: 1.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.subdomain-list li {
+  margin: 0.3rem 0;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.subdomain-list li:hover {
+  background-color: #eef3f8;
+}
+
+.question-list {
+  margin-top: 1rem;
+  padding-left: 1rem;
+}
+
+.question-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.4;
+}
+
+.toggle-arrow {
+  display: inline-block;
+  width: 1.2rem;
+  text-align: center;
+  font-size: 1rem;
+  user-select: none;
+  color: #333;
+  transition: color 0.2s;
+  font-family: 'Segoe UI Symbol', 'Segoe UI', system-ui, sans-serif;
+}
