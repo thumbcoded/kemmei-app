@@ -1,0 +1,57 @@
+function checkCardCoverage(card, topicTerms) {
+  const text = card.question_text.toLowerCase();
+  return topicTerms.some(term => {
+    return term.split(" ").every(word => text.includes(word));
+  });
+}
+
+export function analyzeCoverage(cards, covmapSub) {
+  const report = {
+    conceptCoverage: {},
+    difficultyBreakdown: {
+      easy: 0,
+      medium: 0,
+      hard: 0
+    },
+    matchedCards: {}
+  };
+
+  // Build concept coverage map
+  const concepts = covmapSub.concepts || {};
+  for (const [conceptName, { terms }] of Object.entries(concepts)) {
+    report.conceptCoverage[conceptName] = {
+      hitCount: 0,
+      cardIds: []
+    };
+  }
+
+  for (const card of cards) {
+    const text = card.question_text.toLowerCase();
+    const difficulty = card.difficulty.toLowerCase();
+    report.difficultyBreakdown[difficulty]++;
+
+    for (const [conceptName, { terms }] of Object.entries(concepts)) {
+      for (const term of terms) {
+        const tokens = term.toLowerCase().split(" ");
+        const matches = tokens.every(token => text.includes(token));
+
+        if (matches) {
+          if (!report.conceptCoverage[conceptName].cardIds.includes(card._id)) {
+            report.conceptCoverage[conceptName].cardIds.push(card._id);
+            report.conceptCoverage[conceptName].hitCount++;
+          }
+
+          // Track all matched concepts per card
+          if (!report.matchedCards[card._id]) {
+            report.matchedCards[card._id] = [];
+          }
+          if (!report.matchedCards[card._id].includes(conceptName)) {
+            report.matchedCards[card._id].push(conceptName);
+          }
+        }
+      }
+    }
+  }
+
+  return report;
+}

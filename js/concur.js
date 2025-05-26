@@ -1,3 +1,9 @@
+import { analyzeCoverage } from "./covmap.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadConcurTree();
+});
+
 async function loadConcurTree() {
   try {
     const res = await fetch("http://localhost:3000/api/domainmap");
@@ -9,7 +15,7 @@ async function loadConcurTree() {
 }
 
 function sanitize(text) {
-  return (text || "").replace(/[^\x20-\x7E]/g, ""); // remove non-ASCII
+  return (text || "").replace(/[^\x20-\x7E]/g, "");
 }
 
 function renderConcurTree(certNames, domainMaps, subdomainMaps) {
@@ -25,7 +31,7 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
     certHeader.textContent = sanitize(certTitle);
 
     const certToggle = document.createElement("span");
-    certToggle.textContent = "\u25B6"; // ▶ safe arrow
+    certToggle.textContent = "\u25B6";
     certToggle.className = "toggle-arrow";
     certToggle.style.cursor = "pointer";
     certToggle.style.marginRight = "0.4rem";
@@ -44,7 +50,7 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
     certLine.addEventListener("click", () => {
       const open = domainContainer.style.display === "block";
       domainContainer.style.display = open ? "none" : "block";
-      certToggle.textContent = open ? "\u25B6" : "\u25BC"; // ▶ ▼
+      certToggle.textContent = open ? "\u25B6" : "\u25BC";
     });
 
     const domainMap = domainMaps[certId] || {};
@@ -53,7 +59,7 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
       domainItem.className = "domain-node";
 
       const domainToggle = document.createElement("span");
-      domainToggle.textContent = "\u25B6"; // ▶
+      domainToggle.textContent = "\u25B6";
       domainToggle.className = "toggle-arrow";
       domainToggle.style.cursor = "pointer";
       domainToggle.style.marginRight = "0.4rem";
@@ -75,7 +81,7 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
       domainLine.addEventListener("click", () => {
         const open = subContainer.style.display === "block";
         subContainer.style.display = open ? "none" : "block";
-        domainToggle.textContent = open ? "\u25B6" : "\u25BC"; // ▶ ▼
+        domainToggle.textContent = open ? "\u25B6" : "\u25BC";
       });
 
       const subMap = subdomainMaps[certId]?.[domainId] || {};
@@ -112,29 +118,35 @@ async function loadSubdomainSummary(certId, domainId, subId, subTitle) {
     const panel = document.getElementById("concurDetails");
     panel.innerHTML = `<h2>📂 ${sanitize(subId)} ${sanitize(subTitle)}</h2>`;
 
-    const summary = document.createElement("p");
     const easy = cards.filter(c => c.difficulty === "easy").length;
     const med = cards.filter(c => c.difficulty === "medium").length;
     const hard = cards.filter(c => c.difficulty === "hard").length;
 
+    const summary = document.createElement("p");
     summary.innerHTML = `Cards: ${cards.length} | 🕹️ Easy: ${easy} | ⚔️ Medium: ${med} | 💀 Hard: ${hard}`;
     panel.appendChild(summary);
 
-    const list = document.createElement("ul");
-    list.className = "question-list";
+    const covmap = await fetch("/data/covmap.json").then(res => res.json());
+    const covmapSub = covmap[certId]?.[domainId]?.[subId];
 
-    cards.forEach(c => {
-      const item = document.createElement("li");
-      item.textContent = sanitize(c.question_text);
-      list.appendChild(item);
-    });
+    if (covmapSub) {
+      const report = analyzeCoverage(cards, covmapSub);
 
-    panel.appendChild(list);
+      const coverageHeader = document.createElement("h3");
+      coverageHeader.textContent = "📊 Concept Coverage:";
+      panel.appendChild(coverageHeader);
+
+      Object.entries(report.conceptCoverage).forEach(([concept, info]) => {
+        const row = document.createElement("div");
+        row.textContent = `${concept}: ${info.hitCount} card(s)`;
+        if (info.hitCount === 0) {
+          row.style.color = "red";
+        }
+        panel.appendChild(row);
+      });
+    }
+
   } catch (err) {
     console.error("❌ Failed to load cards for subdomain:", err);
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  loadConcurTree();
-});

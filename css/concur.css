@@ -73,3 +73,13 @@ body {
   transition: color 0.2s;
   font-family: 'Segoe UI Symbol', 'Segoe UI', system-ui, sans-serif;
 }
+
+#concurDetails h3 {
+  margin-top: 1rem;
+  color: #444;
+}
+
+#concurDetails div {
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
