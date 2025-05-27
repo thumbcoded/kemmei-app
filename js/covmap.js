@@ -13,11 +13,13 @@ export function analyzeCoverage(cards, covmapSub) {
       medium: 0,
       hard: 0
     },
-    matchedCards: {}
+    matchedCards: {},
+    unmatchedCards: []
   };
 
-  // Build concept coverage map
   const concepts = covmapSub.concepts || {};
+
+  // Initialize concept buckets
   for (const [conceptName, { terms }] of Object.entries(concepts)) {
     report.conceptCoverage[conceptName] = {
       hitCount: 0,
@@ -28,7 +30,12 @@ export function analyzeCoverage(cards, covmapSub) {
   for (const card of cards) {
     const text = card.question_text.toLowerCase();
     const difficulty = card.difficulty.toLowerCase();
-    report.difficultyBreakdown[difficulty]++;
+
+    if (report.difficultyBreakdown[difficulty] !== undefined) {
+      report.difficultyBreakdown[difficulty]++;
+    }
+
+    let matchedAnyConcept = false;
 
     for (const [conceptName, { terms }] of Object.entries(concepts)) {
       for (const term of terms) {
@@ -36,12 +43,13 @@ export function analyzeCoverage(cards, covmapSub) {
         const matches = tokens.every(token => text.includes(token));
 
         if (matches) {
+          matchedAnyConcept = true;
+
           if (!report.conceptCoverage[conceptName].cardIds.includes(card._id)) {
             report.conceptCoverage[conceptName].cardIds.push(card._id);
             report.conceptCoverage[conceptName].hitCount++;
           }
 
-          // Track all matched concepts per card
           if (!report.matchedCards[card._id]) {
             report.matchedCards[card._id] = [];
           }
@@ -50,6 +58,10 @@ export function analyzeCoverage(cards, covmapSub) {
           }
         }
       }
+    }
+
+    if (!matchedAnyConcept) {
+      report.unmatchedCards.push(card._id);
     }
   }
 

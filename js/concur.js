@@ -92,9 +92,9 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
         subItem.dataset.domainId = domainId;
         subItem.dataset.subId = subId;
 
-        subItem.addEventListener("click", () => {
-          loadSubdomainSummary(certId, domainId, subId, subTitle);
-        });
+subItem.addEventListener("click", () => {
+  renderSubdomainSummary(certId, domainId, subId, subTitle);
+});
 
         subContainer.appendChild(subItem);
       });
@@ -110,7 +110,7 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
   });
 }
 
-async function loadSubdomainSummary(certId, domainId, subId, subTitle) {
+async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
   try {
     const res = await fetch(`http://localhost:3000/api/cards?cert_id=${certId}&domain_id=${domainId}&subdomain_id=${subId}`);
     const cards = await res.json();
@@ -144,7 +144,189 @@ async function loadSubdomainSummary(certId, domainId, subId, subTitle) {
         }
         panel.appendChild(row);
       });
-    }
+      const strayNote = document.createElement("p");
+strayNote.style.marginTop = "1rem";
+strayNote.innerHTML = `🧩 <b>${report.unmatchedCards.length}</b> card(s) did not match any concept.`;
+panel.appendChild(strayNote);
+
+const toggleBtn = document.createElement("button");
+toggleBtn.textContent = "🔍 Show unmatched cards";
+toggleBtn.style.marginTop = "0.5rem";
+toggleBtn.style.cursor = "pointer";
+
+const unmatchedList = document.createElement("ul");
+unmatchedList.style.display = "none";
+unmatchedList.className = "unmatched-list";
+
+toggleBtn.addEventListener("click", () => {
+  unmatchedList.style.display = unmatchedList.style.display === "none" ? "block" : "none";
+  toggleBtn.textContent = unmatchedList.style.display === "block"
+    ? "🔽 Hide unmatched cards"
+    : "🔍 Show unmatched cards";
+});
+
+panel.appendChild(toggleBtn);
+panel.appendChild(unmatchedList);
+
+report.unmatchedCards.forEach((cardId) => {
+  const card = cards.find(c => c._id === cardId);
+  if (!card) return;
+
+  const wrapper = document.createElement("li");
+  wrapper.classList.add("unmatched-card");
+
+  // 🧱 Header row: buttons + question text
+  const headerRow = document.createElement("div");
+  headerRow.style.display = "flex";
+  headerRow.style.alignItems = "center";
+  headerRow.style.gap = "0.5rem";
+  headerRow.style.marginBottom = "0.25rem";
+
+  const editBtn = document.createElement("button");
+  editBtn.textContent = "✏️ Edit";
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "🗑️ Delete";
+
+  const questionText = document.createElement("span");
+  questionText.textContent = card.question_text;
+  questionText.style.fontWeight = "normal";
+
+  headerRow.appendChild(editBtn);
+  headerRow.appendChild(deleteBtn);
+  headerRow.appendChild(questionText);
+  wrapper.appendChild(headerRow);
+
+  // 📝 Inline editor (hidden initially)
+  const editor = document.createElement("div");
+  editor.style.marginTop = "0.5rem";
+  editor.style.display = "none";
+
+  const qInput = document.createElement("textarea");
+  qInput.value = card.question_text;
+  qInput.rows = 2;
+  qInput.style.width = "100%";
+  qInput.placeholder = "Edit question text";
+
+  const optInput = document.createElement("textarea");
+  optInput.value = (card.answer_options || []).join("\n");
+  optInput.rows = 4;
+  optInput.style.width = "100%";
+  optInput.style.marginTop = "0.5rem";
+  optInput.placeholder = "One answer option per line";
+
+  const correctInput = document.createElement("textarea");
+  correctInput.value = (card.correct_answer || []).join("\n");
+  correctInput.rows = 3;
+  correctInput.style.width = "100%";
+  correctInput.style.marginTop = "0.5rem";
+  correctInput.placeholder = "One correct answer per line";
+
+  const saveBtn = document.createElement("button");
+  saveBtn.textContent = "💾 Save";
+  saveBtn.style.marginTop = "0.5rem";
+
+  const cancelBtn = document.createElement("button");
+  cancelBtn.textContent = "Cancel";
+  cancelBtn.style.marginLeft = "0.5rem";
+
+  editor.appendChild(qInput);
+  editor.appendChild(optInput);
+  editor.appendChild(correctInput);
+  editor.appendChild(saveBtn);
+  editor.appendChild(cancelBtn);
+  wrapper.appendChild(editor);
+
+  // 🖱️ Edit
+  editBtn.addEventListener("click", () => {
+    editor.style.display = "block";
+    unmatchedList.querySelectorAll("li").forEach(li => {
+      if (li !== wrapper) li.style.display = "none";
+    });
+    toggleBtn.style.display = "none";
+    editBtn.disabled = true;
+    deleteBtn.disabled = true;
+  });
+
+  // 🚫 Cancel
+  cancelBtn.addEventListener("click", () => {
+    editor.style.display = "none";
+    unmatchedList.querySelectorAll("li").forEach(li => {
+      li.style.display = "list-item";
+    });
+    toggleBtn.style.display = "inline-block";
+    editBtn.disabled = false;
+    deleteBtn.disabled = false;
+  });
+
+  // 💾 Save
+  saveBtn.addEventListener("click", async () => {
+    const updated = {
+      ...card,
+      question_text: qInput.value.trim(),
+      answer_options: optInput.value.split("\n").map(s => s.trim()).filter(Boolean),
+      correct_answer: correctInput.value.split("\n").map(s => s.trim()).filter(Boolean)
+    };
+
+    try {
+  const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(updated)
+  });
+
+  if (res.ok) {
+    await renderSubdomainSummary(certId, domainId, subId, subTitle);
+  } else {
+    alert("❌ Failed to update card");
+  }
+} catch (err) {
+  console.error(err);
+  alert("❌ Network error");
+}
+
+  });
+
+  // 🗑️ Delete
+  deleteBtn.addEventListener("click", () => {
+    deleteBtn.style.display = "none";
+    const confirmRow = document.createElement("div");
+    const confirmBtn = document.createElement("button");
+    confirmBtn.textContent = "✔ Confirm";
+    const cancelDelBtn = document.createElement("button");
+    cancelDelBtn.textContent = "✖ Cancel";
+    cancelDelBtn.style.marginLeft = "0.5rem";
+    confirmRow.appendChild(confirmBtn);
+    confirmRow.appendChild(cancelDelBtn);
+    wrapper.appendChild(confirmRow);
+
+    cancelDelBtn.addEventListener("click", () => {
+      confirmRow.remove();
+      deleteBtn.style.display = "inline-block";
+    });
+
+    confirmBtn.addEventListener("click", async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+          method: "DELETE"
+        });
+
+        if (res.ok) {
+          wrapper.remove();
+        } else {
+          alert("❌ Failed to delete");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("❌ Network error");
+      }
+    });
+  });
+
+  unmatchedList.appendChild(wrapper);
+});
+
+}
 
   } catch (err) {
     console.error("❌ Failed to load cards for subdomain:", err);

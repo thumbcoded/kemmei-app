@@ -83,3 +83,27 @@ body {
   padding-left: 1rem;
   font-size: 0.9rem;
 }
+
+.unmatched-list {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.unmatched-list li {
+  margin-bottom: 0.3rem;
+  list-style: disc;
+}
+
+.unmatched-list button {
+  margin-left: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.unmatched-list input,
+.unmatched-list textarea {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+}
