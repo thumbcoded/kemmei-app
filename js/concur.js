@@ -116,7 +116,179 @@ async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
     const cards = await res.json();
 
     const panel = document.getElementById("concurDetails");
-    panel.innerHTML = `<h2>📂 ${sanitize(subId)} ${sanitize(subTitle)}</h2>`;
+    let report = null;
+    panel.innerHTML = `
+  <div class="details-layout">
+    <div class="subdomain-left">
+      <h2>📂 ${sanitize(subId)} ${sanitize(subTitle)}</h2>
+    </div>
+    <div class="subdomain-right">
+      <h3>📏 Coverage Status</h3>
+      <!-- We'll populate this later -->
+    </div>
+  </div>
+`;
+
+const left = panel.querySelector(".subdomain-left");
+const right = panel.querySelector(".subdomain-right");
+
+// 📋 Coverage Input UI
+const headerRow = document.createElement("div");
+headerRow.style.display = "flex";
+headerRow.style.alignItems = "center";
+headerRow.style.justifyContent = "space-between";
+
+const coverageHeader = document.createElement("h3");
+coverageHeader.textContent = "📋 Coverage Targets";
+
+const toggleEdit = document.createElement("button");
+toggleEdit.textContent = "🔒 Lock";
+toggleEdit.className = "coverage-toggle-btn";
+
+headerRow.appendChild(coverageHeader);
+headerRow.appendChild(toggleEdit);
+right.appendChild(headerRow);
+
+// 🔁 Lock/Unlock logic
+let locked = false;
+toggleEdit.addEventListener("click", () => {
+  locked = !locked;
+  toggleEdit.textContent = locked ? "🔓 Unlock" : "🔒 Lock";
+  coverageForm.querySelectorAll("input").forEach(input => {
+    input.disabled = locked;
+  });
+});
+
+// Wrapper
+const coverageForm = document.createElement("div");
+coverageForm.className = "coverage-form";
+right.appendChild(coverageForm);
+
+// 💡 Update bars based on actual card data vs targets
+function updateBarsFromData() {
+  const totalCards = cards.length;
+
+  // Difficulty counts
+  const countDifficulty = {
+    easy: cards.filter(c => c.difficulty === "easy").length,
+    medium: cards.filter(c => c.difficulty === "medium").length,
+    hard: cards.filter(c => c.difficulty === "hard").length,
+  };
+
+  // Question type counts
+  const countType = {
+    mcq: cards.filter(c => c.question_type === "multiple_choice").length,
+    multi: cards.filter(c => c.question_type === "select_multiple").length,
+    all: cards.filter(c => c.question_type === "select_all").length,
+  };
+
+  // Helper to apply bar visuals
+  const applyBar = (selector, current, target) => {
+    const barWrap = document.querySelector(selector);
+    if (!barWrap) return;
+
+    let fill = barWrap.querySelector(".bar-fill");
+    if (!fill) {
+      fill = document.createElement("div");
+      fill.className = "bar-fill";
+      barWrap.appendChild(fill);
+    }
+
+    const ratio = target ? Math.min(current / target, 1) : 0;
+    fill.style.width = (ratio * 100) + "%";
+
+    fill.style.background = ratio >= 1
+      ? "green"
+      : ratio >= 0.5
+      ? "#ffc107" // yellow
+      : "red";
+  };
+
+  // Get targets from inputs
+  const easyTarget = parseInt(document.querySelector(".input-difficulty-easy").value, 10);
+  const medTarget = parseInt(document.querySelector(".input-difficulty-medium").value, 10);
+  const hardTarget = parseInt(document.querySelector(".input-difficulty-hard").value, 10);
+  const mcqTarget = parseInt(document.querySelector(".input-type-mcq").value, 10);
+  const multiTarget = parseInt(document.querySelector(".input-type-multi").value, 10);
+  const allTarget = parseInt(document.querySelector(".input-type-all").value, 10);
+
+  const cardsPerConcept = parseInt(document.querySelector(".input-cards-per-concept").value, 10);
+  const conceptCount = Object.keys(report.conceptCoverage).length;
+  const conceptGoal = conceptCount * cardsPerConcept;
+  const matchedCount = totalCards - report.unmatchedCards.length;
+
+  applyBar(".bar-cards-per-concept", matchedCount, conceptGoal);
+  applyBar(".bar-difficulty-easy", countDifficulty.easy, totalCards * (easyTarget / 100));
+  applyBar(".bar-difficulty-medium", countDifficulty.medium, totalCards * (medTarget / 100));
+  applyBar(".bar-difficulty-hard", countDifficulty.hard, totalCards * (hardTarget / 100));
+  applyBar(".bar-type-mcq", countType.mcq, totalCards * (mcqTarget / 100));
+  applyBar(".bar-type-multi", countType.multi, totalCards * (multiTarget / 100));
+  applyBar(".bar-type-all", countType.all, totalCards * (allTarget / 100));
+}
+
+coverageForm.innerHTML += `
+
+  <div class="input-row">
+    <label>🧠 Cards per concept:
+      <input type="number" class="input-cards-per-concept" min="0" value="2">
+    </label>
+    <div class="bar bar-cards-per-concept"></div>
+  </div>
+
+  <hr>
+
+  <label><b>🎯 Difficulty Distribution</b></label><br>
+
+  <div class="input-row">
+    <label>Easy
+      <input type="number" class="input-difficulty-easy" min="0" value="60">%
+    </label>
+    <div class="bar bar-difficulty-easy"></div>
+  </div>
+
+  <div class="input-row">
+    <label>Medium
+      <input type="number" class="input-difficulty-medium" min="0" value="30">%
+    </label>
+    <div class="bar bar-difficulty-medium"></div>
+  </div>
+
+  <div class="input-row">
+    <label>Hard
+      <input type="number" class="input-difficulty-hard" min="0" value="10">%
+    </label>
+    <div class="bar bar-difficulty-hard"></div>
+  </div>
+
+  <hr>
+
+  <label><b>🧪 Question Types</b></label><br>
+
+  <div class="input-row">
+    <label>Multiple Choice
+      <input type="number" class="input-type-mcq" min="0" value="60">%
+    </label>
+    <div class="bar bar-type-mcq"></div>
+  </div>
+
+  <div class="input-row">
+    <label>Select Multiple
+      <input type="number" class="input-type-multi" min="0" value="25">%
+    </label>
+    <div class="bar bar-type-multi"></div>
+  </div>
+
+  <div class="input-row">
+    <label>Select All That Apply
+      <input type="number" class="input-type-all" min="0" value="15">%
+    </label>
+    <div class="bar bar-type-all"></div>
+  </div>
+`;
+
+coverageForm.querySelectorAll("input").forEach(input => {
+  input.addEventListener("input", updateBarsFromData);
+});
 
     const easy = cards.filter(c => c.difficulty === "easy").length;
     const med = cards.filter(c => c.difficulty === "medium").length;
@@ -124,17 +296,19 @@ async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
 
     const summary = document.createElement("p");
     summary.innerHTML = `Cards: ${cards.length} | 🕹️ Easy: ${easy} | ⚔️ Medium: ${med} | 💀 Hard: ${hard}`;
-    panel.appendChild(summary);
+    right.appendChild(summary);
 
     const covmap = await fetch("/data/covmap.json").then(res => res.json());
     const covmapSub = covmap[certId]?.[domainId]?.[subId];
 
     if (covmapSub) {
-      const report = analyzeCoverage(cards, covmapSub);
+      report = analyzeCoverage(cards, covmapSub);
+
+      updateBarsFromData();
 
       const coverageHeader = document.createElement("h3");
       coverageHeader.textContent = "📊 Concept Coverage:";
-      panel.appendChild(coverageHeader);
+      left.appendChild(coverageHeader);
 
       Object.entries(report.conceptCoverage).forEach(([concept, info]) => {
         const row = document.createElement("div");
@@ -142,12 +316,12 @@ async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
         if (info.hitCount === 0) {
           row.style.color = "red";
         }
-        panel.appendChild(row);
+        left.appendChild(row);
       });
       const strayNote = document.createElement("p");
 strayNote.style.marginTop = "1rem";
 strayNote.innerHTML = `🧩 <b>${report.unmatchedCards.length}</b> card(s) did not match any concept.`;
-panel.appendChild(strayNote);
+left.appendChild(strayNote);
 
 const toggleBtn = document.createElement("button");
 toggleBtn.textContent = "🔍 Show unmatched cards";
