@@ -110,6 +110,30 @@ subItem.addEventListener("click", () => {
   });
 }
 
+function balanceGroupInputs(group) {
+  const inputs = group.map(sel => document.querySelector(sel));
+  const values = inputs.map(input => parseFloat(input.value) || 0);
+  const total = values.reduce((a, b) => a + b, 0);
+
+  const changedIndex = inputs.findIndex(input => document.activeElement === input);
+  if (changedIndex === -1) return;
+
+  const fixedValue = values[changedIndex];
+  const remaining = 100 - fixedValue;
+
+  // Redistribute among the other two
+  const otherIndices = [0, 1, 2].filter(i => i !== changedIndex);
+  const otherTotal = otherIndices.map(i => values[i]).reduce((a, b) => a + b, 0) || 1;
+
+  otherIndices.forEach(i => {
+    const proportion = values[i] / otherTotal;
+    const adjusted = Math.max(0, Math.round(remaining * proportion));
+    inputs[i].value = adjusted;
+  });
+
+  inputs[changedIndex].value = Math.min(100, Math.round(fixedValue)); // cap max
+}
+
 async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
   try {
     const res = await fetch(`http://localhost:3000/api/cards?cert_id=${certId}&domain_id=${domainId}&subdomain_id=${subId}`);
@@ -150,7 +174,14 @@ headerRow.appendChild(toggleEdit);
 right.appendChild(headerRow);
 
 // 🔁 Lock/Unlock logic
-let locked = false;
+let locked = true;
+toggleEdit.textContent = "🔓 Unlock";
+setTimeout(() => {
+  coverageForm.querySelectorAll("input").forEach(input => {
+    input.disabled = true;
+  });
+});
+
 toggleEdit.addEventListener("click", () => {
   locked = !locked;
   toggleEdit.textContent = locked ? "🔓 Unlock" : "🔒 Lock";
@@ -182,6 +213,15 @@ function updateBarsFromData() {
     all: cards.filter(c => c.question_type === "select_all").length,
   };
 
+const getColorForRatio = (r) => {
+  if (r >= 1.0) return "#27ae60";   // ✅ Full green
+  if (r >= 0.8) return "#2ecc71";   // 🟢 Light green
+  if (r >= 0.6) return "#f39c12";   // 🟠 Orange
+  if (r >= 0.4) return "#f1c40f";   // 💛 Yellow
+  if (r >= 0.2) return "#e67e22";   // 🧡 Dark orange
+  return "#e74c3c";                 // 🔴 Red
+};
+
   // Helper to apply bar visuals
   const applyBar = (selector, current, target) => {
     const barWrap = document.querySelector(selector);
@@ -197,11 +237,9 @@ function updateBarsFromData() {
     const ratio = target ? Math.min(current / target, 1) : 0;
     fill.style.width = (ratio * 100) + "%";
 
-    fill.style.background = ratio >= 1
-      ? "green"
-      : ratio >= 0.5
-      ? "#ffc107" // yellow
-      : "red";
+fill.style.backgroundColor = getColorForRatio(ratio);
+fill.title = `${current} / ${Math.round(target)} (${Math.round(ratio * 100)}%)`;
+
   };
 
   // Get targets from inputs
@@ -289,6 +327,29 @@ coverageForm.innerHTML += `
 coverageForm.querySelectorAll("input").forEach(input => {
   input.addEventListener("input", updateBarsFromData);
 });
+
+const difficultyInputs = [
+  ".input-difficulty-easy",
+  ".input-difficulty-medium",
+  ".input-difficulty-hard"
+];
+
+const typeInputs = [
+  ".input-type-mcq",
+  ".input-type-multi",
+  ".input-type-all"
+];
+
+[...difficultyInputs, ...typeInputs].forEach(selector => {
+  const input = document.querySelector(selector);
+  input.addEventListener("input", () => {
+    balanceGroupInputs(
+      difficultyInputs.includes(selector) ? difficultyInputs : typeInputs
+    );
+    updateBarsFromData();
+  });
+});
+
 
     const easy = cards.filter(c => c.difficulty === "easy").length;
     const med = cards.filter(c => c.difficulty === "medium").length;

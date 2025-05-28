@@ -189,7 +189,10 @@ body {
 .bar-fill {
   height: 100%;
   width: 0%;
-  background: green;
-  transition: width 0.3s ease, background 0.3s ease;
+  color: white;
+  font-size: 0.7rem;
+  text-align: right;
+  padding-right: 4px;
+  transition: width 0.6s ease-in-out, background-color 0.4s ease;
   border-radius: 3px;
 }
