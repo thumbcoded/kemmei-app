@@ -1,0 +1,41 @@
+{
+  "default": {
+    "cardsPerConcept": 2,
+    "difficulty": {
+      "easy": 60,
+      "medium": 30,
+      "hard": 10
+    },
+    "types": {
+      "multiple_choice": 60,
+      "select_multiple": 25,
+      "select_all": 15
+    }
+  },
+  "220-1201:1.0:1.2": {
+    "cardsPerConcept": 3,
+    "difficulty": {
+      "easy": 50,
+      "medium": 30,
+      "hard": 20
+    },
+    "types": {
+      "multiple_choice": 50,
+      "select_multiple": 25,
+      "select_all": 25
+    }
+  },
+  "220-1201:1.0:1.1": {
+    "cardsPerConcept": 2,
+    "difficulty": {
+      "easy": 60,
+      "medium": 30,
+      "hard": 10
+    },
+    "types": {
+      "multiple_choice": 59,
+      "select_multiple": 25,
+      "select_all": 16
+    }
+  }
+}

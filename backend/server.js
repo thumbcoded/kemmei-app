@@ -8,6 +8,8 @@ const crypto = require("crypto");
 const app = express();
 const PORT = 3000;
 
+const targetMapPath = path.join(__dirname, "..", "data", "targetmap.json");
+
 app.use(express.static(path.join(__dirname, "..")));
 
 app.use(cors());
@@ -30,6 +32,37 @@ try {
   process.exit(1); // crash hard so we know
 }
 
+// ==============================
+// TARGETMAP ROUTES
+// ==============================
+
+app.put("/api/targetmap", (req, res) => {
+  const { key, update } = req.body;
+  if (!key || !update) {
+    return res.status(400).json({ error: "Missing key or update object" });
+  }
+
+  try {
+    const data = JSON.parse(fs.readFileSync(targetMapPath, "utf8"));
+    data[key] = update;
+    fs.writeFileSync(targetMapPath, JSON.stringify(data, null, 2));
+    res.json({ success: true });
+  } catch (err) {
+    console.error("❌ Failed to update targetmap:", err);
+    res.status(500).json({ error: "Failed to update target map" });
+  }
+});
+
+app.get("/api/targetmap", (req, res) => {
+  try {
+    const raw = fs.readFileSync(targetMapPath, "utf8");
+    const json = JSON.parse(raw);
+    res.json(json);
+  } catch (err) {
+    console.error("❌ Failed to load targetmap.json:", err);
+    res.status(500).json({ error: "Failed to load target map" });
+  }
+});
 
 // Test route
 app.get("/", (req, res) => {

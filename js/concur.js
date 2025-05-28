@@ -146,12 +146,19 @@ async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
     <div class="subdomain-left">
       <h2>📂 ${sanitize(subId)} ${sanitize(subTitle)}</h2>
     </div>
-    <div class="subdomain-right">
-      <h3>📏 Coverage Status</h3>
-      <!-- We'll populate this later -->
-    </div>
+<div class="subdomain-right">
+  <!-- We'll populate this later -->
+</div>
+
   </div>
 `;
+
+const targetRes = await fetch("http://localhost:3000/api/targetmap");
+
+const targetMap = await targetRes.json();
+
+const key = `${certId}:${domainId}:${subId}`;
+const target = targetMap[key] || targetMap.default;
 
 const left = panel.querySelector(".subdomain-left");
 const right = panel.querySelector(".subdomain-right");
@@ -163,7 +170,7 @@ headerRow.style.alignItems = "center";
 headerRow.style.justifyContent = "space-between";
 
 const coverageHeader = document.createElement("h3");
-coverageHeader.textContent = "📋 Coverage Targets";
+coverageHeader.textContent = "📋 Coverage Targets and Status";
 
 const toggleEdit = document.createElement("button");
 toggleEdit.textContent = "🔒 Lock";
@@ -350,6 +357,139 @@ const typeInputs = [
   });
 });
 
+document.querySelector(".input-cards-per-concept").value = target.cardsPerConcept || targetMap.default.cardsPerConcept;
+document.querySelector(".input-difficulty-easy").value = target.difficulty?.easy ?? targetMap.default.difficulty.easy;
+document.querySelector(".input-difficulty-medium").value = target.difficulty?.medium ?? targetMap.default.difficulty.medium;
+document.querySelector(".input-difficulty-hard").value = target.difficulty?.hard ?? targetMap.default.difficulty.hard;
+document.querySelector(".input-type-mcq").value = target.types?.multiple_choice ?? targetMap.default.types.multiple_choice;
+document.querySelector(".input-type-multi").value = target.types?.select_multiple ?? targetMap.default.types.select_multiple;
+document.querySelector(".input-type-all").value = target.types?.select_all ?? targetMap.default.types.select_all;
+
+const configNotice = document.createElement("div");
+configNotice.className = "target-status";
+configNotice.style.marginTop = "0.5rem";
+configNotice.textContent = targetMap[key] ? "📌 Using: Custom override" : "📌 Using: Global default";
+coverageForm.prepend(configNotice);
+
+// Create Save/Cancel/Restore buttons (initially hidden)
+const buttonRow = document.createElement("div");
+buttonRow.style.marginTop = "1rem";
+buttonRow.style.display = "none";
+
+const saveBtn = document.createElement("button");
+saveBtn.textContent = "💾 Save for this subdomain";
+const cancelBtn = document.createElement("button");
+cancelBtn.textContent = "Cancel";
+cancelBtn.style.marginLeft = "0.5rem";
+const restoreBtn = document.createElement("button");
+restoreBtn.textContent = "Restore Defaults";
+restoreBtn.style.marginLeft = "0.5rem";
+
+buttonRow.appendChild(saveBtn);
+buttonRow.appendChild(cancelBtn);
+buttonRow.appendChild(restoreBtn);
+coverageForm.appendChild(buttonRow);
+
+const loadedTarget = JSON.stringify(target);
+
+coverageForm.querySelectorAll("input").forEach(input => {
+  input.addEventListener("input", () => {
+    const current = {
+      cardsPerConcept: parseInt(document.querySelector(".input-cards-per-concept").value),
+      difficulty: {
+        easy: parseInt(document.querySelector(".input-difficulty-easy").value),
+        medium: parseInt(document.querySelector(".input-difficulty-medium").value),
+        hard: parseInt(document.querySelector(".input-difficulty-hard").value),
+      },
+      types: {
+        multiple_choice: parseInt(document.querySelector(".input-type-mcq").value),
+        select_multiple: parseInt(document.querySelector(".input-type-multi").value),
+        select_all: parseInt(document.querySelector(".input-type-all").value),
+      }
+    };
+    const changed = JSON.stringify(current) !== loadedTarget;
+    buttonRow.style.display = changed ? "block" : "none";
+  });
+});
+
+cancelBtn.addEventListener("click", () => {
+  document.querySelector(".input-cards-per-concept").value = target.cardsPerConcept || targetMap.default.cardsPerConcept;
+  document.querySelector(".input-difficulty-easy").value = target.difficulty?.easy ?? targetMap.default.difficulty.easy;
+  document.querySelector(".input-difficulty-medium").value = target.difficulty?.medium ?? targetMap.default.difficulty.medium;
+  document.querySelector(".input-difficulty-hard").value = target.difficulty?.hard ?? targetMap.default.difficulty.hard;
+  document.querySelector(".input-type-mcq").value = target.types?.multiple_choice ?? targetMap.default.types.multiple_choice;
+  document.querySelector(".input-type-multi").value = target.types?.select_multiple ?? targetMap.default.types.select_multiple;
+  document.querySelector(".input-type-all").value = target.types?.select_all ?? targetMap.default.types.select_all;
+
+  buttonRow.style.display = "none";
+  updateBarsFromData();
+});
+
+restoreBtn.addEventListener("click", () => {
+  const def = targetMap.default;
+  document.querySelector(".input-cards-per-concept").value = def.cardsPerConcept;
+  document.querySelector(".input-difficulty-easy").value = def.difficulty.easy;
+  document.querySelector(".input-difficulty-medium").value = def.difficulty.medium;
+  document.querySelector(".input-difficulty-hard").value = def.difficulty.hard;
+  document.querySelector(".input-type-mcq").value = def.types.multiple_choice;
+  document.querySelector(".input-type-multi").value = def.types.select_multiple;
+  document.querySelector(".input-type-all").value = def.types.select_all;
+
+  configNotice.textContent = "📌 Using: Global default";
+  buttonRow.style.display = "block";
+  updateBarsFromData();
+});
+
+saveBtn.addEventListener("click", async () => {
+  const update = {
+    cardsPerConcept: parseInt(document.querySelector(".input-cards-per-concept").value, 10),
+    difficulty: {
+      easy: parseInt(document.querySelector(".input-difficulty-easy").value, 10),
+      medium: parseInt(document.querySelector(".input-difficulty-medium").value, 10),
+      hard: parseInt(document.querySelector(".input-difficulty-hard").value, 10),
+    },
+    types: {
+      multiple_choice: parseInt(document.querySelector(".input-type-mcq").value, 10),
+      select_multiple: parseInt(document.querySelector(".input-type-multi").value, 10),
+      select_all: parseInt(document.querySelector(".input-type-all").value, 10),
+    }
+  };
+
+  const key = `${certId}:${domainId}:${subId}`;
+  
+  try {
+    const res = await fetch("http://localhost:3000/api/targetmap", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ key, update })
+    });
+
+    if (!res.ok) throw new Error("Save failed");
+
+    showGlobalMessage("✔️ Targets for subdomain saved");
+    buttonRow.style.display = "none";
+    configNotice.textContent = "📌 Using: Custom override";
+  } catch (err) {
+    console.error("❌ Save failed:", err);
+    alert("Failed to save target settings");
+  }
+});
+
+function showGlobalMessage(msg) {
+  const note = document.createElement("div");
+  note.textContent = msg;
+  note.style.position = "fixed";
+  note.style.bottom = "20px";
+  note.style.left = "50%";
+  note.style.transform = "translateX(-50%)";
+  note.style.background = "#333";
+  note.style.color = "white";
+  note.style.padding = "10px 20px";
+  note.style.borderRadius = "5px";
+  note.style.zIndex = "9999";
+  document.body.appendChild(note);
+  setTimeout(() => note.remove(), 3000);
+}
 
     const easy = cards.filter(c => c.difficulty === "easy").length;
     const med = cards.filter(c => c.difficulty === "medium").length;
@@ -364,6 +504,7 @@ const typeInputs = [
 
     if (covmapSub) {
       report = analyzeCoverage(cards, covmapSub);
+      const cardsPerConcept = parseInt(document.querySelector(".input-cards-per-concept").value, 10);
 
       updateBarsFromData();
 
@@ -371,14 +512,22 @@ const typeInputs = [
       coverageHeader.textContent = "📊 Concept Coverage:";
       left.appendChild(coverageHeader);
 
-      Object.entries(report.conceptCoverage).forEach(([concept, info]) => {
-        const row = document.createElement("div");
-        row.textContent = `${concept}: ${info.hitCount} card(s)`;
-        if (info.hitCount === 0) {
-          row.style.color = "red";
-        }
-        left.appendChild(row);
-      });
+Object.entries(report.conceptCoverage).forEach(([concept, info]) => {
+  const row = document.createElement("div");
+  let icon = "🟢"; // default
+
+  if (info.hitCount === 0) {
+    icon = "🔴";
+    row.style.color = "red";
+  } else if (info.hitCount < cardsPerConcept) {
+    icon = "🟡";
+  }
+
+  row.textContent = `${icon} ${concept}: ${info.hitCount} card(s)`;
+  row.title = `Target: ${cardsPerConcept} card(s)`;
+  left.appendChild(row);
+});
+
       const strayNote = document.createElement("p");
 strayNote.style.marginTop = "1rem";
 strayNote.innerHTML = `🧩 <b>${report.unmatchedCards.length}</b> card(s) did not match any concept.`;
