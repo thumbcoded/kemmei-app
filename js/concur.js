@@ -219,62 +219,63 @@ const coverageForm = document.createElement("div");
 coverageForm.className = "coverage-form";
 right.appendChild(coverageForm);
 
+const masterWrap = document.createElement("div");
+masterWrap.className = "master-bar-wrap";
+masterWrap.innerHTML = `
+  <label style="display: block; margin-top: 1rem;">🏁 Total Subdomain Coverage</label>
+  <div class="bar master-bar"><div class="bar-fill master-bar-fill"></div></div>
+`;
+right.appendChild(masterWrap);
+
+
 // 💡 Update bars based on actual card data vs targets
 function updateBarsFromData() {
   const totalCards = cards.length;
 
-  // Difficulty counts
   const countDifficulty = {
     easy: cards.filter(c => c.difficulty === "easy").length,
     medium: cards.filter(c => c.difficulty === "medium").length,
     hard: cards.filter(c => c.difficulty === "hard").length,
   };
 
-  // Question type counts
   const countType = {
     mcq: cards.filter(c => c.question_type === "multiple_choice").length,
     multi: cards.filter(c => c.question_type === "select_multiple").length,
     all: cards.filter(c => c.question_type === "select_all").length,
   };
 
-const getColorForRatio = (r) => {
-  if (r >= 1.0) return "#27ae60";   // ✅ Full green
-  if (r >= 0.8) return "#2ecc71";   // 🟢 Light green
-  if (r >= 0.6) return "#f39c12";   // 🟠 Orange
-  if (r >= 0.4) return "#f1c40f";   // 💛 Yellow
-  if (r >= 0.2) return "#e67e22";   // 🧡 Dark orange
-  return "#e74c3c";                 // 🔴 Red
-};
+  const getColorForRatio = (r) => {
+    if (r >= 1.0) return "#27ae60";
+    if (r >= 0.8) return "#2ecc71";
+    if (r >= 0.6) return "#f39c12";
+    if (r >= 0.4) return "#f1c40f";
+    if (r >= 0.2) return "#e67e22";
+    return "#e74c3c";
+  };
 
-  // Helper to apply bar visuals
   const applyBar = (selector, current, target) => {
     const barWrap = document.querySelector(selector);
     if (!barWrap) return;
-
     let fill = barWrap.querySelector(".bar-fill");
     if (!fill) {
       fill = document.createElement("div");
       fill.className = "bar-fill";
       barWrap.appendChild(fill);
     }
-
     const ratio = target ? Math.min(current / target, 1) : 0;
     fill.style.width = (ratio * 100) + "%";
-
-fill.style.backgroundColor = getColorForRatio(ratio);
-fill.title = `${current} / ${Math.round(target)} (${Math.round(ratio * 100)}%)`;
-
+    fill.style.backgroundColor = getColorForRatio(ratio);
+    fill.title = `${current} / ${Math.round(target)} (${Math.round(ratio * 100)}%)`;
   };
 
-  // Get targets from inputs
   const easyTarget = parseInt(document.querySelector(".input-difficulty-easy").value, 10);
   const medTarget = parseInt(document.querySelector(".input-difficulty-medium").value, 10);
   const hardTarget = parseInt(document.querySelector(".input-difficulty-hard").value, 10);
   const mcqTarget = parseInt(document.querySelector(".input-type-mcq").value, 10);
   const multiTarget = parseInt(document.querySelector(".input-type-multi").value, 10);
   const allTarget = parseInt(document.querySelector(".input-type-all").value, 10);
-
   const cardsPerConcept = parseInt(document.querySelector(".input-cards-per-concept").value, 10);
+
   const conceptCount = Object.keys(report.conceptCoverage).length;
   const conceptGoal = conceptCount * cardsPerConcept;
   const matchedCount = totalCards - report.unmatchedCards.length;
@@ -286,7 +287,36 @@ fill.title = `${current} / ${Math.round(target)} (${Math.round(ratio * 100)}%)`;
   applyBar(".bar-type-mcq", countType.mcq, totalCards * (mcqTarget / 100));
   applyBar(".bar-type-multi", countType.multi, totalCards * (multiTarget / 100));
   applyBar(".bar-type-all", countType.all, totalCards * (allTarget / 100));
+
+  // ✅ Master bar (Conqueror Bar™)
+  const ratio = (curr, targ) => targ ? Math.min(curr / targ, 1) : 0;
+  const conceptRatio = ratio(matchedCount, conceptGoal);
+  const easyRatio = ratio(countDifficulty.easy, totalCards * (easyTarget / 100));
+  const medRatio = ratio(countDifficulty.medium, totalCards * (medTarget / 100));
+  const hardRatio = ratio(countDifficulty.hard, totalCards * (hardTarget / 100));
+  const mcqRatio = ratio(countType.mcq, totalCards * (mcqTarget / 100));
+  const multiRatio = ratio(countType.multi, totalCards * (multiTarget / 100));
+  const allRatio = ratio(countType.all, totalCards * (allTarget / 100));
+
+  const overall = (
+    conceptRatio +
+    easyRatio +
+    medRatio +
+    hardRatio +
+    mcqRatio +
+    multiRatio +
+    allRatio
+  ) / 7;
+
+  const masterBar = document.querySelector(".master-bar-fill");
+  if (masterBar) {
+    masterBar.style.width = `${Math.round(overall * 100)}%`;
+    masterBar.style.backgroundColor = getColorForRatio(overall);
+    masterBar.title = `Overall coverage: ${Math.round(overall * 100)}%`;
+    masterBar.textContent = `${Math.round(overall * 100)}%`;
+  }
 }
+
 
 coverageForm.innerHTML += `
 
@@ -559,7 +589,13 @@ function showGlobalMessage(msg) {
 
     const summary = document.createElement("p");
     summary.innerHTML = `Cards: ${cards.length} | 🕹️ Easy: ${easy} | ⚔️ Medium: ${med} | 💀 Hard: ${hard}`;
-    right.appendChild(summary);
+    // right.appendChild(summary);
+
+    const bottomRow = document.createElement("div");
+bottomRow.className = "summary-bar-row";
+bottomRow.appendChild(summary);
+bottomRow.appendChild(masterWrap);
+right.appendChild(bottomRow);
 
     const covmap = await fetch("/data/covmap.json").then(res => res.json());
     const covmapSub = covmap[certId]?.[domainId]?.[subId];

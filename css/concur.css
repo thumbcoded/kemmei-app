@@ -196,3 +196,40 @@ body {
   transition: width 0.6s ease-in-out, background-color 0.4s ease;
   border-radius: 3px;
 }
+
+.master-bar-wrap label {
+  display: block;
+  text-align: right;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.master-bar {
+  height: 28px;
+  width: 320px;
+  background-color: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 0.25rem auto 0 auto;
+}
+
+.master-bar-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+  background-color: #ffa726;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-bar-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+  gap: 1rem;
+}
+
