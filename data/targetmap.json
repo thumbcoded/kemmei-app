@@ -33,9 +33,9 @@
       "hard": 10
     },
     "types": {
-      "multiple_choice": 59,
+      "multiple_choice": 60,
       "select_multiple": 25,
-      "select_all": 16
+      "select_all": 15
     }
   }
 }

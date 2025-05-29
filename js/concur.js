@@ -160,6 +160,19 @@ const targetMap = await targetRes.json();
 const key = `${certId}:${domainId}:${subId}`;
 const target = targetMap[key] || targetMap.default;
 
+function areTargetsEqualToDefault() {
+  const def = targetMap.default;
+  return (
+    parseInt(document.querySelector(".input-cards-per-concept").value, 10) === def.cardsPerConcept &&
+    parseInt(document.querySelector(".input-difficulty-easy").value, 10) === def.difficulty.easy &&
+    parseInt(document.querySelector(".input-difficulty-medium").value, 10) === def.difficulty.medium &&
+    parseInt(document.querySelector(".input-difficulty-hard").value, 10) === def.difficulty.hard &&
+    parseInt(document.querySelector(".input-type-mcq").value, 10) === def.types.multiple_choice &&
+    parseInt(document.querySelector(".input-type-multi").value, 10) === def.types.select_multiple &&
+    parseInt(document.querySelector(".input-type-all").value, 10) === def.types.select_all
+  );
+}
+
 const left = panel.querySelector(".subdomain-left");
 const right = panel.querySelector(".subdomain-right");
 
@@ -191,6 +204,10 @@ setTimeout(() => {
 
 toggleEdit.addEventListener("click", () => {
   locked = !locked;
+  resetInline.style.display = (targetMap[key] && !locked && !areTargetsEqualToDefault())
+  ? "inline-block"
+  : "none";
+
   toggleEdit.textContent = locked ? "🔓 Unlock" : "🔒 Lock";
   coverageForm.querySelectorAll("input").forEach(input => {
     input.disabled = locked;
@@ -367,9 +384,50 @@ document.querySelector(".input-type-all").value = target.types?.select_all ?? ta
 
 const configNotice = document.createElement("div");
 configNotice.className = "target-status";
-configNotice.style.marginTop = "0.5rem";
-configNotice.textContent = targetMap[key] ? "📌 Using: Custom override" : "📌 Using: Global default";
+configNotice.style.display = "flex";
+configNotice.style.alignItems = "center";
+configNotice.style.gap = "1rem";
+configNotice.style.justifyContent = "flex-start";
+
+const statusText = document.createElement("span");
+statusText.textContent = areTargetsEqualToDefault()
+  ? "📌 Using: Global default"
+  : "📌 Using: Custom override";
+
+const resetInline = document.createElement("button");
+resetInline.textContent = "Reset to default";
+resetInline.style.marginLeft = "1rem";
+resetInline.style.display = (targetMap[key] && !locked && !areTargetsEqualToDefault())
+  ? "inline-block"
+  : "none";
+
+
+resetInline.addEventListener("click", () => {
+  const def = targetMap.default;
+  document.querySelector(".input-cards-per-concept").value = def.cardsPerConcept;
+  document.querySelector(".input-difficulty-easy").value = def.difficulty.easy;
+  document.querySelector(".input-difficulty-medium").value = def.difficulty.medium;
+  document.querySelector(".input-difficulty-hard").value = def.difficulty.hard;
+  document.querySelector(".input-type-mcq").value = def.types.multiple_choice;
+  document.querySelector(".input-type-multi").value = def.types.select_multiple;
+  document.querySelector(".input-type-all").value = def.types.select_all;
+
+  updateBarsFromData();
+  saveBtn.click();
+setTimeout(() => {
+  statusText.textContent = areTargetsEqualToDefault()
+    ? "📌 Using: Global default"
+    : "📌 Using: Custom override";
+  resetInline.style.display = (targetMap[key] && !locked && !areTargetsEqualToDefault()) ? "inline-block" : "none";
+}, 250); // slight delay to allow saveBtn click to propagate
+
+  showGlobalMessage("↩️ Reset to default values");
+});
+
+configNotice.appendChild(statusText);
+configNotice.appendChild(resetInline);
 coverageForm.prepend(configNotice);
+
 
 // Create Save/Cancel/Restore buttons (initially hidden)
 const buttonRow = document.createElement("div");
@@ -468,7 +526,11 @@ saveBtn.addEventListener("click", async () => {
 
     showGlobalMessage("✔️ Targets for subdomain saved");
     buttonRow.style.display = "none";
-    configNotice.textContent = "📌 Using: Custom override";
+    statusText.textContent = areTargetsEqualToDefault()
+  ? "📌 Using: Global default"
+  : "📌 Using: Custom override";
+resetInline.style.display = (targetMap[key] && !locked && !areTargetsEqualToDefault()) ? "inline-block" : "none";
+
   } catch (err) {
     console.error("❌ Save failed:", err);
     alert("Failed to save target settings");
