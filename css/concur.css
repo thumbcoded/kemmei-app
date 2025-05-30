@@ -12,7 +12,7 @@ body {
 }
 
 #concurTree {
-  width: 320px;
+  width: 380px;
   background: #fff;
   border-right: 1px solid #ddd;
   padding: 1rem;
@@ -47,10 +47,23 @@ body {
   cursor: pointer;
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
 }
 
 .subdomain-list li:hover {
   background-color: #eef3f8;
+}
+
+.subdomain-list li .badge {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #666;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
 }
 
 .question-list {
@@ -233,3 +246,15 @@ body {
   gap: 1rem;
 }
 
+/* PUSH % TO THE RIGHT */
+/* .domain-node > div > span.badge {
+  margin-left: auto;
+}
+.domain-node > div > span:not(.badge) {
+  margin-right: 0.5rem;
+} */
+
+/* SPACE BEFORE % */
+.domain-node > div > span.badge {
+  margin-left: 1.5rem;
+}

@@ -64,8 +64,20 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
       domainToggle.style.cursor = "pointer";
       domainToggle.style.marginRight = "0.4rem";
 
-      const domainLabel = document.createElement("span");
-      domainLabel.textContent = `${domainId} ${sanitize(domainTitle)}`;
+const domainLabel = document.createElement("span");
+domainLabel.textContent = `${domainId} ${sanitize(domainTitle)}`;
+
+const domainBadge = document.createElement("span");
+domainBadge.className = "badge";
+
+const subMapInner = subdomainMaps[certId]?.[domainId] || {};
+const covs = Object.keys(subMapInner)
+  .map(subId => window.kemmeiSubCoverage?.[`${certId}:${domainId}:${subId}`])
+  .filter(x => x !== undefined);
+
+const avg = covs.length ? Math.round(covs.reduce((a, b) => a + b, 0) / covs.length) : "--";
+
+domainBadge.textContent = typeof avg === "number" ? `${avg}%` : "--%";
 
       const domainLine = document.createElement("div");
       domainLine.style.display = "flex";
@@ -73,6 +85,8 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
       domainLine.style.cursor = "pointer";
       domainLine.appendChild(domainToggle);
       domainLine.appendChild(domainLabel);
+domainLine.appendChild(domainBadge);
+
 
       const subContainer = document.createElement("ul");
       subContainer.className = "subdomain-list";
@@ -85,19 +99,34 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
       });
 
       const subMap = subdomainMaps[certId]?.[domainId] || {};
-      Object.entries(subMap).forEach(([subId, subTitle]) => {
-        const subItem = document.createElement("li");
-        subItem.textContent = `${subId} ${sanitize(subTitle)}`;
-        subItem.dataset.certId = certId;
-        subItem.dataset.domainId = domainId;
-        subItem.dataset.subId = subId;
 
-subItem.addEventListener("click", () => {
-  renderSubdomainSummary(certId, domainId, subId, subTitle);
+Object.entries(subMap).forEach(([subId, subTitle]) => {
+  const subItem = document.createElement("li");
+
+  const label = document.createElement("span");
+  label.textContent = `${subId} ${sanitize(subTitle)}`;
+
+  const badge = document.createElement("span");
+  badge.className = "badge";
+
+  const subKey = `${certId}:${domainId}:${subId}`;
+  const cov = window.kemmeiSubCoverage?.[subKey];
+  badge.textContent = (cov !== undefined) ? `${cov}%` : "--%";
+
+  subItem.appendChild(label);
+  subItem.appendChild(badge);
+
+  subItem.dataset.certId = certId;
+  subItem.dataset.domainId = domainId;
+  subItem.dataset.subId = subId;
+
+  subItem.addEventListener("click", () => {
+    renderSubdomainSummary(certId, domainId, subId, subTitle);
+  });
+
+  subContainer.appendChild(subItem);
 });
 
-        subContainer.appendChild(subItem);
-      });
 
       domainItem.appendChild(domainLine);
       domainItem.appendChild(subContainer);
@@ -106,6 +135,16 @@ subItem.addEventListener("click", () => {
 
     certItem.appendChild(certLine);
     certItem.appendChild(domainContainer);
+    const domainIds = Object.keys(domainMaps[certId] || {});
+const subKeys = domainIds.flatMap(domainId => {
+  const subs = Object.keys(subdomainMaps[certId]?.[domainId] || {});
+  return subs.map(subId => `${certId}:${domainId}:${subId}`);
+});
+
+const covs = subKeys.map(k => window.kemmeiSubCoverage?.[k]).filter(x => x !== undefined);
+const titleAvg = covs.length ? Math.round(covs.reduce((a, b) => a + b, 0) / covs.length) : "--";
+certHeader.textContent = `${sanitize(certTitle)} ${typeof titleAvg === "number" ? `(${titleAvg}%)` : ""}`;
+
     tree.appendChild(certItem);
   });
 }
@@ -307,6 +346,9 @@ function updateBarsFromData() {
     multiRatio +
     allRatio
   ) / 7;
+
+window.kemmeiSubCoverage = window.kemmeiSubCoverage || {};
+window.kemmeiSubCoverage[`${certId}:${domainId}:${subId}`] = Math.round(overall * 100);
 
   const masterBar = document.querySelector(".master-bar-fill");
   if (masterBar) {
