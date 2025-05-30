@@ -4,13 +4,93 @@ document.addEventListener("DOMContentLoaded", () => {
   loadConcurTree();
 });
 
+function calculateCoverage(cards, target, report) {
+  const totalCards = cards.length;
+  const matchedCount = totalCards - report.unmatchedCards.length;
+  const cardsPerConcept = target.cardsPerConcept || 2;
+  const conceptGoal = Object.keys(report.conceptCoverage).length * cardsPerConcept;
+
+  const countDifficulty = {
+    easy: cards.filter(c => c.difficulty === "easy").length,
+    medium: cards.filter(c => c.difficulty === "medium").length,
+    hard: cards.filter(c => c.difficulty === "hard").length,
+  };
+
+  const countType = {
+    mcq: cards.filter(c => c.question_type === "multiple_choice").length,
+    multi: cards.filter(c => c.question_type === "select_multiple").length,
+    all: cards.filter(c => c.question_type === "select_all").length,
+  };
+
+  const ratio = (curr, targ) => targ ? Math.min(curr / targ, 1) : 0;
+  const conceptRatio = ratio(matchedCount, conceptGoal);
+  const easyRatio = ratio(countDifficulty.easy, totalCards * (target.difficulty.easy / 100));
+  const medRatio = ratio(countDifficulty.medium, totalCards * (target.difficulty.medium / 100));
+  const hardRatio = ratio(countDifficulty.hard, totalCards * (target.difficulty.hard / 100));
+  const mcqRatio = ratio(countType.mcq, totalCards * (target.types.multiple_choice / 100));
+  const multiRatio = ratio(countType.multi, totalCards * (target.types.select_multiple / 100));
+  const allRatio = ratio(countType.all, totalCards * (target.types.select_all / 100));
+
+  const overall = (
+    conceptRatio +
+    easyRatio +
+    medRatio +
+    hardRatio +
+    mcqRatio +
+    multiRatio +
+    allRatio
+  ) / 7;
+
+  return Math.round(overall * 100);
+}
+
+async function preloadAllCoverage(certNames, domainMaps, subdomainMaps) {
+  window.kemmeiSubCoverage = {}; // reset
+  const covmap = await fetch("/data/covmap.json").then(res => res.json());
+  const targetMap = await fetch("http://localhost:3000/api/targetmap").then(res => res.json());
+
+  const allKeys = [];
+
+  for (const certId of Object.keys(certNames)) {
+    const domains = domainMaps[certId] || {};
+    for (const domainId of Object.keys(domains)) {
+      const subs = subdomainMaps[certId]?.[domainId] || {};
+      for (const subId of Object.keys(subs)) {
+        allKeys.push({ certId, domainId, subId });
+      }
+    }
+  }
+
+  for (const { certId, domainId, subId } of allKeys) {
+    const res = await fetch(`http://localhost:3000/api/cards?cert_id=${certId}&domain_id=${domainId}&subdomain_id=${subId}`);
+    const cards = await res.json();
+    const map = covmap[certId]?.[domainId]?.[subId];
+    const key = `${certId}:${domainId}:${subId}`;
+    const target = targetMap[key] || targetMap.default;
+
+if (!map || !cards.length) {
+  window.kemmeiSubCoverage[key] = 0;
+  continue;
+}
+
+const report = analyzeCoverage(cards, map);
+const overall = calculateCoverage(cards, target, report);
+window.kemmeiSubCoverage[key] = overall;
+
+
+  }
+}
+
 async function loadConcurTree() {
   try {
     const res = await fetch("http://localhost:3000/api/domainmap");
     const data = await res.json();
+
+    await preloadAllCoverage(data.certNames, data.domainMaps, data.subdomainMaps);
+
     renderConcurTree(data.certNames, data.domainMaps, data.subdomainMaps);
   } catch (err) {
-    console.error("❌ Failed to load domainmap.json:", err);
+    console.error("❌ Failed to load domainmap or preload coverage:", err);
   }
 }
 
@@ -337,25 +417,18 @@ function updateBarsFromData() {
   const multiRatio = ratio(countType.multi, totalCards * (multiTarget / 100));
   const allRatio = ratio(countType.all, totalCards * (allTarget / 100));
 
-  const overall = (
-    conceptRatio +
-    easyRatio +
-    medRatio +
-    hardRatio +
-    mcqRatio +
-    multiRatio +
-    allRatio
-  ) / 7;
-
 window.kemmeiSubCoverage = window.kemmeiSubCoverage || {};
-window.kemmeiSubCoverage[`${certId}:${domainId}:${subId}`] = Math.round(overall * 100);
+const overall = calculateCoverage(cards, target, report);
+window.kemmeiSubCoverage[`${certId}:${domainId}:${subId}`] = overall;
+
 
   const masterBar = document.querySelector(".master-bar-fill");
   if (masterBar) {
-    masterBar.style.width = `${Math.round(overall * 100)}%`;
-    masterBar.style.backgroundColor = getColorForRatio(overall);
-    masterBar.title = `Overall coverage: ${Math.round(overall * 100)}%`;
-    masterBar.textContent = `${Math.round(overall * 100)}%`;
+masterBar.style.width = `${overall}%`;
+masterBar.style.backgroundColor = getColorForRatio(overall / 100);
+masterBar.title = `Overall coverage: ${overall}%`;
+masterBar.textContent = `${overall}%`;
+
   }
 }
 
