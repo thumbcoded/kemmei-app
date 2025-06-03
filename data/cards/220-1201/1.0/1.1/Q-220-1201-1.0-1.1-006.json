@@ -7,26 +7,25 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "medium",
-  "question_type": "select_multiple",
-  "question_text": "Select two components that can be used for biometric authentication on a laptop.",
+  "question_type": "multiple_choice",
+  "question_text": "Which of these laptop battery designs is MOST likely to require a technician for replacement?",
   "answer_options": [
-    "Fingerprint reader",
-    "Camera",
-    "Speakers",
-    "Trackpad"
+    "Slide-lock battery",
+    "External battery",
+    "Soldered-in battery",
+    "Clip-on battery"
   ],
   "correct_answer": [
-    "Fingerprint reader",
-    "Camera"
+    "Soldered-in battery"
   ],
-  "explanation": "Modern laptops may use fingerprint readers and cameras for biometric authentication via Windows Hello.",
+  "explanation": "Soldered-in/internal batteries cannot be removed by the user and usually require a technician.",
   "tags": [
-    "biometrics",
-    "security"
+    "internal battery",
+    "non-removable battery"
   ],
   "status": "approved",
   "image": null,
   "media": null,
-  "requiredCount": 2,
+  "requiredCount": null,
   "__v": 0
 }

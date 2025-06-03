@@ -4,28 +4,26 @@
     "220-1201"
   ],
   "domain_id": "1.0",
-  "domain_title": "1.0 Mobile Devices",
+  "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "select_all",
-  "question_text": "Which of the following statements about laptop RAM are true? (Select all that apply)",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A repair technician is evaluating two laptops. One has a battery that is secured with internal screws and requires disassembly to access. The other has a battery with external latches. What is the key difference in these battery designs?",
   "answer_options": [
-    "Laptop RAM uses the SODIMM form factor",
-    "Laptop RAM is always soldered to the motherboard",
-    "Some laptops allow you to upgrade RAM by removing a panel",
-    "All laptops have two RAM slots"
+    "One uses a lithium-ion cell and the other does not",
+    "One is a modular battery and the other is internal",
+    "One supports USB charging and the other does not",
+    "Both require specialized tools for battery replacement"
   ],
   "correct_answer": [
-    "Laptop RAM uses the SODIMM form factor",
-    "Some laptops allow you to upgrade RAM by removing a panel"
+    "One is a modular battery and the other is internal"
   ],
-  "explanation": "SODIMM is the typical laptop memory form factor. Some laptops allow upgrades, while others have RAM soldered to the board.",
+  "explanation": "Modular batteries are designed for external access; internal batteries require disassembly.",
   "tags": [
-    "RAM",
-    "memory",
-    "hardware"
+    "modular battery",
+    "internal battery"
   ],
-  "status": "deleted",
+  "status": "approved",
   "image": null,
   "media": null,
   "requiredCount": null,

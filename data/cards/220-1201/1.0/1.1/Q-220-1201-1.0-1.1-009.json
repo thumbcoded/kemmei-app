@@ -6,23 +6,23 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which action is required after inserting an M.2 SSD into its slot?",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is tasked with replacing a non-modular laptop battery. Which TWO challenges are most likely during this process?",
   "answer_options": [
-    "Apply thermal paste",
-    "Attach an IDE ribbon cable",
-    "Screw it down to the board",
-    "Format it in BIOS first"
+    "Accessing the battery through the case housing",
+    "Disconnecting a latch on the battery exterior",
+    "Dealing with adhesive or screws inside the chassis",
+    "Locating the BIOS switch to release the battery"
   ],
   "correct_answer": [
-    "Screw it down to the board"
+    "Accessing the battery through the case housing",
+    "Dealing with adhesive or screws inside the chassis"
   ],
-  "explanation": "After inserting an M.2 drive, you typically screw it down to secure it in place.",
+  "explanation": "Internal battery replacement usually involves disassembly and internal fasteners or adhesive.",
   "tags": [
-    "storage",
-    "m.2",
-    "installation"
+    "internal battery",
+    "technician-required"
   ],
   "status": "approved",
   "image": null,

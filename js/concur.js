@@ -5,43 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function calculateCoverage(cards, target, report) {
-  const totalCards = cards.length;
-  const matchedCount = totalCards - report.unmatchedCards.length;
   const cardsPerConcept = target.cardsPerConcept || 2;
-  const conceptGoal = Object.keys(report.conceptCoverage).length * cardsPerConcept;
-
-  const countDifficulty = {
-    easy: cards.filter(c => c.difficulty === "easy").length,
-    medium: cards.filter(c => c.difficulty === "medium").length,
-    hard: cards.filter(c => c.difficulty === "hard").length,
-  };
-
-  const countType = {
-    mcq: cards.filter(c => c.question_type === "multiple_choice").length,
-    multi: cards.filter(c => c.question_type === "select_multiple").length,
-    all: cards.filter(c => c.question_type === "select_all").length,
-  };
-
-  const ratio = (curr, targ) => targ ? Math.min(curr / targ, 1) : 0;
-  const conceptRatio = ratio(matchedCount, conceptGoal);
-  const easyRatio = ratio(countDifficulty.easy, totalCards * (target.difficulty.easy / 100));
-  const medRatio = ratio(countDifficulty.medium, totalCards * (target.difficulty.medium / 100));
-  const hardRatio = ratio(countDifficulty.hard, totalCards * (target.difficulty.hard / 100));
-  const mcqRatio = ratio(countType.mcq, totalCards * (target.types.multiple_choice / 100));
-  const multiRatio = ratio(countType.multi, totalCards * (target.types.select_multiple / 100));
-  const allRatio = ratio(countType.all, totalCards * (target.types.select_all / 100));
-
-  const overall = (
-    conceptRatio +
-    easyRatio +
-    medRatio +
-    hardRatio +
-    mcqRatio +
-    multiRatio +
-    allRatio
-  ) / 7;
-
-  return Math.round(overall * 100);
+  const concepts = Object.values(report.conceptCoverage || {});
+  if (!concepts.length) return 0;
+  const covered = concepts.filter(info => info.hitCount >= cardsPerConcept).length;
+  return Math.round((covered / concepts.length) * 100);
 }
 
 async function preloadAllCoverage(certNames, domainMaps, subdomainMaps) {

@@ -6,31 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "select_all",
-  "question_text": "Select all accessories commonly used with mobile devices.",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of laptop battery can be removed and replaced by the user without tools?",
   "answer_options": [
-    "Docking station",
-    "Stylus",
-    "USB Type-C adapter",
-    "Printer",
-    "External GPU",
-    "All of the above"
+    "Soldered battery",
+    "Internal battery",
+    "Modular battery",
+    "Embedded battery"
   ],
   "correct_answer": [
-    "Docking station",
-    "Stylus",
-    "USB Type-C adapter",
-    "Printer",
-    "External GPU",
-    "All of the above"
+    "Modular battery"
   ],
-  "explanation": "All listed items can be paired or used with mobile devices directly or indirectly.",
+  "explanation": "Modular batteries are designed for easy user access and replacement.",
   "tags": [
-    "accessories",
-    "mobile"
+    "modular battery",
+    "removable battery"
   ],
-  "status": "deleted",
+  "status": "approved",
   "image": null,
   "media": null,
   "requiredCount": null,

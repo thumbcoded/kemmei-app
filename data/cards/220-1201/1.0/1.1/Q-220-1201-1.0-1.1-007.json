@@ -6,23 +6,23 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which component in a laptop is most likely to be replaced due to frequent use?",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select TWO valid reasons manufacturers might choose a non-modular battery design.",
   "answer_options": [
-    "Trackpad",
-    "Hard drive",
-    "Keyboard",
-    "RAM"
+    "To allow easy battery swaps",
+    "To improve laptop thinness",
+    "To increase battery repair time",
+    "To discourage user tampering"
   ],
   "correct_answer": [
-    "Keyboard"
+    "To improve laptop thinness",
+    "To discourage user tampering"
   ],
-  "explanation": "The keyboard is one of the most frequently used and replaced components in laptops due to wear.",
+  "explanation": "Non-removable designs are often used to minimize size and reduce tampering risks.",
   "tags": [
-    "keyboard",
-    "laptop",
-    "maintenance"
+    "non-removable battery",
+    "internal battery"
   ],
   "status": "approved",
   "image": null,

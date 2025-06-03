@@ -4,27 +4,25 @@
     "220-1201"
   ],
   "domain_id": "1.0",
-  "domain_title": "1.0 Mobile Devices",
+  "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "select_all",
-  "question_text": "Which of the following components may be connected to a laptop's wireless card? (Select all that apply)",
+  "question_text": "Which of the following apply to modular batteries? (Select all that apply)",
   "answer_options": [
-    "Main antenna connector",
-    "Auxiliary antenna connector",
-    "Ethernet cable",
-    "Bluetooth antenna"
+    "User-replaceable",
+    "Accessible via latch or button",
+    "Soldered to the mainboard",
+    "All of the above"
   ],
   "correct_answer": [
-    "Main antenna connector",
-    "Auxiliary antenna connector",
-    "Bluetooth antenna"
+    "User-replaceable",
+    "Accessible via latch or button"
   ],
-  "explanation": "Wireless cards often have main, auxiliary, and Bluetooth antenna connectors.",
+  "explanation": "Soldered batteries are not modular; modular batteries are made to be removed easily.",
   "tags": [
-    "wireless",
-    "laptop",
-    "antenna"
+    "modular battery",
+    "non-removable battery"
   ],
   "status": "approved",
   "image": null,

@@ -6,27 +6,27 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "select_multiple",
-  "question_text": "Select two storage interfaces commonly found in laptops.",
+  "question_text": "Select TWO features of modular laptop batteries.",
   "answer_options": [
-    "SATA",
-    "M.2",
-    "SCSI",
-    "RJ-45"
+    "Can be removed without opening the laptop",
+    "Require a soldering iron to disconnect",
+    "Include a built-in power button",
+    "Can be swapped using a latch or button"
   ],
   "correct_answer": [
-    "SATA",
-    "M.2"
+    "Can be removed without opening the laptop",
+    "Can be swapped using a latch or button"
   ],
-  "explanation": "Laptops commonly use SATA for traditional drives and M.2 for newer SSDs.",
+  "explanation": "Modular batteries are externally accessible and don't require disassembly.",
   "tags": [
-    "storage",
-    "laptop"
+    "modular battery",
+    "removable battery"
   ],
   "status": "approved",
   "image": null,
   "media": null,
-  "requiredCount": 2,
+  "requiredCount": null,
   "__v": 0
 }

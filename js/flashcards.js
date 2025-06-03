@@ -191,6 +191,7 @@ subSelect.disabled = !(
   document.getElementById("deck-select").addEventListener("change", fetchCardsAndUpdateCount);
   document.getElementById("domain-select").addEventListener("change", fetchCardsAndUpdateCount);
   document.getElementById("difficulty-select").addEventListener("change", fetchCardsAndUpdateCount);
+  document.getElementById("subdomain-select").addEventListener("change", fetchCardsAndUpdateCount);
 
   async function startSession() {
     if (questions.length === 0) {

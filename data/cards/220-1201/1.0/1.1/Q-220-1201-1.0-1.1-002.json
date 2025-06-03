@@ -8,21 +8,20 @@
   "subdomain_id": "1.1",
   "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Which type of laptop battery is designed without a memory effect and allows charging at any time without degrading capacity?",
+  "question_text": "What is a common sign that a laptop battery is modular?",
   "answer_options": [
-    "Nickel-Cadmium",
-    "Lead-acid",
-    "Lithium-ion",
-    "Alkaline"
+    "Battery is soldered to motherboard",
+    "Battery pops out using a latch or button",
+    "Battery requires BIOS update to remove",
+    "Battery is sealed inside chassis"
   ],
   "correct_answer": [
-    "Lithium-ion"
+    "Battery pops out using a latch or button"
   ],
-  "explanation": "Lithium-ion batteries do not suffer from memory effect, unlike older battery types like Nickel-Cadmium.",
+  "explanation": "Modular batteries often have latches for easy removal and replacement.",
   "tags": [
-    "batteries",
-    "laptop",
-    "hardware"
+    "user-swappable battery",
+    "modular battery"
   ],
   "status": "approved",
   "image": null,

@@ -6,28 +6,27 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "select_multiple",
-  "question_text": "You are replacing a wireless card in an older laptop. Which two steps are typically part of the process?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following describe likely characteristics of a non-removable laptop battery?",
   "answer_options": [
-    "Connect main and auxiliary antenna wires",
-    "Run a full system restore",
-    "Open the display bezel to access the screen",
-    "Remove the back panel to access the card"
+    "Requires opening the chassis to access",
+    "May be glued or screwed into place",
+    "Can be quickly ejected by the user",
+    "All of the above"
   ],
   "correct_answer": [
-    "Connect main and auxiliary antenna wires",
-    "Remove the back panel to access the card"
+    "Requires opening the chassis to access",
+    "May be glued or screwed into place"
   ],
-  "explanation": "Older laptops may use mini PCIe wireless cards, which require antenna connections and access from a back panel.",
+  "explanation": "Only modular batteries allow fast user access; internal ones require disassembly.",
   "tags": [
-    "wireless",
-    "wifi",
-    "hardware"
+    "non-removable battery",
+    "internal battery"
   ],
   "status": "approved",
   "image": null,
   "media": null,
-  "requiredCount": 2,
+  "requiredCount": null,
   "__v": 0
 }

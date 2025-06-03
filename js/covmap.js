@@ -1,5 +1,5 @@
 function checkCardCoverage(card, topicTerms) {
-  const text = card.question_text.toLowerCase();
+  const text = (card.question_text + " " + (card.tags || []).join(" ")).toLowerCase();
   return topicTerms.some(term => {
     return term.split(" ").every(word => text.includes(word));
   });
@@ -28,7 +28,7 @@ export function analyzeCoverage(cards, covmapSub) {
   }
 
   for (const card of cards) {
-    const text = card.question_text.toLowerCase();
+    const text = (card.question_text + " " + (card.tags || []).join(" ")).toLowerCase();
     const difficulty = card.difficulty.toLowerCase();
 
     if (report.difficultyBreakdown[difficulty] !== undefined) {

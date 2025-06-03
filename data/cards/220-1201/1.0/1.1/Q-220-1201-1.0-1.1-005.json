@@ -6,22 +6,23 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "Which laptop storage device has no moving parts and offers faster access times?",
+  "question_text": "A customer brings in a laptop with a non-removable battery that is no longer holding a charge. Which of the following is the best course of action?",
   "answer_options": [
-    "2.5\" HDD",
-    "3.5\" HDD",
-    "SSD",
-    "Tape drive"
+    "Tell the customer to press the battery eject button",
+    "Open the laptop and replace the internal battery",
+    "Use BIOS settings to disable battery lockout",
+    "Advise the customer to replace the entire motherboard"
   ],
   "correct_answer": [
-    "SSD"
+    "Open the laptop and replace the internal battery"
   ],
-  "explanation": "Solid-state drives (SSDs) use flash memory and have no moving parts, leading to faster performance and reliability.",
+  "explanation": "Non-removable (internal) batteries require opening the laptop for replacement.",
   "tags": [
-    "storage",
-    "ssd"
+    "internal battery",
+    "non-removable battery",
+    "technician-required"
   ],
   "status": "approved",
   "image": null,
