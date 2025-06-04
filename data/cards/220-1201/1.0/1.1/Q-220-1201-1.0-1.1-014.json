@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A laptop battery is labeled as 'LiPo.' Compared to traditional Li-ion batteries, what is one advantage it offers?",
+  "answer_options": [
+    "Higher voltage capacity",
+    "Longer life span",
+    "Flexible and lightweight design",
+    "Compatibility with all mobile devices"
+  ],
+  "correct_answer": [
+    "Flexible and lightweight design"
+  ],
+  "tags": [
+    "LiPo",
+    "lithium polymer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -258,3 +258,39 @@ body {
 .domain-node > div > span.badge {
   margin-left: 1.5rem;
 }
+
+#concurTree {
+  width: 380px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 0; /* Remove padding to align header */
+  overflow-y: auto;
+}
+
+#concurHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+#concurHeader h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+#refreshButton {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+#refreshButton:hover {
+  background-color: #005a9e;
+}

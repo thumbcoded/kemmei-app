@@ -49,14 +49,72 @@ window.kemmeiSubCoverage[key] = overall;
   }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  loadConcurTree();
+
+  // Add event listener to the refresh button
+  const refreshButton = document.getElementById("refreshButton");
+  refreshButton.addEventListener("click", async () => {
+    console.log("🔄 Refreshing Concur data...");
+    await loadConcurTree();
+    console.log("✅ Concur data refreshed.");
+  });
+});
+
 async function loadConcurTree() {
   try {
+    // Save the expanded state and selected subdomain
+    const expandedState = {};
+// Save the expanded state
+document.querySelectorAll(".domain-block").forEach(domain => {
+  const domainNode = domain.parentElement.querySelector(".domain-node");
+  if (!domainNode || !domainNode.dataset.domainId) {
+    console.warn(`⚠️ Domain node not found or missing data-domain-id.`);
+    return; // Skip if the domain node doesn't exist or lacks an ID
+  }
+
+  const domainId = domainNode.dataset.domainId;
+  expandedState[domainId] = domain.style.display === "block";
+});
+
+    const selectedSubdomain = window.kemmeiSelectedSubdomain;
+
+    // Fetch and reload the tree
     const res = await fetch("http://localhost:3000/api/domainmap");
     const data = await res.json();
 
     await preloadAllCoverage(data.certNames, data.domainMaps, data.subdomainMaps);
 
     renderConcurTree(data.certNames, data.domainMaps, data.subdomainMaps);
+
+// Restore the expanded state
+Object.entries(expandedState).forEach(([domainId, isExpanded]) => {
+  const domainNode = document.querySelector(`[data-domain-id="${domainId}"]`);
+  if (!domainNode) {
+    console.warn(`⚠️ Domain node with ID "${domainId}" not found.`);
+    return; // Skip if the domain node doesn't exist
+  }
+
+  const domainBlock = domainNode.nextElementSibling;
+  if (domainBlock) {
+    domainBlock.style.display = isExpanded ? "block" : "none";
+    const toggleArrow = domainNode.querySelector(".toggle-arrow");
+    if (toggleArrow) {
+      toggleArrow.textContent = isExpanded ? "\u25BC" : "\u25B6";
+    }
+  }
+});
+
+    // Restore the selected subdomain
+    if (selectedSubdomain.certId && selectedSubdomain.domainId && selectedSubdomain.subId) {
+      const subdomainElement = document.querySelector(
+        `[data-cert-id="${selectedSubdomain.certId}"][data-domain-id="${selectedSubdomain.domainId}"][data-sub-id="${selectedSubdomain.subId}"]`
+      );
+      if (subdomainElement) {
+        subdomainElement.classList.add("selected");
+        subdomainElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
   } catch (err) {
     console.error("❌ Failed to load domainmap or preload coverage:", err);
   }
@@ -68,7 +126,11 @@ function sanitize(text) {
 
 function renderConcurTree(certNames, domainMaps, subdomainMaps) {
   const tree = document.getElementById("concurTree");
-  tree.innerHTML = "";
+
+  // Preserve the header
+  const header = document.getElementById("concurHeader");
+  tree.innerHTML = ""; // Clear the tree content
+  tree.appendChild(header); // Re-add the header
 
   Object.entries(certNames).forEach(([certId, certTitle]) => {
     const certItem = document.createElement("div");
@@ -105,6 +167,7 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
     Object.entries(domainMap).forEach(([domainId, domainTitle]) => {
       const domainItem = document.createElement("div");
       domainItem.className = "domain-node";
+      domainItem.dataset.domainId = domainId;
 
       const domainToggle = document.createElement("span");
       domainToggle.textContent = "\u25B6";
@@ -112,20 +175,20 @@ function renderConcurTree(certNames, domainMaps, subdomainMaps) {
       domainToggle.style.cursor = "pointer";
       domainToggle.style.marginRight = "0.4rem";
 
-const domainLabel = document.createElement("span");
-domainLabel.textContent = `${domainId} ${sanitize(domainTitle)}`;
+      const domainLabel = document.createElement("span");
+      domainLabel.textContent = `${domainId} ${sanitize(domainTitle)}`;
 
-const domainBadge = document.createElement("span");
-domainBadge.className = "badge";
+      const domainBadge = document.createElement("span");
+      domainBadge.className = "badge";
 
-const subMapInner = subdomainMaps[certId]?.[domainId] || {};
-const covs = Object.keys(subMapInner)
-  .map(subId => window.kemmeiSubCoverage?.[`${certId}:${domainId}:${subId}`])
-  .filter(x => x !== undefined);
+      const subMapInner = subdomainMaps[certId]?.[domainId] || {};
+      const covs = Object.keys(subMapInner)
+        .map(subId => window.kemmeiSubCoverage?.[`${certId}:${domainId}:${subId}`])
+        .filter(x => x !== undefined);
 
-const avg = covs.length ? Math.round(covs.reduce((a, b) => a + b, 0) / covs.length) : "--";
+      const avg = covs.length ? Math.round(covs.reduce((a, b) => a + b, 0) / covs.length) : "--";
 
-domainBadge.textContent = typeof avg === "number" ? `${avg}%` : "--%";
+      domainBadge.textContent = typeof avg === "number" ? `${avg}%` : "--%";
 
       const domainLine = document.createElement("div");
       domainLine.style.display = "flex";
@@ -133,8 +196,7 @@ domainBadge.textContent = typeof avg === "number" ? `${avg}%` : "--%";
       domainLine.style.cursor = "pointer";
       domainLine.appendChild(domainToggle);
       domainLine.appendChild(domainLabel);
-domainLine.appendChild(domainBadge);
-
+      domainLine.appendChild(domainBadge);
 
       const subContainer = document.createElement("ul");
       subContainer.className = "subdomain-list";
@@ -148,33 +210,32 @@ domainLine.appendChild(domainBadge);
 
       const subMap = subdomainMaps[certId]?.[domainId] || {};
 
-Object.entries(subMap).forEach(([subId, subTitle]) => {
-  const subItem = document.createElement("li");
+      Object.entries(subMap).forEach(([subId, subTitle]) => {
+        const subItem = document.createElement("li");
 
-  const label = document.createElement("span");
-  label.textContent = `${subId} ${sanitize(subTitle)}`;
+        const label = document.createElement("span");
+        label.textContent = `${subId} ${sanitize(subTitle)}`;
 
-  const badge = document.createElement("span");
-  badge.className = "badge";
+        const badge = document.createElement("span");
+        badge.className = "badge";
 
-  const subKey = `${certId}:${domainId}:${subId}`;
-  const cov = window.kemmeiSubCoverage?.[subKey];
-  badge.textContent = (cov !== undefined) ? `${cov}%` : "--%";
+        const subKey = `${certId}:${domainId}:${subId}`;
+        const cov = window.kemmeiSubCoverage?.[subKey];
+        badge.textContent = (cov !== undefined) ? `${cov}%` : "--%";
 
-  subItem.appendChild(label);
-  subItem.appendChild(badge);
+        subItem.appendChild(label);
+        subItem.appendChild(badge);
 
-  subItem.dataset.certId = certId;
-  subItem.dataset.domainId = domainId;
-  subItem.dataset.subId = subId;
+        subItem.dataset.certId = certId;
+        subItem.dataset.domainId = domainId;
+        subItem.dataset.subId = subId;
 
-  subItem.addEventListener("click", () => {
-    renderSubdomainSummary(certId, domainId, subId, subTitle);
-  });
+        subItem.addEventListener("click", () => {
+          renderSubdomainSummary(certId, domainId, subId, subTitle);
+        });
 
-  subContainer.appendChild(subItem);
-});
-
+        subContainer.appendChild(subItem);
+      });
 
       domainItem.appendChild(domainLine);
       domainItem.appendChild(subContainer);
@@ -184,14 +245,14 @@ Object.entries(subMap).forEach(([subId, subTitle]) => {
     certItem.appendChild(certLine);
     certItem.appendChild(domainContainer);
     const domainIds = Object.keys(domainMaps[certId] || {});
-const subKeys = domainIds.flatMap(domainId => {
-  const subs = Object.keys(subdomainMaps[certId]?.[domainId] || {});
-  return subs.map(subId => `${certId}:${domainId}:${subId}`);
-});
+    const subKeys = domainIds.flatMap(domainId => {
+      const subs = Object.keys(subdomainMaps[certId]?.[domainId] || {});
+      return subs.map(subId => `${certId}:${domainId}:${subId}`);
+    });
 
-const covs = subKeys.map(k => window.kemmeiSubCoverage?.[k]).filter(x => x !== undefined);
-const titleAvg = covs.length ? Math.round(covs.reduce((a, b) => a + b, 0) / covs.length) : "--";
-certHeader.textContent = `${sanitize(certTitle)} ${typeof titleAvg === "number" ? `(${titleAvg}%)` : ""}`;
+    const covs = subKeys.map(k => window.kemmeiSubCoverage?.[k]).filter(x => x !== undefined);
+    const titleAvg = covs.length ? Math.round(covs.reduce((a, b) => a + b, 0) / covs.length) : "--";
+    certHeader.textContent = `${sanitize(certTitle)} ${typeof titleAvg === "number" ? `(${titleAvg}%)` : ""}`;
 
     tree.appendChild(certItem);
   });
@@ -897,3 +958,54 @@ report.unmatchedCards.forEach((cardId) => {
     console.error("❌ Failed to load cards for subdomain:", err);
   }
 }
+
+// Track selected subdomain globally
+window.kemmeiSelectedSubdomain = { certId: null, domainId: null, subId: null, subTitle: null };
+
+// Patch renderConcurTree to remember selection
+const originalRenderConcurTree = renderConcurTree;
+renderConcurTree = function(certNames, domainMaps, subdomainMaps) {
+  originalRenderConcurTree(certNames, domainMaps, subdomainMaps);
+
+  // Restore selection highlight if any
+  const { certId, domainId, subId } = window.kemmeiSelectedSubdomain;
+  if (certId && domainId && subId) {
+    const selector = `[data-cert-id="${certId}"][data-domain-id="${domainId}"][data-sub-id="${subId}"]`;
+    const el = document.querySelector(selector);
+    if (el) el.classList.add("selected");
+  }
+};
+
+// Patch subdomain click to remember selection
+function patchSubdomainSelection() {
+  document.querySelectorAll(".subdomain-list li").forEach(li => {
+    li.addEventListener("click", function() {
+      window.kemmeiSelectedSubdomain = {
+        certId: li.dataset.certId,
+        domainId: li.dataset.domainId,
+        subId: li.dataset.subId,
+        subTitle: li.querySelector("span")?.textContent || ""
+      };
+      // Remove previous selection highlight
+      document.querySelectorAll(".subdomain-list li.selected").forEach(e => e.classList.remove("selected"));
+      li.classList.add("selected");
+    });
+  });
+}
+
+// Call after tree render
+const originalRenderConcurTree2 = renderConcurTree;
+renderConcurTree = function(...args) {
+  originalRenderConcurTree2.apply(this, args);
+  patchSubdomainSelection();
+  // If a subdomain is selected, re-render its summary
+  const { certId, domainId, subId, subTitle } = window.kemmeiSelectedSubdomain;
+  if (certId && domainId && subId) {
+    renderSubdomainSummary(certId, domainId, subId, subTitle);
+  }
+};
+
+// Initial patch after first load
+document.addEventListener("DOMContentLoaded", () => {
+  patchSubdomainSelection();
+});

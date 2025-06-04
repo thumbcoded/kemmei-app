@@ -1,0 +1,29 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "If a laptop keyboard fails but the laptop is otherwise working, what is a quick way to continue using it?",
+  "answer_options": [
+    "Reboot the device in safe mode",
+    "Use an external USB keyboard",
+    "Update the video driver",
+    "Replace the entire system board"
+  ],
+  "correct_answer": [
+    "Use an external USB keyboard"
+  ],
+  "tags": [
+    "external USB keyboard"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

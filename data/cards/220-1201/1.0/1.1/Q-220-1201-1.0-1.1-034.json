@@ -1,0 +1,29 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the role of the scissor mechanism in a laptop key?",
+  "answer_options": [
+    "It connects the keyboard to the motherboard",
+    "It allows keycaps to be hot-swapped",
+    "It provides spring-back support and stability",
+    "It regulates power to the backlight"
+  ],
+  "correct_answer": [
+    "It provides spring-back support and stability"
+  ],
+  "tags": [
+    "key replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

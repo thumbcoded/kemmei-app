@@ -1,6 +1,6 @@
 {
   "default": {
-    "cardsPerConcept": 2,
+    "cardsPerConcept": 8,
     "difficulty": {
       "easy": 60,
       "medium": 30,
@@ -26,7 +26,7 @@
     }
   },
   "220-1201:1.0:1.1": {
-    "cardsPerConcept": 2,
+    "cardsPerConcept": 8,
     "difficulty": {
       "easy": 60,
       "medium": 30,

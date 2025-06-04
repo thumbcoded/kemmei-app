@@ -1,0 +1,55 @@
+{
+  "220-1201": {
+    "1.0": {
+      "1.1": {
+        "concepts": {
+          "Battery modularity": {
+            "terms": ["removable battery", "modular battery", "non-removable battery", "internal battery", "user-swappable battery"]
+          },
+          "Battery types and features": {
+            "terms": ["lithium ion", "li-ion", "lithium polymer", "LiPo", "no memory effect", "battery form factor"]
+          },
+          "Keyboard replacement": {
+            "terms": ["keyboard bezel", "keyboard swap", "ribbon cable", "keyboard connector", "external USB keyboard"]
+          },
+          "Individual key repair": {
+            "terms": ["keycap", "key replacement", "damaged key", "replace single key"]
+          },
+          "Memory upgradeability": {
+            "terms": ["SODIMM", "RAM upgrade", "memory module", "memory slot", "modular memory", "soldered RAM"]
+          },
+          "Storage device types": {
+            "terms": ["HDD", "SSD", "M.2", "2.5 inch drive", "spinning drive", "solid state drive"]
+          },
+          "Drive replacement procedures": {
+            "terms": ["screw", "access panel", "remove drive", "replace drive", "install M.2", "unscrew drive"]
+          },
+          "Drive cloning and migration": {
+            "terms": ["imaging software", "cloning software", "drive migration", "image restore", "backup and restore"]
+          },
+          "Wi-Fi/Bluetooth interfaces": {
+            "terms": ["802.11", "Wi-Fi card", "Bluetooth", "mini PCIe", "wireless antenna", "main/aux connector"]
+          },
+          "Antenna placement": {
+            "terms": ["antenna wire", "wrap around display", "antenna connector", "laptop screen antenna"]
+          },
+          "Biometric authentication": {
+            "terms": ["fingerprint reader", "face recognition", "Windows Hello", "biometric hardware"]
+          },
+          "NFC usage": {
+            "terms": ["near field communication", "NFC", "short range", "proximity authentication"]
+          },
+          "Built-in cameras and mics": {
+            "terms": ["webcam", "microphone", "built-in camera", "video conference", "external camera"]
+          }
+        },
+        "expectedCards": 25,
+        "difficultyTarget": {
+          "easy": 60,
+          "medium": 30,
+          "hard": 10
+        }
+      }
+    }
+  }
+}

@@ -4,11 +4,11 @@
     "220-1201"
   ],
   "domain_id": "1.0",
-  "domain_title": "Mobile Devices",
+  "domain_title": "1.0 Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "hard",
   "question_type": "select_all",
-  "question_text": "Which of the following describe likely characteristics of a non-removable laptop battery?",
+  "question_text": "Which of the following describe likely characteristics of a non-removable laptop battery? (Select all that apply)",
   "answer_options": [
     "Requires opening the chassis to access",
     "May be glued or screwed into place",

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two reasons why a technician might prefer an external USB keyboard instead of replacing a faulty internal one immediately.",
+  "answer_options": [
+    "The internal keyboard requires full motherboard replacement",
+    "USB keyboards can override BIOS passwords",
+    "Internal replacement may void warranty or require disassembly",
+    "USB keyboards improve typing accuracy on laptops",
+    "External keyboards allow functional testing before teardown"
+  ],
+  "correct_answer": [
+    "Internal replacement may void warranty or require disassembly",
+    "External keyboards allow functional testing before teardown"
+  ],
+  "tags": [
+    "external USB keyboard",
+    "keyboard replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why can improper removal of a laptop keycap result in permanent keyboard damage?",
+  "answer_options": [
+    "It voids all device warranties instantly",
+    "Keycaps contain electrical fuses that break under force",
+    "The underlying scissor mechanism is delicate and may snap",
+    "It causes BIOS password lockout on modern laptops"
+  ],
+  "correct_answer": [
+    "The underlying scissor mechanism is delicate and may snap"
+  ],
+  "tags": [
+    "keycap",
+    "key replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

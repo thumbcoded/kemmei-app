@@ -89,7 +89,8 @@ app.get("/api/cards", async (req, res) => {
     if (subdomain_id) filter.subdomain_id = subdomain_id;
     if (difficulty) filter.difficulty = difficulty.toLowerCase();
 
-    const cards = await Card.find(filter).limit(50);
+    const cards = await Card.find(filter);
+
     res.json(cards);
   } catch (err) {
     console.error("❌ Error fetching cards:", err);

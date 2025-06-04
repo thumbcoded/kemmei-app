@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In what scenario would a 2.5 inch spinning drive be preferable to an SSD in a laptop?",
+  "answer_options": [
+    "When minimizing power usage is critical",
+    "When silent operation is required",
+    "When maximum shock resistance is needed",
+    "When large storage capacity is needed at lower cost"
+  ],
+  "correct_answer": [
+    "When large storage capacity is needed at lower cost"
+  ],
+  "explanation": "HDDs offer greater capacity per dollar compared to SSDs, making them suitable for bulk storage on a budget despite tradeoffs in speed and durability.",
+  "tags": [
+    "HDD",
+    "spinning drive",
+    "2.5 inch drive",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

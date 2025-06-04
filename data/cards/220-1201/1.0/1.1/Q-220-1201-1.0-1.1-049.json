@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of these laptop storage types is known for using spinning platters?",
+  "answer_options": [
+    "Solid state drive",
+    "M.2 drive",
+    "Spinning drive",
+    "Hard disk drive"
+  ],
+  "correct_answer": [
+    "Hard disk drive"
+  ],
+  "explanation": "Hard disk drives (HDDs) store data on spinning magnetic platters and were commonly used before SSDs became popular.",
+  "tags": [
+    "HDD",
+    "spinning drive",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

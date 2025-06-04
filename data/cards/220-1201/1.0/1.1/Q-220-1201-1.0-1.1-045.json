@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician opens a laptop and finds two memory slots, one of which is populated with a SODIMM. What should be the next step before upgrading?",
+  "answer_options": [
+    "Flash the BIOS",
+    "Remove the battery and check memory specs for compatibility",
+    "Disconnect the display connector",
+    "Enable virtualization in UEFI settings"
+  ],
+  "correct_answer": [
+    "Remove the battery and check memory specs for compatibility"
+  ],
+  "tags": [
+    "RAM upgrade",
+    "memory slot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}
