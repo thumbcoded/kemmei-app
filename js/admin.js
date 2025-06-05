@@ -144,6 +144,13 @@ console.log("📦 admin.js script running");
 document.addEventListener("DOMContentLoaded", () => {
   console.log("🔥 DOMContentLoaded triggered");
 
+  // Move the bulkImportStatus element above the JSON input field
+  const jsonInput = document.getElementById("jsonInput");
+  const bulkStatus = document.getElementById("bulkImportStatus");
+  if (jsonInput && bulkStatus) {
+    jsonInput.parentNode.insertBefore(bulkStatus, jsonInput);
+  }
+
   (async () => {
     await loadDomainMap();  // ✅ wait for domain data to load
     console.log("certNames after load:", certNames);  // check it's non-empty
@@ -1358,6 +1365,13 @@ clearAllBtn.addEventListener("click", () => {
       sel.dispatchEvent(new Event("change"));
     }
   });
+
+  // Hide the bulkImportStatus message
+  const bulkStatus = document.getElementById("bulkImportStatus");
+  if (bulkStatus) {
+    bulkStatus.classList.add("hidden");
+    bulkStatus.textContent = ""; // Clear the message content
+  }
 
   showGlobalMessage("🧨 All fields cleared");
 });

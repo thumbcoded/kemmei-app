@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which internal laptop component is often used to add or replace wireless connectivity options?",
+  "answer_options": [
+    "DIMM slot",
+    "Mini PCIe card",
+    "USB port",
+    "HDMI port"
+  ],
+  "correct_answer": [
+    "Mini PCIe card"
+  ],
+  "explanation": "Mini PCIe cards are used in laptops to provide modular wireless connectivity such as Wi-Fi or Bluetooth.",
+  "tags": [
+    "mini PCIe",
+    "Wi-Fi card",
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "When preparing to clone a failing HDD onto an SSD, which precaution improves the chance of a successful migration?",
+  "answer_options": [
+    "Shrink the partition on the SSD to match the HDD",
+    "Disable UEFI boot mode before starting",
+    "Create a backup image before attempting a live clone",
+    "Perform a low-level format on the source HDD"
+  ],
+  "correct_answer": [
+    "Create a backup image before attempting a live clone"
+  ],
+  "explanation": "If a drive is failing, imaging it first ensures you preserve as much recoverable data as possible before attempting clone operations.",
+  "tags": [
+    "backup and restore",
+    "image restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

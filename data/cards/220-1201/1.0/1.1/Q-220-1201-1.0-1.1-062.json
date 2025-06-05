@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician has removed the access panel and old drive from a laptop. What is the next correct step when installing a new 2.5 inch drive?",
+  "answer_options": [
+    "Install the OS before mounting the drive",
+    "Screw the drive into the bracket before inserting",
+    "Slide the drive in and secure it with screws",
+    "Use a thermal pad between drive and frame"
+  ],
+  "correct_answer": [
+    "Slide the drive in and secure it with screws"
+  ],
+  "explanation": "After aligning the drive connector, it is slid into place and then secured with screws to prevent movement.",
+  "tags": [
+    "replace drive",
+    "screw",
+    "access panel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

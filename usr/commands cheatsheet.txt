@@ -1,7 +1,17 @@
+POWERSHELL COMMAND TO MERGE CARDS IN CURRENT FOLDER
+
+$all = Get-ChildItem -Filter *.json | ForEach-Object { Get-Content $_ -Raw }
+$combined = "[`r`n" + ($all -join ",`r`n") + "`r`n]"
+Set-Content -Path merged_cards.json -Value $combined
+
+GIT
+
 RETURN TO LAST COMMIT - HARD
 git restore .
 COMMIT-AMEND WITH SAME MGG
 git commit --amend --no-edit
+CHECK LAST COMMITS COMMENTS
+git log -[number]
 
 🔍 Check Status & Changes
 git status – Show file change status

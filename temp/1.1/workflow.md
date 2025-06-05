@@ -5,6 +5,7 @@ KEMMEI FLASHCARD GENERATION WORKFLOW (PER SUBDOMAIN) – MINIMAL FILE SET
 - covmap.json          → Concept definitions + terms
 - bulk-template.txt    → Reference card schema (if needed)
 
+IMPORTANT NOTE - WHEN GENERATING CARDS, ALWAYS POST AS A SINGLE CODE SNIPPET
 ----
 
 1. SELECT SUBDOMAIN

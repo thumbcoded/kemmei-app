@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is installing a replacement Wi-Fi card into a laptop. What must be done after securing the card into the mini PCIe slot?",
+  "answer_options": [
+    "Update the BIOS firmware",
+    "Attach wireless antenna connectors",
+    "Reformat the system drive",
+    "Activate airplane mode to test the signal"
+  ],
+  "correct_answer": [
+    "Attach wireless antenna connectors"
+  ],
+  "explanation": "After installing the wireless card, the antenna cables (usually black and gray) must be connected to ensure wireless signal transmission.",
+  "tags": [
+    "mini PCIe",
+    "wireless antenna",
+    "main/aux connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}
