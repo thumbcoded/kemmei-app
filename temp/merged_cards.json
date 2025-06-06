@@ -1,0 +1,285 @@
+[
+{
+  "_id": "Q-220-1201-1.0-1.1-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which wireless standard is commonly used in laptops to connect to a local area network?",
+  "answer_options": [
+    "802.11",
+    "802.3",
+    "RS-232",
+    "Bluetooth"
+  ],
+  "correct_answer": [
+    "802.11"
+  ],
+  "explanation": "802.11 is the wireless networking standard used for Wi-Fi connections in laptops and mobile devices.",
+  "tags": [
+    "802.11",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of a laptop’s Bluetooth interface?",
+  "answer_options": [
+    "To connect to a wired network",
+    "To transfer files via USB",
+    "To pair with wireless peripherals",
+    "To increase display brightness"
+  ],
+  "correct_answer": [
+    "To pair with wireless peripherals"
+  ],
+  "explanation": "Bluetooth is used for short-range wireless communication with devices like keyboards, mice, and headphones.",
+  "tags": [
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which internal laptop component is often used to add or replace wireless connectivity options?",
+  "answer_options": [
+    "DIMM slot",
+    "Mini PCIe card",
+    "USB port",
+    "HDMI port"
+  ],
+  "correct_answer": [
+    "Mini PCIe card"
+  ],
+  "explanation": "Mini PCIe cards are used in laptops to provide modular wireless connectivity such as Wi-Fi or Bluetooth.",
+  "tags": [
+    "mini PCIe",
+    "Wi-Fi card",
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common purpose of connecting both a main and an auxiliary wire to a laptop’s Wi-Fi card?",
+  "answer_options": [
+    "To connect both Wi-Fi and Ethernet simultaneously",
+    "To provide dual-band wireless performance",
+    "To connect separate power and data lines",
+    "To support simultaneous Bluetooth and cellular data"
+  ],
+  "correct_answer": [
+    "To provide dual-band wireless performance"
+  ],
+  "explanation": "Wi-Fi cards typically include a main and auxiliary antenna connector to enhance signal quality and support multiple wireless bands.",
+  "tags": [
+    "main/aux connector",
+    "Wi-Fi card",
+    "wireless antenna"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Where are internal Wi-Fi antenna wires typically routed in a laptop?",
+  "answer_options": [
+    "Along the base next to the RAM slots",
+    "Inside the battery casing",
+    "Through the display housing",
+    "Under the keyboard backlight panel"
+  ],
+  "correct_answer": [
+    "Through the display housing"
+  ],
+  "explanation": "Antenna wires are routed around the display to improve elevation and signal reception when the screen is open.",
+  "tags": [
+    "wireless antenna",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is installing a replacement Wi-Fi card into a laptop. What must be done after securing the card into the mini PCIe slot?",
+  "answer_options": [
+    "Update the BIOS firmware",
+    "Attach wireless antenna connectors",
+    "Reformat the system drive",
+    "Activate airplane mode to test the signal"
+  ],
+  "correct_answer": [
+    "Attach wireless antenna connectors"
+  ],
+  "explanation": "After installing the wireless card, the antenna cables (usually black and gray) must be connected to ensure wireless signal transmission.",
+  "tags": [
+    "mini PCIe",
+    "wireless antenna",
+    "main/aux connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician replaces a laptop’s internal 802.11 card, but the user reports weak signal strength. Which step was most likely missed?",
+  "answer_options": [
+    "Enabling Wi-Fi in BIOS settings",
+    "Installing the wireless driver package",
+    "Attaching the main and auxiliary antenna connectors",
+    "Updating the operating system's wireless policy"
+  ],
+  "correct_answer": [
+    "Attaching the main and auxiliary antenna connectors"
+  ],
+  "explanation": "Wireless cards depend on proper connection to internal antenna wires. Missing these leads to severely reduced signal strength.",
+  "tags": [
+    "main/aux connector",
+    "wireless antenna",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is most likely to require disassembly of the display panel to access or replace?",
+  "answer_options": [
+    "Mini PCIe Wi-Fi card",
+    "Internal microphone",
+    "Bluetooth antenna wire",
+    "USB-C charging port"
+  ],
+  "correct_answer": [
+    "Bluetooth antenna wire"
+  ],
+  "explanation": "Bluetooth and Wi-Fi antenna wires often route through or around the display to ensure maximum height and signal strength when the laptop is open.",
+  "tags": [
+    "Bluetooth",
+    "wireless antenna"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a modular laptop design, what distinguishes a mini PCIe wireless card installation from modern integrated designs?",
+  "answer_options": [
+    "The mini PCIe card supports only Bluetooth, not Wi-Fi",
+    "A mini PCIe card must be soldered directly to the system board",
+    "Modular cards allow removal and replacement without system board replacement",
+    "Integrated cards allow the use of external USB adapters"
+  ],
+  "correct_answer": [
+    "Modular cards allow removal and replacement without system board replacement"
+  ],
+  "explanation": "Mini PCIe cards are modular and easily swappable, unlike integrated wireless interfaces which are soldered onto the system board.",
+  "tags": [
+    "mini PCIe",
+    "Wi-Fi card",
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}
+]
