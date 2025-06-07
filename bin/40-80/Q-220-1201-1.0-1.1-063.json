@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a 2.5 inch SSD into a laptop but forgets to screw it into the frame. What is the most likely consequence?",
+  "answer_options": [
+    "The BIOS will not detect the drive",
+    "The drive will overheat during normal operation",
+    "The drive may become disconnected or damaged from movement",
+    "The drive will remain unformatted"
+  ],
+  "correct_answer": [
+    "The drive may become disconnected or damaged from movement"
+  ],
+  "explanation": "Without securing screws, the drive can shift or vibrate loose, especially in portable devices like laptops.",
+  "tags": [
+    "screw",
+    "replace drive",
+    "installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

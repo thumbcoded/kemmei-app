@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is replacing a 2.5\" spinning drive with an M.2 SSD in a laptop that supports both interfaces. To perform a real-time migration without imaging the system first, which setup is required?",
+  "answer_options": [
+    "Install the SSD, format it, and reinstall the OS using recovery media",
+    "Install both drives simultaneously and use cloning software to copy data",
+    "Remove the spinning drive and insert the SSD before booting into BIOS",
+    "Use an external enclosure to format and test the SSD first"
+  ],
+  "correct_answer": [
+    "Install both drives simultaneously and use cloning software to copy data"
+  ],
+  "explanation": "Cloning in real-time requires both the source and target drives to be connected and operational during the process.",
+  "tags": [
+    "cloning software",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

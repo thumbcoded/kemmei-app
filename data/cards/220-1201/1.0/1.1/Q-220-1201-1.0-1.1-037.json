@@ -6,23 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
-  "question_type": "select_multiple",
-  "question_text": "Select two risks of replacing a single laptop key without proper tools or experience.",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which component sits between a laptop keycap and the main keyboard circuit, allowing vertical motion and spring action?",
   "answer_options": [
-    "Breaking the hinge or scissor mechanism beneath the key",
-    "Triggering accidental BIOS updates",
-    "Damaging adjacent keycaps during removal",
-    "Deactivating Secure Boot",
-    "Overcharging the keyboard battery"
+    "Membrane dome",
+    "Rubber gasket",
+    "Plastic hinge mechanism",
+    "Ribbon cable"
   ],
   "correct_answer": [
-    "Breaking the hinge or scissor mechanism beneath the key",
-    "Damaging adjacent keycaps during removal"
+    "Plastic hinge mechanism"
   ],
+  "explanation": "The plastic hinge assembly supports the keycap and enables its travel and spring-like behavior.",
   "tags": [
-    "key replacement",
-    "replace single key"
+    "keycap",
+    "key replacement"
   ],
   "status": "approved",
   "image": null,

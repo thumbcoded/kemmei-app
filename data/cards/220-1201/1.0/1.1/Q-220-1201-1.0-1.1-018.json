@@ -7,20 +7,18 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "hard",
-  "question_type": "select_all",
-  "question_text": "Select all statements that are true about LiPo (Lithium Polymer) batteries used in laptops.",
+  "question_type": "multiple_choice",
+  "question_text": "A laptop uses a battery with a soft outer casing, making it lighter and more flexible in terms of shape. Based on the transcript, which battery type is most likely being used?",
   "answer_options": [
-    "They are lighter than traditional Li-ion batteries",
-    "They use a solid or gel-like electrolyte",
-    "They always provide longer battery life than Li-ion",
-    "They can be molded into custom shapes",
-    "They are immune to swelling or puncture damage"
+    "Nickel-cadmium",
+    "Lithium polymer (LiPo)",
+    "Lithium-ion (Li-ion)",
+    "Nickel-metal hydride"
   ],
   "correct_answer": [
-    "They are lighter than traditional Li-ion batteries",
-    "They use a solid or gel-like electrolyte",
-    "They can be molded into custom shapes"
+    "Lithium polymer (LiPo)"
   ],
+  "explanation": "LiPo batteries typically have flexible, pouch-style designs and are lighter than rigid Li-ion batteries.",
   "tags": [
     "lithium polymer",
     "LiPo"

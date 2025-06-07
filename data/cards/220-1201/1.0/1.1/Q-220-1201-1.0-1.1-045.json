@@ -6,21 +6,21 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "A technician opens a laptop and finds two memory slots, one of which is populated with a SODIMM. What should be the next step before upgrading?",
+  "question_text": "A technician finds that a laptop’s memory module cannot be removed or replaced. What type of memory does this most likely indicate?",
   "answer_options": [
-    "Flash the BIOS",
-    "Remove the battery and check memory specs for compatibility",
-    "Disconnect the display connector",
-    "Enable virtualization in UEFI settings"
+    "Modular memory",
+    "ECC RAM",
+    "Soldered RAM",
+    "Flash memory"
   ],
   "correct_answer": [
-    "Remove the battery and check memory specs for compatibility"
+    "Soldered RAM"
   ],
+  "explanation": "Some laptops use RAM that is permanently soldered to the motherboard, making it non-upgradeable.",
   "tags": [
-    "RAM upgrade",
-    "memory slot"
+    "soldered RAM"
   ],
   "status": "approved",
   "image": null,

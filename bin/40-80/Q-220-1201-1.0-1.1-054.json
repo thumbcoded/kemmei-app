@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which configuration is most likely to cause installation problems when upgrading a laptop with a 2.5 inch SSD?",
+  "answer_options": [
+    "The SSD is thinner than the existing hard drive",
+    "The SSD uses the M.2 interface",
+    "The SSD has a larger storage capacity",
+    "The SSD requires separate PCIe power"
+  ],
+  "correct_answer": [
+    "The SSD uses the M.2 interface"
+  ],
+  "explanation": "A 2.5 inch SATA bay does not support M.2 drives, which use a completely different interface and form factor.",
+  "tags": [
+    "M.2",
+    "2.5 inch drive",
+    "SSD",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

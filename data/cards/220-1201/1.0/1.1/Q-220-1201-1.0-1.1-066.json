@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "What is the main purpose of cloning software when replacing a laptop's hard drive?",
+  "question_text": "Which of the following best describes a critical installation step when inserting an M.2 SSD into a laptop?",
   "answer_options": [
-    "To clean the drive before disposal",
-    "To make a complete copy of the existing drive",
-    "To reformat the drive to NTFS",
-    "To install a fresh OS from scratch"
+    "Connecting it via SATA cable",
+    "Pushing it flat into the tray and applying thermal adhesive",
+    "Sliding it into the slot at an angle and securing it with a screw",
+    "Pressing it into the RAM socket before replacing the bezel"
   ],
   "correct_answer": [
-    "To make a complete copy of the existing drive"
+    "Sliding it into the slot at an angle and securing it with a screw"
   ],
-  "explanation": "Cloning software creates an exact duplicate of the current drive's data and structure, useful during drive replacement.",
+  "explanation": "M.2 drives are inserted at an angle and held in place by a single retention screw, as described in the transcript.",
   "tags": [
-    "cloning software",
-    "drive migration"
+    "install M.2",
+    "screw"
   ],
   "status": "approved",
   "image": null,

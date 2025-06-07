@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-111",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which combination of built-in components allows a laptop user to both be seen and heard during a video conference?",
+  "answer_options": [
+    "Webcam and external USB drive",
+    "Fingerprint reader and trackpad",
+    "Microphone and webcam",
+    "Speakers and Ethernet port"
+  ],
+  "correct_answer": [
+    "Microphone and webcam"
+  ],
+  "explanation": "Webcams provide video input and microphones provide audio input, making them essential for video conferencing.",
+  "tags": [
+    "microphone",
+    "webcam"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

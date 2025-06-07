@@ -6,22 +6,25 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which laptop storage interface provides a smaller footprint and connects directly to the motherboard?",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is upgrading memory on a high-end business laptop. What two upgrade-related risks should they evaluate in advance?",
   "answer_options": [
-    "2.5 inch SATA",
-    "M.2",
-    "External USB",
-    "Optical bay"
+    "Incompatible power connector on the motherboard",
+    "RAM slot accessibility under casing or keyboard",
+    "Mismatched SODIMM voltage and speed ratings",
+    "Improper SATA cable alignment",
+    "Presence of integrated soldered RAM"
   ],
   "correct_answer": [
-    "M.2"
+    "RAM slot accessibility under casing or keyboard",
+    "Presence of integrated soldered RAM"
   ],
-  "explanation": "M.2 storage connects directly to the motherboard and has a compact design ideal for modern laptops.",
+  "explanation": "Technicians must confirm that upgrades are physically possible and not restricted by soldered RAM or hard-to-reach slots.",
   "tags": [
-    "M.2",
-    "storage"
+    "RAM upgrade",
+    "memory slot",
+    "soldered RAM"
   ],
   "status": "approved",
   "image": null,

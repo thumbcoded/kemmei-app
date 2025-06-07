@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common sign that a laptop battery is modular?",
+  "answer_options": [
+    "Battery is soldered to motherboard",
+    "Battery pops out using a latch or button",
+    "Battery requires BIOS update to remove",
+    "Battery is sealed inside chassis"
+  ],
+  "correct_answer": [
+    "Battery pops out using a latch or button"
+  ],
+  "explanation": "Modular batteries often have latches for easy removal and replacement.",
+  "tags": [
+    "user-swappable battery",
+    "modular battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

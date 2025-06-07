@@ -6,22 +6,26 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "During a drive migration, a technician chooses to image the original drive first. Why might this be preferred over direct cloning?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following can prevent a successful drive replacement in a laptop? (Select all that apply)",
   "answer_options": [
-    "It provides faster transfer speeds",
-    "It avoids copying corrupted files",
-    "It allows a backup to be stored separately for later use",
-    "It eliminates the need for driver reinstallation"
+    "Installing an M.2 NVMe drive into a SATA-only slot",
+    "Failing to screw in the M.2 module after insertion",
+    "Reusing the same access panel screws",
+    "Attempting to install a 2.5 inch drive without a bracket",
+    "Using a magnetic screwdriver near the system board"
   ],
   "correct_answer": [
-    "It allows a backup to be stored separately for later use"
+    "Installing an M.2 NVMe drive into a SATA-only slot",
+    "Failing to screw in the M.2 module after insertion",
+    "Attempting to install a 2.5 inch drive without a bracket"
   ],
-  "explanation": "Creating an image allows safe storage of a full system backup which can be reused, even if the target drive fails.",
+  "explanation": "Protocol mismatch, lack of physical support (bracket), and an unsecured M.2 drive can cause installation failure. Reusing panel screws and magnetic screwdrivers are usually acceptable when used properly.",
   "tags": [
-    "image restore",
-    "backup and restore"
+    "install M.2",
+    "remove drive",
+    "screw"
   ],
   "status": "approved",
   "image": null,

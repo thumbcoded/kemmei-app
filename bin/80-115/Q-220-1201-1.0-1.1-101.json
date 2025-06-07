@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-101",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common use for NFC on mobile devices?",
+  "answer_options": [
+    "Transmitting HD video to a projector",
+    "Backing up an entire drive",
+    "Making contactless payments",
+    "Charging the device wirelessly"
+  ],
+  "correct_answer": [
+    "Making contactless payments"
+  ],
+  "explanation": "NFC is widely used in mobile payment systems such as Google Pay and Apple Pay.",
+  "tags": [
+    "NFC",
+    "near field communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-114",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A user wants to use NFC for authentication. Which two conditions must typically be satisfied?",
+  "answer_options": [
+    "The phone must be connected to Wi-Fi",
+    "The NFC feature must be enabled",
+    "The user must physically tap or hover near the other device",
+    "Location services must be turned on",
+    "The phone must have a physical SIM card"
+  ],
+  "correct_answer": [
+    "The NFC feature must be enabled",
+    "The user must physically tap or hover near the other device"
+  ],
+  "explanation": "NFC authentication requires active proximity and an enabled NFC interface; Wi-Fi and SIM are unrelated to its function.",
+  "tags": [
+    "proximity authentication",
+    "NFC",
+    "short range"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -7,21 +7,21 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "medium",
-  "question_type": "select_multiple",
-  "question_text": "Select two advantages of lithium-ion (Li-ion) laptop batteries.",
+  "question_type": "multiple_choice",
+  "question_text": "A user frequently tops off their laptop battery throughout the day instead of waiting for it to fully drain. Which battery technology is designed to support this behavior without reducing capacity?",
   "answer_options": [
-    "They are very inexpensive",
-    "They do not suffer from memory effect",
-    "They are lightweight",
-    "They are easily recycled",
-    "They are commonly used in CRT monitors"
+    "Nickel-cadmium (NiCd)",
+    "Nickel-metal hydride (NiMH)",
+    "Lithium-ion (Li-ion)",
+    "Zinc-carbon"
   ],
   "correct_answer": [
-    "They do not suffer from memory effect",
-    "They are lightweight"
+    "Lithium-ion (Li-ion)"
   ],
+  "explanation": "Li-ion and LiPo batteries do not suffer from the memory effect, so partial charging does not reduce overall capacity.",
   "tags": [
     "lithium ion",
+    "li-ion",
     "no memory effect"
   ],
   "status": "approved",

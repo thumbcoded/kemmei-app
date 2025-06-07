@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "question_type": "multiple_choice",
-  "question_text": "Where are internal Wi-Fi antenna wires typically routed in a laptop?",
+  "question_text": "After successfully cloning a drive, the laptop fails to boot from the new SSD. What is the most likely cause?",
   "answer_options": [
-    "Along the base next to the RAM slots",
-    "Inside the battery casing",
-    "Through the display housing",
-    "Under the keyboard backlight panel"
+    "The cloning software didn’t copy the user’s documents",
+    "The new drive is larger than the original",
+    "The system boot order still points to the old drive",
+    "The system is unable to detect SATA devices"
   ],
   "correct_answer": [
-    "Through the display housing"
+    "The system boot order still points to the old drive"
   ],
-  "explanation": "Antenna wires are routed around the display to improve elevation and signal reception when the screen is open.",
+  "explanation": "Even after cloning, the BIOS/UEFI must be configured to boot from the new drive, especially in single-bay systems.",
   "tags": [
-    "wireless antenna",
-    "Wi-Fi card"
+    "drive migration",
+    "backup and restore"
   ],
   "status": "approved",
   "image": null,

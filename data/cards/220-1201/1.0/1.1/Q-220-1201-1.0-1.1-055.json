@@ -6,24 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Why might a laptop with an M.2 storage slot not support a 2.5 inch SATA SSD as a replacement?",
+  "question_text": "Which feature makes solid state drives (SSDs) more reliable than traditional hard drives in laptops?",
   "answer_options": [
-    "2.5 inch drives are too fast for M.2 slots",
-    "2.5 inch drives require external enclosures",
-    "The form factor and connector types are incompatible",
-    "M.2 slots include built-in spinning platters"
+    "Higher RPMs",
+    "No moving parts",
+    "They use magnetic platters",
+    "They require less voltage"
   ],
   "correct_answer": [
-    "The form factor and connector types are incompatible"
+    "No moving parts"
   ],
-  "explanation": "M.2 and 2.5 inch SATA drives use entirely different connectors and physical formats, making them non-interchangeable.",
+  "explanation": "SSDs have no moving parts, which reduces wear and makes them more resistant to physical shock.",
   "tags": [
-    "M.2",
-    "2.5 inch drive",
-    "HDD",
-    "SSD"
+    "SSD",
+    "solid state drive"
   ],
   "status": "approved",
   "image": null,

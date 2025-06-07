@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which component’s physical placement explains why wireless antennas are routed through a laptop’s display panel?",
+  "answer_options": [
+    "Motherboard",
+    "RAM slots",
+    "Screen hinge",
+    "Antenna connectors"
+  ],
+  "correct_answer": [
+    "Antenna connectors"
+  ],
+  "explanation": "Wireless antennas are routed through the display to connect to antenna connectors located on or near the screen for optimal elevation.",
+  "tags": [
+    "antenna connector",
+    "laptop screen antenna"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

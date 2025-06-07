@@ -6,23 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which of these laptop storage types is known for using spinning platters?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are limitations of soldered RAM in laptops? (Select all that apply)",
   "answer_options": [
-    "Solid state drive",
-    "M.2 drive",
-    "Spinning drive",
-    "Hard disk drive"
+    "Cannot be upgraded by end users",
+    "Often limits total maximum RAM",
+    "Easier to replace when faulty",
+    "Requires complete motherboard replacement if damaged",
+    "Improves modularity and customization"
   ],
   "correct_answer": [
-    "Hard disk drive"
+    "Cannot be upgraded by end users",
+    "Often limits total maximum RAM",
+    "Requires complete motherboard replacement if damaged"
   ],
-  "explanation": "Hard disk drives (HDDs) store data on spinning magnetic platters and were commonly used before SSDs became popular.",
+  "explanation": "Soldered RAM is fixed and non-serviceable, which limits upgrades and can require board replacement if it fails.",
   "tags": [
-    "HDD",
-    "spinning drive",
-    "storage"
+    "soldered RAM"
   ],
   "status": "approved",
   "image": null,

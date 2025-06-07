@@ -8,18 +8,21 @@
   "subdomain_id": "1.1",
   "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Why is it important to use the exact battery model specified for your laptop?",
+  "question_text": "What advantage do lithium-ion and lithium-polymer batteries have over older battery technologies?",
   "answer_options": [
-    "Laptop batteries are universal in size",
-    "Battery form factors vary by manufacturer and model",
-    "All batteries use the same voltage",
-    "You can swap in any smartphone battery"
+    "They can be charged only when fully drained",
+    "They require conditioning cycles",
+    "They are unaffected by the memory effect",
+    "They are only available in desktop systems"
   ],
   "correct_answer": [
-    "Battery form factors vary by manufacturer and model"
+    "They are unaffected by the memory effect"
   ],
+  "explanation": "Both Li-ion and LiPo batteries can be charged at any time without degrading capacity due to memory effect.",
   "tags": [
-    "battery form factor"
+    "no memory effect",
+    "lithium polymer",
+    "lithium ion"
   ],
   "status": "approved",
   "image": null,

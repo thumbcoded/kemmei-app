@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Select all statements that are true about LiPo (Lithium Polymer) batteries used in laptops.",
+  "answer_options": [
+    "They are lighter than traditional Li-ion batteries",
+    "They use a solid or gel-like electrolyte",
+    "They always provide longer battery life than Li-ion",
+    "They can be molded into custom shapes",
+    "They are immune to swelling or puncture damage"
+  ],
+  "correct_answer": [
+    "They are lighter than traditional Li-ion batteries",
+    "They use a solid or gel-like electrolyte",
+    "They can be molded into custom shapes"
+  ],
+  "tags": [
+    "lithium polymer",
+    "LiPo"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

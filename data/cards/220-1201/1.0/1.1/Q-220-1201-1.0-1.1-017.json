@@ -6,20 +6,21 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "What characteristic of lithium-ion batteries makes them safer than older battery technologies, despite potential thermal risks?",
+  "question_text": "Why is it important to verify the battery form factor before purchasing a replacement laptop battery?",
   "answer_options": [
-    "They contain a gel electrolyte that cannot overheat",
-    "They feature built-in microcontrollers to regulate charge",
-    "They have a lower energy density than NiMH",
-    "They operate at sub-volt levels to prevent discharge"
+    "To ensure maximum battery lifespan",
+    "To ensure compatibility with all Wi-Fi standards",
+    "To ensure it physically fits the laptop’s battery compartment",
+    "To prevent overheating in high-performance use"
   ],
   "correct_answer": [
-    "They feature built-in microcontrollers to regulate charge"
+    "To ensure it physically fits the laptop’s battery compartment"
   ],
+  "explanation": "Form factor dictates shape, size, and connector location, which must match the laptop’s design.",
   "tags": [
-    "lithium ion"
+    "battery form factor"
   ],
   "status": "approved",
   "image": null,

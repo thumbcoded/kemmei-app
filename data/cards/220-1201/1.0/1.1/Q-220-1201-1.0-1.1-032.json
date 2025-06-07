@@ -6,21 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Why is it important to consult the manufacturer's documentation before attempting a keycap replacement?",
+  "question_text": "Which of the following is most important when replacing a single key on a laptop keyboard?",
   "answer_options": [
-    "Because keycaps are legally protected and cannot be removed",
-    "To avoid accidentally erasing BIOS settings",
-    "To prevent damaging the fragile keycap mountings",
-    "Because the key layout is usually randomized"
+    "Use thermal paste to reseat the key",
+    "Forcefully pop off all other keys first",
+    "Follow the manufacturer’s repair instructions",
+    "Turn the laptop upside down and shake"
   ],
   "correct_answer": [
-    "To prevent damaging the fragile keycap mountings"
+    "Follow the manufacturer’s repair instructions"
   ],
+  "explanation": "Laptop key mechanisms are delicate. Following manufacturer-specific repair procedures helps avoid damage.",
   "tags": [
     "keycap",
-    "key replacement"
+    "replace single key"
   ],
   "status": "approved",
   "image": null,

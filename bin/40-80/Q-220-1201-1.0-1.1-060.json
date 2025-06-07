@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "During a 2.5 inch drive replacement, what step is typically required before removing the old drive?",
+  "answer_options": [
+    "Wiping the drive contents",
+    "Formatting the new drive",
+    "Unscrewing the mounting brackets",
+    "Disconnecting the power supply"
+  ],
+  "correct_answer": [
+    "Unscrewing the mounting brackets"
+  ],
+  "explanation": "2.5 inch drives are usually mounted with screws in brackets that must be removed before replacement.",
+  "tags": [
+    "remove drive",
+    "screw"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

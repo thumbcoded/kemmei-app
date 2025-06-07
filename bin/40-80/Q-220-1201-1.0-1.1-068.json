@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A technician wants to upgrade a laptop from an HDD to an SSD with minimal user disruption. What’s the best approach?",
+  "answer_options": [
+    "Install the SSD and reinstall the OS manually",
+    "Use cloning software to migrate the HDD contents to the SSD",
+    "Back up only user files and format the HDD",
+    "Install the SSD and recover data from cloud storage"
+  ],
+  "correct_answer": [
+    "Use cloning software to migrate the HDD contents to the SSD"
+  ],
+  "explanation": "Cloning preserves the system exactly as-is, avoiding OS reinstallation or manual file transfer.",
+  "tags": [
+    "cloning software",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

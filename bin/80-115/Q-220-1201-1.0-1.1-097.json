@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is configuring biometric login on a laptop but cannot find any relevant options in the OS. What is the most likely cause?",
+  "answer_options": [
+    "The display driver is not installed",
+    "The laptop lacks required biometric hardware",
+    "The system time is incorrect",
+    "The BIOS password is enabled"
+  ],
+  "correct_answer": [
+    "The laptop lacks required biometric hardware"
+  ],
+  "explanation": "Biometric features depend on specific hardware (e.g., fingerprint reader or camera); if absent, OS options won’t appear.",
+  "tags": [
+    "biometric hardware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

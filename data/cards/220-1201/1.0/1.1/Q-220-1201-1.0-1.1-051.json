@@ -8,22 +8,20 @@
   "subdomain_id": "1.1",
   "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "Which of the following best explains why SSDs are more reliable than HDDs in laptops?",
+  "question_text": "Which of the following best describes how a SATA-based SSD differs from an M.2 NVMe drive?",
   "answer_options": [
-    "SSDs use redundant power supplies",
-    "SSDs include built-in backup software",
-    "SSDs use no moving parts unlike HDDs",
-    "SSDs use optical platters instead of magnetic ones"
+    "SATA SSDs have higher read/write speeds",
+    "M.2 drives install into traditional 2.5 inch bays",
+    "M.2 drives connect directly to the motherboard without cables",
+    "SATA SSDs are incompatible with operating systems newer than Windows 7"
   ],
   "correct_answer": [
-    "SSDs use no moving parts unlike HDDs"
+    "M.2 drives connect directly to the motherboard without cables"
   ],
-  "explanation": "The lack of moving parts in SSDs makes them less prone to mechanical failure compared to traditional spinning drives.",
+  "explanation": "M.2 drives plug directly into the motherboard, while SATA SSDs use cabling and 2.5 inch bays.",
   "tags": [
-    "SSD",
-    "HDD",
-    "solid state drive",
-    "spinning drive"
+    "M.2",
+    "SSD"
   ],
   "status": "approved",
   "image": null,

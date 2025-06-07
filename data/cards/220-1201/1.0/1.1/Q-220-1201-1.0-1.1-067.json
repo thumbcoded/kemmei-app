@@ -6,22 +6,25 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which task does imaging software help with during a storage upgrade?",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A technician is replacing a 2.5 inch HDD in a laptop. Which two of the following must they do during the process?",
   "answer_options": [
-    "Diagnosing memory errors",
-    "Creating a restore point in Windows",
-    "Copying files between cloud accounts",
-    "Backing up and restoring the system to a new drive"
+    "Disconnect the display",
+    "Unscrew the drive bracket",
+    "Remove the access panel",
+    "Disconnect the Wi-Fi antenna",
+    "Apply heat to loosen the SSD"
   ],
   "correct_answer": [
-    "Backing up and restoring the system to a new drive"
+    "Unscrew the drive bracket",
+    "Remove the access panel"
   ],
-  "explanation": "Imaging software is used to create backups or clones of the system for easy restoration on new storage.",
+  "explanation": "Replacing a 2.5 inch drive usually involves removing the back panel and unmounting the drive via its bracket screws.",
   "tags": [
-    "imaging software",
-    "backup and restore"
+    "remove drive",
+    "access panel",
+    "screw"
   ],
   "status": "approved",
   "image": null,

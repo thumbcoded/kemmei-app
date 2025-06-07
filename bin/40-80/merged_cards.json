@@ -1,0 +1,1262 @@
+[
+{
+  "_id": "Q-220-1201-1.0-1.1-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two reasons why a laptop's memory might not be user-upgradeable.",
+  "answer_options": [
+    "The device uses DDR3 memory instead of DDR4",
+    "The memory is soldered directly onto the motherboard",
+    "There is no available access panel",
+    "The hard drive is encrypted",
+    "There are no USB-C ports available"
+  ],
+  "correct_answer": [
+    "The memory is soldered directly onto the motherboard",
+    "There is no available access panel"
+  ],
+  "tags": [
+    "soldered RAM",
+    "modular memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature of a laptop would suggest that memory can be upgraded?",
+  "answer_options": [
+    "Presence of an M.2 slot",
+    "Removable bottom panel labeled 'memory'",
+    "Non-removable battery",
+    "Keyboard with RGB lighting"
+  ],
+  "correct_answer": [
+    "Removable bottom panel labeled 'memory'"
+  ],
+  "tags": [
+    "memory slot",
+    "RAM upgrade"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why are SODIMM modules used in laptops instead of full-sized DIMMs?",
+  "answer_options": [
+    "They have higher clock speeds",
+    "They support ECC by default",
+    "They are smaller and designed for compact spaces",
+    "They consume more voltage for better performance"
+  ],
+  "correct_answer": [
+    "They are smaller and designed for compact spaces"
+  ],
+  "tags": [
+    "SODIMM",
+    "memory module"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "1.0 Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true about soldered RAM in laptops? (Select all that apply)",
+  "answer_options": [
+    "It cannot be upgraded by the user",
+    "It reduces system weight and thickness",
+    "It can be replaced using a memory slot tool",
+    "It is typically used in business-grade desktops",
+    "It requires motherboard replacement if defective"
+  ],
+  "correct_answer": [
+    "It cannot be upgraded by the user",
+    "It reduces system weight and thickness",
+    "It requires motherboard replacement if defective"
+  ],
+  "tags": [
+    "soldered RAM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0,
+  "explanation": ""
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician opens a laptop and finds two memory slots, one of which is populated with a SODIMM. What should be the next step before upgrading?",
+  "answer_options": [
+    "Flash the BIOS",
+    "Remove the battery and check memory specs for compatibility",
+    "Disconnect the display connector",
+    "Enable virtualization in UEFI settings"
+  ],
+  "correct_answer": [
+    "Remove the battery and check memory specs for compatibility"
+  ],
+  "tags": [
+    "RAM upgrade",
+    "memory slot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two scenarios where memory upgrade may not be possible on a laptop.",
+  "answer_options": [
+    "Laptop uses SODIMM modules",
+    "Laptop chassis is sealed with no removable panels",
+    "RAM is part of the CPU package and soldered",
+    "Laptop includes an NVMe SSD",
+    "UEFI settings are password protected"
+  ],
+  "correct_answer": [
+    "Laptop chassis is sealed with no removable panels",
+    "RAM is part of the CPU package and soldered"
+  ],
+  "tags": [
+    "modular memory",
+    "soldered RAM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of laptop storage uses no moving parts and offers fast data access?",
+  "answer_options": [
+    "Solid state drive (SSD)",
+    "Hard disk drive (HDD)",
+    "Spinning drive",
+    "Optical disc"
+  ],
+  "correct_answer": [
+    "Solid state drive (SSD)"
+  ],
+  "explanation": "SSDs use flash memory instead of spinning platters, which allows for faster and more reliable data access.",
+  "tags": [
+    "SSD",
+    "solid state drive",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What form factor is commonly used for older laptop hard drives?",
+  "answer_options": [
+    "3.5 inch drive",
+    "2.5 inch drive",
+    "M.2 drive",
+    "USB flash drive"
+  ],
+  "correct_answer": [
+    "2.5 inch drive"
+  ],
+  "explanation": "Older laptops often use 2.5 inch drives, which are smaller than the 3.5 inch drives found in desktop systems.",
+  "tags": [
+    "2.5 inch drive",
+    "HDD",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of these laptop storage types is known for using spinning platters?",
+  "answer_options": [
+    "Solid state drive",
+    "M.2 drive",
+    "Spinning drive",
+    "Hard disk drive"
+  ],
+  "correct_answer": [
+    "Hard disk drive"
+  ],
+  "explanation": "Hard disk drives (HDDs) store data on spinning magnetic platters and were commonly used before SSDs became popular.",
+  "tags": [
+    "HDD",
+    "spinning drive",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which laptop storage interface provides a smaller footprint and connects directly to the motherboard?",
+  "answer_options": [
+    "2.5 inch SATA",
+    "M.2",
+    "External USB",
+    "Optical bay"
+  ],
+  "correct_answer": [
+    "M.2"
+  ],
+  "explanation": "M.2 storage connects directly to the motherboard and has a compact design ideal for modern laptops.",
+  "tags": [
+    "M.2",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why SSDs are more reliable than HDDs in laptops?",
+  "answer_options": [
+    "SSDs use redundant power supplies",
+    "SSDs include built-in backup software",
+    "SSDs use no moving parts unlike HDDs",
+    "SSDs use optical platters instead of magnetic ones"
+  ],
+  "correct_answer": [
+    "SSDs use no moving parts unlike HDDs"
+  ],
+  "explanation": "The lack of moving parts in SSDs makes them less prone to mechanical failure compared to traditional spinning drives.",
+  "tags": [
+    "SSD",
+    "HDD",
+    "solid state drive",
+    "spinning drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A laptop upgrade involves switching from a 2.5 inch HDD to a 2.5 inch SSD. What is one expected benefit?",
+  "answer_options": [
+    "Increased screen resolution",
+    "Improved file transfer speeds",
+    "Better Bluetooth connectivity",
+    "Extended HDMI support"
+  ],
+  "correct_answer": [
+    "Improved file transfer speeds"
+  ],
+  "explanation": "SSDs provide significantly faster read/write speeds than HDDs, improving overall system responsiveness.",
+  "tags": [
+    "HDD",
+    "SSD",
+    "2.5 inch drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one advantage of the M.2 storage interface over traditional 2.5 inch drives in laptops?",
+  "answer_options": [
+    "M.2 drives use optical lasers for faster reads",
+    "M.2 drives require external power supplies",
+    "M.2 drives offer a smaller form factor and direct board connection",
+    "M.2 drives can be used in DVD slots"
+  ],
+  "correct_answer": [
+    "M.2 drives offer a smaller form factor and direct board connection"
+  ],
+  "explanation": "M.2 drives plug directly into the motherboard, saving space and simplifying installation in modern laptops.",
+  "tags": [
+    "M.2",
+    "2.5 inch drive",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which configuration is most likely to cause installation problems when upgrading a laptop with a 2.5 inch SSD?",
+  "answer_options": [
+    "The SSD is thinner than the existing hard drive",
+    "The SSD uses the M.2 interface",
+    "The SSD has a larger storage capacity",
+    "The SSD requires separate PCIe power"
+  ],
+  "correct_answer": [
+    "The SSD uses the M.2 interface"
+  ],
+  "explanation": "A 2.5 inch SATA bay does not support M.2 drives, which use a completely different interface and form factor.",
+  "tags": [
+    "M.2",
+    "2.5 inch drive",
+    "SSD",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a laptop with an M.2 storage slot not support a 2.5 inch SATA SSD as a replacement?",
+  "answer_options": [
+    "2.5 inch drives are too fast for M.2 slots",
+    "2.5 inch drives require external enclosures",
+    "The form factor and connector types are incompatible",
+    "M.2 slots include built-in spinning platters"
+  ],
+  "correct_answer": [
+    "The form factor and connector types are incompatible"
+  ],
+  "explanation": "M.2 and 2.5 inch SATA drives use entirely different connectors and physical formats, making them non-interchangeable.",
+  "tags": [
+    "M.2",
+    "2.5 inch drive",
+    "HDD",
+    "SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In what scenario would a 2.5 inch spinning drive be preferable to an SSD in a laptop?",
+  "answer_options": [
+    "When minimizing power usage is critical",
+    "When silent operation is required",
+    "When maximum shock resistance is needed",
+    "When large storage capacity is needed at lower cost"
+  ],
+  "correct_answer": [
+    "When large storage capacity is needed at lower cost"
+  ],
+  "explanation": "HDDs offer greater capacity per dollar compared to SSDs, making them suitable for bulk storage on a budget despite tradeoffs in speed and durability.",
+  "tags": [
+    "HDD",
+    "spinning drive",
+    "2.5 inch drive",
+    "storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What must usually be removed before replacing a laptop’s internal drive?",
+  "answer_options": [
+    "The operating system",
+    "The screen bezel",
+    "The access panel",
+    "The wireless antenna"
+  ],
+  "correct_answer": [
+    "The access panel"
+  ],
+  "explanation": "Many laptops provide a removable access panel on the underside to access internal components like storage drives.",
+  "tags": [
+    "access panel",
+    "replace drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool is commonly required to remove a 2.5-inch drive from a laptop?",
+  "answer_options": [
+    "Wire stripper",
+    "Flat-head screwdriver",
+    "Phillips screwdriver",
+    "Needle-nose pliers"
+  ],
+  "correct_answer": [
+    "Phillips screwdriver"
+  ],
+  "explanation": "Drives are usually secured with small Phillips screws that must be removed to replace the drive.",
+  "tags": [
+    "screw",
+    "remove drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What ensures an M.2 drive stays securely attached to the system board after installation?",
+  "answer_options": [
+    "A thermal pad",
+    "A locking clip",
+    "A retention bracket",
+    "A single mounting screw"
+  ],
+  "correct_answer": [
+    "A single mounting screw"
+  ],
+  "explanation": "M.2 drives slide into their slot and are secured by one small screw to remain fixed on the board.",
+  "tags": [
+    "install M.2",
+    "screw"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "During a 2.5 inch drive replacement, what step is typically required before removing the old drive?",
+  "answer_options": [
+    "Wiping the drive contents",
+    "Formatting the new drive",
+    "Unscrewing the mounting brackets",
+    "Disconnecting the power supply"
+  ],
+  "correct_answer": [
+    "Unscrewing the mounting brackets"
+  ],
+  "explanation": "2.5 inch drives are usually mounted with screws in brackets that must be removed before replacement.",
+  "tags": [
+    "remove drive",
+    "screw"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to remove the laptop battery before replacing a drive?",
+  "answer_options": [
+    "To prevent drive overheating",
+    "To reduce electromagnetic interference",
+    "To avoid electrical shorts or damage",
+    "To reset BIOS settings"
+  ],
+  "correct_answer": [
+    "To avoid electrical shorts or damage"
+  ],
+  "explanation": "Removing the battery ensures no power is flowing to the components, reducing the risk of shock or short circuits during replacement.",
+  "tags": [
+    "replace drive",
+    "safety"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician has removed the access panel and old drive from a laptop. What is the next correct step when installing a new 2.5 inch drive?",
+  "answer_options": [
+    "Install the OS before mounting the drive",
+    "Screw the drive into the bracket before inserting",
+    "Slide the drive in and secure it with screws",
+    "Use a thermal pad between drive and frame"
+  ],
+  "correct_answer": [
+    "Slide the drive in and secure it with screws"
+  ],
+  "explanation": "After aligning the drive connector, it is slid into place and then secured with screws to prevent movement.",
+  "tags": [
+    "replace drive",
+    "screw",
+    "access panel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a 2.5 inch SSD into a laptop but forgets to screw it into the frame. What is the most likely consequence?",
+  "answer_options": [
+    "The BIOS will not detect the drive",
+    "The drive will overheat during normal operation",
+    "The drive may become disconnected or damaged from movement",
+    "The drive will remain unformatted"
+  ],
+  "correct_answer": [
+    "The drive may become disconnected or damaged from movement"
+  ],
+  "explanation": "Without securing screws, the drive can shift or vibrate loose, especially in portable devices like laptops.",
+  "tags": [
+    "screw",
+    "replace drive",
+    "installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What step must be taken when replacing a 2.5 inch SATA drive with an M.2 SSD in a laptop that supports both interfaces?",
+  "answer_options": [
+    "Disable SATA mode in BIOS before installing M.2",
+    "Update GPU drivers to recognize M.2 format",
+    "Mount the M.2 using the existing SATA bracket",
+    "Install the M.2 in a separate slot and secure with a screw"
+  ],
+  "correct_answer": [
+    "Install the M.2 in a separate slot and secure with a screw"
+  ],
+  "explanation": "M.2 drives use their own dedicated slot and must be secured independently with a mounting screw — they don’t reuse 2.5 inch brackets.",
+  "tags": [
+    "install M.2",
+    "replace drive",
+    "screw"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "When replacing a laptop drive, which of the following must be confirmed before physically installing a new drive?",
+  "answer_options": [
+    "That the new drive has a valid partition table",
+    "That the BIOS is set to UEFI mode",
+    "That the form factor and connector match the drive bay",
+    "That an OS is already installed on the new drive"
+  ],
+  "correct_answer": [
+    "That the form factor and connector match the drive bay"
+  ],
+  "explanation": "Incompatibility in connector or form factor (e.g., trying to use M.2 in a 2.5 inch bay) will prevent installation entirely.",
+  "tags": [
+    "replace drive",
+    "access panel",
+    "M.2"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main purpose of cloning software when replacing a laptop's hard drive?",
+  "answer_options": [
+    "To clean the drive before disposal",
+    "To make a complete copy of the existing drive",
+    "To reformat the drive to NTFS",
+    "To install a fresh OS from scratch"
+  ],
+  "correct_answer": [
+    "To make a complete copy of the existing drive"
+  ],
+  "explanation": "Cloning software creates an exact duplicate of the current drive's data and structure, useful during drive replacement.",
+  "tags": [
+    "cloning software",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which task does imaging software help with during a storage upgrade?",
+  "answer_options": [
+    "Diagnosing memory errors",
+    "Creating a restore point in Windows",
+    "Copying files between cloud accounts",
+    "Backing up and restoring the system to a new drive"
+  ],
+  "correct_answer": [
+    "Backing up and restoring the system to a new drive"
+  ],
+  "explanation": "Imaging software is used to create backups or clones of the system for easy restoration on new storage.",
+  "tags": [
+    "imaging software",
+    "backup and restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A technician wants to upgrade a laptop from an HDD to an SSD with minimal user disruption. What’s the best approach?",
+  "answer_options": [
+    "Install the SSD and reinstall the OS manually",
+    "Use cloning software to migrate the HDD contents to the SSD",
+    "Back up only user files and format the HDD",
+    "Install the SSD and recover data from cloud storage"
+  ],
+  "correct_answer": [
+    "Use cloning software to migrate the HDD contents to the SSD"
+  ],
+  "explanation": "Cloning preserves the system exactly as-is, avoiding OS reinstallation or manual file transfer.",
+  "tags": [
+    "cloning software",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes 'image restore' in the context of laptop storage migration?",
+  "answer_options": [
+    "Reinstalling the OS from an official recovery USB",
+    "Copying individual user files to a new drive",
+    "Creating an identical drive structure on a replacement device",
+    "Formatting and partitioning a new SSD"
+  ],
+  "correct_answer": [
+    "Creating an identical drive structure on a replacement device"
+  ],
+  "explanation": "An image restore duplicates not just files, but also the partition table, boot record, and OS settings onto a new drive.",
+  "tags": [
+    "image restore",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "During a drive migration, a technician chooses to image the original drive first. Why might this be preferred over direct cloning?",
+  "answer_options": [
+    "It provides faster transfer speeds",
+    "It avoids copying corrupted files",
+    "It allows a backup to be stored separately for later use",
+    "It eliminates the need for driver reinstallation"
+  ],
+  "correct_answer": [
+    "It allows a backup to be stored separately for later use"
+  ],
+  "explanation": "Creating an image allows safe storage of a full system backup which can be reused, even if the target drive fails.",
+  "tags": [
+    "image restore",
+    "backup and restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user is migrating to a new laptop and wants to avoid reinstalling apps and settings. What should the technician use?",
+  "answer_options": [
+    "Cloud file sync service",
+    "Cloning software",
+    "Driver update utility",
+    "External drive backup utility"
+  ],
+  "correct_answer": [
+    "Cloning software"
+  ],
+  "explanation": "Cloning software preserves all system data, including OS, programs, and settings, for seamless transitions to new hardware.",
+  "tags": [
+    "cloning software",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is replacing a 2.5\" spinning drive with an M.2 SSD in a laptop that supports both interfaces. To perform a real-time migration without imaging the system first, which setup is required?",
+  "answer_options": [
+    "Install the SSD, format it, and reinstall the OS using recovery media",
+    "Install both drives simultaneously and use cloning software to copy data",
+    "Remove the spinning drive and insert the SSD before booting into BIOS",
+    "Use an external enclosure to format and test the SSD first"
+  ],
+  "correct_answer": [
+    "Install both drives simultaneously and use cloning software to copy data"
+  ],
+  "explanation": "Cloning in real-time requires both the source and target drives to be connected and operational during the process.",
+  "tags": [
+    "cloning software",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "When preparing to clone a failing HDD onto an SSD, which precaution improves the chance of a successful migration?",
+  "answer_options": [
+    "Shrink the partition on the SSD to match the HDD",
+    "Disable UEFI boot mode before starting",
+    "Create a backup image before attempting a live clone",
+    "Perform a low-level format on the source HDD"
+  ],
+  "correct_answer": [
+    "Create a backup image before attempting a live clone"
+  ],
+  "explanation": "If a drive is failing, imaging it first ensures you preserve as much recoverable data as possible before attempting clone operations.",
+  "tags": [
+    "backup and restore",
+    "image restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which cloning method best preserves boot configuration and hidden system partitions during a laptop SSD upgrade?",
+  "answer_options": [
+    "Drag-and-drop copy of user files",
+    "File-based backup and restore",
+    "Partition-level imaging with sector-by-sector clone",
+    "Disk management utility used within the OS"
+  ],
+  "correct_answer": [
+    "Partition-level imaging with sector-by-sector clone"
+  ],
+  "explanation": "Only a sector-by-sector clone will capture hidden partitions, boot sectors, and exact drive structure required for a seamless boot.",
+  "tags": [
+    "cloning software",
+    "image restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which wireless standard is commonly used in laptops to connect to a local area network?",
+  "answer_options": [
+    "802.11",
+    "802.3",
+    "RS-232",
+    "Bluetooth"
+  ],
+  "correct_answer": [
+    "802.11"
+  ],
+  "explanation": "802.11 is the wireless networking standard used for Wi-Fi connections in laptops and mobile devices.",
+  "tags": [
+    "802.11",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of a laptop’s Bluetooth interface?",
+  "answer_options": [
+    "To connect to a wired network",
+    "To transfer files via USB",
+    "To pair with wireless peripherals",
+    "To increase display brightness"
+  ],
+  "correct_answer": [
+    "To pair with wireless peripherals"
+  ],
+  "explanation": "Bluetooth is used for short-range wireless communication with devices like keyboards, mice, and headphones.",
+  "tags": [
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which internal laptop component is often used to add or replace wireless connectivity options?",
+  "answer_options": [
+    "DIMM slot",
+    "Mini PCIe card",
+    "USB port",
+    "HDMI port"
+  ],
+  "correct_answer": [
+    "Mini PCIe card"
+  ],
+  "explanation": "Mini PCIe cards are used in laptops to provide modular wireless connectivity such as Wi-Fi or Bluetooth.",
+  "tags": [
+    "mini PCIe",
+    "Wi-Fi card",
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common purpose of connecting both a main and an auxiliary wire to a laptop’s Wi-Fi card?",
+  "answer_options": [
+    "To connect both Wi-Fi and Ethernet simultaneously",
+    "To provide dual-band wireless performance",
+    "To connect separate power and data lines",
+    "To support simultaneous Bluetooth and cellular data"
+  ],
+  "correct_answer": [
+    "To provide dual-band wireless performance"
+  ],
+  "explanation": "Wi-Fi cards typically include a main and auxiliary antenna connector to enhance signal quality and support multiple wireless bands.",
+  "tags": [
+    "main/aux connector",
+    "Wi-Fi card",
+    "wireless antenna"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Where are internal Wi-Fi antenna wires typically routed in a laptop?",
+  "answer_options": [
+    "Along the base next to the RAM slots",
+    "Inside the battery casing",
+    "Through the display housing",
+    "Under the keyboard backlight panel"
+  ],
+  "correct_answer": [
+    "Through the display housing"
+  ],
+  "explanation": "Antenna wires are routed around the display to improve elevation and signal reception when the screen is open.",
+  "tags": [
+    "wireless antenna",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+},
+{
+  "_id": "Q-220-1201-1.0-1.1-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is installing a replacement Wi-Fi card into a laptop. What must be done after securing the card into the mini PCIe slot?",
+  "answer_options": [
+    "Update the BIOS firmware",
+    "Attach wireless antenna connectors",
+    "Reformat the system drive",
+    "Activate airplane mode to test the signal"
+  ],
+  "correct_answer": [
+    "Attach wireless antenna connectors"
+  ],
+  "explanation": "After installing the wireless card, the antenna cables (usually black and gray) must be connected to ensure wireless signal transmission.",
+  "tags": [
+    "mini PCIe",
+    "wireless antenna",
+    "main/aux connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}
+]

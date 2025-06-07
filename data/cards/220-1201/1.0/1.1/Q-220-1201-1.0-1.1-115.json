@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is an advantage of using NFC over other wireless technologies for authentication?",
+  "answer_options": [
+    "NFC works at long range, allowing remote unlock",
+    "NFC avoids battery usage completely",
+    "NFC’s short range reduces risk of interception",
+    "NFC supports high-bandwidth data transfer"
+  ],
+  "correct_answer": [
+    "NFC’s short range reduces risk of interception"
+  ],
+  "explanation": "The short communication range of NFC helps prevent unauthorized interception during authentication.",
+  "tags": [
+    "NFC",
+    "proximity authentication",
+    "short range"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

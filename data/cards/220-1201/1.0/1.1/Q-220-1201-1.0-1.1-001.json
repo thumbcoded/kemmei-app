@@ -8,20 +8,20 @@
   "subdomain_id": "1.1",
   "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Which type of laptop battery can be removed and replaced by the user without tools?",
+  "question_text": "Which of the following best describes a modular laptop battery?",
   "answer_options": [
-    "Soldered battery",
-    "Internal battery",
-    "Modular battery",
-    "Embedded battery"
+    "It cannot be removed without disassembling the laptop",
+    "It is soldered to the motherboard",
+    "It can be removed and replaced by the user with minimal effort",
+    "It requires special tools for replacement"
   ],
   "correct_answer": [
-    "Modular battery"
+    "It can be removed and replaced by the user with minimal effort"
   ],
-  "explanation": "Modular batteries are designed for easy user access and replacement.",
+  "explanation": "A modular battery is designed to be user-swappable and easily replaced without taking the device apart.",
   "tags": [
     "modular battery",
-    "removable battery"
+    "user-swappable battery"
   ],
   "status": "approved",
   "image": null,

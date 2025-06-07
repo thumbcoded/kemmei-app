@@ -4,30 +4,28 @@
     "220-1201"
   ],
   "domain_id": "1.0",
-  "domain_title": "1.0 Mobile Devices",
+  "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
-  "question_type": "select_all",
-  "question_text": "Which of the following are valid considerations when performing a keyboard swap on a laptop? (Select all that apply)",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports some keys on their laptop are unresponsive. You plug in an external USB keyboard and all keys work. What does this suggest?",
   "answer_options": [
-    "Sourcing the correct keyboard layout and model",
-    "Avoiding ribbon cable crimping during installation",
-    "Removing the hard drive to access the keyboard port",
-    "Replacing thermal paste on the CPU",
-    "Ensuring compatibility with Secure Boot"
+    "The user needs updated keyboard drivers",
+    "The laptop’s primary keyboard hardware is faulty",
+    "The USB port on the laptop is malfunctioning",
+    "The laptop needs a BIOS reset"
   ],
   "correct_answer": [
-    "Sourcing the correct keyboard layout and model",
-    "Avoiding ribbon cable crimping during installation"
+    "The laptop’s primary keyboard hardware is faulty"
   ],
+  "explanation": "If an external keyboard works but the built-in one does not, the issue is likely with the internal keyboard hardware.",
   "tags": [
-    "keyboard swap",
-    "ribbon cable"
+    "external USB keyboard",
+    "keyboard swap"
   ],
   "status": "approved",
   "image": null,
   "media": null,
   "requiredCount": null,
-  "__v": 0,
-  "explanation": ""
+  "__v": 0
 }

@@ -8,21 +8,20 @@
   "subdomain_id": "1.1",
   "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "What is a common purpose of connecting both a main and an auxiliary wire to a laptop’s Wi-Fi card?",
+  "question_text": "Which type of drive imaging method allows restoring to dissimilar hardware or a different laptop model?",
   "answer_options": [
-    "To connect both Wi-Fi and Ethernet simultaneously",
-    "To provide dual-band wireless performance",
-    "To connect separate power and data lines",
-    "To support simultaneous Bluetooth and cellular data"
+    "Sector-by-sector clone",
+    "Full system image with hardware abstraction",
+    "SATA-only differential clone",
+    "Firmware-level mirroring"
   ],
   "correct_answer": [
-    "To provide dual-band wireless performance"
+    "Full system image with hardware abstraction"
   ],
-  "explanation": "Wi-Fi cards typically include a main and auxiliary antenna connector to enhance signal quality and support multiple wireless bands.",
+  "explanation": "Images created with hardware abstraction layers (HALs) are designed to restore across different hardware setups.",
   "tags": [
-    "main/aux connector",
-    "Wi-Fi card",
-    "wireless antenna"
+    "image restore",
+    "backup and restore"
   ],
   "status": "approved",
   "image": null,

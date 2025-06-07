@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-123",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A user says their built-in laptop camera is not working. Which two troubleshooting steps are most appropriate?",
+  "answer_options": [
+    "Update or reinstall the camera driver",
+    "Check camera settings in the BIOS/UEFI",
+    "Enable airplane mode",
+    "Change microphone sensitivity settings",
+    "Disable screen dimming in power options"
+  ],
+  "correct_answer": [
+    "Update or reinstall the camera driver",
+    "Check camera settings in the BIOS/UEFI"
+  ],
+  "explanation": "Driver issues or disabled BIOS camera settings are common causes for webcam failures.",
+  "tags": [
+    "webcam",
+    "built-in camera"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

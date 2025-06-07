@@ -6,23 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "What step must be taken when replacing a 2.5 inch SATA drive with an M.2 SSD in a laptop that supports both interfaces?",
+  "question_text": "What tool is typically needed to remove a 2.5 inch drive from a laptop?",
   "answer_options": [
-    "Disable SATA mode in BIOS before installing M.2",
-    "Update GPU drivers to recognize M.2 format",
-    "Mount the M.2 using the existing SATA bracket",
-    "Install the M.2 in a separate slot and secure with a screw"
+    "Hex wrench",
+    "Screwdriver",
+    "USB adapter",
+    "Pry bar"
   ],
   "correct_answer": [
-    "Install the M.2 in a separate slot and secure with a screw"
+    "Screwdriver"
   ],
-  "explanation": "M.2 drives use their own dedicated slot and must be secured independently with a mounting screw — they don’t reuse 2.5 inch brackets.",
+  "explanation": "2.5 inch drives are usually held in place with small screws that require a standard precision screwdriver to remove.",
   "tags": [
-    "install M.2",
-    "replace drive",
-    "screw"
+    "screw",
+    "unscrew drive"
   ],
   "status": "approved",
   "image": null,

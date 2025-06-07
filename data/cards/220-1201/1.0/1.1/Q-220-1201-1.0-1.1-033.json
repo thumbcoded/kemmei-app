@@ -6,21 +6,21 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "select_multiple",
-  "question_text": "Select two signs that a single key might be physically damaged.",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Compared to desktop keyboards, why is single-key repair more difficult on laptops?",
   "answer_options": [
-    "The system fails POST",
-    "The key feels loose or tilted",
-    "Multiple keys stop working at once",
-    "The key doesn't register when pressed",
-    "The display becomes distorted"
+    "Laptop keys are permanently soldered",
+    "Laptop keycaps are smaller and more fragile",
+    "Laptop keyboards do not have individual keys",
+    "Laptops require software to remap keys"
   ],
   "correct_answer": [
-    "The key feels loose or tilted",
-    "The key doesn't register when pressed"
+    "Laptop keycaps are smaller and more fragile"
   ],
+  "explanation": "Laptop keys are more delicate than desktop keys, making them more susceptible to damage during repair.",
   "tags": [
+    "keycap",
     "damaged key"
   ],
   "status": "approved",

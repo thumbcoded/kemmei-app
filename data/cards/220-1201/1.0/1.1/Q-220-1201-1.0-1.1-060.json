@@ -6,22 +6,27 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "During a 2.5 inch drive replacement, what step is typically required before removing the old drive?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following tradeoffs exist when comparing HDDs to SSDs in laptops? (Select all that apply)",
   "answer_options": [
-    "Wiping the drive contents",
-    "Formatting the new drive",
-    "Unscrewing the mounting brackets",
-    "Disconnecting the power supply"
+    "HDDs offer higher capacity at lower cost",
+    "SSDs provide faster data access speeds",
+    "HDDs consume less power than SSDs",
+    "SSDs are more resistant to physical shock",
+    "SSDs are noisier due to lack of spinning components"
   ],
   "correct_answer": [
-    "Unscrewing the mounting brackets"
+    "HDDs offer higher capacity at lower cost",
+    "SSDs provide faster data access speeds",
+    "SSDs are more resistant to physical shock"
   ],
-  "explanation": "2.5 inch drives are usually mounted with screws in brackets that must be removed before replacement.",
+  "explanation": "SSDs are faster and more durable, but HDDs offer cheaper high-capacity storage. SSDs are also quieter, not noisier.",
   "tags": [
-    "remove drive",
-    "screw"
+    "HDD",
+    "SSD",
+    "spinning drive",
+    "solid state drive"
   ],
   "status": "approved",
   "image": null,

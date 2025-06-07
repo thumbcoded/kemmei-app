@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "During a drive migration, a technician chooses to image the original drive first. Why might this be preferred over direct cloning?",
+  "answer_options": [
+    "It provides faster transfer speeds",
+    "It avoids copying corrupted files",
+    "It allows a backup to be stored separately for later use",
+    "It eliminates the need for driver reinstallation"
+  ],
+  "correct_answer": [
+    "It allows a backup to be stored separately for later use"
+  ],
+  "explanation": "Creating an image allows safe storage of a full system backup which can be reused, even if the target drive fails.",
+  "tags": [
+    "image restore",
+    "backup and restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

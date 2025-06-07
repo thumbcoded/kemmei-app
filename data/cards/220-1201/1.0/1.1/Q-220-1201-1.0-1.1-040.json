@@ -6,22 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "What must you do to install a new memory module in a modular laptop?",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is asked to repair a numeric key that frequently sticks after use. Select two possible root causes based on the transcript.",
   "answer_options": [
-    "Remove the CPU and power supply",
-    "Access the RAM via a panel on the laptop bottom",
-    "Flash the BIOS",
-    "Use only manufacturer-certified tools"
+    "Contaminant buildup under the keycap",
+    "Driver conflict in Windows Device Manager",
+    "Hinge mechanism wear or deformation",
+    "Loose ribbon cable to system board",
+    "BIOS setting that disables number pad"
   ],
   "correct_answer": [
-    "Access the RAM via a panel on the laptop bottom"
+    "Contaminant buildup under the keycap",
+    "Hinge mechanism wear or deformation"
   ],
+  "explanation": "Stickiness is usually caused by debris or mechanical wear at the key level, not system-wide driver or BIOS settings.",
   "tags": [
-    "RAM upgrade",
-    "memory module",
-    "modular memory"
+    "keycap",
+    "key replacement"
   ],
   "status": "approved",
   "image": null,

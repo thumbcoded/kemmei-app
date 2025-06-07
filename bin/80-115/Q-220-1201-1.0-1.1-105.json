@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-105",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature makes NFC preferable for secure, short-distance transactions?",
+  "answer_options": [
+    "It supports mesh networking",
+    "It operates over wide ranges like Wi-Fi",
+    "Its short range reduces the risk of interception",
+    "It requires no device authentication"
+  ],
+  "correct_answer": [
+    "Its short range reduces the risk of interception"
+  ],
+  "explanation": "Because NFC operates within just a few centimeters, it minimizes the attack surface for data interception.",
+  "tags": [
+    "short range",
+    "NFC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

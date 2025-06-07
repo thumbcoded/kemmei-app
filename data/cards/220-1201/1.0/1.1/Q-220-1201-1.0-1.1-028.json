@@ -7,22 +7,21 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "hard",
-  "question_type": "select_multiple",
-  "question_text": "Select two reasons why a technician might prefer an external USB keyboard instead of replacing a faulty internal one immediately.",
+  "question_type": "multiple_choice",
+  "question_text": "A technician replaces a laptop keyboard, but the new keyboard remains unresponsive. The ribbon cable is properly connected. Which of the following is the most likely next step?",
   "answer_options": [
-    "The internal keyboard requires full motherboard replacement",
-    "USB keyboards can override BIOS passwords",
-    "Internal replacement may void warranty or require disassembly",
-    "USB keyboards improve typing accuracy on laptops",
-    "External keyboards allow functional testing before teardown"
+    "Replace the entire motherboard",
+    "Update the laptop BIOS",
+    "Inspect the ribbon cable connector for damage",
+    "Perform a factory reset of the operating system"
   ],
   "correct_answer": [
-    "Internal replacement may void warranty or require disassembly",
-    "External keyboards allow functional testing before teardown"
+    "Inspect the ribbon cable connector for damage"
   ],
+  "explanation": "Even with a proper ribbon cable connection, a damaged or misaligned connector can cause complete keyboard failure.",
   "tags": [
-    "external USB keyboard",
-    "keyboard replacement"
+    "keyboard connector",
+    "ribbon cable"
   ],
   "status": "approved",
   "image": null,

@@ -7,22 +7,24 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "hard",
-  "question_type": "multiple_choice",
-  "question_text": "A technician replaces a laptop’s internal 802.11 card, but the user reports weak signal strength. Which step was most likely missed?",
+  "question_type": "select_multiple",
+  "question_text": "A technician wants to ensure a successful and bootable transfer from an old laptop HDD to a new SSD. Select two practices that help ensure the migration works.",
   "answer_options": [
-    "Enabling Wi-Fi in BIOS settings",
-    "Installing the wireless driver package",
-    "Attaching the main and auxiliary antenna connectors",
-    "Updating the operating system's wireless policy"
+    "Defragment the old HDD before cloning",
+    "Disable BitLocker or other encryption before cloning",
+    "Use the SSD manufacturer’s proprietary cloning software",
+    "Change the file system from NTFS to FAT32 before imaging",
+    "Enable RAID in BIOS for the SSD"
   ],
   "correct_answer": [
-    "Attaching the main and auxiliary antenna connectors"
+    "Disable BitLocker or other encryption before cloning",
+    "Use the SSD manufacturer’s proprietary cloning software"
   ],
-  "explanation": "Wireless cards depend on proper connection to internal antenna wires. Missing these leads to severely reduced signal strength.",
+  "explanation": "Encryption must be disabled for cloning to access sectors properly. Manufacturer-provided tools are optimized for compatibility and bootability.",
   "tags": [
-    "main/aux connector",
-    "wireless antenna",
-    "Wi-Fi card"
+    "cloning software",
+    "drive migration",
+    "image restore"
   ],
   "status": "approved",
   "image": null,

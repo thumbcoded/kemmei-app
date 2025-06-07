@@ -7,21 +7,25 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which wireless standard is commonly used in laptops to connect to a local area network?",
+  "question_type": "select_all",
+  "question_text": "Which of the following are common methods for migrating a laptop’s storage drive? (Select all that apply)",
   "answer_options": [
-    "802.11",
-    "802.3",
-    "RS-232",
-    "Bluetooth"
+    "Using imaging software",
+    "Creating a full system backup and restoring it",
+    "Manually replacing the drive without transferring data",
+    "Using cloning software provided by the SSD manufacturer"
   ],
   "correct_answer": [
-    "802.11"
+    "Using imaging software",
+    "Creating a full system backup and restoring it",
+    "Using cloning software provided by the SSD manufacturer"
   ],
-  "explanation": "802.11 is the wireless networking standard used for Wi-Fi connections in laptops and mobile devices.",
+  "explanation": "Drive migration can be performed using imaging, backup/restore methods, or cloning utilities.",
   "tags": [
-    "802.11",
-    "Wi-Fi card"
+    "drive migration",
+    "image restore",
+    "cloning software",
+    "backup and restore"
   ],
   "status": "approved",
   "image": null,

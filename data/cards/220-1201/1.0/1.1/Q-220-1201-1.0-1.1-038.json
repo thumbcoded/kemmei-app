@@ -6,21 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
+  "difficulty": "hard",
   "question_type": "multiple_choice",
-  "question_text": "What type of memory module is commonly used in laptops?",
+  "question_text": "A technician attempts to replace a broken keycap but finds the retainer clip is a non-standard design not found in standard kits. What is the best next step?",
   "answer_options": [
-    "DIMM",
-    "SODIMM",
-    "SRAM",
-    "EEPROM"
+    "Attempt to adapt a similar clip from another model",
+    "Replace the keyboard assembly",
+    "Superglue the clip to the keycap",
+    "Submit the laptop for full warranty replacement"
   ],
   "correct_answer": [
-    "SODIMM"
+    "Replace the keyboard assembly"
   ],
+  "explanation": "If the key mechanism uses a proprietary part and replacements are unavailable, the entire keyboard may need to be replaced.",
   "tags": [
-    "SODIMM",
-    "memory module"
+    "key replacement",
+    "damaged key"
   ],
   "status": "approved",
   "image": null,

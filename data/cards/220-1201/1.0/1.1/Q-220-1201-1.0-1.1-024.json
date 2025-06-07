@@ -6,23 +6,23 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "select_multiple",
-  "question_text": "Select two typical steps involved in replacing an internal laptop keyboard.",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid reasons to use an external USB keyboard during troubleshooting? (Select all that apply)",
   "answer_options": [
-    "Disconnecting the ribbon cable",
-    "Replacing the BIOS chip",
-    "Removing screws and bezel",
-    "Disabling TPM in BIOS",
-    "Swapping the laptop battery"
+    "To replace the laptop keyboard permanently",
+    "To isolate software vs. hardware keyboard issues",
+    "To perform diagnostics on the primary keyboard",
+    "To test the laptop’s wireless adapter"
   ],
   "correct_answer": [
-    "Disconnecting the ribbon cable",
-    "Removing screws and bezel"
+    "To isolate software vs. hardware keyboard issues",
+    "To perform diagnostics on the primary keyboard"
   ],
+  "explanation": "Using an external USB keyboard helps verify whether issues are with the laptop’s keyboard hardware or the operating system.",
   "tags": [
-    "keyboard swap",
-    "keyboard bezel"
+    "external USB keyboard",
+    "keyboard swap"
   ],
   "status": "approved",
   "image": null,

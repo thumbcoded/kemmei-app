@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition must be met for NFC-based mobile payments to work?",
+  "answer_options": [
+    "Bluetooth pairing must be enabled",
+    "The phone must be unlocked and within 10 meters",
+    "The device must be held close to the payment terminal",
+    "A mobile hotspot must be active"
+  ],
+  "correct_answer": [
+    "The device must be held close to the payment terminal"
+  ],
+  "explanation": "NFC requires devices to be placed within very close proximity — typically just a few centimeters — to function properly.",
+  "tags": [
+    "NFC",
+    "short range",
+    "contactless"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

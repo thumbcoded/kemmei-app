@@ -8,21 +8,22 @@
   "subdomain_id": "1.1",
   "difficulty": "easy",
   "question_type": "select_all",
-  "question_text": "Which of the following apply to modular batteries? (Select all that apply)",
+  "question_text": "Which of the following are characteristics of a user-swappable laptop battery? (Select all that apply)",
   "answer_options": [
-    "User-replaceable",
-    "Accessible via latch or button",
-    "Soldered to the mainboard",
-    "All of the above"
+    "Easily accessible from the outside of the laptop",
+    "Usually requires a screwdriver for removal",
+    "May include a release latch or button",
+    "Can be replaced without professional tools"
   ],
   "correct_answer": [
-    "User-replaceable",
-    "Accessible via latch or button"
+    "Easily accessible from the outside of the laptop",
+    "May include a release latch or button",
+    "Can be replaced without professional tools"
   ],
-  "explanation": "Soldered batteries are not modular; modular batteries are made to be removed easily.",
+  "explanation": "User-swappable batteries are designed to be quickly removed and replaced without technical expertise.",
   "tags": [
-    "modular battery",
-    "non-removable battery"
+    "user-swappable battery",
+    "removable battery"
   ],
   "status": "approved",
   "image": null,

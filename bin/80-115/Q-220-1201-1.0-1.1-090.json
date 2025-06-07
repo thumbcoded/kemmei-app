@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "After replacing a laptop's display panel, the Wi-Fi signal strength is significantly reduced. Which is the most likely cause?",
+  "answer_options": [
+    "Incorrect display driver installation",
+    "Failure to reconnect internal antenna wires",
+    "Damaged screen inverter",
+    "BIOS settings reset to default"
+  ],
+  "correct_answer": [
+    "Failure to reconnect internal antenna wires"
+  ],
+  "explanation": "Antenna wires route through the display; failing to reconnect them after panel replacement would result in weak or no signal.",
+  "tags": [
+    "antenna wire",
+    "laptop screen antenna"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

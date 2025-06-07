@@ -8,21 +8,20 @@
   "subdomain_id": "1.1",
   "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "A customer brings in a laptop with a non-removable battery that is no longer holding a charge. Which of the following is the best course of action?",
+  "question_text": "A technician is replacing a laptop battery that is not accessible from the outside and requires disassembling the laptop case. What type of battery is this most likely to be?",
   "answer_options": [
-    "Tell the customer to press the battery eject button",
-    "Open the laptop and replace the internal battery",
-    "Use BIOS settings to disable battery lockout",
-    "Advise the customer to replace the entire motherboard"
+    "User-swappable battery",
+    "Removable battery",
+    "Non-removable battery",
+    "Modular battery"
   ],
   "correct_answer": [
-    "Open the laptop and replace the internal battery"
+    "Non-removable battery"
   ],
-  "explanation": "Non-removable (internal) batteries require opening the laptop for replacement.",
+  "explanation": "Non-removable batteries are internal and typically require disassembly by a technician to replace.",
   "tags": [
-    "internal battery",
     "non-removable battery",
-    "technician-required"
+    "internal battery"
   ],
   "status": "approved",
   "image": null,

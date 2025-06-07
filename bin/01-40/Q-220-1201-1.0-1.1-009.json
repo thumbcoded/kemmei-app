@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is tasked with replacing a non-modular laptop battery. Which TWO challenges are most likely during this process?",
+  "answer_options": [
+    "Accessing the battery through the case housing",
+    "Disconnecting a latch on the battery exterior",
+    "Dealing with adhesive or screws inside the chassis",
+    "Locating the BIOS switch to release the battery"
+  ],
+  "correct_answer": [
+    "Accessing the battery through the case housing",
+    "Dealing with adhesive or screws inside the chassis"
+  ],
+  "explanation": "Internal battery replacement usually involves disassembly and internal fasteners or adhesive.",
+  "tags": [
+    "internal battery",
+    "technician-required"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -4,31 +4,30 @@
     "220-1201"
   ],
   "domain_id": "1.0",
-  "domain_title": "1.0 Mobile Devices",
+  "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
-  "question_type": "select_all",
-  "question_text": "Which of the following are valid troubleshooting steps before replacing a suspected damaged key? (Select all that apply)",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A technician is preparing to replace a single laptop key. Which two precautions should be taken before starting the repair?",
   "answer_options": [
-    "Test the key using an on-screen keyboard utility",
-    "Try compressed air to remove debris under the key",
-    "Flash the keyboard firmware",
-    "Compare with another identical laptop keyboard",
-    "Press multiple keys simultaneously to force reset"
+    "Disconnect all USB devices",
+    "Power off and unplug the laptop",
+    "Consult manufacturer-specific keycap layout",
+    "Apply compressed air to the keyboard",
+    "Enable BIOS-level keyboard diagnostics"
   ],
   "correct_answer": [
-    "Test the key using an on-screen keyboard utility",
-    "Try compressed air to remove debris under the key",
-    "Compare with another identical laptop keyboard"
+    "Power off and unplug the laptop",
+    "Consult manufacturer-specific keycap layout"
   ],
+  "explanation": "Working on powered systems risks shorting components. Also, laptop key mechanisms vary by vendor and model.",
   "tags": [
-    "damaged key",
+    "keycap",
     "replace single key"
   ],
   "status": "approved",
   "image": null,
   "media": null,
   "requiredCount": null,
-  "__v": 0,
-  "explanation": ""
+  "__v": 0
 }

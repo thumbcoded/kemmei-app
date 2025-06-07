@@ -6,20 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "What typically holds a laptop keyboard in place and must be removed first during replacement?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are consequences of using mismatched battery form factors in laptops? (Select all that apply)",
   "answer_options": [
-    "Rubber stoppers",
-    "Battery terminals",
-    "Bezel and screws",
-    "Heat sink clamps"
+    "Battery will not fit into the compartment",
+    "Risk of short-circuit or fire",
+    "Laptop may boot but not charge the battery",
+    "Improved thermal performance",
+    "Battery may disconnect under vibration"
   ],
   "correct_answer": [
-    "Bezel and screws"
+    "Battery will not fit into the compartment",
+    "Laptop may boot but not charge the battery",
+    "Battery may disconnect under vibration"
   ],
+  "explanation": "Using a mismatched form factor can result in improper fit, electrical incompatibility, and unreliable connections.",
   "tags": [
-    "keyboard bezel"
+    "battery form factor"
   ],
   "status": "approved",
   "image": null,

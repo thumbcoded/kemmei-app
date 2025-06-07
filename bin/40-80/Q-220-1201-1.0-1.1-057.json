@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What must usually be removed before replacing a laptop’s internal drive?",
+  "answer_options": [
+    "The operating system",
+    "The screen bezel",
+    "The access panel",
+    "The wireless antenna"
+  ],
+  "correct_answer": [
+    "The access panel"
+  ],
+  "explanation": "Many laptops provide a removable access panel on the underside to access internal components like storage drives.",
+  "tags": [
+    "access panel",
+    "replace drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

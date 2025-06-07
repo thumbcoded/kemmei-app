@@ -8,20 +8,20 @@
   "subdomain_id": "1.1",
   "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "What must usually be removed before replacing a laptop’s internal drive?",
+  "question_text": "What is the standard form factor for traditional hard drives used in laptops?",
   "answer_options": [
-    "The operating system",
-    "The screen bezel",
-    "The access panel",
-    "The wireless antenna"
+    "3.5 inch",
+    "M.2",
+    "2.5 inch",
+    "1.8 inch"
   ],
   "correct_answer": [
-    "The access panel"
+    "2.5 inch"
   ],
-  "explanation": "Many laptops provide a removable access panel on the underside to access internal components like storage drives.",
+  "explanation": "Laptops typically use 2.5 inch drives, which are smaller than the 3.5 inch drives used in desktops.",
   "tags": [
-    "access panel",
-    "replace drive"
+    "2.5 inch drive",
+    "HDD"
   ],
   "status": "approved",
   "image": null,

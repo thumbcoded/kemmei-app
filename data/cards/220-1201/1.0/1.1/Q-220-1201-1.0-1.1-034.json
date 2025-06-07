@@ -6,20 +6,25 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "What is the role of the scissor mechanism in a laptop key?",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid steps when replacing a single key on a laptop? (Select all that apply)",
   "answer_options": [
-    "It connects the keyboard to the motherboard",
-    "It allows keycaps to be hot-swapped",
-    "It provides spring-back support and stability",
-    "It regulates power to the backlight"
+    "Identify the keycap type used by the laptop",
+    "Follow manufacturer guidance for key replacement",
+    "Forcefully pry up the plastic hinge",
+    "Replace any damaged retainer clips"
   ],
   "correct_answer": [
-    "It provides spring-back support and stability"
+    "Identify the keycap type used by the laptop",
+    "Follow manufacturer guidance for key replacement",
+    "Replace any damaged retainer clips"
   ],
+  "explanation": "Key repair involves careful handling of the keycap, hinge, and clips, and following device-specific instructions.",
   "tags": [
-    "key replacement"
+    "key replacement",
+    "replace single key",
+    "keycap"
   ],
   "status": "approved",
   "image": null,

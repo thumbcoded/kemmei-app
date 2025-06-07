@@ -7,22 +7,21 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "medium",
-  "question_type": "select_multiple",
-  "question_text": "Select TWO valid reasons manufacturers might choose a non-modular battery design.",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best contrasts modular and non-modular laptop battery designs?",
   "answer_options": [
-    "To allow easy battery swaps",
-    "To improve laptop thinness",
-    "To increase battery repair time",
-    "To discourage user tampering"
+    "Non-modular batteries can only be charged via external docks",
+    "Modular batteries are harder to install due to their location inside the chassis",
+    "Modular batteries promote field-serviceability while non-modular batteries require internal access",
+    "Both battery types can be hot-swapped during operation"
   ],
   "correct_answer": [
-    "To improve laptop thinness",
-    "To discourage user tampering"
+    "Modular batteries promote field-serviceability while non-modular batteries require internal access"
   ],
-  "explanation": "Non-removable designs are often used to minimize size and reduce tampering risks.",
+  "explanation": "Modular batteries allow user-level replacement; non-modular batteries often require full device disassembly.",
   "tags": [
-    "non-removable battery",
-    "internal battery"
+    "modular battery",
+    "non-removable battery"
   ],
   "status": "approved",
   "image": null,

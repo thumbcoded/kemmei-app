@@ -6,24 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "In what scenario would a 2.5 inch spinning drive be preferable to an SSD in a laptop?",
+  "question_text": "Which laptop storage format uses a compact circuit board that installs directly into a system board slot?",
   "answer_options": [
-    "When minimizing power usage is critical",
-    "When silent operation is required",
-    "When maximum shock resistance is needed",
-    "When large storage capacity is needed at lower cost"
+    "HDD",
+    "2.5 inch SSD",
+    "Optical drive",
+    "M.2 drive"
   ],
   "correct_answer": [
-    "When large storage capacity is needed at lower cost"
+    "M.2 drive"
   ],
-  "explanation": "HDDs offer greater capacity per dollar compared to SSDs, making them suitable for bulk storage on a budget despite tradeoffs in speed and durability.",
+  "explanation": "M.2 drives are small and connect directly to the motherboard using a dedicated slot, commonly used in modern laptops.",
   "tags": [
-    "HDD",
-    "spinning drive",
-    "2.5 inch drive",
-    "storage"
+    "M.2",
+    "solid state drive"
   ],
   "status": "approved",
   "image": null,

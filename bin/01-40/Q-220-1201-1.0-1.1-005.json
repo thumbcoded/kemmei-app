@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A customer brings in a laptop with a non-removable battery that is no longer holding a charge. Which of the following is the best course of action?",
+  "answer_options": [
+    "Tell the customer to press the battery eject button",
+    "Open the laptop and replace the internal battery",
+    "Use BIOS settings to disable battery lockout",
+    "Advise the customer to replace the entire motherboard"
+  ],
+  "correct_answer": [
+    "Open the laptop and replace the internal battery"
+  ],
+  "explanation": "Non-removable (internal) batteries require opening the laptop for replacement.",
+  "tags": [
+    "internal battery",
+    "non-removable battery",
+    "technician-required"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

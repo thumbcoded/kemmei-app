@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In which of the following workplace environments would NFC most likely be used for authentication?",
+  "answer_options": [
+    "Data center with biometric iris scanners",
+    "Home office with a Wi-Fi router",
+    "Hospital workstation for nurse logins",
+    "Retail warehouse using barcode scanners"
+  ],
+  "correct_answer": [
+    "Hospital workstation for nurse logins"
+  ],
+  "explanation": "Hospitals often use NFC devices or cards to allow staff to quickly authenticate at workstations.",
+  "tags": [
+    "proximity authentication",
+    "NFC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

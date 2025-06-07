@@ -7,22 +7,21 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "easy",
-  "question_type": "select_multiple",
-  "question_text": "Select TWO features of modular laptop batteries.",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of battery is designed to be serviced only by a technician?",
   "answer_options": [
-    "Can be removed without opening the laptop",
-    "Require a soldering iron to disconnect",
-    "Include a built-in power button",
-    "Can be swapped using a latch or button"
+    "Removable battery",
+    "Modular battery",
+    "Non-removable battery",
+    "User-swappable battery"
   ],
   "correct_answer": [
-    "Can be removed without opening the laptop",
-    "Can be swapped using a latch or button"
+    "Non-removable battery"
   ],
-  "explanation": "Modular batteries are externally accessible and don't require disassembly.",
+  "explanation": "Non-removable (internal) batteries are not user-serviceable and usually require disassembly by a trained technician.",
   "tags": [
-    "modular battery",
-    "removable battery"
+    "non-removable battery",
+    "internal battery"
   ],
   "status": "approved",
   "image": null,

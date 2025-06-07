@@ -6,21 +6,26 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which of the following indicates that a laptop's memory can be upgraded?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following challenges can arise during individual key repair on a laptop? (Select all that apply)",
   "answer_options": [
-    "RAM is soldered to the motherboard",
-    "Memory is embedded in the CPU",
-    "Laptop has accessible memory slots",
-    "Laptop uses flash storage"
+    "Plastic hinge damage during removal",
+    "Incorrect keycap size replacement",
+    "Irreversible damage to the ribbon cable",
+    "Loss of tactile response due to misalignment",
+    "Keyboard driver corruption"
   ],
   "correct_answer": [
-    "Laptop has accessible memory slots"
+    "Plastic hinge damage during removal",
+    "Incorrect keycap size replacement",
+    "Loss of tactile response due to misalignment"
   ],
+  "explanation": "Individual key repair is prone to mechanical issues like hinge breakage, fitment problems, and misaligned parts. Ribbon cable or driver issues are not typically involved.",
   "tags": [
-    "RAM upgrade",
-    "memory slot"
+    "damaged key",
+    "keycap",
+    "replace single key"
   ],
   "status": "approved",
   "image": null,

@@ -1,0 +1,297 @@
+Certainly! Here is the analysis for the first 40 cards of your deck (from merged_cards.json):
+
+---
+
+## 1. **Concept Coverage (Medium & Hard Difficulty)**
+
+### Concepts from covmap.json:
+- Battery modularity
+- Battery types and features
+- Keyboard replacement
+- Individual key repair
+- Memory upgradeability
+- Storage device types
+- Drive replacement procedures
+- Drive cloning and migration
+- Wi-Fi/Bluetooth interfaces
+- Antenna placement
+- Biometric authentication
+- NFC usage
+- Built-in cameras and mics
+
+---
+
+### **Medium Difficulty Cards Present**
+
+**Covered Concepts:**
+- **Battery modularity**:  
+  - Q-220-1201-1.0-1.1-005, 006, 007 (internal/non-removable, modularity)
+- **Battery types and features**:  
+  - Q-220-1201-1.0-1.1-014, 015, 016 (LiPo, Li-ion, form factor)
+- **Keyboard replacement**:  
+  - Q-220-1201-1.0-1.1-023, 024, 025 (ribbon cable, keyboard swap, external USB keyboard)
+- **Individual key repair**:  
+  - Q-220-1201-1.0-1.1-032, 033, 034 (keycap, key replacement, damaged key, scissor mechanism)
+- **Memory upgradeability**:  
+  - Q-220-1201-1.0-1.1-038, 039, 040 (SODIMM, RAM upgrade, memory slot, modular memory)
+
+**Not Covered:**
+- Storage device types
+- Drive replacement procedures
+- Drive cloning and migration
+- Wi-Fi/Bluetooth interfaces
+- Antenna placement
+- Biometric authentication
+- NFC usage
+- Built-in cameras and mics
+
+---
+
+### **Hard Difficulty Cards Present**
+
+**Covered Concepts:**
+- **Battery modularity**:  
+  - Q-220-1201-1.0-1.1-008, 009, 010 (modular/internal, replacement challenges)
+- **Battery types and features**:  
+  - Q-220-1201-1.0-1.1-017, 018, 019 (Li-ion, LiPo, form factor)
+- **Keyboard replacement**:  
+  - Q-220-1201-1.0-1.1-026, 027, 028 (ZIF connector, ribbon cable, keyboard swap, external USB keyboard)
+- **Individual key repair**:  
+  - Q-220-1201-1.0-1.1-035, 036, 037 (keycap, key replacement, damaged key, scissor mechanism)
+
+**Not Covered:**
+- Memory upgradeability (no hard cards in this part)
+- Storage device types
+- Drive replacement procedures
+- Drive cloning and migration
+- Wi-Fi/Bluetooth interfaces
+- Antenna placement
+- Biometric authentication
+- NFC usage
+- Built-in cameras and mics
+
+---
+
+### **Summary Table**
+
+| Concept                      | Medium | Hard  |
+|------------------------------|:------:|:-----:|
+| Battery modularity           |   ✔    |  ✔    |
+| Battery types and features   |   ✔    |  ✔    |
+| Keyboard replacement         |   ✔    |  ✔    |
+| Individual key repair        |   ✔    |  ✔    |
+| Memory upgradeability        |   ✔    |       |
+| Storage device types         |        |       |
+| Drive replacement procedures |        |       |
+| Drive cloning and migration  |        |       |
+| Wi-Fi/Bluetooth interfaces   |        |       |
+| Antenna placement            |        |       |
+| Biometric authentication     |        |       |
+| NFC usage                    |        |       |
+| Built-in cameras and mics    |        |       |
+
+---
+
+## 2. **Question Type Diversity**
+
+- **multiple_choice**: Used for all concepts above.
+- **select_multiple**: Used for battery modularity, battery types, keyboard replacement, individual key repair.
+- **select_all**: Used for battery modularity, battery types, keyboard replacement, individual key repair.
+
+**PBQ** (performance-based question): Not present.
+
+**Distribution:**  
+- Good diversity for covered concepts (multiple_choice, select_multiple, select_all).
+- No PBQ.
+- No diversity for concepts not covered.
+
+---
+
+## **Conclusion for Part 1**
+
+- **Coverage:**  
+  - Battery modularity, battery types and features, keyboard replacement, and individual key repair are well-covered at both medium and hard difficulty.
+  - Memory upgradeability is covered at medium, but not hard, in this part.
+  - All other concepts are not covered at medium or hard difficulty in this part.
+
+- **Question Type Diversity:**  
+  - Good for covered concepts (multiple_choice, select_multiple, select_all).
+  - No PBQ.
+  - No diversity for concepts not covered.
+
+---
+
+**Recommendation:**  
+Continue with the next parts to check for coverage of the remaining concepts and to see if question type diversity improves. If missing concepts are not covered in later parts, you will need to add cards for them.
+
+Here is the analysis for cards 41–80:
+
+---
+
+## 1. **Concept Coverage (Medium & Hard Difficulty)**
+
+### **Medium Difficulty Cards**
+
+**Covered Concepts:**
+- **Memory upgradeability**  
+  - Q-041, 042, 043 (soldered RAM, access panel, SODIMM, memory slot, RAM upgrade)
+- **Storage device types**  
+  - Q-051, 052, 053 (SSD vs HDD, 2.5 inch, M.2, storage interface)
+- **Drive replacement procedures**  
+  - Q-060, 061, 062 (unscrewing brackets, battery removal, drive installation)
+- **Drive cloning and migration**  
+  - Q-069, 070, 071 (image restore, cloning software, migration)
+- **Wi-Fi/Bluetooth interfaces**  
+  - Q-078 (main/aux connector, Wi-Fi card, wireless antenna)
+- **Antenna placement**  
+  - Q-079 (wireless antenna, display housing)
+- **Built-in cameras and mics**  
+  - *Not covered in this batch*
+- **Biometric authentication**  
+  - *Not covered in this batch*
+- **NFC usage**  
+  - *Not covered in this batch*
+
+### **Hard Difficulty Cards**
+
+**Covered Concepts:**
+- **Memory upgradeability**  
+  - Q-044, 045, 046 (soldered RAM, RAM upgrade, memory slot, modular memory)
+- **Storage device types**  
+  - Q-054, 055, 056 (M.2, 2.5 inch, SSD, HDD, spinning drive)
+- **Drive replacement procedures**  
+  - Q-063, 064, 065 (installation, access panel, M.2, replace drive)
+- **Drive cloning and migration**  
+  - Q-072, 073, 074 (cloning software, backup/image restore, sector-by-sector clone)
+- **Wi-Fi/Bluetooth interfaces**  
+  - *Not covered at hard in this batch*
+- **Antenna placement**  
+  - *Not covered at hard in this batch*
+- **Built-in cameras and mics**  
+  - *Not covered in this batch*
+- **Biometric authentication**  
+  - *Not covered in this batch*
+- **NFC usage**  
+  - *Not covered in this batch*
+
+---
+
+### **Summary Table**
+
+| Concept                      | Medium | Hard  |
+|------------------------------|:------:|:-----:|
+| Memory upgradeability        |   ✔    |  ✔    |
+| Storage device types         |   ✔    |  ✔    |
+| Drive replacement procedures |   ✔    |  ✔    |
+| Drive cloning and migration  |   ✔    |  ✔    |
+| Wi-Fi/Bluetooth interfaces   |   ✔    |       |
+| Antenna placement            |   ✔    |       |
+| Built-in cameras and mics    |        |       |
+| Biometric authentication     |        |       |
+| NFC usage                    |        |       |
+
+---
+
+## 2. **Question Type Diversity**
+
+- **multiple_choice**: Most cards
+- **select_multiple**: Used for memory upgradeability, storage, etc.
+- **select_all**: Used for memory upgradeability (Q-044)
+- **PBQ**: Not present
+
+**Distribution:**  
+- Good diversity for memory/storage/drive concepts  
+- Wi-Fi/Bluetooth/antenna: only multiple_choice  
+- No PBQ  
+- No coverage for biometric/NFC/camera concepts
+
+---
+
+## **Conclusion for Cards 41–80**
+
+- **Coverage:**  
+  - Memory, storage, drive replacement, and migration are well-covered at both medium and hard difficulty.
+  - Wi-Fi/Bluetooth and antenna placement are covered at medium, but not hard.
+  - Built-in cameras/mics, biometric authentication, and NFC usage are not covered at medium or hard in this batch.
+
+- **Question Type Diversity:**  
+  - Good for memory/storage/drive concepts.
+  - Less diversity for Wi-Fi/Bluetooth/antenna.
+  - No PBQ.
+
+---
+
+**Recommendation:**  
+Check the final batch for coverage of built-in cameras/mics, biometric authentication, and NFC usage. Add hard-difficulty cards and more question type diversity for Wi-Fi/Bluetooth/antenna if needed.
+
+Here is the analysis for cards 81–115:
+
+---
+
+## 1. **Concept Coverage (Medium & Hard Difficulty)**
+
+### **Medium Difficulty Cards**
+
+**Covered Concepts:**
+- **Antenna placement**  
+  - Q-087, 088, 089 (antenna connectors, signal routing, elevation)
+- **Biometric authentication**  
+  - Q-095, 096, 097 (biometric hardware, Windows Hello, fingerprint/face recognition)
+- **NFC usage**  
+  - Q-103, 104, 105 (NFC in authentication, short range, security)
+- **Built-in cameras and mics**  
+  - Q-111, 112, 113 (microphone and webcam, external camera, placement)
+
+### **Hard Difficulty Cards**
+
+**Covered Concepts:**
+- **Wi-Fi/Bluetooth interfaces**  
+  - Q-081, 083 (antenna connectors, mini PCIe, modular vs integrated)
+- **Antenna placement**  
+  - Q-082, 090, 091 (antenna wire, display panel, signal strength)
+- **Biometric authentication**  
+  - Q-098, 099 (face recognition, IR camera requirement)
+- **NFC usage**  
+  - Q-106, 107 (NFC authentication, relay attacks, proximity)
+- **Built-in cameras and mics**  
+  - Q-114, 115 (microphone muted, webcam access)
+
+---
+
+### **Summary Table**
+
+| Concept                      | Medium | Hard  |
+|------------------------------|:------:|:-----:|
+| Wi-Fi/Bluetooth interfaces   |        |  ✔    |
+| Antenna placement            |   ✔    |  ✔    |
+| Biometric authentication     |   ✔    |  ✔    |
+| NFC usage                    |   ✔    |  ✔    |
+| Built-in cameras and mics    |   ✔    |  ✔    |
+
+---
+
+## 2. **Question Type Diversity**
+
+- **multiple_choice**: Used for all concepts in this batch.
+- **select_multiple/select_all/PBQ**: Not present in this batch.
+
+**Distribution:**  
+- All cards are multiple_choice.
+- No select_multiple, select_all, or PBQ for these concepts.
+
+---
+
+## **Conclusion for Cards 81–115**
+
+- **Coverage:**  
+  - All remaining concepts (Wi-Fi/Bluetooth, antenna placement, biometric authentication, NFC usage, built-in cameras/mics) are covered at both medium and hard difficulty.
+- **Question Type Diversity:**  
+  - Only multiple_choice is used for these concepts in this batch. No select_multiple, select_all, or PBQ.
+
+---
+
+**Recommendation:**  
+- All concepts are now covered at medium and hard difficulty across your full deck.
+- For greater question type diversity, consider adding select_multiple, select_all, or PBQ for Wi-Fi/Bluetooth, antenna placement, biometric authentication, NFC, and built-in cameras/mics.
+
+Let me know if you want a summary for the entire deck or further breakdowns!

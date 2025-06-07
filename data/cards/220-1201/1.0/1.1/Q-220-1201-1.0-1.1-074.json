@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Which cloning method best preserves boot configuration and hidden system partitions during a laptop SSD upgrade?",
+  "question_text": "A user is replacing an old HDD with a new SSD. Which approach offers the fastest way to preserve all existing files and settings?",
   "answer_options": [
-    "Drag-and-drop copy of user files",
-    "File-based backup and restore",
-    "Partition-level imaging with sector-by-sector clone",
-    "Disk management utility used within the OS"
+    "Performing a clean OS install and manually copying files",
+    "Cloning the old drive to the new SSD",
+    "Installing the new drive without formatting",
+    "Exporting browser bookmarks and copying select folders"
   ],
   "correct_answer": [
-    "Partition-level imaging with sector-by-sector clone"
+    "Cloning the old drive to the new SSD"
   ],
-  "explanation": "Only a sector-by-sector clone will capture hidden partitions, boot sectors, and exact drive structure required for a seamless boot.",
+  "explanation": "Cloning ensures that everything — OS, files, applications — is copied in one step to the new drive.",
   "tags": [
-    "cloning software",
-    "image restore"
+    "backup and restore",
+    "drive migration"
   ],
   "status": "approved",
   "image": null,

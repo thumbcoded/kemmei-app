@@ -6,23 +6,25 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "question_type": "select_multiple",
-  "question_text": "Select two scenarios where memory upgrade may not be possible on a laptop.",
+  "question_text": "A laptop user wants to upgrade their system RAM. Which two factors must the technician check before proceeding?",
   "answer_options": [
-    "Laptop uses SODIMM modules",
-    "Laptop chassis is sealed with no removable panels",
-    "RAM is part of the CPU package and soldered",
-    "Laptop includes an NVMe SSD",
-    "UEFI settings are password protected"
+    "Available memory slots",
+    "Current BIOS password",
+    "Support for SODIMM modules",
+    "Presence of SSD or HDD",
+    "Location of the power button"
   ],
   "correct_answer": [
-    "Laptop chassis is sealed with no removable panels",
-    "RAM is part of the CPU package and soldered"
+    "Available memory slots",
+    "Support for SODIMM modules"
   ],
+  "explanation": "Laptop memory upgrades depend on whether there are free memory slots and whether the laptop uses compatible SODIMM RAM.",
   "tags": [
-    "modular memory",
-    "soldered RAM"
+    "SODIMM",
+    "memory slot",
+    "RAM upgrade"
   ],
   "status": "approved",
   "image": null,

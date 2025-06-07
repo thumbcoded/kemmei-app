@@ -6,22 +6,25 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "Why is it important to remove the laptop battery before replacing a drive?",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is upgrading a thin laptop. What two factors might prevent installation of a 2.5 inch SSD?",
   "answer_options": [
-    "To prevent drive overheating",
-    "To reduce electromagnetic interference",
-    "To avoid electrical shorts or damage",
-    "To reset BIOS settings"
+    "Laptop only supports HDDs",
+    "Lack of physical bay for 2.5 inch drives",
+    "Incompatibility with NVMe protocol",
+    "Lack of SATA port in the system board",
+    "Presence of dual-channel RAM configuration"
   ],
   "correct_answer": [
-    "To avoid electrical shorts or damage"
+    "Lack of physical bay for 2.5 inch drives",
+    "Lack of SATA port in the system board"
   ],
-  "explanation": "Removing the battery ensures no power is flowing to the components, reducing the risk of shock or short circuits during replacement.",
+  "explanation": "Thin laptops may lack physical space or SATA connectivity, requiring M.2 form factors instead of 2.5 inch drives.",
   "tags": [
-    "replace drive",
-    "safety"
+    "2.5 inch drive",
+    "SSD",
+    "solid state drive"
   ],
   "status": "approved",
   "image": null,

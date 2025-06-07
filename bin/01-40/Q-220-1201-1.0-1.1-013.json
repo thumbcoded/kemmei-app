@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "1.0 Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are types of modern laptop batteries? (Select all that apply)",
+  "answer_options": [
+    "Li-ion",
+    "LiPo",
+    "NiMH",
+    "Lithium polymer",
+    "Alkaline"
+  ],
+  "correct_answer": [
+    "Li-ion",
+    "LiPo",
+    "Lithium polymer"
+  ],
+  "tags": [
+    "lithium ion",
+    "li-ion",
+    "lithium polymer",
+    "LiPo"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0,
+  "explanation": ""
+}

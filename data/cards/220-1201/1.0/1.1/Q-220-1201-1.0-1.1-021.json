@@ -8,19 +8,19 @@
   "subdomain_id": "1.1",
   "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "What type of cable typically connects a laptop keyboard to the system board?",
+  "question_text": "Which laptop component is most commonly replaced due to frequent use?",
   "answer_options": [
-    "SATA cable",
-    "Power connector",
-    "Ribbon cable",
-    "RJ-45 cable"
+    "Battery",
+    "Display panel",
+    "Keyboard",
+    "Touchpad"
   ],
   "correct_answer": [
-    "Ribbon cable"
+    "Keyboard"
   ],
+  "explanation": "The keyboard is often the most-used and most-replaced component in a laptop due to wear from daily use.",
   "tags": [
-    "ribbon cable",
-    "keyboard connector"
+    "keyboard swap"
   ],
   "status": "approved",
   "image": null,

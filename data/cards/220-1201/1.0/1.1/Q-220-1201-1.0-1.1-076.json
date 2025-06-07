@@ -6,21 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "What is the purpose of a laptop’s Bluetooth interface?",
+  "question_text": "A technician is cloning a 1 TB hard drive to a 512 GB SSD. What must be true for the cloning to succeed?",
   "answer_options": [
-    "To connect to a wired network",
-    "To transfer files via USB",
-    "To pair with wireless peripherals",
-    "To increase display brightness"
+    "The SSD must be the same brand as the original drive",
+    "The used space on the source drive must be less than 512 GB",
+    "The target SSD must use the NVMe protocol",
+    "The drive must be reformatted to FAT32 before cloning"
   ],
   "correct_answer": [
-    "To pair with wireless peripherals"
+    "The used space on the source drive must be less than 512 GB"
   ],
-  "explanation": "Bluetooth is used for short-range wireless communication with devices like keyboards, mice, and headphones.",
+  "explanation": "Cloning transfers all data, so the used space must fit entirely on the new drive, even if the old one was larger.",
   "tags": [
-    "Bluetooth"
+    "drive migration",
+    "cloning software"
   ],
   "status": "approved",
   "image": null,

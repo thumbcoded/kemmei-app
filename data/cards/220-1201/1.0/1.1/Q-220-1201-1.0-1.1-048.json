@@ -6,23 +6,23 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
+  "difficulty": "hard",
   "question_type": "multiple_choice",
-  "question_text": "What form factor is commonly used for older laptop hard drives?",
+  "question_text": "A laptop has 4 GB of soldered RAM and one available SODIMM slot. What is the maximum memory capacity upgradeable by the user if the system supports up to 12 GB total?",
   "answer_options": [
-    "3.5 inch drive",
-    "2.5 inch drive",
-    "M.2 drive",
-    "USB flash drive"
+    "4 GB",
+    "6 GB",
+    "8 GB",
+    "12 GB"
   ],
   "correct_answer": [
-    "2.5 inch drive"
+    "8 GB"
   ],
-  "explanation": "Older laptops often use 2.5 inch drives, which are smaller than the 3.5 inch drives found in desktop systems.",
+  "explanation": "The 4 GB soldered RAM is fixed. The user can add 8 GB to the modular slot to reach the system's 12 GB maximum.",
   "tags": [
-    "2.5 inch drive",
-    "HDD",
-    "storage"
+    "SODIMM",
+    "soldered RAM",
+    "RAM upgrade"
   ],
   "status": "approved",
   "image": null,

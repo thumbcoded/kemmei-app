@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
+  "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "A technician wants to upgrade a laptop from an HDD to an SSD with minimal user disruption. What’s the best approach?",
+  "question_text": "Why might a user be unable to install a 2.5 inch SATA SSD in a modern ultrathin laptop?",
   "answer_options": [
-    "Install the SSD and reinstall the OS manually",
-    "Use cloning software to migrate the HDD contents to the SSD",
-    "Back up only user files and format the HDD",
-    "Install the SSD and recover data from cloud storage"
+    "The drive needs BIOS reprogramming",
+    "Ultrathin laptops lack a SATA data interface",
+    "The battery physically blocks all storage bays",
+    "2.5 inch drives are only supported in desktops"
   ],
   "correct_answer": [
-    "Use cloning software to migrate the HDD contents to the SSD"
+    "Ultrathin laptops lack a SATA data interface"
   ],
-  "explanation": "Cloning preserves the system exactly as-is, avoiding OS reinstallation or manual file transfer.",
+  "explanation": "Ultrathin laptops often lack traditional SATA connectors and bays, using M.2 instead.",
   "tags": [
-    "cloning software",
-    "drive migration"
+    "install M.2",
+    "remove drive"
   ],
   "status": "approved",
   "image": null,

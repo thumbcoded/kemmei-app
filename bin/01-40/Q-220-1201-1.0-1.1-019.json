@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two challenges related to laptop battery form factors.",
+  "answer_options": [
+    "Most laptops share a standardized battery shape",
+    "Even minor physical differences can cause fit issues",
+    "Batteries can only be installed by certified technicians",
+    "Form factor variations impact replacement part availability",
+    "All batteries are designed to match USB-C port orientation"
+  ],
+  "correct_answer": [
+    "Even minor physical differences can cause fit issues",
+    "Form factor variations impact replacement part availability"
+  ],
+  "tags": [
+    "battery form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

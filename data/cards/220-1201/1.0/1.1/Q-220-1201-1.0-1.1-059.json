@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
+  "difficulty": "hard",
   "question_type": "multiple_choice",
-  "question_text": "What ensures an M.2 drive stays securely attached to the system board after installation?",
+  "question_text": "A laptop includes an M.2 slot but does not support NVMe. Which type of drive can still be used for upgrading storage?",
   "answer_options": [
-    "A thermal pad",
-    "A locking clip",
-    "A retention bracket",
-    "A single mounting screw"
+    "2.5 inch SATA HDD",
+    "M.2 SATA SSD",
+    "M.2 NVMe SSD",
+    "2.5 inch NVMe SSD"
   ],
   "correct_answer": [
-    "A single mounting screw"
+    "M.2 SATA SSD"
   ],
-  "explanation": "M.2 drives slide into their slot and are secured by one small screw to remain fixed on the board.",
+  "explanation": "Some M.2 slots support SATA protocol only. An M.2 SATA SSD fits the slot and is compatible, unlike an NVMe drive.",
   "tags": [
-    "install M.2",
-    "screw"
+    "M.2",
+    "SSD"
   ],
   "status": "approved",
   "image": null,

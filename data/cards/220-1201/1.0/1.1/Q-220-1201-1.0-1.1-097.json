@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What signal issue is most likely to occur if the laptop’s antenna wires are left disconnected after a repair?",
+  "answer_options": [
+    "Complete loss of keyboard backlight",
+    "Inability to charge the battery",
+    "Severely degraded Wi-Fi and Bluetooth reception",
+    "Boot failure during POST"
+  ],
+  "correct_answer": [
+    "Severely degraded Wi-Fi and Bluetooth reception"
+  ],
+  "explanation": "Without connected antennas, wireless signal strength and reliability drop drastically, even if the card is still installed.",
+  "tags": [
+    "antenna wire",
+    "antenna connector",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

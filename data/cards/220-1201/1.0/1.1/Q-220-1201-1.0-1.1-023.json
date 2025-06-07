@@ -6,18 +6,19 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "What must you do before detaching a laptop's ribbon cable during a keyboard replacement?",
+  "question_text": "Which type of cable is typically used to connect a laptop keyboard to the system board?",
   "answer_options": [
-    "Remove the CPU heat sink",
-    "Disable Secure Boot in BIOS",
-    "Disconnect the battery and open the cable lock mechanism",
-    "Format the hard drive"
+    "HDMI",
+    "Power cable",
+    "Ribbon cable",
+    "Ethernet cable"
   ],
   "correct_answer": [
-    "Disconnect the battery and open the cable lock mechanism"
+    "Ribbon cable"
   ],
+  "explanation": "Ribbon cables are flat and flexible, commonly used for internal connections like laptop keyboards.",
   "tags": [
     "ribbon cable",
     "keyboard connector"

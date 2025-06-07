@@ -6,23 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "A technician has removed the access panel and old drive from a laptop. What is the next correct step when installing a new 2.5 inch drive?",
+  "question_text": "Which laptop storage drive type is typically installed using only a single screw?",
   "answer_options": [
-    "Install the OS before mounting the drive",
-    "Screw the drive into the bracket before inserting",
-    "Slide the drive in and secure it with screws",
-    "Use a thermal pad between drive and frame"
+    "2.5 inch spinning drive",
+    "M.2 SSD",
+    "External USB drive",
+    "Optical drive"
   ],
   "correct_answer": [
-    "Slide the drive in and secure it with screws"
+    "M.2 SSD"
   ],
-  "explanation": "After aligning the drive connector, it is slid into place and then secured with screws to prevent movement.",
+  "explanation": "M.2 SSDs are installed by sliding into a slot and securing with a single screw to hold them in place.",
   "tags": [
-    "replace drive",
-    "screw",
-    "access panel"
+    "install M.2",
+    "screw"
   ],
   "status": "approved",
   "image": null,

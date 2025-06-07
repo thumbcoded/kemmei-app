@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a modular laptop design, what distinguishes a mini PCIe wireless card installation from modern integrated designs?",
+  "answer_options": [
+    "The mini PCIe card supports only Bluetooth, not Wi-Fi",
+    "A mini PCIe card must be soldered directly to the system board",
+    "Modular cards allow removal and replacement without system board replacement",
+    "Integrated cards allow the use of external USB adapters"
+  ],
+  "correct_answer": [
+    "Modular cards allow removal and replacement without system board replacement"
+  ],
+  "explanation": "Mini PCIe cards are modular and easily swappable, unlike integrated wireless interfaces which are soldered onto the system board.",
+  "tags": [
+    "mini PCIe",
+    "Wi-Fi card",
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

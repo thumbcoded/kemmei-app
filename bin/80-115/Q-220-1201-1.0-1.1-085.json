@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why do laptop antenna wires run through or near the screen area?",
+  "answer_options": [
+    "To protect them from overheating",
+    "To simplify factory assembly",
+    "To raise the antenna for better signal strength",
+    "To reduce cost of materials"
+  ],
+  "correct_answer": [
+    "To raise the antenna for better signal strength"
+  ],
+  "explanation": "Routing antennas through the screen housing places them higher when the laptop is open, which helps improve signal reception.",
+  "tags": [
+    "antenna wire",
+    "wrap around display"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

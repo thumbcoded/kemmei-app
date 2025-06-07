@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-122",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why are laptop microphones typically embedded near the camera?",
+  "answer_options": [
+    "To align with screen brightness sensors",
+    "To support surround sound recording",
+    "To match the user’s face orientation during video calls",
+    "To monitor system cooling airflow"
+  ],
+  "correct_answer": [
+    "To match the user’s face orientation during video calls"
+  ],
+  "explanation": "Placing microphones near the camera helps capture voice from the correct direction during video conferencing.",
+  "tags": [
+    "microphone",
+    "built-in camera",
+    "video conference"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

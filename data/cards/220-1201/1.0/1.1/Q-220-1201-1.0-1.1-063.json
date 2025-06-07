@@ -6,23 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "A technician installs a 2.5 inch SSD into a laptop but forgets to screw it into the frame. What is the most likely consequence?",
+  "question_text": "Which of the following is commonly removed to access internal laptop components such as storage drives?",
   "answer_options": [
-    "The BIOS will not detect the drive",
-    "The drive will overheat during normal operation",
-    "The drive may become disconnected or damaged from movement",
-    "The drive will remain unformatted"
+    "LCD screen",
+    "Laptop hinge",
+    "Access panel",
+    "Power connector"
   ],
   "correct_answer": [
-    "The drive may become disconnected or damaged from movement"
+    "Access panel"
   ],
-  "explanation": "Without securing screws, the drive can shift or vibrate loose, especially in portable devices like laptops.",
+  "explanation": "Many laptops have a removable access panel on the underside to expose memory and storage drive bays.",
   "tags": [
-    "screw",
-    "replace drive",
-    "installation"
+    "access panel",
+    "remove drive"
   ],
   "status": "approved",
   "image": null,

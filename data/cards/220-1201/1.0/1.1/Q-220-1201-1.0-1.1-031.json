@@ -4,31 +4,28 @@
     "220-1201"
   ],
   "domain_id": "1.0",
-  "domain_title": "1.0 Mobile Devices",
+  "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "easy",
-  "question_type": "select_all",
-  "question_text": "Which of the following tools or items might be useful when replacing a single key on a laptop keyboard? (Select all that apply)",
+  "question_type": "multiple_choice",
+  "question_text": "What is the most likely reason to perform individual key repair instead of replacing the entire keyboard?",
   "answer_options": [
-    "Replacement keycap",
-    "Flat plastic pry tool",
-    "Thermal paste",
-    "Compressed air",
-    "RJ-45 loopback plug"
+    "All keyboard keys are unresponsive",
+    "Only one key is physically damaged or not working",
+    "The laptop will not power on",
+    "The ribbon cable is torn"
   ],
   "correct_answer": [
-    "Replacement keycap",
-    "Flat plastic pry tool",
-    "Compressed air"
+    "Only one key is physically damaged or not working"
   ],
+  "explanation": "If the issue is isolated to a single key, it may be possible to replace that key or keycap instead of replacing the whole keyboard.",
   "tags": [
-    "replace single key",
-    "keycap"
+    "key replacement",
+    "damaged key"
   ],
   "status": "approved",
   "image": null,
   "media": null,
   "requiredCount": null,
-  "__v": 0,
-  "explanation": ""
+  "__v": 0
 }

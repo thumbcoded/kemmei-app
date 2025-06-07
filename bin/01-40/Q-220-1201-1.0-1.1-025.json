@@ -1,0 +1,29 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a reason to temporarily connect an external USB keyboard to a laptop?",
+  "answer_options": [
+    "To avoid using touch screen controls",
+    "To update keyboard firmware",
+    "To test functionality when the internal keyboard is nonresponsive",
+    "To enter BIOS without powering on"
+  ],
+  "correct_answer": [
+    "To test functionality when the internal keyboard is nonresponsive"
+  ],
+  "tags": [
+    "external USB keyboard"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

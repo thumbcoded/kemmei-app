@@ -7,22 +7,24 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "A laptop upgrade involves switching from a 2.5 inch HDD to a 2.5 inch SSD. What is one expected benefit?",
+  "question_type": "select_multiple",
+  "question_text": "You're upgrading a laptop’s storage drive. Which two characteristics are most important to verify for compatibility?",
   "answer_options": [
-    "Increased screen resolution",
-    "Improved file transfer speeds",
-    "Better Bluetooth connectivity",
-    "Extended HDMI support"
+    "Drive color",
+    "Form factor (e.g. 2.5 inch vs M.2)",
+    "Drive mounting orientation",
+    "Interface type (e.g. SATA or NVMe)",
+    "Presence of an HDMI port"
   ],
   "correct_answer": [
-    "Improved file transfer speeds"
+    "Form factor (e.g. 2.5 inch vs M.2)",
+    "Interface type (e.g. SATA or NVMe)"
   ],
-  "explanation": "SSDs provide significantly faster read/write speeds than HDDs, improving overall system responsiveness.",
+  "explanation": "Laptops vary in the form factors and interface protocols they support. These must match the new drive’s specifications.",
   "tags": [
-    "HDD",
-    "SSD",
-    "2.5 inch drive"
+    "2.5 inch drive",
+    "M.2",
+    "SSD"
   ],
   "status": "approved",
   "image": null,

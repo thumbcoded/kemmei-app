@@ -8,21 +8,20 @@
   "subdomain_id": "1.1",
   "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "What is one advantage of the M.2 storage interface over traditional 2.5 inch drives in laptops?",
+  "question_text": "Which of the following is a primary benefit of M.2 SSDs in modern laptops?",
   "answer_options": [
-    "M.2 drives use optical lasers for faster reads",
-    "M.2 drives require external power supplies",
-    "M.2 drives offer a smaller form factor and direct board connection",
-    "M.2 drives can be used in DVD slots"
+    "They can store more data than HDDs",
+    "They are easier to repair than 2.5 inch SSDs",
+    "They require less physical space inside the chassis",
+    "They use rotating magnetic platters for higher capacity"
   ],
   "correct_answer": [
-    "M.2 drives offer a smaller form factor and direct board connection"
+    "They require less physical space inside the chassis"
   ],
-  "explanation": "M.2 drives plug directly into the motherboard, saving space and simplifying installation in modern laptops.",
+  "explanation": "M.2 drives are small and slot directly into the motherboard, which is ideal for compact systems.",
   "tags": [
     "M.2",
-    "2.5 inch drive",
-    "storage"
+    "solid state drive"
   ],
   "status": "approved",
   "image": null,

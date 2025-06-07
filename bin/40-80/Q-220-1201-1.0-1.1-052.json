@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A laptop upgrade involves switching from a 2.5 inch HDD to a 2.5 inch SSD. What is one expected benefit?",
+  "answer_options": [
+    "Increased screen resolution",
+    "Improved file transfer speeds",
+    "Better Bluetooth connectivity",
+    "Extended HDMI support"
+  ],
+  "correct_answer": [
+    "Improved file transfer speeds"
+  ],
+  "explanation": "SSDs provide significantly faster read/write speeds than HDDs, improving overall system responsiveness.",
+  "tags": [
+    "HDD",
+    "SSD",
+    "2.5 inch drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

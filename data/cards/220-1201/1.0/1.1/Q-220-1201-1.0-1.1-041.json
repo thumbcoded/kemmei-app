@@ -6,23 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "select_multiple",
-  "question_text": "Select two reasons why a laptop's memory might not be user-upgradeable.",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of memory module is typically used in laptops due to its small form factor?",
   "answer_options": [
-    "The device uses DDR3 memory instead of DDR4",
-    "The memory is soldered directly onto the motherboard",
-    "There is no available access panel",
-    "The hard drive is encrypted",
-    "There are no USB-C ports available"
+    "DIMM",
+    "ECC RAM",
+    "SODIMM",
+    "Cache memory"
   ],
   "correct_answer": [
-    "The memory is soldered directly onto the motherboard",
-    "There is no available access panel"
+    "SODIMM"
   ],
+  "explanation": "Laptops use SODIMM (Small Outline Dual Inline Memory Module) due to space constraints inside the chassis.",
   "tags": [
-    "soldered RAM",
-    "modular memory"
+    "SODIMM",
+    "memory module"
   ],
   "status": "approved",
   "image": null,

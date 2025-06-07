@@ -6,22 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "A user is migrating to a new laptop and wants to avoid reinstalling apps and settings. What should the technician use?",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A refurbished laptop frequently fails to boot after replacing its original 2.5 inch drive. Select two plausible causes based on drive replacement procedures.",
   "answer_options": [
-    "Cloud file sync service",
-    "Cloning software",
-    "Driver update utility",
-    "External drive backup utility"
+    "Drive was installed without its bracket",
+    "Incorrect RAM type was installed",
+    "Drive was not securely screwed into position",
+    "Access panel was replaced with third-party plastic",
+    "BIOS boot order still points to the old drive"
   ],
   "correct_answer": [
-    "Cloning software"
+    "Drive was not securely screwed into position",
+    "BIOS boot order still points to the old drive"
   ],
-  "explanation": "Cloning software preserves all system data, including OS, programs, and settings, for seamless transitions to new hardware.",
+  "explanation": "Loose mounting can cause disconnection, and BIOS might still default to a missing or removed boot device.",
   "tags": [
-    "cloning software",
-    "drive migration"
+    "remove drive",
+    "screw"
   ],
   "status": "approved",
   "image": null,

@@ -7,21 +7,24 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which tool is commonly required to remove a 2.5-inch drive from a laptop?",
+  "question_type": "select_all",
+  "question_text": "Which of the following are types of storage drives used in laptops? (Select all that apply)",
   "answer_options": [
-    "Wire stripper",
-    "Flat-head screwdriver",
-    "Phillips screwdriver",
-    "Needle-nose pliers"
+    "Hard disk drive (HDD)",
+    "Solid state drive (SSD)",
+    "M.2 drive",
+    "Compact disc drive"
   ],
   "correct_answer": [
-    "Phillips screwdriver"
+    "Hard disk drive (HDD)",
+    "Solid state drive (SSD)",
+    "M.2 drive"
   ],
-  "explanation": "Drives are usually secured with small Phillips screws that must be removed to replace the drive.",
+  "explanation": "HDDs, SSDs, and M.2 drives are all valid laptop storage types. CD drives are largely obsolete in modern laptops.",
   "tags": [
-    "screw",
-    "remove drive"
+    "HDD",
+    "SSD",
+    "M.2"
   ],
   "status": "approved",
   "image": null,

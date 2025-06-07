@@ -8,19 +8,19 @@
   "subdomain_id": "1.1",
   "difficulty": "hard",
   "question_type": "multiple_choice",
-  "question_text": "A repair technician is evaluating two laptops. One has a battery that is secured with internal screws and requires disassembly to access. The other has a battery with external latches. What is the key difference in these battery designs?",
+  "question_text": "A technician is asked to replace the battery in a high-end ultrabook. The laptop has no visible release latch and the chassis is sealed. The replacement process involves removing multiple components before accessing the battery. What is the most accurate classification for this battery?",
   "answer_options": [
-    "One uses a lithium-ion cell and the other does not",
-    "One is a modular battery and the other is internal",
-    "One supports USB charging and the other does not",
-    "Both require specialized tools for battery replacement"
+    "User-swappable battery",
+    "Modular battery",
+    "Removable battery",
+    "Internal non-removable battery"
   ],
   "correct_answer": [
-    "One is a modular battery and the other is internal"
+    "Internal non-removable battery"
   ],
-  "explanation": "Modular batteries are designed for external access; internal batteries require disassembly.",
+  "explanation": "The battery described is not designed for end-user replacement and requires significant disassembly, indicating a non-removable internal design.",
   "tags": [
-    "modular battery",
+    "non-removable battery",
     "internal battery"
   ],
   "status": "approved",

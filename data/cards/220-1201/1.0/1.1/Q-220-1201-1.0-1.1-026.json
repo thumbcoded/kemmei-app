@@ -6,21 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
-  "question_type": "multiple_choice",
-  "question_text": "During a keyboard replacement, what is the primary function of the ZIF (Zero Insertion Force) connector found on many laptop motherboards?",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "During a laptop keyboard replacement, a technician must be cautious to avoid damaging which two components?",
   "answer_options": [
-    "It converts analog keystrokes to digital signals",
-    "It prevents short circuits during installation",
-    "It locks the ribbon cable in place without excessive force",
-    "It regulates power to the keyboard backlight"
+    "LCD backlight cable",
+    "Ribbon cable connector",
+    "Keyboard bezel",
+    "Trackpad sensor",
+    "USB-C power input"
   ],
   "correct_answer": [
-    "It locks the ribbon cable in place without excessive force"
+    "Ribbon cable connector",
+    "Keyboard bezel"
   ],
+  "explanation": "Both the ribbon cable connector and the bezel are physically delicate and easily damaged during removal or reassembly.",
   "tags": [
-    "keyboard connector",
-    "ribbon cable"
+    "ribbon cable",
+    "keyboard bezel"
   ],
   "status": "approved",
   "image": null,

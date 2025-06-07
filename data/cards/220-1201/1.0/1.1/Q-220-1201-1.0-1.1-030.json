@@ -6,20 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which of the following is a common cause of a damaged key on a laptop keyboard?",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A refurbished laptop fails POST and the internal keyboard is unresponsive. Select two components that should be checked before replacing the keyboard again.",
   "answer_options": [
-    "Loose USB port",
-    "Overheating battery",
-    "Physical impact or wear",
-    "Outdated BIOS version"
+    "USB ports",
+    "Ribbon cable seating",
+    "RAM module",
+    "Keyboard bezel alignment",
+    "Keyboard connector on the motherboard"
   ],
   "correct_answer": [
-    "Physical impact or wear"
+    "Ribbon cable seating",
+    "Keyboard connector on the motherboard"
   ],
+  "explanation": "Faulty ribbon cable installation or damage to the keyboard connector can result in unresponsive keyboards and boot issues.",
   "tags": [
-    "damaged key"
+    "ribbon cable",
+    "keyboard connector"
   ],
   "status": "approved",
   "image": null,

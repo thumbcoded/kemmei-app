@@ -7,22 +7,24 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "hard",
-  "question_type": "select_multiple",
-  "question_text": "A technician is tasked with replacing a non-modular laptop battery. Which TWO challenges are most likely during this process?",
+  "question_type": "select_all",
+  "question_text": "Which of the following factors can influence a manufacturer's decision to use a non-removable battery design? (Select all that apply)",
   "answer_options": [
-    "Accessing the battery through the case housing",
-    "Disconnecting a latch on the battery exterior",
-    "Dealing with adhesive or screws inside the chassis",
-    "Locating the BIOS switch to release the battery"
+    "Improved device structural rigidity",
+    "Reduced repair costs for users",
+    "Thinner and lighter chassis construction",
+    "Enhanced thermal performance management",
+    "Facilitating user field upgrades"
   ],
   "correct_answer": [
-    "Accessing the battery through the case housing",
-    "Dealing with adhesive or screws inside the chassis"
+    "Improved device structural rigidity",
+    "Thinner and lighter chassis construction",
+    "Enhanced thermal performance management"
   ],
-  "explanation": "Internal battery replacement usually involves disassembly and internal fasteners or adhesive.",
+  "explanation": "Non-removable battery designs often support compact, rigid builds and optimized thermal layouts. However, they do not reduce repair costs or facilitate user upgrades.",
   "tags": [
     "internal battery",
-    "technician-required"
+    "non-removable battery"
   ],
   "status": "approved",
   "image": null,

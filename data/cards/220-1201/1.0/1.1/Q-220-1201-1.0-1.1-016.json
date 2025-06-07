@@ -7,19 +7,24 @@
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
   "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "Which of the following is a key reason why laptop batteries are not interchangeable between models?",
+  "question_type": "select_multiple",
+  "question_text": "A technician is ordering batteries for two laptop models from different manufacturers. Which two factors must be considered when selecting a compatible battery?",
   "answer_options": [
-    "All laptop batteries use different chemical compositions",
-    "Battery prices are region-specific",
-    "Each laptop model uses a unique form factor",
-    "Only Apple batteries are proprietary"
+    "Battery form factor",
+    "Bluetooth version",
+    "LCD screen type",
+    "Battery chemistry (Li-ion vs LiPo)",
+    "RAM speed"
   ],
   "correct_answer": [
-    "Each laptop model uses a unique form factor"
+    "Battery form factor",
+    "Battery chemistry (Li-ion vs LiPo)"
   ],
+  "explanation": "Battery chemistry affects electrical compatibility, and the form factor must physically fit the model.",
   "tags": [
-    "battery form factor"
+    "battery form factor",
+    "lithium ion",
+    "lithium polymer"
   ],
   "status": "approved",
   "image": null,

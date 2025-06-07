@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A laptop's webcam works in some applications but not others. Which of the following is the MOST likely explanation?",
+  "answer_options": [
+    "The microphone is disabled in Device Manager",
+    "Only one application can access the webcam at a time",
+    "The webcam is powered through the battery compartment",
+    "The external camera driver must be reinstalled"
+  ],
+  "correct_answer": [
+    "Only one application can access the webcam at a time"
+  ],
+  "explanation": "Many operating systems restrict webcam access to a single application at a time for privacy and security reasons.",
+  "tags": [
+    "webcam",
+    "built-in camera"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -6,20 +6,21 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "medium",
   "question_type": "multiple_choice",
-  "question_text": "Why can improper removal of a laptop keycap result in permanent keyboard damage?",
+  "question_text": "While attempting to repair a sticky key, a technician accidentally breaks the plastic hinge under the keycap. What is the correct next step?",
   "answer_options": [
-    "It voids all device warranties instantly",
-    "Keycaps contain electrical fuses that break under force",
-    "The underlying scissor mechanism is delicate and may snap",
-    "It causes BIOS password lockout on modern laptops"
+    "Replace the entire keyboard",
+    "Superglue the keycap back on",
+    "Replace the damaged key and hinge assembly",
+    "Disable the key in BIOS"
   ],
   "correct_answer": [
-    "The underlying scissor mechanism is delicate and may snap"
+    "Replace the damaged key and hinge assembly"
   ],
+  "explanation": "If the key mechanism is damaged, individual components like hinges and clips can be replaced without swapping the entire keyboard.",
   "tags": [
-    "keycap",
+    "damaged key",
     "key replacement"
   ],
   "status": "approved",

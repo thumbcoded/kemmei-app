@@ -6,19 +6,21 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Which feature of a laptop would suggest that memory can be upgraded?",
+  "question_text": "In which situation can you upgrade a laptop's memory by simply inserting a new module?",
   "answer_options": [
-    "Presence of an M.2 slot",
-    "Removable bottom panel labeled 'memory'",
-    "Non-removable battery",
-    "Keyboard with RGB lighting"
+    "When the laptop uses soldered RAM",
+    "When the laptop uses modular memory in accessible slots",
+    "When the memory is integrated into the battery compartment",
+    "When the operating system has a memory optimizer installed"
   ],
   "correct_answer": [
-    "Removable bottom panel labeled 'memory'"
+    "When the laptop uses modular memory in accessible slots"
   ],
+  "explanation": "Some laptops allow upgrades through modular RAM that can be accessed via panels on the laptop's underside.",
   "tags": [
+    "modular memory",
     "memory slot",
     "RAM upgrade"
   ],

@@ -4,30 +4,31 @@
     "220-1201"
   ],
   "domain_id": "1.0",
-  "domain_title": "1.0 Mobile Devices",
+  "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "select_all",
-  "question_text": "Which of the following are true about soldered RAM in laptops? (Select all that apply)",
+  "question_text": "Which of the following terms are associated with laptop memory upgrades? (Select all that apply)",
   "answer_options": [
-    "It cannot be upgraded by the user",
-    "It reduces system weight and thickness",
-    "It can be replaced using a memory slot tool",
-    "It is typically used in business-grade desktops",
-    "It requires motherboard replacement if defective"
+    "SODIMM",
+    "SATA",
+    "RAM upgrade",
+    "Soldered RAM"
   ],
   "correct_answer": [
-    "It cannot be upgraded by the user",
-    "It reduces system weight and thickness",
-    "It requires motherboard replacement if defective"
+    "SODIMM",
+    "RAM upgrade",
+    "Soldered RAM"
   ],
+  "explanation": "SODIMM is the physical format; RAM upgrade refers to the process; soldered RAM is a restriction in some models.",
   "tags": [
+    "SODIMM",
+    "RAM upgrade",
     "soldered RAM"
   ],
   "status": "approved",
   "image": null,
   "media": null,
   "requiredCount": null,
-  "__v": 0,
-  "explanation": ""
+  "__v": 0
 }

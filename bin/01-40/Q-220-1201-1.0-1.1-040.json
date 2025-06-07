@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What must you do to install a new memory module in a modular laptop?",
+  "answer_options": [
+    "Remove the CPU and power supply",
+    "Access the RAM via a panel on the laptop bottom",
+    "Flash the BIOS",
+    "Use only manufacturer-certified tools"
+  ],
+  "correct_answer": [
+    "Access the RAM via a panel on the laptop bottom"
+  ],
+  "tags": [
+    "RAM upgrade",
+    "memory module",
+    "modular memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

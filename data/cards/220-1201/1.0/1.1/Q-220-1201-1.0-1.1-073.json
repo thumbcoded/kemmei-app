@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "When preparing to clone a failing HDD onto an SSD, which precaution improves the chance of a successful migration?",
+  "question_text": "Which type of software creates a duplicate of a drive that can be restored to a new storage device?",
   "answer_options": [
-    "Shrink the partition on the SSD to match the HDD",
-    "Disable UEFI boot mode before starting",
-    "Create a backup image before attempting a live clone",
-    "Perform a low-level format on the source HDD"
+    "Cloning software",
+    "Driver update tool",
+    "Defragmenter",
+    "Registry cleaner"
   ],
   "correct_answer": [
-    "Create a backup image before attempting a live clone"
+    "Cloning software"
   ],
-  "explanation": "If a drive is failing, imaging it first ensures you preserve as much recoverable data as possible before attempting clone operations.",
+  "explanation": "Cloning software (also called imaging software) creates an exact copy of a storage drive, suitable for migration.",
   "tags": [
-    "backup and restore",
-    "image restore"
+    "cloning software",
+    "drive migration"
   ],
   "status": "approved",
   "image": null,

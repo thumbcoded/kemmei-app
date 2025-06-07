@@ -6,21 +6,27 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "What is typically replaced when a single laptop key is damaged but the keyboard still works?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following factors can affect the complexity of a keyboard replacement on a laptop? (Select all that apply)",
   "answer_options": [
-    "The entire keyboard assembly",
-    "The keycap",
-    "The laptop chassis",
-    "The ribbon cable"
+    "Keyboard being integrated into the palm rest",
+    "Use of non-standard ribbon cable connectors",
+    "Presence of a backlit keyboard layer",
+    "Battery chemistry (Li-ion vs. LiPo)",
+    "Chassis access design by the manufacturer"
   ],
   "correct_answer": [
-    "The keycap"
+    "Keyboard being integrated into the palm rest",
+    "Use of non-standard ribbon cable connectors",
+    "Presence of a backlit keyboard layer",
+    "Chassis access design by the manufacturer"
   ],
+  "explanation": "All listed factors except battery chemistry influence the ease or difficulty of keyboard replacement.",
   "tags": [
-    "keycap",
-    "key replacement"
+    "keyboard swap",
+    "ribbon cable",
+    "keyboard connector"
   ],
   "status": "approved",
   "image": null,

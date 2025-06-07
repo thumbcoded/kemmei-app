@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two typical steps involved in replacing an internal laptop keyboard.",
+  "answer_options": [
+    "Disconnecting the ribbon cable",
+    "Replacing the BIOS chip",
+    "Removing screws and bezel",
+    "Disabling TPM in BIOS",
+    "Swapping the laptop battery"
+  ],
+  "correct_answer": [
+    "Disconnecting the ribbon cable",
+    "Removing screws and bezel"
+  ],
+  "tags": [
+    "keyboard swap",
+    "keyboard bezel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

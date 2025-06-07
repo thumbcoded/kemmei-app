@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why are antenna wires routed through the laptop lid instead of inside the base?",
+  "answer_options": [
+    "To reduce electromagnetic interference from the CPU",
+    "To allow the laptop to boot faster",
+    "To place the antenna higher when the lid is open",
+    "To keep the keyboard area free of wires"
+  ],
+  "correct_answer": [
+    "To place the antenna higher when the lid is open"
+  ],
+  "explanation": "Routing antennas through the lid raises them for better signal reception once the screen is opened.",
+  "tags": [
+    "antenna wire",
+    "wrap around display",
+    "laptop screen antenna"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

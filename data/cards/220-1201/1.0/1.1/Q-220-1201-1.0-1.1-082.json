@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Which component is most likely to require disassembly of the display panel to access or replace?",
+  "question_text": "Which wireless standard is most commonly used for laptop connections to a local wireless network?",
   "answer_options": [
-    "Mini PCIe Wi-Fi card",
-    "Internal microphone",
-    "Bluetooth antenna wire",
-    "USB-C charging port"
+    "802.3",
+    "Bluetooth",
+    "802.11",
+    "Zigbee"
   ],
   "correct_answer": [
-    "Bluetooth antenna wire"
+    "802.11"
   ],
-  "explanation": "Bluetooth and Wi-Fi antenna wires often route through or around the display to ensure maximum height and signal strength when the laptop is open.",
+  "explanation": "802.11 is the IEEE standard for Wi-Fi, used by laptops for local wireless LAN connections.",
   "tags": [
-    "Bluetooth",
-    "wireless antenna"
+    "802.11",
+    "Wi-Fi card"
   ],
   "status": "approved",
   "image": null,

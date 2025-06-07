@@ -6,23 +6,24 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "easy",
-  "question_type": "multiple_choice",
-  "question_text": "Which internal laptop component is often used to add or replace wireless connectivity options?",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A user is preparing to migrate from an old laptop HDD to a new SSD. What two steps must be completed before running cloning software?",
   "answer_options": [
-    "DIMM slot",
-    "Mini PCIe card",
-    "USB port",
-    "HDMI port"
+    "Check if the drive is encrypted",
+    "Reinstall the operating system",
+    "Install the SSD into the laptop",
+    "Connect the SSD externally if the laptop has only one bay",
+    "Update the laptop’s firmware"
   ],
   "correct_answer": [
-    "Mini PCIe card"
+    "Check if the drive is encrypted",
+    "Connect the SSD externally if the laptop has only one bay"
   ],
-  "explanation": "Mini PCIe cards are used in laptops to provide modular wireless connectivity such as Wi-Fi or Bluetooth.",
+  "explanation": "Encryption can interfere with cloning, and an external connection is often required when there’s no secondary bay.",
   "tags": [
-    "mini PCIe",
-    "Wi-Fi card",
-    "Bluetooth"
+    "drive migration",
+    "backup and restore"
   ],
   "status": "approved",
   "image": null,

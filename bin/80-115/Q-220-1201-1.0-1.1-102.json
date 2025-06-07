@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a typical range for NFC communication?",
+  "answer_options": [
+    "Up to 10 meters",
+    "Between 5 and 20 meters",
+    "Less than 4 centimeters",
+    "Over 100 feet"
+  ],
+  "correct_answer": [
+    "Less than 4 centimeters"
+  ],
+  "explanation": "NFC operates at extremely short ranges, typically under 4 cm, making it secure for close-proximity use.",
+  "tags": [
+    "short range",
+    "NFC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

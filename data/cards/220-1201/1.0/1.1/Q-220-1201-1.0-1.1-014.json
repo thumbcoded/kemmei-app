@@ -6,21 +6,21 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "A laptop battery is labeled as 'LiPo.' Compared to traditional Li-ion batteries, what is one advantage it offers?",
+  "question_text": "What does 'battery form factor' refer to in laptop design?",
   "answer_options": [
-    "Higher voltage capacity",
-    "Longer life span",
-    "Flexible and lightweight design",
-    "Compatibility with all mobile devices"
+    "Battery lifespan after full charge",
+    "Charging voltage range",
+    "The physical shape and size of the battery",
+    "Number of charge cycles supported"
   ],
   "correct_answer": [
-    "Flexible and lightweight design"
+    "The physical shape and size of the battery"
   ],
+  "explanation": "Form factor defines the battery’s physical size and layout, which must match the laptop model.",
   "tags": [
-    "LiPo",
-    "lithium polymer"
+    "battery form factor"
   ],
   "status": "approved",
   "image": null,

@@ -6,23 +6,26 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
-  "question_type": "multiple_choice",
-  "question_text": "A technician is installing a replacement Wi-Fi card into a laptop. What must be done after securing the card into the mini PCIe slot?",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following issues may prevent a successful drive cloning operation? (Select all that apply)",
   "answer_options": [
-    "Update the BIOS firmware",
-    "Attach wireless antenna connectors",
-    "Reformat the system drive",
-    "Activate airplane mode to test the signal"
+    "Source drive uses more space than the target drive’s capacity",
+    "Cloning software does not support the drive interface (e.g., NVMe)",
+    "The original drive is encrypted",
+    "Source drive is in hibernation mode during cloning"
   ],
   "correct_answer": [
-    "Attach wireless antenna connectors"
+    "Source drive uses more space than the target drive’s capacity",
+    "Cloning software does not support the drive interface (e.g., NVMe)",
+    "The original drive is encrypted",
+    "Source drive is in hibernation mode during cloning"
   ],
-  "explanation": "After installing the wireless card, the antenna cables (usually black and gray) must be connected to ensure wireless signal transmission.",
+  "explanation": "All listed factors can disrupt cloning: encryption blocks low-level access, hibernation locks files, size mismatch breaks transfers, and interface issues cause incompatibility.",
   "tags": [
-    "mini PCIe",
-    "wireless antenna",
-    "main/aux connector"
+    "drive migration",
+    "cloning software",
+    "backup and restore"
   ],
   "status": "approved",
   "image": null,

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-106",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company implements NFC-based badge access for warehouse terminals. Users report inconsistent authentication success. Which of the following is the MOST likely cause?",
+  "answer_options": [
+    "Excessive NFC signal strength",
+    "Outdated antivirus definitions",
+    "Excessive distance between device and NFC tag",
+    "Duplicate MAC addresses on the network"
+  ],
+  "correct_answer": [
+    "Excessive distance between device and NFC tag"
+  ],
+  "explanation": "NFC requires close physical proximity (typically under 4 cm). If the badge isn't held close enough, the signal won’t register.",
+  "tags": [
+    "short range",
+    "proximity authentication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

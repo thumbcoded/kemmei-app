@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-112",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the typical range required for NFC communication to work?",
+  "answer_options": [
+    "Less than 4 centimeters",
+    "10 to 15 meters",
+    "Up to 100 feet",
+    "500 meters or more"
+  ],
+  "correct_answer": [
+    "Less than 4 centimeters"
+  ],
+  "explanation": "NFC requires devices to be in very close proximity, often 4 cm or less, for data transmission to occur.",
+  "tags": [
+    "short range",
+    "NFC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

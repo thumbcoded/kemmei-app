@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What must be present on a laptop to enable biometric authentication using facial recognition?",
+  "answer_options": [
+    "A fingerprint reader",
+    "A webcam or camera module",
+    "A USB-C port",
+    "A TPM chip"
+  ],
+  "correct_answer": [
+    "A webcam or camera module"
+  ],
+  "explanation": "Face recognition requires a built-in or external camera to scan and match the user’s facial features.",
+  "tags": [
+    "face recognition",
+    "biometric hardware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

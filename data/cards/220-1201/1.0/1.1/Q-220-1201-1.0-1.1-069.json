@@ -6,22 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "hard",
   "question_type": "multiple_choice",
-  "question_text": "Which of the following best describes 'image restore' in the context of laptop storage migration?",
+  "question_text": "A user installs an M.2 SSD but the laptop fails to detect it in BIOS. The drive is properly seated and screwed in. What is the most likely cause?",
   "answer_options": [
-    "Reinstalling the OS from an official recovery USB",
-    "Copying individual user files to a new drive",
-    "Creating an identical drive structure on a replacement device",
-    "Formatting and partitioning a new SSD"
+    "Drive was inserted upside down",
+    "The M.2 slot only supports SATA, but the drive is NVMe",
+    "Laptop requires thermal paste on the drive",
+    "The drive is too fast for the laptop's RAM to support"
   ],
   "correct_answer": [
-    "Creating an identical drive structure on a replacement device"
+    "The M.2 slot only supports SATA, but the drive is NVMe"
   ],
-  "explanation": "An image restore duplicates not just files, but also the partition table, boot record, and OS settings onto a new drive.",
+  "explanation": "M.2 slots can support either SATA or NVMe, but not both. A protocol mismatch will prevent drive detection.",
   "tags": [
-    "image restore",
-    "drive migration"
+    "install M.2",
+    "remove drive"
   ],
   "status": "approved",
   "image": null,

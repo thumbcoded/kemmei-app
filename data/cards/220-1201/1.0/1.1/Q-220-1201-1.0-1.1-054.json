@@ -6,24 +6,22 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Which configuration is most likely to cause installation problems when upgrading a laptop with a 2.5 inch SSD?",
+  "question_text": "Which of the following storage devices contains moving parts and is often found in older laptops?",
   "answer_options": [
-    "The SSD is thinner than the existing hard drive",
-    "The SSD uses the M.2 interface",
-    "The SSD has a larger storage capacity",
-    "The SSD requires separate PCIe power"
+    "M.2 drive",
+    "Solid state drive (SSD)",
+    "Hard disk drive (HDD)",
+    "Flash drive"
   ],
   "correct_answer": [
-    "The SSD uses the M.2 interface"
+    "Hard disk drive (HDD)"
   ],
-  "explanation": "A 2.5 inch SATA bay does not support M.2 drives, which use a completely different interface and form factor.",
+  "explanation": "HDDs use spinning magnetic platters and were common in older laptops before SSDs became mainstream.",
   "tags": [
-    "M.2",
-    "2.5 inch drive",
-    "SSD",
-    "storage"
+    "HDD",
+    "spinning drive"
   ],
   "status": "approved",
   "image": null,

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select TWO valid reasons manufacturers might choose a non-modular battery design.",
+  "answer_options": [
+    "To allow easy battery swaps",
+    "To improve laptop thinness",
+    "To increase battery repair time",
+    "To discourage user tampering"
+  ],
+  "correct_answer": [
+    "To improve laptop thinness",
+    "To discourage user tampering"
+  ],
+  "explanation": "Non-removable designs are often used to minimize size and reduce tampering risks.",
+  "tags": [
+    "non-removable battery",
+    "internal battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

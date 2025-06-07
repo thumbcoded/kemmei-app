@@ -6,20 +6,21 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "medium",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "Why are SODIMM modules used in laptops instead of full-sized DIMMs?",
+  "question_text": "What is a common method for physically securing a memory module inside a laptop?",
   "answer_options": [
-    "They have higher clock speeds",
-    "They support ECC by default",
-    "They are smaller and designed for compact spaces",
-    "They consume more voltage for better performance"
+    "Soldering it to the motherboard",
+    "Locking it into clips inside a memory slot",
+    "Magnetic retention",
+    "Using thermal adhesive"
   ],
   "correct_answer": [
-    "They are smaller and designed for compact spaces"
+    "Locking it into clips inside a memory slot"
   ],
+  "explanation": "Modular memory modules like SODIMMs are typically secured with clips inside dedicated slots on the system board.",
   "tags": [
-    "SODIMM",
+    "memory slot",
     "memory module"
   ],
   "status": "approved",

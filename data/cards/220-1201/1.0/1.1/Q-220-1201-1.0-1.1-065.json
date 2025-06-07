@@ -6,23 +6,25 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
-  "question_type": "multiple_choice",
-  "question_text": "When replacing a laptop drive, which of the following must be confirmed before physically installing a new drive?",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following steps are part of a typical drive replacement procedure on a laptop? (Select all that apply)",
   "answer_options": [
-    "That the new drive has a valid partition table",
-    "That the BIOS is set to UEFI mode",
-    "That the form factor and connector match the drive bay",
-    "That an OS is already installed on the new drive"
+    "Remove the access panel",
+    "Remove mounting screws",
+    "Install M.2 drive into slot",
+    "Apply thermal paste to the drive"
   ],
   "correct_answer": [
-    "That the form factor and connector match the drive bay"
+    "Remove the access panel",
+    "Remove mounting screws",
+    "Install M.2 drive into slot"
   ],
-  "explanation": "Incompatibility in connector or form factor (e.g., trying to use M.2 in a 2.5 inch bay) will prevent installation entirely.",
+  "explanation": "Thermal paste is not used for drives. The other steps are common for accessing and replacing storage components.",
   "tags": [
-    "replace drive",
     "access panel",
-    "M.2"
+    "remove drive",
+    "install M.2"
   ],
   "status": "approved",
   "image": null,

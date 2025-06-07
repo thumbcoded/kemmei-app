@@ -6,19 +6,19 @@
   "domain_id": "1.0",
   "domain_title": "Mobile Devices",
   "subdomain_id": "1.1",
-  "difficulty": "hard",
+  "difficulty": "easy",
   "question_type": "multiple_choice",
-  "question_text": "A technician is replacing a 2.5\" spinning drive with an M.2 SSD in a laptop that supports both interfaces. To perform a real-time migration without imaging the system first, which setup is required?",
+  "question_text": "What is the main benefit of using cloning software when upgrading a laptop’s storage drive?",
   "answer_options": [
-    "Install the SSD, format it, and reinstall the OS using recovery media",
-    "Install both drives simultaneously and use cloning software to copy data",
-    "Remove the spinning drive and insert the SSD before booting into BIOS",
-    "Use an external enclosure to format and test the SSD first"
+    "It installs the operating system from scratch",
+    "It creates a backup of documents only",
+    "It duplicates the entire contents of the original drive",
+    "It checks hardware compatibility for new drives"
   ],
   "correct_answer": [
-    "Install both drives simultaneously and use cloning software to copy data"
+    "It duplicates the entire contents of the original drive"
   ],
-  "explanation": "Cloning in real-time requires both the source and target drives to be connected and operational during the process.",
+  "explanation": "Cloning software creates an exact copy of the existing drive, including OS, files, and configurations.",
   "tags": [
     "cloning software",
     "drive migration"

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Where are laptop wireless antennas typically located for best signal reception?",
+  "answer_options": [
+    "In the lower chassis near the battery",
+    "On the system board next to the RAM slots",
+    "Along the display bezel or inside the laptop lid",
+    "Behind the keyboard under the touchpad"
+  ],
+  "correct_answer": [
+    "Along the display bezel or inside the laptop lid"
+  ],
+  "explanation": "To maximize signal strength, antennas are often routed through the display bezel where elevation is best.",
+  "tags": [
+    "wireless antenna",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

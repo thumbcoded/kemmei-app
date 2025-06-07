@@ -2,39 +2,39 @@
   "default": {
     "cardsPerConcept": 8,
     "difficulty": {
-      "easy": 60,
-      "medium": 30,
-      "hard": 10
+      "easy": 33,
+      "medium": 33,
+      "hard": 33
     },
     "types": {
-      "multiple_choice": 60,
-      "select_multiple": 25,
+      "multiple_choice": 70,
+      "select_multiple": 15,
       "select_all": 15
     }
   },
   "220-1201:1.0:1.2": {
-    "cardsPerConcept": 3,
+    "cardsPerConcept": 8,
     "difficulty": {
-      "easy": 50,
-      "medium": 30,
-      "hard": 20
+      "easy": 33,
+      "medium": 33,
+      "hard": 33
     },
     "types": {
-      "multiple_choice": 50,
-      "select_multiple": 25,
-      "select_all": 25
+      "multiple_choice": 70,
+      "select_multiple": 15,
+      "select_all": 15
     }
   },
   "220-1201:1.0:1.1": {
     "cardsPerConcept": 8,
     "difficulty": {
-      "easy": 60,
-      "medium": 30,
-      "hard": 10
+      "easy": 33,
+      "medium": 33,
+      "hard": 33
     },
     "types": {
-      "multiple_choice": 60,
-      "select_multiple": 25,
+      "multiple_choice": 70,
+      "select_multiple": 15,
       "select_all": 15
     }
   }

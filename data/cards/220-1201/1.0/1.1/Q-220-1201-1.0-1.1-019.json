@@ -8,19 +8,22 @@
   "subdomain_id": "1.1",
   "difficulty": "hard",
   "question_type": "select_multiple",
-  "question_text": "Select two challenges related to laptop battery form factors.",
+  "question_text": "You are designing a thin ultralight laptop and choosing between Li-ion and LiPo batteries. Select two reasons you might prefer LiPo.",
   "answer_options": [
-    "Most laptops share a standardized battery shape",
-    "Even minor physical differences can cause fit issues",
-    "Batteries can only be installed by certified technicians",
-    "Form factor variations impact replacement part availability",
-    "All batteries are designed to match USB-C port orientation"
+    "Higher energy density per cell",
+    "Greater structural rigidity",
+    "Flexible battery shapes for compact designs",
+    "Lighter weight per unit",
+    "Built-in memory effect protection circuit"
   ],
   "correct_answer": [
-    "Even minor physical differences can cause fit issues",
-    "Form factor variations impact replacement part availability"
+    "Flexible battery shapes for compact designs",
+    "Lighter weight per unit"
   ],
+  "explanation": "LiPo batteries are preferred in compact designs because they offer flexibility in shape and are lighter than Li-ion cells.",
   "tags": [
+    "LiPo",
+    "lithium polymer",
     "battery form factor"
   ],
   "status": "approved",
