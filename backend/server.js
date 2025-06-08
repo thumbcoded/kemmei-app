@@ -23,6 +23,8 @@ mongoose.connect("mongodb://localhost:27017/kemmei")
 const Card = require("./models/card");
 const domainMapPath = path.join(__dirname, "..", "data", "domainmap.json");
 
+const User = require("./models/user");
+
 console.log("📁 domainMapPath resolved to:", domainMapPath);
 try {
   fs.accessSync(domainMapPath, fs.constants.R_OK);
@@ -31,6 +33,62 @@ try {
   console.error("❌ domainmap.json is missing or unreadable:", err);
   process.exit(1); // crash hard so we know
 }
+
+// ==============================
+// USER ROUTES
+// ==============================
+
+// Create a new user
+app.post("/api/users", async (req, res) => {
+  try {
+    const { _id, email, role } = req.body;
+    if (!_id || !email) {
+      return res.status(400).json({ error: "Missing _id or email" });
+    }
+
+    const user = new User({ _id, email, role: role || "student" });
+    await user.save();
+    res.status(201).json({ success: true, user });
+  } catch (err) {
+    console.error("❌ Failed to create user:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// Fetch user by ID
+app.get("/api/users/:id", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) return res.status(404).json({ error: "User not found" });
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch user" });
+  }
+});
+
+// Add test progress for a specific subdomain
+app.put("/api/users/:id/progress", async (req, res) => {
+  try {
+    const { subdomainKey, attempt } = req.body;
+    if (!subdomainKey || !attempt) {
+      return res.status(400).json({ error: "Missing subdomainKey or attempt" });
+    }
+
+    const user = await User.findById(req.params.id);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    const attempts = user.progress.get(subdomainKey) || [];
+    attempts.push(attempt);
+    user.progress.set(subdomainKey, attempts);
+
+    await user.save();
+    res.json({ success: true, user });
+  } catch (err) {
+    console.error("❌ Failed to update progress:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 
 // ==============================
 // TARGETMAP ROUTES

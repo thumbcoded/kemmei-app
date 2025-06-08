@@ -22,6 +22,8 @@ body.flashcards-page {
   margin-bottom: 2rem;
   flex-wrap: wrap;
   color: white;
+  position: relative;
+  padding-bottom: 50px; /* Make room for the button */
 }
 
 .flashcards-header.locked {
@@ -36,6 +38,21 @@ body.flashcards-page {
   font-size: 1rem;
   cursor: pointer;
   color: white;
+}
+
+/* 🆕 Style abort button when inside header */
+.flashcards-header #abortBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  min-width: 80px;
+}
+
+/* Reduce header margin when session is active */
+.flashcards-header.dimmed {
+  margin-bottom: 1rem; /* Reduced from 2rem */
 }
 
 /* -------- Session Controls -------- */

@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
 let domainMaps = {};
 let subdomainMaps = {};
@@ -202,11 +200,18 @@ subSelect.disabled = !(
     cardCountDisplay.style.display = "none"; 
 
     startBtn.classList.add("hidden");
+    
+    // 🆕 Move abort button into header FIRST, then show it
+    const headerInner = document.querySelector(".header-inner") || headerBar;
+    headerInner.appendChild(abortBtn);
     abortBtn.classList.remove("hidden");
+    
     exitBtn.classList.add("hidden");
     headerBar.classList.add("dimmed");
     document.getElementById("filterWrapper").classList.add("disabled");
 
+    // Hide Shuffle toggle
+    randomToggle.parentElement.style.display = "none";
 
     flashcardBox.classList.remove("hidden");
     cardMeta.classList.remove("hidden");
@@ -371,11 +376,22 @@ function loadCard() {
 
   startBtn.addEventListener("click", startSession);
  abortBtn.addEventListener("click", () => {
+  // 🆕 Hide button immediately, then redirect
+  abortBtn.classList.add("hidden");
+  
   document.getElementById("filterWrapper").classList.remove("disabled");
+  randomToggle.parentElement.style.display = "";
+  
+  // Small delay to ensure clean transition
+  setTimeout(() => {
+    window.location.href = "flashcards.html";
+  }, 50);
+});
+exitBtn.addEventListener("click", () => {
+  // Show Shuffle toggle again
+  randomToggle.parentElement.style.display = "";
   window.location.href = "flashcards.html";
 });
-
-  exitBtn.addEventListener("click", () => window.location.href = "flashcards.html");
 
   checkBtn.addEventListener("click", checkAnswer);
   nextBtn.addEventListener("click", nextCard);
