@@ -9,14 +9,6 @@
 </head>
 <body class="dashboard-page">
 
-  <!-- Floating kanji -->
-  <span class="kanji-scatter" style="top:5%; left:10%;">賢明</span>
-  <span class="kanji-scatter" style="top:20%; left:70%;">懸命</span>
-  <span class="kanji-scatter" style="top:50%; left:30%;">懸命</span>
-  <span class="kanji-scatter" style="top:80%; left:50%;">賢明</span>
-  <span class="kanji-scatter" style="top:65%; left:15%;">懸命</span>
-  <span class="kanji-scatter" style="top:35%; left:85%;">賢明</span>
-
   <!-- Dashboard box -->
   <div class="dashboard">
     <h2 id="greeting">Hello 👋</h2>
@@ -33,5 +25,40 @@
     </div>
   </div>
 
+  <script>
+  const kanjiWords = ["賢明", "懸命"];
+  const kanjiContainer = document.body;
+
+  function createKanji() {
+    const kanji = document.createElement("span");
+    kanji.className = "kanji-scatter";
+    kanji.textContent = kanjiWords[Math.floor(Math.random() * kanjiWords.length)];
+    kanji.style.top = `${Math.random() * 100}%`;
+    kanji.style.left = `${Math.random() * 100}%`;
+
+    // Generate random values for movement directions
+    kanji.style.setProperty("--random-x1", Math.random());
+    kanji.style.setProperty("--random-y1", Math.random());
+    kanji.style.setProperty("--random-x2", Math.random());
+    kanji.style.setProperty("--random-y2", Math.random());
+    kanji.style.setProperty("--random-x3", Math.random());
+    kanji.style.setProperty("--random-y3", Math.random());
+    kanji.style.setProperty("--random-x4", Math.random());
+    kanji.style.setProperty("--random-y4", Math.random());
+
+    kanji.style.animation = `float ${30 + Math.random() * 30}s linear infinite`;
+    kanjiContainer.appendChild(kanji);
+
+    kanji.addEventListener("animationend", () => {
+      kanji.remove();
+      createKanji(); // Replace the kanji after it finishes floating
+    });
+  }
+
+  // Ensure 5-7 kanji are always floating
+  for (let i = 0; i < 7; i++) {
+    createKanji();
+  }
+  </script>
 </body>
 </html>
