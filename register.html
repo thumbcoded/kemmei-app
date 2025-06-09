@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kemmei — Register</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css"> <!-- Use the same CSS as index -->
+  <script defer src="js/register.js"></script>
+</head>
+<body class="index-page"> <!-- Use the same class as index -->
+
+  <!-- Floating Kanji -->
+  <span class="kanji-scatter" style="top:10%; left:5%;">賢明</span>
+  <span class="kanji-scatter" style="top:35%; left:60%;">懸命</span>
+  <span class="kanji-scatter" style="top:70%; left:30%;">賢明</span>
+
+  <!-- Registration Container -->
+  <div class="index-container"> <!-- Use the same container class -->
+    <h2>Create an Account</h2>
+    <p>Fill in the details below:</p>
+    
+    <input type="text" id="username-input" placeholder="Username">
+    <input type="email" id="email-input" placeholder="Email">
+    <input type="password" id="password-input" placeholder="Password">
+    
+    <button id="register-btn" class="btn btn-primary">Register</button>
+    
+    <p id="register-error" class="login-error hidden">Please fill in all fields.</p> <!-- Use the same error class -->
+
+    <!-- Add link back to login page -->
+    <p class="register-link">
+      Already have an account? <a href="index.html" style="text-decoration: underline; color: blue;">Log in here</a>
+    </p>
+  </div>
+
+</body>
+</html>

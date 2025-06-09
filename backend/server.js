@@ -4,6 +4,7 @@ const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const bcrypt = require("bcrypt");
 
 const app = express();
 const PORT = 3000;
@@ -89,6 +90,61 @@ app.put("/api/users/:id/progress", async (req, res) => {
   }
 });
 
+app.post("/api/users/register", async (req, res) => {
+  try {
+    const { username, email, password } = req.body;
+
+    if (!username || !email || !password) {
+      return res.status(400).json({ error: "All fields are required." });
+    }
+
+    const existingUser = await User.findById(username);
+    if (existingUser) {
+      return res.status(400).json({ error: "Username already exists." });
+    }
+
+    const passwordHash = await bcrypt.hash(password, 10);
+    const user = new User({ _id: username, email, passwordHash });
+    await user.save();
+
+    res.status(201).json({ success: true, message: "User registered successfully." });
+  } catch (err) {
+    console.error("Registration error:", err);
+    res.status(500).json({ error: "Failed to register user." });
+  }
+});
+
+app.post("/api/auth/login", async (req, res) => {
+  try {
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+      return res.status(400).json({ error: "Username and password are required." });
+    }
+
+    const user = await User.findById(username);
+    if (!user) {
+      return res.status(401).json({ error: "Invalid credentials." });
+    }
+
+    const isValid = await bcrypt.compare(password, user.passwordHash);
+    if (!isValid) {
+      return res.status(401).json({ error: "Invalid credentials." });
+    }
+
+    res.json({
+      success: true,
+      user: {
+        _id: user._id,
+        email: user.email,
+        role: user.role
+      }
+    });
+  } catch (err) {
+    console.error("Login error:", err);
+    res.status(500).json({ error: "Login failed." });
+  }
+});
 
 // ==============================
 // TARGETMAP ROUTES

@@ -4,6 +4,11 @@ $all = Get-ChildItem -Filter *.json | ForEach-Object { Get-Content $_ -Raw }
 $combined = "[`r`n" + ($all -join ",`r`n") + "`r`n]"
 Set-Content -Path merged_cards.json -Value $combined
 
+MONGO LIST USERS
+db.users.find().pretty()
+DELETE USERS
+db.users.deleteMany({})
+
 GIT
 
 RETURN TO LAST COMMIT - HARD

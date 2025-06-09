@@ -1,24 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const username = localStorage.getItem("username");
-  const greeting = document.getElementById("greeting");
-  const logoutBtn = document.getElementById("logout-btn");
-  const todayDate = document.getElementById("today-date");
+  const userId = localStorage.getItem("userId");
+  const email = localStorage.getItem("email");
+  const role = localStorage.getItem("role");
 
-  // Redirect if not logged in
-  if (!username) {
+  if (!userId || !email || !role) {
+    localStorage.clear();
     window.location.href = "index.html";
+    return;
   }
 
-  greeting.textContent = `Hello, ${username} 👋`;
+  const greeting = document.getElementById("greeting");
+  greeting.textContent = `Hello, ${userId} 👋`;
 
-  const today = new Date();
-  todayDate.textContent = today.toLocaleDateString('en-GB', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  });
-
+  const logoutBtn = document.getElementById("logout-btn");
   logoutBtn.addEventListener("click", () => {
     localStorage.clear();
     window.location.href = "index.html";
