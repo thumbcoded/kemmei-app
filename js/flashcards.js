@@ -2,6 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
 let domainMaps = {};
 let subdomainMaps = {};
 
+async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false) {
+  const key = `${cert}:${domain}:${sub}`;
+  const userId = localStorage.getItem("userId");
+  if (!userId) return;
+
+  try {
+    await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ key, correct, viewedOnly })
+    });
+  } catch (err) {
+    console.error("❌ Failed to update user progress:", err);
+  }
+}
+
 async function loadDomainMap() {
   try {
     const res = await fetch("http://localhost:3000/api/domainmap");
@@ -228,6 +244,14 @@ function loadCard() {
   cardContainer.textContent = q.question;
   answerForm.innerHTML = "";
 
+  updateUserProgress(
+  document.getElementById("deck-select").value.trim(),
+  document.getElementById("domain-select").value.trim().split(" ")[0],
+  document.getElementById("subdomain-select")?.value.trim(),
+  false,
+  true // this is 'viewedOnly'
+);
+
   q.options.forEach(option => {
     const div = document.createElement("div");
     div.className = "option";
@@ -336,6 +360,13 @@ function loadCard() {
     nextBtn.disabled = false;
     nextBtn.classList.add("primary");
     nextTooltip.style.display = "none";
+
+    updateUserProgress(
+  document.getElementById("deck-select").value.trim(),
+  document.getElementById("domain-select").value.trim().split(" ")[0],
+  document.getElementById("subdomain-select")?.value.trim(),
+  isCorrect
+);
 
     updateMeta();
   }

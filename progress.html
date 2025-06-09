@@ -1,0 +1,70 @@
+<!-- progress.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kemmei — Progress</title>
+  <link rel="stylesheet" href="css/progress.css">
+</head>
+<body class="index-page">
+  <!-- Floating kanji -->
+  <script>
+    const kanjiWords = ["賢明", "懸命"];
+    const kanjiContainer = document.body;
+
+    function createKanji() {
+      const kanji = document.createElement("span");
+      kanji.className = "kanji-scatter";
+      kanji.textContent = kanjiWords[Math.floor(Math.random() * kanjiWords.length)];
+      kanji.style.top = `${Math.random() * 100}%`;
+      kanji.style.left = `${Math.random() * 100}%`;
+
+      kanji.style.setProperty("--random-x1", Math.random());
+      kanji.style.setProperty("--random-y1", Math.random());
+      kanji.style.setProperty("--random-x2", Math.random());
+      kanji.style.setProperty("--random-y2", Math.random());
+      kanji.style.setProperty("--random-x3", Math.random());
+      kanji.style.setProperty("--random-y3", Math.random());
+      kanji.style.setProperty("--random-x4", Math.random());
+      kanji.style.setProperty("--random-y4", Math.random());
+
+      kanji.style.animation = `float ${30 + Math.random() * 30}s linear infinite`;
+      kanjiContainer.appendChild(kanji);
+
+      kanji.addEventListener("animationend", () => {
+        kanji.remove();
+        createKanji();
+      });
+    }
+
+    for (let i = 0; i < 7; i++) {
+      createKanji();
+    }
+  </script>
+
+  <!-- Main content container -->
+  <div class="index-container">
+    <!-- Title section (top) -->
+    <div class="progress-header">
+      <h2>📈 Your Flashcard Progress</h2>
+    </div>
+    
+    <!-- Content section (middle) -->
+    <div class="progress-content">
+      <div id="progressStats">
+        </div>
+    </div>
+    
+    <!-- Button section (bottom) -->
+<div class="progress-footer">
+  <div class="progress-buttons">
+    <button id="resetProgress">🗑️ Clear All Progress</button>
+    <a href="dashboard.html" id="backToDash">🏠 Back</a>
+  </div>
+</div>
+
+  </div>
+
+  <script src="js/progress.js"></script>
+</body>
+</html>

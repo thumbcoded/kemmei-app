@@ -146,6 +146,45 @@ app.post("/api/auth/login", async (req, res) => {
   }
 });
 
+// PATCH-based update to user progress (used by flashcards.js)
+app.patch("/api/user-progress/:userId", async (req, res) => {
+  const { key, correct, viewedOnly } = req.body;
+  if (!key) return res.status(400).json({ error: "Missing progress key" });
+
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    const entry = user.progress.get(key) || { total: 0, correct: 0, viewed: 0, lastSession: null };
+
+    if (viewedOnly) entry.viewed++;
+    else {
+      entry.total++;
+      if (correct) entry.correct++;
+    }
+
+    entry.lastSession = new Date();
+    user.progress.set(key, entry);
+    await user.save();
+
+    res.json({ success: true });
+  } catch (err) {
+    console.error("❌ Failed to update progress:", err);
+    res.status(500).json({ error: "Failed to update progress" });
+  }
+});
+
+app.get("/api/user-progress/:userId", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+    res.json(Object.fromEntries(user.progress.entries()));
+  } catch (err) {
+    res.status(500).json({ error: "Failed to load progress" });
+  }
+});
+
+
 // ==============================
 // TARGETMAP ROUTES
 // ==============================
