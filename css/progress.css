@@ -128,3 +128,95 @@ body.index-page {
 #backToDash:hover {
   background-color: #c7bed1;
 }
+
+.title-block {
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.title-block h3 {
+  margin-top: 0;
+}
+
+.domain-block {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.subdomain-block {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.difficulty-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.difficulty-list li {
+  margin-left: 1.5rem;
+}
+
+.title-block.collapsed .domain-list {
+  display: none;
+}
+
+.title-block h3 {
+  cursor: pointer;
+  user-select: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Smaller spacing + typography adjustments */
+.title-block {
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+}
+
+.title-block h3 {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.domain-block h4 {
+  font-size: 0.95rem;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.subdomain-block h5 {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+.difficulty-list li {
+  font-size: 0.85rem;
+  margin-left: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.title-block {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-content {
+  flex: 1;
+  padding: 0 1.5rem;
+  overflow-y: auto;
+  max-height: 70vh;
+}
