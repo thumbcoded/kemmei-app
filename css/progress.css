@@ -139,7 +139,9 @@ body.index-page {
 }
 
 .title-block h3 {
-  margin-top: 0;
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  cursor: pointer;
 }
 
 .domain-block {
@@ -147,29 +149,38 @@ body.index-page {
   margin-top: 1rem;
 }
 
-.subdomain-block {
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-  padding: 0.5rem 0;
+.subdomain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.subdomain-title {
+  margin: 0;
+  flex: 1;
+  flex-shrink: 0;
 }
 
 .difficulty-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-shrink: 0;
+  min-width: 200px;
 }
 
 .difficulty-list li {
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 0.1rem 0;
+  text-align: right;
+}
+
+.subdomain-block {
   margin-left: 1.5rem;
-}
-
-.title-block.collapsed .domain-list {
-  display: none;
-}
-
-.title-block h3 {
-  cursor: pointer;
-  user-select: none;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .hidden {
@@ -213,13 +224,6 @@ body.index-page {
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.progress-content {
-  flex: 1;
-  padding: 0 1.5rem;
-  overflow-y: auto;
-  max-height: 70vh;
 }
 
 .toast {

@@ -156,7 +156,6 @@ domainHeader.addEventListener("click", () => {
   subdomainWrapper.classList.toggle("hidden");
 });
 
-
       const subList = document.createElement("div");
       subList.className = "subdomain-list";
 
@@ -165,7 +164,14 @@ domainHeader.addEventListener("click", () => {
         const subTitle = subMap[subId];
         const subBlock = document.createElement("div");
         subBlock.className = "subdomain-block";
-        subBlock.innerHTML = `<h5>🔹 ${subId} ${subTitle}</h5>`;
+        
+        // Create header container for title and difficulty list
+        const subHeader = document.createElement("div");
+        subHeader.className = "subdomain-header";
+        
+        const subTitleElement = document.createElement("h5");
+        subTitleElement.textContent = `🔹 ${subId} ${subTitle}`;
+        subTitleElement.className = "subdomain-title";
 
         const diffList = document.createElement("ul");
         diffList.className = "difficulty-list";
@@ -189,7 +195,9 @@ domainHeader.addEventListener("click", () => {
           diffList.appendChild(li);
         }
 
-        subBlock.appendChild(diffList);
+        subHeader.appendChild(subTitleElement);
+        subHeader.appendChild(diffList);
+        subBlock.appendChild(subHeader);
         subdomainWrapper.appendChild(subBlock);
       }
 
