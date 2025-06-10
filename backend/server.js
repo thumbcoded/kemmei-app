@@ -184,6 +184,21 @@ app.get("/api/user-progress/:userId", async (req, res) => {
   }
 });
 
+// DELETE user progress for a specific user
+app.delete("/api/user-progress/:userId", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    user.progress = new Map(); // Clear all progress
+    await user.save();
+
+    res.sendStatus(204); // No content
+  } catch (err) {
+    console.error("❌ Failed to clear user progress:", err);
+    res.status(500).json({ error: "Failed to clear progress" });
+  }
+});
 
 // ==============================
 // TARGETMAP ROUTES

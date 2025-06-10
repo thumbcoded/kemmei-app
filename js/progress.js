@@ -4,6 +4,42 @@ document.addEventListener("DOMContentLoaded", async () => {
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
+  // Floating kanji words logic (copied from index.html)
+  const kanjiWords = ["賢明", "懸命"];
+  const kanjiContainer = document.body;
+
+  function createKanji() {
+    const kanji = document.createElement("span");
+    kanji.className = "kanji-scatter";
+    kanji.textContent = kanjiWords[Math.floor(Math.random() * kanjiWords.length)];
+    kanji.style.top = `${Math.random() * 100}%`;
+    kanji.style.left = `${Math.random() * 100}%`;
+
+    // Generate random values for movement directions
+    kanji.style.setProperty("--random-x1", Math.random());
+    kanji.style.setProperty("--random-y1", Math.random());
+    kanji.style.setProperty("--random-x2", Math.random());
+    kanji.style.setProperty("--random-y2", Math.random());
+    kanji.style.setProperty("--random-x3", Math.random());
+    kanji.style.setProperty("--random-y3", Math.random());
+    kanji.style.setProperty("--random-x4", Math.random());
+    kanji.style.setProperty("--random-y4", Math.random());
+
+    kanji.style.animation = `float ${30 + Math.random() * 30}s linear infinite`;
+    kanjiContainer.appendChild(kanji);
+
+    kanji.addEventListener("animationend", () => {
+      kanji.remove();
+      createKanji(); // Replace the kanji after it finishes floating
+    });
+  }
+
+  // Ensure 5-7 kanji are always floating
+  for (let i = 0; i < 7; i++) {
+    createKanji();
+  }
+
+  // Original progress.js logic
   try {
     const [progressRes, domainRes] = await Promise.all([
       fetch(`http://localhost:3000/api/user-progress/${userId}`),
@@ -19,8 +55,46 @@ document.addEventListener("DOMContentLoaded", async () => {
     statsDiv.textContent = "Error loading progress.";
   }
 
+  const confirmModal = document.getElementById("confirmModal");
+  const confirmYes = document.getElementById("confirmYes");
+  const confirmNo = document.getElementById("confirmNo");
+
   resetBtn.addEventListener("click", () => {
-    alert("🔒 Server-side reset not yet implemented. Ask admin to wipe manually.");
+    confirmModal.classList.remove("hidden");
+  });
+
+  confirmNo.addEventListener("click", () => {
+    confirmModal.classList.add("hidden");
+  });
+
+  confirmYes.addEventListener("click", async () => {
+    confirmModal.classList.add("hidden");
+
+    try {
+      const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+        method: "DELETE",
+      });
+
+      if (res.ok) {
+        const toast = document.getElementById("toast");
+        toast.textContent = "✔️ Your progress has been cleared.";
+        toast.classList.remove("hidden");
+        toast.classList.add("show");
+
+        setTimeout(() => {
+          toast.classList.remove("show");
+          setTimeout(() => {
+            toast.classList.add("hidden");
+            location.reload(); // after fade out
+          }, 400);
+        }, 2000);
+      } else {
+        alert("❌ Failed to clear progress.");
+      }
+    } catch (err) {
+      console.error("❌ Reset error:", err);
+      alert("❌ Network error.");
+    }
   });
 });
 
@@ -43,24 +117,24 @@ function renderProgressTree(userProgress, domainMap) {
 
   // Render everything regardless of progress
   for (const certId of Object.keys(certNames)) {
-const certBlock = document.createElement("div");
-certBlock.className = "title-block";
+    const certBlock = document.createElement("div");
+    certBlock.className = "title-block";
 
-const titleHeader = document.createElement("h3");
-titleHeader.innerHTML = `📘 ${certId}: ${certNames[certId]}`;
+    const titleHeader = document.createElement("h3");
+    titleHeader.innerHTML = `📘 ${certId}: ${certNames[certId]}`;
 
-const domainList = document.createElement("div");
-domainList.className = "domain-list hidden"; // collapsed initially
+    const domainList = document.createElement("div");
+    domainList.className = "domain-list hidden"; // collapsed initially
 
-titleHeader.addEventListener("click", () => {
-  const currentlyOpen = document.querySelector(".domain-list:not(.hidden)");
-  if (currentlyOpen && currentlyOpen !== domainList) {
-    currentlyOpen.classList.add("hidden");
-  }
-  domainList.classList.toggle("hidden");
-});
+    titleHeader.addEventListener("click", () => {
+      const currentlyOpen = document.querySelector(".domain-list:not(.hidden)");
+      if (currentlyOpen && currentlyOpen !== domainList) {
+        currentlyOpen.classList.add("hidden");
+      }
+      domainList.classList.toggle("hidden");
+    });
 
-certBlock.appendChild(titleHeader);
+    certBlock.appendChild(titleHeader);
 
     const domains = domainMaps[certId] || {};
     for (const domainId of Object.keys(domains)) {
@@ -69,16 +143,14 @@ certBlock.appendChild(titleHeader);
       domainBlock.className = "domain-block";
       domainBlock.innerHTML = `<h4>📂 ${domainId} ${domainTitle}</h4>`;
 
-// Create wrapper that holds all subdomain blocks
-const subdomainWrapper = document.createElement("div");
-subdomainWrapper.className = "subdomain-list hidden"; // initially hidden
+      const subdomainWrapper = document.createElement("div");
+      subdomainWrapper.className = "subdomain-list hidden"; // initially hidden
 
-// Make the <h4> clickable to toggle visibility
-const domainHeader = domainBlock.querySelector("h4");
-domainHeader.style.cursor = "pointer";
-domainHeader.addEventListener("click", () => {
-  subdomainWrapper.classList.toggle("hidden");
-});
+      const domainHeader = domainBlock.querySelector("h4");
+      domainHeader.style.cursor = "pointer";
+      domainHeader.addEventListener("click", () => {
+        subdomainWrapper.classList.toggle("hidden");
+      });
 
       const subList = document.createElement("div");
       subList.className = "subdomain-list";
