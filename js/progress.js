@@ -148,9 +148,14 @@ function renderProgressTree(userProgress, domainMap) {
 
       const domainHeader = domainBlock.querySelector("h4");
       domainHeader.style.cursor = "pointer";
-      domainHeader.addEventListener("click", () => {
-        subdomainWrapper.classList.toggle("hidden");
-      });
+domainHeader.addEventListener("click", () => {
+  const openDomains = domainList.querySelectorAll(".subdomain-list:not(.hidden)");
+  openDomains.forEach(el => {
+    if (el !== subdomainWrapper) el.classList.add("hidden");
+  });
+  subdomainWrapper.classList.toggle("hidden");
+});
+
 
       const subList = document.createElement("div");
       subList.className = "subdomain-list";

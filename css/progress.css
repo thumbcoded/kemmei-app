@@ -4,12 +4,13 @@ body.index-page {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   font-family: system-ui, sans-serif;
 }
 
 .index-container {
+  margin-top: 2rem;
   background: rgba(255, 255, 255, 0.95);
   padding: 0;
   border-radius: 16px;
@@ -53,9 +54,9 @@ body.index-page {
   background-color: #dc3545;
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -119,9 +120,9 @@ body.index-page {
 #backToDash {
   color: #007bff;
   text-decoration: none;
-  font-size: 1rem;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
   transition: background-color 0.2s ease;
 }
 
@@ -219,4 +220,157 @@ body.index-page {
   padding: 0 1.5rem;
   overflow-y: auto;
   max-height: 70vh;
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #28a745;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.hidden {
+  display: none;
+}
+
+.reset-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.modal-content {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+#confirmYes {
+  background: #dc3545;
+  color: white;
+}
+
+#confirmNo {
+  background: #ddd;
+}
+
+.reset-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.modal-content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.modal-buttons button {
+  font-size: 0.85rem;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+#confirmYes {
+  background-color: #dc3545;
+  color: white;
+}
+
+#confirmNo {
+  background-color: #eee;
+  color: #333;
+}
+
+#confirmYes:hover {
+  background-color: #c82333;
+}
+
+#confirmNo:hover {
+  background-color: #ddd;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#confirmYes {
+  background-color: #dc3545;
+  color: white;
+}
+
+#confirmNo {
+  background-color: #eee;
+  color: #333;
 }
