@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main purpose of a docking station when used with a laptop?",
+  "answer_options": [
+    "To encrypt the hard drive",
+    "To manage the operating system updates",
+    "To provide quick access to multiple peripherals",
+    "To extend battery life"
+  ],
+  "correct_answer": [
+    "To provide quick access to multiple peripherals"
+  ],
+  "explanation": "Docking stations make it easy to connect and disconnect from monitors, network, keyboard, and more, all at once.",
+  "tags": [
+    "docking station",
+    "laptop dock",
+    "interface expansion"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

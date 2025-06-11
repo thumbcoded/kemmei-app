@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following input devices may be integrated into modern laptops? (Select all that apply)",
+  "answer_options": [
+    "Trackpoint nub",
+    "Touchpad with gesture support",
+    "Resistive touchscreen",
+    "Game controller",
+    "Stylus digitizer"
+  ],
+  "correct_answer": [
+    "Trackpoint nub",
+    "Touchpad with gesture support",
+    "Stylus digitizer"
+  ],
+  "explanation": "Trackpoint nubs, gesture-capable touchpads, and stylus digitizers are common integrated input solutions. Resistive touchscreens are rare in laptops; game controllers are not integrated.",
+  "tags": [
+    "trackpad",
+    "touchpad",
+    "input device",
+    "stylus"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

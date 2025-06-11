@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are common mobile device features that rely on location services? (Select all that apply)",
+  "answer_options": [
+    "Turn-by-turn navigation",
+    "Weather apps showing local forecasts",
+    "Automatic time zone updates",
+    "Enabling Wi-Fi tethering"
+  ],
+  "correct_answer": [
+    "Turn-by-turn navigation",
+    "Weather apps showing local forecasts",
+    "Automatic time zone updates"
+  ],
+  "explanation": "Location services support navigation, local weather, and time zone updates. Tethering is unrelated to location data.",
+  "tags": [
+    "location services",
+    "navigation",
+    "weather",
+    "timezone"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

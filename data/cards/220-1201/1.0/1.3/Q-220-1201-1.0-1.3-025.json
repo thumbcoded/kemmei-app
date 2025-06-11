@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which mobile component plays a central role in determining whether hotspot or tethering is permitted on a device?",
+  "answer_options": [
+    "GPS module",
+    "Access point chip",
+    "SIM card or eSIM profile",
+    "Bluetooth antenna"
+  ],
+  "correct_answer": [
+    "SIM card or eSIM profile"
+  ],
+  "explanation": "The SIM or eSIM profile includes carrier-specific provisioning, which may allow or restrict hotspot and tethering features.",
+  "tags": [
+    "SIM",
+    "eSIM",
+    "hotspot",
+    "carrier control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

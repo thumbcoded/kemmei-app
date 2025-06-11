@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following devices typically include a built-in camera? (Select all that apply)",
+  "answer_options": [
+    "Smartphones",
+    "Tablets",
+    "Laptops",
+    "Routers",
+    "Desktop monitors with webcam housing"
+  ],
+  "correct_answer": [
+    "Smartphones",
+    "Tablets",
+    "Laptops",
+    "Desktop monitors with webcam housing"
+  ],
+  "explanation": "Mobile devices and modern monitors often include built-in cameras for communication and content creation.",
+  "tags": [
+    "webcam",
+    "built-in camera",
+    "camera"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

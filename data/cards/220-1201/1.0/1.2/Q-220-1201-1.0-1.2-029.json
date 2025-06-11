@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which factor most directly impacts performance when multiple users connect to a mobile hotspot?",
+  "answer_options": [
+    "Device screen resolution",
+    "Battery health",
+    "Mobile network bandwidth",
+    "Wi-Fi SSID name"
+  ],
+  "correct_answer": [
+    "Mobile network bandwidth"
+  ],
+  "explanation": "Mobile bandwidth limits are shared among all connected devices. Performance drops as more users consume data.",
+  "tags": [
+    "hotspot",
+    "internet sharing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

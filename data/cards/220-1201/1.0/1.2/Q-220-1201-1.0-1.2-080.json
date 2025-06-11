@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user connects a USB-based port replicator but cannot use dual external monitors. What is the most likely reason?",
+  "answer_options": [
+    "The port replicator is not plugged into power",
+    "Port replicators typically do not support video output or have limited video support",
+    "The laptop's battery is too low",
+    "The external monitors are HDMI only"
+  ],
+  "correct_answer": [
+    "Port replicators typically do not support video output or have limited video support"
+  ],
+  "explanation": "Port replicators usually expand USB and network connectivity, but may not support full video output like docking stations do.",
+  "tags": [
+    "port replicator",
+    "USB hub",
+    "interface expansion"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which challenges or limitations are commonly associated with Bluetooth technology? (Select all that apply)",
+  "answer_options": [
+    "Interference with other 2.4 GHz devices",
+    "Battery drain during constant use",
+    "Limited pairing range",
+    "NFC dependency for all Bluetooth connections",
+    "One-to-one device limitation"
+  ],
+  "correct_answer": [
+    "Interference with other 2.4 GHz devices",
+    "Battery drain during constant use",
+    "Limited pairing range"
+  ],
+  "explanation": "Bluetooth shares the 2.4 GHz band, can drain batteries in use, and generally supports short-range pairing. It does not require NFC, and newer versions can support multiple devices.",
+  "tags": [
+    "Bluetooth",
+    "wireless",
+    "wireless headset"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

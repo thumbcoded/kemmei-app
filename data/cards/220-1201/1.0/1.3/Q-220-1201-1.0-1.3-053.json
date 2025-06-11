@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two technologies that can be combined to provide more accurate hybrid location services.",
+  "answer_options": [
+    "Cell tower triangulation",
+    "802.11 Wi-Fi access point mapping",
+    "Infrared line-of-sight",
+    "MicroSD card metadata"
+  ],
+  "correct_answer": [
+    "Cell tower triangulation",
+    "802.11 Wi-Fi access point mapping"
+  ],
+  "explanation": "Hybrid location services combine GPS, Wi-Fi positioning, and cellular tower data to improve accuracy and availability.",
+  "tags": [
+    "location services",
+    "hybrid",
+    "Wi-Fi",
+    "cellular triangulation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

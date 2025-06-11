@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which features are commonly associated with modern USB-C connectors? (Select all that apply)",
+  "answer_options": [
+    "Reversible orientation",
+    "Support for video output",
+    "Limited to USB 2.0 speeds",
+    "Used only on Apple devices",
+    "Charging and data transfer"
+  ],
+  "correct_answer": [
+    "Reversible orientation",
+    "Support for video output",
+    "Charging and data transfer"
+  ],
+  "explanation": "USB-C is not limited to USB 2.0 and is used across many manufacturers, not just Apple.",
+  "tags": [
+    "USB-C",
+    "charging",
+    "data transfer",
+    "connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

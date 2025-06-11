@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are input devices commonly found on laptops? (Select all that apply)",
+  "answer_options": [
+    "Trackpad",
+    "Touchscreen",
+    "Microphone",
+    "Speaker"
+  ],
+  "correct_answer": [
+    "Trackpad",
+    "Touchscreen",
+    "Microphone"
+  ],
+  "explanation": "Trackpads, touchscreens, and microphones are input devices. Speakers are output devices.",
+  "tags": [
+    "input device",
+    "trackpad",
+    "touchscreen",
+    "microphone"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

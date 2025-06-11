@@ -1,0 +1,710 @@
+0:02
+with every person you know and everyone
+0:04
+in your organization walking around with
+0:06
+a phone a tablet or even both of those
+0:09
+we need to have different ways to be
+0:10
+able to connect these devices back to
+0:13
+the computers and networks that we
+0:15
+normally use and of course it seems that
+0:17
+each device has a different way of
+0:19
+connecting and communicating back to
+0:21
+your computer in this video we'll look
+0:23
+at wired connectivity Wireless
+0:25
+connectivity and all of the different
+0:27
+standards and options that you might
+0:28
+have available on today's mobile devices
+0:31
+you'll find that these connections that
+0:33
+we use for these mobile devices are used
+0:35
+for more than simply charging the
+0:37
+battery we often might use them for
+0:39
+connectivity and synchronization of the
+0:41
+data on these devices you might want to
+0:43
+back up what's on that device or use it
+0:46
+as a way to identify that the device is
+0:48
+really
+0:49
+yours one of the most common ways to
+0:51
+connect these mobile devices is using
+0:54
+USB or the universal serial bus these
+0:57
+are standard connections that we've used
+0:59
+for years and years and of course the
+1:01
+connectors themselves have changed a bit
+1:03
+as time has gone on you'll find that
+1:06
+there are different types of connections
+1:08
+for USB for older devices you may find
+1:10
+the mini and micro USB plugs are very
+1:13
+popular these were certainly used on
+1:15
+older mobile devices but you may find
+1:18
+even devices in use today are still
+1:20
+using these very specific USB types you
+1:23
+may find of course that our mobile
+1:24
+devices are getting smaller and smaller
+1:27
+but these interfaces are made for a much
+1:29
+larger style of interface and although
+1:32
+many of our modern devices have migrated
+1:34
+away from the micro b plug or the mini B
+1:37
+plug you may still use the USB type a
+1:40
+connection to plug into your Computing
+1:42
+device like your desktop computer or
+1:44
+your laptop computer more modern devices
+1:47
+are still using the universal serial bus
+1:50
+but they're using a newer version
+1:51
+referred to as
+1:53
+USBC this describes this physical
+1:55
+connection of a USBC plug inside of this
+1:58
+connection are 24 pins and they have the
+2:02
+same style of connection regardless of
+2:04
+how you might plug it in this can easily
+2:06
+replace the older USB 2.0 connection all
+2:10
+the way up to the latest standard of USB
+2:13
+and we can even put different types of
+2:15
+signals on this wire even though they
+2:17
+are all using the same type of connector
+2:19
+as its physical interface for example
+2:22
+you might find that this USB connection
+2:24
+is used for more than just serial
+2:26
+connectivity you could see display port
+2:28
+HDMI and Thunderbolt all can use that
+2:31
+single connector to be able to transmit
+2:33
+video data and other information USBC
+2:37
+was designed to be a connector that's
+2:39
+easy to use because you can plug it in
+2:41
+in any orientation and it also supports
+2:44
+a higher speed than the older USB style
+2:46
+connectors that we used to
+2:48
+use if you're using an older mobile
+2:50
+device used by Apple you may not be
+2:52
+using a USB connection you may instead
+2:55
+be using a proprietary connection from
+2:57
+Apple known as a lightning connector
+3:00
+this lightning connector has eight pins
+3:02
+and it's commonly used for older iPhone
+3:04
+and iPad devices lightning was
+3:07
+introduced to resolve a number of
+3:08
+problems with the older USB connection
+3:11
+standard for example it supported a
+3:13
+higher power output so it could charge
+3:15
+your phones and your tablets a little
+3:16
+bit faster it can be inserted either way
+3:19
+so you don't have to keep moving the
+3:20
+connector back and forth and up and down
+3:22
+to try to find the right connection and
+3:24
+this relatively simple design made it
+3:26
+easy to be able to use this across many
+3:28
+different devices the challenge of
+3:30
+course is that you might be using or
+3:32
+supporting a number of different mobile
+3:34
+devices from a number of different
+3:36
+manufacturers so you may be walking
+3:38
+around with a lot of different connector
+3:39
+types and cables inside of your bag just
+3:42
+to be able to support all of these
+3:44
+different components this might change
+3:46
+going forward as we move towards a
+3:48
+single USBC connector type instead of
+3:50
+using these many and very different
+3:54
+connections if you want to communicate
+3:56
+wirelessly there are also a number of
+3:58
+options available on your mobile device
+3:59
+one of those options is NFC or near
+4:02
+field communication NFC is commonly used
+4:05
+to transmit a little bit of data over a
+4:08
+very short connection NFC is often built
+4:10
+into your phone your tablet and your
+4:12
+Smartwatch and it's often used as
+4:14
+payment systems for paying something at
+4:16
+a point of sale terminal or you might
+4:18
+use it as identification to be able to
+4:20
+gain access through a particular door or
+4:23
+to be able to transfer information from
+4:25
+one phone to another some organizations
+4:28
+might have a sensor on on the wall and
+4:30
+they use NFC in a watch or phone to be
+4:33
+able to act as an access control so
+4:35
+instead of walking around with an ID
+4:37
+card or a separate access card you could
+4:39
+simply use the phone that you're
+4:41
+carrying
+4:42
+anyway if you're using wireless headsets
+4:45
+or wireless keyboards and mice then
+4:47
+you're probably using Bluetooth
+4:49
+Bluetooth allows us to connect devices
+4:51
+over a high-speed Network at relatively
+4:53
+short distances often we refer to this
+4:56
+as a personal area network or a pan this
+4:59
+is is commonly used for devices that we
+5:01
+would personally use on that mobile
+5:03
+device things like tethering your
+5:05
+smartphone to be able to connect
+5:06
+wirelessly or using it to connect
+5:08
+wireless headphones or headsets all of
+5:11
+these types of Bluetooth Communications
+5:13
+are designed for the individual although
+5:15
+it is possible to connect multiple
+5:17
+phones and devices together using this
+5:19
+Bluetooth networking
+5:21
+technology another useful mobile
+5:23
+connection type is to use your mobile
+5:25
+phone as an internet router if we have
+5:28
+many people connecting to our mobile
+5:30
+phone for internet access we refer to
+5:32
+that as a hotspot if we simply have one
+5:35
+device that is connecting to this mobile
+5:37
+phone and that is the only device that's
+5:38
+able to use that phone we often refer to
+5:41
+that as tethering this is functionality
+5:43
+that's commonly associated with the
+5:45
+software in your phone and the
+5:47
+capabilities from your phone provider so
+5:49
+you may want to contact your mobile
+5:51
+provider for your telephone and find out
+5:53
+if a hotspot functionality is something
+5:55
+that you can use on your mobile device
+
+0:02
+many of us have used our fingers to be
+0:04
+able to manipulate the screen of our
+0:06
+mobile phones or our tablets but if you
+0:09
+need a more precise input method you
+0:11
+might want to use a stylus this digital
+0:14
+Stylus is like using a pencil or a pen
+0:17
+and you're able to get very granular and
+0:19
+fine control of that information on the
+0:21
+screen the stylus is usually connecting
+0:24
+to the device over Bluetooth so it's
+0:26
+wireless and you're often able to use
+0:28
+pressure sensitivity and the but buttons
+0:30
+on the device to enable different
+0:32
+functions you do have to make sure that
+0:34
+the stylus you're using is compatible
+0:36
+with the device you're connecting to so
+0:38
+if you're using an Apple laptop you have
+0:40
+to make sure that you're using the apple
+0:42
+pencil or something that is compatible
+0:44
+with that particular tablet this pairing
+0:47
+usually creates in the best possible
+0:49
+connection and enables the most number
+0:51
+of features for the person using that
+0:53
+tablet instead of holding your mobile
+0:55
+phone to your ear to be able to
+0:57
+communicate many people prefer to use a
+0:59
+handsfree headset this headset allows
+1:01
+you to hear and to talk into a
+1:03
+microphone so it makes it very easy to
+1:05
+have these phone conversations you might
+1:08
+use a wired headset many devices use USB
+1:11
+as a common headset type or you may use
+1:13
+the older analog connection over a trrs
+1:17
+connector this is a tip ring ring sleeve
+1:20
+connector it's commonly a 32 mm style
+1:23
+connector you might also hear this
+1:25
+referred to as an analog audio jack if
+1:28
+you're using an older model model of an
+1:30
+Apple iPhone instead of using USB you
+1:32
+may need to use lightning and there are
+1:34
+wired headsets available that have
+1:36
+lightning connectors at the end and of
+1:39
+course there are many options for
+1:40
+wireless headsets and most of those
+1:42
+headsets connect to your mobile device
+1:44
+using Bluetooth here's a closeup of that
+1:47
+analog audio jack or
+1:49
+trrs the trrs stands for tip ring ring
+1:53
+sleeve where the tip is the connection
+1:55
+that's on the tip of that connector and
+1:58
+the sleeve is the connector closest to
+2:00
+the back sleeve of the connector and
+2:02
+with a trrs there are two connectors in
+2:05
+the middle and these are both the ring
+2:07
+connectors wireless headsets of course
+2:09
+do not need any type of wires so you
+2:12
+might have something very simple that is
+2:13
+battery powered and connected to your
+2:15
+mobile device over Bluetooth if you use
+2:17
+that wireless headset all day you may
+2:19
+find that you run out of battery and you
+2:21
+might have to shift over to the wired
+2:23
+version of that
+2:25
+headset if you like to listen to music
+2:27
+on your mobile phone you may find that
+2:29
+the speakers on the phone don't provide
+2:31
+much Fidelity if that's the case for you
+2:33
+you might want to use wireless speakers
+2:35
+which provide a better sound over this
+2:37
+battery powered and portable speaker
+2:39
+system these are usually connected to
+2:41
+your mobile device wirelessly using
+2:43
+Bluetooth which allows you to take this
+2:45
+sound and move it anywhere you would
+2:47
+like within the range of that mobile
+2:49
+phone many of our phones and tablets
+2:52
+already include a camera or webcam built
+2:55
+into the device itself and many of our
+2:57
+laptops also provide that functionality
+3:00
+if you have a desktop or laptop that
+3:02
+does not have a camera or a webcam there
+3:04
+are options to include external
+3:06
+thirdparty cameras into that device
+3:09
+those will often connect to those
+3:10
+devices over a USB connection once you
+3:13
+connect the camera or enable it on your
+3:15
+mobile device you're now able to use it
+3:17
+in the applications so this might be for
+3:19
+simply capturing audio and video or you
+3:22
+might use it with an application to
+3:24
+provide video and audio
+3:26
+conferencing if you work in an office
+3:28
+and you like to take your lap laptop
+3:30
+home at night you may find yourself
+3:31
+unplugging all of the wires every day to
+3:34
+be able to take the laptop home and then
+3:36
+when you come back to the office you
+3:37
+have to plug all of those wires back in
+3:39
+again these would be wires for your
+3:41
+Video Connection your mouse your
+3:43
+keyboard perhaps your network link and
+3:45
+anything else that needs to be
+3:47
+physically connected there are easier
+3:50
+ways to perform that function using a
+3:52
+docking station docking stations are a
+3:54
+quick way to connect and disconnect the
+3:56
+laptop without having to touch any of
+3:58
+the cables that might on that desk they
+4:01
+also often provide additional interface
+4:03
+options and you might even be able to
+4:05
+plug in full-size interface Cards into
+4:08
+the docking station here's a docking
+4:10
+station that's in our office you can see
+4:12
+that we have a monitor and a keyboard
+4:14
+and a mouse probably have a network
+4:16
+connection on the back of this docking
+4:18
+station and we can simply bring our
+4:19
+laptop in place it on top of the docking
+4:21
+station and immediately start working at
+4:24
+the end of the day when we're ready to
+4:25
+leave we simply disconnect it from the
+4:27
+docking station and leave all of the
+4:29
+wires in place if you don't need support
+4:32
+for additional adapter cards and you
+4:34
+want something that's a bit more
+4:35
+portable you might want to use a port
+4:38
+replicator these are very similar to a
+4:40
+docking station but instead of getting a
+4:42
+very specific docking station for a
+4:44
+specific laptop these Port replicators
+4:47
+are commonly connecting over a USB
+4:49
+connection making it something that you
+4:51
+can use on almost any laptop or desktop
+4:53
+computer these are also relatively
+4:55
+portable because you don't have to worry
+4:57
+about them being very large and
+4:59
+supporting those adapter cards this port
+5:01
+replicator includes a lot of different
+5:03
+connectors including USB connections and
+5:05
+audio this one also supports micro SD
+5:07
+and SD card reader built into the port
+5:10
+replicator itself and on the other side
+5:12
+we have additional USB and video output
+5:15
+options as well if you're using a laptop
+5:18
+in a confined space you may find it
+5:20
+difficult to use an external Mouse for
+5:22
+that reason many Mouse functions are
+5:24
+built into today's laptops using a
+5:27
+trackpad the trackpad is usually large
+5:29
+area on the laptop that allows you to
+5:31
+use your fingers to be able to move the
+5:33
+mouse around without having an external
+5:35
+mouse that takes up even more room if
+5:37
+you like using the trackpad on your
+5:39
+laptop you can also use a trackpad on
+5:41
+your desktop with an external trackpad
+5:44
+these are usually battery powered and
+5:45
+they connect to your computer over a
+5:47
+Bluetooth connection unlike a
+5:49
+traditional Mouse a trackpad can provide
+5:51
+you with other features that perhaps a
+5:54
+mouse might not be able to do very
+5:55
+easily for example you can use different
+5:58
+finger options on the TR trackpad to
+6:01
+expand or contract different things on
+6:02
+the screen which would be relatively
+6:05
+difficult to do using a traditional
+6:07
+Mouse many laptops will allow you to
+6:10
+disable that trackpad using a function
+6:12
+key on this laptop you can use a
+6:14
+function F10 that you can see here with
+6:17
+the blue icon and that will enable or
+6:19
+disable the use of that trackpad that
+6:22
+way you can continue to use the keyboard
+6:24
+and know that you're not accidentally
+6:26
+going to click anything on the screen
+6:27
+from the trackpad
+6:29
+if you like using a stylus on your
+6:31
+tablet then you might want to use that
+6:33
+same technology on your laptop or
+6:35
+desktop computer and you can do that by
+6:37
+using a drawing pad this is an external
+6:40
+digitizer that has its own stylus to
+6:43
+give you the same precise input on a
+6:45
+desktop or laptop computer that you
+6:47
+might have on that tablet device this is
+6:50
+usually a third-party device that
+6:51
+connects to your computer over Bluetooth
+6:54
+or USB connection and allows for very
+6:56
+precise input so if you're someone who
+6:59
+enjoys using a stylus or you need it to
+7:01
+provide some type of artistic input this
+7:03
+might be a good solution for your laptop
+7:05
+or your desktop computer
+

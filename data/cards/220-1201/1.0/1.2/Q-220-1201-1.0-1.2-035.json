@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is device compatibility important when selecting a stylus for a tablet?",
+  "answer_options": [
+    "Styluses only work on Android devices",
+    "Styluses change color depending on screen",
+    "Incompatible styluses may lack full feature support",
+    "All styluses are universal and interchangeable"
+  ],
+  "correct_answer": [
+    "Incompatible styluses may lack full feature support"
+  ],
+  "explanation": "Styluses often rely on manufacturer-specific tech; incompatible models may lack pressure sensitivity or button functions.",
+  "tags": [
+    "stylus",
+    "digital pen",
+    "compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

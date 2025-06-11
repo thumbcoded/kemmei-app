@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following factors could limit the use of a webcam for video conferencing? (Select all that apply)",
+  "answer_options": [
+    "Insufficient system RAM",
+    "Missing webcam drivers",
+    "Low webcam resolution",
+    "Lack of a microphone",
+    "VPN encryption interfering with webcam power"
+  ],
+  "correct_answer": [
+    "Insufficient system RAM",
+    "Missing webcam drivers",
+    "Low webcam resolution",
+    "Lack of a microphone"
+  ],
+  "explanation": "Performance, driver support, audio input, and image quality all affect conferencing. VPNs don’t interfere with camera hardware.",
+  "tags": [
+    "webcam",
+    "camera",
+    "USB camera"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which technical factors may affect the performance or compatibility of headsets across devices? (Select all that apply)",
+  "answer_options": [
+    "Bluetooth codec support",
+    "Number of TRRS rings",
+    "USB-C audio driver compatibility",
+    "Screen resolution of the device",
+    "Connector pin alignment"
+  ],
+  "correct_answer": [
+    "Bluetooth codec support",
+    "Number of TRRS rings",
+    "USB-C audio driver compatibility",
+    "Connector pin alignment"
+  ],
+  "explanation": "Bluetooth codec mismatches, analog pin differences (TRRS), USB audio drivers, and misaligned jacks all affect headset performance — screen resolution does not.",
+  "tags": [
+    "Bluetooth headset",
+    "TRRS",
+    "USB",
+    "compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one reason a user might choose an external USB webcam over a built-in one?",
+  "answer_options": [
+    "To store more images locally",
+    "To access higher video quality or more positioning flexibility",
+    "To reduce battery usage on a desktop PC",
+    "To increase screen resolution"
+  ],
+  "correct_answer": [
+    "To access higher video quality or more positioning flexibility"
+  ],
+  "explanation": "External webcams often offer superior resolution and can be positioned independently of the device screen.",
+  "tags": [
+    "external camera",
+    "USB camera",
+    "webcam"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best explains why NFC is preferred for secure access and tap-to-pay systems over Bluetooth?",
+  "answer_options": [
+    "NFC uses less power than Bluetooth",
+    "NFC requires internet to function",
+    "Bluetooth provides higher authentication security",
+    "NFC allows longer-range scanning"
+  ],
+  "correct_answer": [
+    "NFC uses less power than Bluetooth"
+  ],
+  "explanation": "NFC consumes less power and only works at very short range, making it ideal for secure and intentional interactions like access control or contactless payment.",
+  "tags": [
+    "NFC",
+    "near field communication",
+    "wireless"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

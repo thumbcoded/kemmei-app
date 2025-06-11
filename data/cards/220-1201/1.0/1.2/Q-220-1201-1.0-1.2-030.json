@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might USB tethering be preferred over Wi-Fi tethering in a corporate troubleshooting scenario?",
+  "answer_options": [
+    "It allows for faster pairing via Bluetooth",
+    "It bypasses mobile carrier restrictions",
+    "It provides a more stable and secure connection",
+    "It uses less battery when idle"
+  ],
+  "correct_answer": [
+    "It provides a more stable and secure connection"
+  ],
+  "explanation": "USB tethering is typically faster, more secure, and less prone to interference than wireless methods.",
+  "tags": [
+    "tethering",
+    "USB",
+    "internet sharing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

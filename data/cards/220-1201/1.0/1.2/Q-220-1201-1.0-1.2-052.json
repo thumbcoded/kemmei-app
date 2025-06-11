@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why might someone use a portable Bluetooth speaker with their mobile phone?",
+  "answer_options": [
+    "To increase device security",
+    "To improve display resolution",
+    "To achieve better audio quality",
+    "To expand storage space"
+  ],
+  "correct_answer": [
+    "To achieve better audio quality"
+  ],
+  "explanation": "Mobile device speakers often lack fidelity; Bluetooth speakers offer louder and clearer sound.",
+  "tags": [
+    "Bluetooth speaker",
+    "audio output",
+    "portable speaker"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}
