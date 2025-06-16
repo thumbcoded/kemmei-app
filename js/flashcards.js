@@ -34,10 +34,21 @@ function populateDeckDropdown(certNames) {
   const deckSelect = document.getElementById("deck-select");
   deckSelect.innerHTML = ""; // Clear old static options
 
+  let firstOptionSet = false;
+
   Object.entries(certNames).forEach(([id, title]) => {
     const opt = new Option(title, id); // title as text, id as value
     deckSelect.appendChild(opt);
+
+    // Automatically select the first option
+    if (!firstOptionSet) {
+      deckSelect.value = id;
+      firstOptionSet = true;
+    }
   });
+
+  // Trigger change event to update UI
+  deckSelect.dispatchEvent(new Event("change"));
 }
 
 
@@ -46,8 +57,19 @@ function populateDeckDropdown(certNames) {
   const res = await fetch("http://localhost:3000/api/domainmap");
   const data = await res.json();
   populateDeckDropdown(data.certNames);
-  document.getElementById("deck-select").dispatchEvent(new Event("change"));
 
+  // Set default filter values
+  document.getElementById("domain-select").value = "All"; // Default domain
+  document.getElementById("subdomain-select").value = "All"; // Default subdomain
+  document.getElementById("difficulty-select").value = "Easy"; // Default difficulty
+
+  // Trigger change events to ensure filters are applied
+  document.getElementById("deck-select").dispatchEvent(new Event("change"));
+  document.getElementById("domain-select").dispatchEvent(new Event("change"));
+  document.getElementById("difficulty-select").dispatchEvent(new Event("change"));
+  document.getElementById("subdomain-select").dispatchEvent(new Event("change"));
+
+  // Fetch cards and update the counter
   fetchCardsAndUpdateCount();
 })();
 
