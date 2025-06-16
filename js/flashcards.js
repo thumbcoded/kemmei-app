@@ -454,4 +454,21 @@ exitBtn.addEventListener("click", () => {
   // 🆕 Important: Fetch immediately when page loads
   fetchCardsAndUpdateCount();
 
-});
+  // Dark Mode Toggle Functionality
+  const darkModeToggle = document.getElementById("darkModeToggle");
+
+  // Load saved dark mode preference
+  const savedDarkMode = localStorage.getItem("darkMode") === "true";
+  if (savedDarkMode) {
+    document.body.classList.add("dark-theme");
+    darkModeToggle.checked = true;
+  }
+
+  // Toggle dark mode
+  darkModeToggle.addEventListener("change", () => {
+    const isDark = darkModeToggle.checked;
+    document.body.classList.toggle("dark-theme", isDark);
+    localStorage.setItem("darkMode", isDark);
+  });
+
+}); // 🆕 Move the closing bracket here - the dark mode code should be INSIDE the DOMContentLoaded

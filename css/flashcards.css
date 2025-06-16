@@ -382,3 +382,207 @@ body.flashcards-page {
   opacity: 0.4;
   filter: grayscale(50%);
 }
+
+/* -------- Floating Dark Mode Toggle (Top-Right Corner) -------- */
+.floating-dark-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 0.75rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle input {
+  display: none;
+}
+
+.toggle-slider {
+  width: 36px;
+  height: 18px;
+  background-color: #e2e8f0;
+  border-radius: 18px;
+  position: relative;
+  transition: 0.3s;
+  border: 1px solid #cbd5e0;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-toggle input:checked + .toggle-slider {
+  background-color: #4a5568;
+  border-color: #2d3748;
+}
+
+.dark-mode-toggle input:checked + .toggle-slider::before {
+  transform: translateX(16px);
+  background-color: #ffd700;
+}
+
+.toggle-label {
+  font-size: 1rem;
+  user-select: none;
+  transition: 0.3s;
+}
+
+/* Dark theme styling for the toggle itself */
+body.dark-theme .dark-mode-toggle {
+  background: rgba(45, 55, 72, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+body.dark-theme .toggle-label {
+  filter: brightness(1.2);
+}
+
+/* -------- Dark Theme Styles -------- */
+body.dark-theme {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+body.dark-theme .flashcards-header {
+  background-color: #2d3748;
+}
+
+body.dark-theme .flashcard-box {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .option {
+  background-color: #4a5568;
+  border-color: #718096;
+  color: #e2e8f0;
+}
+
+body.dark-theme .option:hover {
+  background-color: #718096;
+}
+
+body.dark-theme .option.selected {
+  background-color: #3182ce;
+  color: white;
+}
+
+body.dark-theme .option.correct {
+  background-color: #38a169;
+  color: white;
+}
+
+body.dark-theme .option.incorrect {
+  background-color: #e53e3e;
+  color: white;
+}
+
+body.dark-theme .btn {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .btn.primary {
+  background-color: #3182ce;
+  color: white;
+}
+
+body.dark-theme .btn.abort {
+  background-color: #e53e3e;
+  color: white;
+}
+
+body.dark-theme .btn.exit {
+  background-color: #38a169;
+  color: white;
+}
+
+body.dark-theme .btn.skip {
+  background-color: #d69e2e;
+  color: white;
+}
+
+body.dark-theme .btn.reset {
+  background-color: #805ad5;
+  color: white;
+}
+
+body.dark-theme .btn:disabled {
+  background-color: #4a5568 !important;
+  color: #a0aec0 !important;
+}
+
+body.dark-theme .end-message {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme #cardCountDisplay {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .back-btn {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .back-btn:hover {
+  background-color: #718096;
+}
+
+body.dark-theme select {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border-color: #718096;
+}
+
+body.dark-theme .utility-group .btn.note {
+  background-color: #553c9a;
+  color: #e2e8f0;
+}
+
+body.dark-theme .utility-group .btn.save {
+  background-color: #2b6cb0;
+  color: #e2e8f0;
+}
+
+body.dark-theme .utility-group .btn.report {
+  background-color: #c53030;
+  color: #e2e8f0;
+}
+
+body.dark-theme .tooltip-text {
+  background-color: #4a5568;
+  color: #e2e8f0;
+}
