@@ -181,6 +181,48 @@ subSelect.disabled = !(
   async function fetchCardsAndUpdateCount() {
     await fetchCards();
     updateCardCount();
+
+    // Fetch user progress and update difficulty dropdown
+    const userId = localStorage.getItem("userId");
+    if (!userId) return;
+
+    try {
+      const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`);
+      const progress = await res.json();
+
+      const difficultySelect = document.getElementById("difficulty-select");
+      difficultySelect.innerHTML = ""; // Clear existing options
+
+      // Add "Easy" option
+      const easyOption = document.createElement("option");
+      easyOption.value = "Easy";
+      easyOption.textContent = "Easy";
+      difficultySelect.appendChild(easyOption);
+
+      // Add "Medium" option (locked if not unlocked)
+      const mediumOption = document.createElement("option");
+      mediumOption.value = "Medium";
+      mediumOption.textContent = progress.mediumUnlocked ? "Medium" : "🔒 Medium";
+      mediumOption.disabled = !progress.mediumUnlocked;
+      difficultySelect.appendChild(mediumOption);
+
+      // Add "Hard" option (locked if not unlocked)
+      const hardOption = document.createElement("option");
+      hardOption.value = "Hard";
+      hardOption.textContent = progress.hardUnlocked ? "Hard" : "🔒 Hard";
+      hardOption.disabled = !progress.hardUnlocked;
+      difficultySelect.appendChild(hardOption);
+
+      // Add "All" option only if more than one level is unlocked
+      if (progress.mediumUnlocked || progress.hardUnlocked) {
+        const allOption = document.createElement("option");
+        allOption.value = "All";
+        allOption.textContent = "All";
+        difficultySelect.appendChild(allOption);
+      }
+    } catch (err) {
+      console.error("❌ Failed to fetch user progress:", err);
+    }
   }
 
   function updateCardCount() {
