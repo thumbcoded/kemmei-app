@@ -435,25 +435,6 @@ exitBtn.addEventListener("click", () => {
   cardUtils.classList.add("hidden");
   endMessage.classList.add("hidden");
 
-  function shuffleArray(arr) {
-    const allOfTheAbove = arr.find(opt => opt.trim().toLowerCase() === "all of the above");
-    const others = arr.filter(opt => opt.trim().toLowerCase() !== "all of the above");
-  
-    const shuffled = others
-      .map(value => ({ value, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ value }) => value);
-  
-    if (allOfTheAbove) {
-      shuffled.push(allOfTheAbove);
-    }
-  
-    return shuffled;
-  }
-
-  // 🆕 Important: Fetch immediately when page loads
-  fetchCardsAndUpdateCount();
-
   // Dark Mode Toggle Functionality
   const darkModeToggle = document.getElementById("darkModeToggle");
 
@@ -472,3 +453,37 @@ exitBtn.addEventListener("click", () => {
   });
 
 }); // 🆕 Move the closing bracket here - the dark mode code should be INSIDE the DOMContentLoaded
+
+document.getElementById("startSessionBtn").addEventListener("click", async () => {
+  const randomToggle = document.getElementById("random-toggle");
+  const shouldShuffle = randomToggle.checked;
+
+  // Fetch cards based on current filters
+  const cards = await fetchCards(); // Assume this function fetches the cards
+
+  let sessionCards;
+  if (shouldShuffle) {
+    sessionCards = shuffleArray(cards); // Shuffle cards if toggle is checked
+  } else {
+    sessionCards = cards; // Keep cards in default order
+  }
+
+  // Start the session with the selected cards
+  initializeSession(sessionCards);
+});
+
+function shuffleArray(arr) {
+  const allOfTheAbove = arr.find(opt => opt.trim().toLowerCase() === "all of the above");
+  const others = arr.filter(opt => opt.trim().toLowerCase() !== "all of the above");
+
+  const shuffled = others
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
+  if (allOfTheAbove) {
+    shuffled.push(allOfTheAbove);
+  }
+
+  return shuffled;
+}
