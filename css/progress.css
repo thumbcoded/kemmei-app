@@ -378,3 +378,142 @@ body.index-page {
   background-color: #eee;
   color: #333;
 }
+
+/* -------- Floating Dark Mode Toggle (Top-Right Corner) -------- */
+.floating-dark-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(40, 44, 52, 0.7);
+  border-radius: 2rem;
+  padding: 0.2rem 0.8rem 0.2rem 0.4rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.dark-mode-toggle:hover {
+  background: rgba(40, 44, 52, 0.95);
+}
+
+.dark-mode-toggle input {
+  display: none;
+}
+
+.toggle-slider {
+  width: 36px;
+  height: 20px;
+  background: #bbb;
+  border-radius: 1rem;
+  position: relative;
+  margin-right: 0.5rem;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.dark-mode-toggle input:checked + .toggle-slider {
+  background: #222;
+}
+
+.dark-mode-toggle input:checked + .toggle-slider::before {
+  transform: translateX(16px);
+}
+
+.toggle-label {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-left: 0.2rem;
+}
+
+/* Dark theme styling for the toggle itself */
+body.dark-theme .dark-mode-toggle {
+  background: rgba(60, 60, 80, 0.85);
+}
+
+body.dark-theme .toggle-label {
+  color: #ffe066;
+}
+
+/* -------- Dark Theme Styles -------- */
+body.dark-theme {
+  background: #232733;
+  color: #e2e8f0;
+}
+
+body.dark-theme .index-container {
+  background: rgba(36, 41, 56, 0.92);
+  color: #e2e8f0; /* light text for dark background */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+body.dark-theme .progress-header,
+body.dark-theme .progress-content,
+body.dark-theme .progress-footer {
+  color: #e2e8f0;
+}
+
+body.dark-theme .bar {
+  background-color: #44495a;
+}
+
+body.dark-theme .bar-fill {
+  background-color: #4fd1c5;
+}
+
+body.dark-theme #resetProgress {
+  background-color: #b23a48;
+}
+
+body.dark-theme #resetProgress:hover {
+  background-color: #8a2836;
+}
+
+body.dark-theme .toast {
+  background: #4fd1c5;
+  color: #232733;
+}
+
+body.dark-theme .modal-content {
+  background: #232733;
+  color: #e2e8f0;
+}
+
+body.dark-theme #confirmYes {
+  background-color: #b23a48;
+}
+
+body.dark-theme #confirmNo {
+  background-color: #44495a;
+  color: #e2e8f0;
+}
+
+body.dark-theme .title-block {
+  background: rgba(44, 48, 62, 0.98); /* dark background */
+  border-color: #44495a;
+}
+
+/* Floating kanji: make visible everywhere in dark mode */
+body.dark-theme .kanji-scatter {
+  color: rgba(255, 255, 255, 0.10);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  z-index: 0;
+}

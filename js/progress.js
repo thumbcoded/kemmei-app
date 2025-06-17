@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
-  // Floating kanji words logic (copied from index.html)
+  // Floating kanji words logic
   const kanjiWords = ["賢明", "懸命"];
   const kanjiContainer = document.body;
 
@@ -30,16 +30,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     kanji.addEventListener("animationend", () => {
       kanji.remove();
-      createKanji(); // Replace the kanji after it finishes floating
+      createKanji();
     });
   }
 
-  // Ensure 5-7 kanji are always floating
+  // Ensure 7 kanji are always floating
   for (let i = 0; i < 7; i++) {
     createKanji();
   }
 
-  // Original progress.js logic
+  // Load and render progress
   try {
     const [progressRes, domainRes] = await Promise.all([
       fetch(`http://localhost:3000/api/user-progress/${userId}`),
@@ -52,50 +52,74 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderProgressTree(progress, domainMap);
   } catch (err) {
     console.error("❌ Failed to load user progress:", err);
-    statsDiv.textContent = "Error loading progress.";
+    if (statsDiv) statsDiv.textContent = "Error loading progress.";
   }
 
+  // Modal and reset logic
   const confirmModal = document.getElementById("confirmModal");
   const confirmYes = document.getElementById("confirmYes");
   const confirmNo = document.getElementById("confirmNo");
 
-  resetBtn.addEventListener("click", () => {
-    confirmModal.classList.remove("hidden");
-  });
+  if (resetBtn && confirmModal) {
+    resetBtn.addEventListener("click", () => {
+      confirmModal.classList.remove("hidden");
+    });
+  }
+  if (confirmNo && confirmModal) {
+    confirmNo.addEventListener("click", () => {
+      confirmModal.classList.add("hidden");
+    });
+  }
+  if (confirmYes && confirmModal) {
+    confirmYes.addEventListener("click", async () => {
+      confirmModal.classList.add("hidden");
 
-  confirmNo.addEventListener("click", () => {
-    confirmModal.classList.add("hidden");
-  });
+      try {
+        const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+          method: "DELETE",
+        });
 
-  confirmYes.addEventListener("click", async () => {
-    confirmModal.classList.add("hidden");
+        if (res.ok) {
+          const toast = document.getElementById("toast");
+          if (toast) {
+            toast.textContent = "✔️ Your progress has been cleared.";
+            toast.classList.remove("hidden");
+            toast.classList.add("show");
 
-    try {
-      const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
-        method: "DELETE",
-      });
-
-      if (res.ok) {
-        const toast = document.getElementById("toast");
-        toast.textContent = "✔️ Your progress has been cleared.";
-        toast.classList.remove("hidden");
-        toast.classList.add("show");
-
-        setTimeout(() => {
-          toast.classList.remove("show");
-          setTimeout(() => {
-            toast.classList.add("hidden");
-            location.reload(); // after fade out
-          }, 400);
-        }, 2000);
-      } else {
-        alert("❌ Failed to clear progress.");
+            setTimeout(() => {
+              toast.classList.remove("show");
+              setTimeout(() => {
+                toast.classList.add("hidden");
+                location.reload();
+              }, 400);
+            }, 2000);
+          } else {
+            location.reload();
+          }
+        } else {
+          alert("❌ Failed to clear progress.");
+        }
+      } catch (err) {
+        console.error("❌ Reset error:", err);
+        alert("❌ Network error.");
       }
-    } catch (err) {
-      console.error("❌ Reset error:", err);
-      alert("❌ Network error.");
+    });
+  }
+
+  // Dark Mode Toggle Functionality
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  if (darkModeToggle) {
+    const savedDarkMode = localStorage.getItem("darkMode") === "true";
+    if (savedDarkMode) {
+      document.body.classList.add("dark-theme");
+      darkModeToggle.checked = true;
     }
-  });
+    darkModeToggle.addEventListener("change", () => {
+      const isDark = darkModeToggle.checked;
+      document.body.classList.toggle("dark-theme", isDark);
+      localStorage.setItem("darkMode", isDark);
+    });
+  }
 });
 
 function renderProgressTree(userProgress, domainMap) {
@@ -148,27 +172,24 @@ function renderProgressTree(userProgress, domainMap) {
 
       const domainHeader = domainBlock.querySelector("h4");
       domainHeader.style.cursor = "pointer";
-domainHeader.addEventListener("click", () => {
-  const openDomains = domainList.querySelectorAll(".subdomain-list:not(.hidden)");
-  openDomains.forEach(el => {
-    if (el !== subdomainWrapper) el.classList.add("hidden");
-  });
-  subdomainWrapper.classList.toggle("hidden");
-});
-
-      const subList = document.createElement("div");
-      subList.className = "subdomain-list";
+      domainHeader.addEventListener("click", () => {
+        const openDomains = domainList.querySelectorAll(".subdomain-list:not(.hidden)");
+        openDomains.forEach(el => {
+          if (el !== subdomainWrapper) el.classList.add("hidden");
+        });
+        subdomainWrapper.classList.toggle("hidden");
+      });
 
       const subMap = subdomainMaps[certId]?.[domainId] || {};
       for (const subId of Object.keys(subMap)) {
         const subTitle = subMap[subId];
         const subBlock = document.createElement("div");
         subBlock.className = "subdomain-block";
-        
+
         // Create header container for title and difficulty list
         const subHeader = document.createElement("div");
         subHeader.className = "subdomain-header";
-        
+
         const subTitleElement = document.createElement("h5");
         subTitleElement.textContent = `🔹 ${subId} ${subTitle}`;
         subTitleElement.className = "subdomain-title";
@@ -180,18 +201,15 @@ domainHeader.addEventListener("click", () => {
           const entry = progressTree[certId]?.[domainId]?.[subId]?.[difficulty];
           const li = document.createElement("li");
 
-          if (difficulty === "easy") {
-            li.textContent = entry
-              ? `easy: ✅ ${entry.correct} / ${entry.total} (${Math.round((entry.correct / entry.total) * 100)}%)`
-              : "easy: 🟢 Available";
-          } else if (entry) {
-            const acc = Math.round((entry.correct / entry.total) * 100);
-            const passed = acc >= 80;
-            li.textContent = `${difficulty}: ${passed ? "✅" : "⚠️"} ${entry.correct} / ${entry.total} (${acc}%)`;
+          if (entry) {
+            li.textContent = `${difficulty}: ✅ ${entry.correct} / ${entry.total} (${entry.total > 0 ? Math.round((entry.correct / entry.total) * 100) : 0}%)`;
           } else {
-            li.textContent = `${difficulty}: 🔒 Locked`;
+            // Show as available if not started
+            let emoji = "🟢";
+            if (difficulty === "medium") emoji = "🟡";
+            if (difficulty === "hard") emoji = "🔴";
+            li.textContent = `${difficulty}: ${emoji} Available`;
           }
-
           diffList.appendChild(li);
         }
 
