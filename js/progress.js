@@ -197,18 +197,30 @@ function renderProgressTree(userProgress, domainMap) {
         const diffList = document.createElement("ul");
         diffList.className = "difficulty-list";
 
-        for (const difficulty of ["easy", "medium", "hard"]) {
+        const difficulties = ["easy", "medium", "hard"];
+        let unlocked = true;
+        for (let i = 0; i < difficulties.length; i++) {
+          const difficulty = difficulties[i];
           const entry = progressTree[certId]?.[domainId]?.[subId]?.[difficulty];
           const li = document.createElement("li");
 
-          if (entry) {
+          if (!unlocked) {
+            // Locked state
+            let lockEmoji = "🔒";
+            li.textContent = `${difficulty}: ${lockEmoji} Locked`;
+            li.style.opacity = "0.5";
+          } else if (entry) {
             li.textContent = `${difficulty}: ✅ ${entry.correct} / ${entry.total} (${entry.total > 0 ? Math.round((entry.correct / entry.total) * 100) : 0}%)`;
+            // Unlock next level if all correct
+            unlocked = entry.total > 0 && entry.correct === entry.total;
           } else {
-            // Show as available if not started
+            // Available but not started
             let emoji = "🟢";
             if (difficulty === "medium") emoji = "🟡";
             if (difficulty === "hard") emoji = "🔴";
             li.textContent = `${difficulty}: ${emoji} Available`;
+            // Only easy is available by default; medium/hard only if unlocked
+            unlocked = false;
           }
           diffList.appendChild(li);
         }

@@ -3,7 +3,7 @@ let domainMaps = {};
 let subdomainMaps = {};
 
 async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false) {
-  const key = `${cert}:${domain}:${sub}`;
+  const key = `${cert}:${domain}:${sub}`.replace(/\./g, "~");
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
