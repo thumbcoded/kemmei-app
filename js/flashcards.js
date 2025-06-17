@@ -30,131 +30,175 @@ async function loadDomainMap() {
   }
 }
 
-function populateDeckDropdown(certNames) {
+function populateDeckDropdown(certNames, selectedId = null) {
   const deckSelect = document.getElementById("deck-select");
   deckSelect.innerHTML = ""; // Clear old static options
 
-  let firstOptionSet = false;
-
   Object.entries(certNames).forEach(([id, title]) => {
-    const opt = new Option(title, id); // title as text, id as value
+    const opt = new Option(title, id);
     deckSelect.appendChild(opt);
-
-    // Automatically select the first option
-    if (!firstOptionSet) {
-      deckSelect.value = id;
-      firstOptionSet = true;
-    }
   });
 
-  // Trigger change event to update UI
+  // If we have a stored deck, use that — otherwise pick first
+  if (selectedId && certNames[selectedId]) {
+    deckSelect.value = selectedId;
+  } else {
+    deckSelect.selectedIndex = 0;
+  }
+
+  // Only now: trigger change
   deckSelect.dispatchEvent(new Event("change"));
 }
-
 
 (async () => {
   await loadDomainMap();
   const res = await fetch("http://localhost:3000/api/domainmap");
   const data = await res.json();
-  populateDeckDropdown(data.certNames);
 
-  // Set default filter values
-  document.getElementById("domain-select").value = "All"; // Default domain
-  document.getElementById("subdomain-select").value = "All"; // Default subdomain
-  document.getElementById("difficulty-select").value = "Easy"; // Default difficulty
+  const savedDeck = localStorage.getItem("lastDeck");
+  const savedDomain = localStorage.getItem("lastDomain");
+  const savedSub = localStorage.getItem("lastSub");
+  const savedDifficulty = localStorage.getItem("lastDifficulty");
+  const savedMode = localStorage.getItem("lastMode");
 
-  // Trigger change events to ensure filters are applied
-  document.getElementById("deck-select").dispatchEvent(new Event("change"));
-  document.getElementById("domain-select").dispatchEvent(new Event("change"));
-  document.getElementById("difficulty-select").dispatchEvent(new Event("change"));
-  document.getElementById("subdomain-select").dispatchEvent(new Event("change"));
+  // ✅ Now this will apply deck first, and trigger chain properly
+  populateDeckDropdown(data.certNames, savedDeck);
 
-  // Fetch cards and update the counter
-  fetchCardsAndUpdateCount();
+  setTimeout(() => {
+    if (savedDomain) {
+      document.getElementById("domain-select").value = savedDomain;
+      document.getElementById("domain-select").dispatchEvent(new Event("change"));
+    }
+
+    setTimeout(() => {
+      if (savedSub) {
+        document.getElementById("subdomain-select").value = savedSub;
+        document.getElementById("subdomain-select").dispatchEvent(new Event("change"));
+      }
+
+      if (savedDifficulty) {
+        document.getElementById("difficulty-select").value = savedDifficulty;
+        document.getElementById("difficulty-select").dispatchEvent(new Event("change"));
+      }
+
+      if (savedMode) {
+        document.getElementById("mode-select").value = savedMode;
+      }
+    }, 150);
+  }, 150);
 })();
 
 
-
 const startBtn = document.getElementById("startSessionBtn");
-  const abortBtn = document.getElementById("abortBtn");
-  const exitBtn = document.getElementById("exitBtn");
-  const headerBar = document.querySelector(".flashcards-header");
-  const cardCountDisplay = document.getElementById("cardCountDisplay");
-  const cardContainer = document.getElementById("cardContainer");
-  const answerForm = document.getElementById("answer-form");
-  const checkBtn = document.getElementById("checkAnswerBtn");
-  const nextBtn = document.getElementById("nextBtn");
-  const skipBtn = document.getElementById("skipBtn");
-  const resetBtn = document.getElementById("resetBtn");
-  const restartBtn = document.getElementById("restartBtn");
-  const endMessage = document.getElementById("endMessage");
-  const flashcardBox = document.querySelector(".flashcard-box");
-  const cardMeta = document.querySelector(".card-meta");
-  const cardUtils = document.querySelector(".card-utils");
-  const progressCounter = document.getElementById("progressCounter");
-  const correctCounter = document.getElementById("correctCounter");
-  const randomToggle = document.getElementById("random-toggle");
-  const checkTooltip = document.getElementById("check-tooltip");
-  const nextTooltip = document.getElementById("next-tooltip");
+const abortBtn = document.getElementById("abortBtn");
+const exitBtn = document.getElementById("exitBtn");
+const headerBar = document.querySelector(".flashcards-header");
+const cardCountDisplay = document.getElementById("cardCountDisplay");
+const cardContainer = document.getElementById("cardContainer");
+const answerForm = document.getElementById("answer-form");
+const checkBtn = document.getElementById("checkAnswerBtn");
+const nextBtn = document.getElementById("nextBtn");
+const skipBtn = document.getElementById("skipBtn");
+const resetBtn = document.getElementById("resetBtn");
+const restartBtn = document.getElementById("restartBtn");
+const endMessage = document.getElementById("endMessage");
+const flashcardBox = document.querySelector(".flashcard-box");
+const cardMeta = document.querySelector(".card-meta");
+const cardUtils = document.querySelector(".card-utils");
+const progressCounter = document.getElementById("progressCounter");
+const correctCounter = document.getElementById("correctCounter");
+const randomToggle = document.getElementById("random-toggle");
+const checkTooltip = document.getElementById("check-tooltip");
+const nextTooltip = document.getElementById("next-tooltip");
 
-  let questions = [];
-  let currentIndex = 0;
-  let correctCount = 0;
+let questions = [];
+let currentIndex = 0;
+let correctCount = 0;
 
-  async function fetchCards() {
-    const deck = document.getElementById("deck-select").value.trim();
-    const domain = document.getElementById("domain-select").value.trim();
-    const difficulty = document.getElementById("difficulty-select").value.trim();
+function saveLastSelection() {
+  localStorage.setItem("lastDeck", document.getElementById("deck-select").value);
+  localStorage.setItem("lastDomain", document.getElementById("domain-select").value);
+  localStorage.setItem("lastSub", document.getElementById("subdomain-select").value);
+  localStorage.setItem("lastDifficulty", document.getElementById("difficulty-select").value);
+}
+
+function restoreLastSelection() {
+  const deck = localStorage.getItem("lastDeck");
+  const domain = localStorage.getItem("lastDomain");
+  const sub = localStorage.getItem("lastSub");
+  const difficulty = localStorage.getItem("lastDifficulty");
+
+  if (deck) document.getElementById("deck-select").value = deck;
+  document.getElementById("deck-select").dispatchEvent(new Event("change"));
+
+  setTimeout(() => {
+    if (domain) document.getElementById("domain-select").value = domain;
+    document.getElementById("domain-select").dispatchEvent(new Event("change"));
+
+    setTimeout(() => {
+      if (sub) document.getElementById("subdomain-select").value = sub;
+      document.getElementById("subdomain-select").dispatchEvent(new Event("change"));
+
+      if (difficulty) document.getElementById("difficulty-select").value = difficulty;
+      document.getElementById("difficulty-select").dispatchEvent(new Event("change"));
+    }, 150);
+  }, 150);
+}
+
+async function fetchCards() {
+  const deck = document.getElementById("deck-select").value.trim();
+  const domain = document.getElementById("domain-select").value.trim();
+  const difficulty = document.getElementById("difficulty-select").value.trim();
 
 
-    console.log("🔎 Fetching cards with:", { deck, domain, difficulty });
-  
+  console.log("🔎 Fetching cards with:", { deck, domain, difficulty });
 
-    const query = new URLSearchParams();
-      const subdomain = document.getElementById("subdomain-select")?.value.trim();
+
+  const query = new URLSearchParams();
+    const subdomain = document.getElementById("subdomain-select")?.value.trim();
 if (subdomain && subdomain !== "All") {
-  query.append("subdomain_id", subdomain);
+query.append("subdomain_id", subdomain);
 }
 if (deck) {
-  query.append("cert_id", deck);
+query.append("cert_id", deck);
 }
 
-    if (domain && domain !== "All" && !domain.startsWith("All")) {
-      const domainValue = domain.split(" ")[0]; // Extract "3.0" from "3.0 Hardware"
-      query.append("domain_id", domainValue);
-    }
-    if (difficulty && difficulty !== "All") {
-      query.append("difficulty", difficulty.toLowerCase());
-    }
-  
-    const url = `http://localhost:3000/api/cards?${query.toString()}`;
-    console.log("🌎 Querying URL:", url);
-  
-    const res = await fetch(url);
-    const data = await res.json();
-  
-    console.log("📥 Received data:", data);
-  
-    questions = data.map(card => {
-      return {
-        question: card.question_text,
-        options: shuffleArray(card.answer_options || card.options || []),
-        correct: Array.isArray(card.correct_answer)
-          ? card.correct_answer
-          : [card.correct_answer],
-        required: Array.isArray(card.correct_answer)
-          ? card.correct_answer.length
-          : 1,
-        type: card.question_type
-      };
-    });
-  
-    console.log("🗂️ Updated questions array:", questions);
+  if (domain && domain !== "All" && !domain.startsWith("All")) {
+    const domainValue = domain.split(" ")[0]; // Extract "3.0" from "3.0 Hardware"
+    query.append("domain_id", domainValue);
   }
+  if (difficulty && difficulty !== "All") {
+    query.append("difficulty", difficulty.toLowerCase());
+  }
+
+  const url = `http://localhost:3000/api/cards?${query.toString()}`;
+  console.log("🌎 Querying URL:", url);
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  console.log("📥 Received data:", data);
+
+  questions = data.map(card => {
+    return {
+      question: card.question_text,
+      options: shuffleArray(card.answer_options || card.options || []),
+      correct: Array.isArray(card.correct_answer)
+        ? card.correct_answer
+        : [card.correct_answer],
+      required: Array.isArray(card.correct_answer)
+        ? card.correct_answer.length
+        : 1,
+      type: card.question_type
+    };
+  });
+
+  console.log("🗂️ Updated questions array:", questions);
+}
 
 document.getElementById("deck-select").addEventListener("change", () => {
   const certLabel = document.getElementById("deck-select").value;
-  const certId = certLabel; // ✅ correct way
+  const certId = certLabel;
 
   const domainSelect = document.getElementById("domain-select");
   const subSelect = document.getElementById("subdomain-select");
@@ -170,21 +214,19 @@ document.getElementById("deck-select").addEventListener("change", () => {
   }
 
   domainSelect.disabled = false;
-subSelect.disabled = !(
-  certId && domainMaps[certId] && Object.keys(subdomainMaps[certId] || {}).length
-);
+  subSelect.disabled = !(
+    certId && domainMaps[certId] && Object.keys(subdomainMaps[certId] || {}).length
+  );
 
-
+  saveLastSelection();
   fetchCardsAndUpdateCount();
 });
 
 
-
-  document.getElementById("domain-select").addEventListener("change", () => {
+document.getElementById("domain-select").addEventListener("change", () => {
   const certLabel = document.getElementById("deck-select").value;
   const domainSelect = document.getElementById("domain-select");
   const subSelect = document.getElementById("subdomain-select");
-
 
   const certId = certLabel;
   const domainId = domainSelect.value.split(" ")[0];
@@ -198,7 +240,11 @@ subSelect.disabled = !(
       subSelect.appendChild(opt);
     });
   }
+
+  saveLastSelection();
+  fetchCardsAndUpdateCount();
 });
+
 
   async function fetchCardsAndUpdateCount() {
     await fetchCards();
@@ -268,8 +314,15 @@ subSelect.disabled = !(
 
   document.getElementById("deck-select").addEventListener("change", fetchCardsAndUpdateCount);
   document.getElementById("domain-select").addEventListener("change", fetchCardsAndUpdateCount);
-  document.getElementById("difficulty-select").addEventListener("change", fetchCardsAndUpdateCount);
-  document.getElementById("subdomain-select").addEventListener("change", fetchCardsAndUpdateCount);
+document.getElementById("difficulty-select").addEventListener("change", () => {
+  saveLastSelection();
+  fetchCardsAndUpdateCount();
+});
+  document.getElementById("subdomain-select").addEventListener("change", () => {
+  saveLastSelection();
+  fetchCardsAndUpdateCount();
+});
+
 
   async function startSession() {
     if (questions.length === 0) {
@@ -515,8 +568,10 @@ exitBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme", isDark);
     localStorage.setItem("darkMode", isDark);
   });
-
-}); // 🆕 Move the closing bracket here - the dark mode code should be INSIDE the DOMContentLoaded
+document.getElementById("mode-select").addEventListener("change", () => {
+  saveLastSelection();
+});
+});
 
 document.getElementById("startSessionBtn").addEventListener("click", async () => {
   const randomToggle = document.getElementById("random-toggle");
