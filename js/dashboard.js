@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const role = localStorage.getItem("role");
 
   if (!userId || !email || !role) {
-    localStorage.clear();
+    // Redirect to login if not authenticated
     window.location.href = "index.html";
     return;
   }

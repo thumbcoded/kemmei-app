@@ -3,53 +3,21 @@ body.dashboard-page {
     background-color: #f0f2f5;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
-    display: flex; /* Center the dashboard */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    overflow: hidden; /* Prevent kanji from enlarging the page */
-}
-
-/* Floating kanji */
-.kanji-scatter {
-    position: absolute;
-    font-size: 6rem;
-    color: rgba(0, 0, 0, 0.06);
-    pointer-events: none;
-    animation: float 60s linear infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translate(0, 0);
-        opacity: 1;
-    }
-    25% {
-        transform: translate(calc(-50vw + 100vw * var(--random-x1)), calc(-50vh + 100vh * var(--random-y1)));
-        opacity: 0.9;
-    }
-    50% {
-        transform: translate(calc(-50vw + 100vw * var(--random-x2)), calc(-50vh + 100vh * var(--random-y2)));
-        opacity: 0.8;
-    }
-    75% {
-        transform: translate(calc(-50vw + 100vw * var(--random-x3)), calc(-50vh + 100vh * var(--random-y3)));
-        opacity: 0.7;
-    }
-    100% {
-        transform: translate(calc(-50vw + 100vw * var(--random-x4)), calc(-50vh + 100vh * var(--random-y4)));
-        opacity: 0;
-    }
+    overflow: hidden;
 }
 
 /* Dashboard container */
 .dashboard {
-    background: rgba(255, 255, 255, 0.8); /* Make the background slightly transparent */
+    background: rgba(255, 255, 255, 0.8);
     padding: 3rem;
     border-radius: 16px;
     text-align: center;
-    max-width: 400px; /* Match the width of the index container */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Match the shadow of the index container */
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .dashboard h2,
@@ -78,225 +46,18 @@ body.dashboard-page {
 .btn-admin       { background-color: #6f42c1; color: #fff; }
 .btn-logout      { background-color: #f4a261; color: #fff; }
 
-/* -------- Floating Dark Mode Toggle (Top-Right Corner) -------- */
-.floating-dark-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-}
-
-.dark-mode-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 0.5rem 0.75rem;
-  border-radius: 25px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode-toggle:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dark-mode-toggle input {
-  display: none;
-}
-
-.toggle-slider {
-  width: 36px;
-  height: 18px;
-  background-color: #e2e8f0;
-  border-radius: 18px;
-  position: relative;
-  transition: 0.3s;
-  border: 1px solid #cbd5e0;
-}
-
-.toggle-slider::before {
-  content: '';
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 14px;
-  height: 14px;
-  background-color: white;
-  border-radius: 50%;
-  transition: 0.3s;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.dark-mode-toggle input:checked + .toggle-slider {
-  background-color: #4a5568;
-  border-color: #2d3748;
-}
-
-.dark-mode-toggle input:checked + .toggle-slider::before {
-  transform: translateX(16px);
-  background-color: #ffd700;
-}
-
-.toggle-label {
-  font-size: 1rem;
-  user-select: none;
-  transition: 0.3s;
-}
-
-/* Dark theme styling for the toggle itself */
-body.dark-theme .dark-mode-toggle {
-  background: rgba(45, 55, 72, 0.95);
-  border-color: rgba(255, 255, 255, 0.1);
-  color: #e2e8f0;
-}
-
-body.dark-theme .toggle-label {
-  filter: brightness(1.2);
-}
-
 /* -------- Dark Theme Styles -------- */
 body.dark-theme {
   background-color: #1a202c;
   color: #e2e8f0;
 }
 
-body.dark-theme .flashcards-header {
-  background-color: #2d3748;
-}
-
-body.dark-theme .flashcard-box {
-  background-color: #2d3748;
-  color: #e2e8f0;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-theme .option {
-  background-color: #4a5568;
-  border-color: #718096;
-  color: #e2e8f0;
-}
-
-body.dark-theme .option:hover {
-  background-color: #718096;
-}
-
-body.dark-theme .option.selected {
-  background-color: #3182ce;
-  color: white;
-}
-
-body.dark-theme .option.correct {
-  background-color: #38a169;
-  color: white;
-}
-
-body.dark-theme .option.incorrect {
-  background-color: #e53e3e;
-  color: white;
-}
-
-body.dark-theme .btn {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-theme .btn.primary {
-  background-color: #3182ce;
-  color: white;
-}
-
-body.dark-theme .btn.abort {
-  background-color: #e53e3e;
-  color: white;
-}
-
-body.dark-theme .btn.exit {
-  background-color: #38a169;
-  color: white;
-}
-
-body.dark-theme .btn.skip {
-  background-color: #d69e2e;
-  color: white;
-}
-
-body.dark-theme .btn.reset {
-  background-color: #805ad5;
-  color: white;
-}
-
-body.dark-theme .btn:disabled {
-  background-color: #4a5568 !important;
-  color: #a0aec0 !important;
-}
-
-body.dark-theme .end-message {
-  background-color: #2d3748;
-  color: #e2e8f0;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-theme #cardCountDisplay {
-  background-color: #4a5568;
-  color: #e2e8f0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-theme .back-btn {
-  background-color: #4a5568;
-  color: #e2e8f0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-theme .back-btn:hover {
-  background-color: #718096;
-}
-
-body.dark-theme select {
-  background-color: #4a5568;
-  color: #e2e8f0;
-  border-color: #718096;
-}
-
-body.dark-theme .utility-group .btn.note {
-  background-color: #553c9a;
-  color: #e2e8f0;
-}
-
-body.dark-theme .utility-group .btn.save {
-  background-color: #2b6cb0;
-  color: #e2e8f0;
-}
-
-body.dark-theme .utility-group .btn.report {
-  background-color: #c53030;
-  color: #e2e8f0;
-}
-
-body.dark-theme .tooltip-text {
-  background-color: #4a5568;
-  color: #e2e8f0;
-}
-
-/* 1. Floating kanji: make visible everywhere in dark mode */
-body.dark-theme .kanji-scatter {
-    color: rgba(255, 255, 255, 0.10); /* Brighter, more visible on dark */
-    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    z-index: 0;
-}
-
-/* 2. Central dashboard area: make darker in dark mode */
 body.dark-theme .dashboard {
-    background: rgba(36, 41, 56, 0.92); /* Darker, more opaque */
+    background: rgba(36, 41, 56, 0.92);
     color: #e2e8f0;
     box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
-/* Optional: brighten buttons for contrast in dark mode */
 body.dark-theme .actions a {
     filter: brightness(1.15);
 }
