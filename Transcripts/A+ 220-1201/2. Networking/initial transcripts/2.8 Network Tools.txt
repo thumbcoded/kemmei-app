@@ -1,0 +1,622 @@
+0:01
+there will often be times where you're
+0:03
+handed a cable that has no connector on
+0:05
+it and you'll be asked to add the
+0:07
+appropriate connector to the end of that
+0:09
+cable This might be a coax cable it
+0:12
+could be twisted pair or it might be
+0:14
+fiber For copper connections we would
+0:16
+commonly use a tool like this one which
+0:18
+is a cable crimper This is a specialized
+0:21
+tool that allows us to pinch the end of
+0:24
+a connector permanently onto that
+0:26
+particular cable For example it's common
+0:28
+to use a crimper when you're connecting
+0:30
+the RJ45 connector onto a twisted pair
+0:33
+cable For twisted pair wires the
+0:36
+connector itself pushes through the
+0:38
+insulation around the wires to connect
+0:40
+directly to the copper that's inside For
+0:43
+example here is an RJ45 connector before
+0:46
+it has been crimped onto the cable You
+0:48
+can see that the copper connectors are
+0:50
+sticking up just a little bit And notice
+0:52
+they are very pointy at the ends That's
+0:55
+that pointy end that presses through the
+0:58
+insulation and makes its connection with
+1:00
+the copper inside Here's what that same
+1:02
+connector looks like after crimping You
+1:04
+can see it's been pushed into the
+1:06
+connector and it is going into the wire
+1:09
+that is now connected inside of that
+1:11
+RJ45 connector Notice that it also
+1:14
+pushes in a cable stay farther down the
+1:16
+cable so that it won't easily be pulled
+1:18
+out of that RJ45 connector If you're
+1:21
+planning to crimp your own RJ45 cables
+1:24
+you'll obviously need a very good
+1:26
+crimper You'll need a set of electrician
+1:28
+scissors or cable snips and you may need
+1:30
+a good wire stripper to remove any of
+1:32
+that excess cover from the outside of
+1:34
+the cable At first when you try to do
+1:36
+this yourself it may take quite a bit of
+1:39
+time as you're trying to determine the
+1:41
+best process to use to get all of the
+1:43
+wires in the right order and get them
+1:45
+properly pushed into the connector But
+1:47
+once you do this a few times you'll find
+1:49
+the process is relatively
+1:50
+straightforward And that means that you
+1:52
+could create your own custom length
+1:54
+cables with your own crimper and your
+1:57
+own RJ45
+1:59
+connectors Instead of dealing with wires
+2:02
+why don't we connect to the network over
+2:03
+a wireless connection Obviously wireless
+2:06
+does have the advantage of not dealing
+2:08
+with any wires but there are also a
+2:10
+number of issues and challenges with
+2:12
+managing a wireless network as well One
+2:15
+of the ways that you can analyze the
+2:16
+health of your wireless network is with
+2:18
+a Wi-Fi analyzer This can provide you
+2:21
+with information on the frequencies or
+2:23
+channels that are currently in use on
+2:25
+your network and the networks around you
+2:27
+You can see the signal strength that
+2:29
+you're getting from your local access
+2:30
+point You can see any interference that
+2:33
+may be occurring across this network And
+2:35
+you can see all of the wireless devices
+2:37
+that are communicating to your access
+2:38
+point If you want to get more detail
+2:41
+about what specifically might be using
+2:43
+the frequencies around you you might
+2:45
+want to use something like this a
+2:47
+spectrum analyzer This is able to look
+2:49
+at the entire spectrum and show you not
+2:51
+only the 802.11 network that's in use
+2:54
+but any other frequencies in use by
+2:56
+other devices in the area Here's an
+2:59
+example of the output on a simple Wi-Fi
+3:01
+analyzer that's looking at my wireless
+3:04
+network If you're far away from the
+3:06
+access point you may find that the noise
+3:08
+on this network is very comparable to
+3:10
+the amount of data This means that we
+3:12
+probably are not going to have the best
+3:14
+throughput on this wireless network As
+3:16
+we get closer to the access point you'll
+3:19
+find that the signal strength gets much
+3:21
+stronger and you're able to visually see
+3:23
+that difference in the Wi-Fi analyzer
+3:26
+One challenge we have on very large
+3:29
+networks is being able to find the two
+3:31
+ends of a cable especially if you're
+3:33
+dealing with hundreds and hundreds of
+3:35
+wires on the floor of a building One of
+3:37
+the ways that you can track down the
+3:39
+ends of these wires is by using a tone
+3:42
+generator This is really two different
+3:45
+devices One is the tone generator itself
+3:47
+that you plug into the wire and it puts
+3:49
+an analog sound onto the wire itself We
+3:53
+obviously can't hear that sound with our
+3:55
+own ears So we need some type of
+3:57
+inductive probe to be able to find that
+4:00
+sound even though we're not physically
+4:02
+touching the copper inside of the cable
+4:05
+This means if you have hundreds or
+4:06
+thousands of cables inside of a closet
+4:09
+you can use these tools to be able to
+4:12
+easily find the end of any one of those
+4:14
+wires We would first connect our tone
+4:17
+generator to the wire itself This can be
+4:19
+through a modular RJ45 connection This
+4:22
+might be a coax connector or you might
+4:24
+be plugging directly into the punchdown
+4:26
+block You would then use your inductive
+4:28
+probe to move from wire to wire until
+4:30
+you find the wire that makes some noise
+4:33
+Let's try finding the wire in my studio
+4:36
+and see if we can find the one that's
+4:38
+connected to our tone generator Here's a
+4:41
+tone generator I use on my studio
+4:43
+network Let's power it on And when this
+4:46
+is powered on we can then plug it into
+4:48
+one of the cables that I have inside of
+4:50
+my studio This is one of many that are
+4:53
+connected to my desk But now a signal is
+4:56
+being put onto this wire that we're able
+4:58
+to listen to using our inductive probe
+5:01
+So here's four wires that I have coming
+5:03
+into my studio but only one of these is
+5:06
+connected to our tone generator In order
+5:08
+to hear this we need an inductive probe
+5:11
+We don't have to touch the copper inside
+5:13
+of the cable We only have to put the
+5:14
+inductive probe somewhere along the
+5:16
+outside of the cable And when we run
+5:18
+across the cable that has the tone
+5:20
+generator we'll start to hear the noise
+5:23
+We'll see the lights flashing And we
+5:24
+know that we found the end of the cable
+5:27
+connected to that tone
+5:28
+generator If you are running a lot of
+5:31
+cables in your environment you're
+5:32
+probably terminating some of them onto a
+5:35
+punchdown block This is a punchdown
+5:37
+block very similar to what you might
+5:38
+find on the back wall of a data center
+5:41
+We might be bringing in hundreds or
+5:43
+thousands of cables and terminating them
+5:45
+on these punchdown blocks to make the
+5:47
+process of cross-connecting those cables
+5:49
+much easier This will individually
+5:52
+connect all of these wires into the
+5:54
+punchdown block and fasten them so they
+5:56
+won't be easily pulled out These tools
+5:59
+also trim the wire once you punch them
+6:01
+into the block making for a very clean
+6:04
+installation Here's an example of a
+6:06
+number of wires that are punched down
+6:08
+into a punchdown block You can see this
+6:10
+is a twisted pair wire And you can see
+6:13
+there are a lot of wires that you would
+6:15
+have punched into one of these blocks
+6:17
+That's why we tend to have these blocks
+6:19
+numbered so that we're able to reference
+6:21
+where this wire is and where the other
+6:23
+end of this wire happens to go You can
+6:25
+also tell that the person who punched
+6:27
+these down did a very good job of
+6:29
+maintaining these twists all the way
+6:31
+into the punchdown block Obviously it's
+6:34
+these twists that help us prevent any
+6:36
+type of interference So maintaining
+6:38
+those twists all the way into the
+6:39
+punchdown block makes for a stronger
+6:42
+network signal And of course it's often
+6:44
+good to document where this cable is
+6:46
+going so that we know what number it's
+6:48
+punched down into and we know where the
+6:50
+other end of the cable is That way if we
+6:52
+need to complete this connection into a
+6:54
+switch or some other device we can
+6:56
+easily find the cable that we're looking
+6:58
+for
+7:00
+If you're working a lot with cables
+7:01
+you're punching down wires into a block
+7:03
+or you're attaching your own connectors
+7:06
+then you probably want to use a cable
+7:08
+tester to make sure everything has been
+7:10
+wired properly on that cable If this is
+7:12
+a patch cable we want pin one to connect
+7:14
+to pin one We want pin two to connect to
+7:17
+pin two pin three to pin three and so on
+7:20
+A cable tester is perfect for checking
+7:22
+that continuity between all the pins and
+7:24
+ensuring that we really did connect the
+7:26
+right pins on both sides of the cable
+7:29
+This can also help us find any pins we
+7:31
+might have missed or if we happen to
+7:33
+accidentally cross a cable we'll see
+7:35
+that in our cable tester Cable testers
+7:38
+are usually simple continuity tests
+7:40
+They're not providing any type of
+7:42
+quality signal testing but they do
+7:44
+provide us with a quick way to know if
+7:46
+we're wiring things the proper way The
+7:49
+tone generator and inductive probe I
+7:51
+used earlier also double as a cable
+7:53
+tester I have the tone generator set
+7:56
+into cable testing mode and it's
+7:58
+flashing to tell me that it doesn't see
+8:00
+any wires because I don't have anything
+8:02
+currently connected to that device I'm
+8:05
+going to plug in a cable into one end of
+8:07
+this cable tester and we'll plug in the
+8:09
+other end of this cable into the other
+8:12
+end of this cable tester What we're
+8:14
+hoping to see is a continuity test from
+8:16
+pins 1 2 3 4 5 6 7 and 8 And you can see
+8:22
+it cycle through each one of those wires
+8:24
+If these wires were not connected then
+8:26
+we would not see a light for that
+8:28
+particular pin And if it was connected
+8:30
+to a different pin we would see the
+8:32
+lights jump around as it went through
+8:33
+its test It's a relatively simple test
+8:36
+but it can tell us very quickly if we
+8:38
+were able to put the wires in the right
+8:39
+order when we put on the connector
+8:42
+One challenge you often run into is that
+8:45
+some equipment may show that there's a
+8:47
+number of errors on a particular link
+8:49
+but you don't know if the errors are
+8:51
+being caused by a bad cable or if the
+8:53
+problem is within the hardware itself
+8:56
+This is where we would use a loop back
+8:58
+plug Loop back plugs are very useful for
+9:00
+testing the physical interface on a
+9:02
+device There are different loop back
+9:04
+plugs for serial connections RJ45
+9:07
+connections or even fiber connections
+9:10
+These are not crossover cables They are
+9:12
+a cable that effectively loops back into
+9:15
+itself To use these we would plug one
+9:18
+into the interface on a device and then
+9:20
+we would put that interface into a
+9:22
+diagnostic mode That diagnostic mode
+9:24
+sends information out of the interface
+9:26
+and then it looks to see if any of that
+9:28
+information is being looped back into
+9:30
+the receive part of that interface If
+9:33
+everything is working properly then the
+9:35
+information we receive should match the
+9:37
+information that we're sending If we see
+9:39
+any difference between the information
+9:42
+sent and the information received then
+9:44
+it's very possible that we have a
+9:46
+problem with that physical
+9:47
+interface And eventually you may be
+9:50
+tasked with gathering packets directly
+9:52
+from the network And there are a number
+9:54
+of different ways to gather those
+9:56
+details One way is to use a physical tap
+9:59
+We break a connection and put this
+10:01
+physical tap in the middle of the
+10:03
+network link Obviously this is not
+10:05
+something you can commonly do during
+10:07
+production hours on a production network
+10:09
+but if you know that that particular
+10:11
+connection will be used often for packet
+10:13
+gathering purposes you may want to
+10:15
+install a tap there permanently Many
+10:18
+fiber taps tend to be passive taps which
+10:20
+means they don't require any power Other
+10:23
+taps may require a power source
+10:24
+especially if you're dealing with a
+10:26
+copper tap If you're not able to disrupt
+10:29
+the network communication by installing
+10:31
+a tap you might want to use
+10:33
+functionality that may be built into
+10:35
+your enterprise switch This is referring
+10:37
+to a port mirror Sometimes you'll hear
+10:39
+this referred to as a port redirection
+10:42
+or a span It stands for a switched port
+10:44
+analyzer With this port mirror function
+10:47
+you would plug in your network analyzer
+10:49
+to one interface and you would tell the
+10:51
+switch to take everything from another
+10:53
+interface and copy those frames into
+10:56
+this protocol analyzer port This allows
+10:58
+you to get a copy of all of the network
+11:00
+traffic without having to put a physical
+11:02
+tap in the middle You're effectively
+11:04
+using the capabilities of your switch as
+11:07
+your physical tap Here's a copper coax
+11:10
+tap You can see on one side is the
+11:12
+network connection on the other side is
+11:14
+the equipment connection Normally these
+11:16
+would connect from receive to transmit
+11:18
+and transmit to receive But with the tap
+11:20
+in the middle we would take one of those
+11:22
+connections and put it through the tap
+11:24
+Then we take the other direction and
+11:26
+also put it through the tap Now that
+11:28
+we've tapped that data we can connect a
+11:30
+monitor or protocol analyzer and be able
+11:33
+to get a copy of everything sent over
+11:35
+those particular links

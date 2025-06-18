@@ -1,0 +1,1605 @@
+0:02
+this video is introduction to IP and
+0:04
+although it does not have a direct
+0:06
+correlation back to the exam objectives
+0:09
+everything that's in domain 2 or the
+0:11
+networking domain tends to build on the
+0:14
+information that we provide in this
+0:15
+video if you're unfamiliar with some of
+0:18
+the details of networking and especially
+0:20
+of IP I highly recommend you watch this
+0:23
+video as a primer for the videos that
+0:25
+are to follow our networks are designed
+0:28
+to move information from one device to
+0:31
+another device and there is a lot of
+0:33
+information that goes across our modern
+0:36
+networks we usually refer to these
+0:38
+networks as Ethernet networks wireless
+0:41
+networks DSL networks and other types
+0:44
+and from IP's perspective it really
+0:46
+doesn't matter what methods you're using
+0:48
+for the transportation the important
+0:50
+part is what's inside of those packets
+0:52
+that we are sending across the network
+0:55
+in this video we'll talk about the
+0:57
+network as a series of highways or roads
+1:00
+which means that IP or the internet
+1:02
+protocol is going to be the truck that
+1:05
+is driving across that road we're going
+1:07
+to put information into that truck send
+1:10
+that IP truck across the network and
+1:12
+we're going to unpack that truck on the
+1:14
+other side if we were to look inside the
+1:16
+truck we would see a lot of information
+1:18
+there is a box inside of the truck and
+1:21
+we refer to that box as holding TCP or
+1:24
+UDP information we'll learn more about
+1:27
+TCP and UDP later on in this video and
+1:30
+of course just like boxes that you might
+1:32
+use to move inside of these TCP or UDP
+1:36
+boxes is information that is important
+1:38
+for us to get from one place to another
+1:42
+you can see that we start to nest
+1:44
+information within another in the world
+1:46
+of networking we refer to this as
+1:48
+encapsulation and decapsulation here's a
+1:51
+basic diagram of us sending information
+1:54
+to a web server on one side is our
+1:57
+client or laptop computer and on the
+1:59
+other side is the web server itself in
+2:01
+this particular example we're sending
+2:03
+this information across an Ethernet
+2:05
+network and all of the information
+2:07
+that's being sent across the network is
+2:09
+the Ethernet payload also included with
+2:12
+this Ethernet payload is information at
+2:14
+the beginning of this payload that is a
+2:17
+header and information at the end that's
+2:19
+a trailer this allows us to know exactly
+2:21
+where the data starts and where the data
+2:24
+ends of course there's more information
+2:26
+within this Ethernet payload and if we
+2:28
+were to look a little bit closer at that
+2:30
+payload we would see that there's a
+2:32
+specific kind of data contained within
+2:34
+that payload in this particular example
+2:37
+we're carrying IP traffic so there is an
+2:39
+IP payload and an IP header within that
+2:42
+same Ethernet frame and as you probably
+2:45
+already expected within this IP payload
+2:47
+we have even more detail that consists
+2:50
+of a TCP payload in this particular
+2:53
+example and that TCP payload also
+2:55
+consists of a TCP header and we can
+2:58
+continue to break this down since we
+3:00
+know that this is web traffic we know
+3:02
+that within that TCP payload is HTTP or
+3:05
+hypertext transfer protocol data which
+3:08
+holds all of that web server
+3:10
+communication so as you can see this
+3:12
+Ethernet frame has within it IP traffic
+3:15
+TCP information and HTTP information and
+3:19
+different protocols may have even more
+3:21
+layers of information that we could
+3:23
+drill into to see exactly what's being
+3:25
+sent between these two devices
+3:28
+the internet protocol or IP is one of
+3:31
+the most popular protocols that you'll
+3:33
+find but you'll also notice that within
+3:35
+that IP we commonly find TCP and UDP tcp
+3:40
+and UDP are very similar protocols that
+3:42
+are used to transport information but
+3:45
+there are some interesting
+3:46
+characteristics that are unique to each
+3:48
+and in this video we'll look at what
+3:50
+some of those unique characteristics
+3:52
+might be if you're talking to a network
+3:54
+professional or someone taking their
+3:56
+network plus certification they'll often
+3:58
+refer to TCP or UDP as an OSI layer 4
+4:02
+protocol for the purposes of the A+ the
+4:05
+OSI model is not important for us to
+4:07
+know but you will see that particular
+4:10
+term show up when you're reading through
+4:11
+different books or referencing different
+4:13
+materials from the purposes of a
+4:15
+networking perspective it's important to
+4:17
+know that TCP and UDP allow us to
+4:20
+communicate across multiple devices all
+4:22
+simultaneously and send information that
+4:25
+might be very different than each other
+4:27
+we refer to this as multipplexing this
+4:29
+allows us to send different types of
+4:31
+traffic across the network
+4:33
+simultaneously and have all of that
+4:35
+information properly received on the
+4:37
+other side
+4:38
+let's look with a little more detail
+4:40
+into TCP or the transmission control
+4:44
+protocol this is a protocol that we
+4:46
+refer to as
+4:47
+connectionoriented that means there is a
+4:49
+formal process to set up a conversation
+4:51
+with the device and a formal process to
+4:54
+end that conversation you can think of
+4:56
+this as making a phone call you would
+4:58
+put in a phone number you would hear the
+5:00
+phone ring on the other side on the
+5:02
+other side the person might say hello
+5:04
+and you would say hello back to them and
+5:06
+then you can proceed with your
+5:07
+conversation at the end of that call you
+5:10
+would say "It was good talking to you
+5:12
+goodbye." The other person would say
+5:13
+"Goodbye," and you hang up this is very
+5:15
+similar to the process with TCP where
+5:18
+there is a formal connection setup and a
+5:21
+formal connection tearown you'll
+5:23
+sometimes see TCP referred to as
+5:25
+reliable delivery that means that we are
+5:28
+able to know that the information that
+5:30
+we've sent to another device really has
+5:32
+been received that's because TCP
+5:34
+includes an acknowledgement process so
+5:37
+TCP sends the data and the person
+5:39
+receiving the data will send back an
+5:41
+acknowledgement so that both sides of
+5:43
+the conversation know that everything
+5:45
+was received properly if any of the
+5:47
+information sent by the sender is
+5:49
+damaged or corrupted in the transport
+5:52
+process the receiving station can send a
+5:54
+message back to the sending device
+5:56
+telling it that something did not work
+5:58
+properly and they need to resend that
+6:00
+data to be able to receive it properly
+6:02
+this also allows the sender and the
+6:04
+receiver to manage how much data is
+6:07
+being sent at any particular time we
+6:09
+refer to this as flow control and that
+6:11
+means the receiving device can tell the
+6:14
+sender to speed up the data or slow down
+6:16
+the data depending on how much
+6:18
+information it's able to receive at any
+6:20
+particular time it's this constant
+6:22
+sending of data and an acknowledgement
+6:24
+of the data that provides that reliable
+6:27
+delivery and enables all of those TCP
+6:30
+specific functions
+6:32
+but there are some protocols that don't
+6:34
+need that very detailed level of
+6:37
+reliability and the overhead that's
+6:39
+associated with TCP that's why we
+6:42
+created UDP or the user datagramgram
+6:44
+protocol we have a connectionoriented
+6:47
+protocol with TCP and with UDP we are
+6:50
+connectionless there's no formal process
+6:53
+to start the communications flow and
+6:55
+there's no formal tearown process to end
+6:58
+the communication we refer to that as an
+7:00
+unreliable delivery those terms are
+7:03
+referring to the fact that there's no
+7:05
+way to know if the data really was
+7:07
+received on the other side because there
+7:09
+are no acknowledgements coming back to
+7:11
+the sender since there's no
+7:13
+acknowledgement being sent by the
+7:15
+receiving device we don't have any way
+7:17
+to recover from any errors and there's
+7:19
+no way to perform any type of
+7:21
+retransmission and since the sending
+7:23
+station has no idea if everything really
+7:25
+was received properly on the other side
+7:28
+there's no way to set any type of flow
+7:29
+control the device that's receiving all
+7:32
+of this data has no way to send back any
+7:34
+type of messages saying that they should
+7:36
+speed up or slow down the data transfer
+7:39
+process given that explanation of UDP
+7:42
+you might be thinking why would any
+7:44
+application want to use UDP one
+7:47
+advantage of UDP is that there's very
+7:49
+little overhead you don't have to set up
+7:51
+any formal communication you can simply
+7:53
+send data and you have a best effort to
+7:56
+get that data to the other side a good
+7:58
+example of an application that works
+8:00
+exactly like this is one for real-time
+8:03
+communication applications that are
+8:05
+voice over IP related or send video
+8:07
+across the network are all in real time
+8:10
+if information is lost along the way we
+8:13
+can't stop our conversation rewind what
+8:16
+we were talking about and then replay
+8:18
+that through the same connection once we
+8:21
+lose that data we've lost that moment in
+8:23
+time and there's no way to rewind time
+8:26
+to go back to where we were for that
+8:28
+reason Voiceover IP and any real-time
+8:30
+communication would prefer to use UDP
+8:33
+since it has the least amount of
+8:35
+overhead and it doesn't have to worry
+8:36
+about rescending traffic that may have
+8:38
+been lost there are other protocols that
+8:41
+work with UDP that perform a similar
+8:43
+function where they need low overhead
+8:45
+and aren't concerned if the data is
+8:47
+going to get to the other side or not if
+8:50
+there's any problems in that
+8:51
+communication it will simply perform the
+8:53
+process again from the application's
+8:55
+perspective a good example of these
+8:57
+connectionless protocols would be DHCP
+9:00
+or the dynamic host configuration
+9:02
+protocol that we commonly use to
+9:04
+automatically assign IP addresses on all
+9:07
+of the devices on our networks another
+9:09
+good example is TFTP or the trivial file
+9:12
+transfer protocol which often sends very
+9:14
+small amounts of data across the network
+9:16
+and doesn't require any particular
+9:18
+overhead or retransmission capability
+9:21
+fortunately even though UDP doesn't
+9:24
+provide any way to resend the data the
+9:27
+application can provide that same
+9:29
+functionality so instead of relying on
+9:31
+UDP as the retransmission method the
+9:34
+application itself will keep track of
+9:36
+everything that is sent back and forth
+9:37
+and the application will decide if it
+9:40
+ever needs to resend any traffic across
+9:42
+the network this requires the
+9:44
+application itself to be able to manage
+9:46
+that process and some applications like
+9:48
+voiceover IP apps might not do anything
+9:50
+if data is lost if information doesn't
+9:53
+make it through then it will simply
+9:55
+continue sending the voiceover IP
+9:57
+traffic and if the users didn't receive
+9:59
+information they'll simply ask someone
+10:01
+to repeat what they just said some
+10:04
+applications though are very particular
+10:06
+about making sure the data is properly
+10:09
+received on the other side applications
+10:12
+such as HTTPS which is the hypertext
+10:14
+transfer protocol secure commonly used
+10:17
+for our web server communication or
+10:19
+something like SSH for secure shell
+10:22
+which is our terminal communication is
+10:24
+something that does use TCP and will
+10:26
+resend data automatically using that TCP
+10:30
+protocol tcp is able to confirm that
+10:32
+data was received by receiving
+10:34
+acknowledgements from the receiving
+10:36
+station very much like you would do with
+10:38
+a return receipt this means the
+10:40
+application doesn't have to worry if
+10:42
+information was received or anything
+10:44
+goes missing because that entire process
+10:46
+of maintaining the data flow is managed
+10:49
+by
+10:50
+TCP as we mentioned earlier this TCP or
+10:54
+UDP data is being transported across the
+10:56
+network using IP or the internet
+10:58
+protocol and again IP is our truck tcp
+11:02
+and UDP are the boxes on the truck and
+11:04
+the network itself is the road that we
+11:06
+drive on if you're working with a mover
+11:08
+to help move your house then you know
+11:10
+that the movers are going to load up
+11:12
+your truck with all of those boxes and
+11:14
+they're going to move that truck from
+11:16
+one location to another so they need the
+11:18
+address of where they're going to pick
+11:20
+up this information and they need the
+11:21
+address of where they're going to take
+11:23
+it in the world of networking we refer
+11:25
+to these addresses as IP addresses and
+11:27
+every computer on your network has an IP
+11:29
+address just like every house on your
+11:32
+block has a street address when we send
+11:34
+information to a web server we are
+11:36
+sending that information to a specific
+11:38
+IP address these boxes of TCP or UDP
+11:42
+data will arrive at that IP address but
+11:45
+then we have to decide where that
+11:47
+particular box is going to go just as
+11:49
+your house has many different rooms you
+11:52
+have servers that are running many
+11:53
+different services your web server might
+11:56
+also be a DNS or domain name server it
+11:59
+could also be a file server and it could
+12:01
+provide voiceover IP functions when
+12:04
+information is received by that server
+12:06
+it now needs to decide what room is
+12:09
+going to receive this box so that we can
+12:11
+properly process that data the operating
+12:14
+system is sitting outside of your house
+12:15
+and it's looking at all of the boxes
+12:17
+that are coming in from the moving truck
+12:19
+each box has the name of a room written
+12:22
+on it and it knows that that box should
+12:23
+go to the bedroom another box perhaps
+12:26
+goes to the living room there might be a
+12:28
+third box that goes to the kitchen tcp
+12:30
+and UDP work in a similar way but
+12:32
+instead of writing the name of the
+12:34
+service or the room on the box that's
+12:36
+being received instead we're using
+12:38
+something called a port number so
+12:40
+instead of having a room name you
+12:42
+instead have different services and each
+12:45
+service is assigned a particular number
+12:47
+these port numbers allow the incoming
+12:49
+data to know exactly where that
+12:51
+information should be sent so that it's
+12:53
+processed properly by the appropriate
+12:55
+application this means when information
+12:58
+is being sent from one device to another
+13:00
+there are usually at least three
+13:01
+different types of information that are
+13:03
+important there is the IP address of the
+13:06
+server there is the TCP or UDP protocol
+13:09
+that is being used and then there is a
+13:11
+port number and from the server's
+13:13
+perspective it would be a port number
+13:15
+associated with that application the
+13:18
+sending device also has an IP address
+13:20
+it's sending information via TCP or UDP
+13:24
+and there's a port number also used by
+13:26
+the client which is useful for sending
+13:28
+information back to the client once the
+13:30
+server has processed that data as you
+13:33
+start looking at different services and
+13:35
+memorizing different port numbers you'll
+13:37
+notice that certain applications always
+13:39
+tend to use the same port numbers we
+13:42
+refer to these as non-ephemereral ports
+13:45
+or permanent port numbers usually these
+13:47
+port numbers are between port zero and
+13:50
+port 1023 but it could use any port
+13:53
+number available to be able to define
+13:56
+what port number is associated with an
+13:58
+application if you were to look at the
+14:00
+configuration of a service that's
+14:01
+running on a device such as a web server
+14:04
+an email server or a file server you'll
+14:07
+see that a port number is also
+14:09
+associated with that particular service
+14:11
+this allows anyone who's communicating
+14:13
+to that service to always send
+14:15
+information with a port number that will
+14:17
+be recognized by that service to be able
+14:21
+to communicate to that service our
+14:22
+client needs to have not only an IP
+14:25
+address and TCP or UDP protocol but it
+14:28
+needs a client port number client port
+14:30
+numbers can be any number usually
+14:32
+between 124 and
+14:36
+65,535 because these port numbers are
+14:39
+simply used temporarily we refer to them
+14:41
+as ephemeral ports they are used for a
+14:44
+single communication and once the
+14:46
+communication to the server is over we
+14:48
+close that connection and we don't use
+14:50
+that port number any longer if we need
+14:52
+to communicate to that server again we
+14:54
+choose a new random port number and use
+14:56
+that as our client port number so now we
+14:59
+know that a TCP or UDP port number can
+15:02
+be any value between 0 and
+15:06
+65,535 if we're communicating to a
+15:09
+server that server is probably going to
+15:11
+use a non-ephemeral port number but that
+15:13
+may not always be the case fortunately
+15:16
+most applications will use a port number
+15:19
+and it will always be that port number
+15:21
+running on that service also keep in
+15:23
+mind that these port numbers sound like
+15:25
+they could be used for some type of
+15:27
+security process but in reality they're
+15:30
+simply a number that's used for
+15:31
+reference they're not designed to be a
+15:33
+security mechanism and it's very easy to
+15:36
+find a port number on a service even if
+15:38
+someone may have changed the port number
+15:40
+to something else in fact we often refer
+15:42
+to these port numbers on a server as a
+15:44
+well-known port number because you need
+15:47
+to know the port number in order to
+15:48
+communicate to that particular service
+15:51
+also keep in mind that TCP port numbers
+15:53
+have a range between 0 and
+15:57
+65,535 and UDP port numbers also have a
+16:00
+range between 0 and
+16:03
+65,535 but a TCP port 80 is not the same
+16:07
+thing as a UDP port 80 these are
+16:10
+different protocols that have a similar
+16:12
+numbering scheme for their port numbers
+16:14
+but the port numbers are unique to each
+16:16
+individual protocol here's an example of
+16:19
+a client and a server having multiple
+16:22
+forms of communication occurring
+16:24
+simultaneously across the network and
+16:26
+using different port numbers in order to
+16:28
+do that in this example we have a server
+16:31
+and on this server are three different
+16:33
+services there's a web server running at
+16:35
+TCP port 80 there's a voiceover IP
+16:38
+server running at UDP port 504 and
+16:41
+there's an email server using TCP port
+16:44
+143 that means we'll have three
+16:47
+different types of communication going
+16:48
+between our client and our server notice
+16:51
+that our client has an IP address of
+16:53
+10.0.0.1 and our server has an IP
+16:55
+address of
+16:57
+10.0.0.2 you can see that we're sending
+16:59
+information across an Ethernet network
+17:01
+because we have an Ethernet header and
+17:03
+an Ethernet trailer inside of each of
+17:05
+these communications is IP because IP is
+17:08
+the protocol that we use the most for
+17:10
+communication but notice that inside of
+17:13
+these IP packets some of these have TCP
+17:15
+traffic others have UDP traffic and you
+17:18
+can see that the TCP traffic may be HTTP
+17:21
+data using port 80 it might be voiceover
+17:24
+IP data using UDP port 504 or email data
+17:28
+using port 143 if we were to look at a
+17:32
+protocol decode of this information we
+17:34
+get a lot more detail about the
+17:36
+communication that's occurring we know
+17:38
+that we have a source IP of 10.0.0 0.1
+17:41
+and a destination IP of
+17:43
+10.0.0.2 that matches the IP address of
+17:46
+the client and the IP address of the
+17:48
+server each of these communication flows
+17:51
+have the same source IP and destination
+17:54
+IP notice that there are differences
+17:56
+though inside of those IP packets you
+17:59
+can see in each of these examples that
+18:01
+the destination port is the port that we
+18:03
+listed above or the well-known port for
+18:06
+that particular application but notice
+18:08
+that the source port is using a random
+18:10
+number and each of these traffic flows
+18:12
+is using a very different source port
+18:15
+that's because those are ephemeral ports
+18:17
+they're temporary ports that we're
+18:19
+simply using to be able to send this
+18:21
+information to the server and receive
+18:23
+information back if this client needed
+18:25
+to send additional traffic flows to this
+18:27
+server then it would choose another
+18:29
+random port number and send another flow
+18:32
+of traffic that had some application
+18:34
+data inside of it this is the process
+18:36
+that's occurring for every device on
+18:38
+your network to be able to send traffic
+18:40
+from one place to another whether that's
+18:42
+on a local server or across the internet
+18:45
+the process is exactly the same all
+18:47
+thanks to IP TCP and UDP
+
+0:02
+as we've discussed in a previous video
+0:04
+the port numbers used by TCP and UDP can
+0:07
+be very important when trying to
+0:09
+communicate to a service so it's useful
+0:11
+to know what those port numbers are if
+0:13
+you're trying to troubleshoot any type
+0:15
+of communications issue we might also
+0:18
+need to know these port numbers if we're
+0:19
+performing some type of firewall
+0:21
+configuration our firewalls often use
+0:24
+TCP and UDP port numbers as one of the
+0:27
+criteria that it uses to allow or to
+0:29
+block Lo Network traffic as you go
+0:31
+through this video you'll find there are
+0:33
+a number of port numbers that you're
+0:35
+required to know as part of your A+
+0:37
+studies you'll find that memorizing
+0:39
+these port numbers can sometimes feel a
+0:41
+bit tedious but after you start using
+0:44
+these applications configuring firewalls
+0:46
+and troubleshooting network
+0:47
+communication you'll find that most of
+0:49
+these port numbers become second nature
+0:52
+for the purposes of your A+ studies make
+0:54
+sure that you understand not only the
+0:56
+port number and the protocol associated
+0:59
+with it but that you understand why that
+1:01
+particular protocol is important and how
+1:03
+it's used on the
+1:05
+network the first port numbers we'll
+1:07
+look at are port numbers TCP Port 20 and
+1:10
+TCP Port 21 these two port numbers are
+1:13
+commonly associated with FTP or the file
+1:16
+transfer protocol FTP is a generic file
+1:19
+transfer protocol that could be used by
+1:21
+many different operating systems to
+1:22
+transfer information from one device to
+1:25
+another and different types of FTP may
+1:27
+use one or both of these prot protocols
+1:30
+TCP Port 20 is often used as the active
+1:33
+data transfer and Port 21 is often used
+1:37
+as the administration or control Port
+1:40
+the FTP protocol often requires you to
+1:42
+have some type of authentication into
+1:44
+this system so it may ask for a username
+1:46
+a password or some other type of
+1:49
+authentication Factor FTP can also be
+1:51
+configured with an anonymous or generic
+1:54
+login so that anyone can log in
+1:56
+regardless of what the username or
+1:58
+password might be FTP is also a
+2:01
+full-featured protocol that not only can
+2:03
+transfer a file but can list the files
+2:05
+available in a particular directory we
+2:07
+can add delete change the file name and
+2:10
+perform other Administration functions
+2:12
+as
+2:13
+well as part of our tasks as server
+2:15
+administrators or network administrators
+2:18
+we are often required to connect to our
+2:20
+Remote device and make configuration
+2:22
+changes at the command line to be able
+2:25
+to do this securely across the network
+2:27
+we need to use a protocol that can
+2:29
+encrypt all of this data as we're
+2:30
+sending it from one side to the other
+2:33
+the most common protocol used for this
+2:35
+function is SSH or secure shell it
+2:38
+provides an encrypted communication link
+2:40
+over TCP Port 22 this is very similar to
+2:44
+the old style tnet protocol but tnet is
+2:47
+one that we commonly no longer see in
+2:50
+use because it does not provide any type
+2:52
+of encryption if you're communicating at
+2:54
+the command line to a server you should
+2:56
+always be using SSH and you'll find that
+2:59
+it almost always is using TCP Port
+3:02
+22 however you may find that there is a
+3:05
+system in your network that is very old
+3:08
+that does not support SSH and the only
+3:11
+way to administer that device at the
+3:13
+command line is using the older tnet
+3:16
+protocol telnet stands for
+3:17
+telecommunications Network and it
+3:19
+commonly communicates over TCP Port 23
+3:23
+visually and functionally this works
+3:25
+identical to SSH you have a command line
+3:28
+you can log into a device with your
+3:30
+username and password you can administer
+3:32
+that device remotely but the major
+3:35
+difference is that all of the
+3:36
+communication used for tnet is in the
+3:38
+clear there's no encryption used for
+3:41
+tnet and that's why most organizations
+3:43
+will prevent anyone from using the tnet
+3:46
+protocol and instead recommend that you
+3:48
+use SSH to perform this
+3:51
+communication email continues to be one
+3:54
+of the most popular forms of
+3:55
+communication across our networks and to
+3:58
+be able to facilitate that communication
+4:00
+we need some type of protocol that can
+4:02
+send mail from one server to another
+4:05
+that protocol is the simple mail
+4:06
+transfer protocol or SMTP SMTP commonly
+4:10
+uses TCP Port 25 to be able to send
+4:14
+these email messages from one email
+4:16
+server to another you may also find that
+4:19
+some devices are configured to send
+4:20
+information to the email server
+4:22
+initially also using this SMTP protocol
+4:26
+so not only are you configuring this on
+4:28
+your mail server you may also o find
+4:30
+that you're configuring SMTP with the
+4:32
+appropriate port number on your local
+4:34
+device to be able to receive email
+4:36
+messages we would commonly use protocols
+4:39
+such as IMAP or pop 3 and we'll talk
+4:42
+about those protocols and their
+4:43
+Associated port numbers later in this
+4:46
+video in these videos so far we've
+4:48
+talked a lot about devices able to
+4:50
+communicate with each other using IP or
+4:53
+Internet Protocol the Internet Protocol
+4:56
+address is one very similar to what you
+4:58
+would see here one 62.1 159 2461 164 but
+5:04
+when we're typing things into our
+5:05
+browser we're not typing in a bunch of
+5:07
+numbers we're typing in the name of a
+5:09
+website such as
+5:11
+www.professormesser.com
+5:13
+in order to translate this fully
+5:15
+qualified domain name into a usable IP
+5:18
+address for network communication we
+5:20
+need to perform a translation using the
+5:23
+domain name system or DNS DNS commonly
+5:27
+uses UDP Port 53
+5:30
+as you can imagine DNS is a very popular
+5:32
+and important service because we almost
+5:35
+never memorize IP addresses to be able
+5:37
+to communicate to these devices but it's
+5:39
+very common to remember the fully
+5:41
+qualified domain name for that reason
+5:43
+it's very common to have multiple DNS
+5:45
+servers for redundancy so that we are
+5:48
+always able to resolve the fully
+5:49
+qualified domain name to the appropriate
+5:52
+IP
+5:53
+address the computer on your network was
+5:56
+probably not manually configured with a
+5:58
+set of IP addresses subnet masks default
+6:01
+gateways or DNS servers this was done
+6:04
+automatically when you turn your
+6:06
+computer on using the dynamic host
+6:08
+configuration protocol or
+6:10
+DHCP DHCP happens automatically behind
+6:13
+the scenes and it makes the entire
+6:15
+process of configuring your system with
+6:17
+these addresses completely seamless DHCP
+6:20
+commonly uses UDP Port 67 and UDP Port
+6:24
+68 on your network is a DHCP service
+6:28
+that may be on a standalone server or
+6:30
+Appliance or may be integrated into a
+6:32
+small office home office wireless router
+6:35
+that you might have at home on this
+6:36
+server is a pool of available IP
+6:39
+addresses and when a device connects to
+6:41
+the network it requests an IP address
+6:43
+and configuration parameters from that
+6:45
+pool when a device starts up it receives
+6:47
+that IP address and it leases that IP
+6:49
+address for a certain amount of time
+6:51
+when that lease is up it can choose to
+6:53
+renew the lease or give the IP address
+6:55
+back and put it into the pool for
+6:57
+someone else to use system
+6:59
+administrators can also use DHCP to
+7:02
+manually configure IP addresses that
+7:04
+will always be assigned to particular
+7:06
+devices so if you have a printer or
+7:08
+server that you would like to always
+7:10
+have the same IP address you can reserve
+7:12
+that IP address in your DHCP server and
+7:15
+it will be automatically assigned with
+7:17
+the same IP address every time that
+7:19
+printer or server starts
+7:21
+up you're probably watching this video
+7:24
+in a browser and to be able to perform
+7:26
+that functionality you're probably using
+7:29
+HTT TP or https this is the hypertext
+7:32
+transfer protocol or hypertext transfer
+7:35
+protocol secure the standard form of
+7:38
+HTTP sends all of the HTTP data over a
+7:41
+non-encrypted or in the clear
+7:43
+communication and it often uses TCP Port
+7:46
+80 if you see any traffic using TCP Port
+7:49
+443 it's probably using the secure
+7:52
+version of HTTP which means that all of
+7:55
+that web communication inside of that
+7:57
+packet will be encrypted a large
+7:59
+percentage of the devices you
+8:01
+communicate to in your browser are
+8:02
+probably going to use https these days
+8:05
+but you'll still find a number of web
+8:07
+services that are not using the
+8:09
+encrypted version and instead are
+8:11
+sending all of their traffic via TCP
+8:13
+Port 80 and the HTTP
+8:16
+protocol if you're using an email client
+8:18
+on your computer or your mobile device
+8:21
+you may be receiving emails using a
+8:23
+number of different protocols two of the
+8:25
+more popular Protocols are POP 3 and
+8:28
+IMAP POP 3 is the post office protocol
+8:32
+version three and it commonly uses TCP
+8:34
+Port 110 to be able to transfer data
+8:37
+down to your computer a newer and
+8:39
+somewhat more functional protocol for
+8:41
+receiving email is IMAP 4 or the
+8:44
+internet message access protocol version
+8:46
+4 IMAP commonly uses TCP Port 143 IMAP
+8:51
+provides a number of additional features
+8:53
+not available in pop 3 such as the
+8:55
+management of the inbox from multiple
+8:57
+clients you're able to make make folders
+9:00
+and transfer emails into those folders
+9:02
+and all of those updates will be
+9:03
+synchronized across all of your
+9:05
+different systems and all of those
+9:07
+updates will be synchronized across all
+9:09
+of your different email
+9:11
+clients if you're using Microsoft
+9:13
+Windows there's a process for
+9:15
+transferring data within windows that
+9:18
+uses a protocol named server message
+9:20
+block or SMB you may also see this
+9:23
+referred to as the common internet file
+9:25
+system or cifs not only is this used for
+9:28
+file trans transfers it's used to send
+9:31
+information to printer cues and for
+9:33
+other processes where Windows needs to
+9:35
+communicate information between
+9:36
+different Windows devices older Windows
+9:39
+devices used an additional protocol
+9:41
+inside of tcpip called netbios this net
+9:45
+bios protocol used two primary port
+9:48
+numbers to be able to communicate UDP
+9:50
+Port 137 used a net bios name service
+9:54
+which is very similar to the DNS name
+9:56
+service that we talked about earlier and
+9:58
+to be able to set up sessions to
+10:00
+transfer files it uses TCP Port 139 on
+10:04
+most modern versions of Windows you'll
+10:07
+find Direct connectivity between IP
+10:09
+addresses that don't use the net bios
+10:11
+protocol we refer to that as direct
+10:14
+communication or net bios less
+10:16
+communication and it often uses TCP Port
+10:21
+445 most organizations will have a
+10:23
+central database that contains all of
+10:25
+the important information about the
+10:27
+devices users and and important
+10:29
+resources available on their Network
+10:32
+this is usually a directory of services
+10:34
+or a database that contains all of this
+10:36
+information and to be able to access
+10:39
+this database we use a standard set of
+10:41
+protocols one of these protocols is ldap
+10:44
+or ldaps this stands for the lightweight
+10:47
+directory access protocol or the
+10:49
+lightweight directory access protocol
+10:51
+secure ldap commonly uses TCP port 389
+10:55
+this directory is usually separated into
+10:58
+different categories such as an
+11:00
+organization an organizational unit or a
+11:03
+common name for example at mess Studios
+11:06
+we might have a production
+11:07
+organizational unit a support
+11:09
+organizational unit and an engineering
+11:12
+organizational unit and of course within
+11:14
+those there may be individuals using a
+11:17
+common name such as Sam or Daniel and we
+11:20
+might also have a database called Tech
+11:22
+docs using ldap we can refer to this
+11:24
+database to find where these components
+11:26
+might be and in some cases even provide
+11:28
+a additional details such as
+11:30
+authentication for any individual users
+11:33
+a very common use of ldap is Microsoft's
+11:36
+active directory infrastructure where
+11:39
+that database is able to be referenced
+11:41
+using the ldap
+11:43
+protocol if you are troubleshooting
+11:45
+technology then you're probably very
+11:47
+familiar with remote control access of a
+11:50
+separate machine these days we have
+11:52
+users around the world and it's not very
+11:54
+practical for you to visit every single
+11:56
+one of those users directly to be able
+11:58
+to solve problems s on their computer in
+12:00
+those cases we'll probably use some type
+12:02
+of remote access protocol such as RDP or
+12:06
+remote desktop protocol this allows you
+12:08
+to view and share the desktop on a
+12:11
+Remote device using TCP Port
+12:14
+3389 this is primarily used to access
+12:17
+Windows devices and to be able to
+12:19
+control those windows devices across the
+12:21
+network you can usually do this from a
+12:23
+Windows device itself or from many other
+12:25
+operating systems as well you can use
+12:28
+RDP to control an entire computer or to
+12:30
+Simply run a single application on that
+12:33
+remote computer and although RDP is
+12:35
+commonly associated with connecting to
+12:37
+Windows devices there are also many RDP
+12:40
+clients that would allow you to connect
+12:42
+to that Windows computer from Mac OS
+12:45
+Linux Unix iPhone and other operating
+12:48
+systems as well

@@ -1,0 +1,1784 @@
+0:01
+DNS stands for the domain name system
+0:04
+and this is one of the most critical
+0:06
+resources and services available on our
+0:09
+networks that's because we use DNS to be
+0:11
+able to provide IP addresses when all we
+0:15
+remember is a fully qualified domain
+0:17
+name for example you could type into
+0:19
+your browser
+0:20
+www.professormesser.com
+0:22
+and behind the scenes a DNS resolution
+0:25
+occurs that translates the name www.
+0:29
+professor
+0:31
+into the IP address that is associated
+0:33
+with that particular web server address
+0:36
+this means that we don't have to
+0:37
+remember any specific IP addresses all
+0:40
+we have to remember is the name of the
+0:42
+server that we want to communicate to
+0:44
+behind the scenes DNS will make sure
+0:46
+that we're able to connect to that IP
+0:48
+address DNS provides this resolution and
+0:51
+many other features as well some of
+0:54
+which we'll learn about in this video
+0:55
+today this DNS database is a hierarchy
+0:58
+that allows us to find the IP address of
+1:01
+any fully qualified domain name on the
+1:03
+worldwide internet we refer to DNS as a
+1:07
+distributed database because this is a
+1:09
+database that is scattered throughout
+1:11
+the entire internet portions of this
+1:14
+database are contained on different
+1:16
+servers located on different networks
+1:18
+around the world if we were to drill
+1:20
+down on the specifics of the DNS
+1:22
+standard you would see that there were
+1:23
+13 separate root server clusters this
+1:26
+cluster is more than simply 13 separate
+1:28
+servers in reality there are over a
+1:31
+thousand servers making up that root
+1:33
+server cluster that root cluster allows
+1:36
+us to then communicate with DNS servers
+1:38
+that are handling top level domains
+1:40
+these generic top level domains or gtlds
+1:43
+are the ones that you might recognize
+1:45
+a.com a.org a.net and so on you might
+1:49
+also see these top level domains
+1:50
+separated by country there are about 275
+1:53
+country codes for example the United
+1:55
+States is the US domain Canada isca the
+1:59
+United kingdoms. and so on when we say
+2:03
+that the DNS database is a hierarchy
+2:06
+this is a visual representation of what
+2:08
+we mean underneath the top level domains
+2:11
+is a domain name such as
+2:12
+professormesser.com and you'll notice
+2:14
+there's the doom and just under the do
+2:17
+com is theprofessor Messer you can
+2:20
+continue to add layers to this hierarchy
+2:22
+for example our web server at Professor
+2:24
+Messer is
+2:26
+www.professormesser.com
+2:28
+we might also a mail.
+2:31
+professormesser.com and so on and of
+2:33
+course you could have individual servers
+2:36
+and devices underneath those domain
+2:38
+names as well so you could have a katy.
+2:41
+east. professormesser.com or a judy.
+2:44
+west. professormesser.com this allows
+2:47
+you to organize your DNS infrastructure
+2:50
+into a way that makes sense for your
+2:51
+organization and have it accessible to
+2:54
+anyone in the world if you wanted to get
+2:57
+some insight into how a particular DNS
+3:00
+server might be configured you might
+3:01
+want to use different tools to be able
+3:03
+to access that database one of these
+3:06
+tools is the Dig command dig is a common
+3:09
+command on Linux and Mac OS and some
+3:11
+versions of Windows also have a dig
+3:14
+version that you could install dig
+3:16
+allows you to perform a query against a
+3:18
+DNS server so if we dig
+3:21
+www.professormesser.com we get the
+3:24
+results that are on this page it shows
+3:26
+us what commands we are using gives us
+3:28
+exactly what question is being asked of
+3:31
+that particular DNS server and then
+3:33
+provides answers to the question that
+3:34
+was asked in this case making a query
+3:37
+for www.professorpuzzle.com
+3:59
+remaining IP addresses to communicate to
+4:02
+our web server if you're on Windows you
+4:04
+can use the NS lookup command to provide
+4:06
+the same information for example
+4:08
+nslookup of professormesser.com will
+4:11
+return the same answers with the same
+4:13
+three IP
+4:14
+addresses when we make that query to the
+4:17
+DNS server we are returned information
+4:19
+that is contained within the records of
+4:21
+that DNS database those records are
+4:24
+referred to as resource records or RR
+4:27
+those resource records contain
+4:28
+information about the IP addresses we'd
+4:31
+like to query their certificate
+4:32
+information email details host Alias
+4:35
+names and much more this is one of the
+4:38
+reasons that we often say that a DNS
+4:40
+configuration is not something you
+4:41
+should toy around with if you're not
+4:43
+familiar with what you're doing one
+4:45
+mistake made to the database inside this
+4:47
+DNS server could cause one or more of
+4:50
+your devices to suddenly become
+4:52
+unavailable to anyone else on the
+4:54
+internet if you are going to make a
+4:56
+change to a DNS server just keep in mind
+4:58
+that you should always a backup and a
+5:00
+way to easily revert to that backup if
+5:03
+you run into any
+5:04
+problems if you manage your own DNS
+5:07
+server then this will probably look
+5:08
+familiar this is a configuration of a
+5:11
+DNS server you can see there is an SOA
+5:14
+record at the top an MX record some a
+5:17
+records along with that and C Name
+5:20
+Records also at the bottom in this video
+5:22
+we'll go through each of these different
+5:24
+record types so that you'll be familiar
+5:26
+with why we would add that information
+5:28
+into our DNS server config my DNS Server
+5:32
+doesn't provide me with a way to look at
+5:34
+the raw text configuration file but
+5:37
+there is a web-based front end that I
+5:39
+can view so this is the same information
+5:41
+but it's from a web front end for my DNS
+5:44
+server from this webbased front end I
+5:46
+could add new records I can modify the
+5:48
+records that are already here or make
+5:50
+any changes that I need to in my DNS
+5:54
+configuration one of the most common
+5:56
+records in a DNS server is an a record
+5:58
+you might also see these as a quad a
+6:01
+record or
+6:02
+AAAA record these are records that
+6:05
+Define the IP address for particular
+6:08
+host name if you're adding or modifying
+6:10
+an a record that address record is used
+6:13
+for IP version 4 addresses if you're
+6:15
+modifying a quad a record that record is
+6:18
+being used for IP version 6 addresses to
+6:21
+be able to see what this might look like
+6:23
+in a configuration file I have a record
+6:25
+here for my web server www. professor
+6:30
+this is an internet address or IP
+6:32
+version for address and the a specifies
+6:35
+that this is an address record and the
+6:37
+other part of this record shows it to be
+6:40
+16259 2461 164 that is the IP address
+6:45
+that I would like return to an in user
+6:47
+if they request it for
+6:50
+www.professormesser.com so if someone
+6:52
+sends a request to a DS server and asks
+6:55
+what's the IP address of
+6:57
+www.professormesser.com this record is
+7:00
+accessed and it provides the answer of
+7:03
+16259
+7:06
+24664 if you're not editing a DNS serers
+7:09
+text based configuration file then you
+7:11
+might be adding a record through the
+7:12
+web-based front end like I do I'm adding
+7:15
+an a record the name of the host is www
+7:18
+the IP address is 16259 2461 164 and the
+7:23
+time to live which is how long someone
+7:25
+will remember this IP address is set to
+7:28
+15 minutes after after 15 minutes this
+7:30
+record will time out from a user's
+7:32
+workstation and they will need to
+7:34
+request that IP address to continue
+7:36
+communicating to
+7:38
+www.professormesser.com this allows me
+7:41
+to make changes to this IP address at
+7:43
+any time and I know that all of those
+7:45
+changes will eventually be rolled out
+7:47
+across the internet in no more than 15
+7:50
+minutes the process for adding a quad a
+7:52
+record is very similar we specify a quad
+7:55
+a record the name of the device the IP
+7:57
+version 6 address that we'd like to use
+7:59
+and the time to live that we would like
+8:01
+associated with that
+8:03
+record there may be times when a
+8:06
+particular server is referenced using
+8:08
+different names for example you might
+8:10
+have one server that's used as a web
+8:12
+server that might also be your DNS
+8:14
+server it might also be an ntp server
+8:17
+and it also might be a mail server but
+8:19
+instead of referencing that server with
+8:21
+a single name we can use different names
+8:23
+to associate the different resources for
+8:26
+example if you have a server called
+8:27
+mail. example.com
+8:29
+you might also want to use canonical
+8:32
+names or cames for that server for chat
+8:36
+FTP and www this means every time
+8:39
+somebody references chat. example.com
+8:43
+ftp.com or
+8:46
+www.example.com they're all really
+8:48
+communicating to a single server called
+8:50
+mail. example.com this makes it very
+8:54
+easy to administer if you ever need to
+8:55
+change the IP address of mail.
+8:57
+example.com you simply change the a
+9:00
+record for mail. example.com and all of
+9:03
+the canonical records can stay exactly
+9:05
+the
+9:07
+same one of the most critical records on
+9:09
+any DNS server has got to be the MX
+9:12
+records this stands for the mail
+9:14
+exchanger records and these make sure
+9:17
+that you're able to both send and
+9:18
+receive email messages from your domain
+9:21
+the MX record itself is relatively
+9:23
+straightforward it starts with an in in
+9:25
+for the internet MX stands for the mail
+9:28
+exchanger record and then you simply
+9:30
+have the name of the mail server in this
+9:33
+case it's mail. example.com when other
+9:36
+mail servers need to send an email
+9:38
+message to James professormesser.com
+9:40
+they reference my mail server to see
+9:43
+where the MX record is determine the
+9:45
+name of the mail server then perform
+9:47
+another lookup to determine the address
+9:50
+record for that mail server and now they
+9:52
+know exactly what IP address they should
+9:54
+be sending that email to in this
+9:56
+particular case that remote email server
+9:58
+would reference our DNS they would see
+10:00
+that there is an MX record specifying
+10:02
+mail. example.com then they would look
+10:04
+at the address records and see that
+10:06
+mail. example.com is
+10:10
+12324 41 each domain has its own set of
+10:14
+MX records here's another MX record I
+10:16
+use for a different domain name this is
+10:19
+one that I use through this web-based
+10:21
+front end the name of the host is mail
+10:23
+and the target name is mail. hover.com
+10:27
+doc. hosted email
+10:30
+by using this front end I'm able to make
+10:32
+changes to that MX record to be able to
+10:34
+send mail exactly where I need it to go
+10:37
+if you're configuring your MX record
+10:39
+through a web-based front end then it's
+10:41
+the same editing process we've already
+10:43
+used where we would choose the name of
+10:45
+the record specify the host name the
+10:47
+target name and the time to
+10:50
+live so far we've talked a lot about IP
+10:53
+addresses fully qualified domain names
+10:55
+and the resolution between those two in
+10:57
+our DNS server but we can also use our
+11:00
+DNS server to store important
+11:02
+information that we would like others to
+11:04
+be able to access we refer to these
+11:06
+records as text records or txt records
+11:10
+these are human readable text records
+11:12
+that anyone could reference from our DNS
+11:15
+server and we'll look at an example of
+11:17
+those in just a moment sometimes you'll
+11:19
+see these DNS records being used for
+11:21
+verification often you'll be configuring
+11:24
+an email setting and the email
+11:26
+configuration needs to ensure that you
+11:28
+have control of your DNS server and to
+11:31
+be able to verify that you add a special
+11:33
+text record into your DNS that they can
+11:36
+then access from their site and there
+11:38
+are a number of text records that we use
+11:40
+to minimize the instance of spam and
+11:43
+we'll talk more about those specific
+11:44
+text messages as well if you wanted to
+11:47
+view the text records available on my
+11:48
+DNS server you can use the Dig command
+11:51
+with a dig professormesser.com and then
+11:54
+specify txt it will then show you all of
+11:57
+the different text messages that are
+11:58
+currently configured on my DNS server in
+12:01
+this example there are two text records
+12:03
+that appear one for a stripe
+12:05
+verification and another one that's
+12:06
+being used as an SPF record and we'll
+12:10
+look more at SPF records in just a
+12:11
+moment you can also use the NS lookup
+12:14
+command to view these text records let's
+12:16
+look at all of the text records
+12:18
+associated with the Google DNS we would
+12:20
+use NS lookup dype equals txt and then
+12:26
+google.com all of the results that you
+12:28
+see here are the text records associated
+12:30
+with the google.com domain name I
+12:34
+mentioned earlier that we often use
+12:35
+these text records to be able to
+12:37
+minimize the amount of spam that someone
+12:39
+might receive or to be able to verify
+12:42
+that the email messages that have been
+12:43
+sent really did come from your domain
+12:46
+one of the ways we do this is with a
+12:48
+dcam record a domain Keys identified
+12:51
+mail record if you were to look at the
+12:54
+text records on a DNS server you may see
+12:56
+one text record that specifies D equal D
+13:00
+kimim that is a domain Keys identified
+13:03
+mail record in the DNS server itself
+13:06
+you'll find a public key associated with
+13:09
+this record on your email server is the
+13:12
+associated private key of this key pair
+13:15
+all of the outgoing messages from The
+13:17
+Professor Messer website are digitally
+13:19
+signed with my private key when another
+13:22
+mail server receives an email that I
+13:24
+have sent it sees that that message has
+13:26
+been digitally signed it then can refer
+13:29
+refer to my public DNS server to
+13:31
+retrieve the public key and then verify
+13:34
+that the digital signature is indeed
+13:36
+valid this means the recipient knows
+13:38
+that that message really was sent from
+13:41
+my official email server if you were to
+13:44
+look at the configuration on a webbased
+13:45
+front end it looks very similar with the
+13:47
+text based host name which is usually
+13:50
+provided by your email server and then
+13:52
+you can find the actual content which is
+13:55
+the public key that you would put into
+13:57
+that message this can also be config
+13:59
+from a web-based front end by adding the
+14:01
+dkim parameters as the host name and
+14:04
+then in the text part of the field you
+14:06
+would add the public key as that
+14:08
+structured content and in this case I'm
+14:10
+specifying a 15-minute time to
+14:13
+live it's very common for an
+14:15
+organization to send email from many
+14:18
+different resources there might be a
+14:20
+private internal email server that's
+14:22
+being used for outgoing mail there might
+14:24
+also be a third party that's used to
+14:26
+send bulk email messages perhaps once a
+14:28
+day or once a week and there needs to be
+14:31
+a way that everyone can trust that all
+14:33
+of those different email servers are
+14:35
+legitimate and have been configured
+14:37
+specifically to send messages on my
+14:40
+behalf the way that we would provide
+14:42
+that information is through a text
+14:44
+record that contains sender policy
+14:46
+framework or SPF information this SPF
+14:49
+record allows us to put all of the email
+14:52
+servers that we use this means if your
+14:54
+email server receives a message from
+14:57
+professormesser.com
+14:59
+it can look at that message to see what
+15:01
+the origination server was and then
+15:03
+verify that that origination server is
+15:05
+listed in our list of SPF allowed hosts
+15:09
+if you receive a message from
+15:11
+professor.com and the origination email
+15:14
+server is not in this list then you've
+15:16
+probably received a message from a third
+15:19
+party that is not associated with our
+15:21
+domain and adding a text record for SPF
+15:24
+is very similar to adding any other type
+15:26
+of text record we would specify the
+15:28
+record type as txt in the case of an SPF
+15:31
+record the host name would be all hosts
+15:33
+or the at sign and the content is listed
+15:36
+here with the appropriate outgoing email
+15:38
+server
+15:40
+name this means any email server that is
+15:43
+receiving a message can perform a number
+15:45
+of different checks for the validity of
+15:48
+that message it can perform an SPF check
+15:50
+to confirm that it really did come from
+15:52
+a trusted server and it can check the
+15:54
+digital signature using the public key
+15:57
+located in the dkim text record but what
+16:00
+if one or both of these tests is invalid
+16:03
+what if this message did not originate
+16:05
+from a trusted email server for that
+16:07
+domain and what if it did not have a
+16:09
+valid digital signature in that case the
+16:12
+receiver of that email message needs to
+16:14
+make a decision on what to do with that
+16:16
+email is this email thrown out
+16:18
+completely is the email allowed to
+16:20
+continue through to the in user or is it
+16:23
+placed in a Spam or quarantine folder by
+16:25
+default it would be nice if I could tell
+16:28
+the receiving server that if you receive
+16:30
+any messages from me that don't validate
+16:32
+with a proper mail server or they don't
+16:35
+validate with a proper digital signature
+16:37
+that those mail messages should be
+16:39
+dropped and not sent to the user or I
+16:42
+might have a different policy that says
+16:43
+Don't remove that particular email
+16:45
+message but send it into the spam folder
+16:48
+and let the user make a decision on
+16:50
+whether that is a legitimate email or
+16:52
+not the way that we're able to let that
+16:54
+recipient of the email message know our
+16:57
+policy is through the use of a DeMark or
+17:00
+domain-based message authentication
+17:02
+reporting and conformance record this is
+17:05
+a text record that allows us the domain
+17:07
+owner to determine what happens with
+17:09
+messages that are identified as spam but
+17:12
+have our domain associated with them
+17:14
+third parties can look at this record on
+17:16
+our DNS server and see that we would
+17:18
+either like to allow all messages to be
+17:20
+accepted send those messages to a spam
+17:23
+folder or simply reject the email
+17:25
+completely we can also include an email
+17:28
+address with that DeMark record so that
+17:30
+the disposition of that particular
+17:33
+message is sent to a central reporting
+17:35
+tool that means that we can create a
+17:37
+report showing how many of our email
+17:39
+messages got through and how many email
+17:41
+messages were identified as spam here's
+17:44
+an example of a text record that
+17:46
+contains the DeMark information in this
+17:48
+particular case we're telling anyone
+17:50
+that receives a message that did not
+17:52
+validate properly to put that message
+17:54
+into their quarantine folder or spam
+17:57
+folder and take the results of that
+17:59
+particular disposition and send it to
+18:01
+the email address listed here to be able
+18:03
+to compile it into a larger report later
+18:06
+on
+
+0:01
+we've become very accustomed to turning
+0:03
+on our desktop computers our laptops or
+0:05
+our mobile devices and automatically
+0:08
+getting an IP address but it wasn't
+0:10
+always this way there was a time where
+0:12
+you'd have to manually configure all of
+0:14
+these configuration settings in your
+0:16
+device so you would manually have to put
+0:18
+in your IP address your subnet mask your
+0:21
+default gateway your DNS servers and any
+0:24
+other IP configuration parameters if you
+0:27
+had a small number of devices then you
+0:29
+probably could configure these devices
+0:31
+manually with the static IP addresses
+0:34
+that never changed but today we have
+0:36
+thousands of devices on one single
+0:39
+network and it would be very difficult
+0:41
+for an administrator to manually
+0:43
+configure every single one of those
+0:45
+devices that's why we created DHCP or
+0:48
+the dynamic host configuration protocol
+0:51
+this is a protocol created in 1997 to
+0:54
+allow us the system administrator to
+0:56
+automatically assign this information
+0:58
+across all of the systems in our
+1:00
+infrastructure so the next time you go
+1:02
+to a coffee shop you open your laptop
+1:04
+and immediately start accessing the
+1:06
+internet you can thank
+1:09
+DHCP although we don't often see this
+1:11
+process that occurs behind the scenes to
+1:13
+be able to assign these IP addresses it
+1:16
+is important as a system administrator
+1:18
+that you know what's really going on we
+1:20
+often refer to this automated process as
+1:23
+DORA d O R A dora stands for discover
+1:28
+offer request and acknowledge this
+1:31
+process occurs every time someone
+1:33
+connects to the network for the first
+1:34
+time and needs to get an IP address from
+1:37
+a DHCP server let's take a scenario
+1:40
+where we have Sam on the network who
+1:43
+currently has just turned on her
+1:44
+computer and does not yet have an IP
+1:46
+address we also have Jack on this
+1:48
+network who's also just turned on his
+1:50
+laptop and Jack also does not have an IP
+1:53
+address let's start with Sam's laptop
+1:56
+and the default configuration for
+1:57
+practically every operating system these
+1:59
+days is to look for a new IP address
+2:02
+using DHCP so the first thing that Sam's
+2:05
+computer will do is to perform step one
+2:08
+or the discover step this means that her
+2:10
+laptop will go out to the network and
+2:13
+try to discover where all of the
+2:14
+different DHCP servers might be and what
+2:17
+IP addresses might be available for her
+2:19
+workstation if you were to capture
+2:21
+packets on this network you would see a
+2:23
+DHCP discover message sent from Sam's
+2:26
+computer and currently since Sam does
+2:28
+not have an IP address it is sent from
+2:30
+IP address
+2:32
+0.0.0.0 over UDP port 68 and it's sent
+2:36
+across the network as a broadcast so
+2:38
+that every device on the network will
+2:40
+see this communication so this broadcast
+2:42
+will go from Sam's computer when it
+2:44
+reaches the switch because it's a
+2:46
+broadcast it is sent to all of the
+2:48
+devices on this local subnet one of the
+2:51
+devices that received that discover
+2:53
+message is the DHCP server that's on
+2:56
+this network and you can see this DHCP
+2:58
+server has an IP address of 1010.99
+3:02
+this server now sends a DHCP offer to
+3:05
+Sam's workstation using a broadcast
+3:08
+because obviously Sam does not yet have
+3:10
+an IP address so this step two offer is
+3:14
+being sent from the DHCP server to an
+3:16
+all1's broadcast or
+3:21
+255.255.255.255 here's the offer from
+3:23
+the DHCP server and as a broadcast it's
+3:26
+sent to all of the devices on this local
+3:28
+subnet obviously Sam has also received
+3:32
+this broadcast which contains an offer
+3:34
+from the DHCP server of an IP address
+3:37
+that could be configured for Sam's
+3:39
+machine obviously if there were more
+3:41
+DHCP servers on this network Sam would
+3:44
+receive multiple offers to choose from
+3:47
+and in step three or the request part of
+3:50
+this communication Sam is going to
+3:52
+choose one of the offers that's been
+3:54
+received and send a request for that IP
+3:56
+address back to the DHCP server the
+4:00
+actual packet is a request sent from
+4:02
+Sam's computer using
+4:04
+0.0.0.0 because again Sam does not yet
+4:07
+have an IP address it is sent from UDP
+4:09
+port 68 to 255.255.255.255
+4:13
+255 over UDP port 67 this is obviously
+4:17
+sent from Sam's computer and since it is
+4:20
+a broadcast all of the devices on this
+4:22
+local subnet will receive this request
+4:24
+including the DHCP server the last step
+4:28
+is an important one because it locks in
+4:30
+that IP address on Sam's device this is
+4:33
+sent as an acknowledgement from the DHCP
+4:35
+server acknowledging that that IP
+4:37
+address has now been assigned to Sam's
+4:40
+machine and that IP address won't be
+4:42
+assigned to anyone else for the duration
+4:44
+of that lease this is sent directly from
+4:46
+the DHCP server in this case
+4:49
+1010.99 and again it's sent as a
+4:52
+broadcast to everyone on this network to
+4:57
+255.255.255.255 over UDP port 68 and now
+5:01
+that Sam has received that
+5:02
+acknowledgement the IP address can
+5:04
+finally be updated on Sam's computer and
+5:07
+Sam has now been assigned
+5:10
+1010.42 this is the process that occurs
+5:12
+for anyone connecting to the network so
+5:14
+when Jack turns on his computer he will
+5:16
+also go through that same four-step
+5:20
+process how did the DHCP server know
+5:23
+what IP address to assign to Sam's
+5:25
+workstation was able to do that because
+5:28
+a predefined list of IP addresses was
+5:30
+already configured on that DHCP server
+5:33
+we refer to that predefined list of IP
+5:36
+addresses and all of the other
+5:38
+configuration settings for that device
+5:40
+as a DHCP scope this might include all
+5:43
+of the IP addresses available for
+5:45
+devices on this network as well as
+5:47
+excluded addresses that might be used
+5:49
+for other devices on the network that
+5:51
+should not be given out as an IP address
+5:54
+for example you might have switches or
+5:55
+routers on this network that have static
+5:57
+IP addresses we don't want to assign
+5:59
+those IP addresses to another device
+6:02
+creating a conflict on the network we
+6:05
+also configure the subnet mask as part
+6:07
+of this DHCP scope lease durations that
+6:10
+we might use and any other options that
+6:12
+are important for the IP configuration
+6:15
+of these devices things like a DNS
+6:17
+server a default gateway voiceover IP
+6:20
+server IP addresses and other details
+6:23
+inside of that DHCP scope are pools of
+6:26
+IP addresses that the DHCP server will
+6:29
+choose from to be able to automatically
+6:32
+assign IP addresses to other devices
+6:34
+these will usually be large groups of IP
+6:37
+addresses for example you might have
+6:41
+192.168.1.0/24
+6:43
+2.0/24
+6:45
+3.0/24 and so on if anyone connects to
+6:48
+the network from any of those subnets
+6:50
+the DHCP server will pull from the
+6:52
+appropriate pool and provide that
+6:54
+available IP address to the end device
+6:57
+although this is often a single large
+6:59
+contiguous pool of IP addresses it
+7:02
+doesn't have to be we could certainly
+7:04
+configure different sections of IP
+7:06
+addresses to assign which means you
+7:08
+might put exclusions in the middle of
+7:10
+the pool so that certain addresses will
+7:13
+always be assigned to a particular
+7:14
+device and you can use all of the other
+7:16
+addresses as any available dynamic
+7:19
+address for any other device on the
+7:21
+network let's look at how the scope is
+7:24
+configured on a DHCP server this is the
+7:27
+DHCP service that's running on Windows
+7:29
+Server and in server manager is the IP
+7:32
+version 4 DHCP server and this one
+7:35
+happens to have a scope that's titled
+7:39
+165.245.44.0 this assigns IP addresses
+7:42
+in that range for this particular subnet
+7:45
+so on this DHCP server we would add all
+7:48
+of the available addresses for this
+7:50
+subnet into this address pool we could
+7:52
+also view any leases that have already
+7:55
+been assigned from this DHCP server we
+7:58
+might also have devices that always
+8:00
+receive the same IP address every time
+8:03
+they're turned on we refer to those as a
+8:05
+DHCP reservation and then if there are
+8:08
+additional options that you need to add
+8:10
+as part of the scope the DHCP server
+8:12
+will also give you an area of the
+8:14
+configuration to put all of those
+8:16
+settings as well
+8:18
+we often think of DHCP as randomly
+8:21
+assigning any available IP address to
+8:23
+any device that connects to the network
+8:26
+but sometimes you do need an IP address
+8:28
+to stay with a particular device maybe
+8:31
+it's a file server or a web server or
+8:33
+maybe you always want your router to
+8:35
+have the same IP address every time it's
+8:38
+turned on now of course you could go to
+8:40
+all of those servers and routers and
+8:42
+switches and manually configure a static
+8:45
+address on those devices but if you
+8:48
+happen to change anything with your IP
+8:50
+addressing scheme that means you would
+8:51
+have to revisit all of those devices to
+8:54
+manually update any configuration
+8:56
+changes if you're using a DHCP address
+8:59
+reservation you can make all of those
+9:01
+changes in the DHCP server itself and
+9:04
+not have to manually update all of those
+9:07
+individual devices the way that we're
+9:09
+able to associate a device with a
+9:12
+particular IP address is we configure
+9:14
+the MAC address of that device in the
+9:16
+DHCP server itself we would specify that
+9:20
+this MAC address always receives this
+9:22
+particular IP address sometimes you
+9:25
+might see this referred to as a static
+9:27
+DHCP assignment a static DHCP or simply
+9:31
+an IP reservation here's the DHCP
+9:34
+configuration in one of my routers i
+9:36
+have a range or pool of addresses that
+9:39
+is used this one uses
+9:43
+192.168.1.2 through
+9:46
+192.168.1.254 so anytime you turn on
+9:48
+your computer it will receive an IP
+9:50
+address that is somewhere in that range
+9:53
+however there are two reservations
+9:55
+included as part of that pool that would
+9:58
+not be automatically assigned that's
+10:00
+because we have two devices one called
+10:02
+Prometheus and the other called Odyssey
+10:05
+and you can see the MAC addresses of
+10:06
+both of those devices if we turn on
+10:09
+Prometheus it will always receive an IP
+10:11
+address of
+10:13
+192.168.1.6 and Odyssey will always
+10:16
+receive
+10:18
+192.168.1.9 this means that we know that
+10:20
+those two devices will always receive
+10:23
+the exact same IP address every time we
+10:26
+turn on that device and anyone else on
+10:28
+our network that happens to connect will
+10:30
+receive any other available IP address
+10:33
+from the available pool
+
+0:01
+let's start our conversation referring
+0:04
+to LANs or local area networks this is a
+0:08
+group of devices that are connected
+0:10
+together into a single broadcast domain
+0:14
+that means if we send a broadcast out on
+0:16
+one of these devices to this LAN all of
+0:20
+the other devices in this LAN will also
+0:23
+see the broadcast over on this side we
+0:25
+have a separate switch and because it is
+0:27
+a separate switch it is a separate
+0:30
+broadcast domain which means any device
+0:32
+on this network that sends a broadcast
+0:34
+would only be seen by other devices
+0:37
+connected to that same broadcast domain
+0:39
+that means if we send a broadcast over
+0:41
+on the red network no devices on the
+0:44
+blue network will be able to see that
+0:46
+broadcast because this is a single
+0:48
+broadcast domain that is separate from
+0:51
+all of the other broadcast domains from
+0:54
+a security and an organizational
+0:56
+perspective this is a very good design
+0:58
+everyone on the red network is connected
+1:00
+to the red network switch and everybody
+1:03
+on the blue network is connected to the
+1:04
+blue network switch but one of the
+1:06
+challenges with this is that it doesn't
+1:08
+make very efficient use of our switches
+1:11
+for example we have a switch here with
+1:12
+24 interfaces and only two devices are
+1:15
+connected to that device we have a
+1:18
+separate 24- port switch on this side
+1:20
+and that switch also only has two
+1:22
+devices on it if we wanted to save money
+1:25
+and save space in our rack we would put
+1:27
+all of these devices on the same
+1:29
+physical switch but when we do that we
+1:32
+have a problem with all of these devices
+1:34
+being on the same broadcast domain
+1:37
+fortunately many of our modern switches
+1:40
+have the ability to configure a virtual
+1:43
+local area network or a VLAN a virtual
+1:46
+local area network means that we can
+1:48
+assign different interfaces on a switch
+1:51
+to belong to a particular VLAN this is a
+1:54
+very good example of combining two
+1:56
+separate switches into one single switch
+1:59
+but then assigning different interfaces
+2:01
+to different VLANs that means we can
+2:03
+have some interfaces on the switch on
+2:05
+the red VLAN and other interfaces on the
+2:08
+switch on the blue VLAN and because
+2:11
+these VLANs are also separate broadcast
+2:14
+domains if we send a broadcast from any
+2:16
+of these devices on the blue network
+2:18
+that broadcast is only seen by other
+2:21
+devices on these blue network interfaces
+2:24
+the same thing applies for the red
+2:25
+network if we send a broadcast on a red
+2:28
+network device only devices that are
+2:30
+part of that VLAN will be able to see
+2:32
+that broadcast now we have a single
+2:35
+switch with a single power source taking
+2:37
+up the space of a single switch in one
+2:40
+rack and we're able to support multiple
+2:43
+VLANs on that same physical device this
+2:46
+is obviously a much more efficient way
+2:48
+to combine these network interfaces
+2:50
+together and it's a way that we could
+2:52
+take what used to be two physical
+2:54
+devices and now have them running on one
+2:57
+single device with logical separation
+3:00
+between these different interfaces
+3:03
+we can support many VLANs on a single
+3:06
+switch this particular switch has been
+3:07
+configured with three separate VLANs and
+3:10
+we can have some devices connected to
+3:12
+VLAN one which is the gate room we have
+3:15
+other devices that are connected to VLAN
+3:17
+2 that's the dialing room and then VLAN
+3:20
+3 is the infirmary the devices on one
+3:23
+VLAN are not able to communicate to
+3:25
+devices on the other VLANs because they
+3:28
+have been put into a completely separate
+3:30
+broadcast domain from a networking
+3:32
+perspective there might be a good reason
+3:34
+to allow these different VLANs to
+3:36
+communicate to each other and in that
+3:38
+particular case we need a router to be
+3:40
+able to route information from one VLAN
+3:42
+to another some switches allow you to
+3:44
+configure routing functionality within
+3:46
+that switch itself or you may use an
+3:49
+external router just to provide
+3:51
+communication between these different
+3:53
+VLANs another important service that
+3:55
+you'll find on most people's networks is
+3:57
+a VPN or virtual private network this
+4:01
+allows devices to communicate to each
+4:03
+other across a network but it encrypts
+4:05
+all of the data that's being sent over
+4:07
+the network if someone was to capture
+4:09
+that data and view it in a packet
+4:12
+capture program or something similar
+4:14
+they wouldn't be able to understand
+4:15
+anything that was being sent back and
+4:17
+forth between those devices there's
+4:19
+usually a specialized device that is
+4:21
+able to encrypt and decrypt this
+4:24
+information in real time we refer to
+4:26
+that device as a concentrator this is
+4:28
+usually built into a firewall or some
+4:30
+other type of purpose-built appliance
+4:32
+this allows everyone to connect to a
+4:34
+central concentrator which is then
+4:36
+responsible for converting between the
+4:38
+encrypted data coming across the network
+4:41
+decrypting that so that we can view it
+4:43
+on the inside of our network and
+4:45
+reversing that process to send
+4:46
+information back to the originating
+4:48
+station this is commonly implemented as
+4:51
+hardware but there are VPN concentrator
+4:53
+solutions that are provided as software
+4:56
+only that we can run on an existing
+4:58
+server many operating systems have VPN
+5:01
+client software that's built into the
+5:03
+operating system itself but you might
+5:05
+also have third-party VPN software that
+5:07
+you would then install into an operating
+5:10
+system if you've ever worked from home
+5:13
+then you've probably used a client to
+5:16
+siteVPN the client would be you the
+5:18
+remote user at home and the site would
+5:21
+be a concentrator at a central point
+5:23
+usually at the edge of a much larger
+5:26
+corporate network all of the users and
+5:28
+devices that are outside the building
+5:30
+would connect to that central
+5:32
+concentrator across the internet and
+5:34
+that concentrator is obviously connected
+5:36
+to the internal corporate network this
+5:39
+means that all of the communication from
+5:40
+the remote user to the concentrator are
+5:43
+always encrypted so we know that all of
+5:45
+the data we're sending over the network
+5:47
+is completely protected the concentrator
+5:50
+is responsible for taking that encrypted
+5:52
+communication decrypting it and sending
+5:54
+it on its way to the resources that
+5:56
+we're accessing inside of our corporate
+5:58
+network this might also be configured as
+6:01
+an always on configuration so the moment
+6:03
+the remote user turns on and logs into
+6:06
+their laptop it automatically creates
+6:08
+that link to the concentrator this means
+6:10
+you don't have to worry about manually
+6:12
+starting your VPN software if you are on
+6:15
+your network and connected to the
+6:16
+internet then you always have an
+6:18
+encrypted channel all the way back to
+6:20
+your VPN concentrator for large
+6:22
+organizations you might have a corporate
+6:24
+network at a central location and then
+6:26
+you might have other remote sites at
+6:28
+other physical locations one of the ways
+6:30
+that you're able to connect those sites
+6:32
+together is through an existing internet
+6:34
+link of course we're always concerned
+6:36
+about security and somebody being able
+6:38
+to see the information we're sending
+6:40
+over the internet so it's very common
+6:42
+for organizations to connect these sites
+6:44
+together using a
+6:46
+sightto-sightVPN this is usually
+6:47
+implemented using firewalls so you'd
+6:49
+have a firewall connecting to the
+6:51
+corporate network the internet and then
+6:53
+a separate firewall that's connecting to
+6:55
+that remote site you would then
+6:57
+configure a sight to-sightVPN between
+6:59
+these two sites so that anytime you're
+7:02
+sending information from your remote
+7:03
+site back to the corporate network it
+7:05
+will always be going through an
+7:07
+encrypted channel the firewalls act as
+7:09
+your VPN concentrator so anything on the
+7:11
+inside of your network is in the clear
+7:14
+but anytime you have to send information
+7:15
+across the internet to a remote site it
+7:18
+will always be encrypted using the sight
+7:20
+to-sightVPN

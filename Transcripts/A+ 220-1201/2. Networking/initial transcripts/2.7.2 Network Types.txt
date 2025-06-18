@@ -1,0 +1,236 @@
+0:02
+if you're plugging into an Ethernet
+0:04
+connection or using a local 802.11
+0:07
+wireless network then you are
+0:08
+communicating over a local area network
+0:11
+or a LAN we usually refer to a LAN as a
+0:15
+group of networks that are close to our
+0:17
+location so this might be on the floor
+0:20
+of a building or in a group of buildings
+0:22
+that make up this particular local area
+0:25
+network one of the common
+0:26
+characteristics of a LAN is that we
+0:29
+usually get our fastest speeds by a
+0:31
+local area network if we're connecting
+0:33
+to networks that are farther away then
+0:36
+we're probably not on a local area
+0:38
+network anymore and therefore we're not
+0:40
+getting those same high
+0:42
+throughputs if you're connecting to a
+0:44
+location that's in another city another
+0:47
+state another country or anywhere around
+0:49
+the world then you're communicating over
+0:51
+a wide area network or a WAN because of
+0:55
+the challenges associated with
+0:56
+communicating over such long distances
+0:59
+wide area networks tend to be a bit
+1:01
+slower than communicating over a LAN
+1:03
+there also might be many different
+1:05
+technologies used to be able to
+1:07
+communicate over this wide area network
+1:10
+for example you might be communicating
+1:11
+using pointto-oint serial connections or
+1:14
+it might be an NLS network or
+1:16
+multi-protocol label switching network
+1:18
+and some wide area networks may use
+1:20
+communication facilities here on Earth
+1:22
+we refer to these as terrestrial
+1:24
+networks or we might use satellites to
+1:27
+communicate across the WAN those would
+1:28
+be non-aterrestrial
+1:31
+networks we've also created specialized
+1:33
+networks for devices and components that
+1:36
+are close to us as individuals we refer
+1:39
+to these as a PAN or personal area
+1:42
+network if you're communicating with
+1:44
+Bluetooth infrared or near field
+1:46
+communication you're probably
+1:48
+communicating over a PAN we might be
+1:51
+using a personal area network inside of
+1:53
+our vehicle to have audio output from
+1:55
+our phone and be able to communicate
+1:57
+hands-free or it may be integrating with
+1:59
+the media services that are already on
+2:02
+your existing mobile device many of the
+2:04
+wireless headsets that we use these days
+2:06
+are communicating using Bluetooth that
+2:09
+certainly would be a personal area
+2:10
+network protocol and some of the health
+2:13
+related technologies we use also use a
+2:15
+personal area network so if you're
+2:17
+gathering health details on your
+2:19
+smartphone or you're communicating
+2:21
+directly to your workout devices then
+2:23
+you're probably using a personal area
+2:26
+network we've talked about a local area
+2:29
+network and we've talked about a wide
+2:31
+area network but there is a network that
+2:33
+sits in the middle of those two that
+2:35
+would be a metropolitan area network or
+2:38
+a man this is a network that tends to be
+2:41
+in a single geographical area such as a
+2:44
+city if we have a lot of remote
+2:46
+locations around the same city we can
+2:48
+usually connect to those using a
+2:50
+metropolitan area network traditionally
+2:53
+these metropolitan area networks have
+2:55
+been proprietary but increasingly we've
+2:57
+seen these standardized on Ethernet
+3:00
+specifically metro Ethernet which
+3:02
+describes a type of Ethernet
+3:03
+connectivity in our local city and you
+3:06
+might also find that your local
+3:07
+government has put their own fiber into
+3:10
+the ground since they do have right of
+3:12
+way they're able to put anything they
+3:14
+would like inside of the pipes and they
+3:16
+can create their own metropolitan area
+3:18
+network using their own
+3:20
+fiber many organizations will have a
+3:23
+repository of storage that they refer to
+3:26
+as a sand or storage area network this
+3:29
+is usually a high-speed connectivity
+3:32
+because we're often transferring large
+3:34
+amounts of data into and out of that
+3:36
+sand to the devices accessing the sand
+3:39
+and this looks and feels like a local
+3:41
+storage device so you can even take a
+3:43
+very large file and change a very small
+3:45
+bit of data within that file very very
+3:48
+efficiently we refer to this as block
+3:50
+level access because we're moving so
+3:53
+much data in and out of the sand we're
+3:55
+usually putting these on their own
+3:57
+isolated network connected to the rest
+3:59
+of the network over very high-speed
+4:01
+connections
+4:03
+and in our homes and businesses we often
+4:05
+will install wireless networks that are
+4:08
+802.11 technology referred to as WLAN or
+4:12
+wireless LAN these allow you to move
+4:14
+around your local area and still have
+4:16
+access to all of the resources you need
+4:19
+over your mobile devices your laptops or
+4:21
+anything else that's using this wireless
+4:24
+network and if you're working in
+4:26
+multiple buildings or a larger campus
+4:28
+area you can add additional access
+4:30
+points to expand the reach of your
+4:32
+wireless local area network

@@ -1,0 +1,640 @@
+0:02
+as we've discussed in a previous video
+0:04
+the port numbers used by TCP and UDP can
+0:07
+be very important when trying to
+0:09
+communicate to a service so it's useful
+0:11
+to know what those port numbers are if
+0:13
+you're trying to troubleshoot any type
+0:15
+of communications issue we might also
+0:18
+need to know these port numbers if we're
+0:19
+performing some type of firewall
+0:21
+configuration our firewalls often use
+0:24
+TCP and UDP port numbers as one of the
+0:27
+criteria that it uses to allow or to
+0:29
+block Lo Network traffic as you go
+0:31
+through this video you'll find there are
+0:33
+a number of port numbers that you're
+0:35
+required to know as part of your A+
+0:37
+studies you'll find that memorizing
+0:39
+these port numbers can sometimes feel a
+0:41
+bit tedious but after you start using
+0:44
+these applications configuring firewalls
+0:46
+and troubleshooting network
+0:47
+communication you'll find that most of
+0:49
+these port numbers become second nature
+0:52
+for the purposes of your A+ studies make
+0:54
+sure that you understand not only the
+0:56
+port number and the protocol associated
+0:59
+with it but that you understand why that
+1:01
+particular protocol is important and how
+1:03
+it's used on the
+1:05
+network the first port numbers we'll
+1:07
+look at are port numbers TCP Port 20 and
+1:10
+TCP Port 21 these two port numbers are
+1:13
+commonly associated with FTP or the file
+1:16
+transfer protocol FTP is a generic file
+1:19
+transfer protocol that could be used by
+1:21
+many different operating systems to
+1:22
+transfer information from one device to
+1:25
+another and different types of FTP may
+1:27
+use one or both of these prot protocols
+1:30
+TCP Port 20 is often used as the active
+1:33
+data transfer and Port 21 is often used
+1:37
+as the administration or control Port
+1:40
+the FTP protocol often requires you to
+1:42
+have some type of authentication into
+1:44
+this system so it may ask for a username
+1:46
+a password or some other type of
+1:49
+authentication Factor FTP can also be
+1:51
+configured with an anonymous or generic
+1:54
+login so that anyone can log in
+1:56
+regardless of what the username or
+1:58
+password might be FTP is also a
+2:01
+full-featured protocol that not only can
+2:03
+transfer a file but can list the files
+2:05
+available in a particular directory we
+2:07
+can add delete change the file name and
+2:10
+perform other Administration functions
+2:12
+as
+2:13
+well as part of our tasks as server
+2:15
+administrators or network administrators
+2:18
+we are often required to connect to our
+2:20
+Remote device and make configuration
+2:22
+changes at the command line to be able
+2:25
+to do this securely across the network
+2:27
+we need to use a protocol that can
+2:29
+encrypt all of this data as we're
+2:30
+sending it from one side to the other
+2:33
+the most common protocol used for this
+2:35
+function is SSH or secure shell it
+2:38
+provides an encrypted communication link
+2:40
+over TCP Port 22 this is very similar to
+2:44
+the old style tnet protocol but tnet is
+2:47
+one that we commonly no longer see in
+2:50
+use because it does not provide any type
+2:52
+of encryption if you're communicating at
+2:54
+the command line to a server you should
+2:56
+always be using SSH and you'll find that
+2:59
+it almost always is using TCP Port
+3:02
+22 however you may find that there is a
+3:05
+system in your network that is very old
+3:08
+that does not support SSH and the only
+3:11
+way to administer that device at the
+3:13
+command line is using the older tnet
+3:16
+protocol telnet stands for
+3:17
+telecommunications Network and it
+3:19
+commonly communicates over TCP Port 23
+3:23
+visually and functionally this works
+3:25
+identical to SSH you have a command line
+3:28
+you can log into a device with your
+3:30
+username and password you can administer
+3:32
+that device remotely but the major
+3:35
+difference is that all of the
+3:36
+communication used for tnet is in the
+3:38
+clear there's no encryption used for
+3:41
+tnet and that's why most organizations
+3:43
+will prevent anyone from using the tnet
+3:46
+protocol and instead recommend that you
+3:48
+use SSH to perform this
+3:51
+communication email continues to be one
+3:54
+of the most popular forms of
+3:55
+communication across our networks and to
+3:58
+be able to facilitate that communication
+4:00
+we need some type of protocol that can
+4:02
+send mail from one server to another
+4:05
+that protocol is the simple mail
+4:06
+transfer protocol or SMTP SMTP commonly
+4:10
+uses TCP Port 25 to be able to send
+4:14
+these email messages from one email
+4:16
+server to another you may also find that
+4:19
+some devices are configured to send
+4:20
+information to the email server
+4:22
+initially also using this SMTP protocol
+4:26
+so not only are you configuring this on
+4:28
+your mail server you may also o find
+4:30
+that you're configuring SMTP with the
+4:32
+appropriate port number on your local
+4:34
+device to be able to receive email
+4:36
+messages we would commonly use protocols
+4:39
+such as IMAP or pop 3 and we'll talk
+4:42
+about those protocols and their
+4:43
+Associated port numbers later in this
+4:46
+video in these videos so far we've
+4:48
+talked a lot about devices able to
+4:50
+communicate with each other using IP or
+4:53
+Internet Protocol the Internet Protocol
+4:56
+address is one very similar to what you
+4:58
+would see here one 62.1 159 2461 164 but
+5:04
+when we're typing things into our
+5:05
+browser we're not typing in a bunch of
+5:07
+numbers we're typing in the name of a
+5:09
+website such as
+5:11
+www.professormesser.com
+5:13
+in order to translate this fully
+5:15
+qualified domain name into a usable IP
+5:18
+address for network communication we
+5:20
+need to perform a translation using the
+5:23
+domain name system or DNS DNS commonly
+5:27
+uses UDP Port 53
+5:30
+as you can imagine DNS is a very popular
+5:32
+and important service because we almost
+5:35
+never memorize IP addresses to be able
+5:37
+to communicate to these devices but it's
+5:39
+very common to remember the fully
+5:41
+qualified domain name for that reason
+5:43
+it's very common to have multiple DNS
+5:45
+servers for redundancy so that we are
+5:48
+always able to resolve the fully
+5:49
+qualified domain name to the appropriate
+5:52
+IP
+5:53
+address the computer on your network was
+5:56
+probably not manually configured with a
+5:58
+set of IP addresses subnet masks default
+6:01
+gateways or DNS servers this was done
+6:04
+automatically when you turn your
+6:06
+computer on using the dynamic host
+6:08
+configuration protocol or
+6:10
+DHCP DHCP happens automatically behind
+6:13
+the scenes and it makes the entire
+6:15
+process of configuring your system with
+6:17
+these addresses completely seamless DHCP
+6:20
+commonly uses UDP Port 67 and UDP Port
+6:24
+68 on your network is a DHCP service
+6:28
+that may be on a standalone server or
+6:30
+Appliance or may be integrated into a
+6:32
+small office home office wireless router
+6:35
+that you might have at home on this
+6:36
+server is a pool of available IP
+6:39
+addresses and when a device connects to
+6:41
+the network it requests an IP address
+6:43
+and configuration parameters from that
+6:45
+pool when a device starts up it receives
+6:47
+that IP address and it leases that IP
+6:49
+address for a certain amount of time
+6:51
+when that lease is up it can choose to
+6:53
+renew the lease or give the IP address
+6:55
+back and put it into the pool for
+6:57
+someone else to use system
+6:59
+administrators can also use DHCP to
+7:02
+manually configure IP addresses that
+7:04
+will always be assigned to particular
+7:06
+devices so if you have a printer or
+7:08
+server that you would like to always
+7:10
+have the same IP address you can reserve
+7:12
+that IP address in your DHCP server and
+7:15
+it will be automatically assigned with
+7:17
+the same IP address every time that
+7:19
+printer or server starts
+7:21
+up you're probably watching this video
+7:24
+in a browser and to be able to perform
+7:26
+that functionality you're probably using
+7:29
+HTT TP or https this is the hypertext
+7:32
+transfer protocol or hypertext transfer
+7:35
+protocol secure the standard form of
+7:38
+HTTP sends all of the HTTP data over a
+7:41
+non-encrypted or in the clear
+7:43
+communication and it often uses TCP Port
+7:46
+80 if you see any traffic using TCP Port
+7:49
+443 it's probably using the secure
+7:52
+version of HTTP which means that all of
+7:55
+that web communication inside of that
+7:57
+packet will be encrypted a large
+7:59
+percentage of the devices you
+8:01
+communicate to in your browser are
+8:02
+probably going to use https these days
+8:05
+but you'll still find a number of web
+8:07
+services that are not using the
+8:09
+encrypted version and instead are
+8:11
+sending all of their traffic via TCP
+8:13
+Port 80 and the HTTP
+8:16
+protocol if you're using an email client
+8:18
+on your computer or your mobile device
+8:21
+you may be receiving emails using a
+8:23
+number of different protocols two of the
+8:25
+more popular Protocols are POP 3 and
+8:28
+IMAP POP 3 is the post office protocol
+8:32
+version three and it commonly uses TCP
+8:34
+Port 110 to be able to transfer data
+8:37
+down to your computer a newer and
+8:39
+somewhat more functional protocol for
+8:41
+receiving email is IMAP 4 or the
+8:44
+internet message access protocol version
+8:46
+4 IMAP commonly uses TCP Port 143 IMAP
+8:51
+provides a number of additional features
+8:53
+not available in pop 3 such as the
+8:55
+management of the inbox from multiple
+8:57
+clients you're able to make make folders
+9:00
+and transfer emails into those folders
+9:02
+and all of those updates will be
+9:03
+synchronized across all of your
+9:05
+different systems and all of those
+9:07
+updates will be synchronized across all
+9:09
+of your different email
+9:11
+clients if you're using Microsoft
+9:13
+Windows there's a process for
+9:15
+transferring data within windows that
+9:18
+uses a protocol named server message
+9:20
+block or SMB you may also see this
+9:23
+referred to as the common internet file
+9:25
+system or cifs not only is this used for
+9:28
+file trans transfers it's used to send
+9:31
+information to printer cues and for
+9:33
+other processes where Windows needs to
+9:35
+communicate information between
+9:36
+different Windows devices older Windows
+9:39
+devices used an additional protocol
+9:41
+inside of tcpip called netbios this net
+9:45
+bios protocol used two primary port
+9:48
+numbers to be able to communicate UDP
+9:50
+Port 137 used a net bios name service
+9:54
+which is very similar to the DNS name
+9:56
+service that we talked about earlier and
+9:58
+to be able to set up sessions to
+10:00
+transfer files it uses TCP Port 139 on
+10:04
+most modern versions of Windows you'll
+10:07
+find Direct connectivity between IP
+10:09
+addresses that don't use the net bios
+10:11
+protocol we refer to that as direct
+10:14
+communication or net bios less
+10:16
+communication and it often uses TCP Port
+10:21
+445 most organizations will have a
+10:23
+central database that contains all of
+10:25
+the important information about the
+10:27
+devices users and and important
+10:29
+resources available on their Network
+10:32
+this is usually a directory of services
+10:34
+or a database that contains all of this
+10:36
+information and to be able to access
+10:39
+this database we use a standard set of
+10:41
+protocols one of these protocols is ldap
+10:44
+or ldaps this stands for the lightweight
+10:47
+directory access protocol or the
+10:49
+lightweight directory access protocol
+10:51
+secure ldap commonly uses TCP port 389
+10:55
+this directory is usually separated into
+10:58
+different categories such as an
+11:00
+organization an organizational unit or a
+11:03
+common name for example at mess Studios
+11:06
+we might have a production
+11:07
+organizational unit a support
+11:09
+organizational unit and an engineering
+11:12
+organizational unit and of course within
+11:14
+those there may be individuals using a
+11:17
+common name such as Sam or Daniel and we
+11:20
+might also have a database called Tech
+11:22
+docs using ldap we can refer to this
+11:24
+database to find where these components
+11:26
+might be and in some cases even provide
+11:28
+a additional details such as
+11:30
+authentication for any individual users
+11:33
+a very common use of ldap is Microsoft's
+11:36
+active directory infrastructure where
+11:39
+that database is able to be referenced
+11:41
+using the ldap
+11:43
+protocol if you are troubleshooting
+11:45
+technology then you're probably very
+11:47
+familiar with remote control access of a
+11:50
+separate machine these days we have
+11:52
+users around the world and it's not very
+11:54
+practical for you to visit every single
+11:56
+one of those users directly to be able
+11:58
+to solve problems s on their computer in
+12:00
+those cases we'll probably use some type
+12:02
+of remote access protocol such as RDP or
+12:06
+remote desktop protocol this allows you
+12:08
+to view and share the desktop on a
+12:11
+Remote device using TCP Port
+12:14
+3389 this is primarily used to access
+12:17
+Windows devices and to be able to
+12:19
+control those windows devices across the
+12:21
+network you can usually do this from a
+12:23
+Windows device itself or from many other
+12:25
+operating systems as well you can use
+12:28
+RDP to control an entire computer or to
+12:30
+Simply run a single application on that
+12:33
+remote computer and although RDP is
+12:35
+commonly associated with connecting to
+12:37
+Windows devices there are also many RDP
+12:40
+clients that would allow you to connect
+12:42
+to that Windows computer from Mac OS
+12:45
+Linux Unix iPhone and other operating
+12:48
+systems as well

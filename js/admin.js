@@ -449,7 +449,6 @@ clearSearchBtn.addEventListener("click", () => {
   applyFilters();
 });
 
-
 function generateSuggestions(cards) {
   const ignore = new Set([
     "the", "in", "is", "what", "of", "a", "to", "for", "and", "which",
@@ -472,13 +471,12 @@ function generateSuggestions(cards) {
     (card.tags || []).forEach(tag => tagSet.add(tag.toLowerCase()));
   });
 
-  // Combine top keywords + tags
+  // Combine top keywords + tags, then limit to 20
   const keywords = Object.entries(freq)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 20) // show more if you want
     .map(([word]) => word);
 
-  const allSuggestions = [...new Set([...keywords, ...tagSet])];
+  const allSuggestions = [...new Set([...keywords, ...tagSet])].slice(0, 20);
 
   renderSuggestionChips(allSuggestions);
 }
@@ -1098,134 +1096,164 @@ function renderCardGrid(cards, isDeletedMode = false) {
   selectedCardIds = [];
   bulkDeleteBtn.textContent = isDeletedMode ? "♻️ Restore Selected" : "🗑️ Delete Selected";
 
-  cards.forEach(card => {
-    const div = document.createElement("div");
-    div.className = "card-thumb";
+  // Pagination state
+  const maxToShow = 6;
+  let shownCount = 0;
 
-    div.innerHTML = `
-      <div style="display: flex; flex-direction: column; height: 100%; position: relative;">
-        <div style="flex-grow: 1;">
-          <p class="question-text">${card.question_text}</p>
-          <p class="meta">${card.cert_id.join(", ")} | ${card.domain_id} | ${card.difficulty}</p>
-        </div>
-        <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem;">
-          <div style="display: flex; gap: 0.5rem; align-items: center;">
-            <button class="edit-card" data-id="${card._id}">Edit</button>
-            <div class="delete-wrapper">
-              ${isDeletedMode
-                ? `
-                  <button class="restore-card" data-id="${card._id}">♻️ Restore</button>
-                  <button class="delete-forever-card" data-id="${card._id}">💀 Delete Forever</button>
-                `
-                : `
-                  <button class="delete-card" data-id="${card._id}">Delete</button>
-                  <div class="confirm-cancel hidden">
-                    <button class="confirm-btn">✔ Confirm</button>
-                    <button class="cancel-btn">✖ Cancel</button>
-                  </div>
-                `}
-            </div>
+  function renderBatch() {
+    // Render next batch of cards
+    const batch = cards.slice(shownCount, shownCount + maxToShow);
+    batch.forEach(card => {
+      const div = document.createElement("div");
+      div.className = "card-thumb";
+      div.innerHTML = `
+        <div style="display: flex; flex-direction: column; height: 100%; position: relative;">
+          <div style="flex-grow: 1;">
+            <p class="question-text">${card.question_text}</p>
+            <p class="meta">${card.cert_id.join(", ")} | ${card.domain_id} | ${card.difficulty}</p>
           </div>
-          <input type="checkbox" class="select-card-checkbox" data-id="${card._id}" />
+          <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem;">
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="edit-card" data-id="${card._id}">Edit</button>
+              <div class="delete-wrapper">
+                ${isDeletedMode
+                  ? `
+                    <button class="restore-card" data-id="${card._id}">♻️ Restore</button>
+                    <button class="delete-forever-card" data-id="${card._id}">💀 Delete Forever</button>
+                  `
+                  : `
+                    <button class="delete-card" data-id="${card._id}">Delete</button>
+                    <div class="confirm-cancel hidden">
+                      <button class="confirm-btn">✔ Confirm</button>
+                      <button class="cancel-btn">✖ Cancel</button>
+                    </div>
+                  `}
+              </div>
+            </div>
+            <input type="checkbox" class="select-card-checkbox" data-id="${card._id}" />
+          </div>
         </div>
-      </div>
-    `;
+      `;
 
-    // Edit button
-    div.querySelector(".edit-card").addEventListener("click", () => {
-      loadCardIntoForm(card);
-    });
+      // Edit button
+      div.querySelector(".edit-card").addEventListener("click", () => {
+        loadCardIntoForm(card);
+      });
 
-    // Checkbox selection
-    const checkbox = div.querySelector(".select-card-checkbox");
-    checkbox.addEventListener("change", (e) => {
-      const id = e.target.dataset.id;
-      if (e.target.checked) {
-        selectedCardIds.push(id);
-        div.classList.add("selected");
+      // Checkbox selection
+      const checkbox = div.querySelector(".select-card-checkbox");
+      checkbox.addEventListener("change", (e) => {
+        const id = e.target.dataset.id;
+        if (e.target.checked) {
+          selectedCardIds.push(id);
+          div.classList.add("selected");
+        } else {
+          selectedCardIds = selectedCardIds.filter(cardId => cardId !== id);
+          div.classList.remove("selected");
+        }
+        updateBulkDeleteButton();
+        updateSelectAllCheckbox();
+      });
+
+      if (isDeletedMode) {
+        // ♻️ Restore
+        div.querySelector(".restore-card").addEventListener("click", async () => {
+          try {
+            await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+              method: "PUT",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ status: "approved" })
+            });
+            showGlobalMessage("♻️ Card restored!", "success");
+            fetchAllCards(true);
+          } catch (err) {
+            console.error("❌ Restore failed:", err);
+            showGlobalMessage("❌ Failed to restore card.", "error");
+          }
+        });
+
+        // 💀 Delete Forever
+        div.querySelector(".delete-forever-card")?.addEventListener("click", async () => {
+          if (!confirm("⚠️ This will permanently delete the card. Are you sure?")) return;
+
+          try {
+            const res = await fetch(`http://localhost:3000/api/cards/${card._id}/permanent`, {
+              method: "DELETE"
+            });
+            if (res.ok) {
+              showGlobalMessage("💀 Card permanently deleted.", "success");
+              fetchAllCards(true);
+            } else {
+              showGlobalMessage("❌ Failed to delete forever.", "error");
+            }
+          } catch (err) {
+            console.error("❌ Delete forever failed:", err);
+            showGlobalMessage("❌ Network error.", "error");
+          }
+        });
+
       } else {
-        selectedCardIds = selectedCardIds.filter(cardId => cardId !== id);
-        div.classList.remove("selected");
+        // 🗑️ Soft delete
+        const deleteBtn = div.querySelector(".delete-card");
+        const confirmCancelDiv = div.querySelector(".confirm-cancel");
+
+        deleteBtn.addEventListener("click", () => {
+          deleteBtn.classList.add("hidden");
+          confirmCancelDiv.classList.remove("hidden");
+        });
+
+        confirmCancelDiv.querySelector(".cancel-btn").addEventListener("click", () => {
+          confirmCancelDiv.classList.add("hidden");
+          deleteBtn.classList.remove("hidden");
+        });
+
+        confirmCancelDiv.querySelector(".confirm-btn").addEventListener("click", async () => {
+          try {
+            const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+              method: "DELETE"
+            });
+            if (res.ok) {
+              div.remove();
+              console.log(`🗑️ Deleted ${card._id}`);
+            } else {
+              showGlobalMessage("❌ Failed to delete card.");
+            }
+          } catch (err) {
+            console.error(err);
+            showGlobalMessage("❌ Network error deleting card.");
+          }
+        });
+      }
+
+      grid.appendChild(div);
+    });
+    shownCount += batch.length;
+  }
+
+  // Initial batch
+  renderBatch();
+  updateBulkDeleteButton();
+  updateSelectAllCheckbox();
+
+  // Add "Show more" button if needed
+  if (shownCount < cards.length) {
+    const showMoreBtn = document.createElement("button");
+    showMoreBtn.textContent = `Show more (${cards.length - shownCount} more)`;
+    showMoreBtn.className = "btn primary";
+    showMoreBtn.style.margin = "1rem auto";
+    showMoreBtn.style.display = "block";
+    showMoreBtn.onclick = () => {
+      showMoreBtn.remove();
+      renderBatch();
+      if (shownCount < cards.length) {
+        grid.appendChild(showMoreBtn);
+        showMoreBtn.textContent = `Show more (${cards.length - shownCount} more)`;
       }
       updateBulkDeleteButton();
       updateSelectAllCheckbox();
-    });
-
-    if (isDeletedMode) {
-      // ♻️ Restore
-      div.querySelector(".restore-card").addEventListener("click", async () => {
-        try {
-          await fetch(`http://localhost:3000/api/cards/${card._id}`, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ status: "approved" })
-          });
-          showGlobalMessage("♻️ Card restored!", "success");
-          fetchAllCards(true);
-        } catch (err) {
-          console.error("❌ Restore failed:", err);
-          showGlobalMessage("❌ Failed to restore card.", "error");
-        }
-      });
-
-      // 💀 Delete Forever
-      div.querySelector(".delete-forever-card")?.addEventListener("click", async () => {
-        if (!confirm("⚠️ This will permanently delete the card. Are you sure?")) return;
-
-        try {
-          const res = await fetch(`http://localhost:3000/api/cards/${card._id}/permanent`, {
-            method: "DELETE"
-          });
-          if (res.ok) {
-            showGlobalMessage("💀 Card permanently deleted.", "success");
-            fetchAllCards(true);
-          } else {
-            showGlobalMessage("❌ Failed to delete forever.", "error");
-          }
-        } catch (err) {
-          console.error("❌ Delete forever failed:", err);
-          showGlobalMessage("❌ Network error.", "error");
-        }
-      });
-
-    } else {
-      // 🗑️ Soft delete
-      const deleteBtn = div.querySelector(".delete-card");
-      const confirmCancelDiv = div.querySelector(".confirm-cancel");
-
-      deleteBtn.addEventListener("click", () => {
-        deleteBtn.classList.add("hidden");
-        confirmCancelDiv.classList.remove("hidden");
-      });
-
-      confirmCancelDiv.querySelector(".cancel-btn").addEventListener("click", () => {
-        confirmCancelDiv.classList.add("hidden");
-        deleteBtn.classList.remove("hidden");
-      });
-
-      confirmCancelDiv.querySelector(".confirm-btn").addEventListener("click", async () => {
-        try {
-          const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
-            method: "DELETE"
-          });
-          if (res.ok) {
-            div.remove();
-            console.log(`🗑️ Deleted ${card._id}`);
-          } else {
-            showGlobalMessage("❌ Failed to delete card.");
-          }
-        } catch (err) {
-          console.error(err);
-          showGlobalMessage("❌ Network error deleting card.");
-        }
-      });
-    }
-
-    grid.appendChild(div);
-  });
-
-  updateBulkDeleteButton();
-  updateSelectAllCheckbox();
+    };
+    grid.appendChild(showMoreBtn);
+  }
 }
 
 
