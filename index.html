@@ -5,9 +5,18 @@
   <title>Kemmei — Login</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/shared-ui.css">
   <script defer src="js/index.js"></script>
 </head>
 <body class="index-page">
+
+  <div class="floating-dark-toggle">
+  <label class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle" />
+    <span class="toggle-slider"></span>
+    <span class="toggle-label">🌙</span>
+  </label>
+</div>
 
   <!-- Login Container -->
   <div class="index-container">
@@ -26,41 +35,6 @@
       Don't have an account? <a href="register.html" style="text-decoration: underline; color: blue;">Register here</a>
     </p>
   </div>
-
-  <script>
-  const kanjiWords = ["賢明", "懸命"];
-  const kanjiContainer = document.body;
-
-  function createKanji() {
-    const kanji = document.createElement("span");
-    kanji.className = "kanji-scatter";
-    kanji.textContent = kanjiWords[Math.floor(Math.random() * kanjiWords.length)];
-    kanji.style.top = `${Math.random() * 100}%`;
-    kanji.style.left = `${Math.random() * 100}%`;
-
-    // Generate random values for movement directions
-    kanji.style.setProperty("--random-x1", Math.random());
-    kanji.style.setProperty("--random-y1", Math.random());
-    kanji.style.setProperty("--random-x2", Math.random());
-    kanji.style.setProperty("--random-y2", Math.random());
-    kanji.style.setProperty("--random-x3", Math.random());
-    kanji.style.setProperty("--random-y3", Math.random());
-    kanji.style.setProperty("--random-x4", Math.random());
-    kanji.style.setProperty("--random-y4", Math.random());
-
-    kanji.style.animation = `float ${30 + Math.random() * 30}s linear infinite`;
-    kanjiContainer.appendChild(kanji);
-
-    kanji.addEventListener("animationend", () => {
-      kanji.remove();
-      createKanji(); // Replace the kanji after it finishes floating
-    });
-  }
-
-  // Ensure 5-7 kanji are always floating
-  for (let i = 0; i < 7; i++) {
-    createKanji();
-  }
-  </script>
+<script src="js/shared-ui.js"></script>
 </body>
 </html>
