@@ -79,38 +79,6 @@ body.index-page {
   transition: width 0.3s ease;
 }
 
-/* Floating Kanji */
-.kanji-scatter {
-  position: absolute;
-  font-size: 6rem;
-  color: rgba(0, 0, 0, 0.06);
-  pointer-events: none;
-  animation: float 60s linear infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  25% {
-    transform: translate(calc(-50vw + 100vw * var(--random-x1)), calc(-50vh + 100vh * var(--random-y1)));
-    opacity: 0.9;
-  }
-  50% {
-    transform: translate(calc(-50vw + 100vw * var(--random-x2)), calc(-50vh + 100vh * var(--random-y2)));
-    opacity: 0.8;
-  }
-  75% {
-    transform: translate(calc(-50vw + 100vw * var(--random-x3)), calc(-50vh + 100vh * var(--random-y3)));
-    opacity: 0.7;
-  }
-  100% {
-    transform: translate(calc(-50vw + 100vw * var(--random-x4)), calc(-50vh + 100vh * var(--random-y4)));
-    opacity: 0;
-  }
-}
-
 .progress-buttons {
   display: flex;
   justify-content: space-between;
@@ -131,11 +99,12 @@ body.index-page {
 }
 
 .title-block {
-  margin-bottom: 2rem;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
   background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .title-block h3 {
@@ -172,9 +141,10 @@ body.index-page {
 
 .difficulty-list li {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   padding: 0.1rem 0;
   text-align: right;
+  margin-left: 1rem;
 }
 
 .subdomain-block {
@@ -185,45 +155,6 @@ body.index-page {
 
 .hidden {
   display: none;
-}
-
-/* Smaller spacing + typography adjustments */
-.title-block {
-  margin-bottom: 1rem;
-  padding: 0.6rem 1rem;
-}
-
-.title-block h3 {
-  font-size: 1rem;
-  margin: 0.3rem 0;
-}
-
-.domain-block h4 {
-  font-size: 0.95rem;
-  margin: 0.4rem 0 0.2rem;
-}
-
-.subdomain-block h5 {
-  font-size: 0.9rem;
-  margin: 0.2rem 0;
-}
-
-.difficulty-list li {
-  font-size: 0.85rem;
-  margin-left: 1rem;
-}
-
-.hidden {
-  display: none;
-}
-
-.title-block {
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .toast {
@@ -261,49 +192,15 @@ body.index-page {
 }
 
 .modal-buttons {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
-  justify-content: space-between;
-}
-
-.modal-buttons button {
-  font-size: 0.85rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#confirmYes {
-  background: #dc3545;
-  color: white;
-}
-
-#confirmNo {
-  background: #ddd;
-}
-
-.reset-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.modal-content p {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.modal-buttons {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 0.5rem;
 }
 
 .modal-buttons button {
-  font-size: 0.85rem;
-  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 6px;
   border: none;
   cursor: pointer;
@@ -355,104 +252,6 @@ body.index-page {
   text-align: center;
 }
 
-.modal-buttons {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-around;
-}
-
-.modal-buttons button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#confirmYes {
-  background-color: #dc3545;
-  color: white;
-}
-
-#confirmNo {
-  background-color: #eee;
-  color: #333;
-}
-
-/* -------- Floating Dark Mode Toggle (Top-Right Corner) -------- */
-.floating-dark-toggle {
-  position: fixed;
-  top: 1.5rem;
-  right: 2rem;
-  z-index: 1000;
-}
-
-.dark-mode-toggle {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  background: rgba(40, 44, 52, 0.7);
-  border-radius: 2rem;
-  padding: 0.2rem 0.8rem 0.2rem 0.4rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: background 0.2s;
-}
-
-.dark-mode-toggle:hover {
-  background: rgba(40, 44, 52, 0.95);
-}
-
-.dark-mode-toggle input {
-  display: none;
-}
-
-.toggle-slider {
-  width: 36px;
-  height: 20px;
-  background: #bbb;
-  border-radius: 1rem;
-  position: relative;
-  margin-right: 0.5rem;
-  transition: background 0.2s;
-  display: inline-block;
-}
-
-.toggle-slider::before {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 3px;
-  width: 14px;
-  height: 14px;
-  background: #fff;
-  border-radius: 50%;
-  transition: transform 0.2s;
-}
-
-.dark-mode-toggle input:checked + .toggle-slider {
-  background: #222;
-}
-
-.dark-mode-toggle input:checked + .toggle-slider::before {
-  transform: translateX(16px);
-}
-
-.toggle-label {
-  font-size: 1.2rem;
-  color: #ffd700;
-  margin-left: 0.2rem;
-}
-
-/* Dark theme styling for the toggle itself */
-body.dark-theme .dark-mode-toggle {
-  background: rgba(60, 60, 80, 0.85);
-}
-
-body.dark-theme .toggle-label {
-  color: #ffe066;
-}
-
 /* -------- Dark Theme Styles -------- */
 body.dark-theme {
   background: #232733;
@@ -461,7 +260,7 @@ body.dark-theme {
 
 body.dark-theme .index-container {
   background: rgba(36, 41, 56, 0.92);
-  color: #e2e8f0; /* light text for dark background */
+  color: #e2e8f0;
   box-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
@@ -507,13 +306,6 @@ body.dark-theme #confirmNo {
 }
 
 body.dark-theme .title-block {
-  background: rgba(44, 48, 62, 0.98); /* dark background */
+  background: rgba(44, 48, 62, 0.98);
   border-color: #44495a;
-}
-
-/* Floating kanji: make visible everywhere in dark mode */
-body.dark-theme .kanji-scatter {
-  color: rgba(255, 255, 255, 0.10);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  z-index: 0;
 }

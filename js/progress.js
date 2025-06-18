@@ -4,41 +4,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
-  // Floating kanji words logic
-  const kanjiWords = ["賢明", "懸命"];
-  const kanjiContainer = document.body;
-
-  function createKanji() {
-    const kanji = document.createElement("span");
-    kanji.className = "kanji-scatter";
-    kanji.textContent = kanjiWords[Math.floor(Math.random() * kanjiWords.length)];
-    kanji.style.top = `${Math.random() * 100}%`;
-    kanji.style.left = `${Math.random() * 100}%`;
-
-    // Generate random values for movement directions
-    kanji.style.setProperty("--random-x1", Math.random());
-    kanji.style.setProperty("--random-y1", Math.random());
-    kanji.style.setProperty("--random-x2", Math.random());
-    kanji.style.setProperty("--random-y2", Math.random());
-    kanji.style.setProperty("--random-x3", Math.random());
-    kanji.style.setProperty("--random-y3", Math.random());
-    kanji.style.setProperty("--random-x4", Math.random());
-    kanji.style.setProperty("--random-y4", Math.random());
-
-    kanji.style.animation = `float ${30 + Math.random() * 30}s linear infinite`;
-    kanjiContainer.appendChild(kanji);
-
-    kanji.addEventListener("animationend", () => {
-      kanji.remove();
-      createKanji();
-    });
-  }
-
-  // Ensure 7 kanji are always floating
-  for (let i = 0; i < 7; i++) {
-    createKanji();
-  }
-
   // Load and render progress
   try {
     const [progressRes, domainRes] = await Promise.all([
@@ -103,21 +68,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("❌ Reset error:", err);
         alert("❌ Network error.");
       }
-    });
-  }
-
-  // Dark Mode Toggle Functionality
-  const darkModeToggle = document.getElementById("darkModeToggle");
-  if (darkModeToggle) {
-    const savedDarkMode = localStorage.getItem("darkMode") === "true";
-    if (savedDarkMode) {
-      document.body.classList.add("dark-theme");
-      darkModeToggle.checked = true;
-    }
-    darkModeToggle.addEventListener("change", () => {
-      const isDark = darkModeToggle.checked;
-      document.body.classList.toggle("dark-theme", isDark);
-      localStorage.setItem("darkMode", isDark);
     });
   }
 });
