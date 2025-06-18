@@ -4,15 +4,11 @@
   <meta charset="UTF-8">
   <title>Kemmei — Register</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/index.css"> <!-- Use the same CSS as index -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/shared-ui.css">
   <script defer src="js/register.js"></script>
 </head>
 <body class="index-page"> <!-- Use the same class as index -->
-
-  <!-- Floating Kanji -->
-  <span class="kanji-scatter" style="top:10%; left:5%;">賢明</span>
-  <span class="kanji-scatter" style="top:35%; left:60%;">懸命</span>
-  <span class="kanji-scatter" style="top:70%; left:30%;">賢明</span>
 
   <!-- Registration Container -->
   <div class="index-container"> <!-- Use the same container class -->
@@ -32,6 +28,16 @@
       Already have an account? <a href="index.html" style="text-decoration: underline; color: blue;">Log in here</a>
     </p>
   </div>
+
+  <div class="floating-dark-toggle">
+    <label class="dark-mode-toggle">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="toggle-slider"></span>
+      <span class="toggle-label">🌙</span>
+    </label>
+  </div>
+
+<script src="js/shared-ui.js"></script>
 
 </body>
 </html>
