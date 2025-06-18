@@ -300,12 +300,34 @@
   </button>
 </div>
 
-
+<!-- Dark Mode Toggle (top-right corner) -->
+<div class="floating-dark-toggle">
+  <label class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle" />
+    <span class="toggle-slider"></span>
+    <span class="toggle-label">🌙</span>
+  </label>
+</div>
 
 
 <script type="module" src="js/admin.js"></script>
 <script type="module" src="js/titmgr.js"></script>
 
-</body>
+<script>
+  // Dark Mode Toggle for Admin Page
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  // Load saved dark mode preference
+  const savedDarkMode = localStorage.getItem("darkMode") === "true";
+  if (savedDarkMode) {
+    document.body.classList.add("dark-theme");
+    darkModeToggle.checked = true;
+  }
+  darkModeToggle.addEventListener("change", () => {
+    const isDark = darkModeToggle.checked;
+    document.body.classList.toggle("dark-theme", isDark);
+    localStorage.setItem("darkMode", isDark);
+  });
+</script>
 
+</body>
 </html>
