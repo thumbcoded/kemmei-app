@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is TCP rarely used in real-time multiplayer games?",
+  "answer_options": [
+    "It lacks support for data encryption",
+    "Its retransmission delays disrupt real-time flow",
+    "It cannot operate over Wi-Fi",
+    "It limits the number of simultaneous users"
+  ],
+  "correct_answer": [
+    "Its retransmission delays disrupt real-time flow"
+  ],
+  "explanation": "TCP's retransmissions introduce latency spikes, which ruin real-time responsiveness in competitive games.",
+  "tags": [
+    "gaming",
+    "TCP vs UDP",
+    "network performance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

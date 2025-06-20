@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which technology uses existing telephone lines to deliver internet service?",
+  "answer_options": [
+    "Cable",
+    "Fiber",
+    "DSL",
+    "Satellite"
+  ],
+  "correct_answer": [
+    "DSL"
+  ],
+  "explanation": "DSL (Digital Subscriber Line) sends digital data over the same copper lines used for analog phone service.",
+  "tags": [
+    "DSL",
+    "copper line"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

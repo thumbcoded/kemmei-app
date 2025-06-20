@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two of the following are commonly used technologies by WISPs? (Select two)",
+  "answer_options": [
+    "802.11 mesh networks",
+    "DOCSIS cabling",
+    "Line-of-sight microwave links",
+    "Fiber-to-the-home"
+  ],
+  "correct_answer": [
+    "802.11 mesh networks",
+    "Line-of-sight microwave links"
+  ],
+  "explanation": "WISPs often use mesh networks and line-of-sight wireless links to deliver service to remote or underserved areas.",
+  "tags": [
+    "WISP",
+    "802.11",
+    "line of sight"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which DNS record type is used to define which mail servers are responsible for receiving email on behalf of a domain?",
+  "answer_options": [
+    "TXT",
+    "MX",
+    "PTR",
+    "NS"
+  ],
+  "correct_answer": [
+    "MX"
+  ],
+  "explanation": "MX (Mail Exchange) records specify the mail servers responsible for receiving email for a domain.",
+  "tags": [
+    "DNS",
+    "MX record",
+    "domain name system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

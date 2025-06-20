@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does 'connectionless' mean in the context of UDP communication?",
+  "answer_options": [
+    "The data is encrypted before being sent",
+    "No formal session is established before data is sent",
+    "The connection is permanent",
+    "All data packets are stored for retransmission"
+  ],
+  "correct_answer": [
+    "No formal session is established before data is sent"
+  ],
+  "explanation": "UDP is a connectionless protocol, meaning it sends data without first establishing or maintaining a formal connection.",
+  "tags": [
+    "connectionless",
+    "UDP",
+    "TCP vs UDP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

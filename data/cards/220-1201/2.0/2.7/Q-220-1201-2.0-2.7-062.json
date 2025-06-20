@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two of the following are true about SANs? (Select two)",
+  "answer_options": [
+    "They provide centralized access to block-level storage",
+    "They use Bluetooth to connect storage devices",
+    "They are often used in data centers",
+    "They replace the need for LANs in enterprise networks"
+  ],
+  "correct_answer": [
+    "They provide centralized access to block-level storage",
+    "They are often used in data centers"
+  ],
+  "explanation": "SANs enable servers to access shared block-level storage and are common in environments like data centers for performance and reliability.",
+  "tags": [
+    "SAN",
+    "storage area network"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

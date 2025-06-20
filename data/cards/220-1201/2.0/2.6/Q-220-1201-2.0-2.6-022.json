@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does the double colon (::) represent in an IPv6 address?",
+  "answer_options": [
+    "A range of MAC addresses",
+    "A placeholder for multiple consecutive zeros",
+    "The start of the DNS name",
+    "The end of the subnet prefix"
+  ],
+  "correct_answer": [
+    "A placeholder for multiple consecutive zeros"
+  ],
+  "explanation": "The double colon can be used once in an IPv6 address to replace one or more groups of 0000.",
+  "tags": [
+    "IPv6",
+    "address abbreviation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which frequency range allows for the most non-overlapping Wi-Fi channels?",
+  "answer_options": [
+    "2.4 GHz",
+    "5 GHz",
+    "6 GHz",
+    "1.6 GHz"
+  ],
+  "correct_answer": [
+    "6 GHz"
+  ],
+  "explanation": "The 6 GHz band provides the most available spectrum and the largest number of non-overlapping channels for Wi-Fi.",
+  "tags": [
+    "6 GHz",
+    "channel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

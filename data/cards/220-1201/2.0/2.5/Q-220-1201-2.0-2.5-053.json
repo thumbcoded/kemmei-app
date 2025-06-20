@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which firewall function acts as a go-between for clients and servers, examining traffic before passing it along?",
+  "answer_options": [
+    "Proxy",
+    "Port mirroring",
+    "VPN concentrator",
+    "Switch"
+  ],
+  "correct_answer": [
+    "Proxy"
+  ],
+  "explanation": "A proxy inspects and relays traffic, providing an additional security and filtering layer.",
+  "tags": [
+    "firewall",
+    "proxy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid characteristics of IPv6 addressing? (Select all that apply)",
+  "answer_options": [
+    "IPv6 addresses are 128 bits long",
+    "IPv6 uses colons and hexadecimal formatting",
+    "IPv6 requires NAT to connect to the internet",
+    "IPv6 supports link-local and unique local addressing",
+    "IPv6 allows compression of consecutive zeros"
+  ],
+  "correct_answer": [
+    "IPv6 addresses are 128 bits long",
+    "IPv6 uses colons and hexadecimal formatting",
+    "IPv6 supports link-local and unique local addressing",
+    "IPv6 allows compression of consecutive zeros"
+  ],
+  "explanation": "IPv6 offers native support for address compression, local addressing types, and does not depend on NAT like IPv4.",
+  "tags": [
+    "IPv6",
+    "128-bit",
+    "address compression",
+    "link-local",
+    "unique local"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

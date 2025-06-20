@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "At which OSI layer does a router operate?",
+  "answer_options": [
+    "Layer 2",
+    "Layer 3",
+    "Layer 4",
+    "Layer 1"
+  ],
+  "correct_answer": [
+    "Layer 3"
+  ],
+  "explanation": "Routers operate at Layer 3 (the network layer) of the OSI model.",
+  "tags": [
+    "router",
+    "layer 3"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

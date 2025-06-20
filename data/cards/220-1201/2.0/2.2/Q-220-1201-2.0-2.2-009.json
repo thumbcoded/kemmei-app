@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes Wi-Fi 4 (802.11n)?",
+  "answer_options": [
+    "Operates only at 2.4 GHz and supports MIMO",
+    "Operates only at 5 GHz and supports MIMO",
+    "Supports both 2.4 GHz and 5 GHz, with MIMO",
+    "Uses beamforming but not MIMO"
+  ],
+  "correct_answer": [
+    "Supports both 2.4 GHz and 5 GHz, with MIMO"
+  ],
+  "explanation": "Wi-Fi 4 introduced MIMO and supported dual-band operation, making it more versatile than earlier versions.",
+  "tags": [
+    "802.11"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

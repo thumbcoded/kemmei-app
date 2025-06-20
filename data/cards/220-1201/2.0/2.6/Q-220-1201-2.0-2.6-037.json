@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two components must be correctly configured for a device to communicate with external networks? (Select two)",
+  "answer_options": [
+    "DNS server",
+    "Subnet mask",
+    "Default gateway",
+    "Loopback address",
+    "MAC address"
+  ],
+  "correct_answer": [
+    "Subnet mask",
+    "Default gateway"
+  ],
+  "explanation": "To reach networks beyond the local subnet, a device must know what part of the IP belongs to the network (subnet mask) and where to forward outbound traffic (default gateway).",
+  "tags": [
+    "subnet mask",
+    "default gateway"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which firewall feature enables filtering of web traffic based on website categories and content?",
+  "answer_options": [
+    "URL filtering",
+    "MAC address filtering",
+    "DHCP snooping",
+    "PoE pass-through"
+  ],
+  "correct_answer": [
+    "URL filtering"
+  ],
+  "explanation": "URL filtering allows firewalls to block or allow access to specific sites or categories of sites.",
+  "tags": [
+    "firewall",
+    "URL filtering"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

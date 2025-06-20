@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A network administrator wants to isolate sensitive devices from the rest of the network without adding physical switches. What is the most secure and efficient method?",
+  "answer_options": [
+    "Create a separate VLAN for those devices",
+    "Assign static IPs on the same subnet",
+    "Use unmanaged switches",
+    "Change device MAC addresses"
+  ],
+  "correct_answer": [
+    "Create a separate VLAN for those devices"
+  ],
+  "explanation": "A VLAN allows logical separation and isolates traffic even when devices share physical infrastructure.",
+  "tags": [
+    "VLAN",
+    "segmentation",
+    "efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

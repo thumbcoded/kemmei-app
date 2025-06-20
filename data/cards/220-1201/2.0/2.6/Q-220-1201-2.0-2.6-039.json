@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A device has IP 10.0.8.10, subnet mask 255.255.252.0, and default gateway 10.0.12.1. Why can’t it reach the internet?",
+  "answer_options": [
+    "The IP is not valid in the assigned subnet",
+    "The default gateway is outside the local subnet",
+    "The subnet mask is incorrectly formatted",
+    "The device must use a public IP address"
+  ],
+  "correct_answer": [
+    "The default gateway is outside the local subnet"
+  ],
+  "explanation": "A /22 mask (255.255.252.0) covers 10.0.8.0–10.0.11.255. The default gateway at 10.0.12.1 is outside this range.",
+  "tags": [
+    "subnet mask",
+    "default gateway",
+    "routing error"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

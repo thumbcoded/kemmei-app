@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a main advantage of using a layer 3 switch in a network environment?",
+  "answer_options": [
+    "It enables routing between VLANs with high performance",
+    "It increases Wi-Fi coverage",
+    "It provides redundant power supplies",
+    "It translates MAC addresses to IP addresses"
+  ],
+  "correct_answer": [
+    "It enables routing between VLANs with high performance"
+  ],
+  "explanation": "Layer 3 switches can quickly route traffic between VLANs by combining routing and switching in hardware.",
+  "tags": [
+    "layer 3 switch",
+    "routing table",
+    "VLAN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

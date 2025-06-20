@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "In a well-managed cabling setup, what describes the cable run from a desk to the patch panel?",
+  "answer_options": [
+    "Static run",
+    "Dynamic link",
+    "Temporary patch",
+    "Wireless uplink"
+  ],
+  "correct_answer": [
+    "Static run"
+  ],
+  "explanation": "Permanent, unmoving cabling between desk and closet is called a static run; patch cables then provide flexibility at the patch panel.",
+  "tags": [
+    "static run",
+    "patch panel",
+    "desk connection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

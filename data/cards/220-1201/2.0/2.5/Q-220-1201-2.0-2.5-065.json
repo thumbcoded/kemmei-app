@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the standard power output of original PoE (IEEE 802.3af)?",
+  "answer_options": [
+    "15.4 watts",
+    "25.5 watts",
+    "51 watts",
+    "71.3 watts"
+  ],
+  "correct_answer": [
+    "15.4 watts"
+  ],
+  "explanation": "Original PoE (IEEE 802.3af) delivers up to 15.4 watts of DC power, suitable for smaller devices like phones.",
+  "tags": [
+    "PoE"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

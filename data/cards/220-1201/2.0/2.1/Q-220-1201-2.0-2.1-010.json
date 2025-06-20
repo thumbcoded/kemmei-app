@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes port 110 from port 143 in email retrieval?",
+  "answer_options": [
+    "Port 110 uses TCP, while port 143 uses UDP",
+    "Port 110 is for IMAP, port 143 is for POP3",
+    "Port 110 is used by POP3, which downloads messages; port 143 is used by IMAP, which keeps them on the server",
+    "Port 110 is encrypted while port 143 is not"
+  ],
+  "correct_answer": [
+    "Port 110 is used by POP3, which downloads messages; port 143 is used by IMAP, which keeps them on the server"
+  ],
+  "explanation": "POP3 (port 110) downloads and removes messages; IMAP (port 143) keeps them on the mail server for access from multiple devices.",
+  "tags": [
+    "port 110",
+    "port 143",
+    "well-known port"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

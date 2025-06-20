@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "2.0 Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What risk is introduced by failing to separate power and network cables in cable management?",
+  "answer_options": [
+    "Signal interference and possible data loss",
+    "Improved security",
+    "Automatic VLAN assignment",
+    "Simpler switch configuration"
+  ],
+  "correct_answer": [
+    "Signal interference and possible data loss"
+  ],
+  "explanation": "Running network and power cables together can cause electrical interference, degrading network performance.",
+  "tags": [
+    "cable management",
+    "signal interference",
+    "ethernet power"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

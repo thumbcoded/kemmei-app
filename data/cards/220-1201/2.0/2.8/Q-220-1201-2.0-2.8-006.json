@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician uses a crimper but the resulting cable fails testing. What is the most likely cause?",
+  "answer_options": [
+    "The crimper flattened the connector tabs",
+    "The wires were not fully inserted into the RJ45 connector",
+    "The cable tester battery was low",
+    "The connector was shielded instead of unshielded"
+  ],
+  "correct_answer": [
+    "The wires were not fully inserted into the RJ45 connector"
+  ],
+  "explanation": "If the wires don't reach the metal contacts in the connector, the crimp won't pierce the insulation and the connection will fail.",
+  "tags": [
+    "crimper",
+    "RJ45"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

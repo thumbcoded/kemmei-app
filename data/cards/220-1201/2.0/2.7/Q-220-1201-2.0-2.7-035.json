@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true of DOCSIS-based cable networks? (Select all that apply)",
+  "answer_options": [
+    "They use coaxial cables",
+    "They employ broadband transmission",
+    "They require RJ11 connections",
+    "They support high-speed internet and television",
+    "They are limited to 10 Mbps downstream"
+  ],
+  "correct_answer": [
+    "They use coaxial cables",
+    "They employ broadband transmission",
+    "They support high-speed internet and television"
+  ],
+  "explanation": "DOCSIS networks use coaxial cables and broadband to support data, TV, and voice. They can offer speeds far exceeding 10 Mbps.",
+  "tags": [
+    "DOCSIS",
+    "cable",
+    "broadband",
+    "coax"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which switch capability is critical for supporting VoIP phones and wireless access points without additional power cabling?",
+  "answer_options": [
+    "PoE support",
+    "Port mirroring",
+    "SNMP management",
+    "Layer 3 routing"
+  ],
+  "correct_answer": [
+    "PoE support"
+  ],
+  "explanation": "Power over Ethernet (PoE) allows switches to supply power to compatible devices like VoIP phones and WAPs over network cables.",
+  "tags": [
+    "PoE",
+    "switch"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

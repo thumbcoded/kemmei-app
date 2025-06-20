@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is choosing between fixed wireless and satellite for a rural installation. The site has line of sight to a nearby tower. What is the main reason to choose fixed wireless?",
+  "answer_options": [
+    "Lower latency and faster speeds than satellite",
+    "No need for an ISP",
+    "Higher bandwidth than fiber",
+    "More resistance to physical obstructions"
+  ],
+  "correct_answer": [
+    "Lower latency and faster speeds than satellite"
+  ],
+  "explanation": "Fixed wireless (WISP) typically offers much lower latency and better speeds than satellite and is preferable when line of sight is available.",
+  "tags": [
+    "line of sight",
+    "connection type"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

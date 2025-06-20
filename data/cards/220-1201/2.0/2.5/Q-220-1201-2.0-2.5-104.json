@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true about Optical Network Terminals (ONTs)? (Select all that apply)",
+  "answer_options": [
+    "ONTs convert fiber signals into multiple service types like Ethernet and voice",
+    "ONTs are usually installed by the customer for cost efficiency",
+    "ONTs define the demarcation point for most fiber installations",
+    "ONTs typically include RJ11, RJ45, and F-connector outputs",
+    "ONTs operate on coaxial backbones in most networks"
+  ],
+  "correct_answer": [
+    "ONTs convert fiber signals into multiple service types like Ethernet and voice",
+    "ONTs typically include RJ11, RJ45, and F-connector outputs"
+  ],
+  "explanation": "ONTs handle signal conversion from fiber to usable service interfaces and typically feature RJ11 for voice, RJ45 for data, and F-connectors for video.",
+  "tags": [
+    "ONT",
+    "RJ11",
+    "RJ45",
+    "F-connector",
+    "optical network terminal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are benefits of using PoE++ in modern enterprise networks? (Select all that apply)",
+  "answer_options": [
+    "Reduced need for AC outlets near devices",
+    "Higher power for devices like laptops and PTZ cameras",
+    "Works on coaxial cable without modification",
+    "Improved compatibility with legacy analog phones",
+    "Simplified cable management in ceiling installations"
+  ],
+  "correct_answer": [
+    "Reduced need for AC outlets near devices",
+    "Higher power for devices like laptops and PTZ cameras",
+    "Simplified cable management in ceiling installations"
+  ],
+  "explanation": "PoE++ enables higher power delivery through existing Ethernet cabling, reducing installation complexity and eliminating the need for separate AC power for many high-power devices. It doesn't work with coax or analog phones.",
+  "tags": [
+    "PoE++"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

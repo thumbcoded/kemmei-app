@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What physical medium is used in DSL connections?",
+  "answer_options": [
+    "Coaxial cable",
+    "Fiber optic cable",
+    "Twisted-pair telephone lines",
+    "Satellite dish"
+  ],
+  "correct_answer": [
+    "Twisted-pair telephone lines"
+  ],
+  "explanation": "DSL uses the existing twisted-pair telephone lines to deliver internet connectivity.",
+  "tags": [
+    "DSL"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

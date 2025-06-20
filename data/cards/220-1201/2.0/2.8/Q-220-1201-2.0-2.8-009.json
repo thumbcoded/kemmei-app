@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs an RJ45 connector but finds that the copper contacts did not pierce through the insulation of all wires. What was most likely done incorrectly?",
+  "answer_options": [
+    "The cable tester was not calibrated",
+    "The wires were stripped too far",
+    "The crimping tool was not fully engaged",
+    "A punchdown tool was used instead of a crimper"
+  ],
+  "correct_answer": [
+    "The crimping tool was not fully engaged"
+  ],
+  "explanation": "If the crimping tool is not fully engaged, the metal contacts in the connector may not pierce the wire insulation, leading to failed connections.",
+  "tags": [
+    "crimper",
+    "RJ45"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

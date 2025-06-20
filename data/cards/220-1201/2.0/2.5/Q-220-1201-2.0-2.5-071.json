@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A VoIP phone requires 25.5 watts to function. What minimum PoE standard must your switch support?",
+  "answer_options": [
+    "PoE",
+    "PoE+",
+    "PoE++",
+    "In-span"
+  ],
+  "correct_answer": [
+    "PoE+"
+  ],
+  "explanation": "PoE+ (IEEE 802.3at) provides up to 25.5 watts of DC power, sufficient for most VoIP phones and access points.",
+  "tags": [
+    "PoE+",
+    "VoIP phone"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

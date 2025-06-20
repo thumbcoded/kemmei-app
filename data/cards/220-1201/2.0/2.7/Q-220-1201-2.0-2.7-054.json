@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which antenna type would be most appropriate for a long-distance, fixed wireless WISP installation requiring focused signal transmission?",
+  "answer_options": [
+    "Omnidirectional antenna",
+    "Dipole antenna",
+    "Yagi antenna",
+    "Patch antenna"
+  ],
+  "correct_answer": [
+    "Yagi antenna"
+  ],
+  "explanation": "Yagi antennas are directional and commonly used for long-distance point-to-point connections in fixed wireless setups like WISP.",
+  "tags": [
+    "antenna",
+    "fixed wireless"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

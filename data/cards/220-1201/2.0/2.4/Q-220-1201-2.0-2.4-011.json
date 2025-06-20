@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why does assigning ports to different VLANs on a single switch result in multiple broadcast domains?",
+  "answer_options": [
+    "Each VLAN is a logically separate network, each with its own broadcast domain",
+    "Switches always combine all traffic by default",
+    "VLANs require different physical cables",
+    "Broadcasts are filtered by port number, not VLAN ID"
+  ],
+  "correct_answer": [
+    "Each VLAN is a logically separate network, each with its own broadcast domain"
+  ],
+  "explanation": "VLANs segment a switch into multiple logical networks; broadcasts are limited to devices within the same VLAN.",
+  "tags": [
+    "broadcast domain",
+    "VLAN",
+    "segmentation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

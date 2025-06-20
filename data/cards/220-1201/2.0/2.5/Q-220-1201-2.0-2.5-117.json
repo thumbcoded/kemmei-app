@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What happens in a switch when two devices are detected using the same MAC address?",
+  "answer_options": [
+    "The switch logs an ARP mismatch and forwards both",
+    "The switch shuts down the port to prevent spoofing",
+    "The switch dynamically assigns a new MAC address",
+    "The switch allows the newer device only on VLAN 1"
+  ],
+  "correct_answer": [
+    "The switch shuts down the port to prevent spoofing"
+  ],
+  "explanation": "Switches often include MAC security features such as port security, which can disable ports when duplicate MAC addresses are detected to prevent spoofing.",
+  "tags": [
+    "MAC address",
+    "spoofing",
+    "NIC",
+    "port security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

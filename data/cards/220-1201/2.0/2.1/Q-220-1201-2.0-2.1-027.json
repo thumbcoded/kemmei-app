@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "During a TCP session, which mechanism ensures that packets arrive in the correct order?",
+  "answer_options": [
+    "ACK flag",
+    "Sliding window",
+    "Sequence numbers",
+    "SYN-ACK process"
+  ],
+  "correct_answer": [
+    "Sequence numbers"
+  ],
+  "explanation": "TCP uses sequence numbers in each segment to ensure that data is reassembled in the correct order at the destination.",
+  "tags": [
+    "ordered data",
+    "TCP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

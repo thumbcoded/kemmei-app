@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary function of a wireless access point in a network?",
+  "answer_options": [
+    "To connect wireless devices to a wired network",
+    "To assign IP addresses to clients",
+    "To make routing decisions between subnets",
+    "To provide internet filtering"
+  ],
+  "correct_answer": [
+    "To connect wireless devices to a wired network"
+  ],
+  "explanation": "A wireless access point allows Wi-Fi devices to join a wired Ethernet LAN.",
+  "tags": [
+    "access point",
+    "wireless to wired"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

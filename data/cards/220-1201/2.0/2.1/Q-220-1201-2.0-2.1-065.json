@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are features of connection-oriented protocols like TCP? (Select all that apply)",
+  "answer_options": [
+    "Three-way handshake before data transfer",
+    "Automatic retransmission of lost packets",
+    "Guaranteed delivery order",
+    "Faster than connectionless protocols",
+    "Ideal for real-time streaming"
+  ],
+  "correct_answer": [
+    "Three-way handshake before data transfer",
+    "Automatic retransmission of lost packets",
+    "Guaranteed delivery order"
+  ],
+  "explanation": "TCP uses a handshake, retransmits lost data, and preserves order — but is not optimized for speed or real-time use.",
+  "tags": [
+    "connection-oriented",
+    "TCP vs UDP",
+    "reliable vs unreliable"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

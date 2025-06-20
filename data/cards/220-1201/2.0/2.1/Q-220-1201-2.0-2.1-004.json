@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which port is used for secure shell (SSH) access?",
+  "answer_options": [
+    "23",
+    "21",
+    "22",
+    "53"
+  ],
+  "correct_answer": [
+    "22"
+  ],
+  "explanation": "SSH uses port 22 for secure command-line access to remote devices.",
+  "tags": [
+    "port 22",
+    "application port"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

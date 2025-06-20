@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best describes the interaction between SPF, DKIM, and DMARC?",
+  "answer_options": [
+    "SPF and DKIM are mandatory for email delivery, while DMARC is optional",
+    "SPF and DKIM perform authentication checks; DMARC defines the policy for failures",
+    "Only DMARC provides email authentication; SPF and DKIM are legacy",
+    "DMARC checks sender reputation without relying on SPF or DKIM"
+  ],
+  "correct_answer": [
+    "SPF and DKIM perform authentication checks; DMARC defines the policy for failures"
+  ],
+  "explanation": "SPF verifies sender IPs, DKIM verifies message integrity, and DMARC uses both to determine whether to allow, quarantine, or reject a message.",
+  "tags": [
+    "SPF",
+    "DKIM",
+    "DMARC",
+    "mail authentication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

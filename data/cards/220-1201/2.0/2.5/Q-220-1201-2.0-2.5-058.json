@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A network admin wants to block social media applications, regardless of which ports are used. Which feature must the firewall support?",
+  "answer_options": [
+    "Application-level inspection",
+    "MAC address filtering",
+    "Only port-based rules",
+    "Punchdown block filtering"
+  ],
+  "correct_answer": [
+    "Application-level inspection"
+  ],
+  "explanation": "Application-level inspection identifies and controls specific applications, even if they use non-standard ports.",
+  "tags": [
+    "next-generation firewall",
+    "application filter",
+    "firewall"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

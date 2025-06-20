@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of network connects computers within a limited area such as a building?",
+  "answer_options": [
+    "MAN",
+    "SAN",
+    "LAN",
+    "PAN"
+  ],
+  "correct_answer": [
+    "LAN"
+  ],
+  "explanation": "A Local Area Network (LAN) connects devices within a limited area like a home, office, or campus floor.",
+  "tags": [
+    "LAN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

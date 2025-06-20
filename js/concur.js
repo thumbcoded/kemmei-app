@@ -143,6 +143,20 @@ function renderStaticTree() {
 
     certLine.addEventListener("click", () => {
       const open = domainContainer.style.display === "block";
+      
+      if (!open) {
+        // Collapse all other certificates first
+        document.querySelectorAll(`.cert-node:not([data-cert-id="${certId}"]) .domain-block`).forEach(other => {
+          other.style.display = "none";
+          // Also update the toggle arrow of the parent certificate
+          const parentToggle = other.parentElement.querySelector(".toggle-arrow");
+          if (parentToggle) {
+            parentToggle.textContent = "\u25B6";
+          }
+        });
+      }
+      
+      // Toggle this certificate
       domainContainer.style.display = open ? "none" : "block";
       certToggle.textContent = open ? "\u25B6" : "\u25BC";
     });
@@ -180,8 +194,29 @@ function renderStaticTree() {
       subContainer.className = "subdomain-list";
       subContainer.style.display = "none";
 
-      domainLine.addEventListener("click", () => {
+      domainLine.addEventListener("click", (e) => {
+        // Stop propagation to prevent triggering the certLine click
+        e.stopPropagation();
+        
         const open = subContainer.style.display === "block";
+        
+        // If we're opening this domain, close all other domains first
+        if (!open) {
+          // Find all other subdomain lists in the same cert and collapse them
+          const otherDomains = document.querySelectorAll(
+            `.domain-node[data-cert-id="${certId}"]:not([data-domain-id="${domainId}"]) .subdomain-list`
+          );
+          otherDomains.forEach(other => {
+            other.style.display = "none";
+            // Also update the toggle arrow of the parent domain
+            const parentToggle = other.parentElement.querySelector(".toggle-arrow");
+            if (parentToggle) {
+              parentToggle.textContent = "\u25B6";
+            }
+          });
+        }
+        
+        // Toggle this domain
         subContainer.style.display = open ? "none" : "block";
         domainToggle.textContent = open ? "\u25B6" : "\u25BC";
       });
@@ -208,7 +243,10 @@ function renderStaticTree() {
         subItem.appendChild(label);
         subItem.appendChild(badge);
 
-        subItem.addEventListener("click", () => {
+        subItem.addEventListener("click", (e) => {
+          // Stop propagation to prevent triggering parent domain click
+          e.stopPropagation();
+          
           window.kemmeiSelectedSubdomain = { certId, domainId, subId, subTitle };
           
           // Update selection visual

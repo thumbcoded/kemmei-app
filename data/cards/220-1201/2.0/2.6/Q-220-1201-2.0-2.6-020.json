@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a valid IPv6 address?",
+  "answer_options": [
+    "192.168.1.1",
+    "fe80::1",
+    "10.0.0.1",
+    "255.255.255.255"
+  ],
+  "correct_answer": [
+    "fe80::1"
+  ],
+  "explanation": "IPv6 addresses use hexadecimal format and colons. fe80::1 is a valid link-local IPv6 address.",
+  "tags": [
+    "IPv6",
+    "link-local"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

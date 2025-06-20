@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why passive RFID is preferred in environments like retail and manufacturing?",
+  "answer_options": [
+    "It provides the longest range and highest throughput",
+    "It allows for two-way encryption by default",
+    "It is cheap, low-power, and can be embedded into many objects",
+    "It can communicate over Wi-Fi and cellular networks"
+  ],
+  "correct_answer": [
+    "It is cheap, low-power, and can be embedded into many objects"
+  ],
+  "explanation": "Passive RFID tags are low-cost, require no internal battery, and can be placed on a variety of items, making them ideal for mass deployment.",
+  "tags": [
+    "RFID",
+    "passive RFID",
+    "tags"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

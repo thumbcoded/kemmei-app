@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is the correct compressed form of the IPv6 address 2001:0db8:0000:0000:0000:ff00:0042:8329?",
+  "answer_options": [
+    "2001:db8::ff00:42:8329",
+    "2001:db8:0:0:0:ff:42:8329",
+    "2001::db8::ff00:42:8329",
+    "2001:db8::0:0:ff00:0042:8329"
+  ],
+  "correct_answer": [
+    "2001:db8::ff00:42:8329"
+  ],
+  "explanation": "IPv6 compression allows the longest string of consecutive zero blocks to be replaced with '::' once per address.",
+  "tags": [
+    "IPv6",
+    "address compression"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

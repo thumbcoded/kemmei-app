@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of application would most likely use UDP instead of TCP?",
+  "answer_options": [
+    "Email client",
+    "Secure file transfer",
+    "Voice over IP (VoIP)",
+    "Banking login page"
+  ],
+  "correct_answer": [
+    "Voice over IP (VoIP)"
+  ],
+  "explanation": "VoIP relies on timely delivery of data and can tolerate occasional packet loss, making UDP the better fit.",
+  "tags": [
+    "real-time traffic",
+    "VoIP",
+    "UDP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

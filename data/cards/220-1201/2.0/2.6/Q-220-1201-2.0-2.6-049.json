@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following would most likely cause an IP address conflict?",
+  "answer_options": [
+    "Multiple devices on the same SSID",
+    "Using a static IP within the DHCP pool",
+    "Changing the DNS server manually",
+    "Disabling NAT on a router"
+  ],
+  "correct_answer": [
+    "Using a static IP within the DHCP pool"
+  ],
+  "explanation": "Assigning a static IP that overlaps with the DHCP pool may result in two devices attempting to use the same address.",
+  "tags": [
+    "static IP",
+    "address conflict"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why are only three 20 MHz channels in the 2.4 GHz band considered non-overlapping in most countries?",
+  "answer_options": [
+    "The 2.4 GHz band only allows three channels total",
+    "All other channels are restricted by licensing",
+    "The limited spectrum causes adjacent channels to overlap",
+    "Wi-Fi clients can only support three simultaneous streams"
+  ],
+  "correct_answer": [
+    "The limited spectrum causes adjacent channels to overlap"
+  ],
+  "explanation": "Because the 2.4 GHz band is narrow, most 20 MHz channels overlap with adjacent ones, leaving only channels 1, 6, and 11 non-overlapping in practice.",
+  "tags": [
+    "2.4 GHz",
+    "channel",
+    "overlap"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

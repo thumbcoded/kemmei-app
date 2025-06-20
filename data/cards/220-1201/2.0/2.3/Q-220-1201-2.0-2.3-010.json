@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which DHCP message is broadcast by a client to discover available DHCP servers?",
+  "answer_options": [
+    "DHCP OFFER",
+    "DHCP ACK",
+    "DHCP DISCOVER",
+    "DHCP REQUEST"
+  ],
+  "correct_answer": [
+    "DHCP DISCOVER"
+  ],
+  "explanation": "The DHCP Discover message is broadcast by clients to locate available DHCP servers.",
+  "tags": [
+    "DHCP",
+    "DORA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

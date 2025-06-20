@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best explains why DSL throughput varies by location?",
+  "answer_options": [
+    "It depends on the DOCSIS revision used by the modem.",
+    "It’s affected by local weather conditions.",
+    "It depends on how many devices are using the modem.",
+    "It’s limited by distance from the central office."
+  ],
+  "correct_answer": [
+    "It’s limited by distance from the central office."
+  ],
+  "explanation": "DSL performance degrades as distance from the provider’s central office increases due to signal attenuation over copper lines.",
+  "tags": [
+    "DSL",
+    "central office"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

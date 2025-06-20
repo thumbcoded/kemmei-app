@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is most likely to be located outside the premises and protected by a weatherproof enclosure?",
+  "answer_options": [
+    "Network interface card",
+    "RJ45 splitter",
+    "Optical Network Terminal (ONT)",
+    "Wireless access point"
+  ],
+  "correct_answer": [
+    "Optical Network Terminal (ONT)"
+  ],
+  "explanation": "ONTs are often mounted outside the building in a sealed box to interface fiber lines with indoor cabling while protecting from environmental damage.",
+  "tags": [
+    "optical network terminal",
+    "ONT"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A network administrator uses a loopback plug and diagnostic software, but the test fails to return the sent signal. What is the most likely explanation?",
+  "answer_options": [
+    "The loopback plug is incompatible with the device’s IP address",
+    "The port’s transmit or receive circuitry is malfunctioning",
+    "The plug is not rated for gigabit speeds",
+    "The device must first authenticate to the domain"
+  ],
+  "correct_answer": [
+    "The port’s transmit or receive circuitry is malfunctioning"
+  ],
+  "explanation": "If the signal fails to return through a loopback plug, it typically means the hardware responsible for transmitting or receiving the signal is faulty.",
+  "tags": [
+    "loopback",
+    "hardware failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

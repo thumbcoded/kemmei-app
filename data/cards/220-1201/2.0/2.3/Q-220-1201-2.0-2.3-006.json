@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does the 'Request' step of the DORA process indicate?",
+  "answer_options": [
+    "The server is requesting a client ID",
+    "The client is requesting additional DNS records",
+    "The client is requesting the offered IP address",
+    "The client is verifying routing availability"
+  ],
+  "correct_answer": [
+    "The client is requesting the offered IP address"
+  ],
+  "explanation": "After receiving an offer, the client sends a Request message to confirm it wants to use the proposed IP and lease parameters.",
+  "tags": [
+    "DHCP",
+    "DORA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two results of a DHCP server being unavailable when a client requests a new address:",
+  "answer_options": [
+    "The client receives a reserved address from cache",
+    "The client may assign itself an APIPA address",
+    "The client will fail to join the network until static settings are applied",
+    "The client creates a DNS entry to bypass DHCP",
+    "The client retries using Bluetooth fallback"
+  ],
+  "correct_answer": [
+    "The client may assign itself an APIPA address",
+    "The client will fail to join the network until static settings are applied"
+  ],
+  "explanation": "If DHCP fails, the client may use a fallback address (APIPA) or remain offline until manually configured.",
+  "tags": [
+    "DHCP",
+    "APIPA",
+    "DHCP failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

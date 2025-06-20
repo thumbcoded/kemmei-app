@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true about DKIM and its role in email security? (Select all that apply)",
+  "answer_options": [
+    "DKIM uses cryptographic signatures in email headers",
+    "DKIM verifies that the email was sent from an authorized mail server",
+    "DKIM prevents email modification after sending",
+    "DKIM policies are published in DNS as TXT records",
+    "DKIM encrypts the entire email body"
+  ],
+  "correct_answer": [
+    "DKIM uses cryptographic signatures in email headers",
+    "DKIM prevents email modification after sending",
+    "DKIM policies are published in DNS as TXT records"
+  ],
+  "explanation": "DKIM verifies message integrity using cryptographic signatures stored in DNS TXT records, but does not encrypt full messages or confirm sending IPs.",
+  "tags": [
+    "DKIM",
+    "digital signature",
+    "TXT record",
+    "email integrity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

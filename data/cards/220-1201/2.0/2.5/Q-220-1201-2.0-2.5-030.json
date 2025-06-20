@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common use for wireless bridging in enterprise networks?",
+  "answer_options": [
+    "To connect two physically separate wired network segments via wireless links",
+    "To replace all wired connections with wireless",
+    "To enable port mirroring on access points",
+    "To extend the broadcast domain of a VLAN"
+  ],
+  "correct_answer": [
+    "To connect two physically separate wired network segments via wireless links"
+  ],
+  "explanation": "Wireless bridging allows two distant buildings or segments to be linked without a cable run.",
+  "tags": [
+    "bridging",
+    "access point"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

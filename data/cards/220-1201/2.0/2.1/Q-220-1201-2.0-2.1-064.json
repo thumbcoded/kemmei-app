@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which network protocol should be avoided for video conferencing applications that prioritize low latency over guaranteed delivery?",
+  "answer_options": [
+    "UDP",
+    "TCP",
+    "RTP over UDP",
+    "ICMP"
+  ],
+  "correct_answer": [
+    "TCP"
+  ],
+  "explanation": "TCP’s reliability comes at the cost of latency. UDP (or RTP over UDP) is better suited for real-time media.",
+  "tags": [
+    "TCP vs UDP",
+    "streaming vs browsing",
+    "connection-oriented"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key difference between passive and active RFID tags?",
+  "answer_options": [
+    "Passive tags transmit without radio waves",
+    "Active tags require a direct wired connection",
+    "Passive tags use power from the reader to transmit",
+    "Active tags are only used in pet identification"
+  ],
+  "correct_answer": [
+    "Passive tags use power from the reader to transmit"
+  ],
+  "explanation": "Passive RFID tags have no internal power and rely on the energy from the scanner’s RF signal to respond.",
+  "tags": [
+    "RFID",
+    "passive RFID",
+    "active RFID",
+    "tags"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

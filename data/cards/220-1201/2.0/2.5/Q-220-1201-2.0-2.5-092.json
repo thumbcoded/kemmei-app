@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is typically the location of the demarcation point in a home or office network?",
+  "answer_options": [
+    "Inside the CPU casing",
+    "At the wireless router",
+    "Where ISP cabling enters the building",
+    "Near the main circuit breaker"
+  ],
+  "correct_answer": [
+    "Where ISP cabling enters the building"
+  ],
+  "explanation": "The demarcation point marks where the ISP's responsibility ends and the customer's responsibility begins—usually at the building’s cable entry.",
+  "tags": [
+    "demarcation point",
+    "ISP boundary"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

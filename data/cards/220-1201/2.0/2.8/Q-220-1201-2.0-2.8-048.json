@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are characteristics of loopback plugs used for network troubleshooting? (Select all that apply)",
+  "answer_options": [
+    "They simulate a complete Ethernet link",
+    "They require no power source",
+    "They enable local testing without remote equipment",
+    "They generate traffic patterns for bandwidth testing",
+    "They connect transmit pins directly to receive pins"
+  ],
+  "correct_answer": [
+    "They require no power source",
+    "They enable local testing without remote equipment",
+    "They connect transmit pins directly to receive pins"
+  ],
+  "explanation": "Loopback plugs are passive tools that connect output to input, allowing for self-test of port circuitry without the need for external power or remote devices.",
+  "tags": [
+    "loopback",
+    "self-test",
+    "transmit",
+    "receive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

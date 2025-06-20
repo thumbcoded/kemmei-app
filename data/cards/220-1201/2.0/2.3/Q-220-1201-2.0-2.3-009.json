@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "If a DHCP client fails to renew its lease at the 50% and 87.5% timers, what happens next?",
+  "answer_options": [
+    "The client immediately switches to APIPA",
+    "The client must manually reconfigure its IP",
+    "The client must wait for DNS resolution",
+    "The client discards the lease and reenters the DORA process"
+  ],
+  "correct_answer": [
+    "The client discards the lease and reenters the DORA process"
+  ],
+  "explanation": "If lease renewal fails at both the 50% and 87.5% intervals, the client abandons the lease and attempts to obtain a new one using DORA.",
+  "tags": [
+    "DHCP",
+    "lease renewal",
+    "DORA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

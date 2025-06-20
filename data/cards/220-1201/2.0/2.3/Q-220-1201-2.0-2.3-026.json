@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is used to verify that an email was not altered in transit?",
+  "answer_options": [
+    "SPF",
+    "DMARC",
+    "DKIM",
+    "TLS"
+  ],
+  "correct_answer": [
+    "DKIM"
+  ],
+  "explanation": "DKIM (DomainKeys Identified Mail) uses digital signatures to ensure the email was not modified after being sent.",
+  "tags": [
+    "DKIM",
+    "digital signature",
+    "mail authentication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

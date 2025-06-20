@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two next-gen firewall features that go beyond classic port and access list filtering:",
+  "answer_options": [
+    "URL filtering and threat signature detection",
+    "Physical cable management",
+    "MAC address learning",
+    "Deep packet/application inspection",
+    "Static run cabling"
+  ],
+  "correct_answer": [
+    "URL filtering and threat signature detection",
+    "Deep packet/application inspection"
+  ],
+  "explanation": "Next-gen firewalls inspect traffic content and detect known attack patterns, not just ports.",
+  "tags": [
+    "next-generation firewall",
+    "application filter",
+    "URL filtering",
+    "firewall"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

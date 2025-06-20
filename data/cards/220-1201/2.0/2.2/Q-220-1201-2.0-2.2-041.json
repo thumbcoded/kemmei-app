@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which device is commonly used to scan a passive RFID tag?",
+  "answer_options": [
+    "Wi-Fi access point",
+    "Smartphone GPS",
+    "RFID reader",
+    "Infrared sensor"
+  ],
+  "correct_answer": [
+    "RFID reader"
+  ],
+  "explanation": "Passive RFID tags are energized by nearby RFID readers that emit a radio frequency to power the tag.",
+  "tags": [
+    "RFID",
+    "passive RFID"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

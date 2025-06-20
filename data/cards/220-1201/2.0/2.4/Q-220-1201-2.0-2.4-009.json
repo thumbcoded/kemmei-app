@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "If a switch port is assigned to VLAN 20, what happens to broadcasts sent from that port?",
+  "answer_options": [
+    "They are only received by devices in VLAN 20",
+    "They are received by all VLANs on the switch",
+    "They are dropped by the switch",
+    "They are forwarded to the router"
+  ],
+  "correct_answer": [
+    "They are only received by devices in VLAN 20"
+  ],
+  "explanation": "Each VLAN is a separate broadcast domain; broadcasts stay within that VLAN.",
+  "tags": [
+    "broadcast domain",
+    "VLAN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

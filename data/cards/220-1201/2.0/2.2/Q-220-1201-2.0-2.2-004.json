@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason for the introduction of simplified Wi-Fi generation names like Wi-Fi 5 and Wi-Fi 6?",
+  "answer_options": [
+    "To avoid copyright issues",
+    "To reduce confusion caused by 802.11 naming",
+    "To support higher data rates",
+    "To reflect hardware compatibility"
+  ],
+  "correct_answer": [
+    "To reduce confusion caused by 802.11 naming"
+  ],
+  "explanation": "The Wi-Fi Alliance introduced generation names (e.g., Wi-Fi 5, Wi-Fi 6) to make it easier for consumers to understand the relative capabilities of each version.",
+  "tags": [
+    "Wi-Fi"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

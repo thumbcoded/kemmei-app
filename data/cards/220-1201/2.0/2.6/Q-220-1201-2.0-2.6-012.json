@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A host has IP address 172.16.20.5 with subnet mask 255.255.240.0. What is the network address?",
+  "answer_options": [
+    "172.16.0.0",
+    "172.16.20.0",
+    "172.16.16.0",
+    "172.16.32.0"
+  ],
+  "correct_answer": [
+    "172.16.16.0"
+  ],
+  "explanation": "255.255.240.0 is a /20 mask. 172.16.20.5 falls within the 172.16.16.0/20 block.",
+  "tags": [
+    "IPv4",
+    "subnet mask",
+    "network address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

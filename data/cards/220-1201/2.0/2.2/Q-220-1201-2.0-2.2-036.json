@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is Bluetooth more likely to suffer interference in a crowded office environment compared to other wireless technologies?",
+  "answer_options": [
+    "It uses a licensed band that limits range",
+    "It transmits in the same band as many common devices like Wi-Fi and microwaves",
+    "It lacks encryption features",
+    "It operates only in the 6 GHz band"
+  ],
+  "correct_answer": [
+    "It transmits in the same band as many common devices like Wi-Fi and microwaves"
+  ],
+  "explanation": "Bluetooth shares the 2.4 GHz unlicensed ISM band, which is also used by Wi-Fi, microwaves, and other electronics, increasing the chance of interference.",
+  "tags": [
+    "Bluetooth",
+    "2.4 GHz",
+    "ISM band",
+    "unlicensed frequency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

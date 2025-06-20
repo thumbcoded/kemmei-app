@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following accurately describes a 'mid-span' PoE configuration?",
+  "answer_options": [
+    "Power and data originate from the same switch port",
+    "Power is delivered through a separate inline device",
+    "Power is split from the device being powered",
+    "Power is injected at the endpoint device"
+  ],
+  "correct_answer": [
+    "Power is delivered through a separate inline device"
+  ],
+  "explanation": "A mid-span configuration uses a PoE injector placed between a non-PoE switch and the powered device to supply power.",
+  "tags": [
+    "mid-span"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

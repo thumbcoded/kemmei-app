@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of a loopback plug?",
+  "answer_options": [
+    "To extend a wired network",
+    "To test the physical interface of a device",
+    "To measure Wi-Fi signal strength",
+    "To power a PoE-enabled device"
+  ],
+  "correct_answer": [
+    "To test the physical interface of a device"
+  ],
+  "explanation": "Loopback plugs are used to test whether a network interface can correctly transmit and receive data by looping the signal back to itself.",
+  "tags": [
+    "loopback",
+    "interface test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

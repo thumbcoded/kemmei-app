@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What would most likely cause an ONT to deliver voice and video services but no data signal?",
+  "answer_options": [
+    "A failed optical receiver in the ONT",
+    "A damaged F-connector on the coax line",
+    "A misconfigured RJ45 port or router connection",
+    "Excessive fiber attenuation at the central office"
+  ],
+  "correct_answer": [
+    "A misconfigured RJ45 port or router connection"
+  ],
+  "explanation": "If only the data output (usually RJ45) is not working, it's likely due to a local Ethernet cabling or config issue rather than a problem with the fiber itself.",
+  "tags": [
+    "RJ45",
+    "data port",
+    "ONT"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

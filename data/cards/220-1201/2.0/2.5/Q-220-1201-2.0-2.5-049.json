@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are best practices for patch panels and cable management? (Select all that apply)",
+  "answer_options": [
+    "Label both ends of every cable",
+    "Use cable trays or organizers",
+    "Keep power and data cables separated",
+    "Avoid sharp bends in cables",
+    "Leave cables unbundled for easier access"
+  ],
+  "correct_answer": [
+    "Label both ends of every cable",
+    "Use cable trays or organizers",
+    "Keep power and data cables separated",
+    "Avoid sharp bends in cables"
+  ],
+  "explanation": "Proper management includes clear labeling, using organizers, avoiding interference, and not stressing cables.",
+  "tags": [
+    "patch panel",
+    "cable management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

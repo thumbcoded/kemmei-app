@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which protocol uses port 143 to retrieve email messages while keeping them on the server?",
+  "answer_options": [
+    "POP3",
+    "IMAP",
+    "SMTP",
+    "FTP"
+  ],
+  "correct_answer": [
+    "IMAP"
+  ],
+  "explanation": "IMAP uses port 143 and allows users to access emails without downloading them, keeping messages stored on the mail server.",
+  "tags": [
+    "port 143",
+    "network service"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

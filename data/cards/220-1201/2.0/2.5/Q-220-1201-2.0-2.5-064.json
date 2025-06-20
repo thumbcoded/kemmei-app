@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of device can be used to add PoE to a non-PoE switch connection?",
+  "answer_options": [
+    "Firewall",
+    "Hub",
+    "PoE injector",
+    "Modem"
+  ],
+  "correct_answer": [
+    "PoE injector"
+  ],
+  "explanation": "A PoE injector adds power to an Ethernet cable between a non-PoE switch and a powered device.",
+  "tags": [
+    "injector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

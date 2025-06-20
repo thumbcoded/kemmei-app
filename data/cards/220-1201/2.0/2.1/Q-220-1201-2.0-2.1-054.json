@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following protocols are correctly matched with their default ports? (Select all that apply)",
+  "answer_options": [
+    "FTP - Ports 20 and 21",
+    "Telnet - Port 23",
+    "HTTPS - Port 443",
+    "IMAP - Port 110",
+    "SMTP - Port 25"
+  ],
+  "correct_answer": [
+    "FTP - Ports 20 and 21",
+    "Telnet - Port 23",
+    "HTTPS - Port 443",
+    "SMTP - Port 25"
+  ],
+  "explanation": "All except IMAP (which uses port 143) are correct associations. POP3 uses port 110, not IMAP.",
+  "tags": [
+    "FTP",
+    "Telnet",
+    "SMTP",
+    "HTTPS",
+    "port mapping"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

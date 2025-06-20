@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In which situation would a connectionless protocol be preferred?",
+  "answer_options": [
+    "When reliable file transfer is required",
+    "When browsing secure websites",
+    "When sending VoIP traffic that can tolerate occasional loss",
+    "When authenticating over SSH"
+  ],
+  "correct_answer": [
+    "When sending VoIP traffic that can tolerate occasional loss"
+  ],
+  "explanation": "UDP, being connectionless, is ideal for real-time traffic like VoIP where speed is prioritized over guaranteed delivery.",
+  "tags": [
+    "connectionless",
+    "real-time application",
+    "streaming vs browsing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

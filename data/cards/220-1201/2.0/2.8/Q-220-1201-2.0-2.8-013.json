@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which companion tool is used with a tone generator to locate cables?",
+  "answer_options": [
+    "Wire stripper",
+    "Loopback plug",
+    "Inductive probe",
+    "Crimper"
+  ],
+  "correct_answer": [
+    "Inductive probe"
+  ],
+  "explanation": "The inductive probe detects the analog tone emitted by the generator, allowing technicians to identify the cable without direct contact.",
+  "tags": [
+    "inductive probe"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

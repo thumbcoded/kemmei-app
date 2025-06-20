@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does SSID stand for in the context of wireless networking?",
+  "answer_options": [
+    "Service Set Identifier",
+    "Secure Switch Identification",
+    "Segmented Station ID",
+    "Software Signal Identifier"
+  ],
+  "correct_answer": [
+    "Service Set Identifier"
+  ],
+  "explanation": "SSID stands for Service Set Identifier, which names the wireless network.",
+  "tags": [
+    "SSID",
+    "access point"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

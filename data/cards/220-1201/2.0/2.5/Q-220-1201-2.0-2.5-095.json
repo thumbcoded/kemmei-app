@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector is commonly used on an ONT to provide Ethernet connectivity?",
+  "answer_options": [
+    "RJ45",
+    "RJ11",
+    "F-connector",
+    "SC fiber"
+  ],
+  "correct_answer": [
+    "RJ45"
+  ],
+  "explanation": "RJ45 connectors on ONTs are used to provide Ethernet output that can be connected to a router or switch.",
+  "tags": [
+    "RJ45",
+    "data port",
+    "optical network terminal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

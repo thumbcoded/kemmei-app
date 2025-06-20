@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best describes the use of channels in wireless networking?",
+  "answer_options": [
+    "Each channel uses a unique IP address",
+    "Channels allow separation of physical devices",
+    "Channels divide the frequency spectrum to reduce overlap",
+    "Channels increase power output of access points"
+  ],
+  "correct_answer": [
+    "Channels divide the frequency spectrum to reduce overlap"
+  ],
+  "explanation": "Wireless channels are subsets of the frequency band used to manage multiple connections and reduce interference.",
+  "tags": [
+    "channel",
+    "overlap"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

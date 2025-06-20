@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What subnet mask would you expect to see on a point-to-point connection between two routers?",
+  "answer_options": [
+    "255.255.255.0",
+    "255.255.255.252",
+    "255.255.255.224",
+    "255.255.254.0"
+  ],
+  "correct_answer": [
+    "255.255.255.252"
+  ],
+  "explanation": "A /30 subnet (255.255.255.252) allows two usable host addresses, perfect for point-to-point links.",
+  "tags": [
+    "subnet mask",
+    "point-to-point"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

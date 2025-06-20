@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which record type allows one domain name to refer to another canonical domain name?",
+  "answer_options": [
+    "PTR",
+    "CNAME",
+    "MX",
+    "NS"
+  ],
+  "correct_answer": [
+    "CNAME"
+  ],
+  "explanation": "CNAME (Canonical Name) records are used to alias one domain name to another.",
+  "tags": [
+    "DNS",
+    "CNAME",
+    "domain name system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common use for port mirroring on a switch?",
+  "answer_options": [
+    "Encrypt VLAN traffic",
+    "Duplicate broadcast messages",
+    "Send a copy of traffic to a monitoring device",
+    "Assign static IP addresses"
+  ],
+  "correct_answer": [
+    "Send a copy of traffic to a monitoring device"
+  ],
+  "explanation": "Port mirroring allows traffic from one or more switch ports to be replicated to another port for inspection or packet capture.",
+  "tags": [
+    "port mirroring",
+    "monitoring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

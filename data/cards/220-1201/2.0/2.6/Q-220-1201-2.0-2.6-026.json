@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of IPv6 address is used to communicate with all devices on a local network segment?",
+  "answer_options": [
+    "Loopback",
+    "Link-local",
+    "Multicast",
+    "Unicast"
+  ],
+  "correct_answer": [
+    "Multicast"
+  ],
+  "explanation": "IPv6 replaces IPv4 broadcasts with multicast addressing to efficiently target groups of hosts.",
+  "tags": [
+    "IPv6",
+    "multicast"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

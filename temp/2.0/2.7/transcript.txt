@@ -1,0 +1,621 @@
+0:02
+these days you can be almost anywhere on
+0:04
+Earth and have access to the internet
+0:06
+we're able to get that access thanks to
+0:09
+satellite networking where we are
+0:10
+communicating from Earth to a satellite
+0:12
+and back down to Earth again since we
+0:15
+are launching a satellite into space to
+0:18
+provide this type of connectivity the
+0:20
+relative cost of satellite networking is
+0:22
+a bit more expensive than something that
+0:24
+you might use terrestrially but that
+0:26
+additional cost does provide a very
+0:28
+functional connection it's very common
+0:30
+to see 100 megabits down and five
+0:33
+megabits up when you're using a
+0:35
+satellite network connection this is
+0:37
+perfect for remote sites and places
+0:39
+where it may not be possible to get a
+0:41
+traditional form of internet
+0:43
+connectivity one of the challenges we've
+0:46
+traditionally had from satellite
+0:47
+networking is that we have to send this
+0:49
+signal so far into space and back down
+0:52
+to Earth again that it adds additional
+0:54
+latency to the connection traditionally
+0:56
+we've seen systems have about a quarter
+0:59
+of a second up and a quarter of a second
+1:01
+down so there's about half a second
+1:03
+latency just to be able to send packets
+1:05
+up to the satellite and back down again
+1:07
+the newer Starlink connections are a
+1:10
+little closer to Earth and therefore the
+1:12
+latency numbers are a bit smaller
+1:14
+starlink advertises around 25 to 60
+1:17
+milliseconds of latency but even they're
+1:19
+working to bring those numbers even
+1:21
+lower satellite networking isn't without
+1:24
+its faults of course we have the concern
+1:26
+of being able to see the satellite so
+1:28
+our connection between us and that
+1:30
+satellite needs to be a line of sight we
+1:33
+might also have connectivity problems if
+1:35
+a large storm comes through we refer to
+1:38
+that type of connectivity issue as rain
+1:41
+fade one of the fastest ways to
+1:43
+communicate is using light itself
+1:45
+through fiber optics this allows us to
+1:48
+send a lot of data through a very small
+1:50
+fiber making for one of the most
+1:52
+efficient ways to transmit large amounts
+1:54
+of data compared to copper fiber is a
+1:57
+bit more expensive not only for the
+2:00
+fiber itself but for the equipment that
+2:02
+connects to the fiber and if you need to
+2:04
+repair the fiber those costs will be a
+2:06
+bit more expensive than having to repair
+2:08
+something that is copperbased but fiber
+2:11
+does provide us with a way to not only
+2:13
+transmit large amounts of data we can do
+2:15
+it over distances that are much longer
+2:18
+than we can with copper connectivity and
+2:21
+since we can put so much data over a
+2:23
+single pair of fiber it's a perfect
+2:25
+connectivity over long distances for
+2:27
+your wide area networks so inside of a
+2:30
+metropolitan area or connecting multiple
+2:32
+metropolitan areas to each other it's
+2:35
+very common to see a sonnet ring or some
+2:37
+type of multi-wavelength fiber
+2:40
+connection being used to transmit data
+2:42
+from one place to another it used to be
+2:45
+that fiber was exclusive to these very
+2:47
+large wide area networks or inside of a
+2:50
+large corporate core but these days
+2:52
+fiber can come directly to our home and
+2:54
+it's not unusual to see a conversion
+2:56
+outside of our home to convert from the
+2:59
+fiber on the street into the copper that
+3:01
+we use inside of our
+3:03
+house one of the most common copper
+3:05
+connections for internet connectivity is
+3:08
+the cable that you would commonly
+3:09
+associate with a cable television we're
+3:12
+also able to run data over that
+3:14
+connection so it's not unusual to plug
+3:16
+that into a cable modem and be able to
+3:19
+access the network through the Ethernet
+3:21
+connectivity that you would normally
+3:22
+have inside of your home this cable
+3:25
+provided by the cable company has a lot
+3:28
+of different frequencies running on it
+3:29
+simultaneously we refer to that type of
+3:32
+technology as broadband we can run
+3:34
+different frequencies with different
+3:36
+traffic types all at the same time over
+3:39
+the same wire this allows us to run many
+3:42
+different frequencies using different
+3:44
+services over the same copper wire and
+3:46
+it makes for a very efficient way to
+3:48
+provide voice video and data for an
+3:51
+entire home the standard used for
+3:54
+sending data over these networks is
+3:56
+referred to as DOCSIS this is the data
+3:59
+over cable service interface
+4:01
+specification there are different Docsis
+4:04
+versions that provide different levels
+4:06
+of service and different speeds of
+4:08
+connectivity on many of these cable
+4:10
+networks you'll find internet
+4:11
+connectivity speeds will range between
+4:14
+50 megabits per second all the way up to
+4:16
+1 gigabit per second and even higher
+4:19
+this provides us with extensive data
+4:21
+connectivity to the internet and since
+4:23
+we are bringing this in from the cable
+4:25
+company we can also have television and
+4:27
+voice communication over that same
+4:30
+wire many homes also have telephone
+4:33
+service that's provided by your local
+4:35
+phone carrier that phone company can
+4:37
+also add digital data onto that same
+4:40
+connection that's used for voice
+4:42
+communication we refer to this as DSL or
+4:45
+digital subscriber line you'll sometimes
+4:48
+also hear this referred to as an
+4:49
+asymmetric digital subscriber line or
+4:53
+ADSL the reason we refer to this as
+4:55
+asymmetric is that the download speed is
+4:57
+often much faster than the upload speed
+5:00
+for example it's not unusual to find DSL
+5:03
+connections that may have a 200 megabit
+5:05
+per second downstream speed but a 20
+5:08
+megabit pers upstream speed not only do
+5:11
+we have this difference in speed but
+5:12
+there's also differences depending on
+5:15
+how far away we might be from the
+5:17
+central office the farther away you are
+5:19
+from the central office the slower these
+5:21
+speeds will be and DSL tends to require
+5:24
+that you're about 10,000 ft or closer to
+5:27
+a central office our cellular networks
+5:31
+also provide us with internet
+5:32
+connectivity this technology uses the
+5:35
+same infrastructure as the one we use
+5:37
+for our mobile phones where we're
+5:39
+separating a geography into smaller
+5:41
+cells and connecting them together with
+5:43
+antennas some folks might use the mobile
+5:45
+phone as a jumping off point where they
+5:48
+will connect their device to the mobile
+5:49
+phone and the mobile phone then provides
+5:52
+connectivity to the internet this
+5:54
+onetoone connection is often referred to
+5:56
+as tethering if you have a phone that
+5:58
+provides internet access for multiple
+6:01
+people simultaneously then you're using
+6:03
+your phone as a mobile hotspot you may
+6:06
+want to check with your mobile carrier
+6:08
+and see if you can get internet
+6:09
+connectivity through tethering or a
+6:11
+mobile hotspot and they might also be
+6:13
+able to tell you if there's an
+6:14
+additional cost for that
+6:17
+service in some areas it might be
+6:19
+difficult to get a copper cable from
+6:21
+your cable company or even a phone line
+6:24
+from your local telephone company in
+6:26
+those situations you might want to use a
+6:28
+wireless connection to an internet
+6:30
+service provider or a WISP this is
+6:33
+perfect for remote locations where you
+6:35
+wouldn't normally have a connection from
+6:37
+any other type of internet provider this
+6:40
+is also very simple to set up because
+6:41
+all you really need is an antenna and
+6:44
+you're now connected to the WISP network
+6:46
+on the wireless network itself you may
+6:48
+be using a number of different
+6:50
+technologies it might be a meshed 802.11
+6:53
+network which is the same kind of 802.11
+6:55
+network that we use in our homes and
+6:57
+businesses this might be a 5G home
+6:59
+internet connection where we're using a
+7:02
+traditional mobile phone provider as our
+7:04
+internet service provider and we could
+7:07
+even be using some other type of
+7:09
+proprietary wireless connection to be
+7:11
+able to access the wireless internet
+7:14
+service provers network we need an
+7:16
+antenna outside and that usually will
+7:18
+give us speeds that range anywhere from
+7:20
+10 to 1,000 megabits per second
+
+0:02
+if you're plugging into an Ethernet
+0:04
+connection or using a local 802.11
+0:07
+wireless network then you are
+0:08
+communicating over a local area network
+0:11
+or a LAN we usually refer to a LAN as a
+0:15
+group of networks that are close to our
+0:17
+location so this might be on the floor
+0:20
+of a building or in a group of buildings
+0:22
+that make up this particular local area
+0:25
+network one of the common
+0:26
+characteristics of a LAN is that we
+0:29
+usually get our fastest speeds by a
+0:31
+local area network if we're connecting
+0:33
+to networks that are farther away then
+0:36
+we're probably not on a local area
+0:38
+network anymore and therefore we're not
+0:40
+getting those same high
+0:42
+throughputs if you're connecting to a
+0:44
+location that's in another city another
+0:47
+state another country or anywhere around
+0:49
+the world then you're communicating over
+0:51
+a wide area network or a WAN because of
+0:55
+the challenges associated with
+0:56
+communicating over such long distances
+0:59
+wide area networks tend to be a bit
+1:01
+slower than communicating over a LAN
+1:03
+there also might be many different
+1:05
+technologies used to be able to
+1:07
+communicate over this wide area network
+1:10
+for example you might be communicating
+1:11
+using pointto-oint serial connections or
+1:14
+it might be an NLS network or
+1:16
+multi-protocol label switching network
+1:18
+and some wide area networks may use
+1:20
+communication facilities here on Earth
+1:22
+we refer to these as terrestrial
+1:24
+networks or we might use satellites to
+1:27
+communicate across the WAN those would
+1:28
+be non-aterrestrial
+1:31
+networks we've also created specialized
+1:33
+networks for devices and components that
+1:36
+are close to us as individuals we refer
+1:39
+to these as a PAN or personal area
+1:42
+network if you're communicating with
+1:44
+Bluetooth infrared or near field
+1:46
+communication you're probably
+1:48
+communicating over a PAN we might be
+1:51
+using a personal area network inside of
+1:53
+our vehicle to have audio output from
+1:55
+our phone and be able to communicate
+1:57
+hands-free or it may be integrating with
+1:59
+the media services that are already on
+2:02
+your existing mobile device many of the
+2:04
+wireless headsets that we use these days
+2:06
+are communicating using Bluetooth that
+2:09
+certainly would be a personal area
+2:10
+network protocol and some of the health
+2:13
+related technologies we use also use a
+2:15
+personal area network so if you're
+2:17
+gathering health details on your
+2:19
+smartphone or you're communicating
+2:21
+directly to your workout devices then
+2:23
+you're probably using a personal area
+2:26
+network we've talked about a local area
+2:29
+network and we've talked about a wide
+2:31
+area network but there is a network that
+2:33
+sits in the middle of those two that
+2:35
+would be a metropolitan area network or
+2:38
+a man this is a network that tends to be
+2:41
+in a single geographical area such as a
+2:44
+city if we have a lot of remote
+2:46
+locations around the same city we can
+2:48
+usually connect to those using a
+2:50
+metropolitan area network traditionally
+2:53
+these metropolitan area networks have
+2:55
+been proprietary but increasingly we've
+2:57
+seen these standardized on Ethernet
+3:00
+specifically metro Ethernet which
+3:02
+describes a type of Ethernet
+3:03
+connectivity in our local city and you
+3:06
+might also find that your local
+3:07
+government has put their own fiber into
+3:10
+the ground since they do have right of
+3:12
+way they're able to put anything they
+3:14
+would like inside of the pipes and they
+3:16
+can create their own metropolitan area
+3:18
+network using their own
+3:20
+fiber many organizations will have a
+3:23
+repository of storage that they refer to
+3:26
+as a sand or storage area network this
+3:29
+is usually a high-speed connectivity
+3:32
+because we're often transferring large
+3:34
+amounts of data into and out of that
+3:36
+sand to the devices accessing the sand
+3:39
+and this looks and feels like a local
+3:41
+storage device so you can even take a
+3:43
+very large file and change a very small
+3:45
+bit of data within that file very very
+3:48
+efficiently we refer to this as block
+3:50
+level access because we're moving so
+3:53
+much data in and out of the sand we're
+3:55
+usually putting these on their own
+3:57
+isolated network connected to the rest
+3:59
+of the network over very high-speed
+4:01
+connections
+4:03
+and in our homes and businesses we often
+4:05
+will install wireless networks that are
+4:08
+802.11 technology referred to as WLAN or
+4:12
+wireless LAN these allow you to move
+4:14
+around your local area and still have
+4:16
+access to all of the resources you need
+4:19
+over your mobile devices your laptops or
+4:21
+anything else that's using this wireless
+4:24
+network and if you're working in
+4:26
+multiple buildings or a larger campus
+4:28
+area you can add additional access
+4:30
+points to expand the reach of your
+4:32
+wireless local area network

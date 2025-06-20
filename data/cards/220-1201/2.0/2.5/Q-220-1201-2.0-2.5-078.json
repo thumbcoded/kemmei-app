@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the acronym DOCSIS stand for?",
+  "answer_options": [
+    "Digital Optical Carrier Signal Integration Standard",
+    "Data Over Cable Service Interface Specification",
+    "Distributed Optical Cable Service International Standard",
+    "Digital Online Cable Standard Internet Specification"
+  ],
+  "correct_answer": [
+    "Data Over Cable Service Interface Specification"
+  ],
+  "explanation": "DOCSIS is the specification used for transmitting data over cable television systems.",
+  "tags": [
+    "DOCSIS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

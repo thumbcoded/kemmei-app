@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select three valid technical characteristics of Bluetooth operation:",
+  "answer_options": [
+    "Operates in the 2.4 GHz ISM band",
+    "Designed for long-range multi-floor building coverage",
+    "Typically supports up to 10 meters range for consumer devices",
+    "Used for short-range point-to-point communication",
+    "Requires regulatory licensing in most countries"
+  ],
+  "correct_answer": [
+    "Operates in the 2.4 GHz ISM band",
+    "Typically supports up to 10 meters range for consumer devices",
+    "Used for short-range point-to-point communication"
+  ],
+  "explanation": "Bluetooth uses unlicensed ISM spectrum, is optimized for personal device connectivity, and typically ranges around 10 meters.",
+  "tags": [
+    "Bluetooth",
+    "2.4 GHz",
+    "short range",
+    "ISM band"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

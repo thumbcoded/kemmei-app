@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the key difference between NFC and traditional RFID?",
+  "answer_options": [
+    "NFC has longer range",
+    "NFC allows two-way communication",
+    "RFID uses infrared instead of radio waves",
+    "RFID tags are always powered"
+  ],
+  "correct_answer": [
+    "NFC allows two-way communication"
+  ],
+  "explanation": "NFC (Near Field Communication) expands on RFID technology by enabling two-way data exchange.",
+  "tags": [
+    "NFC",
+    "near field communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

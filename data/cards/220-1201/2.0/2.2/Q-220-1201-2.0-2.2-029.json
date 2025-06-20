@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Approximately what is the maximum consumer range for Bluetooth communication?",
+  "answer_options": [
+    "1 meter",
+    "3 meters",
+    "10 meters",
+    "100 meters"
+  ],
+  "correct_answer": [
+    "10 meters"
+  ],
+  "explanation": "Bluetooth devices typically operate at a range of up to 10 meters for consumer-grade equipment.",
+  "tags": [
+    "Bluetooth",
+    "short range"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

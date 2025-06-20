@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of internet service uses mobile phone infrastructure to provide connectivity?",
+  "answer_options": [
+    "DSL",
+    "Cable",
+    "Cellular",
+    "Fiber"
+  ],
+  "correct_answer": [
+    "Cellular"
+  ],
+  "explanation": "Cellular internet uses the same towers and infrastructure as mobile phone networks to provide internet access.",
+  "tags": [
+    "cellular",
+    "mobile network"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

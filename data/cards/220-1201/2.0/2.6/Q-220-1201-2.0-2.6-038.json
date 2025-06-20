@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A network is assigned the IP block 192.168.5.0/29. Which of the following is a valid default gateway address in this subnet?",
+  "answer_options": [
+    "192.168.5.0",
+    "192.168.5.1",
+    "192.168.5.7",
+    "192.168.5.8"
+  ],
+  "correct_answer": [
+    "192.168.5.1"
+  ],
+  "explanation": "In a /29 subnet, 192.168.5.0 is the network address and 192.168.5.7 is the broadcast. 192.168.5.1 to .6 are usable host addresses; .1 is often used as the gateway.",
+  "tags": [
+    "subnet mask",
+    "default gateway",
+    "usable range"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

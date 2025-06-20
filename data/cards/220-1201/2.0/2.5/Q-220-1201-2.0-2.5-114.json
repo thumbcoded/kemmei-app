@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-114",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two scenarios would justify using a NIC expansion card? (Select two)",
+  "answer_options": [
+    "You need to add a second Ethernet port to a server",
+    "You need to upgrade the PC’s graphics output",
+    "The built-in NIC has failed",
+    "You need to increase RAM bandwidth",
+    "You want to install a wireless keyboard"
+  ],
+  "correct_answer": [
+    "You need to add a second Ethernet port to a server",
+    "The built-in NIC has failed"
+  ],
+  "explanation": "NIC expansion cards are useful when internal NICs are faulty or when additional network interfaces are needed for redundancy or performance.",
+  "tags": [
+    "expansion card",
+    "NIC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

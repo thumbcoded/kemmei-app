@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What device is primarily responsible for making forwarding decisions based on destination IP address?",
+  "answer_options": [
+    "Router",
+    "Switch",
+    "Access point",
+    "Firewall"
+  ],
+  "correct_answer": [
+    "Router"
+  ],
+  "explanation": "Routers analyze the destination IP address in each packet and use their routing table to forward traffic.",
+  "tags": [
+    "router",
+    "forwarding decision",
+    "IP address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

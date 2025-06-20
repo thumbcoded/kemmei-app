@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two situations where DMARC can fail to protect users from phishing:",
+  "answer_options": [
+    "The domain owner uses a DMARC policy of 'none'",
+    "DKIM and SPF both pass validation",
+    "The attacker spoofs a domain without any DNS records",
+    "The sender uses a trusted third-party email service",
+    "The DNS server is configured for DNSSEC"
+  ],
+  "correct_answer": [
+    "The domain owner uses a DMARC policy of 'none'",
+    "The attacker spoofs a domain without any DNS records"
+  ],
+  "explanation": "If the DMARC policy is too permissive (like 'none') or if a domain lacks DNS records entirely, spoofed emails can pass unchecked.",
+  "tags": [
+    "DMARC",
+    "spoofing",
+    "mail authentication",
+    "phishing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

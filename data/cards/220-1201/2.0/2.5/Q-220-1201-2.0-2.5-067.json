@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which version of PoE supports powering pan-tilt-zoom (PTZ) cameras with more power?",
+  "answer_options": [
+    "Original PoE",
+    "PoE+",
+    "PoE++",
+    "Legacy Ethernet"
+  ],
+  "correct_answer": [
+    "PoE+"
+  ],
+  "explanation": "PoE+ (IEEE 802.3at) provides up to 25.5 watts of power, enough for devices like PTZ cameras.",
+  "tags": [
+    "PoE+"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

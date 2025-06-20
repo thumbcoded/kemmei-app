@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two best practices for network cable management:",
+  "answer_options": [
+    "Using Velcro ties or cable organizers",
+    "Labeling both ends of each cable",
+    "Hiding cables under floor tiles without labels",
+    "Mixing fiber and copper cables in the same bundle",
+    "Avoiding cable trays or racks"
+  ],
+  "correct_answer": [
+    "Using Velcro ties or cable organizers",
+    "Labeling both ends of each cable"
+  ],
+  "explanation": "Proper cable management uses ties/trays for neatness and labeling for identification.",
+  "tags": [
+    "cable management",
+    "patch panel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

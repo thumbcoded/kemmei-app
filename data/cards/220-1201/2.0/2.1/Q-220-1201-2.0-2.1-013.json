@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two protocols that commonly use TCP for reliable communication. (Select two)",
+  "answer_options": [
+    "DNS",
+    "HTTPS",
+    "TFTP",
+    "SSH",
+    "SNMP"
+  ],
+  "correct_answer": [
+    "HTTPS",
+    "SSH"
+  ],
+  "explanation": "HTTPS (port 443) and SSH (port 22) both use TCP, which ensures reliable, connection-oriented communication.",
+  "tags": [
+    "port 443",
+    "port 22"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

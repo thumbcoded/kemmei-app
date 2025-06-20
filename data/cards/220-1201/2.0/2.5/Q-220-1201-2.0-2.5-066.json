@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the term 'in-span' refer to in a PoE configuration?",
+  "answer_options": [
+    "Power provided by a separate wall adapter",
+    "Power provided directly by the switch",
+    "Power provided by a wireless access point",
+    "Power split across two switches"
+  ],
+  "correct_answer": [
+    "Power provided directly by the switch"
+  ],
+  "explanation": "In an in-span configuration, PoE power is delivered by the switch through its Ethernet ports.",
+  "tags": [
+    "in-span"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

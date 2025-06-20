@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which factor most affects signal quality in a line-of-sight WISP connection?",
+  "answer_options": [
+    "The number of users on the local network",
+    "Whether the router is dual-band",
+    "Obstructions between antennas",
+    "The use of PoE switches"
+  ],
+  "correct_answer": [
+    "Obstructions between antennas"
+  ],
+  "explanation": "WISP links rely on clear line-of-sight; trees, buildings, or other obstructions can significantly degrade signal quality.",
+  "tags": [
+    "line of sight"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

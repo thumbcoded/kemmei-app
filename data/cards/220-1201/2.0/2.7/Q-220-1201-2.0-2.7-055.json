@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true characteristics of mesh networks used by some WISPs? (Select all that apply)",
+  "answer_options": [
+    "Each node can forward traffic to others",
+    "They require clear line-of-sight between all nodes",
+    "They increase redundancy and fault tolerance",
+    "They use coaxial cable for backbone links"
+  ],
+  "correct_answer": [
+    "Each node can forward traffic to others",
+    "They increase redundancy and fault tolerance"
+  ],
+  "explanation": "Mesh networks enable devices to relay traffic for one another, creating fault-tolerant paths without requiring direct line-of-sight between all nodes.",
+  "tags": [
+    "mesh",
+    "WISP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

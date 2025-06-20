@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two actions should be taken before using a tone generator and probe? (Select two)",
+  "answer_options": [
+    "Verify the cable is not carrying voltage",
+    "Crimp new connectors onto both cable ends",
+    "Disconnect the cable from live network devices",
+    "Enable SNMP on the cable's switch port"
+  ],
+  "correct_answer": [
+    "Verify the cable is not carrying voltage",
+    "Disconnect the cable from live network devices"
+  ],
+  "explanation": "A tone generator should not be connected to live or powered lines. Disconnecting the cable and confirming no voltage protects the tool and user.",
+  "tags": [
+    "tone generator",
+    "cable testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does WLAN stand for?",
+  "answer_options": [
+    "Wired Local Area Network",
+    "Wide Local Area Network",
+    "Wireless Local Area Network",
+    "Wireless Large Area Network"
+  ],
+  "correct_answer": [
+    "Wireless Local Area Network"
+  ],
+  "explanation": "WLAN stands for Wireless Local Area Network and typically uses Wi-Fi (802.11) to connect devices without physical cables.",
+  "tags": [
+    "WLAN",
+    "wireless LAN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

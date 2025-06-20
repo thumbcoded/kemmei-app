@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens in a TCP session if a data packet is lost?",
+  "answer_options": [
+    "The sender gives up and closes the connection",
+    "The packet is ignored and delivery continues",
+    "The sender retransmits the lost packet",
+    "The receiver sends all previous data again"
+  ],
+  "correct_answer": [
+    "The sender retransmits the lost packet"
+  ],
+  "explanation": "TCP uses acknowledgments and retransmission to ensure reliable delivery.",
+  "tags": [
+    "connection-oriented",
+    "reliable vs unreliable"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

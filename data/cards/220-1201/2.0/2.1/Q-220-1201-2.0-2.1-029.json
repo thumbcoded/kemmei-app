@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the 'U' in UDP stand for?",
+  "answer_options": [
+    "Unified",
+    "Universal",
+    "User",
+    "Utility"
+  ],
+  "correct_answer": [
+    "User"
+  ],
+  "explanation": "UDP stands for User Datagram Protocol.",
+  "tags": [
+    "UDP",
+    "user datagram protocol"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which port number is associated with HTTP web traffic?",
+  "answer_options": [
+    "110",
+    "80",
+    "443",
+    "3389"
+  ],
+  "correct_answer": [
+    "80"
+  ],
+  "explanation": "HTTP, used for unencrypted web traffic, runs over TCP port 80.",
+  "tags": [
+    "HTTP",
+    "protocol",
+    "port assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

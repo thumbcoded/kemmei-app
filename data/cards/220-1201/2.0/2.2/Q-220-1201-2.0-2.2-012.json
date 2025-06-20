@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which Wi-Fi standard introduced BSS Coloring and what is its primary benefit?",
+  "answer_options": [
+    "Wi-Fi 4; increases security",
+    "Wi-Fi 5; enables faster roaming",
+    "Wi-Fi 6; reduces co-channel interference",
+    "Wi-Fi 6E; enables use of 6 GHz band"
+  ],
+  "correct_answer": [
+    "Wi-Fi 6; reduces co-channel interference"
+  ],
+  "explanation": "Wi-Fi 6 introduced BSS Coloring to reduce interference between overlapping access points using the same channel.",
+  "tags": [
+    "802.11",
+    "Wi-Fi"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}
