@@ -1,0 +1,790 @@
+
+before we get into this presentation on
+0:04
+power I want to give you a very strong
+0:06
+warning to always always disconnect from
+0:10
+any power source if you're ever going to
+0:12
+work on the inside of any computer not
+0:16
+only is there a concern about
+0:17
+electrocution from that direct power
+0:19
+source but there may be components
+0:21
+within your computer that are storing
+0:23
+power in capacitors you have to be sure
+0:26
+that you know exactly what you're
+0:28
+touching inside of that computer and you
+0:30
+have to be knowledgeable enough to know
+0:32
+how to discharge those capacitors before
+0:34
+you work with that equipment another
+0:36
+common mistake that I see people make is
+0:39
+connecting themselves to the electrical
+0:41
+system of the building you never want to
+0:44
+connect yourself or anyone to any part
+0:47
+of a building's electrical system even
+0:50
+if it's the ground wire the ground wire
+0:52
+of a building could be energized at any
+0:54
+time so you want to be sure that you do
+0:56
+not connect yourself to any part of that
+0:59
+system our goal when working with this
+1:02
+type of equipment that uses electricity
+1:04
+is to always have a healthy respect for
+1:07
+anything dealing with power and if you
+1:09
+have a system that you're going to be
+1:11
+working with you should always double
+1:12
+check and make sure that you have
+1:14
+disconnected yourself from the main
+1:16
+power source
+1:18
+if you look inside of a desktop computer
+1:20
+you will find a relatively large power
+1:23
+supply this power supply is providing
+1:26
+your computer with DC power or direct
+1:29
+current that's because your motherboard
+1:31
+and all of the components on your
+1:33
+motherboard need DC power to operate but
+1:36
+the type of power that we get from our
+1:38
+wall outlet is AC power or alternating
+1:41
+current that's why we need to convert
+1:44
+from AC to the DC that your motherboard
+1:47
+will use and this power supply is the
+1:49
+device that provides that conversion
+1:52
+these power supplies are designed to
+1:53
+convert 120 volts of AC or 240 volts of
+1:58
+AC to DC power specifically separate DC
+2:02
+voltages of 3.3 volt 5 vol and 12 V this
+2:07
+is probably one of the most important
+2:09
+components in your system because
+2:11
+everything inside your computer relies
+2:13
+on the power that's being provided by
+2:15
+this power
+2:16
+supply you'll see many different terms
+2:19
+associated with power inside of a
+2:21
+computer one of those terms is an ampear
+2:24
+you may see this abbreviated as an amp
+2:26
+or abbreviated as a capital A this
+2:29
+describes the number of electrons that
+2:31
+are moving past a single point in 1
+2:33
+second often we'll compare electricity
+2:36
+flowing through a wire to water that is
+2:38
+flowing through a hose you can think of
+2:40
+amps as that total amount of water
+2:43
+flowing through the hose so if you can
+2:44
+increase the size of the diameter of
+2:46
+that hose you can increase the number of
+2:49
+amps another term you'll see used is
+2:52
+voltage it's often abbreviated as volt
+2:54
+or the capital letter V you can think of
+2:57
+this as the pressure of electricity on a
+3:00
+particular wire and in the case of a
+3:02
+hose it would be the pressure of water
+3:04
+that's flowing through that hose if you
+3:06
+want to increase the amount of voltage
+3:08
+then you need to increase that pressure
+3:10
+very similar to increasing the amount of
+3:12
+water that might pass through a hose if
+3:14
+you know the voltage and you know the
+3:16
+number of amps you can calculate the
+3:18
+wattage this is often described as a
+3:20
+watt or a capital W and we think of this
+3:23
+as a measurement of real power use this
+3:26
+is a relatively easy calculation we
+3:28
+simply take the number of volts we
+3:30
+multiply that by the number of amps and
+3:32
+the resulting value is the total number
+3:35
+of watts so if you're working inside the
+3:37
+United States with 120 volts and the
+3:40
+device is using half of an amp then the
+3:42
+total amount of real power use would be
+3:45
+60 W if you look at the details of a
+3:49
+power supply you'll see specifications
+3:51
+for AC power and specifications for DC
+3:54
+power as we've mentioned earlier AC is
+3:57
+alternating current and it is referring
+3:59
+to current that is constantly reversing
+4:02
+direction you'll often see this shown as
+4:04
+a wave or a curvy line to designate
+4:07
+alternating current so alternating
+4:09
+current is what we use to get power from
+4:12
+our power plants to the outlets that are
+4:14
+in our homes and in our businesses we
+4:17
+often describe this alternating current
+4:19
+as the number of volts and how much this
+4:21
+is alternating in a single second and
+4:24
+that is referenced in hertz in the
+4:27
+United States and Canada we have 110 to
+4:29
+120 volts of alternating current you'll
+4:32
+sometimes see this abbreviated as VAC
+4:35
+for volts of AC and that is running at a
+4:38
+60 hertz rate hertz is often abbreviated
+4:40
+with an HZ if you're in Europe you're
+4:43
+probably running 220 to 240 volts of
+4:46
+alternating current and it runs at a
+4:48
+rate of 50 Hz our alternating current is
+4:51
+the input to our power supply and of
+4:54
+course our power supply is outputting
+4:56
+direct current or DC you'll often see DC
+5:00
+shown with the graphic of a single line
+5:02
+and multiple lines underneath direct
+5:05
+current as the name implies is power
+5:07
+that is moving in a single direction
+5:09
+with a constant
+5:11
+voltage so the power source that we're
+5:13
+connecting our computers to will be
+5:15
+different depending on where you are in
+5:17
+the world as we mentioned in the US and
+5:19
+Canada we'll see 120 volts of AC running
+5:22
+at 60 Hz in Europe is 230 volts at 50 Hz
+5:26
+that means that if we are moving a
+5:28
+computer from one place to the other we
+5:31
+need to be sure that we are connecting a
+5:33
+power supply that can use the type of
+5:35
+input that is used in that country if
+5:38
+you were to look at the back of a
+5:39
+relatively old power supply you might
+5:41
+even see a manual switch in the back
+5:43
+where you tell the power supply what
+5:46
+you're connecting to and that switch is
+5:48
+usually marked with 120 volts and 230
+5:51
+volts if you're not sure what type of
+5:54
+power is coming out of the outlet that
+5:56
+you're connecting to you might want to
+5:57
+grab a multimeter and test that outlet
+6:00
+to see what type of alternating current
+6:02
+is on the other side if you look at the
+6:05
+back of your computer you might notice
+6:07
+that it doesn't have a switch to
+6:08
+manually move between 120 volts and 230
+6:12
+volts that's because most modern power
+6:14
+supplies will recognize the type of
+6:17
+power they're connecting to and will
+6:19
+adjust accordingly to work properly
+6:21
+regardless of where you happen to be in
+6:23
+the world if you do have one of these
+6:25
+manual power supplies you want to be
+6:27
+very careful of how you're configuring
+6:29
+that switch on the back you don't want
+6:31
+to take a power supply that is currently
+6:33
+set for 120 volts and plug it in to a
+6:36
+230 volt power source if you plug in a
+6:39
+power supply with those settings then
+6:41
+you'll probably quickly find the power
+6:43
+supply will be overloaded and it will
+6:45
+most likely be a spectacular failure
+6:48
+here's a better view of this manual
+6:51
+switch on the back of one of these older
+6:53
+power supplies if you are planning to
+6:55
+connect this device for the first time
+6:56
+you may want to reference that settings
+6:58
+to see what it's configured for on that
+7:00
+power supply and make any change that
+7:03
+you need before connecting it to the
+7:05
+power source once the system is
+7:07
+configured to the proper voltage and
+7:09
+it's connected to the power source you
+7:11
+can leave that switch exactly where it
+7:13
+is so now that we've talked about the
+7:16
+input to the power supply let's talk a
+7:18
+little bit about the output from the
+7:20
+power supply that is going to provide us
+7:22
+with a number of different voltages in
+7:25
+DC or direct current you often see these
+7:28
+DC values referenced as a positive value
+7:31
+and a negative value in reality it's
+7:34
+referring to the difference in potential
+7:36
+based on where you happen to be you can
+7:38
+think of this as measuring the heights
+7:40
+of your home from your front door if you
+7:42
+wanted to measure the second floor of
+7:44
+your house it would be approximately
+7:46
+positive 10 ft above you and if you were
+7:49
+measuring the basement it would be -10
+7:51
+ft both of those are 10 ft away but
+7:54
+obviously the distance is relative to
+7:56
+where you happen to be standing if you
+7:59
+look at your power supply documentation
+8:01
+you'll see there are a number of
+8:02
+different outputs that are available
+8:04
+from the back of that power supply one
+8:07
+of those is probably a positive 12vt
+8:09
+this is for PCI Express adapters hard
+8:12
+drives that you might install into a
+8:14
+system or anything else that needs that
+8:17
+much voltage to be able to operate you
+8:19
+may find some motherboards that use plus
+8:21
+5 volts for components that are on the
+8:23
+motherboard itself although many of our
+8:25
+newer motherboards tend to use plus 3.3
+8:28
+volts that 3.3 volt power is primarily
+8:31
+used for the motherboard to power up the
+8:33
+M.2 slots the RAM that's on your system
+8:36
+and the other assorted components on the
+8:38
+motherboard and you might also find that
+8:41
+your power supply provides plus 5 volts
+8:43
+of SB power this is the power provided
+8:47
+to the motherboard when it's in a
+8:48
+standby or sleeping state so that we can
+8:51
+wake it up using signals across the
+8:53
+network or by pushing a button on the
+8:55
+front of the case you may find some
+8:58
+motherboards using -12vt of DC power
+9:01
+this is often used for integrated local
+9:03
+area network connections on the
+9:05
+motherboard and there may be some older
+9:07
+PCI cards that use the -12 volts and for
+9:11
+older power supplies that are providing
+9:13
+power for legacy motherboards you might
+9:15
+see them providing a negative 5V this is
+9:18
+for an older style of adapter card
+9:20
+that's no longer used and you may find
+9:22
+that your power supply doesn't even
+9:24
+provide an output for neg 5 volts if
+9:27
+you're not sure the type of output and
+9:29
+how many amps are supported for each of
+9:31
+these voltages all of this is documented
+9:34
+in your power supplies manual you might
+9:36
+also see those values right on the side
+9:39
+of your power supply for easy
+9:41
+reference to get power to our
+9:44
+motherboard we have a main power
+9:46
+connection that is a 24 pin connector on
+9:48
+the motherboard itself and it provides
+9:50
+the motherboard with 3.3 volts 5 vols
+9:54
+and 12 volts of DC power this was
+9:56
+originally a 20 pin connector but most
+9:59
+modern motherboards are using the
+10:01
+full-size 24 pin connector to connect
+10:03
+the power supply to the motherboard if
+10:06
+you do run into one of these older
+10:08
+motherboards that only has a 20 pin
+10:10
+connector on the motherboard you can
+10:12
+still use the 24 pin power connector
+10:14
+from the power supply and simply not use
+10:17
+those last four pins that are on the
+10:19
+connector here's the 24 pin connector
+10:21
+you'll find on a motherboard and it is
+10:23
+probably one of the larger connectors
+10:25
+that you'll find on the motherboard
+10:27
+itself to be able to connect the power
+10:29
+from the power supply we simply take the
+10:31
+24 pin connector that is coming from the
+10:33
+power supply and place it into those
+10:36
+slots on the motherboard this can only
+10:38
+fit into this connector one way because
+10:40
+this entire connection is keyed which
+10:43
+prevents us from plugging it in with the
+10:45
+wrong orientation
+10:47
+if you're working with servers and other
+10:49
+infrastructure devices you may find that
+10:51
+there are multiple power supplies on the
+10:53
+back of the unit these are designed to
+10:55
+be redundant each power supply is
+10:57
+designed to support the full 100% power
+11:00
+required by the system so if you lose
+11:03
+one of those power supplies the other
+11:05
+power supply can continue to keep that
+11:07
+system up and running very commonly
+11:09
+these two power supplies will run at 50%
+11:11
+of the load and if you lose one of those
+11:13
+power supplies or it comes disconnected
+11:16
+from the power source the other power
+11:18
+supply will take 100% of that load these
+11:22
+are also designed to be hot swappable
+11:24
+you can see there's a switch on top of
+11:26
+this motherboard that allows you to
+11:27
+slide it out of the chassis even when
+11:30
+the system is up and running this means
+11:32
+that you can maintain 100% uptime but be
+11:35
+able to replace any of these power
+11:37
+supplies if you run into a problem
+11:40
+many less expensive power supplies will
+11:42
+have fixed connections coming out of the
+11:44
+power supply itself this means we'll
+11:46
+have a large grouping of cables that
+11:47
+will be sitting inside of our computer
+11:49
+case whether we're plugging a device
+11:51
+into those connections or not higherend
+11:55
+power supplies tend to be more modular
+11:56
+where you can simply connect only the
+11:58
+cables that you need to use inside of
+12:00
+that particular system and if you need
+12:02
+to add more later you can simply plug
+12:04
+them into that modular connection and if
+12:06
+you need to remove a device from your
+12:08
+computer you can remove those cables
+12:10
+from the inside of your case here's a
+12:12
+hybrid power supply that has some fixed
+12:14
+connectors but it also has modular
+12:16
+connectors that you can plug in if you
+12:18
+need them here's a power supply that is
+12:20
+completely modular you can see that they
+12:23
+provide all of the cables that you would
+12:24
+need to connect and you can simply plug
+12:26
+in the cables that you need to provide
+12:28
+power for your specific requirements
+12:32
+if you're purchasing a power supply
+12:34
+you'll notice there are different models
+12:35
+that will support a different number of
+12:37
+watts generally if you're getting a
+12:39
+power supply that supports a higher
+12:41
+wattage that power supply tends to be
+12:44
+more expensive you could certainly spend
+12:46
+the extra money to buy a power supply
+12:48
+that gives you much more capacity than
+12:50
+you'll ever need but that doesn't
+12:52
+provide you with any additional speed
+12:53
+benefit for your computer even though
+12:56
+different power supplies may support
+12:58
+different wattages the physical size of
+13:00
+the power supply doesn't tend to change
+13:03
+so if you're upgrading a power supply
+13:05
+inside of a computer case you might
+13:07
+upgrade to a higher wattage but the size
+13:09
+of the power supply itself will be
+13:11
+exactly the same inside of that case
+13:14
+if you're trying to decide just how many
+13:16
+watts you need in a power supply then
+13:19
+you'll need to calculate all of the
+13:21
+different components inside of your
+13:22
+computer and add up what the maximum
+13:25
+number of watts might be required for
+13:27
+all of those systems to work together so
+13:30
+you'll want to check your documentation
+13:31
+to see what the CPU requires for wattage
+13:34
+what your storage devices will need what
+13:36
+your video adapter requires and then any
+13:38
+other components inside of that system
+13:41
+if you have a separate video card inside
+13:43
+of your computer these usually require a
+13:46
+significant amount of power and you'll
+13:48
+want to check the documentation for that
+13:50
+video card to see what the requirements
+13:52
+are for power inside of that computer a
+13:55
+good rule of thumb is to get a power
+13:56
+supply that can support 50% of your
+13:59
+total load today that means that the
+14:01
+power supply will not be overloaded and
+14:04
+you'll have plenty of room for growth in
+14:05
+the future
+14:07
+another useful specification when you're
+14:09
+looking to purchase a power supply is
+14:11
+the energy efficiency when we're
+14:13
+converting from alternating current to
+14:15
+direct current we lose a bit of power
+14:18
+each time we make that conversion that
+14:20
+loss power is converted to heat which of
+14:23
+course creates more of a cooling issue
+14:25
+for the computer that you're using if
+14:27
+you're concerned about this efficiency
+14:29
+rating you may want to check the
+14:30
+different values associated with those
+14:32
+power supplies the standards tend to be
+14:35
+somewhere between 80 to 96% efficiency
+14:38
+depending on the quality of the power
+14:40
+supply that you're purchasing if you get
+14:42
+a power supply that's more efficient
+14:44
+then you'll have less power that is lost
+14:46
+during that conversion process and
+14:48
+because you're losing less power you
+14:50
+have a lot less heat in your system and
+14:52
+overall you're saving money not only in
+14:54
+powering the computer but keeping that
+14:56
+computer cool there's a certification
+14:59
+program that power supplies can go
+15:01
+through to determine their efficiency
+15:03
+you'll see power supplies rated as an 80
+15:06
+plus an 80 plus bronze silver gold
+15:10
+platinum or titanium this means that the
+15:13
+80 plus with no rating would be the
+15:15
+least efficient and an 80 plus titanium
+15:18
+would be the most efficient

@@ -1,0 +1,1032 @@
+many of the monitors that we use today
+0:04
+are LCD monitors This stands for liquid
+0:07
+crystal display This is a display that
+0:10
+has liquid crystals that a light is
+0:12
+shown through from the back It passes
+0:14
+through a color filter and then finally
+0:16
+to our eyes This combination of light
+0:19
+filters and color is how we're able to
+0:22
+see information on these displays Prior
+0:25
+to LCD technology we were mostly using
+0:28
+large glass display tubes to be able to
+0:31
+show information So these LCDs provide
+0:34
+us with some significant advantages One
+0:37
+of the advantages is that these displays
+0:39
+are relatively light We can put them
+0:41
+almost anywhere We can hang them on a
+0:43
+wall They can be part of a portable
+0:45
+system and we can effectively take this
+0:47
+display anywhere These also use
+0:50
+relatively low power so they're perfect
+0:52
+for our mobile devices that run on
+0:54
+battery power and they are relatively
+0:57
+inexpensive The low cost of these
+0:59
+displays means we can use them for
+1:00
+practically anything where we might need
+1:03
+some type of visual feedback Because
+1:06
+we're shining a light through
+1:07
+polarization filters and color filters
+1:10
+it's somewhat difficult to get a true
+1:12
+black color from a liquid crystal
+1:14
+display These displays also require that
+1:17
+backlight for us to be able to see this
+1:19
+information through those polarizing
+1:21
+filters and color filters Without that
+1:24
+light you have a very dim screen that is
+1:26
+very difficult to read That's why the
+1:28
+backlight is so important On older LCDs
+1:32
+you may see fluorescent lights being
+1:33
+used for the backlight but most modern
+1:35
+LCDs will use LED lights or light
+1:39
+emmitting diodes to produce that light
+1:42
+These lights can also be somewhat
+1:43
+difficult to replace On larger LCDs you
+1:46
+may be able to replace a portion of the
+1:49
+backlight but on smaller less expensive
+1:52
+systems you may require a complete
+1:54
+replacement of the
+1:55
+display There are also different
+1:58
+technologies that we use with liquid
+2:00
+crystal displays One of these is a TN
+2:03
+version of an LCD The TN stands for
+2:06
+twisted pneumatic This was one of the
+2:08
+very first types of LCDs that was
+2:10
+introduced and it provides very fast
+2:12
+response time So it's perfect for things
+2:14
+like gaming or very fastm moving
+2:16
+information on the screen Unfortunately
+2:19
+if you move off center from that display
+2:21
+you'll start to notice that the color
+2:23
+will shift as you move farther and
+2:25
+farther off angle So if you have a lot
+2:27
+of people that need to see that display
+2:29
+a twisted pneumatic LCD may not be the
+2:32
+best choice A newer style of LCD is the
+2:36
+IPS or in plane switching LCD This
+2:39
+provides very good color representation
+2:41
+So if you're doing any type of graphics
+2:43
+or video type editing this might be a
+2:46
+great display for you But these can be a
+2:48
+bit more expensive than the twisted
+2:50
+pneumatic version of the LCD So you may
+2:53
+be paying a little bit more of a premium
+2:55
+to be able to provide that excellent
+2:57
+color
+2:58
+representation And somewhat in the
+3:00
+middle between a twisted pneumatic and
+3:02
+an inplane switching LCD is the VA or
+3:06
+vertical alignment LCD This also has
+3:09
+very good color representation although
+3:11
+its response time is not quite as good
+3:13
+as a twisted pneumatic display And
+3:16
+depending on the device that you're
+3:17
+purchasing or using there may be only
+3:20
+one style of LCD available for that
+3:23
+particular platform So if you have the
+3:25
+option to choose between different types
+3:27
+of LCD you might want to see what
+3:29
+options are available and choose the one
+3:31
+that's right for your
+3:33
+purposes As you can imagine having a
+3:35
+backlight in the display adds to the
+3:37
+cost the power draw and the overall size
+3:41
+of the display itself But what if you
+3:43
+could get rid of the backlight
+3:44
+altogether one style of display that has
+3:47
+no backlight is an OLED or an organic
+3:50
+light emmitting diode This type of
+3:52
+display contains an organic compound
+3:55
+that when you add power to that compound
+3:57
+creates and emits light This means that
+4:00
+you can have a high-quality
+4:01
+highdefinition display without any
+4:03
+backlights in the display at all This
+4:06
+means your display can be much thinner
+4:08
+and much lighter because there's no
+4:10
+backlight component behind the screen
+4:12
+And you may already be using an OLED
+4:15
+display in some of your mobile devices
+4:17
+It's very common to find OLED on mobile
+4:19
+phones watches tablets and other mobile
+4:22
+devices And of course you could choose
+4:25
+to get much larger displays in different
+4:27
+styles including one that might be OLED
+4:30
+And because there's no backlight you can
+4:32
+get very good color representation on an
+4:34
+OLED display So if you're someone who is
+4:37
+working with graphics images or video
+4:39
+you might want to consider an OLED
+4:41
+display
+4:43
+The industry is constantly battling to
+4:46
+find the best price point for OLEDs
+4:49
+versus LCD And one of the innovations on
+4:52
+the LCD side is to create a backlight
+4:55
+which provides a much better color
+4:57
+representation One of the ways that
+4:59
+they've done this is to create a mini
+5:02
+LED backlight This is the same backlight
+5:04
+that you would have in a traditional LCD
+5:07
+but the size of the LEDs or the light
+5:10
+emmitting diodes is much smaller on a
+5:13
+mini LED display These displays also
+5:16
+provide control of each individual light
+5:19
+in the backlight So the display can make
+5:21
+the decision on what section of the
+5:24
+screen should be lit and what the
+5:26
+intensity of that light should be This
+5:28
+means if the image on the screen was a
+5:31
+darker image or completely black the
+5:34
+screen itself could turn off those LEDs
+5:37
+to be able to make that black as deep
+5:39
+and dark as possible This means that the
+5:43
+less expensive LEDs can come much closer
+5:45
+to the color representation that you
+5:48
+might find in a traditional OLED display
+5:51
+And if you were to remove the screen and
+5:53
+look at the backlight on these displays
+5:55
+you would see there is a big difference
+5:57
+between the conventional LED and the
+5:59
+mini LED you can see that the miniLEDD
+6:02
+provides a much more granular control of
+6:05
+the back lights and you can get a much
+6:07
+more nuanced view of the display because
+6:10
+you have many more lights to choose from
+6:13
+On our watches our phones our tablets
+6:15
+and some laptop computers we have the
+6:18
+ability to touch the screen to provide
+6:19
+input This uses a digitizer to tell
+6:22
+where we might be touching the screen
+6:24
+and it converts that touch into a series
+6:26
+of coordinates This means we can get rid
+6:29
+of keyboards completely and simply use
+6:31
+our screen as the input But of course
+6:33
+you will still find laptops and other
+6:36
+mobile devices that give you the option
+6:38
+to include a physical keyboard as well
+6:40
+This gives you different options for
+6:42
+input We can use a mouse a digitizer or
+6:45
+we can use the keyboard that's built
+6:46
+into the system This means that we could
+6:49
+use the right type of input for the task
+6:51
+that we have at hand Some tasks may
+6:53
+require a keyboard but sometimes
+6:55
+touching the screen would be a much
+6:57
+easier way to provide that input Many of
+6:59
+these digitizers cannot only recognize a
+7:02
+finger touching the screen but it could
+7:04
+also use a stylus to be able to provide
+7:06
+that input A stylus is very similar to
+7:09
+using a pen or pencil except you can
+7:12
+touch the screen and have any of those
+7:14
+touches converted into a digital form
+7:17
+using this digitizer This is a very
+7:19
+common input type for things like a
+7:21
+tablet but you might also find these
+7:23
+digitizers used quite a bit on laptops
+7:25
+or even desktop
+7:27
+computers As you are now aware if you
+7:30
+have a liquid crystal display then you
+7:32
+also have a backlight And those
+7:34
+backlights could be a fluorescent lamp
+7:37
+or the newer LED type lamps One of the
+7:40
+challenges with the backlight is we need
+7:42
+to provide power That power for an LED
+7:45
+uses the built-in direct current or DC
+7:48
+power that we use to power our laptop
+7:51
+But if we have an older style liquid
+7:53
+crystal display with the fluorescent
+7:55
+lamps those style of backlight require
+7:58
+AC or alternating current Since our
+8:01
+laptops are using direct current we need
+8:03
+to invert that current so that it is now
+8:06
+alternating current and can be used by
+8:08
+our fluorescent backlights One of the
+8:10
+ways you can tell if the backlight is
+8:12
+working or not is you can turn on the
+8:14
+device and then look at the screen very
+8:16
+closely It often helps to have a
+8:18
+flashlight that you can shine directly
+8:20
+at the screen because that light will
+8:22
+reflect from the back of the display
+8:24
+itself If you can make out text or
+8:26
+graphics on the screen but it's very
+8:28
+faint then your problem might be with
+8:30
+your backlight This means that we would
+8:33
+need to replace the backlight itself or
+8:35
+in the case of a fluorescent backlight
+8:37
+we might need to replace the inverters
+8:40
+that are built into this device These
+8:42
+are very common on laptop computers and
+8:45
+you may find that these inverters are in
+8:47
+the bezel of the display itself You can
+8:49
+check with the manufacturer of that
+8:51
+laptop to see what style of backlight is
+8:53
+in use and if it is a fluorescent light
+8:55
+You can also check to see where those
+8:57
+inverters might be and what the process
+9:00
+might be to swap those out for a new one
+
+if you've been in the market for display
+0:04
+you'll notice that the technical
+0:05
+specifications vary widely between
+0:08
+different displays there are different
+0:10
+options different specifications and a
+0:12
+number of different settings that
+0:14
+differentiate one display from another
+0:17
+we also have to consider how this
+0:19
+display might be used are we going to
+0:21
+use it for gaming will it be used for
+0:23
+watching video presentations will this
+0:25
+simply be a display that's hanging on
+0:27
+the wall in a lobby or will we use this
+0:29
+display for presentations once we know
+0:32
+how a display will be used we can then
+0:34
+reference the technical specifications
+0:36
+for that display to find exactly the
+0:38
+right display for that particular use
+0:41
+one technical specification we may want
+0:44
+to pay attention to is the pixel density
+0:46
+this tells us how many pixels are
+0:48
+contained within 1 in of that display
+0:51
+area if you're in a different part of
+0:53
+the world this might be the number of
+0:54
+pixels per centimeter this allows us to
+0:57
+put a physical number on the clarity of
+1:00
+this particular display if you have a
+1:02
+higher pixel density the display will
+1:04
+look much more crisp and clear than a
+1:07
+lower pixel density you also have to
+1:09
+think about how this image will be used
+1:11
+is this an image that will always be
+1:13
+displayed on a screen or will we need to
+1:15
+print this image out onto a printer if
+1:18
+so we may want to look at the printer
+1:20
+specifications and determine if the DPI
+1:22
+or dots per inch on the printer can
+1:25
+properly represent the image that we're
+1:27
+seeing on the screen you can start to
+1:30
+see the differences in pixel density
+1:32
+when you start comparing how many pixels
+1:34
+you can fit into a 1 in x 1 in area if
+1:37
+it's one pixel per inch then obviously
+1:40
+we have a single pixel in that square in
+1:42
+area if it's two pixels per inch you can
+1:45
+see that it is two pixels across and two
+1:48
+pixels down four pixels per inch are
+1:50
+four in each direction and eight pixels
+1:53
+per inch are obviously eight in each
+1:55
+direction you can start to see how an
+1:57
+image on an 8 PPI display would be very
+2:00
+different than the image displayed on a
+2:03
+one pixel per inch display if you wanted
+2:05
+to calculate this you could take the
+2:07
+number of pixels and you could divide
+2:09
+that by the number of inches obviously
+2:11
+if you are in a different part of the
+2:13
+world then that might not be the same
+2:15
+measurements but for the United States
+2:17
+we will use inches in this particular
+2:20
+example so let's take for example a 27in
+2:23
+4K display this means the size of the
+2:26
+display is 27 in if you measure on the
+2:28
+diagonal if we were to measure the width
+2:31
+of this 27in display it is approximately
+2:34
+24 in wide and since we know this is a
+2:37
+4K display there's a total of
+2:40
+3,840 pixels on that horizontal display
+2:44
+if we then do the math of dividing 3840
+2:46
+by 24 we get a total of 160 pixels per
+2:50
+inch let's take exactly the same
+2:53
+resolution of 4K display and now let's
+2:56
+make the total size of the display a 65
+2:59
+in display this means that we still have
+3:02
+3,840 horizontal pixels but the width of
+3:05
+this television is much larger at 57 in
+3:08
+if we then divide 3840 by 57 we have a
+3:12
+total of 67 pixels per inch so although
+3:15
+the image itself may be at exactly the
+3:18
+same resolution on a 27in display and a
+3:21
+65-in display you can see that the
+3:23
+pixels per inch are very different
+3:25
+between those two displays
+3:28
+when we look at a display we're not
+3:30
+looking at a single image we're looking
+3:32
+at a series of images that are
+3:34
+constantly being refreshed on our screen
+3:36
+every second and you'll notice that a
+3:39
+number of specifications for these
+3:41
+displays describe just how many times
+3:43
+they can refresh this screen in a 1
+3:46
+second period this is referred to very
+3:48
+generically as the hertz that are
+3:50
+supported by this display hertz is the
+3:53
+generic term for the number of cycles
+3:55
+per second sometimes you'll hear people
+3:58
+refer to this as the number of frames
+3:59
+per second or FPS and you could have
+4:02
+configured the display so that the
+4:05
+number of hertz does equal the number of
+4:07
+frames per second but there's some
+4:09
+display configurations that may only
+4:11
+update a portion of the display on every
+4:14
+cycle per second but let's say for this
+4:16
+discussion that we have configured this
+4:18
+display for vertical sync or VSYNC which
+4:21
+means the hertz happens to equal the
+4:24
+same number of frames per second now we
+4:27
+have to think about what we will be
+4:29
+viewing on this particular display if
+4:32
+this is a display that will be showing
+4:33
+movies in the United States then we
+4:35
+expect that to show 24 frames per second
+4:38
+if you're watching a television show or
+4:40
+you're looking at a video online you're
+4:42
+probably viewing that at 30 frames per
+4:45
+second and if you're watching something
+4:46
+at a very high speed maybe a sporting
+4:48
+event or you're gaming on your system
+4:51
+then you would expect to have something
+4:52
+that can support 60 frames per second or
+4:55
+even higher to be able to visually see
+4:58
+the difference between a low and high
+5:00
+number of frames per second I put these
+5:02
+circles on the screen and I've arranged
+5:04
+these circles to drop at exactly the
+5:07
+same rates however they will only be
+5:09
+updated with the number of frames per
+5:11
+second shown at the top so it might be
+5:13
+one frame per second 15 frames per
+5:15
+second or even 30 frames per second
+5:18
+let's start these going to see what the
+5:20
+difference might be and if you're
+5:21
+watching this on a display that is able
+5:23
+to give you at least 30 frames per
+5:25
+second then you'll see there was an
+5:27
+obvious difference between the one frame
+5:29
+per second and the 30 frames per second
+5:32
+let's see it again we'll watch the one
+5:34
+which is very choppy and that's very
+5:36
+different than the 30 frames per second
+5:38
+that's moving at a very smooth rate all
+5:41
+the way down the screen as we mentioned
+5:43
+earlier if you're working with content
+5:45
+that moves very quickly on the screen
+5:47
+this might be video games or sporting
+5:49
+events then we need a refresh rate
+5:51
+that's able to keep up with that speed
+5:53
+on the screen otherwise the information
+5:56
+being displayed on the screen will look
+5:58
+like it is stuttering as it's moving
+5:59
+across the screen but the display is
+6:02
+only one part of the overall equation we
+6:04
+need to be sure that the video card or
+6:06
+video subsystem can support the refresh
+6:09
+rates that we need and we also need to
+6:11
+be sure that the connection type that
+6:13
+we're using is also able to support
+6:15
+those same refresh rates for example if
+6:17
+you're using HDMI the 2.1 version of
+6:21
+HDMI supports a 4K resolution at a total
+6:24
+of 144 hertz maximum if you're using
+6:28
+Display Port Display Port 2.1 supports
+6:31
+dual 4K displays and both of them can
+6:34
+run at a maximum of 144 hertz that's why
+6:38
+it's important if you purchase a display
+6:40
+that can support 144 hertz you want to
+6:43
+be sure that your adapter card and the
+6:45
+type of connection between the two can
+6:47
+also support that refresh rate
+6:50
+we talked earlier about a 4K display and
+6:53
+the type of resolution that you can
+6:55
+expect with that style of display that
+6:57
+resolution number is referring to the
+6:59
+number of pixels on the horizontal and
+7:02
+vertical of this display for example a
+7:04
+4K display is 3,840 pixels wide and
+7:09
+2,160 pixels high the larger number of
+7:12
+pixels will give us a display that looks
+7:14
+much sharper so if you're looking at an
+7:16
+image on a 4K screen that will look much
+7:19
+sharper than the image that's on the
+7:21
+same sized HD display and on today's
+7:24
+market there are certainly standards for
+7:26
+different resolutions that you will
+7:28
+commonly find but there are some models
+7:30
+of displays that deviate from these
+7:32
+particular standard resolutions and
+7:34
+might have their own set of resolutions
+7:36
+this aspect ratio of 16x9 is very common
+7:40
+across these different standards but of
+7:42
+course different monitors and displays
+7:44
+provide different aspect ratios and you
+7:46
+need to get the one that's appropriate
+7:48
+for your particular use if you're
+7:51
+watching this video on a 4K display then
+7:53
+you'll be able to see the difference
+7:55
+here between an HD display and a 4K
+7:58
+display you can see that HD is a width
+8:00
+of
+8:01
+1,920 pixels and a height of 1,080
+8:04
+pixels and 4K is obviously much larger
+8:07
+at
+8:09
+3,840 pixels wide by
+8:12
+2,160 pixels high if we were to look at
+8:15
+both of these displays of the same size
+8:18
+you would see that the 4K display does
+8:20
+look much sharper than the display you
+8:22
+would get on an HD
+8:24
+display our human eye is able to view a
+8:28
+vast range of colors but the displays we
+8:30
+use don't have the same capability our
+8:33
+human eye can view a much wider range of
+8:35
+color than a display can we refer to
+8:38
+this range of available colors that can
+8:40
+be seen or can be displayed as a color
+8:43
+gamut this might be a very important
+8:46
+consideration when you're trying to
+8:47
+decide on what type of display you'd
+8:49
+like to use if you're working a lot with
+8:51
+graphics or some type of images you
+8:54
+might want a display that provides the
+8:56
+largest and widest color gamut possible
+8:59
+one way that this is measured is using
+9:01
+this
+9:02
+CIE1931 color space this color image
+9:06
+that's in the background is the color
+9:07
+image that our human eye can view and on
+9:10
+top of that we represent a number of
+9:13
+different standards that are also
+9:14
+applied to the displays that we use for
+9:17
+example the sRGB standard this stands
+9:20
+for the standard red green blue is
+9:22
+represented on this screen with this
+9:24
+blue triangle a display that says it is
+9:27
+sRGB compatible is one that can display
+9:30
+this range of colors we have a similar
+9:32
+set of standards we can apply from Adobe
+9:34
+with the Adobe RGB and the International
+9:37
+Telecommunications Union or ITU also has
+9:40
+a number of standards that you can use
+9:42
+when trying to compare the capabilities
+9:44
+of one display with the capabilities of
+9:47
+another you'll often find this color
+9:50
+gamut breakdown in the technical
+9:51
+specifications of the monitor so I went
+9:54
+online and found a couple of monitors
+9:56
+that were very similar to each other
+9:57
+although a different size and you'll
+9:59
+notice there is a color gamut option
+10:02
+within the technical specs this
+10:04
+particular display presents a 100% Rex
+10:08
+709 and 100% sRGB and a 98%
+10:14
+DCIP3 you don't have to know the details
+10:16
+of those specifications but you can look
+10:19
+at the percentage to see how closely it
+10:21
+meets those standards we can also start
+10:24
+comparing those across different
+10:25
+displays for example the display here on
+10:28
+the top can support 100% of the sRGB
+10:31
+standard if we were to purchase the
+10:33
+display just underneath you can see that
+10:35
+its color gamut comes close but it still
+10:38
+is only 95% of the sRGB standard if you
+10:43
+were trying to choose between one
+10:44
+display and the other you would need to
+10:46
+understand how these displays might be
+10:48
+used if this was a display that's only
+10:50
+going to be used for some web surfing
+10:52
+and providing emails you might be able
+10:54
+to get away with a 95% sRGB but if this
+10:58
+device is being used for graphics or
+11:00
+video editing you might want to use a
+11:02
+display that better fits that particular
+11:05
+color gamut standard both of these
+11:08
+displays are LCD displays that have IPS
+11:10
+technology in fact the IPS here even
+11:13
+uses different forms of IPS to get a
+11:16
+much better level of blacks which is
+11:17
+probably why they get a much larger
+11:19
+number of the sRGB standard one way that
+11:22
+you could get the best possible color
+11:24
+gamut would be to use an OLED display
+11:27
+because they tend to have the best color
+11:29
+representation and you'll often find
+11:31
+that an OLED provides a much better
+11:33
+compatibility to these standards than
+11:35
+any of the traditional liquid crystal
+11:37
+displays
+

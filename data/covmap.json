@@ -870,6 +870,103 @@
           }
         }
       }
+    },
+    "3.0": {
+      "3.1": {
+        "concepts": {
+          "LCD technology and features": {
+            "terms": [
+              "LCD",
+              "liquid crystal display",
+              "polarization filter",
+              "color filter",
+              "backlight",
+              "fluorescent backlight",
+              "LED backlight",
+              "mini LED"
+            ]
+          },
+          "LCD types and use cases": {
+            "terms": [
+              "TN LCD",
+              "twisted pneumatic",
+              "IPS LCD",
+              "in-plane switching",
+              "VA LCD",
+              "vertical alignment",
+              "response time",
+              "color representation",
+              "viewing angle"
+            ]
+          },
+          "OLED technology and benefits": {
+            "terms": [
+              "OLED",
+              "organic light-emitting diode",
+              "self-emitting",
+              "no backlight",
+              "thin display",
+              "mobile devices",
+              "color accuracy"
+            ]
+          },
+          "Display specifications and metrics": {
+            "terms": [
+              "pixel density",
+              "PPI",
+              "DPI",
+              "resolution",
+              "4K",
+              "HD",
+              "aspect ratio",
+              "16:9"
+            ]
+          },
+          "Refresh rates and performance": {
+            "terms": [
+              "refresh rate",
+              "hertz",
+              "frames per second",
+              "FPS",
+              "VSYNC",
+              "stuttering",
+              "gaming display"
+            ]
+          },
+          "Color gamut and standards": {
+            "terms": [
+              "color gamut",
+              "sRGB",
+              "Adobe RGB",
+              "DCI-P3",
+              "CIE1931",
+              "color representation",
+              "graphics editing"
+            ]
+          },
+          "Touchscreen and input technologies": {
+            "terms": [
+              "touchscreen",
+              "digitizer",
+              "stylus",
+              "touch input",
+              "coordinates",
+              "tablet input",
+              "laptop touchscreen"
+            ]
+          },
+          "Backlight troubleshooting and repair": {
+            "terms": [
+              "backlight failure",
+              "dim screen",
+              "fluorescent inverter",
+              "LED replacement",
+              "screen bezel",
+              "flashlight test"
+            ]
+          }
+        }
+      }
     }
   }
 }
