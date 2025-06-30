@@ -150,18 +150,16 @@ async function fetchCards() {
   const domain = document.getElementById("domain-select").value.trim();
   const difficulty = document.getElementById("difficulty-select").value.trim();
 
-
   console.log("🔎 Fetching cards with:", { deck, domain, difficulty });
 
-
   const query = new URLSearchParams();
-    const subdomain = document.getElementById("subdomain-select")?.value.trim();
-if (subdomain && subdomain !== "All") {
-query.append("subdomain_id", subdomain);
-}
-if (deck) {
-query.append("cert_id", deck);
-}
+  const subdomain = document.getElementById("subdomain-select")?.value.trim();
+  if (subdomain && subdomain !== "All") {
+    query.append("subdomain_id", subdomain);
+  }
+  if (deck) {
+    query.append("cert_id", deck);
+  }
 
   if (domain && domain !== "All" && !domain.startsWith("All")) {
     const domainValue = domain.split(" ")[0]; // Extract "3.0" from "3.0 Hardware"
@@ -182,7 +180,7 @@ query.append("cert_id", deck);
   questions = data.map(card => {
     return {
       question: card.question_text,
-      options: shuffleArray(card.answer_options || card.options || []),
+      options: shuffleAnswerOptions(card.answer_options || card.options || []),
       correct: Array.isArray(card.correct_answer)
         ? card.correct_answer
         : [card.correct_answer],
@@ -194,6 +192,7 @@ query.append("cert_id", deck);
   });
 
   console.log("🗂️ Updated questions array:", questions);
+  return questions; // Return the questions array for potential shuffling
 }
 
 document.getElementById("deck-select").addEventListener("change", () => {
@@ -328,6 +327,14 @@ document.getElementById("difficulty-select").addEventListener("change", () => {
     if (questions.length === 0) {
       alert("No cards found for this deck/domain/difficulty.");
       return;
+    }
+
+    // Check if cards should be shuffled
+    const shouldShuffle = randomToggle.checked;
+    if (shouldShuffle) {
+      console.log("🔀 Shuffling cards before session...");
+      questions = shuffleCards(questions);
+      console.log("🔀 Cards shuffled!");
     }
 
     cardCountDisplay.style.display = "none"; 
@@ -523,6 +530,33 @@ function loadCard() {
   }
 
   startBtn.addEventListener("click", startSession);
+
+// Function to shuffle the order of cards (not answer options)
+function shuffleCards(cardsArray) {
+  const shuffled = [...cardsArray]; // Create a copy to avoid mutating original
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Function to shuffle answer options within a card
+function shuffleAnswerOptions(arr) {
+  const allOfTheAbove = arr.find(opt => opt.trim().toLowerCase() === "all of the above");
+  const others = arr.filter(opt => opt.trim().toLowerCase() !== "all of the above");
+
+  const shuffled = others
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
+  if (allOfTheAbove) {
+    shuffled.push(allOfTheAbove);
+  }
+
+  return shuffled;
+}
  abortBtn.addEventListener("click", () => {
   // 🆕 Hide button immediately, then redirect
   abortBtn.classList.add("hidden");
@@ -572,37 +606,3 @@ document.getElementById("mode-select").addEventListener("change", () => {
   saveLastSelection();
 });
 });
-
-document.getElementById("startSessionBtn").addEventListener("click", async () => {
-  const randomToggle = document.getElementById("random-toggle");
-  const shouldShuffle = randomToggle.checked;
-
-  // Fetch cards based on current filters
-  const cards = await fetchCards(); // Assume this function fetches the cards
-
-  let sessionCards;
-  if (shouldShuffle) {
-    sessionCards = shuffleArray(cards); // Shuffle cards if toggle is checked
-  } else {
-    sessionCards = cards; // Keep cards in default order
-  }
-
-  // Start the session with the selected cards
-  initializeSession(sessionCards);
-});
-
-function shuffleArray(arr) {
-  const allOfTheAbove = arr.find(opt => opt.trim().toLowerCase() === "all of the above");
-  const others = arr.filter(opt => opt.trim().toLowerCase() !== "all of the above");
-
-  const shuffled = others
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
-
-  if (allOfTheAbove) {
-    shuffled.push(allOfTheAbove);
-  }
-
-  return shuffled;
-}

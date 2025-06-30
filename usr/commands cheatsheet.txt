@@ -13,10 +13,19 @@ GIT
 
 RETURN TO LAST COMMIT - HARD
 git restore .
+
 COMMIT-AMEND WITH SAME MGG
 git commit --amend --no-edit
+
 CHECK LAST COMMITS COMMENTS
 git log -[number]
+
+RESTORE PARTICULAR FILE FROM LAST COMMIT
+git restore [dir]/[file]
+
+To see what you'd be reverting before you commit to it:
+git diff [dir]/[file]
+
 
 🔍 Check Status & Changes
 git status – Show file change status
