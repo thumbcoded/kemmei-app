@@ -687,6 +687,133 @@ app.get("/api/domainmap", (req, res) => {
   }
 });
 
+// POST test completion - unlock next difficulty level
+app.post("/api/test-completion/:userId", async (req, res) => {
+  const { cert, domain, difficulty, score, totalQuestions, correctAnswers, completedAt } = req.body;
+  
+  if (!cert || !difficulty || score === undefined) {
+    return res.status(400).json({ error: "Missing required test completion data" });
+  }
+
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    // Only proceed if test passed (90% or higher)
+    if (score >= 90) {
+      // Initialize test completions map if it doesn't exist
+      if (!user.testCompletions) {
+        user.testCompletions = new Map();
+      }
+
+      // Create a key for this test completion
+      const testKey = domain ? `${cert}:${domain}:${difficulty}` : `${cert}:all:${difficulty}`;
+      
+      // Record the test completion
+      user.testCompletions.set(testKey, {
+        score,
+        totalQuestions,
+        correctAnswers,
+        completedAt: new Date(completedAt),
+        unlocked: true
+      });
+
+      // Mark the user as having unlocked the next difficulty level
+      const nextDifficulty = getNextDifficulty(difficulty);
+      if (nextDifficulty) {
+        const unlockKey = domain ? `${cert}:${domain}:${nextDifficulty}` : `${cert}:all:${nextDifficulty}`;
+        user.testCompletions.set(unlockKey, { unlocked: true });
+      }
+
+      await user.save();
+      
+      res.json({ 
+        success: true, 
+        message: "Test completion recorded and next level unlocked",
+        nextDifficulty
+      });
+    } else {
+      res.json({ 
+        success: false, 
+        message: "Test score below 90% - no unlock granted" 
+      });
+    }
+  } catch (err) {
+    console.error("❌ Failed to record test completion:", err);
+    res.status(500).json({ error: "Failed to record test completion" });
+  }
+});
+
+function getNextDifficulty(currentDifficulty) {
+  const levels = ["easy", "medium", "hard"];
+  const currentIndex = levels.indexOf(currentDifficulty.toLowerCase());
+  return currentIndex >= 0 && currentIndex < levels.length - 1 ? levels[currentIndex + 1] : null;
+}
+
+// GET test completions for a user
+app.get("/api/test-completions/:userId", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+    
+    const testCompletions = user.testCompletions || new Map();
+    res.json(Object.fromEntries(testCompletions.entries()));
+  } catch (err) {
+    console.error("❌ Failed to load test completions:", err);
+    res.status(500).json({ error: "Failed to load test completions" });
+  }
+});
+
+// POST test completion and unlock next difficulty
+app.post("/api/test-completion/:userId", async (req, res) => {
+  const { cert, domain, difficulty, score, totalQuestions, correctAnswers } = req.body;
+  
+  if (!cert || !difficulty || score === undefined) {
+    return res.status(400).json({ error: "Missing required test completion data" });
+  }
+
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    const passed = score >= 90;
+    const testCompletions = user.testCompletions || new Map();
+    
+    // Create completion record
+    const domainKey = domain || "all";
+    const completionKey = `${cert}:${domainKey}:${difficulty}`;
+    
+    const completionData = {
+      score,
+      totalQuestions,
+      correctAnswers,
+      passed,
+      completedAt: new Date(),
+      unlocked: passed
+    };
+    
+    testCompletions.set(completionKey, completionData);
+    
+    // If test passed, unlock next difficulty level
+    if (passed) {
+      const nextDifficulty = difficulty === "easy" ? "medium" : difficulty === "medium" ? "hard" : null;
+      if (nextDifficulty) {
+        const nextKey = `${cert}:${domainKey}:${nextDifficulty}`;
+        const nextData = testCompletions.get(nextKey) || {};
+        nextData.unlocked = true;
+        testCompletions.set(nextKey, nextData);
+      }
+    }
+    
+    user.testCompletions = testCompletions;
+    await user.save();
+
+    res.json({ success: true, passed, unlocked: passed });
+  } catch (err) {
+    console.error("❌ Failed to record test completion:", err);
+    res.status(500).json({ error: "Failed to record test completion" });
+  }
+});
 
 app.listen(PORT, () => {
   console.log(`🧠 Kemmei API is listening at http://localhost:${PORT}`);
