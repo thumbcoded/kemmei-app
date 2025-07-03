@@ -1,3 +1,14 @@
 data/cards/ 
 temp/ 
 Transcripts/
+
+# Debug and temporary files
+debug-*.js
+test-*.js
+test-*.html
+setup-*.js
+setup-*.html
+clear-*.js
+query-*.js
+check-*.js
+cleanup-*.js
