@@ -171,33 +171,215 @@ function restoreLastSelection() {
   }, 150);
 }
 
+async function getUnlockedDifficulties() {
+  const userId = localStorage.getItem("userId");
+  if (!userId) {
+    return ["easy"]; // Only Easy is available when no user is logged in
+  }
+
+  try {
+    const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`);
+    const userData = await res.json();
+    
+    // Get test completions to determine unlocked difficulties
+    const testRes = await fetch(`http://localhost:3000/api/test-completions/${userId}`);
+    const testCompletions = testRes.ok ? await testRes.json() : {};
+    
+    // Get unlock preferences from the new unlock system
+    const unlocksRes = await fetch(`http://localhost:3000/api/user-unlocks/${userId}`);
+    const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
+    
+    // Determine what's unlocked based on mode and current selection
+    const cert = document.getElementById("deck-select").value.trim();
+    const domain = document.getElementById("domain-select").value.trim();
+    
+    let mediumUnlocked = false;
+    let hardUnlocked = false;
+
+    if (isTestMode) {
+      // Test mode: check test completions for unlock status
+      const domainKey = domain === "All" ? "all" : domain.split(" ")[0];
+      const mediumKey = `${cert}:${domainKey}:medium`;
+      const hardKey = `${cert}:${domainKey}:hard`;
+      
+      mediumUnlocked = testCompletions[mediumKey]?.unlocked || false;
+      hardUnlocked = testCompletions[hardKey]?.unlocked || false;
+    } else {
+      // Casual mode: use the new unlock preference system
+      const certKey = cert.replace(/\./g, '_');
+      const currentDomain = domain === "All" ? null : domain.split(" ")[0];
+      
+      if (currentDomain) {
+        // Check domain-specific unlocks first
+        const domainKey = currentDomain.replace(/\./g, '_');
+        mediumUnlocked = unlocks[`${certKey}:${domainKey}:medium`] || false;
+        hardUnlocked = unlocks[`${certKey}:${domainKey}:hard`] || false;
+        
+        // If domain-specific unlocks aren't set, fall back to title-level unlocks
+        if (!mediumUnlocked) {
+          mediumUnlocked = unlocks[`${certKey}:medium`] || false;
+        }
+        if (!hardUnlocked) {
+          hardUnlocked = unlocks[`${certKey}:hard`] || false;
+        }
+      } else {
+        // "All" domains selected - use title-level unlocks
+        mediumUnlocked = unlocks[`${certKey}:medium`] || false;
+        hardUnlocked = unlocks[`${certKey}:hard`] || false;
+      }
+      
+      // If no unlock preferences are set, fall back to the old progress-based system
+      if (!mediumUnlocked && !hardUnlocked) {
+        // Build progress tree similar to progress.js (simplified version)
+        const progressTree = {};
+        for (const [key, data] of Object.entries(userData)) {
+          const parts = key.replace(/~/g, '.').split(":");
+          
+          if (parts.length < 4) continue;
+          
+          const [certKey, domainKey, subKey, difficulty] = parts;
+          if (!progressTree[certKey]) progressTree[certKey] = {};
+          if (!progressTree[certKey][domainKey]) progressTree[certKey][domainKey] = {};
+          if (!progressTree[certKey][domainKey][subKey]) progressTree[certKey][domainKey][subKey] = {};
+          progressTree[certKey][domainKey][subKey][difficulty] = data;
+        }
+        
+        // Check if Medium is unlocked (Easy is 100% complete)
+        const currentCert = cert;
+        
+        if (currentDomain) {
+          const domainProgress = progressTree[currentCert]?.[currentDomain];
+          if (domainProgress) {
+            for (const subId of Object.keys(domainProgress)) {
+              const easyEntry = domainProgress[subId]?.easy;
+              const actualData = Array.isArray(easyEntry) ? easyEntry[0] : easyEntry;
+              if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
+                mediumUnlocked = true;
+                break;
+              }
+            }
+            
+            // Check if Hard is unlocked (Medium is 100% complete)
+            if (mediumUnlocked) {
+              for (const subId of Object.keys(domainProgress)) {
+                const mediumEntry = domainProgress[subId]?.medium;
+                const actualData = Array.isArray(mediumEntry) ? mediumEntry[0] : mediumEntry;
+                if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
+                  hardUnlocked = true;
+                  break;
+                }
+              }
+            }
+          }
+        } else {
+          // "All" domains - check if ANY domain has Easy completed
+          const certProgress = progressTree[currentCert];
+          if (certProgress) {
+            for (const domainId of Object.keys(certProgress)) {
+              const domainData = certProgress[domainId];
+              for (const subId of Object.keys(domainData)) {
+                const easyEntry = domainData[subId]?.easy;
+                const actualData = Array.isArray(easyEntry) ? easyEntry[0] : easyEntry;
+                if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
+                  mediumUnlocked = true;
+                  break;
+                }
+              }
+              if (mediumUnlocked) break;
+            }
+            
+            // Check Hard unlock
+            if (mediumUnlocked) {
+              for (const domainId of Object.keys(certProgress)) {
+                const domainData = certProgress[domainId];
+                for (const subId of Object.keys(domainData)) {
+                  const mediumEntry = domainData[subId]?.medium;
+                  const actualData = Array.isArray(mediumEntry) ? mediumEntry[0] : mediumEntry;
+                  if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
+                    hardUnlocked = true;
+                    break;
+                  }
+                }
+                if (hardUnlocked) break;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Return array of unlocked difficulties
+    const unlocked = ["easy"];
+    if (mediumUnlocked) unlocked.push("medium");
+    if (hardUnlocked) unlocked.push("hard");
+    
+    return unlocked;
+  } catch (err) {
+    console.error("❌ Failed to determine unlocked difficulties:", err);
+    return ["easy"]; // Fallback to Easy only
+  }
+}
+
 async function fetchCards() {
   const deck = document.getElementById("deck-select").value.trim();
   const domain = document.getElementById("domain-select").value.trim();
   const difficulty = document.getElementById("difficulty-select").value.trim();
 
-  const query = new URLSearchParams();
+  const baseQuery = new URLSearchParams();
   const subdomain = document.getElementById("subdomain-select")?.value.trim();
   if (subdomain && subdomain !== "All") {
-    query.append("subdomain_id", subdomain);
+    baseQuery.append("subdomain_id", subdomain);
   }
   if (deck) {
-    query.append("cert_id", deck);
+    baseQuery.append("cert_id", deck);
   }
 
   if (domain && domain !== "All" && !domain.startsWith("All")) {
     const domainValue = domain.split(" ")[0]; // Extract "3.0" from "3.0 Hardware"
-    query.append("domain_id", domainValue);
+    baseQuery.append("domain_id", domainValue);
   }
+  
+  let allCards = [];
+  
+  // Handle difficulty filtering based on unlock status
   if (difficulty && difficulty !== "All") {
+    // Single difficulty - make one API call
+    const query = new URLSearchParams(baseQuery);
     query.append("difficulty", difficulty.toLowerCase());
+    
+    const url = `http://localhost:3000/api/cards?${query.toString()}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    allCards = data;
+  } else if (difficulty === "All") {
+    // Multiple difficulties - make separate API calls for each unlocked difficulty
+    const unlockedDifficulties = await getUnlockedDifficulties();
+    
+    // Make parallel API calls for each unlocked difficulty
+    const promises = unlockedDifficulties.map(async (diff) => {
+      const query = new URLSearchParams(baseQuery);
+      query.append("difficulty", diff);
+      
+      const url = `http://localhost:3000/api/cards?${query.toString()}`;
+      const res = await fetch(url);
+      return await res.json();
+    });
+    
+    const results = await Promise.all(promises);
+    // Combine all results into a single array and remove duplicates
+    const combinedCards = results.flat();
+    const uniqueCards = combinedCards.filter((card, index, self) => 
+      index === self.findIndex(c => c._id === card._id)
+    );
+    allCards = uniqueCards;
+  } else {
+    // No difficulty specified - fetch all cards (shouldn't happen in normal flow)
+    const url = `http://localhost:3000/api/cards?${baseQuery.toString()}`;
+    const res = await fetch(url);
+    allCards = await res.json();
   }
 
-  const url = `http://localhost:3000/api/cards?${query.toString()}`;
-  const res = await fetch(url);
-  const data = await res.json();
-
-  questions = data.map(card => {
+  questions = allCards.map(card => {
     return {
       question: card.question_text,
       options: shuffleAnswerOptions(card.answer_options || card.options || []),
@@ -267,18 +449,27 @@ document.getElementById("domain-select").addEventListener("change", () => {
   async function fetchCardsAndUpdateCount() {
     await fetchCards();
     updateCardCount();
+    
+    // Update difficulty dropdown based on unlock status
+    await updateDifficultyDropdown();
+  }
 
+  async function updateDifficultyDropdown() {
     // Fetch user progress and test completions to update difficulty dropdown
     const userId = localStorage.getItem("userId");
     if (!userId) {
       // Show only Easy difficulty when no user is logged in
       const difficultySelect = document.getElementById("difficulty-select");
+      const currentDifficulty = difficultySelect.value; // Store current selection before clearing
       difficultySelect.innerHTML = "";
       
       const easyOption = document.createElement("option");
       easyOption.value = "Easy";
       easyOption.textContent = "Easy";
       difficultySelect.appendChild(easyOption);
+      
+      // No user logged in, only Easy is available
+      difficultySelect.value = "Easy";
       
       return;
     }
@@ -291,7 +482,12 @@ document.getElementById("domain-select").addEventListener("change", () => {
       const testRes = await fetch(`http://localhost:3000/api/test-completions/${userId}`);
       const testCompletions = testRes.ok ? await testRes.json() : {};
       
+      // Get unlock preferences from the new unlock system
+      const unlocksRes = await fetch(`http://localhost:3000/api/user-unlocks/${userId}`);
+      const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
+      
       const difficultySelect = document.getElementById("difficulty-select");
+      const currentDifficulty = difficultySelect.value; // Store current selection before clearing
       difficultySelect.innerHTML = ""; // Clear existing options
 
       // Determine what's unlocked based on mode and current selection
@@ -310,93 +506,117 @@ document.getElementById("domain-select").addEventListener("change", () => {
         mediumUnlocked = testCompletions[mediumKey]?.unlocked || false;
         hardUnlocked = testCompletions[hardKey]?.unlocked || false;
       } else {
-        // Casual mode: use existing progress-based unlocking
-        // Build progress tree similar to progress.js
-        const progressTree = {};
-        for (const [key, data] of Object.entries(userData)) {
-          const parts = key.replace(/~/g, '.').split(":");
-          
-          // Skip entries that don't have proper structure (cert:domain:sub:difficulty)
-          if (parts.length < 4) {
-            continue;
-          }
-          
-          const [certKey, domainKey, subKey, difficulty] = parts;
-          if (!progressTree[certKey]) progressTree[certKey] = {};
-          if (!progressTree[certKey][domainKey]) progressTree[certKey][domainKey] = {};
-          if (!progressTree[certKey][domainKey][subKey]) progressTree[certKey][domainKey][subKey] = {};
-          progressTree[certKey][domainKey][subKey][difficulty] = data;
-        }
-        
-        // Check if Medium is unlocked for this domain/cert
-        // Medium is unlocked if Easy is 100% complete for the domain
-        const currentCert = cert;
+        // Casual mode: use the new unlock preference system
+        const certKey = cert.replace(/\./g, '_');
         const currentDomain = domain === "All" ? null : domain.split(" ")[0];
         
         if (currentDomain) {
-          // Check specific domain
-          const domainProgress = progressTree[currentCert]?.[currentDomain];
-          if (domainProgress) {
-            // Check all subdomains in this domain for Easy completion
-            let easyCompleted = false;
-            for (const subId of Object.keys(domainProgress)) {
-              const easyEntry = domainProgress[subId]?.easy;
-              // Handle case where data might be wrapped in array
-              const actualData = Array.isArray(easyEntry) ? easyEntry[0] : easyEntry;
-              if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                easyCompleted = true;
-                break;
-              }
-            }
-            mediumUnlocked = easyCompleted;
-            
-            // Check if Hard is unlocked (Medium must be 100% complete)
-            if (mediumUnlocked) {
-              let mediumCompleted = false;
-              for (const subId of Object.keys(domainProgress)) {
-                const mediumEntry = domainProgress[subId]?.medium;
-                // Handle case where data might be wrapped in array
-                const actualData = Array.isArray(mediumEntry) ? mediumEntry[0] : mediumEntry;
-                if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                  mediumCompleted = true;
-                  break;
-                }
-              }
-              hardUnlocked = mediumCompleted;
-            }
+          // Check domain-specific unlocks first
+          const domainKey = currentDomain.replace(/\./g, '_');
+          mediumUnlocked = unlocks[`${certKey}:${domainKey}:medium`] || false;
+          hardUnlocked = unlocks[`${certKey}:${domainKey}:hard`] || false;
+          
+          // If domain-specific unlocks aren't set, fall back to title-level unlocks
+          if (!mediumUnlocked) {
+            mediumUnlocked = unlocks[`${certKey}:medium`] || false;
+          }
+          if (!hardUnlocked) {
+            hardUnlocked = unlocks[`${certKey}:hard`] || false;
           }
         } else {
-          // "All" domains selected - check if ANY domain has Easy completed
-          const certProgress = progressTree[currentCert];
-          if (certProgress) {
-            for (const domainId of Object.keys(certProgress)) {
-              const domainData = certProgress[domainId];
-              for (const subId of Object.keys(domainData)) {
-                const easyEntry = domainData[subId]?.easy;
+          // "All" domains selected - use title-level unlocks
+          mediumUnlocked = unlocks[`${certKey}:medium`] || false;
+          hardUnlocked = unlocks[`${certKey}:hard`] || false;
+        }
+        
+        // If no unlock preferences are set, fall back to the old progress-based system
+        if (!mediumUnlocked && !hardUnlocked) {
+          // Build progress tree similar to progress.js
+          const progressTree = {};
+          for (const [key, data] of Object.entries(userData)) {
+            const parts = key.replace(/~/g, '.').split(":");
+            
+            // Skip entries that don't have proper structure (cert:domain:sub:difficulty)
+            if (parts.length < 4) {
+              continue;
+            }
+            
+            const [certKey, domainKey, subKey, difficulty] = parts;
+            if (!progressTree[certKey]) progressTree[certKey] = {};
+            if (!progressTree[certKey][domainKey]) progressTree[certKey][domainKey] = {};
+            if (!progressTree[certKey][domainKey][subKey]) progressTree[certKey][domainKey][subKey] = {};
+            progressTree[certKey][domainKey][subKey][difficulty] = data;
+          }
+          
+          // Check if Medium is unlocked for this domain/cert
+          // Medium is unlocked if Easy is 100% complete for the domain
+          const currentCert = cert;
+          
+          if (currentDomain) {
+            // Check specific domain
+            const domainProgress = progressTree[currentCert]?.[currentDomain];
+            if (domainProgress) {
+              // Check all subdomains in this domain for Easy completion
+              let easyCompleted = false;
+              for (const subId of Object.keys(domainProgress)) {
+                const easyEntry = domainProgress[subId]?.easy;
                 // Handle case where data might be wrapped in array
                 const actualData = Array.isArray(easyEntry) ? easyEntry[0] : easyEntry;
                 if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                  mediumUnlocked = true;
+                  easyCompleted = true;
                   break;
                 }
               }
-              if (mediumUnlocked) break;
-            }
-            
-            // Check Hard unlock
-            if (mediumUnlocked) {
-              for (const domainId of Object.keys(certProgress)) {
-                const domainData = certProgress[domainId];
-                for (const subId of Object.keys(domainData)) {
-                  const mediumEntry = domainData[subId]?.medium;
+              mediumUnlocked = easyCompleted;
+              
+              // Check if Hard is unlocked (Medium must be 100% complete)
+              if (mediumUnlocked) {
+                let mediumCompleted = false;
+                for (const subId of Object.keys(domainProgress)) {
+                  const mediumEntry = domainProgress[subId]?.medium;
                   // Handle case where data might be wrapped in array
                   const actualData = Array.isArray(mediumEntry) ? mediumEntry[0] : mediumEntry;
                   if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                    hardUnlocked = true;
+                    mediumCompleted = true;
                     break;
                   }
                 }
-                if (hardUnlocked) break;
+                hardUnlocked = mediumCompleted;
+              }
+            }
+          } else {
+            // "All" domains selected - check if ANY domain has Easy completed
+            const certProgress = progressTree[currentCert];
+            if (certProgress) {
+              for (const domainId of Object.keys(certProgress)) {
+                const domainData = certProgress[domainId];
+                for (const subId of Object.keys(domainData)) {
+                  const easyEntry = domainData[subId]?.easy;
+                  // Handle case where data might be wrapped in array
+                  const actualData = Array.isArray(easyEntry) ? easyEntry[0] : easyEntry;
+                  if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
+                    mediumUnlocked = true;
+                    break;
+                  }
+                }
+                if (mediumUnlocked) break;
+              }
+              
+              // Check Hard unlock
+              if (mediumUnlocked) {
+                for (const domainId of Object.keys(certProgress)) {
+                  const domainData = certProgress[domainId];
+                  for (const subId of Object.keys(domainData)) {
+                    const mediumEntry = domainData[subId]?.medium;
+                    // Handle case where data might be wrapped in array
+                    const actualData = Array.isArray(mediumEntry) ? mediumEntry[0] : mediumEntry;
+                    if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
+                      hardUnlocked = true;
+                      break;
+                    }
+                  }
+                  if (hardUnlocked) break;
+                }
               }
             }
           }
@@ -430,11 +650,26 @@ document.getElementById("domain-select").addEventListener("change", () => {
         allOption.textContent = "All";
         difficultySelect.appendChild(allOption);
       }
+
+      // Restore the previously selected difficulty if it's still available and unlocked
+      if (currentDifficulty) {
+        const optionExists = Array.from(difficultySelect.options).some(opt => opt.value === currentDifficulty && !opt.disabled);
+        if (optionExists) {
+          difficultySelect.value = currentDifficulty;
+        } else {
+          // If the previously selected difficulty is no longer available, default to Easy
+          difficultySelect.value = "Easy";
+        }
+      } else {
+        // If no previous selection, default to Easy
+        difficultySelect.value = "Easy";
+      }
     } catch (err) {
       console.error("❌ Failed to fetch user progress:", err);
       
       // Fallback: show only Easy difficulty for both modes when there's an error
       const difficultySelect = document.getElementById("difficulty-select");
+      const currentDifficulty = difficultySelect.value; // Store current selection before clearing
       difficultySelect.innerHTML = "";
       
       const easyOption = document.createElement("option");
@@ -454,6 +689,9 @@ document.getElementById("domain-select").addEventListener("change", () => {
       hardOption.textContent = "🔒 Hard";
       hardOption.disabled = true;
       difficultySelect.appendChild(hardOption);
+
+      // In error state, only Easy is available, so default to Easy
+      difficultySelect.value = "Easy";
     }
   }
 
@@ -475,15 +713,53 @@ document.getElementById("domain-select").addEventListener("change", () => {
   }
   
 
-  document.getElementById("deck-select").addEventListener("change", fetchCardsAndUpdateCount);
-  document.getElementById("domain-select").addEventListener("change", fetchCardsAndUpdateCount);
-document.getElementById("difficulty-select").addEventListener("change", () => {
+  document.getElementById("deck-select").addEventListener("change", () => {
   saveLastSelection();
   fetchCardsAndUpdateCount();
 });
-  document.getElementById("subdomain-select").addEventListener("change", () => {
+
+document.getElementById("domain-select").addEventListener("change", () => {
+  const certLabel = document.getElementById("deck-select").value;
+  const domainSelect = document.getElementById("domain-select");
+  const subSelect = document.getElementById("subdomain-select");
+
+  const certId = certLabel;
+  const domainId = domainSelect.value.split(" ")[0];
+
+  subSelect.innerHTML = `<option>All</option>`;
+
+  if (certId && domainId && subdomainMaps[certId]?.[domainId]) {
+    const subMap = subdomainMaps[certId][domainId];
+    Object.entries(subMap).forEach(([subId, subTitle]) => {
+      const opt = new Option(`${subId} ${subTitle}`, subId);
+      subSelect.appendChild(opt);
+    });
+  }
+
   saveLastSelection();
   fetchCardsAndUpdateCount();
+});
+
+document.getElementById("difficulty-select").addEventListener("change", () => {
+  saveLastSelection();
+  
+  // Simply fetch cards without rebuilding dropdown
+  fetchCards().then(() => {
+    updateCardCount();
+  }).catch(err => {
+    console.error("Error fetching cards after difficulty change:", err);
+  });
+});
+
+document.getElementById("subdomain-select").addEventListener("change", () => {
+  saveLastSelection();
+  
+  // Only fetch cards and update count, don't rebuild difficulty dropdown
+  fetchCards().then(() => {
+    updateCardCount();
+  }).catch(err => {
+    console.error("Error fetching cards after subdomain change:", err);
+  });
 });
 
 

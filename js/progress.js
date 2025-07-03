@@ -6,15 +6,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Load and render progress
   try {
-    const [progressRes, domainRes] = await Promise.all([
+    const [progressRes, domainRes, unlocksRes] = await Promise.all([
       fetch(`http://localhost:3000/api/user-progress/${userId}`),
-      fetch("/data/domainmap.json")
+      fetch("/data/domainmap.json"),
+      fetch(`http://localhost:3000/api/user-unlocks/${userId}`)
     ]);
 
     const progress = await progressRes.json();
     const domainMap = await domainRes.json();
+    const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
 
-    renderProgressTree(progress, domainMap);
+    renderProgressTree(progress, domainMap, unlocks);
   } catch (err) {
     console.error("❌ Failed to load user progress:", err);
     if (statsDiv) statsDiv.textContent = "Error loading progress.";
@@ -45,22 +47,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         if (res.ok) {
-          const toast = document.getElementById("toast");
-          if (toast) {
-            toast.textContent = "✔️ Your progress has been cleared.";
-            toast.classList.remove("hidden");
-            toast.classList.add("show");
-
-            setTimeout(() => {
-              toast.classList.remove("show");
-              setTimeout(() => {
-                toast.classList.add("hidden");
-                location.reload();
-              }, 400);
-            }, 2000);
-          } else {
+          showToast("✔️ Your progress has been cleared successfully.", 'success');
+          setTimeout(() => {
             location.reload();
-          }
+          }, 2000);
         } else {
           alert("❌ Failed to clear progress.");
         }
@@ -72,7 +62,86 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-function renderProgressTree(userProgress, domainMap) {
+function showToast(message, type = 'success') {
+  const toast = document.getElementById("toast");
+  if (toast) {
+    toast.textContent = message;
+    toast.classList.remove("hidden", "error", "success");
+    toast.classList.add("show", type);
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => {
+        toast.classList.add("hidden");
+        toast.classList.remove("error", "success");
+      }, 400);
+    }, 3000);
+  }
+}
+
+async function toggleUnlock(certId, domainId, level) {
+  const userId = localStorage.getItem("userId");
+  if (!userId) return;
+
+  try {
+    const res = await fetch(`http://localhost:3000/api/user-unlocks/${userId}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        certId,
+        domainId,
+        level
+      }),
+    });
+
+    if (res.ok) {
+      const result = await res.json();
+      const action = result.unlocked ? "unlocked" : "locked";
+      
+      // Get the pretty names for the toast message
+      const prettyMessage = getPrettyUnlockMessage(certId, domainId, level, action);
+      showToast(prettyMessage);
+      
+      // Reload the page to reflect changes
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
+    } else {
+      showToast("❌ Failed to update unlock status.", 'error');
+    }
+  } catch (err) {
+    console.error("❌ Toggle unlock error:", err);
+    showToast("❌ Network error.", 'error');
+  }
+}
+
+function getPrettyUnlockMessage(certId, domainId, level, action) {
+  // Convert back from MongoDB-safe keys to display keys
+  const displayCertId = certId.replace(/_/g, '.');
+  const displayDomainId = domainId ? domainId.replace(/_/g, '.') : null;
+  
+  // Get certification name mapping
+  const certNameMap = {
+    '220-1201': 'CompTIA A+ Core 1',
+    '220-1202': 'CompTIA A+ Core 2', 
+    'N10-009': 'CompTIA Network+',
+    'SY0-701': 'CompTIA Security+'
+  };
+  
+  const certName = certNameMap[displayCertId] || displayCertId;
+  const emoji = action === "unlocked" ? "🔓" : "🔒";
+  const actionText = action === "unlocked" ? "unlocked" : "locked";
+  
+  if (displayDomainId) {
+    return `${emoji} ${level.charAt(0).toUpperCase() + level.slice(1)} difficulty for ${certName}, domain ${displayDomainId} ${actionText}.`;
+  } else {
+    return `${emoji} ${level.charAt(0).toUpperCase() + level.slice(1)} difficulty for ${certName} ${actionText}.`;
+  }
+}
+
+function renderProgressTree(userProgress, domainMap, unlocks) {
   const container = document.getElementById("progressStats");
   container.innerHTML = "";
 
@@ -94,13 +163,47 @@ function renderProgressTree(userProgress, domainMap) {
     const certBlock = document.createElement("div");
     certBlock.className = "title-block";
 
-    const titleHeader = document.createElement("h3");
-    titleHeader.innerHTML = `📘 ${certId}: ${certNames[certId]}`;
+    const titleHeader = document.createElement("div");
+    titleHeader.className = "title-header";
+    
+    const titleText = document.createElement("h3");
+    titleText.innerHTML = `📘 ${certId}: ${certNames[certId]}`;
+    titleText.style.cursor = "pointer";
+    
+    const titleUnlocks = document.createElement("div");
+    titleUnlocks.className = "unlock-buttons";
+    
+    // Title level unlock buttons (replace dots with underscores for MongoDB compatibility)
+    const certKey = certId.replace(/\./g, '_');
+    const mediumUnlocked = unlocks[`${certKey}:medium`] || false;
+    const hardUnlocked = unlocks[`${certKey}:hard`] || false;
+    
+    const mediumBtn = document.createElement("button");
+    mediumBtn.className = `unlock-btn ${mediumUnlocked ? 'unlocked' : 'locked'}`;
+    mediumBtn.innerHTML = `${mediumUnlocked ? '🔓' : '🔒'} Medium`;
+    mediumBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleUnlock(certKey, null, "medium");
+    });
+    
+    const hardBtn = document.createElement("button");
+    hardBtn.className = `unlock-btn ${hardUnlocked ? 'unlocked' : 'locked'}`;
+    hardBtn.innerHTML = `${hardUnlocked ? '🔓' : '🔒'} Hard`;
+    hardBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleUnlock(certKey, null, "hard");
+    });
+    
+    titleUnlocks.appendChild(mediumBtn);
+    titleUnlocks.appendChild(hardBtn);
+    
+    titleHeader.appendChild(titleText);
+    titleHeader.appendChild(titleUnlocks);
 
     const domainList = document.createElement("div");
     domainList.className = "domain-list hidden"; // collapsed initially
 
-    titleHeader.addEventListener("click", () => {
+    titleText.addEventListener("click", () => {
       const currentlyOpen = document.querySelector(".domain-list:not(.hidden)");
       if (currentlyOpen && currentlyOpen !== domainList) {
         currentlyOpen.classList.add("hidden");
@@ -115,14 +218,49 @@ function renderProgressTree(userProgress, domainMap) {
       const domainTitle = domains[domainId];
       const domainBlock = document.createElement("div");
       domainBlock.className = "domain-block";
-      domainBlock.innerHTML = `<h4>📂 ${domainId} ${domainTitle}</h4>`;
+      
+      const domainHeader = document.createElement("div");
+      domainHeader.className = "domain-header";
+      
+      const domainText = document.createElement("h4");
+      domainText.innerHTML = `📂 ${domainId} ${domainTitle}`;
+      domainText.style.cursor = "pointer";
+      
+      const domainUnlocks = document.createElement("div");
+      domainUnlocks.className = "unlock-buttons";
+      
+      // Domain level unlock buttons (replace dots with underscores for MongoDB compatibility)
+      const domainKey = domainId.replace(/\./g, '_');
+      const domainMediumUnlocked = unlocks[`${certKey}:${domainKey}:medium`] || false;
+      const domainHardUnlocked = unlocks[`${certKey}:${domainKey}:hard`] || false;
+      
+      const domainMediumBtn = document.createElement("button");
+      domainMediumBtn.className = `unlock-btn ${domainMediumUnlocked ? 'unlocked' : 'locked'}`;
+      domainMediumBtn.innerHTML = `${domainMediumUnlocked ? '🔓' : '🔒'} Medium`;
+      domainMediumBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleUnlock(certKey, domainKey, "medium");
+      });
+      
+      const domainHardBtn = document.createElement("button");
+      domainHardBtn.className = `unlock-btn ${domainHardUnlocked ? 'unlocked' : 'locked'}`;
+      domainHardBtn.innerHTML = `${domainHardUnlocked ? '🔓' : '🔒'} Hard`;
+      domainHardBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleUnlock(certKey, domainKey, "hard");
+      });
+      
+      domainUnlocks.appendChild(domainMediumBtn);
+      domainUnlocks.appendChild(domainHardBtn);
+      
+      domainHeader.appendChild(domainText);
+      domainHeader.appendChild(domainUnlocks);
+      domainBlock.appendChild(domainHeader);
 
       const subdomainWrapper = document.createElement("div");
       subdomainWrapper.className = "subdomain-list hidden"; // initially hidden
 
-      const domainHeader = domainBlock.querySelector("h4");
-      domainHeader.style.cursor = "pointer";
-      domainHeader.addEventListener("click", () => {
+      domainText.addEventListener("click", () => {
         const openDomains = domainList.querySelectorAll(".subdomain-list:not(.hidden)");
         openDomains.forEach(el => {
           if (el !== subdomainWrapper) el.classList.add("hidden");
@@ -144,39 +282,12 @@ function renderProgressTree(userProgress, domainMap) {
         subTitleElement.textContent = `🔹 ${subId} ${subTitle}`;
         subTitleElement.className = "subdomain-title";
 
-        const diffList = document.createElement("ul");
-        diffList.className = "difficulty-list";
-
-        const difficulties = ["easy", "medium", "hard"];
-        let unlocked = true;
-        for (let i = 0; i < difficulties.length; i++) {
-          const difficulty = difficulties[i];
-          const entry = progressTree[certId]?.[domainId]?.[subId]?.[difficulty];
-          const li = document.createElement("li");
-
-          if (!unlocked) {
-            // Locked state
-            let lockEmoji = "🔒";
-            li.textContent = `${difficulty}: ${lockEmoji} Locked`;
-            li.style.opacity = "0.5";
-          } else if (entry) {
-            li.textContent = `${difficulty}: ✅ ${entry.correct} / ${entry.total} (${entry.total > 0 ? Math.round((entry.correct / entry.total) * 100) : 0}%)`;
-            // Unlock next level if all correct
-            unlocked = entry.total > 0 && entry.correct === entry.total;
-          } else {
-            // Available but not started
-            let emoji = "🟢";
-            if (difficulty === "medium") emoji = "🟡";
-            if (difficulty === "hard") emoji = "🔴";
-            li.textContent = `${difficulty}: ${emoji} Available`;
-            // Only easy is available by default; medium/hard only if unlocked
-            unlocked = false;
-          }
-          diffList.appendChild(li);
-        }
+        // Remove difficulty indicators for subdomains since users only test on domain/title level
+        // const diffList = document.createElement("ul");
+        // diffList.className = "difficulty-list";
 
         subHeader.appendChild(subTitleElement);
-        subHeader.appendChild(diffList);
+        // subHeader.appendChild(diffList); // Removed difficulty list
         subBlock.appendChild(subHeader);
         subdomainWrapper.appendChild(subBlock);
       }

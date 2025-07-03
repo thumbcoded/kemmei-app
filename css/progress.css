@@ -98,6 +98,53 @@ body.index-page {
   background-color: #c7bed1;
 }
 
+/* Unlock button styles */
+.title-header, .domain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.unlock-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.unlock-btn {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: white;
+  color: #333;
+}
+
+.unlock-btn.locked {
+  background: #f8f9fa;
+  color: #6c757d;
+  border-color: #dee2e6;
+}
+
+.unlock-btn.locked:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.unlock-btn.unlocked {
+  background: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+
+.unlock-btn.unlocked:hover {
+  background: #c3e6cb;
+  border-color: #b8dacc;
+}
+
 .title-block {
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
@@ -120,7 +167,7 @@ body.index-page {
 
 .subdomain-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
 }
@@ -161,15 +208,21 @@ body.index-page {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background: #28a745;
+  background: linear-gradient(135deg, #28a745, #20c997);
   color: white;
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
   font-size: 0.95rem;
+  font-weight: 500;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 10000;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  max-width: 350px;
+  line-height: 1.4;
 }
 
 .toast.show {
@@ -252,7 +305,7 @@ body.index-page {
   text-align: center;
 }
 
-/* -------- Dark Theme Styles -------- */
+/* -------- Dark Theme Styles -------- */ */
 body.dark-theme {
   background: #232733;
   color: #e2e8f0;
@@ -287,8 +340,22 @@ body.dark-theme #resetProgress:hover {
 }
 
 body.dark-theme .toast {
-  background: #4fd1c5;
-  color: #232733;
+  background: linear-gradient(135deg, #4fd1c5, #38b2ac);
+  color: #1a202c;
+  box-shadow: 0 4px 15px rgba(79, 209, 197, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.toast.error {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* Dark theme error toast */
+body.dark-theme .toast.error {
+  background: linear-gradient(135deg, #f56565, #e53e3e);
+  color: #1a202c;
+  box-shadow: 0 4px 15px rgba(245, 101, 101, 0.3);
 }
 
 body.dark-theme .modal-content {
@@ -308,4 +375,33 @@ body.dark-theme #confirmNo {
 body.dark-theme .title-block {
   background: rgba(44, 48, 62, 0.98);
   border-color: #44495a;
+}
+
+/* Dark theme unlock button styles */
+body.dark-theme .unlock-btn {
+  background: #44495a;
+  color: #e2e8f0;
+  border-color: #5a6578;
+}
+
+body.dark-theme .unlock-btn.locked {
+  background: #3a3f51;
+  color: #a0aec0;
+  border-color: #4a5568;
+}
+
+body.dark-theme .unlock-btn.locked:hover {
+  background: #4a5568;
+  border-color: #5a6578;
+}
+
+body.dark-theme .unlock-btn.unlocked {
+  background: #2d4a36;
+  color: #68d391;
+  border-color: #38a169;
+}
+
+body.dark-theme .unlock-btn.unlocked:hover {
+  background: #38a169;
+  border-color: #48bb78;
 }

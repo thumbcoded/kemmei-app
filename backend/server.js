@@ -815,6 +815,92 @@ app.post("/api/test-completion/:userId", async (req, res) => {
   }
 });
 
+// ==============================
+// USER UNLOCK ROUTES
+// ==============================
+
+// Get user unlock preferences
+app.get("/api/user-unlocks/:userId", async (req, res) => {
+  try {
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+    res.json(Object.fromEntries(user.unlocks?.entries() || []));
+  } catch (err) {
+    console.error("❌ Failed to load user unlocks:", err);
+    res.status(500).json({ error: "Failed to load unlocks" });
+  }
+});
+
+// Toggle unlock preference
+app.post("/api/user-unlocks/:userId", async (req, res) => {
+  try {
+    const { certId, domainId, level } = req.body;
+    if (!certId || !level) {
+      return res.status(400).json({ error: "Missing certId or level" });
+    }
+
+    const user = await User.findById(req.params.userId);
+    if (!user) return res.status(404).json({ error: "User not found" });
+
+    // Initialize unlocks map if not exists
+    if (!user.unlocks) user.unlocks = new Map();
+
+    // Replace dots with underscores for MongoDB compatibility
+    const safeCertId = certId.replace(/\./g, '_');
+    const safeDomainId = domainId ? domainId.replace(/\./g, '_') : null;
+
+    // Build the unlock key
+    const unlockKey = safeDomainId ? `${safeCertId}:${safeDomainId}:${level}` : `${safeCertId}:${level}`;
+    
+    // Toggle the unlock status
+    const currentStatus = user.unlocks.get(unlockKey) || false;
+    const newStatus = !currentStatus;
+    user.unlocks.set(unlockKey, newStatus);
+
+    // If unlocking hard, also unlock medium
+    if (level === "hard" && newStatus) {
+      const mediumKey = safeDomainId ? `${safeCertId}:${safeDomainId}:medium` : `${safeCertId}:medium`;
+      user.unlocks.set(mediumKey, true);
+    }
+
+    // If locking medium, also lock hard
+    if (level === "medium" && !newStatus) {
+      const hardKey = safeDomainId ? `${safeCertId}:${safeDomainId}:hard` : `${safeCertId}:hard`;
+      user.unlocks.set(hardKey, false);
+    }
+
+    // If this is a title-level unlock/lock, propagate to all domains
+    if (!safeDomainId) {
+      // Load domain map to get all domains for this cert
+      const domainMapPath = path.join(__dirname, "..", "data", "domainmap.json");
+      const domainMap = JSON.parse(fs.readFileSync(domainMapPath, "utf8"));
+      const domains = domainMap.domainMaps[certId] || {}; // Use original certId for lookup
+      
+      for (const domainKey of Object.keys(domains)) {
+        const safeDomainKey = domainKey.replace(/\./g, '_');
+        const domainUnlockKey = `${safeCertId}:${safeDomainKey}:${level}`;
+        user.unlocks.set(domainUnlockKey, newStatus);
+        
+        // Apply medium/hard logic to domains too
+        if (level === "hard" && newStatus) {
+          const domainMediumKey = `${safeCertId}:${safeDomainKey}:medium`;
+          user.unlocks.set(domainMediumKey, true);
+        }
+        if (level === "medium" && !newStatus) {
+          const domainHardKey = `${safeCertId}:${safeDomainKey}:hard`;
+          user.unlocks.set(domainHardKey, false);
+        }
+      }
+    }
+
+    await user.save();
+    res.json({ success: true, unlocked: newStatus });
+  } catch (err) {
+    console.error("❌ Failed to toggle unlock:", err);
+    res.status(500).json({ error: "Failed to toggle unlock" });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`🧠 Kemmei API is listening at http://localhost:${PORT}`);
 });
