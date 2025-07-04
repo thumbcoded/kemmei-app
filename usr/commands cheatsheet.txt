@@ -17,6 +17,9 @@ git restore .
 COMMIT-AMEND WITH SAME MGG
 git commit --amend --no-edit
 
+- WITH ALTERED MSG
+git commit --amend -m "new msg"
+
 CHECK LAST COMMITS COMMENTS
 git log -[number]
 

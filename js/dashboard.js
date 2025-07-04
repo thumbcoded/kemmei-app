@@ -10,7 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const greeting = document.getElementById("greeting");
-  greeting.textContent = `Hello, ${userId} 👋`;
+  const roleText = role === "admin" ? " (Admin)" : "";
+  greeting.textContent = `Hello, ${userId}${roleText} 👋`;
+
+  // Hide admin panel link for non-admin users
+  const adminLink = document.querySelector('a[href="admin.html"]');
+  if (adminLink && role !== "admin") {
+    adminLink.style.display = "none";
+  }
 
   const logoutBtn = document.getElementById("logout-btn");
   logoutBtn.addEventListener("click", () => {

@@ -1,3 +1,26 @@
+// Admin Access Control - Check if user has admin role
+document.addEventListener("DOMContentLoaded", () => {
+  const userId = localStorage.getItem("userId");
+  const email = localStorage.getItem("email");
+  const role = localStorage.getItem("role");
+
+  if (!userId || !email || !role) {
+    // Redirect to login if not authenticated
+    alert("You must be logged in to access the admin panel.");
+    window.location.href = "index.html";
+    return;
+  }
+
+  if (role !== "admin") {
+    // Redirect to dashboard if not admin
+    alert("Access denied. Admin privileges required.");
+    window.location.href = "dashboard.html";
+    return;
+  }
+
+  console.log(`✅ Admin access granted for user: ${userId}`);
+});
+
 let certNames = {}, domainMaps = {}, subdomainMaps = {};
 window.certNames = certNames;
 window.domainMaps = domainMaps;
