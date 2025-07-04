@@ -128,13 +128,17 @@ const resetBtn = document.getElementById("resetBtn");
 const restartBtn = document.getElementById("restartBtn");
 const endMessage = document.getElementById("endMessage");
 const flashcardBox = document.querySelector(".flashcard-box");
-const cardMeta = document.querySelector(".card-meta");
-const cardUtils = document.querySelector(".card-utils");
+const cardMeta = document.getElementById("cardMeta") || document.querySelector(".card-meta");
+// DISABLED: Utility buttons temporarily disabled
+// const cardUtils = document.getElementById("cardUtils") || document.querySelector(".card-utils");
+const cardUtils = null; // Placeholder for future utility button functionality
 const progressCounter = document.getElementById("progressCounter");
 const correctCounter = document.getElementById("correctCounter");
 const randomToggle = document.getElementById("random-toggle");
 const checkTooltip = document.getElementById("check-tooltip");
 const nextTooltip = document.getElementById("next-tooltip");
+const explanationContainer = document.getElementById("explanationContainer");
+const explanationText = document.getElementById("explanationText");
 
 let questions = [];
 let currentIndex = 0;
@@ -389,7 +393,8 @@ async function fetchCards() {
       required: Array.isArray(card.correct_answer)
         ? card.correct_answer.length
         : 1,
-      type: card.question_type
+      type: card.question_type,
+      explanation: card.explanation || ""
     };
   });
 
@@ -804,7 +809,9 @@ document.getElementById("subdomain-select").addEventListener("change", () => {
 
     flashcardBox.classList.remove("hidden");
     cardMeta.classList.remove("hidden");
-    cardUtils.classList.remove("hidden");
+    // DISABLED: Utility buttons temporarily disabled
+    // cardUtils.classList.remove("hidden");
+    if (cardUtils) cardUtils.classList.remove("hidden");
     endMessage.classList.add("hidden");
 
     currentIndex = 0;
@@ -816,6 +823,9 @@ function loadCard() {
   const q = questions[currentIndex];
   cardContainer.textContent = q.question;
   answerForm.innerHTML = "";
+
+  // Hide explanation when loading new card
+  explanationContainer.classList.add("hidden");
 
   updateUserProgress(
   document.getElementById("deck-select").value.trim(),
@@ -926,6 +936,12 @@ function loadCard() {
     const isCorrect = q.correct.every(ans => selected.includes(ans)) && selected.length === q.correct.length;
     if (isCorrect) correctCount++;
 
+    // Show explanation if available
+    if (q.explanation && q.explanation.trim()) {
+      explanationText.textContent = q.explanation;
+      explanationContainer.classList.remove("hidden");
+    }
+
     checkBtn.disabled = true;
     checkBtn.classList.remove("primary");
     checkTooltip.style.display = "none";
@@ -959,7 +975,9 @@ function loadCard() {
 
     flashcardBox.classList.add("hidden");
     cardMeta.classList.add("hidden");
-    cardUtils.classList.add("hidden");
+    // DISABLED: Utility buttons temporarily disabled
+    // cardUtils.classList.add("hidden");
+    if (cardUtils) cardUtils.classList.add("hidden");
     endMessage.classList.remove("hidden");
 
     const percent = Math.round((correctCount / questions.length) * 100);
@@ -1067,7 +1085,9 @@ exitBtn.addEventListener("click", () => {
 
   flashcardBox.classList.add("hidden");
   cardMeta.classList.add("hidden");
-  cardUtils.classList.add("hidden");
+  // DISABLED: Utility buttons temporarily disabled
+  // cardUtils.classList.add("hidden");
+  if (cardUtils) cardUtils.classList.add("hidden");
   endMessage.classList.add("hidden");
 
   // Dark Mode Toggle Functionality

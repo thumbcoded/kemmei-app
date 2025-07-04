@@ -9,6 +9,9 @@ db.users.find().pretty()
 DELETE USERS
 db.users.deleteMany({})
 
+VS CODE
+Comment out: Ctrl+/
+
 GIT
 
 RETURN TO LAST COMMIT - HARD

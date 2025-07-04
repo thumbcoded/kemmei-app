@@ -108,15 +108,16 @@
   </div>
 </div>
 
-    <!-- Session progress -->
-    <div class="card-meta hidden">
-      <span id="progressCounter">Card 1 of 2</span>
-      <span id="correctCounter">Correct answers: 0 / 0</span>
-    </div>
 
     <!-- Flashcard content -->
     <main class="flashcard-box">
+      <!-- Explanation section - above question -->
+      <div id="explanationContainer" class="card-explanation hidden">
+        <div id="explanationText" class="explanation-content"></div>
+      </div>
+      
       <div id="cardContainer" class="card-question">Loading...</div>
+      
       <form id="answer-form" class="card-answers"></form>
 
       <div class="card-buttons">
@@ -145,6 +146,12 @@
         </div>
       </div>
     </main>
+
+    <!-- Session progress - moved to bottom -->
+    <div class="card-meta hidden">
+      <span id="progressCounter">Card 1 of 2</span>
+      <span id="correctCounter">Correct answers: 0 / 0</span>
+    </div>
 
     <!-- Completion screen -->
     <div id="endMessage" class="hidden end-message">

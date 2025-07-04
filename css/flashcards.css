@@ -84,6 +84,40 @@ body.flashcards-page {
   font-size: 1.2rem;
 }
 
+/* -------- Explanation Section -------- */
+.card-explanation {
+  background: #f0f8ff;
+  border: 1px solid #b8daff;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  font-style: italic;
+  min-height: 0;
+}
+
+.card-explanation.hidden {
+  display: none;
+}
+
+.explanation-content {
+  color: #2c5282;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .options {
   display: flex;
   flex-direction: column;
@@ -223,9 +257,16 @@ body.flashcards-page {
 .card-meta {
   display: flex;
   justify-content: space-between;
-  margin: 1rem 0;
-  font-size: 0.95rem;
-  color: #444;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* -------- Floating Kanji (Optional) -------- */
@@ -478,6 +519,22 @@ body.dark-theme .flashcard-box {
   background-color: #2d3748;
   color: #e2e8f0;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .card-explanation {
+  background-color: #2a4a5a;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+body.dark-theme .explanation-content {
+  color: #9dd3ff;
+}
+
+body.dark-theme .card-meta {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #cbd5e0;
 }
 
 body.dark-theme .option {
