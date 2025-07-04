@@ -111,14 +111,16 @@
 
     <!-- Flashcard content -->
     <main class="flashcard-box">
-      <!-- Explanation section - above question -->
-      <div id="explanationContainer" class="card-explanation hidden">
-        <div id="explanationText" class="explanation-content"></div>
+      <div class="card-content">
+        <!-- Explanation section - above question -->
+        <div id="explanationContainer" class="card-explanation explanation-hidden">
+          <div id="explanationText" class="explanation-content"></div>
+        </div>
+        
+        <div id="cardContainer" class="card-question">Loading...</div>
+        
+        <form id="answer-form" class="card-answers"></form>
       </div>
-      
-      <div id="cardContainer" class="card-question">Loading...</div>
-      
-      <form id="answer-form" class="card-answers"></form>
 
       <div class="card-buttons">
         <!-- Custom Tooltip Wrapper for Check Answer -->

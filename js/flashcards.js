@@ -824,8 +824,17 @@ function loadCard() {
   cardContainer.textContent = q.question;
   answerForm.innerHTML = "";
 
-  // Hide explanation when loading new card
-  explanationContainer.classList.add("hidden");
+  // Hide explanation when loading new card (but keep space reserved)
+  explanationContainer.classList.add("explanation-hidden");
+  explanationContainer.classList.remove("empty");
+  
+  // Pre-load explanation text but keep it hidden
+  if (q.explanation && q.explanation.trim()) {
+    explanationText.textContent = q.explanation;
+  } else {
+    explanationText.textContent = "";
+    explanationContainer.classList.add("empty");
+  }
 
   updateUserProgress(
   document.getElementById("deck-select").value.trim(),
@@ -936,10 +945,14 @@ function loadCard() {
     const isCorrect = q.correct.every(ans => selected.includes(ans)) && selected.length === q.correct.length;
     if (isCorrect) correctCount++;
 
-    // Show explanation if available
+    // Show explanation if available (text was pre-loaded in loadCard)
     if (q.explanation && q.explanation.trim()) {
-      explanationText.textContent = q.explanation;
-      explanationContainer.classList.remove("hidden");
+      explanationContainer.classList.remove("explanation-hidden");
+      explanationContainer.classList.remove("empty");
+    } else {
+      // Keep space reserved but show as empty
+      explanationContainer.classList.remove("explanation-hidden");
+      explanationContainer.classList.add("empty");
     }
 
     checkBtn.disabled = true;
