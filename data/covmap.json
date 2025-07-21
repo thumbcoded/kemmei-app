@@ -2084,7 +2084,7 @@
     "5.0": {
       "5.1": {
         "concepts": {
-          "POST and BIOS troubleshooting": {
+          "Boot and POST issues": {
             "terms": [
               "POST",
               "power on self test",
@@ -2096,11 +2096,8 @@
               "BIOS corruption",
               "manufacturer documentation",
               "error codes on screen",
-              "long and short beep codes"
-            ]
-          },
-          "Boot device configuration": {
-            "terms": [
+              "long and short beep codes",
+              "continuous beep code",
               "boot device order",
               "BIOS boot sequence",
               "storage device priority",
@@ -2108,10 +2105,17 @@
               "flash drive boot",
               "operating system not found",
               "boot media",
-              "startup device"
+              "startup device",
+              "CMOS battery",
+              "button style battery",
+              "low profile battery",
+              "date and time prompt",
+              "battery replacement",
+              "BIOS configuration reset",
+              "jumper reset"
             ]
           },
-          "Windows stop errors": {
+          "System crashes and errors": {
             "terms": [
               "blue screen",
               "BSOD",
@@ -2121,37 +2125,47 @@
               "system crash",
               "irrecoverable error",
               "device ran into a problem",
-              "automatic restart"
+              "automatic restart",
+              "system freeze",
+              "temporary software problem",
+              "hardware problem",
+              "cooling problems",
+              "event viewer",
+              "external media boot"
             ]
           },
-          "Storage device troubleshooting": {
+          "Storage device problems": {
             "terms": [
               "cannot read from source disc",
               "slow performance",
               "clicking noises",
               "retry reads",
               "retry writes",
-              "click of death"
+              "click of death",
+              "storage drive error",
+              "read failure",
+              "write failure",
+              "drive retry",
+              "area of drive",
+              "intermittent problem"
             ]
           },
-          "Memory problems": {
+          "Memory and CPU issues": {
             "terms": [
               "memory failure",
               "application crashes",
               "parity errors",
               "RAM problems",
               "memory testing",
-              "blue screens"
-            ]
-          },
-          "CPU issues": {
-            "terms": [
+              "blue screens",
               "CPU failure",
               "lock ups",
               "intensive processing",
               "CPU overheating",
               "spontaneous reboots",
-              "system protection"
+              "system protection",
+              "bad memory",
+              "faulty hard drives"
             ]
           },
           "Power supply problems": {
@@ -2168,20 +2182,33 @@
               "12 volts",
               "5 volts",
               "3.3 volts",
-              "multimeter testing"
+              "multimeter testing",
+              "power supply voltages",
+              "ATX power supply voltages",
+              "standard ATX power supply",
+              "power supply output",
+              "DC voltage output",
+              "voltage rails",
+              "power switch verification"
             ]
           },
-          "Video card issues": {
+          "Video and display hardware": {
             "terms": [
               "video card problems",
               "artifacts on display",
               "system lock up",
               "graphics intensive processes",
               "video drivers",
-              "driver updates"
+              "driver updates",
+              "display issues",
+              "monitor problems",
+              "screen failure",
+              "display hardware",
+              "video output",
+              "display troubleshooting"
             ]
           },
-          "Motherboard problems": {
+          "Motherboard troubleshooting": {
             "terms": [
               "motherboard failure",
               "intermittent operation",
@@ -2189,38 +2216,12 @@
               "connectors not operational",
               "process of elimination",
               "component replacement",
-              "motherboard warranty"
+              "motherboard warranty",
+              "capacitor problems",
+              "slot testing"
             ]
           },
-          "No display troubleshooting methodology": {
-            "terms": [
-              "computer plugged in",
-              "power switch on",
-              "back power switch",
-              "front power switch",
-              "power supply LED",
-              "motherboard LED",
-              "internal power cables",
-              "CPU power connection",
-              "minimal configuration",
-              "component removal"
-            ]
-          },
-          "System freezes": {
-            "terms": [
-              "system freeze",
-              "temporary software problem",
-              "hardware problem",
-              "CPU overheating",
-              "bad memory",
-              "faulty hard drives",
-              "power supply problems",
-              "cooling problems",
-              "event viewer",
-              "external media boot"
-            ]
-          },
-          "Slow performance troubleshooting": {
+          "Performance troubleshooting": {
             "terms": [
               "slow response",
               "applications slow to load",
@@ -2231,25 +2232,26 @@
               "CPU utilization",
               "malware scan",
               "driver issues",
-              "software conflicts"
-            ]
-          },
-          "CMOS battery replacement": {
-            "terms": [
-              "CMOS battery",
-              "button style battery",
-              "low profile battery",
-              "date and time prompt",
-              "battery replacement",
-              "BIOS configuration reset",
-              "jumper reset"
+              "software conflicts",
+              "computer plugged in",
+              "power switch on",
+              "back power switch",
+              "front power switch",
+              "power supply LED",
+              "motherboard LED",
+              "internal power cables",
+              "CPU power connection",
+              "minimal configuration",
+              "component removal",
+              "performance issues",
+              "intermittent shutdown"
             ]
           }
         }
       },
       "5.2": {
         "concepts": {
-          "Storage read/write failures": {
+          "Storage hardware failures": {
             "terms": [
               "cannot read from source disc",
               "storage drive error",
@@ -2257,11 +2259,7 @@
               "write failure",
               "drive retry",
               "area of drive",
-              "intermittent problem"
-            ]
-          },
-          "Hard drive mechanical failures": {
-            "terms": [
+              "intermittent problem",
               "clicking noise",
               "click of death",
               "grinding noises",
@@ -2274,7 +2272,7 @@
               "cascade effect"
             ]
           },
-          "Storage performance issues": {
+          "Storage performance and SMART": {
             "terms": [
               "slow performance",
               "retry reading",
@@ -2284,7 +2282,78 @@
               "IOPS",
               "input output operations per second",
               "hard drive 200 IOPS",
-              "SSD 1 million IOPS"
+              "SSD 1 million IOPS",
+              "SMART",
+              "self monitoring analysis reporting technology",
+              "drive statistics",
+              "power on hours",
+              "power cycle count",
+              "temperature celsius",
+              "third party utilities",
+              "drive performance analysis",
+              "predictive failure",
+              "warning signs",
+              "catastrophic failure prevention"
+            ]
+          },
+          "Storage connectivity issues": {
+            "terms": [
+              "drive not recognized",
+              "boot device not found",
+              "access lights",
+              "unresponsive drive",
+              "operating system not found",
+              "bootable operating system",
+              "boot sequence",
+              "BIOS configuration",
+              "removable storage devices",
+              "USB boot priority",
+              "bad cable connection",
+              "power connectors",
+              "data connectors",
+              "cable reseating",
+              "known good cables",
+              "cable swap",
+              "proper power",
+              "system BIOS access",
+              "drives disabled in BIOS",
+              "BIOS error",
+              "BIOS logs",
+              "internal drive cables",
+              "external drive power",
+              "network mapped drives",
+              "map network drive",
+              "drive letter mapping",
+              "login script",
+              "reconnect at signin"
+            ]
+          },
+          "RAID troubleshooting": {
+            "terms": [
+              "RAID failure",
+              "RAID 0 striping",
+              "RAID 1 mirroring",
+              "RAID 5 striping with parity",
+              "RAID 6 double parity",
+              "RAID 10 striping and mirroring",
+              "array degraded",
+              "RAID rebuild",
+              "recynchronize array",
+              "redundant array",
+              "array failure"
+            ]
+          },
+          "Storage controller problems": {
+            "terms": [
+              "drive controller failure",
+              "external drive controller",
+              "RAID controller",
+              "Dell PERC H200",
+              "SAS HBA BIOS",
+              "integrated RAID",
+              "exception detected",
+              "volume inactive",
+              "configuration utility"
             ]
           },
           "Storage troubleshooting methodology": {
@@ -2300,143 +2369,129 @@
               "overnight test",
               "sector testing"
             ]
-          },
-          "Boot and recognition issues": {
-            "terms": [
-              "drive not recognized",
-              "boot device not found",
-              "access lights",
-              "unresponsive drive",
-              "operating system not found",
-              "bootable operating system",
-              "boot sequence",
-              "BIOS configuration",
-              "removable storage devices",
-              "USB boot priority"
-            ]
-          },
-          "Cable and connection problems": {
-            "terms": [
-              "bad cable connection",
-              "power connectors",
-              "data connectors",
-              "cable reseating",
-              "known good cables",
-              "cable swap",
-              "proper power",
-              "system BIOS access"
-            ]
-          },
-          "RAID array issues": {
-            "terms": [
-              "RAID failure",
-              "RAID 0 striping",
-              "RAID 1 mirroring",
-              "RAID 5 striping with parity",
-              "RAID 6 double parity",
-              "RAID 10 striping and mirroring",
-              "array degraded",
-              "RAID rebuild",
-              "recynchronize array",
-              "redundant array",
-              "array failure"
-            ]
-          },
-          "SMART monitoring": {
-            "terms": [
-              "SMART",
-              "self monitoring analysis reporting technology",
-              "drive statistics",
-              "power on hours",
-              "power cycle count",
-              "temperature celsius",
-              "third party utilities",
-              "drive performance analysis",
-              "predictive failure",
-              "warning signs",
-              "catastrophic failure prevention"
-            ]
-          },
-          "Drive accessibility issues": {
-            "terms": [
-              "drives disabled in BIOS",
-              "BIOS error",
-              "BIOS logs",
-              "BIOS configuration",
-              "internal drive cables",
-              "external drive power",
-              "network mapped drives",
-              "map network drive",
-              "drive letter mapping",
-              "login script",
-              "reconnect at signin"
-            ]
-          },
-          "Drive controller problems": {
-            "terms": [
-              "drive controller failure",
-              "external drive controller",
-              "RAID controller",
-              "Dell PERC H200",
-              "SAS HBA BIOS",
-              "integrated RAID",
-              "exception detected",
-              "volume inactive",
-              "configuration utility"
-            ]
           }
         }
       },
       "5.3": {
         "concepts": {
-          "Display hardware problems": {
+          "Display hardware and connection issues": {
             "terms": [
               "display issues",
               "monitor problems",
               "screen failure",
               "display hardware",
               "video output",
-              "display troubleshooting"
-            ]
-          },
-          "Projector troubleshooting": {
-            "terms": [
+              "display troubleshooting",
+              "no signal",
+              "black screen troubleshooting",
+              "video cable connection",
+              "monitor power check",
+              "input selection",
+              "HDMI input",
+              "DisplayPort input",
+              "VGA input",
+              "DVI input",
+              "automatic input detection",
+              "monitor configuration",
               "projector issues",
               "projection problems",
               "projector bulb",
               "projection quality",
               "projector connectivity",
-              "display projection"
+              "display projection",
+              "metal halide bulb",
+              "1000°C operation",
+              "temperature sensors",
+              "projector cooling fans",
+              "thermal shutdown",
+              "graceful power down",
+              "fan cooling cycle",
+              "bulb replacement",
+              "modular bulb design",
+              "air filter cleaning",
+              "dust removal",
+              "ceiling mounted projectors"
             ]
           },
-          "Display scaling and resolution": {
-            "terms": [
-              "display scaling",
-              "resolution problems",
-              "DPI scaling",
-              "screen resolution",
-              "display settings",
-              "scaling issues"
-            ]
-          },
-          "Color and brightness issues": {
+          "Display quality problems": {
             "terms": [
               "color problems",
               "brightness issues",
               "color calibration",
               "display brightness",
               "color accuracy",
-              "display quality"
-            ]
-          },
-          "Dead pixels and burn-in": {
-            "terms": [
+              "display quality",
               "dead pixels",
               "stuck pixels",
               "screen burn-in",
               "image retention",
               "pixel problems",
-              "display defects"
+              "display defects",
+              "contrast issues",
+              "brightness controls",
+              "dim display",
+              "auto-dimming function",
+              "backlight failure",
+              "partial backlight failure",
+              "backlight replacement",
+              "flashing screen",
+              "flickering display",
+              "display bars",
+              "color tint",
+              "custom color presets",
+              "factory reset settings",
+              "night mode",
+              "night light setting",
+              "blue tint",
+              "color skew",
+              "vibrant colors",
+              "ghosting",
+              "image sticking",
+              "pixel shift",
+              "CRT burn-in",
+              "LCD image sticking",
+              "white screen recovery",
+              "manufacturing defect",
+              "screen cleaning",
+              "dirt on screen"
+            ]
+          },
+          "Display configuration issues": {
+            "terms": [
+              "display scaling",
+              "resolution problems",
+              "DPI scaling",
+              "screen resolution",
+              "display settings",
+              "scaling issues",
+              "native resolution",
+              "horizontal pixels",
+              "vertical pixels",
+              "crisp display",
+              "clear display",
+              "text quality",
+              "graphics quality",
+              "resolution mismatch",
+              "multiple resolution",
+              "Windows VGA mode",
+              "F8 boot option",
+              "generic mode",
+              "operating system compatibility",
+              "monitor specifications",
+              "geometry settings",
+              "100% scaling",
+              "200% scaling",
+              "300% scaling",
+              "4K display",
+              "small icons",
+              "text scaling",
+              "app scaling",
+              "user interface scaling",
+              "hardware acceleration",
+              "video driver acceleration",
+              "disable hardware acceleration",
+              "enable hardware acceleration",
+              "video driver settings"
             ]
           },
           "Severe display failures": {
@@ -2446,14 +2501,41 @@
               "display failure",
               "screen damage",
               "LCD failure",
-              "display replacement"
+              "display replacement",
+              "extensive display problems",
+              "hardware failure",
+              "liquid crystal display damage",
+              "display cable testing",
+              "video adapter replacement",
+              "video driver issues",
+              "test patterns",
+              "sharpness evaluation",
+              "color representation testing"
+            ]
+          },
+          "Monitor audio troubleshooting": {
+            "terms": [
+              "monitor speakers",
+              "audio output",
+              "volume control",
+              "muted speakers",
+              "audio input sources",
+              "HDMI audio",
+              "audio input matching",
+              "video input matching",
+              "analog audio input",
+              "operating system audio",
+              "HDMI port audio",
+              "audio configuration",
+              "sound troubleshooting",
+              "volume levels"
             ]
           }
         }
       },
       "5.4": {
         "concepts": {
-          "Mobile device battery issues": {
+          "Battery problems and safety": {
             "terms": [
               "battery problems",
               "battery charge",
@@ -2465,11 +2547,7 @@
               "disable unused features",
               "802.11 disable",
               "Bluetooth disable",
-              "GPS disable"
-            ]
-          },
-          "Battery monitoring and health": {
-            "terms": [
+              "GPS disable",
               "battery statistics",
               "iOS battery settings",
               "iPad OS battery",
@@ -2477,11 +2555,7 @@
               "battery last charged",
               "applications using battery",
               "battery health",
-              "battery replacement time"
-            ]
-          },
-          "Battery swelling and safety": {
-            "terms": [
+              "battery replacement time",
               "battery swelling",
               "swollen battery",
               "gas buildup",
@@ -2495,7 +2569,7 @@
               "battery damage to device"
             ]
           },
-          "Mobile display damage": {
+          "Physical damage troubleshooting": {
             "terms": [
               "broken glass",
               "hardened glass",
@@ -2506,11 +2580,16 @@
               "cut finger",
               "glass embedded",
               "screen protector",
-              "backup before replacement"
-            ]
-          },
-          "Charging port problems": {
-            "terms": [
+              "backup before replacement",
+              "water damage",
+              "liquid spill",
+              "immediate power off",
+              "remove battery",
+              "dry completely",
+              "rice method",
+              "silica gel",
+              "professional repair",
+              "corrosion damage",
               "charging port damage",
               "port cleaning",
               "lint removal",
@@ -2521,32 +2600,7 @@
               "port replacement"
             ]
           },
-          "Liquid damage": {
-            "terms": [
-              "water damage",
-              "liquid spill",
-              "immediate power off",
-              "remove battery",
-              "dry completely",
-              "rice method",
-              "silica gel",
-              "professional repair",
-              "corrosion damage"
-            ]
-          },
-          "Overheating issues": {
-            "terms": [
-              "device overheating",
-              "thermal shutdown",
-              "heat dissipation",
-              "case removal",
-              "ventilation",
-              "intensive applications",
-              "charging heat",
-              "ambient temperature"
-            ]
-          },
-          "Digitizer and touch problems": {
+          "Touch and input problems": {
             "terms": [
               "digitizer issues",
               "touch response",
@@ -2554,11 +2608,7 @@
               "phantom touches",
               "unresponsive touch",
               "partial touch failure",
-              "touch sensitivity"
-            ]
-          },
-          "Cursor drift": {
-            "terms": [
+              "touch sensitivity",
               "cursor drift",
               "pointer drift",
               "erratic cursor",
@@ -2568,8 +2618,16 @@
               "mouse pointer jumping"
             ]
           },
-          "Poor performance": {
+          "Mobile performance issues": {
             "terms": [
+              "device overheating",
+              "thermal shutdown",
+              "heat dissipation",
+              "case removal",
+              "ventilation",
+              "intensive applications",
+              "charging heat",
+              "ambient temperature",
               "slow performance",
               "app crashes",
               "system lag",
@@ -2592,11 +2650,7 @@
               "Ethernet connection",
               "wired connection",
               "good connection verification",
-              "bad cable detection"
-            ]
-          },
-          "Ping testing sequence": {
-            "terms": [
+              "bad cable detection",
               "ping loopback",
               "127.0.0.1",
               "loopback address",
@@ -2616,7 +2670,7 @@
               "1.1.1.1"
             ]
           },
-          "Wireless connectivity issues": {
+          "Wireless connectivity problems": {
             "terms": [
               "intermittent connectivity",
               "wireless network problems",
@@ -2629,11 +2683,7 @@
               "different antennas",
               "external antenna",
               "laptop antenna",
-              "desktop antenna"
-            ]
-          },
-          "Wireless interference and optimization": {
-            "terms": [
+              "desktop antenna",
               "frequency evaluation",
               "automatic channel selection",
               "minimize interference",
@@ -2648,7 +2698,7 @@
               "signal strength increase"
             ]
           },
-          "Network performance monitoring": {
+          "Network performance and monitoring": {
             "terms": [
               "packet visibility",
               "network monitoring",
@@ -2656,11 +2706,7 @@
               "performance measurement",
               "network analysis",
               "throughput testing",
-              "bandwidth monitoring"
-            ]
-          },
-          "Connectivity verification": {
-            "terms": [
+              "bandwidth monitoring",
               "connectivity testing",
               "network diagnostics",
               "connection status",
@@ -2669,7 +2715,7 @@
               "network interface testing"
             ]
           },
-          "Signal quality issues": {
+          "Signal quality and optimization": {
             "terms": [
               "signal quality",
               "reception problems",
@@ -2677,11 +2723,7 @@
               "signal degradation",
               "distance issues",
               "antenna positioning",
-              "signal propagation"
-            ]
-          },
-          "Access point troubleshooting": {
-            "terms": [
+              "signal propagation",
               "access point issues",
               "AP configuration",
               "access point settings",
@@ -2695,17 +2737,7 @@
       },
       "5.6": {
         "concepts": {
-          "Printer testing procedures": {
-            "terms": [
-              "printer test page",
-              "test print",
-              "printer diagnostics",
-              "print quality test",
-              "OS test page",
-              "printer self test"
-            ]
-          },
-          "Print quality problems": {
+          "Print quality and output problems": {
             "terms": [
               "print quality",
               "streaks",
@@ -2713,11 +2745,14 @@
               "faded output",
               "ghosting",
               "double images",
-              "print defects"
-            ]
-          },
-          "Inkjet vs laser issues": {
-            "terms": [
+              "print defects",
+              "garbled print",
+              "corrupted output",
+              "wrong driver",
+              "PCL",
+              "PostScript",
+              "page description language",
+              "print driver problems",
               "inkjet problems",
               "laser printer issues",
               "print heads",
@@ -2726,18 +2761,7 @@
               "ink problems"
             ]
           },
-          "Garbled print output": {
-            "terms": [
-              "garbled print",
-              "corrupted output",
-              "wrong driver",
-              "PCL",
-              "PostScript",
-              "page description language",
-              "print driver problems"
-            ]
-          },
-          "Paper handling problems": {
+          "Paper handling issues": {
             "terms": [
               "paper jam",
               "paper feed",
@@ -2745,29 +2769,21 @@
               "paper tray",
               "multiple pages",
               "no paper pickup",
-              "paper path"
-            ]
-          },
-          "Paper quality issues": {
-            "terms": [
+              "paper path",
               "creased paper",
               "paper weight",
               "paper specifications",
               "paper path problems",
-              "wrong paper type"
+              "wrong paper type",
+              "multiple trays",
+              "paper size mismatch",
+              "tray selection",
+              "legal size",
+              "letter size",
+              "paper source"
             ]
           },
-          "Print spooler issues": {
-            "terms": [
-              "print spooler",
-              "print queue",
-              "spooler crash",
-              "corrupted print job",
-              "Windows event viewer",
-              "print service"
-            ]
-          },
-          "Printer noise problems": {
+          "Printer hardware problems": {
             "terms": [
               "grinding noise",
               "printer sounds",
@@ -2777,7 +2793,17 @@
               "printer maintenance"
             ]
           },
-          "Finishing service problems": {
+          "Print spooler and software issues": {
+            "terms": [
+              "print spooler",
+              "print queue",
+              "spooler crash",
+              "corrupted print job",
+              "Windows event viewer",
+              "print service"
+            ]
+          },
+          "Printer finishing and options": {
             "terms": [
               "finishing services",
               "collating",
@@ -2785,28 +2811,13 @@
               "stapling",
               "hole punch",
               "staple jam",
-              "finishing options"
-            ]
-          },
-          "Orientation problems": {
-            "terms": [
+              "finishing options",
               "portrait",
               "landscape",
               "orientation mismatch",
               "print driver settings",
               "page orientation",
               "printer defaults"
-            ]
-          },
-          "Paper tray configuration": {
-            "terms": [
-              "paper tray",
-              "multiple trays",
-              "paper size mismatch",
-              "tray selection",
-              "legal size",
-              "letter size",
-              "paper source"
             ]
           },
           "Network printer troubleshooting": {
@@ -2819,6 +2830,16 @@
               "wireless printer",
               "link lights",
               "printer connectivity"
+            ]
+          },
+          "Printer testing and diagnostics": {
+            "terms": [
+              "printer test page",
+              "test print",
+              "printer diagnostics",
+              "print quality test",
+              "OS test page",
+              "printer self test"
             ]
           }
         }
