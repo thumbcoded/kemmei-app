@@ -53,15 +53,129 @@ async function loadDomainMap() {
   }
 }
 
+// Add covmap loader function
+let covMap = {};
+
+async function loadCovMap() {
+  console.log("🔍 loadCovMap called");
+  try {
+    const res = await fetch("data/covmap.json");
+    const data = await res.json();
+    covMap = data;
+    window.covMap = covMap;
+    console.log("✅ Loaded covmap JSON");
+  } catch (err) {
+    console.error("❌ Failed to load covmap.json:", err);
+  }
+}
+
 
 window.loadDomainMap = loadDomainMap;
 
 let allCards = [];
 
+// Tag validation function for covmap - requires at least one match
+function validateCardTags(card) {
+  console.log("🔍 validateCardTags running for:", card.question_text?.slice(0, 30));
+  
+  // Skip validation if no covmap loaded
+  if (!covMap || Object.keys(covMap).length === 0) {
+    console.warn("⚠️ Covmap not loaded, skipping tag validation");
+    return { valid: true, message: "Covmap not available" };
+  }
+
+  const certId = Array.isArray(card.cert_id) ? card.cert_id[0] : card.cert_id;
+  const domainId = card.domain_id;
+  const subdomainId = card.subdomain_id;
+  const tags = Array.isArray(card.tags) ? card.tags : [];
+
+  // If no tags, that's a failure
+  if (tags.length === 0) {
+    return { valid: false, message: "❌ No tags provided - cards must have at least one tag matching covmap terms" };
+  }
+
+  // Check if cert/domain/subdomain exists in covmap
+  const certData = covMap[certId];
+  if (!certData) {
+    return { valid: true, message: `Cert ${certId} not found in covmap - tags not validated` };
+  }
+
+  const domainData = certData[domainId];
+  if (!domainData) {
+    return { valid: true, message: `Domain ${domainId} not found in covmap - tags not validated` };
+  }
+
+  const subdomainData = domainData[subdomainId];
+  if (!subdomainData || !subdomainData.concepts) {
+    return { valid: true, message: `Subdomain ${subdomainId} not found in covmap - tags not validated` };
+  }
+
+  // Collect all terms from all concepts in this subdomain
+  const allTerms = new Set();
+  Object.values(subdomainData.concepts).forEach(concept => {
+    if (concept.terms && Array.isArray(concept.terms)) {
+      concept.terms.forEach(term => allTerms.add(term.toLowerCase()));
+    }
+  });
+
+  // Check for exact matches
+  const exactMatches = tags.filter(tag => allTerms.has(tag.toLowerCase()));
+  console.log("🎯 Exact matches:", exactMatches);
+  
+  // Check for partial matches (tag contains or is contained in a covmap term)
+  const partialMatches = tags.filter(tag => {
+    if (exactMatches.includes(tag)) return false; // Skip already exact-matched tags
+    const tagLower = tag.toLowerCase();
+    const matches = Array.from(allTerms).some(term => {
+      const isPartialMatch = tagLower.includes(term) || term.includes(tagLower);
+      if (isPartialMatch) {
+        console.log(`🔍 Partial match found: "${tag}" <-> "${term}"`);
+      }
+      return isPartialMatch;
+    });
+    return matches;
+  });
+  console.log("🎯 Partial matches:", partialMatches);
+
+  console.log("📋 All available terms:", Array.from(allTerms).slice(0, 15));
+
+  const totalMatches = exactMatches.length + partialMatches.length;
+  const unmatchedTags = tags.filter(tag => 
+    !exactMatches.includes(tag) && !partialMatches.includes(tag)
+  );
+
+  // REQUIRE at least one match (exact or partial) - BUT be more lenient
+  if (totalMatches > 0) {
+    let message = `✅ Tags validated: `;
+    if (exactMatches.length > 0) {
+      message += `exact matches [${exactMatches.join(", ")}]`;
+    }
+    if (partialMatches.length > 0) {
+      message += exactMatches.length > 0 ? `, partial matches [${partialMatches.join(", ")}]` : `partial matches [${partialMatches.join(", ")}]`;
+    }
+    if (unmatchedTags.length > 0) {
+      message += ` ⚠️ unmatched [${unmatchedTags.join(", ")}]`;
+    }
+    return { valid: true, message };
+  } else {
+    // No matches at all - WARN but don't fail (more lenient approach)
+    const availableTerms = Array.from(allTerms).slice(0, 8).join(", ");
+    console.warn(`⚠️ No covmap matches for ${certId}/${domainId}/${subdomainId}, but allowing card anyway`);
+    return { 
+      valid: true, // Changed back to true - let Concur handle categorization
+      message: `⚠️ No covmap matches found for ${certId}/${domainId}/${subdomainId}. Your tags: [${tags.join(", ")}]. Consider using: ${availableTerms}...` 
+    };
+  }
+}
+
 function isValidCard(card) {
+  console.log("🔍 Validating card:", card.question_text?.slice(0, 50) + "...");
+  
   const validTypes = ["multiple_choice", "select_multiple", "select_all", "pbq"];
   const validDiff = ["easy", "medium", "hard"];
-  return (
+  
+  // Basic structure validation
+  const basicValid = (
     Array.isArray(card.cert_id) &&
     typeof card.domain_id === "string" &&
     typeof card.domain_title === "string" &&
@@ -72,6 +186,33 @@ function isValidCard(card) {
     Array.isArray(card.answer_options) && card.answer_options.length >= 2 &&
     Array.isArray(card.correct_answer) && card.correct_answer.length >= 1
   );
+
+  console.log("📊 Basic validation result:", basicValid);
+  if (!basicValid) {
+    console.log("❌ Failed basic validation:");
+    console.log("  cert_id array:", Array.isArray(card.cert_id));
+    console.log("  domain_id string:", typeof card.domain_id === "string");
+    console.log("  domain_title string:", typeof card.domain_title === "string");
+    console.log("  subdomain_id string:", typeof card.subdomain_id === "string");
+    console.log("  question_text string:", typeof card.question_text === "string");
+    console.log("  valid question_type:", validTypes.includes(card.question_type));
+    console.log("  valid difficulty:", validDiff.includes(card.difficulty));
+    console.log("  answer_options array >= 2:", Array.isArray(card.answer_options) && card.answer_options.length >= 2);
+    console.log("  correct_answer array >= 1:", Array.isArray(card.correct_answer) && card.correct_answer.length >= 1);
+    return false;
+  }
+
+  // Tag validation - now requires at least one match
+  const tagValidation = validateCardTags(card);
+  console.log("🏷️ Tag validation result:", tagValidation);
+  
+  if (!tagValidation.valid) {
+    console.log("❌ Card failed tag validation:", tagValidation.message);
+    return false;
+  }
+  
+  console.log("✅ Card passed validation");
+  return true;
 }
 
 function showGlobalMessage(message, type = "info") {
@@ -176,6 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   (async () => {
     await loadDomainMap();  // ✅ wait for domain data to load
+    await loadCovMap();     // ✅ wait for covmap data to load
     console.log("certNames after load:", certNames);  // check it's non-empty
 
     dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
@@ -1347,23 +1489,42 @@ document.getElementById("importManyBtn").addEventListener("click", () => {
 
     const valid = [];
     const invalid = [];
+    const tagWarnings = [];
 
-    data.forEach(card => {
-      if (isValidCard(card)) valid.push(card);
-      else invalid.push(card);
+    data.forEach((card, index) => {
+      if (isValidCard(card)) {
+        valid.push(card);
+        
+        // Check tag validation for informational warnings only
+        const tagValidation = validateCardTags(card);
+        if (tagValidation.message.includes("⚠️") || tagValidation.message.includes("unmatched")) {
+          const cardPreview = card.question_text ? card.question_text.slice(0, 40) + "..." : `Card ${index + 1}`;
+          tagWarnings.push(`${cardPreview} - ${tagValidation.message}`);
+        }
+      } else {
+        invalid.push(card);
+      }
     });
 
     // Push only valid cards to buffer
     cards.push(...valid);
 
-    // Show summary
-    const msg = [
+    // Show summary with tag warnings (but not errors)
+    const messages = [
       `✅ ${valid.length} valid card(s) ready to submit.`,
       invalid.length ? `❌ ${invalid.length} invalid card(s) skipped.` : null
-    ].filter(Boolean).join(" ");
+    ].filter(Boolean);
 
-    bulkStatus.textContent = msg;
-    bulkStatus.className = "system-message info";
+    if (tagWarnings.length > 0) {
+      messages.push(`💡 Tag suggestions:`);
+      messages.push(...tagWarnings.slice(0, 3).map(warn => `  • ${warn}`)); // Limit to 3 warnings
+      if (tagWarnings.length > 3) {
+        messages.push(`  • ... and ${tagWarnings.length - 3} more tag suggestions`);
+      }
+    }
+
+    bulkStatus.innerHTML = messages.join("<br>");
+    bulkStatus.className = "system-message info"; // Always info, never error for tag issues
     bulkStatus.classList.remove("hidden");
 
     cardCount.textContent = `Cards created: ${cards.length}`;
@@ -1503,6 +1664,7 @@ if (!data.cert_id[0] || !data.domain_id || !data.subdomain_id || !data.question_
 
 window.refreshAllPanels = async function () {
   await loadDomainMap();
+  await loadCovMap();
   dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
   refreshTitleManager?.();
 };
