@@ -523,17 +523,129 @@
       },
       "2.4": {
         "concepts": {
+          "DNS hierarchy and structure": {
+            "terms": [
+              "DNS",
+              "domain name system",
+              "hierarchy",
+              "distributed database",
+              "root server",
+              "top level domain",
+              "gTLD",
+              "country code",
+              "FQDN",
+              "fully qualified domain name",
+              "IP resolution",
+              "subdomain"
+            ]
+          },
+          "DNS tools and utilities": {
+            "terms": [
+              "dig",
+              "nslookup",
+              "DNS query",
+              "DNS lookup",
+              "DNS server",
+              "DNS resolution",
+              "command line tools"
+            ]
+          },
+          "DNS record types": {
+            "terms": [
+              "resource record",
+              "RR",
+              "A record",
+              "AAAA record",
+              "address record",
+              "IPv4 address",
+              "IPv6 address",
+              "CNAME",
+              "canonical name",
+              "MX record",
+              "mail exchanger",
+              "TXT record",
+              "text record",
+              "TTL",
+              "time to live"
+            ]
+          },
+          "DNS security and email authentication": {
+            "terms": [
+              "DKIM",
+              "DomainKeys Identified Mail",
+              "SPF",
+              "Sender Policy Framework",
+              "DMARC",
+              "Domain-based Message Authentication",
+              "public key",
+              "private key",
+              "digital signature",
+              "email verification",
+              "mail authentication",
+              "spam policy",
+              "quarantine",
+              "email security"
+            ]
+          },
+          "DHCP operations and DORA process": {
+            "terms": [
+              "DHCP",
+              "Dynamic Host Configuration Protocol",
+              "DORA",
+              "discover",
+              "offer",
+              "request",
+              "acknowledge",
+              "IP assignment",
+              "automatic configuration",
+              "UDP port 67",
+              "UDP port 68",
+              "broadcast",
+              "lease",
+              "IP address lease"
+            ]
+          },
+          "DHCP scopes and configuration": {
+            "terms": [
+              "DHCP scope",
+              "IP pool",
+              "subnet mask",
+              "default gateway",
+              "DNS server",
+              "lease duration",
+              "excluded addresses",
+              "DHCP options",
+              "configuration parameters",
+              "static IP",
+              "dynamic IP"
+            ]
+          },
+          "DHCP reservations and static assignments": {
+            "terms": [
+              "DHCP reservation",
+              "static DHCP",
+              "IP reservation",
+              "MAC address",
+              "static assignment",
+              "reserved IP",
+              "MAC-based assignment",
+              "consistent IP"
+            ]
+          },
           "LANs and VLANs": {
             "terms": [
               "LAN",
+              "local area network",
               "broadcast domain",
               "switch",
               "VLAN",
+              "virtual local area network",
               "logical separation",
               "interface",
               "segmentation",
               "efficiency",
-              "VLAN ID"
+              "VLAN ID",
+              "network isolation"
             ]
           },
           "VPN concepts": {
@@ -546,7 +658,9 @@
               "site-to-site",
               "tunnel",
               "firewall",
-              "always-on VPN"
+              "always-on VPN",
+              "encrypted channel",
+              "remote access"
             ]
           }
         }
