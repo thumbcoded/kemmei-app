@@ -421,6 +421,7 @@
           "Wi-Fi generations and standards": {
             "terms": [
               "802.11",
+              "Wi-Fi",
               "Wi-Fi 5",
               "Wi-Fi 6",
               "Wi-Fi 6E",
@@ -476,47 +477,126 @@
       },
       "2.3": {
         "concepts": {
-          "DHCP operations": {
-            "terms": [
-              "DHCP",
-              "DORA",
-              "discover",
-              "offer",
-              "request",
-              "acknowledge",
-              "IP assignment",
-              "lease",
-              "reservation",
-              "scope"
-            ]
-          },
-          "DNS functions and features": {
+          "DNS and DHCP services": {
             "terms": [
               "DNS",
               "domain name system",
-              "IP resolution",
+              "DNS server",
+              "IP address resolution",
               "FQDN",
-              "distributed database",
-              "resource records",
-              "A record",
-              "AAAA record",
-              "MX record",
-              "CNAME",
-              "TXT record"
+              "fully qualified domain name",
+              "distributed platform",
+              "reverse DNS",
+              "DNS cache",
+              "DHCP",
+              "dynamic host configuration protocol",
+              "automatic IP assignment",
+              "DHCP server",
+              "redundancy",
+              "multiple DHCP servers"
             ]
           },
-          "DNS security and mail protections": {
+          "File and print services": {
             "terms": [
-              "SPF",
-              "DKIM",
-              "DMARC",
-              "email verification",
-              "public key",
-              "digital signature",
-              "mail authentication",
-              "quarantine",
-              "spam policy",
-              "TXT record"
+              "file sharing",
+              "centralized storage",
+              "document sharing",
+              "SMB",
+              "server message block",
+              "Apple filing protocol",
+              "AFP",
+              "print service",
+              "printer management",
+              "print jobs",
+              "print queue",
+              "IPP",
+              "internet printing protocol",
+              "LPD",
+              "line printer daemon"
+            ]
+          },
+          "Web and email servers": {
+            "terms": [
+              "web server",
+              "browser requests",
+              "HTTP",
+              "HTTPS",
+              "hypertext transfer protocol",
+              "HTML",
+              "email server",
+              "email messages",
+              "cloud email",
+              "local email servers",
+              "high uptime",
+              "email availability"
+            ]
+          },
+          "Authentication and database services": {
+            "terms": [
+              "authentication server",
+              "AAA server",
+              "authentication",
+              "authorization",
+              "accounting",
+              "username and password",
+              "centralized database",
+              "database server",
+              "database tables",
+              "relational database",
+              "SQL",
+              "structured query language",
+              "MySQL",
+              "Microsoft SQL Server"
+            ]
+          },
+          "Network infrastructure services": {
+            "terms": [
+              "NTP",
+              "network time protocol",
+              "time accuracy",
+              "log files",
+              "Syslog",
+              "SIEM",
+              "security information and event manager",
+              "central database",
+              "log consolidation",
+              "correlation",
+              "load balancer",
+              "uptime",
+              "availability",
+              "server farm"
+            ]
+          },
+          "Security and proxy services": {
+            "terms": [
+              "spam gateway",
+              "spam filter",
+              "unsolicited emails",
+              "security appliance",
+              "next generation firewall",
+              "UTM",
+              "unified threat management",
+              "proxy server",
+              "content inspection",
+              "malware detection",
+              "URL filtering",
+              "access control"
+            ]
+          },
+          "Specialized and embedded systems": {
+            "terms": [
+              "SCADA",
+              "supervisory control and data acquisition",
+              "ICS",
+              "industrial control system",
+              "legacy systems",
+              "embedded system",
+              "purpose-built device",
+              "IoT",
+              "internet of things",
+              "smart devices",
+              "segmented network",
+              "device isolation"
             ]
           }
         }
