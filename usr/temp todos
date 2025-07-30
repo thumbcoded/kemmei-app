@@ -1,7 +1,6 @@
-1. Sonnet check for cards - 2.4-2.1
-1.2! Sonnet check for global Core 1 - domains 1,2,3, and 4!
-2. Sonnet generate cards for missing items
-3. Covmap: design workarounds for further covmaps (A+/2, Net+, Sec+)
+1. 
+
+2. Covmap: design workarounds for further covmaps (A+/2, Net+, Sec+)
 
 
 Card sets review for Agent:
@@ -9,7 +8,7 @@ Let's analyze topic coverage for a subdomain in our Kemmei card database.
 Subdomain: 2.3
 1. Read covmap file
 2. Read transcript for that subdomain
-3. Query Mongo for cards' question texts for that subdomain
+3. Query Mongo for cards' question texts and tags for that subdomain
 4. Identify missing topics
 5. Decide on how many cards to make for each difficulty level/question type
 

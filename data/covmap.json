@@ -3,6 +3,16 @@
     "1.0": {
       "1.1": {
         "concepts": {
+          "Laptop troubleshooting fundamentals": {
+            "terms": [
+              "laptop troubleshooting",
+              "precise specifications",
+              "small components",
+              "manufacturer differences",
+              "serviceability",
+              "form factor limitations"
+            ]
+          },
           "Battery modularity": {
             "terms": [
               "removable battery",
@@ -19,7 +29,9 @@
               "lithium polymer",
               "LiPo",
               "no memory effect",
-              "battery form factor"
+              "battery form factor",
+              "specific model battery",
+              "battery compatibility"
             ]
           },
           "Keyboard replacement": {
@@ -28,7 +40,12 @@
               "keyboard swap",
               "ribbon cable",
               "keyboard connector",
-              "external USB keyboard"
+              "external USB keyboard",
+              "keyboard diagnostics",
+              "function key",
+              "Windows key",
+              "numeric keypad",
+              "compact keyboard"
             ]
           },
           "Individual key repair": {
@@ -36,7 +53,10 @@
               "keycap",
               "key replacement",
               "damaged key",
-              "replace single key"
+              "replace single key",
+              "fragile keys",
+              "delicate device",
+              "manufacturer instructions"
             ]
           },
           "Memory upgradeability": {
@@ -46,7 +66,10 @@
               "memory module",
               "memory slot",
               "modular memory",
-              "soldered RAM"
+              "soldered RAM",
+              "Small Outline DIMM",
+              "system board replacement",
+              "memory clips"
             ]
           },
           "Storage device types": {
@@ -56,7 +79,12 @@
               "M.2",
               "2.5 inch drive",
               "spinning drive",
-              "solid state drive"
+              "solid state drive",
+              "3.5 inch drive",
+              "platters",
+              "no moving parts",
+              "reliability",
+              "data and power connections"
             ]
           },
           "Drive replacement procedures": {
@@ -66,7 +94,11 @@
               "remove drive",
               "replace drive",
               "install M.2",
-              "unscrew drive"
+              "unscrew drive",
+              "copper contacts",
+              "single screw",
+              "tiny screws",
+              "special pad"
             ]
           },
           "Drive cloning and migration": {
@@ -75,7 +107,11 @@
               "cloning software",
               "drive migration",
               "image restore",
-              "backup and restore"
+              "backup and restore",
+              "exact duplicate",
+              "third-party software",
+              "partition cloning",
+              "real time imaging"
             ]
           },
           "Wi-Fi/Bluetooth interfaces": {
@@ -85,7 +121,11 @@
               "Bluetooth",
               "mini PCIe",
               "wireless antenna",
-              "main/aux connector"
+              "main/aux connector",
+              "mini PCI Express",
+              "PAN",
+              "personal area network",
+              "system board wireless"
             ]
           },
           "Antenna placement": {
@@ -93,7 +133,12 @@
               "antenna wire",
               "wrap around display",
               "antenna connector",
-              "laptop screen antenna"
+              "laptop screen antenna",
+              "gray wire",
+              "black wire",
+              "auxiliary connector",
+              "third antenna",
+              "behind keyboard"
             ]
           },
           "Biometric authentication": {
@@ -101,7 +146,11 @@
               "fingerprint reader",
               "face recognition",
               "Windows Hello",
-              "biometric hardware"
+              "biometric hardware",
+              "Windows Hello Face",
+              "Windows Hello Fingerprint",
+              "face ID",
+              "secure authentication"
             ]
           },
           "NFC usage": {
@@ -109,7 +158,13 @@
               "near field communication",
               "NFC",
               "short range",
-              "proximity authentication"
+              "proximity authentication",
+              "4 centimeters",
+              "point of sale",
+              "access card",
+              "hospital workstation",
+              "warehouses",
+              "manufacturing"
             ]
           },
           "Built-in cameras and mics": {
@@ -118,7 +173,12 @@
               "microphone",
               "built-in camera",
               "video conference",
-              "external camera"
+              "external camera",
+              "center of screen",
+              "capture video",
+              "real-time video",
+              "left and right microphone",
+              "higher definition"
             ]
           }
         }
