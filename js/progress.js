@@ -83,6 +83,9 @@ async function toggleUnlock(certId, domainId, level) {
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
+  // Save expanded state before reload
+  saveExpandedState();
+
   try {
     const res = await fetch(`http://localhost:3000/api/user-unlocks/${userId}`, {
       method: "POST",
@@ -99,12 +102,8 @@ async function toggleUnlock(certId, domainId, level) {
     if (res.ok) {
       const result = await res.json();
       const action = result.unlocked ? "unlocked" : "locked";
-      
-      // Get the pretty names for the toast message
       const prettyMessage = getPrettyUnlockMessage(certId, domainId, level, action);
       showToast(prettyMessage);
-      
-      // Reload the page to reflect changes
       setTimeout(() => {
         location.reload();
       }, 1000);
@@ -117,30 +116,58 @@ async function toggleUnlock(certId, domainId, level) {
   }
 }
 
-function getPrettyUnlockMessage(certId, domainId, level, action) {
-  // Convert back from MongoDB-safe keys to display keys
-  const displayCertId = certId.replace(/_/g, '.');
-  const displayDomainId = domainId ? domainId.replace(/_/g, '.') : null;
-  
-  // Get certification name mapping
-  const certNameMap = {
-    '220-1201': 'CompTIA A+ Core 1',
-    '220-1202': 'CompTIA A+ Core 2', 
-    'N10-009': 'CompTIA Network+',
-    'SY0-701': 'CompTIA Security+'
+function saveExpandedState() {
+  // Save expanded certs/domains/subdomains
+  const expanded = {
+    certs: [],
+    domains: [],
+    subdomains: []
   };
-  
-  const certName = certNameMap[displayCertId] || displayCertId;
-  const emoji = action === "unlocked" ? "🔓" : "🔒";
-  const actionText = action === "unlocked" ? "unlocked" : "locked";
-  
-  if (displayDomainId) {
-    return `${emoji} ${level.charAt(0).toUpperCase() + level.slice(1)} difficulty for ${certName}, domain ${displayDomainId} ${actionText}.`;
-  } else {
-    return `${emoji} ${level.charAt(0).toUpperCase() + level.slice(1)} difficulty for ${certName} ${actionText}.`;
-  }
+  document.querySelectorAll('.domain-list:not(.hidden)').forEach(el => {
+    const certBlock = el.closest('.title-block');
+    if (certBlock) {
+      const certId = certBlock.querySelector('h3')?.textContent?.split(':')[0]?.trim();
+      if (certId) expanded.certs.push(certId);
+    }
+  });
+  document.querySelectorAll('.subdomain-list:not(.hidden)').forEach(el => {
+    const domainBlock = el.closest('.domain-block');
+    if (domainBlock) {
+      const domainId = domainBlock.querySelector('h4')?.textContent?.split(' ')[1]?.trim();
+      if (domainId) expanded.domains.push(domainId);
+    }
+  });
+  localStorage.setItem('progressExpanded', JSON.stringify(expanded));
 }
 
+function restoreExpandedState() {
+  const expanded = JSON.parse(localStorage.getItem('progressExpanded') || '{}');
+  if (!expanded) return;
+  // Expand certs
+  expanded.certs?.forEach(certId => {
+    document.querySelectorAll('.title-block').forEach(block => {
+      const h3 = block.querySelector('h3');
+      if (h3 && h3.textContent.startsWith(certId)) {
+        const domainList = block.querySelector('.domain-list');
+        if (domainList) domainList.classList.remove('hidden');
+      }
+    });
+  });
+  // Expand domains
+  expanded.domains?.forEach(domainId => {
+    document.querySelectorAll('.domain-block').forEach(block => {
+      const h4 = block.querySelector('h4');
+      if (h4 && h4.textContent.includes(domainId)) {
+        const subList = block.querySelector('.subdomain-list');
+        if (subList) subList.classList.remove('hidden');
+      }
+    });
+  });
+  // Clear after restoring
+  localStorage.removeItem('progressExpanded');
+}
+
+// Call restore after rendering tree
 function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
   const container = document.getElementById("progressStats");
   container.innerHTML = "";
@@ -320,6 +347,15 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
         subHeader.appendChild(subTitleElement);
         subBlock.appendChild(subHeader);
         subdomainWrapper.appendChild(subBlock);
+
+        // After rendering subIndicators, add tooltips to green/yellow circles in subdomain
+        setTimeout(() => {
+          const subPercentSpans = subTitleElement.querySelectorAll('.percent-indicator.easy, .percent-indicator.medium');
+          subPercentSpans.forEach(span => {
+            span.setAttribute('title', 'Completing decks in Test mode will unlock next level for this section');
+            span.classList.add('has-tooltip');
+          });
+        }, 0);
       }
 
       domainBlock.appendChild(subdomainWrapper);
@@ -347,6 +383,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
       span.classList.add('has-tooltip');
     });
   }, 0);
+
+  restoreExpandedState();
 }
 
 // Tooltip fade logic (CSS required for fade effect)
@@ -372,3 +410,24 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
 //   opacity: 0;
 //   transition-delay: 5s;
 // }
+
+function getPrettyUnlockMessage(certId, domainId, level, action) {
+  // Convert back from MongoDB-safe keys to display keys
+  const displayCertId = certId.replace(/_/g, '.');
+  const displayDomainId = domainId ? domainId.replace(/_/g, '.') : null;
+  // Get certification name mapping
+  const certNameMap = {
+    '220-1201': 'CompTIA A+ Core 1',
+    '220-1202': 'CompTIA A+ Core 2',
+    'N10-009': 'CompTIA Network+',
+    'SY0-701': 'CompTIA Security+'
+  };
+  const certName = certNameMap[displayCertId] || displayCertId;
+  const emoji = action === "unlocked" ? "🔓" : "🔒";
+  const actionText = action === "unlocked" ? "unlocked" : "locked";
+  if (displayDomainId) {
+    return `${emoji} ${level.charAt(0).toUpperCase() + level.slice(1)} difficulty for ${certName}, domain ${displayDomainId} ${actionText}.`;
+  } else {
+    return `${emoji} ${level.charAt(0).toUpperCase() + level.slice(1)} difficulty for ${certName} ${actionText}.`;
+  }
+}

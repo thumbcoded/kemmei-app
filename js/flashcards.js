@@ -767,6 +767,15 @@ document.getElementById("subdomain-select").addEventListener("change", () => {
   });
 });
 
+function handleFilterChange() {
+  saveLastSelection();
+  fetchCardsAndUpdateCount();
+}
+
+["deck-select", "domain-select", "subdomain-select", "difficulty-select", "mode-select"].forEach(id => {
+  document.getElementById(id).addEventListener("change", handleFilterChange);
+});
+
 
   async function startSession() {
     if (questions.length === 0) {
