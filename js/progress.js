@@ -141,7 +141,7 @@ function getPrettyUnlockMessage(certId, domainId, level, action) {
   }
 }
 
-function renderProgressTree(userProgress, domainMap, unlocks) {
+function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
   const container = document.getElementById("progressStats");
   container.innerHTML = "";
 
@@ -158,6 +158,27 @@ function renderProgressTree(userProgress, domainMap, unlocks) {
     progressTree[cert][domain][sub][difficulty] = data;
   }
 
+  // Helper to get percentage indicators for a given key
+  function getPercentIndicators(certId, domainId = null) {
+    const difficulties = ["easy", "medium", "hard"];
+    const colors = { easy: "🟢", medium: "🟡", hard: "🔴" };
+    let indicators = "";
+    let easyKey = domainId ? `${certId}:${domainId}:easy` : `${certId}:all:easy`;
+    let easyEntry = testCompletions && testCompletions[easyKey];
+    let easyPercent = easyEntry && typeof easyEntry.score === "number" ? (easyEntry.score > 90 ? 100 : easyEntry.score) : 0;
+    // If easy is 0, pale out medium/hard
+    let paleClass = easyPercent === 0 ? "pale" : "";
+    for (const diff of difficulties) {
+      let key = domainId ? `${certId}:${domainId}:${diff}` : `${certId}:all:${diff}`;
+      let entry = testCompletions && testCompletions[key];
+      let percent = entry && typeof entry.score === "number" ? (entry.score > 90 ? 100 : entry.score) : 0;
+      let show = true;
+      if (diff !== "easy" && easyPercent === 0) show = false;
+      indicators += `<span class='percent-indicator ${diff} ${show ? '' : paleClass}'>${colors[diff]} ${show ? percent + '%' : ''}</span> `;
+    }
+    return indicators.trim();
+  }
+
   // Render everything regardless of progress
   for (const certId of Object.keys(certNames)) {
     const certBlock = document.createElement("div");
@@ -167,7 +188,9 @@ function renderProgressTree(userProgress, domainMap, unlocks) {
     titleHeader.className = "title-header";
     
     const titleText = document.createElement("h3");
-    titleText.innerHTML = `📘 ${certId}: ${certNames[certId]}`;
+    // Add percentage indicators for cert level (all domains)
+    const certIndicators = getPercentIndicators(certId);
+    titleText.innerHTML = `📘 ${certId}: ${certNames[certId]} <span class='percent-indicators'>${certIndicators}</span>`;
     titleText.style.cursor = "pointer";
     
     const titleUnlocks = document.createElement("div");
@@ -223,7 +246,9 @@ function renderProgressTree(userProgress, domainMap, unlocks) {
       domainHeader.className = "domain-header";
       
       const domainText = document.createElement("h4");
-      domainText.innerHTML = `📂 ${domainId} ${domainTitle}`;
+      // Add percentage indicators for domain level
+      const domainIndicators = getPercentIndicators(certId, domainId);
+      domainText.innerHTML = `📂 ${domainId} ${domainTitle} <span class='percent-indicators'>${domainIndicators}</span>`;
       domainText.style.cursor = "pointer";
       
       const domainUnlocks = document.createElement("div");
@@ -279,15 +304,12 @@ function renderProgressTree(userProgress, domainMap, unlocks) {
         subHeader.className = "subdomain-header";
 
         const subTitleElement = document.createElement("h5");
-        subTitleElement.textContent = `🔹 ${subId} ${subTitle}`;
+        // Add percentage indicators for subdomain level
+        const subIndicators = getPercentIndicators(certId, `${domainId}:${subId}`);
+        subTitleElement.innerHTML = `🔹 ${subId} ${subTitle} <span class='percent-indicators'>${subIndicators}</span>`;
         subTitleElement.className = "subdomain-title";
 
-        // Remove difficulty indicators for subdomains since users only test on domain/title level
-        // const diffList = document.createElement("ul");
-        // diffList.className = "difficulty-list";
-
         subHeader.appendChild(subTitleElement);
-        // subHeader.appendChild(diffList); // Removed difficulty list
         subBlock.appendChild(subHeader);
         subdomainWrapper.appendChild(subBlock);
       }

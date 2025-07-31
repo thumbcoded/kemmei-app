@@ -1,6 +1,14 @@
-1. 
+Conceptual topics:
+1. Should we refactor Kemmei into something like NodeJS?
+2. Should we make it an executable/standalone app vs web app?
+2.2 Or - a locally run web app?
+2.3 If executable - should we run data/user base as a web service?
+3. For start, admin probably should be decoupled from the app?
+3.1 If not, should we enable admin for every user?
+3.2 Isn't our system overcomplicated for users to make their own sets of cards?
 
-2. Covmap: design workarounds for further covmaps (A+/2, Net+, Sec+)
+
+!!! fix cards UI to always update based on selected filters
 
 
 Card sets review for Agent:
