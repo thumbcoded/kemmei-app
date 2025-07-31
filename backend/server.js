@@ -102,6 +102,11 @@ app.post("/api/users/register", async (req, res) => {
     if (existingUser) {
       return res.status(400).json({ error: "Username already exists." });
     }
+    // Check for duplicate email
+    const existingEmail = await User.findOne({ email });
+    if (existingEmail) {
+      return res.status(400).json({ error: "Email already exists." });
+    }
 
     const passwordHash = await bcrypt.hash(password, 10);
     const user = new User({ _id: username, email, passwordHash });

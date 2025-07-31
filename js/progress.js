@@ -204,6 +204,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
     const mediumBtn = document.createElement("button");
     mediumBtn.className = `unlock-btn ${mediumUnlocked ? 'unlocked' : 'locked'}`;
     mediumBtn.innerHTML = `${mediumUnlocked ? '🔓' : '🔒'} Medium`;
+    mediumBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
+    mediumBtn.classList.add('has-tooltip');
     mediumBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleUnlock(certKey, null, "medium");
@@ -212,6 +214,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
     const hardBtn = document.createElement("button");
     hardBtn.className = `unlock-btn ${hardUnlocked ? 'unlocked' : 'locked'}`;
     hardBtn.innerHTML = `${hardUnlocked ? '🔓' : '🔒'} Hard`;
+    hardBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
+    hardBtn.classList.add('has-tooltip');
     hardBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleUnlock(certKey, null, "hard");
@@ -262,6 +266,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
       const domainMediumBtn = document.createElement("button");
       domainMediumBtn.className = `unlock-btn ${domainMediumUnlocked ? 'unlocked' : 'locked'}`;
       domainMediumBtn.innerHTML = `${domainMediumUnlocked ? '🔓' : '🔒'} Medium`;
+      domainMediumBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
+      domainMediumBtn.classList.add('has-tooltip');
       domainMediumBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleUnlock(certKey, domainKey, "medium");
@@ -270,6 +276,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
       const domainHardBtn = document.createElement("button");
       domainHardBtn.className = `unlock-btn ${domainHardUnlocked ? 'unlocked' : 'locked'}`;
       domainHardBtn.innerHTML = `${domainHardUnlocked ? '🔓' : '🔒'} Hard`;
+      domainHardBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
+      domainHardBtn.classList.add('has-tooltip');
       domainHardBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleUnlock(certKey, domainKey, "hard");
@@ -320,5 +328,47 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
 
     certBlock.appendChild(domainList);
     container.appendChild(certBlock);
+
+    // After rendering certIndicators, add tooltips to green/yellow circles
+    setTimeout(() => {
+      const certPercentSpans = titleText.querySelectorAll('.percent-indicator.easy, .percent-indicator.medium');
+      certPercentSpans.forEach(span => {
+        span.setAttribute('title', 'Completing decks in Test mode will unlock next level for this section');
+        span.classList.add('has-tooltip');
+      });
+    }, 0);
   }
+
+  // After rendering domain indicators, add tooltips to green/yellow circles
+  setTimeout(() => {
+    const domainPercentSpans = document.querySelectorAll('.domain-header .percent-indicator.easy, .domain-header .percent-indicator.medium');
+    domainPercentSpans.forEach(span => {
+      span.setAttribute('title', 'Completing decks in Test mode will unlock next level for this section');
+      span.classList.add('has-tooltip');
+    });
+  }, 0);
 }
+
+// Tooltip fade logic (CSS required for fade effect)
+// Add this to your CSS:
+// .has-tooltip[title]:hover::after {
+//   content: attr(title);
+//   position: absolute;
+//   background: #222;
+//   color: #fff;
+//   padding: 6px 12px;
+//   border-radius: 6px;
+//   font-size: 0.95em;
+//   opacity: 0;
+//   transition: opacity 0.5s;
+//   pointer-events: none;
+//   z-index: 100;
+// }
+// .has-tooltip[title]:hover::after {
+//   opacity: 1;
+//   transition-delay: 0.5s;
+// }
+// .has-tooltip[title]:not(:hover)::after {
+//   opacity: 0;
+//   transition-delay: 5s;
+// }
