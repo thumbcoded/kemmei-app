@@ -54,8 +54,7 @@ function populateDeckDropdown(certNames, selectedId = null) {
     deckSelect.selectedIndex = 0;
   }
 
-  // Only now: trigger change
-  deckSelect.dispatchEvent(new Event("change"));
+  // Don't trigger change event here - let initialization handle it
 }
 
 (async () => {
@@ -69,47 +68,61 @@ function populateDeckDropdown(certNames, selectedId = null) {
   const savedDifficulty = localStorage.getItem("lastDifficulty");
   const savedMode = localStorage.getItem("lastMode");
 
-  // ✅ Now this will apply deck first, and trigger chain properly
+  // ✅ Populate deck dropdown without triggering events
   populateDeckDropdown(data.certNames, savedDeck);
 
   // Initialize mode state
   currentMode = savedMode || 'casual';
   isTestMode = currentMode === 'test';
 
+  // Restore ALL selections first without triggering events
   setTimeout(() => {
-    if (savedDomain) {
-      document.getElementById("domain-select").value = savedDomain;
-      document.getElementById("domain-select").dispatchEvent(new Event("change"));
+    // Restore deck domain/subdomain options
+    const certId = savedDeck;
+    const domainSelect = document.getElementById("domain-select");
+    const subSelect = document.getElementById("subdomain-select");
+
+    domainSelect.innerHTML = `<option>All</option>`;
+    subSelect.innerHTML = `<option>All</option>`;
+
+    if (certId && domainMaps[certId]) {
+      Object.entries(domainMaps[certId]).forEach(([domainId, domainTitle]) => {
+        const opt = new Option(`${domainId} ${domainTitle}`, `${domainId} ${domainTitle}`);
+        domainSelect.appendChild(opt);
+      });
     }
 
-    setTimeout(() => {
-      if (savedSub) {
-        document.getElementById("subdomain-select").value = savedSub;
-        document.getElementById("subdomain-select").dispatchEvent(new Event("change"));
-      }
+    // Restore all selections
+    if (savedDomain) document.getElementById("domain-select").value = savedDomain;
+    if (savedSub) document.getElementById("subdomain-select").value = savedSub;
+    if (savedDifficulty) document.getElementById("difficulty-select").value = savedDifficulty;
+    if (savedMode) document.getElementById("mode-select").value = savedMode;
 
-      if (savedDifficulty) {
-        document.getElementById("difficulty-select").value = savedDifficulty;
-        document.getElementById("difficulty-select").dispatchEvent(new Event("change"));
+    // Update subdomain options based on domain
+    if (savedDomain) {
+      const domainId = savedDomain.split(" ")[0];
+      subSelect.innerHTML = `<option>All</option>`;
+      
+      if (certId && domainId && subdomainMaps[certId]?.[domainId]) {
+        const subMap = subdomainMaps[certId][domainId];
+        Object.entries(subMap).forEach(([subId, subTitle]) => {
+          const opt = new Option(`${subId} ${subTitle}`, subId);
+          subSelect.appendChild(opt);
+        });
       }
+      
+      if (savedSub) document.getElementById("subdomain-select").value = savedSub;
+    }
 
-      if (savedMode) {
-        document.getElementById("mode-select").value = savedMode;
-        currentMode = savedMode;
-        isTestMode = savedMode === 'test';
-        
-        // Apply mode restrictions
-        if (isTestMode) {
-          const subdomainSelect = document.getElementById("subdomain-select");
-          subdomainSelect.disabled = true;
-          subdomainSelect.value = "All";
-        }
-      } else {
-        // Default to casual mode
-        currentMode = 'casual';
-        isTestMode = false;
-      }
-    }, 150);
+    // Apply mode restrictions
+    if (isTestMode) {
+      const subdomainSelect = document.getElementById("subdomain-select");
+      subdomainSelect.disabled = true;
+      subdomainSelect.value = "All";
+    }
+
+    // NOW fetch cards once with all selections restored
+    fetchCardsAndUpdateCount();
   }, 150);
 })();
 
@@ -718,32 +731,7 @@ document.getElementById("domain-select").addEventListener("change", () => {
   }
   
 
-  document.getElementById("deck-select").addEventListener("change", () => {
-  saveLastSelection();
-  fetchCardsAndUpdateCount();
-});
-
-document.getElementById("domain-select").addEventListener("change", () => {
-  const certLabel = document.getElementById("deck-select").value;
-  const domainSelect = document.getElementById("domain-select");
-  const subSelect = document.getElementById("subdomain-select");
-
-  const certId = certLabel;
-  const domainId = domainSelect.value.split(" ")[0];
-
-  subSelect.innerHTML = `<option>All</option>`;
-
-  if (certId && domainId && subdomainMaps[certId]?.[domainId]) {
-    const subMap = subdomainMaps[certId][domainId];
-    Object.entries(subMap).forEach(([subId, subTitle]) => {
-      const opt = new Option(`${subId} ${subTitle}`, subId);
-      subSelect.appendChild(opt);
-    });
-  }
-
-  saveLastSelection();
-  fetchCardsAndUpdateCount();
-});
+// Removed duplicate individual event listeners - using ones above in main flow
 
 document.getElementById("difficulty-select").addEventListener("change", () => {
   saveLastSelection();
@@ -767,15 +755,7 @@ document.getElementById("subdomain-select").addEventListener("change", () => {
   });
 });
 
-function handleFilterChange() {
-  saveLastSelection();
-  fetchCardsAndUpdateCount();
-}
-
-["deck-select", "domain-select", "subdomain-select", "difficulty-select", "mode-select"].forEach(id => {
-  document.getElementById(id).addEventListener("change", handleFilterChange);
-});
-
+// Removed duplicate event listeners - using individual ones above instead
 
   async function startSession() {
     if (questions.length === 0) {
