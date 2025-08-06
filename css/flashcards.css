@@ -90,67 +90,17 @@ body.flashcards-page {
   font-size: 1.2rem;
 }
 
-/* -------- Explanation Section -------- */
-.card-explanation {
-  background: #f0f8ff;
-  border: 1px solid #b8daff;
-  border-radius: 6px;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-  font-style: italic;
-  min-height: 48px; /* Reserve space for one line of explanation */
-  display: flex;
-  align-items: center;
-}
-
-.card-explanation.explanation-hidden .explanation-content {
-  opacity: 0;
-}
-
-.card-explanation.explanation-hidden {
-  background: transparent;
-  border-color: transparent;
-}
-
-.card-explanation.empty {
-  background: transparent;
-  border-color: transparent;
-}
-
-.card-explanation.empty .explanation-content {
-  opacity: 0;
-}
-
-.explanation-content {
-  color: #2c5282;
-  line-height: 1.4;
-  font-size: 0.9rem;
-  margin: 0;
-  width: 100%;
-  transition: opacity 0.3s ease;
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* -------- Action Buttons -------- */
 .card-buttons {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   min-width: 140px;
-  align-self: center;
-  justify-content: center;
-  min-height: 300px;
+  align-self: flex-start;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  padding-top: 2rem;
 }
 
 .btn {
@@ -520,34 +470,6 @@ body.dark-theme .flashcard-box {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-theme .card-explanation {
-  background-color: #2a4a5a;
-  border-color: #4a5568;
-  color: #e2e8f0;
-}
-
-body.dark-theme .card-explanation.explanation-hidden {
-  background: transparent;
-  border-color: transparent;
-}
-
-body.dark-theme .card-explanation.explanation-hidden .explanation-content {
-  opacity: 0;
-}
-
-body.dark-theme .card-explanation.empty {
-  background: transparent;
-  border-color: transparent;
-}
-
-body.dark-theme .card-explanation.empty .explanation-content {
-  opacity: 0;
-}
-
-body.dark-theme .explanation-content {
-  color: #9dd3ff;
-}
-
 body.dark-theme .card-meta {
   background-color: #2d3748;
   border-color: #4a5568;
@@ -825,6 +747,42 @@ body.dark-theme .mode-tooltip {
   color: #c62828;
 }
 
+/* -------- Inline Explanation Styles -------- */
+.inline-explanation {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f8ff;
+  border: 1px solid #b8daff;
+  border-radius: 8px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.explanation-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  color: #495057;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.explanation-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* -------- Dark Theme Answer Options -------- */
 body.dark-theme .card-answers .option {
   background-color: #374151;
@@ -874,4 +832,14 @@ body.dark-theme .btn-wrapper:hover .tooltip-text[style*="display: block"] {
     border-left-color: transparent;
     border-top-color: rgba(31, 41, 55, 0.95);
   }
+}
+
+/* -------- Dark Theme Inline Explanation -------- */
+body.dark-theme .inline-explanation {
+  background: #1e3a8a;
+  border-color: #3b82f6;
+}
+
+body.dark-theme .explanation-content {
+  color: #e5e7eb;
 }

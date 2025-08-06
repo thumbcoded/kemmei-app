@@ -150,8 +150,6 @@ const correctCounter = document.getElementById("correctCounter");
 const randomToggle = document.getElementById("random-toggle");
 const checkTooltip = document.getElementById("check-tooltip");
 const nextTooltip = document.getElementById("next-tooltip");
-const explanationContainer = document.getElementById("explanationContainer");
-const explanationText = document.getElementById("explanationText");
 
 let questions = [];
 let currentIndex = 0;
@@ -813,16 +811,10 @@ function loadCard() {
   cardContainer.textContent = q.question;
   answerForm.innerHTML = "";
 
-  // Hide explanation when loading new card (but keep space reserved)
-  explanationContainer.classList.add("explanation-hidden");
-  explanationContainer.classList.remove("empty");
-  
-  // Pre-load explanation text but keep it hidden
-  if (q.explanation && q.explanation.trim()) {
-    explanationText.textContent = q.explanation;
-  } else {
-    explanationText.textContent = "";
-    explanationContainer.classList.add("empty");
+  // Remove any existing inline explanations from previous cards
+  const existingExplanation = answerForm.querySelector(".inline-explanation");
+  if (existingExplanation) {
+    existingExplanation.remove();
   }
 
   updateUserProgress(
@@ -934,14 +926,17 @@ function loadCard() {
     const isCorrect = q.correct.every(ans => selected.includes(ans)) && selected.length === q.correct.length;
     if (isCorrect) correctCount++;
 
-    // Show explanation if available (text was pre-loaded in loadCard)
+    // Show explanation inline below answer options
     if (q.explanation && q.explanation.trim()) {
-      explanationContainer.classList.remove("explanation-hidden");
-      explanationContainer.classList.remove("empty");
-    } else {
-      // Keep space reserved but show as empty
-      explanationContainer.classList.remove("explanation-hidden");
-      explanationContainer.classList.add("empty");
+      const explanationDiv = document.createElement("div");
+      explanationDiv.className = "inline-explanation";
+      explanationDiv.innerHTML = `
+        <div class="explanation-content">
+          <span class="explanation-icon">💡</span>
+          ${q.explanation}
+        </div>
+      `;
+      answerForm.appendChild(explanationDiv);
     }
 
     checkBtn.disabled = true;
