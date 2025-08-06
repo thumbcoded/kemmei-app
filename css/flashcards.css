@@ -746,6 +746,17 @@ body.dark-theme .mode-tooltip {
   color: #c62828;
 }
 
+/* User selection border styles */
+.card-answers .option.user-correct {
+  border: 3px solid #4caf50;
+  border-style: solid;
+}
+
+.card-answers .option.user-incorrect {
+  border: 3px solid #f44336;
+  border-style: solid;
+}
+
 /* -------- Inline Explanation Styles -------- */
 .inline-explanation {
   margin-top: 1rem;
@@ -809,6 +820,17 @@ body.dark-theme .card-answers .option.incorrect {
   background-color: #7f1d1d;
   border-color: #ef4444;
   color: #fecaca;
+}
+
+/* Dark theme user selection border styles */
+body.dark-theme .card-answers .option.user-correct {
+  border: 3px solid #10b981;
+  border-style: solid;
+}
+
+body.dark-theme .card-answers .option.user-incorrect {
+  border: 3px solid #ef4444;
+  border-style: solid;
 }
 
 body.dark-theme .btn-wrapper .tooltip-text {

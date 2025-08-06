@@ -914,11 +914,23 @@ function loadCard() {
 
     answerForm.querySelectorAll(".option").forEach(opt => {
       const txt = opt.textContent.trim();
-      if (q.correct.includes(txt)) {
+      const isCorrectAnswer = q.correct.includes(txt);
+      const wasSelected = selected.includes(txt);
+      
+      // Apply background colors for correctness
+      if (isCorrectAnswer) {
         opt.classList.add("correct");
-      } else if (selected.includes(txt)) {
-        opt.classList.add("incorrect");
       }
+      
+      // Apply border styles for user selections
+      if (wasSelected) {
+        if (isCorrectAnswer) {
+          opt.classList.add("user-correct");
+        } else {
+          opt.classList.add("user-incorrect");
+        }
+      }
+      
       opt.classList.remove("selected");
       opt.style.pointerEvents = "none";
     });
