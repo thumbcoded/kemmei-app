@@ -114,15 +114,16 @@ function populateDeckDropdown(certNames, selectedId = null) {
       if (savedSub) document.getElementById("subdomain-select").value = savedSub;
     }
 
-    // Apply mode restrictions
-    if (isTestMode) {
-      const subdomainSelect = document.getElementById("subdomain-select");
-      subdomainSelect.disabled = true;
-      subdomainSelect.value = "All";
-    }
+    // Apply mode restrictions - removed subdomain restriction in test mode for flexible testing
+    // Test mode now allows both domain-wide and subdomain-specific testing
 
     // NOW fetch cards once with all selections restored
     fetchCardsAndUpdateCount();
+    
+    // Set initial mode indicators after everything is loaded
+    setTimeout(() => {
+      updateModeIndicators();
+    }, 200);
   }, 150);
 })();
 
@@ -726,6 +727,9 @@ document.getElementById("domain-select").addEventListener("change", () => {
       startBtn.disabled = false;
       randomToggle.disabled = false;
     }
+    
+    // Update mode indicators after card count is set
+    updateModeIndicators();
   }
   
 
@@ -763,9 +767,11 @@ document.getElementById("subdomain-select").addEventListener("change", () => {
 
     // Store test parameters if in test mode
     if (isTestMode) {
+      const selectedSubdomain = document.getElementById("subdomain-select")?.value.trim();
       testStartData = {
         cert: document.getElementById("deck-select").value.trim(),
         domain: document.getElementById("domain-select").value.trim(),
+        subdomain: selectedSubdomain && selectedSubdomain !== "All" ? selectedSubdomain : null,
         difficulty: document.getElementById("difficulty-select").value.trim(),
         totalQuestions: questions.length,
         startTime: new Date()
@@ -998,30 +1004,62 @@ function loadCard() {
       
       if (passed) {
         finalMessage += "\n🎉 Test PASSED! Next difficulty level unlocked.";
-        
-        // Send test completion to backend
-        try {
-          const userId = localStorage.getItem("userId");
-          if (userId) {
-            await fetch(`http://localhost:3000/api/test-completion/${userId}`, {
-              method: "POST",
+      } else {
+        finalMessage += "\n❌ Test FAILED. Need 90% to unlock next level.";
+      }
+      
+      // Record test completion and progress
+      try {
+        const userId = localStorage.getItem("userId");
+        if (userId) {
+          // 1. Record test completion for unlock tracking
+          await fetch(`http://localhost:3000/api/test-completion/${userId}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              cert: testStartData.cert,
+              domain: testStartData.domain === "All" ? null : testStartData.domain.split(" ")[0],
+              subdomain: testStartData.subdomain, // Include subdomain for flexible testing
+              difficulty: testStartData.difficulty.toLowerCase(),
+              score: percent,
+              totalQuestions: testStartData.totalQuestions,
+              correctAnswers: correctCount,
+              completedAt: new Date()
+            })
+          });
+          
+          // 2. Record progress for each subdomain tested (so scores appear on progress page)
+          if (testStartData.subdomain) {
+            // Specific subdomain test - record progress for that subdomain
+            const progressKey = `${testStartData.cert}:${testStartData.domain.split(" ")[0]}:${testStartData.subdomain}:${testStartData.difficulty.toLowerCase()}`;
+            await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+              method: "PATCH",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                cert: testStartData.cert,
-                domain: testStartData.domain === "All" ? null : testStartData.domain.split(" ")[0],
-                difficulty: testStartData.difficulty.toLowerCase(),
-                score: percent,
-                totalQuestions: testStartData.totalQuestions,
-                correctAnswers: correctCount,
-                completedAt: new Date()
+              body: JSON.stringify({ 
+                key: progressKey.replace(/\./g, "~"), 
+                correct: correctCount,
+                total: questions.length,
+                isTestResult: true // Flag to indicate this is from a test
+              })
+            });
+          } else {
+            // Domain-wide test - record progress proportionally across all subdomains in that domain
+            // This is more complex and might need backend logic to distribute the score
+            const progressKey = `${testStartData.cert}:${testStartData.domain.split(" ")[0]}:all:${testStartData.difficulty.toLowerCase()}`;
+            await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+              method: "PATCH", 
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ 
+                key: progressKey.replace(/\./g, "~"), 
+                correct: correctCount,
+                total: questions.length,
+                isTestResult: true // Flag to indicate this is from a test
               })
             });
           }
-        } catch (err) {
-          console.error("❌ Failed to record test completion:", err);
         }
-      } else {
-        finalMessage += "\n❌ Test FAILED. Need 90% to unlock next level.";
+      } catch (err) {
+        console.error("❌ Failed to record test completion:", err);
       }
     }
     
@@ -1119,33 +1157,57 @@ document.getElementById("mode-select").addEventListener("change", () => {
   currentMode = document.getElementById("mode-select").value;
   isTestMode = currentMode === 'test';
   
+  // Update visual indicators for current mode
+  updateModeIndicators();
+  
   const subdomainSelect = document.getElementById("subdomain-select");
   const domainSelect = document.getElementById("domain-select");
   
-  if (isTestMode) {
-    // Test mode: disable subdomain selector and force domain/title level selection
-    subdomainSelect.disabled = true;
-    subdomainSelect.value = "All";
-    
-    // Ensure domain is either "All" or a specific domain (not subdomain)
-    if (domainSelect.value && !domainSelect.value.startsWith("All") && domainSelect.value !== "All") {
-      // Keep current domain selection but ensure subdomain is "All"
-    } else if (domainSelect.value === "All") {
-      // "All" domains is allowed in test mode
-    }
-    
-    // Trigger change event to update card count
-    subdomainSelect.dispatchEvent(new Event("change"));
-  } else {
-    // Casual mode: enable subdomain selector if applicable
-    const certLabel = document.getElementById("deck-select").value;
-    const certId = certLabel;
-    const hasSubdomains = certId && domainMaps[certId] && Object.keys(subdomainMaps[certId] || {}).length > 0;
-    
-    subdomainSelect.disabled = !hasSubdomains;
-  }
+  // Both Casual and Test modes now allow subdomain selection for flexible testing
+  const certLabel = document.getElementById("deck-select").value;
+  const certId = certLabel;
+  const hasSubdomains = certId && domainMaps[certId] && Object.keys(subdomainMaps[certId] || {}).length > 0;
+  
+  subdomainSelect.disabled = !hasSubdomains;
   
   saveLastSelection();
   fetchCardsAndUpdateCount();
 });
+
+// Function to update visual mode indicators
+function updateModeIndicators() {
+  const cardCountDisplay = document.getElementById("cardCountDisplay");
+  const startBtn = document.getElementById("startSessionBtn");
+  
+  if (isTestMode) {
+    // Test mode: Show test indicator emoji
+    if (cardCountDisplay && cardCountDisplay.textContent.includes("Cards:")) {
+      const cardText = cardCountDisplay.textContent;
+      if (!cardText.includes("🎯")) {
+        cardCountDisplay.innerHTML = `${cardText} <span style="color: #f39c12; font-weight: bold;">🎯</span>`;
+      }
+    }
+    
+    // Update start button styling
+    if (startBtn) {
+      startBtn.textContent = "Start";
+      startBtn.style.backgroundColor = "#e74c3c"; // Red for test mode
+    }
+  } else {
+    // Casual mode: Show casual indicator emoji  
+    if (cardCountDisplay && cardCountDisplay.textContent.includes("🎯")) {
+      const cardText = cardCountDisplay.textContent.replace(/\s*🎯.*$/, '');
+      cardCountDisplay.innerHTML = `${cardText} <span style="color: #27ae60; font-weight: bold;">📚</span>`;
+    } else if (cardCountDisplay && !cardCountDisplay.textContent.includes("📚")) {
+      const cardText = cardCountDisplay.textContent;
+      cardCountDisplay.innerHTML = `${cardText} <span style="color: #27ae60; font-weight: bold;">📚</span>`;
+    }
+    
+    // Update start button styling
+    if (startBtn) {
+      startBtn.textContent = "Start";
+      startBtn.style.backgroundColor = "#3498db"; // Blue for casual mode
+    }
+  }
+}
 });

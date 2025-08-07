@@ -66,6 +66,11 @@ body.flashcards-page {
 .session-right {
   display: flex;
   gap: 1rem;
+  align-items: center; /* Ensure vertical alignment */
+}
+
+.session-left {
+  flex-shrink: 0; /* Prevent shrinking that could cause wrapping */
 }
 
 /* -------- Card Container -------- */
@@ -265,6 +270,8 @@ body.flashcards-page {
   font-size: 0.9rem;
   color: #555;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-width: 140px; /* Ensure enough space for "Cards: 9999 📚" */
+  white-space: nowrap; /* Prevent line wrapping */
 }
 
 .back-btn {
