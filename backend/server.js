@@ -153,7 +153,7 @@ app.post("/api/auth/login", async (req, res) => {
 
 // PATCH-based update to user progress (used by flashcards.js)
 app.patch("/api/user-progress/:userId", async (req, res) => {
-  const { key, correct, viewedOnly } = req.body;
+  const { key, correct, viewedOnly, total, isTestResult } = req.body;
   if (!key) return res.status(400).json({ error: "Missing progress key" });
 
   try {
@@ -162,8 +162,23 @@ app.patch("/api/user-progress/:userId", async (req, res) => {
 
     const entry = user.progress.get(key) || { total: 0, correct: 0, viewed: 0, lastSession: null };
 
-    if (viewedOnly) entry.viewed++;
-    else {
+    if (isTestResult) {
+      // Test result: set the values directly (overwrite if better score)
+      if (total !== undefined && correct !== undefined) {
+        const newPercentage = total > 0 ? (correct / total) * 100 : 0;
+        const currentPercentage = entry.total > 0 ? (entry.correct / entry.total) * 100 : 0;
+        
+        // Only update if this is a better score or first attempt
+        if (entry.total === 0 || newPercentage > currentPercentage) {
+          entry.total = total;
+          entry.correct = correct;
+        }
+      }
+    } else if (viewedOnly) {
+      // Casual mode: just increment viewed count
+      entry.viewed++;
+    } else {
+      // Casual mode: increment counters
       entry.total++;
       if (correct) entry.correct++;
     }
@@ -692,63 +707,6 @@ app.get("/api/domainmap", (req, res) => {
   }
 });
 
-// POST test completion - unlock next difficulty level
-app.post("/api/test-completion/:userId", async (req, res) => {
-  const { cert, domain, difficulty, score, totalQuestions, correctAnswers, completedAt } = req.body;
-  
-  if (!cert || !difficulty || score === undefined) {
-    return res.status(400).json({ error: "Missing required test completion data" });
-  }
-
-  try {
-    const user = await User.findById(req.params.userId);
-    if (!user) return res.status(404).json({ error: "User not found" });
-
-    // Only proceed if test passed (90% or higher)
-    if (score >= 90) {
-      // Initialize test completions map if it doesn't exist
-      if (!user.testCompletions) {
-        user.testCompletions = new Map();
-      }
-
-      // Create a key for this test completion
-      const testKey = domain ? `${cert}:${domain}:${difficulty}` : `${cert}:all:${difficulty}`;
-      
-      // Record the test completion
-      user.testCompletions.set(testKey, {
-        score,
-        totalQuestions,
-        correctAnswers,
-        completedAt: new Date(completedAt),
-        unlocked: true
-      });
-
-      // Mark the user as having unlocked the next difficulty level
-      const nextDifficulty = getNextDifficulty(difficulty);
-      if (nextDifficulty) {
-        const unlockKey = domain ? `${cert}:${domain}:${nextDifficulty}` : `${cert}:all:${nextDifficulty}`;
-        user.testCompletions.set(unlockKey, { unlocked: true });
-      }
-
-      await user.save();
-      
-      res.json({ 
-        success: true, 
-        message: "Test completion recorded and next level unlocked",
-        nextDifficulty
-      });
-    } else {
-      res.json({ 
-        success: false, 
-        message: "Test score below 90% - no unlock granted" 
-      });
-    }
-  } catch (err) {
-    console.error("❌ Failed to record test completion:", err);
-    res.status(500).json({ error: "Failed to record test completion" });
-  }
-});
-
 function getNextDifficulty(currentDifficulty) {
   const levels = ["easy", "medium", "hard"];
   const currentIndex = levels.indexOf(currentDifficulty.toLowerCase());
@@ -771,51 +729,89 @@ app.get("/api/test-completions/:userId", async (req, res) => {
 
 // POST test completion and unlock next difficulty
 app.post("/api/test-completion/:userId", async (req, res) => {
-  const { cert, domain, difficulty, score, totalQuestions, correctAnswers } = req.body;
+  const { cert, domain, subdomain, difficulty, score, totalQuestions, correctAnswers } = req.body;
   
   if (!cert || !difficulty || score === undefined) {
     return res.status(400).json({ error: "Missing required test completion data" });
   }
 
   try {
+    console.log("📝 Processing test completion for user:", req.params.userId);
+    console.log("📝 Request body:", req.body);
+    
     const user = await User.findById(req.params.userId);
     if (!user) return res.status(404).json({ error: "User not found" });
 
+    console.log("📝 User found, current testCompletions:", user.testCompletions);
+    
     const passed = score >= 90;
-    const testCompletions = user.testCompletions || new Map();
+    
+    // Initialize testCompletions as an object if it doesn't exist
+    if (!user.testCompletions) {
+      console.log("📝 Initializing new testCompletions object");
+      user.testCompletions = {};
+    }
+    
+    // Convert Map to object if needed
+    let testCompletions = user.testCompletions;
+    if (testCompletions instanceof Map) {
+      testCompletions = Object.fromEntries(testCompletions.entries());
+    }
     
     // Create completion record
-    const domainKey = domain || "all";
-    const completionKey = `${cert}:${domainKey}:${difficulty}`;
+    // Use subdomain if provided, otherwise domain, otherwise "all"
+    const domainKey = subdomain ? `${domain}:${subdomain}` : (domain || "all");
+    // Replace dots with underscores for MongoDB compatibility
+    const completionKey = `${cert}:${domainKey}:${difficulty}`.replace(/\./g, '_');
+    console.log("📝 Completion key:", completionKey);
     
-    const completionData = {
-      score,
-      totalQuestions,
-      correctAnswers,
-      passed,
-      completedAt: new Date(),
-      unlocked: passed
-    };
+    // Check if there's already a completion for this key
+    const existingCompletion = testCompletions[completionKey];
+    console.log("📝 Existing completion:", existingCompletion);
+    let shouldUpdate = true;
     
-    testCompletions.set(completionKey, completionData);
+    // Only update if this is a better score or first attempt
+    if (existingCompletion && existingCompletion.score !== undefined) {
+      shouldUpdate = score > existingCompletion.score;
+      console.log("📝 Should update?", shouldUpdate, "New score:", score, "Existing score:", existingCompletion.score);
+    }
+    
+    if (shouldUpdate) {
+      const completionData = {
+        score,
+        totalQuestions,
+        correctAnswers,
+        passed,
+        completedAt: new Date(),
+        unlocked: passed
+      };
+      
+      console.log("📝 Setting completion data:", completionData);
+      testCompletions[completionKey] = completionData;
+    }
     
     // If test passed, unlock next difficulty level
     if (passed) {
+      console.log("📝 Test passed, unlocking next difficulty");
       const nextDifficulty = difficulty === "easy" ? "medium" : difficulty === "medium" ? "hard" : null;
       if (nextDifficulty) {
-        const nextKey = `${cert}:${domainKey}:${nextDifficulty}`;
-        const nextData = testCompletions.get(nextKey) || {};
+        const nextKey = `${cert}:${domainKey}:${nextDifficulty}`.replace(/\./g, '_');
+        const nextData = testCompletions[nextKey] || {};
         nextData.unlocked = true;
-        testCompletions.set(nextKey, nextData);
+        testCompletions[nextKey] = nextData;
+        console.log("📝 Unlocked next difficulty:", nextKey);
       }
     }
     
+    console.log("📝 About to save user with testCompletions:", testCompletions);
     user.testCompletions = testCompletions;
     await user.save();
+    console.log("📝 User saved successfully");
 
     res.json({ success: true, passed, unlocked: passed });
   } catch (err) {
     console.error("❌ Failed to record test completion:", err);
+    console.error("❌ Error stack:", err.stack);
     res.status(500).json({ error: "Failed to record test completion" });
   }
 });

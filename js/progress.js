@@ -6,17 +6,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Load and render progress
   try {
-    const [progressRes, domainRes, unlocksRes] = await Promise.all([
+    const [progressRes, domainRes, unlocksRes, testCompletionsRes] = await Promise.all([
       fetch(`http://localhost:3000/api/user-progress/${userId}`),
       fetch("/data/domainmap.json"),
-      fetch(`http://localhost:3000/api/user-unlocks/${userId}`)
+      fetch(`http://localhost:3000/api/user-unlocks/${userId}`),
+      fetch(`http://localhost:3000/api/test-completions/${userId}`)
     ]);
 
     const progress = await progressRes.json();
     const domainMap = await domainRes.json();
     const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
+    const testCompletions = testCompletionsRes.ok ? await testCompletionsRes.json() : {};
 
-    renderProgressTree(progress, domainMap, unlocks);
+    renderProgressTree(progress, domainMap, unlocks, testCompletions);
   } catch (err) {
     console.error("❌ Failed to load user progress:", err);
     if (statsDiv) statsDiv.textContent = "Error loading progress.";
@@ -190,15 +192,39 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
     const difficulties = ["easy", "medium", "hard"];
     const colors = { easy: "🟢", medium: "🟡", hard: "🔴" };
     let indicators = "";
-    let easyKey = domainId ? `${certId}:${domainId}:easy` : `${certId}:all:easy`;
+    // Replace dots with underscores to match database key format
+    const safeCertId = certId.replace(/\./g, '_');
+    const safeDomainId = domainId ? domainId.replace(/\./g, '_') : null;
+    let easyKey = safeDomainId ? `${safeCertId}:${safeDomainId}:easy` : `${safeCertId}:all:easy`;
     let easyEntry = testCompletions && testCompletions[easyKey];
     let easyPercent = easyEntry && typeof easyEntry.score === "number" ? (easyEntry.score > 90 ? 100 : easyEntry.score) : 0;
+    
+    // If no test completion data, fall back to flashcard progress
+    if (easyPercent === 0 && userProgress) {
+      // Look for flashcard progress data
+      let flashcardKey = domainId ? `${certId}:${domainId.replace('.', '-')}:${domainId}:easy` : `${certId}:all:easy`;
+      let flashcardEntry = userProgress[flashcardKey];
+      if (flashcardEntry && flashcardEntry.total > 0) {
+        easyPercent = Math.round((flashcardEntry.correct / flashcardEntry.total) * 100);
+      }
+    }
+    
     // If easy is 0, pale out medium/hard
     let paleClass = easyPercent === 0 ? "pale" : "";
     for (const diff of difficulties) {
-      let key = domainId ? `${certId}:${domainId}:${diff}` : `${certId}:all:${diff}`;
+      let key = safeDomainId ? `${safeCertId}:${safeDomainId}:${diff}` : `${safeCertId}:all:${diff}`;
       let entry = testCompletions && testCompletions[key];
       let percent = entry && typeof entry.score === "number" ? (entry.score > 90 ? 100 : entry.score) : 0;
+      
+      // If no test completion data, fall back to flashcard progress
+      if (percent === 0 && userProgress) {
+        let flashcardKey = domainId ? `${certId}:${domainId.replace('.', '-')}:${domainId}:${diff}` : `${certId}:all:${diff}`;
+        let flashcardEntry = userProgress[flashcardKey];
+        if (flashcardEntry && flashcardEntry.total > 0) {
+          percent = Math.round((flashcardEntry.correct / flashcardEntry.total) * 100);
+        }
+      }
+      
       let show = true;
       if (diff !== "easy" && easyPercent === 0) show = false;
       indicators += `<span class='percent-indicator ${diff} ${show ? '' : paleClass}'>${colors[diff]} ${show ? percent + '%' : ''}</span> `;

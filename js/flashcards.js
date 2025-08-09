@@ -651,6 +651,10 @@ subdomainSelect.addEventListener("change", (event) => {
 // Removed duplicate event listeners - using individual ones above instead
 
   async function startSession() {
+    console.log("🔍 startSession() called");
+    console.log("🔍 isTestMode at start:", isTestMode);
+    console.log("🔍 currentMode at start:", currentMode);
+    
     if (questions.length === 0) {
       alert("No cards found for this deck/domain/difficulty.");
       return;
@@ -667,6 +671,9 @@ subdomainSelect.addEventListener("change", (event) => {
         totalQuestions: questions.length,
         startTime: new Date()
       };
+      console.log("🔍 Test start data set:", testStartData);
+    } else {
+      console.log("🔍 Not in test mode, testStartData not set");
     }
 
     // Check if cards should be shuffled
@@ -876,6 +883,11 @@ function loadCard() {
   }
 
   async function showEnd() {
+    console.log("🔍 showEnd() called");
+    console.log("🔍 isTestMode:", isTestMode);
+    console.log("🔍 testStartData:", testStartData);
+    console.log("🔍 currentMode:", currentMode);
+    
     abortBtn.classList.add("hidden");
     exitBtn.classList.remove("hidden");
 
@@ -888,6 +900,8 @@ function loadCard() {
 
     const percent = Math.round((correctCount / questions.length) * 100);
     let finalMessage = `Correct: ${correctCount} / ${questions.length} (${percent}%)`;
+    
+    console.log("🔍 About to check test mode completion, isTestMode && testStartData:", isTestMode && testStartData);
     
     // Handle test mode completion
     if (isTestMode && testStartData) {
@@ -902,51 +916,83 @@ function loadCard() {
       // Record test completion and progress
       try {
         const userId = localStorage.getItem("userId");
+        console.log("🔍 Current userId from localStorage:", userId);
+        
+        if (!userId) {
+          console.warn("⚠️ No userId found - test results will not be recorded");
+          return;
+        }
+        
         if (userId) {
+          console.log("🔍 Recording test completion for:", testStartData);
+          console.log("🔍 Score:", percent, "Correct:", correctCount, "Total:", questions.length);
+          
           // 1. Record test completion for unlock tracking
-          await fetch(`http://localhost:3000/api/test-completion/${userId}`, {
+          const testCompletionData = {
+            cert: testStartData.cert,
+            domain: testStartData.domain === "All" ? null : testStartData.domain.split(" ")[0],
+            subdomain: testStartData.subdomain, // Include subdomain for flexible testing
+            difficulty: testStartData.difficulty.toLowerCase(),
+            score: percent,
+            totalQuestions: testStartData.totalQuestions,
+            correctAnswers: correctCount,
+            completedAt: new Date()
+          };
+          
+          console.log("🔍 Sending test completion data:", testCompletionData);
+          
+          const testResponse = await fetch(`http://localhost:3000/api/test-completion/${userId}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              cert: testStartData.cert,
-              domain: testStartData.domain === "All" ? null : testStartData.domain.split(" ")[0],
-              subdomain: testStartData.subdomain, // Include subdomain for flexible testing
-              difficulty: testStartData.difficulty.toLowerCase(),
-              score: percent,
-              totalQuestions: testStartData.totalQuestions,
-              correctAnswers: correctCount,
-              completedAt: new Date()
-            })
+            body: JSON.stringify(testCompletionData)
           });
+          
+          const testResult = await testResponse.text();
+          console.log("🔍 Test completion response:", testResponse.status, testResult);
           
           // 2. Record progress for each subdomain tested (so scores appear on progress page)
           if (testStartData.subdomain) {
             // Specific subdomain test - record progress for that subdomain
+            // Use the cert value (ID) not the full display name to match progress page expectations
             const progressKey = `${testStartData.cert}:${testStartData.domain.split(" ")[0]}:${testStartData.subdomain}:${testStartData.difficulty.toLowerCase()}`;
-            await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+            const progressData = { 
+              key: progressKey.replace(/\./g, "~"), 
+              correct: correctCount,
+              total: questions.length,
+              isTestResult: true // Flag to indicate this is from a test
+            };
+            
+            console.log("🔍 Sending progress data:", progressData);
+            
+            const progressResponse = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
               method: "PATCH",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ 
-                key: progressKey.replace(/\./g, "~"), 
-                correct: correctCount,
-                total: questions.length,
-                isTestResult: true // Flag to indicate this is from a test
-              })
+              body: JSON.stringify(progressData)
             });
+            
+            const progressResult = await progressResponse.text();
+            console.log("🔍 Progress response:", progressResponse.status, progressResult);
           } else {
             // Domain-wide test - record progress proportionally across all subdomains in that domain
             // This is more complex and might need backend logic to distribute the score
             const progressKey = `${testStartData.cert}:${testStartData.domain.split(" ")[0]}:all:${testStartData.difficulty.toLowerCase()}`;
-            await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+            const progressData = { 
+              key: progressKey.replace(/\./g, "~"), 
+              correct: correctCount,
+              total: questions.length,
+              isTestResult: true // Flag to indicate this is from a test
+            };
+            
+            console.log("🔍 Sending domain-wide progress data:", progressData);
+            
+            const progressResponse = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
               method: "PATCH", 
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ 
-                key: progressKey.replace(/\./g, "~"), 
-                correct: correctCount,
-                total: questions.length,
-                isTestResult: true // Flag to indicate this is from a test
-              })
+              body: JSON.stringify(progressData)
             });
+            
+            const progressResult = await progressResponse.text();
+            console.log("🔍 Domain-wide progress response:", progressResponse.status, progressResult);
           }
         }
       } catch (err) {
@@ -1058,6 +1104,8 @@ document.getElementById("mode-select").addEventListener("change", async (event) 
   try {
     currentMode = document.getElementById("mode-select").value;
     isTestMode = currentMode === 'test';
+    
+    console.log("🔍 Mode changed to:", currentMode, "isTestMode:", isTestMode);
     
     // Update visual indicators for current mode immediately
     updateModeIndicators();
