@@ -328,6 +328,20 @@ body.flashcards-page {
   border: none;
 }
 
+/* Enhanced dropdown styling for long text */
+#subdomain-select {
+  min-width: 300px;
+  max-width: 500px;
+}
+
+#subdomain-select option {
+  white-space: normal;
+  word-wrap: break-word;
+  padding: 8px 12px;
+  line-height: 1.4;
+  min-height: auto;
+}
+
 @media (max-width: 600px) {
   .filter-row {
     flex-direction: column;
@@ -592,8 +606,11 @@ body.dark-theme .tooltip-text {
 }
 
 .mode-select-wrapper:hover .mode-tooltip {
-  visibility: visible;
-  opacity: 1;
+  /* TEMPORARILY DISABLED - Testing if tooltip interferes with subdomain dropdown */
+  /* visibility: visible;
+  opacity: 1; */
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
 body.dark-theme .mode-tooltip {

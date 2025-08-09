@@ -106,6 +106,7 @@ function populateDeckDropdown(certNames, selectedId = null) {
       if (certId && domainId && subdomainMaps[certId]?.[domainId]) {
         const subMap = subdomainMaps[certId][domainId];
         Object.entries(subMap).forEach(([subId, subTitle]) => {
+          // Full text display with CSS handling the wrapping
           const opt = new Option(`${subId} ${subTitle}`, subId);
           subSelect.appendChild(opt);
         });
@@ -155,6 +156,9 @@ const nextTooltip = document.getElementById("next-tooltip");
 let questions = [];
 let currentIndex = 0;
 let correctCount = 0;
+let isUpdatingMode = false; // Flag to prevent overlapping mode updates
+let isUpdatingCards = false; // Flag to prevent overlapping card updates
+let isRebuildingDifficulty = false; // Flag to prevent difficulty change events during dropdown rebuild
 
 function saveLastSelection() {
   localStorage.setItem("lastDeck", document.getElementById("deck-select").value);
@@ -336,7 +340,7 @@ async function getUnlockedDifficulties() {
   }
 }
 
-async function fetchCards() {
+async function fetchCards(unlockedDifficulties = null) {
   const deck = document.getElementById("deck-select").value.trim();
   const domain = document.getElementById("domain-select").value.trim();
   const difficulty = document.getElementById("difficulty-select").value.trim();
@@ -368,11 +372,11 @@ async function fetchCards() {
     const data = await res.json();
     allCards = data;
   } else if (difficulty === "All") {
-    // Multiple difficulties - make separate API calls for each unlocked difficulty
-    const unlockedDifficulties = await getUnlockedDifficulties();
+    // Multiple difficulties - use pre-fetched unlock data if available
+    const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
     
     // Make parallel API calls for each unlocked difficulty
-    const promises = unlockedDifficulties.map(async (diff) => {
+    const promises = unlocked.map(async (diff) => {
       const query = new URLSearchParams(baseQuery);
       query.append("difficulty", diff);
       
@@ -453,6 +457,7 @@ document.getElementById("domain-select").addEventListener("change", () => {
   if (certId && domainId && subdomainMaps[certId]?.[domainId]) {
     const subMap = subdomainMaps[certId][domainId];
     Object.entries(subMap).forEach(([subId, subTitle]) => {
+      // Full text display with CSS handling the wrapping
       const opt = new Option(`${subId} ${subTitle}`, subId);
       subSelect.appendChild(opt);
     });
@@ -464,19 +469,39 @@ document.getElementById("domain-select").addEventListener("change", () => {
 
 
   async function fetchCardsAndUpdateCount() {
-    await fetchCards();
-    updateCardCount();
+    // Prevent overlapping card fetch operations
+    if (isUpdatingCards) {
+      return;
+    }
     
-    // Update difficulty dropdown based on unlock status
-    await updateDifficultyDropdown();
+    isUpdatingCards = true;
+    
+    try {
+      // Get unlocked difficulties once and pass to both functions
+      const unlockedDifficulties = await getUnlockedDifficulties();
+      
+      await fetchCards(unlockedDifficulties);
+      updateCardCount();
+      
+      // Update difficulty dropdown based on unlock status, passing the already-fetched data
+      await updateDifficultyDropdown(unlockedDifficulties);
+    } catch (err) {
+      console.error("Error in fetchCardsAndUpdateCount:", err);
+    } finally {
+      isUpdatingCards = false;
+    }
   }
 
-  async function updateDifficultyDropdown() {
+  async function updateDifficultyDropdown(unlockedDifficulties = null) {
+    // Set flag to prevent difficulty change events during rebuild
+    isRebuildingDifficulty = true;
+    
     // Fetch user progress and test completions to update difficulty dropdown
     const userId = localStorage.getItem("userId");
+    const difficultySelect = document.getElementById("difficulty-select");
+    
     if (!userId) {
       // Show only Easy difficulty when no user is logged in
-      const difficultySelect = document.getElementById("difficulty-select");
       const currentDifficulty = difficultySelect.value; // Store current selection before clearing
       difficultySelect.innerHTML = "";
       
@@ -488,157 +513,21 @@ document.getElementById("domain-select").addEventListener("change", () => {
       // No user logged in, only Easy is available
       difficultySelect.value = "Easy";
       
+      // Reset flag
+      isRebuildingDifficulty = false;
       return;
     }
 
     try {
-      const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`);
-      const userData = await res.json();
+      // Use pre-fetched data if available, otherwise fetch it
+      const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
       
-      // Get test completions to determine unlocked difficulties
-      const testRes = await fetch(`http://localhost:3000/api/test-completions/${userId}`);
-      const testCompletions = testRes.ok ? await testRes.json() : {};
-      
-      // Get unlock preferences from the new unlock system
-      const unlocksRes = await fetch(`http://localhost:3000/api/user-unlocks/${userId}`);
-      const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
-      
-      const difficultySelect = document.getElementById("difficulty-select");
       const currentDifficulty = difficultySelect.value; // Store current selection before clearing
       difficultySelect.innerHTML = ""; // Clear existing options
-
-      // Determine what's unlocked based on mode and current selection
-      const cert = document.getElementById("deck-select").value.trim();
-      const domain = document.getElementById("domain-select").value.trim();
       
-      let mediumUnlocked = false;
-      let hardUnlocked = false;
-
-      if (isTestMode) {
-        // Test mode: check test completions for unlock status
-        const domainKey = domain === "All" ? "all" : domain.split(" ")[0];
-        const mediumKey = `${cert}:${domainKey}:medium`;
-        const hardKey = `${cert}:${domainKey}:hard`;
-        
-        mediumUnlocked = testCompletions[mediumKey]?.unlocked || false;
-        hardUnlocked = testCompletions[hardKey]?.unlocked || false;
-      } else {
-        // Casual mode: use the new unlock preference system
-        const certKey = cert.replace(/\./g, '_');
-        const currentDomain = domain === "All" ? null : domain.split(" ")[0];
-        
-        if (currentDomain) {
-          // Check domain-specific unlocks first
-          const domainKey = currentDomain.replace(/\./g, '_');
-          mediumUnlocked = unlocks[`${certKey}:${domainKey}:medium`] || false;
-          hardUnlocked = unlocks[`${certKey}:${domainKey}:hard`] || false;
-          
-          // If domain-specific unlocks aren't set, fall back to title-level unlocks
-          if (!mediumUnlocked) {
-            mediumUnlocked = unlocks[`${certKey}:medium`] || false;
-          }
-          if (!hardUnlocked) {
-            hardUnlocked = unlocks[`${certKey}:hard`] || false;
-          }
-        } else {
-          // "All" domains selected - use title-level unlocks
-          mediumUnlocked = unlocks[`${certKey}:medium`] || false;
-          hardUnlocked = unlocks[`${certKey}:hard`] || false;
-        }
-        
-        // If no unlock preferences are set, fall back to the old progress-based system
-        if (!mediumUnlocked && !hardUnlocked) {
-          // Build progress tree similar to progress.js
-          const progressTree = {};
-          for (const [key, data] of Object.entries(userData)) {
-            const parts = key.replace(/~/g, '.').split(":");
-            
-            // Skip entries that don't have proper structure (cert:domain:sub:difficulty)
-            if (parts.length < 4) {
-              continue;
-            }
-            
-            const [certKey, domainKey, subKey, difficulty] = parts;
-            if (!progressTree[certKey]) progressTree[certKey] = {};
-            if (!progressTree[certKey][domainKey]) progressTree[certKey][domainKey] = {};
-            if (!progressTree[certKey][domainKey][subKey]) progressTree[certKey][domainKey][subKey] = {};
-            progressTree[certKey][domainKey][subKey][difficulty] = data;
-          }
-          
-          // Check if Medium is unlocked for this domain/cert
-          // Medium is unlocked if Easy is 100% complete for the domain
-          const currentCert = cert;
-          
-          if (currentDomain) {
-            // Check specific domain
-            const domainProgress = progressTree[currentCert]?.[currentDomain];
-            if (domainProgress) {
-              // Check all subdomains in this domain for Easy completion
-              let easyCompleted = false;
-              for (const subId of Object.keys(domainProgress)) {
-                const easyEntry = domainProgress[subId]?.easy;
-                // Handle case where data might be wrapped in array
-                const actualData = Array.isArray(easyEntry) ? easyEntry[0] : easyEntry;
-                if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                  easyCompleted = true;
-                  break;
-                }
-              }
-              mediumUnlocked = easyCompleted;
-              
-              // Check if Hard is unlocked (Medium must be 100% complete)
-              if (mediumUnlocked) {
-                let mediumCompleted = false;
-                for (const subId of Object.keys(domainProgress)) {
-                  const mediumEntry = domainProgress[subId]?.medium;
-                  // Handle case where data might be wrapped in array
-                  const actualData = Array.isArray(mediumEntry) ? mediumEntry[0] : mediumEntry;
-                  if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                    mediumCompleted = true;
-                    break;
-                  }
-                }
-                hardUnlocked = mediumCompleted;
-              }
-            }
-          } else {
-            // "All" domains selected - check if ANY domain has Easy completed
-            const certProgress = progressTree[currentCert];
-            if (certProgress) {
-              for (const domainId of Object.keys(certProgress)) {
-                const domainData = certProgress[domainId];
-                for (const subId of Object.keys(domainData)) {
-                  const easyEntry = domainData[subId]?.easy;
-                  // Handle case where data might be wrapped in array
-                  const actualData = Array.isArray(easyEntry) ? easyEntry[0] : easyEntry;
-                  if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                    mediumUnlocked = true;
-                    break;
-                  }
-                }
-                if (mediumUnlocked) break;
-              }
-              
-              // Check Hard unlock
-              if (mediumUnlocked) {
-                for (const domainId of Object.keys(certProgress)) {
-                  const domainData = certProgress[domainId];
-                  for (const subId of Object.keys(domainData)) {
-                    const mediumEntry = domainData[subId]?.medium;
-                    // Handle case where data might be wrapped in array
-                    const actualData = Array.isArray(mediumEntry) ? mediumEntry[0] : mediumEntry;
-                    if (actualData && actualData.total > 0 && actualData.correct === actualData.total) {
-                      hardUnlocked = true;
-                      break;
-                    }
-                  }
-                  if (hardUnlocked) break;
-                }
-              }
-            }
-          }
-        }
-      }
+      // Determine unlock status from the array
+      const mediumUnlocked = unlocked.includes("medium");
+      const hardUnlocked = unlocked.includes("hard");
       
       // Add "Easy" option
       const easyOption = document.createElement("option");
@@ -681,11 +570,11 @@ document.getElementById("domain-select").addEventListener("change", () => {
         // If no previous selection, default to Easy
         difficultySelect.value = "Easy";
       }
+      
     } catch (err) {
       console.error("❌ Failed to fetch user progress:", err);
       
       // Fallback: show only Easy difficulty for both modes when there's an error
-      const difficultySelect = document.getElementById("difficulty-select");
       const currentDifficulty = difficultySelect.value; // Store current selection before clearing
       difficultySelect.innerHTML = "";
       
@@ -709,6 +598,9 @@ document.getElementById("domain-select").addEventListener("change", () => {
 
       // In error state, only Easy is available, so default to Easy
       difficultySelect.value = "Easy";
+    } finally {
+      // Always reset the flag, even if there was an error
+      isRebuildingDifficulty = false;
     }
   }
 
@@ -736,25 +628,24 @@ document.getElementById("domain-select").addEventListener("change", () => {
 // Removed duplicate individual event listeners - using ones above in main flow
 
 document.getElementById("difficulty-select").addEventListener("change", () => {
+  // Skip if we're rebuilding the dropdown programmatically
+  if (isRebuildingDifficulty) {
+    return;
+  }
+  
   saveLastSelection();
   
-  // Simply fetch cards without rebuilding dropdown
-  fetchCards().then(() => {
-    updateCardCount();
-  }).catch(err => {
+  // Use the protected version to prevent overlapping calls
+  fetchCardsAndUpdateCount().catch(err => {
     console.error("Error fetching cards after difficulty change:", err);
   });
 });
 
-document.getElementById("subdomain-select").addEventListener("change", () => {
+const subdomainSelect = document.getElementById("subdomain-select");
+
+subdomainSelect.addEventListener("change", (event) => {
   saveLastSelection();
-  
-  // Only fetch cards and update count, don't rebuild difficulty dropdown
-  fetchCards().then(() => {
-    updateCardCount();
-  }).catch(err => {
-    console.error("Error fetching cards after subdomain change:", err);
-  });
+  fetchCardsAndUpdateCount();
 });
 
 // Removed duplicate event listeners - using individual ones above instead
@@ -1153,25 +1044,41 @@ exitBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme", isDark);
     localStorage.setItem("darkMode", isDark);
   });
-document.getElementById("mode-select").addEventListener("change", () => {
-  currentMode = document.getElementById("mode-select").value;
-  isTestMode = currentMode === 'test';
+document.getElementById("mode-select").addEventListener("change", async (event) => {
+  // Prevent event bubbling that might trigger other dropdowns
+  event.stopPropagation();
   
-  // Update visual indicators for current mode
-  updateModeIndicators();
+  // Prevent overlapping mode change operations
+  if (isUpdatingMode) {
+    return;
+  }
   
-  const subdomainSelect = document.getElementById("subdomain-select");
-  const domainSelect = document.getElementById("domain-select");
+  isUpdatingMode = true;
   
-  // Both Casual and Test modes now allow subdomain selection for flexible testing
-  const certLabel = document.getElementById("deck-select").value;
-  const certId = certLabel;
-  const hasSubdomains = certId && domainMaps[certId] && Object.keys(subdomainMaps[certId] || {}).length > 0;
-  
-  subdomainSelect.disabled = !hasSubdomains;
-  
-  saveLastSelection();
-  fetchCardsAndUpdateCount();
+  try {
+    currentMode = document.getElementById("mode-select").value;
+    isTestMode = currentMode === 'test';
+    
+    // Update visual indicators for current mode immediately
+    updateModeIndicators();
+    
+    saveLastSelection();
+    
+    // Reset the mode updating flag immediately after UI updates
+    isUpdatingMode = false;
+    
+    // Use setTimeout instead of requestAnimationFrame for truly async execution
+    setTimeout(async () => {
+      try {
+        await fetchCardsAndUpdateCount();
+      } catch (err) {
+        console.error("Error updating cards after mode change:", err);
+      }
+    }, 0);
+  } catch (err) {
+    console.error("Error in mode change handler:", err);
+    isUpdatingMode = false; // Reset flag on error
+  }
 });
 
 // Function to update visual mode indicators
