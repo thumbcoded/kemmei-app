@@ -1,7 +1,42 @@
-temp/ 
-Transcripts/
+# -------------------------
+# 🔒 Build artifacts (do not commit)
+# -------------------------
+dist/
+release/
+out/
+*.exe
+*.AppImage
+*.dmg
 
-# Debug and temporary files
+# -------------------------
+# 📦 Dependency folders
+# -------------------------
+node_modules/
+.vscode/
+
+# -------------------------
+# 🔧 Dev tools, scripts, local setup
+# -------------------------
+scripts/
+app-data/
+temp/
+Transcripts/
+*.log
+*.bak
+*.tmp
+*.swp
+*.db
+*.sqlite
+
+# -------------------------
+# 🚫 Experimental or local-only code
+# -------------------------
+backend/localApi-sqlite.js
+electron/
+
+# -------------------------
+# 🧪 Loose test/debug files
+# -------------------------
 debug-*.js
 test-*.js
 test-*.html

@@ -1,0 +1,35 @@
+{
+  "name": "kemmei-electron",
+  "version": "0.1.0",
+  "description": "Kemmei desktop app (Electron + SQLite)",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder",
+    "seed": "node scripts/seed-local.js"
+  },
+  "author": "You",
+  "license": "MIT",
+  "dependencies": {
+  "sqlite3": "^5.1.6",
+  "sqlite": "^4.1.2",
+  "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.example.kemmei",
+    "files": [
+      "**/*",
+      "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/.bin",
+      "!**/test/**"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}
