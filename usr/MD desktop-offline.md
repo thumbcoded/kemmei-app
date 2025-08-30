@@ -93,3 +93,58 @@ What's next (pick one)
 If you want a quick prototype: say "lowdb prototype" and I'll scaffold Electron main.js, preload.js, and a backend/localApi.js using lowdb, then wire renderer IPC and a seed script.
 If you want production-ready persistence: say "SQLite" and I'll scaffold with better-sqlite3 DAOs, Electron bridge, and seed/import tooling.
 Progress update: plan written and saved. Tell me which datastore you prefer (SQLite or lowdb) and I will begin scaffolding the Electron app and refactoring the backend in this repo.
+
+## Work completed so far (delta)
+
+- Created root `package.json` with Electron/dev scripts and seed/build tasks — DONE
+- Scaffolded `electron/main.js` and `electron/preload.js` with a fetch-to-IPC shim so existing renderer fetch('/api/...') calls route to the local API — DONE
+- Implemented a SQLite-backed local API at `backend/localApi-sqlite.js` using `sqlite3` + `sqlite` async wrapper; exposes init/getCards/getCard/saveCard/getUsers — DONE
+- Added `scripts/seed-local.js`, fixed async recursion and normalized legacy JSON fields so repository `data/cards/*` import into SQLite — DONE
+- Ran seed and successfully imported 2811 cards into `C:\Users\<you>\.kemmei\kemmei-data.sqlite` — DONE
+- Added `scripts/check-db.js` to quickly verify DB path, total cards, and sample records — DONE
+- Started Electron locally (dev mode) and verified the DB via `check-db.js` (Electron may exit in headless CI; run on desktop to interact) — PARTIAL (Electron start attempted; GUI should open on your desktop)
+
+## New feature tasks (WIP)
+
+These are new, requested app-level behaviors to implement. Mark items as WIP now; check as DONE after implementation and verification.
+
+1) First-page / login flow
+	 - Requirement: Replace the existing multi-page registration/login flow with a single first page that only asks for a username.
+	 - Behavior:
+		 - The first page (previous `index.html` flow) presents a single input for username. No registration page.
+		 - On submit, the username is stored in the local DB (users table) as the current user. Create user record if not exists.
+		 - After entering username, the app immediately displays the Dashboard view.
+		 - The username must influence per-user progress tracking across all pages (progress, flashcards, selectors state). Persist current user selection across app restarts.
+		 - Admin functionality (admin page link and admin UI: card browser, title manager, Concur, etc.) will be removed entirely for this offline build.
+	 - Tasks to implement:
+		 - Add UI for the username-first page and wire submit to `localApi.saveUser` (or createUser).
+		 - Persist currently active user in app settings (use `electron-store` or store small record in SQLite) and expose via preload API (window.api.getCurrentUser/getOrCreateUser).
+		 - Update existing pages to read current user from `window.api` on load and adapt displayed progress/state.
+		 - Remove admin links and admin-only UI from templates and code paths.
+	 - Status: WIP
+
+	## Admin UI removal — current status
+
+	- Admin navigation and links removed from main UI (dashboard, concur back links) — DONE
+	- Admin pages and assets deleted from the offline build: `admin.html`, `js/admin.js`, `css/admin.css` — DONE
+	- Remaining admin-like modules (titmgr, dropdown helpers) left intact if referenced by other pages; will be removed later if not needed — WIP
+
+2) Progress page behavior
+	 - Requirement: The Progress page will show per-user best results for completed decks; completion may be recorded at subdomain/domain/title granularities.
+	 - Behavior:
+		 - When a user finishes any deck (subdomain, domain, or title), record the best result for that deck level for that user in the DB.
+		 - The Progress page summarizes progress across all cert/domain/subdomain/title hierarchies showing best score/last-played timestamps.
+		 - Progress should be queryable by UI selectors and persist per-user.
+	 - Tasks to implement:
+		 - Extend `localApi` to provide saveProgress(userId, deckId, level, score, metadata) and getProgress(userId, filter) operations.
+		 - Update deck-completion logic in renderer to call `window.api.saveProgress(...)` when a deck is completed.
+		 - Implement Progress page aggregation queries (best score per deck) and UI rendering.
+	 - Status: WIP
+
+## How items will be marked DONE
+
+- Implemented code: UI + backend endpoints + preload APIs. 
+- Seeded/testing: seed scripts updated if schema changed and seed re-run as needed.
+- Manual verification: open app, log in as sample user, complete a deck, confirm Progress page updates and saved state after restart.
+
+If you'd like, I can implement (1) first-page username flow now (UI + localApi changes + preload methods), then follow with (2) the progress endpoints and UI wiring. Tell me which to implement first and I'll start making the changes and run the app to verify.
