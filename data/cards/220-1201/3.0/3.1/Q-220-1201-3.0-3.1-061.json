@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A monitor supports 144 Hz, but a GPU can only deliver 60 FPS. What is the most likely visual issue?",
+  "answer_options": [
+    "Color banding",
+    "Image ghosting",
+    "No visible difference — they’re independent",
+    "Underutilization of refresh rate with potential stutter"
+  ],
+  "correct_answer": [
+    "Underutilization of refresh rate with potential stutter"
+  ],
+  "explanation": "If the GPU can’t match the monitor’s refresh rate, the display may show repeated frames and stutter during motion scenes.",
+  "tags": [
+    "refresh rate",
+    "FPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How many root server clusters form the foundation of the DNS hierarchy globally?",
+  "answer_options": [
+    "7",
+    "13",
+    "42",
+    "128"
+  ],
+  "correct_answer": [
+    "13"
+  ],
+  "explanation": "There are 13 root server clusters, which are replicated and distributed globally to ensure DNS availability.",
+  "tags": [
+    "root server",
+    "hierarchy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

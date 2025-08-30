@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Where can you find a log of past printing activity for auditing purposes on Windows?",
+  "answer_options": [
+    "Printer driver settings",
+    "Task Scheduler",
+    "Control Panel > Network Settings",
+    "Event Viewer"
+  ],
+  "correct_answer": [
+    "Event Viewer"
+  ],
+  "explanation": "Windows Event Viewer can display audit logs related to print activity, helping with monitoring and accountability.",
+  "tags": [
+    "event viewer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

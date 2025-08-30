@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are signs of a failing hard drive? (Select all that apply)",
+  "answer_options": [
+    "Clicking noises",
+    "Retry reads",
+    "Cannot read from source disc",
+    "Low battery prompt",
+    "Sluggish mouse movement"
+  ],
+  "correct_answer": [
+    "Clicking noises",
+    "Retry reads",
+    "Cannot read from source disc"
+  ],
+  "explanation": "All three are direct indicators of drive problems: mechanical (clicking), sector degradation (retry reads), and read failures.",
+  "tags": [
+    "clicking noises",
+    "retry reads",
+    "cannot read from source disc"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

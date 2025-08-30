@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How does a capacitive touchscreen detect input?",
+  "answer_options": [
+    "By sensing temperature changes from a finger",
+    "By measuring pressure applied to the screen",
+    "By detecting the electrical charge from the user's skin",
+    "By reflecting infrared light across the panel"
+  ],
+  "correct_answer": [
+    "By detecting the electrical charge from the user's skin"
+  ],
+  "explanation": "Capacitive touchscreens rely on the conductive properties of human skin to detect electrical disturbances on the surface.",
+  "tags": [
+    "capacitive touchscreen"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

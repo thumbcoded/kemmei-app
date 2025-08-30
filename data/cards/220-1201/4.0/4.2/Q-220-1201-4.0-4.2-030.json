@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following statements best describes a community cloud?",
+  "answer_options": [
+    "It is managed by a public cloud vendor for use by all customers",
+    "It is designed for temporary disaster recovery use only",
+    "It is shared among several organizations with similar needs or goals",
+    "It allows simultaneous access to hybrid and public resources"
+  ],
+  "correct_answer": [
+    "It is shared among several organizations with similar needs or goals"
+  ],
+  "explanation": "Community clouds serve multiple organizations that share costs, infrastructure, or compliance objectives.",
+  "tags": [
+    "community cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

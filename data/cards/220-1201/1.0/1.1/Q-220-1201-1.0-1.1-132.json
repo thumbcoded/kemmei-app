@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-132",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A corporate IT department manages laptops from three different manufacturers with varying serviceability designs. What is the most critical consideration when developing standardized troubleshooting procedures?",
+  "answer_options": [
+    "Using the same diagnostic software for all models",
+    "Training technicians on manufacturer-specific access methods and form factor limitations",
+    "Ordering identical replacement parts for all laptops",
+    "Implementing the same warranty policies across all brands"
+  ],
+  "correct_answer": [
+    "Training technicians on manufacturer-specific access methods and form factor limitations"
+  ],
+  "explanation": "The most critical factor is ensuring technicians understand each manufacturer's specific serviceability design, component access methods, and form factor constraints, as these directly impact troubleshooting effectiveness and safety.",
+  "tags": [
+    "manufacturer differences",
+    "serviceability",
+    "form factor limitations",
+    "laptop troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are limitations of using a tone generator and probe? (Select all that apply)",
+  "answer_options": [
+    "Cannot trace cables in powered state",
+    "Does not work on fiber optic cabling",
+    "May produce ambiguous results in dense cable bundles",
+    "Requires active internet connection to function"
+  ],
+  "correct_answer": [
+    "Cannot trace cables in powered state",
+    "Does not work on fiber optic cabling",
+    "May produce ambiguous results in dense cable bundles"
+  ],
+  "explanation": "Tone and probe tools work only on copper wiring, require the cable to be unpowered, and may struggle with accuracy in environments with many closely packed cables.",
+  "tags": [
+    "tone generator",
+    "limitations"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

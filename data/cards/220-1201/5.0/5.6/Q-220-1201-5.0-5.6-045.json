@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is most responsible for managing the transition between multiple print jobs in a multi-user environment?",
+  "answer_options": [
+    "Printer firmware",
+    "Network spool buffer",
+    "Print spooler service",
+    "Default print driver"
+  ],
+  "correct_answer": [
+    "Print spooler service"
+  ],
+  "explanation": "The print spooler handles job scheduling and sequencing across users, managing the queue and delivery to the printer.",
+  "tags": [
+    "print spooler",
+    "print queue"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

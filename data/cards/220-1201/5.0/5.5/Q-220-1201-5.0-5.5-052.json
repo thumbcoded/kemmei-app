@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which wireless configuration change could reduce interference from neighboring networks?",
+  "answer_options": [
+    "Lowering screen brightness",
+    "Enabling file sharing",
+    "Changing the AP channel settings",
+    "Reducing the power supply wattage"
+  ],
+  "correct_answer": [
+    "Changing the AP channel settings"
+  ],
+  "explanation": "Selecting a less crowded channel helps avoid overlap with neighboring wireless signals.",
+  "tags": [
+    "AP channel settings",
+    "access point settings",
+    "AP configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

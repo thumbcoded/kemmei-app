@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which option must you adjust if a document intended for portrait orientation prints in landscape?",
+  "answer_options": [
+    "Paper weight",
+    "Print driver settings",
+    "Tray alignment",
+    "Ink saturation"
+  ],
+  "correct_answer": [
+    "Print driver settings"
+  ],
+  "explanation": "Incorrect page orientation usually results from misconfigured driver settings that override the intended layout.",
+  "tags": [
+    "print driver settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

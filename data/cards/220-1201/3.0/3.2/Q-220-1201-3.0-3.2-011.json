@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are characteristics of HDMI? (Select all that apply)",
+  "answer_options": [
+    "Carries both audio and video signals",
+    "Uses a 19-pin connector",
+    "Supports packetized video like Ethernet",
+    "Can be used with DVI through passive adapters",
+    "Includes a locking mechanism to prevent removal"
+  ],
+  "correct_answer": [
+    "Carries both audio and video signals",
+    "Uses a 19-pin connector",
+    "Can be used with DVI through passive adapters"
+  ],
+  "explanation": "HDMI supports digital audio and video, uses a 19-pin Type A connector, and can be passively adapted to DVI, but it does not use packetized video or have a locking latch.",
+  "tags": [
+    "HDMI",
+    "audio and video",
+    "19-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

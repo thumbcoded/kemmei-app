@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-170",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of cache memory in a CPU?",
+  "answer_options": [
+    "Store operating system files",
+    "Provide long-term data storage",
+    "Store frequently used instructions for fast access",
+    "Expand RAM capacity"
+  ],
+  "correct_answer": [
+    "Store frequently used instructions for fast access"
+  ],
+  "explanation": "Cache memory stores frequently accessed data and instructions close to the CPU cores, improving performance by reducing access times.",
+  "tags": [
+    "cache memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

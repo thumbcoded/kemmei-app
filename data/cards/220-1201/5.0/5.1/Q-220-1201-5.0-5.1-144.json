@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-144",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What are performance issues in the context of hardware troubleshooting and how do you identify them?",
+  "answer_options": [
+    "Performance issues only relate to software optimization and application efficiency",
+    "Slow operation, reduced throughput, thermal throttling - monitor temps, speeds, benchmarks",
+    "Performance problems exclusively indicate network connectivity issues",
+    "All performance issues require immediate hardware replacement without testing"
+  ],
+  "correct_answer": [
+    "Slow operation, reduced throughput, thermal throttling - monitor temps, speeds, benchmarks"
+  ],
+  "explanation": "Hardware performance issues include: slow operation, reduced throughput, thermal throttling, and component degradation. Identify by: monitoring CPU/GPU temperatures, checking clock speeds, running benchmarks, monitoring resource utilization, checking for dust buildup, and verifying proper cooling operation. Compare results to baseline performance and manufacturer specifications.",
+  "tags": [
+    "performance issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

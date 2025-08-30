@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario would most likely cause Bluetooth connectivity to degrade?",
+  "answer_options": [
+    "Using a 6 GHz access point on another floor",
+    "Pairing a headset near an active microwave oven",
+    "Streaming video over 5 GHz Wi-Fi",
+    "Accessing NFC credentials on a smartphone"
+  ],
+  "correct_answer": [
+    "Pairing a headset near an active microwave oven"
+  ],
+  "explanation": "Microwave ovens operate around 2.45 GHz and can severely disrupt Bluetooth communication due to frequency overlap.",
+  "tags": [
+    "Bluetooth",
+    "2.4 GHz"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

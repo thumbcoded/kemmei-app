@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following best practices should be followed when working with modular power supplies? (Select all that apply)",
+  "answer_options": [
+    "Label cables before disconnecting for replacement",
+    "Use only cables that came with the specific PSU model",
+    "Always plug in all modular ports even if not needed",
+    "Cross-reference connector labels with documentation",
+    "Mixing cables from different brands is usually safe"
+  ],
+  "correct_answer": [
+    "Label cables before disconnecting for replacement",
+    "Use only cables that came with the specific PSU model",
+    "Cross-reference connector labels with documentation"
+  ],
+  "explanation": "Modular PSUs vary by brand and model. Mixing cables or skipping documentation may lead to voltage mismatch and hardware damage.",
+  "tags": [
+    "modular power supply",
+    "power supply documentation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

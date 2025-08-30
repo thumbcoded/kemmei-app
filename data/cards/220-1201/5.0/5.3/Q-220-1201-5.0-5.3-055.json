@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports flashing black and white blocks after accidentally dropping a laptop. Which of the following is the MOST likely required solution?",
+  "answer_options": [
+    "Run Windows diagnostics in Safe Mode",
+    "Replace the LCD panel",
+    "Update the display firmware",
+    "Disable hardware acceleration"
+  ],
+  "correct_answer": [
+    "Replace the LCD panel"
+  ],
+  "explanation": "Physical trauma to an LCD screen often causes internal fractures and visual artifacts that can’t be fixed with software — replacement is necessary.",
+  "tags": [
+    "liquid crystal display damage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

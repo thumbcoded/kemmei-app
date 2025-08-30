@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main benefit of using different frequencies on your wireless access point?",
+  "answer_options": [
+    "Prevents IP conflicts",
+    "Improves broadcast storm handling",
+    "Reduces interference from nearby networks",
+    "Speeds up DHCP lease renewal"
+  ],
+  "correct_answer": [
+    "Reduces interference from nearby networks"
+  ],
+  "explanation": "Choosing different frequencies can minimize overlap with other APs and reduce signal conflicts.",
+  "tags": [
+    "different frequencies",
+    "frequency problems",
+    "frequency evaluation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

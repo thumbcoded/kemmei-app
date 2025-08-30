@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system powers on but the HDD activity light stays off. The drive is functional. What is the MOST likely cause?",
+  "answer_options": [
+    "Faulty SATA data cable",
+    "Improperly connected HDD LED header",
+    "Corrupted file system",
+    "Loose 24-pin power connector"
+  ],
+  "correct_answer": [
+    "Improperly connected HDD LED header"
+  ],
+  "explanation": "The HDD LED pin header is responsible for lighting the case LED based on disk activity. If wired backward or to the wrong pin, it will not function.",
+  "tags": [
+    "pin headers",
+    "LEDs"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a troubleshooting scenario, which DisplayPort feature can complicate signal analysis compared to HDMI?",
+  "answer_options": [
+    "19-pin connector design",
+    "Support for packetized video",
+    "Backward compatibility with VGA",
+    "Signal encryption over coaxial shielding"
+  ],
+  "correct_answer": [
+    "Support for packetized video"
+  ],
+  "explanation": "DisplayPort's use of packetized video introduces timing and buffering behavior that differs from HDMI's continuous signal, complicating low-level troubleshooting and signal decoding.",
+  "tags": [
+    "packetized video"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

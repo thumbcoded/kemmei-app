@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature distinguishes NVMe SSDs from SATA SSDs?",
+  "answer_options": [
+    "NVMe SSDs are compatible with USB ports",
+    "NVMe SSDs use spinning disks",
+    "NVMe SSDs connect over PCIe, offering faster speeds",
+    "NVMe SSDs require external power sources"
+  ],
+  "correct_answer": [
+    "NVMe SSDs connect over PCIe, offering faster speeds"
+  ],
+  "explanation": "NVMe is a protocol designed for SSDs that operate over PCIe, delivering superior speed over SATA-based SSDs.",
+  "tags": [
+    "NVMe SSD",
+    "PCIe"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

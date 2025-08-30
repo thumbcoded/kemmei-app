@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are key differences between Wi-Fi analyzers and spectrum analyzers? (Select all that apply)",
+  "answer_options": [
+    "Spectrum analyzers can detect non-Wi-Fi signals",
+    "Wi-Fi analyzers provide SSID and channel details",
+    "Wi-Fi analyzers require physical access to the router",
+    "Spectrum analyzers show raw RF signal strength across frequencies"
+  ],
+  "correct_answer": [
+    "Spectrum analyzers can detect non-Wi-Fi signals",
+    "Wi-Fi analyzers provide SSID and channel details",
+    "Spectrum analyzers show raw RF signal strength across frequencies"
+  ],
+  "explanation": "Wi-Fi analyzers interpret 802.11 traffic and show logical Wi-Fi details like SSIDs and channels. Spectrum analyzers visualize all RF signals, not just Wi-Fi, without needing logical protocol interpretation.",
+  "tags": [
+    "spectrum analyzer",
+    "Wi-Fi analyzer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

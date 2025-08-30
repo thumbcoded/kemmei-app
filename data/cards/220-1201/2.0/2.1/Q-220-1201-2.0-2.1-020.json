@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which sequence of flags is used during the TCP three-way handshake?",
+  "answer_options": [
+    "SYN, SYN-ACK, ACK",
+    "ACK, FIN, SYN",
+    "SYN, ACK, FIN",
+    "FIN, FIN-ACK, ACK"
+  ],
+  "correct_answer": [
+    "SYN, SYN-ACK, ACK"
+  ],
+  "explanation": "The three-way handshake begins with SYN (synchronize), followed by SYN-ACK from the server, and concludes with ACK from the client.",
+  "tags": [
+    "three-way handshake",
+    "SYN",
+    "ACK"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

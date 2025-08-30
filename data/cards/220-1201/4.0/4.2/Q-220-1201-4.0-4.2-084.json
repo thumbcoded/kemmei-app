@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key characteristic of a private cloud?",
+  "answer_options": [
+    "It is accessible only through mobile devices",
+    "It provides shared access to multiple organizations",
+    "It is built and maintained by an organization for its exclusive use",
+    "It offers free services to the public"
+  ],
+  "correct_answer": [
+    "It is built and maintained by an organization for its exclusive use"
+  ],
+  "explanation": "Private clouds are hosted in an organization's own data center and are dedicated solely to that organization.",
+  "tags": [
+    "private cloud deployment",
+    "dedicated resources"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

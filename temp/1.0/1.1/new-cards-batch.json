@@ -1,0 +1,111 @@
+[
+{
+  "cert_id": ["220-1201"],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason laptop troubleshooting requires more precision than desktop computer troubleshooting?",
+  "answer_options": [
+    "Laptops use different operating systems",
+    "Laptops are built to very precise specifications with small components",
+    "Laptops require special diagnostic software",
+    "Laptops have fewer components than desktops"
+  ],
+  "correct_answer": [
+    "Laptops are built to very precise specifications with small components"
+  ],
+  "explanation": "Laptops are built to very precise specifications and contain very small components packed into a compact form factor, requiring more precise troubleshooting approaches than desktop systems.",
+  "tags": ["laptop troubleshooting", "precise specifications", "small components"],
+  "status": "approved"
+},
+{
+  "cert_id": ["220-1201"],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why do different laptop manufacturers have very different processes for managing and troubleshooting their systems?",
+  "answer_options": [
+    "They use different operating systems",
+    "They have different serviceability designs and form factor limitations",
+    "They require different types of power supplies",
+    "They use proprietary diagnostic protocols"
+  ],
+  "correct_answer": [
+    "They have different serviceability designs and form factor limitations"
+  ],
+  "explanation": "Different laptop manufacturers engineer their systems with varying levels of serviceability, from easily accessible components to sealed designs, leading to different troubleshooting approaches.",
+  "tags": ["manufacturer differences", "serviceability", "form factor limitations"],
+  "status": "approved"
+},
+{
+  "cert_id": ["220-1201"],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which factors contribute to the complexity of laptop troubleshooting compared to desktop systems? (Select all that apply)",
+  "answer_options": [
+    "Very small components packed in tight spaces",
+    "Manufacturer-specific serviceability designs",
+    "Form factor limitations affecting access",
+    "Standardized component layouts",
+    "Precise specifications requiring careful handling"
+  ],
+  "correct_answer": [
+    "Very small components packed in tight spaces",
+    "Manufacturer-specific serviceability designs", 
+    "Form factor limitations affecting access",
+    "Precise specifications requiring careful handling"
+  ],
+  "explanation": "Laptop troubleshooting complexity stems from miniaturized components, varying manufacturer approaches to serviceability, physical access limitations, and the need for precise handling due to tight engineering tolerances.",
+  "tags": ["small components", "manufacturer differences", "form factor limitations", "precise specifications"],
+  "status": "approved"
+},
+{
+  "cert_id": ["220-1201"],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to service two different laptop models. One allows easy memory and storage replacement, while the other requires complete disassembly for component access. What does this illustrate about laptop troubleshooting?",
+  "answer_options": [
+    "All laptops follow the same service procedures",
+    "Manufacturer differences significantly impact serviceability and troubleshooting approaches",
+    "Newer laptops are always easier to service than older models",
+    "Component type determines service difficulty regardless of manufacturer"
+  ],
+  "correct_answer": [
+    "Manufacturer differences significantly impact serviceability and troubleshooting approaches"
+  ],
+  "explanation": "This scenario demonstrates how different manufacturers design their laptops with varying levels of serviceability, requiring technicians to adapt their troubleshooting approaches based on the specific system design.",
+  "tags": ["manufacturer differences", "serviceability", "laptop troubleshooting"],
+  "status": "approved"
+},
+{
+  "cert_id": ["220-1201"],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A corporate IT department manages laptops from three different manufacturers with varying serviceability designs. What is the most critical consideration when developing standardized troubleshooting procedures?",
+  "answer_options": [
+    "Using the same diagnostic software for all models",
+    "Training technicians on manufacturer-specific access methods and form factor limitations",
+    "Ordering identical replacement parts for all laptops",
+    "Implementing the same warranty policies across all brands"
+  ],
+  "correct_answer": [
+    "Training technicians on manufacturer-specific access methods and form factor limitations"
+  ],
+  "explanation": "The most critical factor is ensuring technicians understand each manufacturer's specific serviceability design, component access methods, and form factor constraints, as these directly impact troubleshooting effectiveness and safety.",
+  "tags": ["manufacturer differences", "serviceability", "form factor limitations", "laptop troubleshooting"],
+  "status": "approved"
+}
+]

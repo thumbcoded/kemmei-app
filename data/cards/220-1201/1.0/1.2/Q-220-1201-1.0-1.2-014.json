@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following devices commonly use Bluetooth to communicate wirelessly? (Select all that apply)",
+  "answer_options": [
+    "Wireless headset",
+    "Wireless speaker",
+    "Webcam",
+    "Stylus",
+    "NFC sensor"
+  ],
+  "correct_answer": [
+    "Wireless headset",
+    "Wireless speaker",
+    "Stylus"
+  ],
+  "explanation": "Bluetooth is used in many short-range personal peripherals like headsets, speakers, and styluses. Webcams often use USB, and NFC is a separate wireless tech.",
+  "tags": [
+    "Bluetooth",
+    "wireless",
+    "wireless headset",
+    "wireless speaker"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

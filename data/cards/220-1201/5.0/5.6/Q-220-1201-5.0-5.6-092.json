@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A diagnostics tool shows a firmware mismatch and corrupted test print results across multiple machines. What’s the most appropriate next step?",
+  "answer_options": [
+    "Replace the toner cartridge",
+    "Reinstall the OS print driver",
+    "Update the printer firmware",
+    "Run the print spooler repair utility"
+  ],
+  "correct_answer": [
+    "Update the printer firmware"
+  ],
+  "explanation": "If multiple machines produce issues and diagnostics point to firmware mismatch, updating the firmware is a logical first response.",
+  "tags": [
+    "test print",
+    "printer diagnostics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a technician prefer a loopback plug over a network cable and remote tester when diagnosing a NIC issue?",
+  "answer_options": [
+    "Loopback plugs consume less power from the NIC",
+    "They work better with fiber interfaces",
+    "They test the NIC in isolation, without network dependency",
+    "They encrypt the test signal for security"
+  ],
+  "correct_answer": [
+    "They test the NIC in isolation, without network dependency"
+  ],
+  "explanation": "Loopback plugs allow direct, local verification of NIC transmit/receive circuitry without relying on remote connectivity or network infrastructure.",
+  "tags": [
+    "loopback",
+    "NIC",
+    "isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

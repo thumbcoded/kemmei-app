@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-123",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component in a dot matrix printer is a consumable item?",
+  "answer_options": [
+    "Laser diode",
+    "Ribbon",
+    "Fuser",
+    "Print bed"
+  ],
+  "correct_answer": [
+    "Ribbon"
+  ],
+  "explanation": "Dot matrix printers use inked ribbons, which wear out over time and require replacement.",
+  "tags": [
+    "ribbon"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a major disadvantage of an inkjet printer that uses integrated cartridges with print heads?",
+  "answer_options": [
+    "Lower print resolution",
+    "More frequent calibration",
+    "Increased cost per replacement",
+    "Inability to print in black and white"
+  ],
+  "correct_answer": [
+    "Increased cost per replacement"
+  ],
+  "explanation": "Cartridges that include the print head are more expensive to replace than ink-only cartridges.",
+  "tags": [
+    "print head",
+    "ink cartridge"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

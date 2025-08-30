@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is parity memory considered limited in protecting data integrity?",
+  "answer_options": [
+    "It can only detect but not correct memory errors",
+    "It requires expensive hardware support",
+    "It uses more power than ECC memory",
+    "It only works with DDR5 modules"
+  ],
+  "correct_answer": [
+    "It can only detect but not correct memory errors"
+  ],
+  "explanation": "Parity memory can identify that an error occurred but cannot fix it, unlike ECC memory.",
+  "tags": [
+    "parity memory",
+    "memory error detection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

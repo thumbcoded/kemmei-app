@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the 'scan to cloud' feature typically allow a user to do?",
+  "answer_options": [
+    "Scan directly to an external fax number",
+    "Store the scanned file on a cloud storage account",
+    "Email the scanned file using a proxy server",
+    "Convert scanned files to audio"
+  ],
+  "correct_answer": [
+    "Store the scanned file on a cloud storage account"
+  ],
+  "explanation": "Scan to cloud sends scanned documents to online storage platforms like Google Drive or Dropbox.",
+  "tags": [
+    "scan to cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

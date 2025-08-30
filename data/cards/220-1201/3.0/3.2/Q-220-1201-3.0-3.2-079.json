@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which characteristic of coaxial cabling makes it particularly suitable for broadband cable modem service?",
+  "answer_options": [
+    "It is immune to electromagnetic interference (EMI) due to fiber core",
+    "It supports full-duplex communication natively",
+    "It uses shielding to minimize signal loss over long distances",
+    "It splits digital and analog signals on separate wires"
+  ],
+  "correct_answer": [
+    "It uses shielding to minimize signal loss over long distances"
+  ],
+  "explanation": "Coaxial cables have a central conductor and shielded layers, reducing signal degradation and making them suitable for broadband service.",
+  "tags": [
+    "coaxial cable",
+    "cable modem"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

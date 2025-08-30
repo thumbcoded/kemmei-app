@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-112",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a startup device in BIOS context and how does it differ from storage devices?",
+  "answer_options": [
+    "Startup devices are only USB drives that can boot the system",
+    "Any device configured in BIOS that can contain bootable code, differs from storage in requiring valid boot sectors",
+    "Storage devices that are connected internally to the motherboard",
+    "Network devices that provide internet connectivity during boot"
+  ],
+  "correct_answer": [
+    "Any device configured in BIOS that can contain bootable code, differs from storage in requiring valid boot sectors"
+  ],
+  "explanation": "A startup device is any device configured in BIOS that can contain bootable code, including storage drives, USB devices, optical drives, or network interfaces (PXE). It differs from storage devices in that not all storage devices are bootable - they must contain valid boot sectors and operating systems to function as startup devices.",
+  "tags": [
+    "startup device"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

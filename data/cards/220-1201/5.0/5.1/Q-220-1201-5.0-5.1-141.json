@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-141",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is power switch verification in motherboard troubleshooting and why is it important?",
+  "answer_options": [
+    "Testing electrical outlets and power cords for proper voltage delivery",
+    "Verify case power button connects properly to motherboard and functions correctly",
+    "Power switch verification only applies to laptop computers with battery systems",
+    "Checking power supply unit efficiency ratings and certification standards"
+  ],
+  "correct_answer": [
+    "Verify case power button connects properly to motherboard and functions correctly"
+  ],
+  "explanation": "Power switch verification tests: 1) Check front panel connector attachment to motherboard, 2) Verify correct pin placement for power button, 3) Test by manually shorting power pins on motherboard, 4) Check for stuck or damaged case power button, 5) Verify power LED connections. Important because faulty power switches can prevent system startup entirely.",
+  "tags": [
+    "power switch verification"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

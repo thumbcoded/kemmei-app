@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two components typically required for a thin client to access a VDI.",
+  "answer_options": [
+    "Display",
+    "Hard drive with over 1 TB capacity",
+    "Keyboard and mouse",
+    "Local hypervisor"
+  ],
+  "correct_answer": [
+    "Display",
+    "Keyboard and mouse"
+  ],
+  "explanation": "Input (keyboard/mouse) and output (display) are essential for interacting with a virtual desktop, even on a thin client.",
+  "tags": [
+    "display",
+    "keyboard and mouse"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

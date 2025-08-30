@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does duplex printing allow you to do?",
+  "answer_options": [
+    "Print multiple pages per sheet",
+    "Print on both sides of the paper",
+    "Print with enhanced color resolution",
+    "Print in grayscale only"
+  ],
+  "correct_answer": [
+    "Print on both sides of the paper"
+  ],
+  "explanation": "Duplex printing refers to the ability of a printer to automatically print on both sides of a single sheet of paper.",
+  "tags": [
+    "duplex printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

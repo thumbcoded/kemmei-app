@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is signal degradation a greater concern with VGA compared to DVI-D at the same cable length?",
+  "answer_options": [
+    "VGA uses thinner conductors than DVI-D cables",
+    "VGA transmits uncompressed audio with video",
+    "VGA uses analog signals which are more susceptible to interference",
+    "DVI-D uses encryption that reduces signal noise"
+  ],
+  "correct_answer": [
+    "VGA uses analog signals which are more susceptible to interference"
+  ],
+  "explanation": "Analog video signals from VGA degrade faster and are more prone to distortion over longer distances than digital signals from DVI-D.",
+  "tags": [
+    "analog video",
+    "VGA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

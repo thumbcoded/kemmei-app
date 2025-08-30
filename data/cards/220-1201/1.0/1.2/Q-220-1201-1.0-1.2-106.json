@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-106",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An organization wants to deploy NFC-based access control where employees can use their smartphones to unlock doors. What is the primary security consideration?",
+  "answer_options": [
+    "NFC range is too long for secure access",
+    "Smartphones can be easily cloned",
+    "NFC requires line-of-sight communication",
+    "Lost or stolen devices could provide unauthorized access"
+  ],
+  "correct_answer": [
+    "Lost or stolen devices could provide unauthorized access"
+  ],
+  "explanation": "The main security concern with NFC-based access control is that lost or stolen smartphones could be used by unauthorized individuals to gain access unless additional security measures are implemented.",
+  "tags": [
+    "NFC",
+    "near field communication",
+    "wireless",
+    "access control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

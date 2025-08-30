@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What was the primary reason for the transition from AHCI to NVMe in SSD technologies?",
+  "answer_options": [
+    "Support for optical drives",
+    "Larger cache memory",
+    "Improved compatibility with HDDs",
+    "Reduced latency and increased throughput"
+  ],
+  "correct_answer": [
+    "Reduced latency and increased throughput"
+  ],
+  "explanation": "NVMe provides significantly lower latency and higher throughput by using a more efficient protocol tailored for SSDs and direct PCIe access.",
+  "tags": [
+    "non-volatile storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

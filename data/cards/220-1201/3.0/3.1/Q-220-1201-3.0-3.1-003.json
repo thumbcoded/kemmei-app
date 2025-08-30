@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the function of the backlight in an LCD monitor?",
+  "answer_options": [
+    "To generate image data",
+    "To power the LCD panel",
+    "To provide light that passes through the liquid crystals",
+    "To filter out colors"
+  ],
+  "correct_answer": [
+    "To provide light that passes through the liquid crystals"
+  ],
+  "explanation": "LCDs do not emit light on their own. The backlight provides illumination behind the liquid crystals.",
+  "tags": [
+    "backlight"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

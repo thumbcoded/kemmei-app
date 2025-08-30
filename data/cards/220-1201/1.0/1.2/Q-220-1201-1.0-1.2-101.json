@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-101",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary advantage of using an external webcam over a built-in laptop camera?",
+  "answer_options": [
+    "Better image quality and positioning flexibility",
+    "Lower power consumption",
+    "Smaller physical size",
+    "Automatic driver installation"
+  ],
+  "correct_answer": [
+    "Better image quality and positioning flexibility"
+  ],
+  "explanation": "External webcams typically offer superior image quality, higher resolution, and the ability to position the camera independently of the laptop screen for better angles.",
+  "tags": [
+    "external camera",
+    "USB camera",
+    "webcam",
+    "video conferencing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following threats are specifically mitigated by implementing PIN-protected printing or badging? (Select all that apply)",
+  "answer_options": [
+    "Unauthorized viewing of printed confidential data",
+    "Jobs printing from compromised endpoints",
+    "Sensitive documents left unattended in trays",
+    "Accidental printing of test pages",
+    "Untracked printing activity by guest users"
+  ],
+  "correct_answer": [
+    "Unauthorized viewing of printed confidential data",
+    "Sensitive documents left unattended in trays",
+    "Untracked printing activity by guest users"
+  ],
+  "explanation": "Secured printing methods like PINs and badges help protect printed output from unauthorized access and enforce traceable user activity. They do not directly prevent endpoint compromise or accidental page generation.",
+  "tags": [
+    "PIN-protected printing",
+    "badging",
+    "secured prints"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

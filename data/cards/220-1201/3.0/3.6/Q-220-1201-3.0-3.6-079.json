@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician accidentally installs a 24-pin power connector into a legacy 20-pin motherboard. What is the MOST likely result?",
+  "answer_options": [
+    "The motherboard will not receive any power",
+    "The extra 4 pins will short the board and cause permanent damage",
+    "The motherboard will power on if the correct 20 pins are aligned",
+    "The CPU will overheat due to voltage mismatch"
+  ],
+  "correct_answer": [
+    "The motherboard will power on if the correct 20 pins are aligned"
+  ],
+  "explanation": "Most 24-pin connectors are designed to support older 20-pin headers. As long as the connector is properly aligned, the system should function.",
+  "tags": [
+    "24-pin connector",
+    "20-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

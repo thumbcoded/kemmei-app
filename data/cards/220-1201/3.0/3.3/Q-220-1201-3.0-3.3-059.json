@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why a CPU might remain idle even when memory bandwidth appears sufficient on paper?",
+  "answer_options": [
+    "Memory modules are operating below rated voltage",
+    "RAM has reached its end-of-life threshold",
+    "The memory controller or channel is saturated, causing transfer delays",
+    "The operating system is prioritizing disk caching over RAM access"
+  ],
+  "correct_answer": [
+    "The memory controller or channel is saturated, causing transfer delays"
+  ],
+  "explanation": "Even with fast memory, bottlenecks in the controller or communication channels can prevent efficient data transfer, leaving the CPU waiting.",
+  "tags": [
+    "memory bandwidth",
+    "CPU-memory communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

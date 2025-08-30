@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a technician choose a mini-ITX motherboard?",
+  "answer_options": [
+    "To support multiple CPUs",
+    "For large server installations",
+    "For compact system builds",
+    "To provide maximum expandability"
+  ],
+  "correct_answer": [
+    "For compact system builds"
+  ],
+  "explanation": "mini-ITX boards are popular for compact systems due to their small size and efficient design.",
+  "tags": [
+    "mini-ITX",
+    "compact systems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

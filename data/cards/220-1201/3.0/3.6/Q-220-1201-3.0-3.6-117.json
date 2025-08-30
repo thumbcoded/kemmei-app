@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common method for determining the appropriate wattage for a power supply?",
+  "answer_options": [
+    "Use the CPU wattage rating alone",
+    "Guess based on the size of the PC case",
+    "Add up the power requirements of all components",
+    "Select the most expensive power supply available"
+  ],
+  "correct_answer": [
+    "Add up the power requirements of all components"
+  ],
+  "explanation": "To choose a power supply, add up the maximum wattage needs of all system components.",
+  "tags": [
+    "wattage calculation",
+    "power supply selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

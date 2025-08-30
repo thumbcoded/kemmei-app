@@ -1,0 +1,111 @@
+# Virtualization Overview
+
+## Introduction to Virtualization
+
+With virtualization, you can have one physical device and run multiple operating systems on that same computer. For example, you might have a computer like I do that runs macOS, and you can run Windows 11 and Linux all at the same time on that same system. This means that you have a separate operating system, separate CPU, dedicated memory, and a separate network connection for each of these virtualized operating systems.
+
+If all of these different operating systems are virtualized on your desktop, then we refer to this as host-based virtualization. This means you're running something like macOS as the primary operating system and then virtualizing other operating systems on top of that.
+
+In an enterprise environment, we tend to use a single computer that has multiple operating systems running on it in a virtualized form. There is no desktop to choose from; instead, you have a single device that has multiple VMs running on that single computer. Although virtualization has become very popular on our computers and our servers, this is a technology that we've been running since 1967 when it was first introduced on IBM mainframes. We're using that same concept that we used back then to virtualize our modern operating systems on modern hardware.
+
+## Applications of Virtualization
+
+There are a lot of things you can do with a virtualized operating system or what we commonly refer to as a virtual machine or VM.
+
+### Sandboxing and Development
+
+If you're building your own applications, you might want to create a virtual machine that handles sandboxing. Sandboxing is an isolated environment that you can use during the development process to try out different aspects of code or to run things in a different OS to see what the effect might be. The benefit here, of course, is that you're running this in a virtualized environment that is designed for testing, so if something doesn't work properly or it even creates a problem with the operating system, the only thing that's affected is that single virtual machine.
+
+Because most of these virtualized systems have ways to take snapshots of the configuration at any point in time, you can create a snapshot, make some changes to that virtual machine, and if those changes cause a problem, you can revert back to the previous snapshot in a matter of moments. This also means we can create multiple virtual machines running multiple operating systems and be able to run that code in each one of those VMs to see what the effect might be.
+
+This means developers can write their own code, put them into a virtual machine in a protected and secure environment that won't affect anything if something happens to go wrong, and once the entire application has been written, they can put that code onto a test virtual machine that mirrors an actual configuration that runs in production. This means the developer can now run their test code in an environment that is very similar to what the end users will be using.
+
+### Legacy Application Support
+
+Sometimes virtualization is not about application development but instead being able to support operating systems that we don't normally use. For example, you may be running Windows 11 on your desktop, but you might have some applications that only run in Windows 10. One way that you can run both your Windows 11 desktop and the Windows 10 apps at the same time is through the use of virtualization.
+
+That's exactly what we've done here: I have a Windows 11 system that I'm running in one window and a Windows 10 system that I'm running in another. This allows me to switch back and forth between operating systems and run applications that may only run in one particular OS. This means I can switch back and forth between different operating systems and run the application that works best in that particular version of the OS.
+
+You can see that we are running simultaneously on this computer a Windows 11 Pro system and a Windows 10 Pro system both at the same time, and I can switch back and forth between either of these at any time without having to reboot my system.
+
+### Cross-Platform Virtualization
+
+Of course, this doesn't have to be all the same type of operating system. We could have cross-platform virtualization like the one you see here, so you might run macOS on your desktop, run a Windows VM, run a Linux VM, and run other types of operating systems all on that same platform. You can also do this on demand, so if you need to run one particular application in the afternoon that only runs in Windows 11, you can start your Windows 11 virtual machine, run your application, and then shut it down. You have complete control over which application you're running in which operating system, and you don't have to reboot just to be able to change the OS that you're using.
+
+This is obviously saving time because we don't have to reboot or find another system just to run the application we need, and we're also saving resources because we're able to run all of these different operating systems on one physical computer.
+
+Here's a better view of this multi-platform use of virtualization: I'm running this on my macOS desktop and I'm running a native version of the macOS browser on the left side. On the right side, I'm running a Windows instance and Windows applications inside of that window, and here in the middle is a window that's running Linux and I'm running Linux applications in that window. I'm able to move back and forth between any of these at any time, I'm able to start and stop different operating systems and use whatever application I happen to need at that time regardless of what operating system it uses.
+
+## Hypervisors and Virtual Machine Management
+
+To be able to take advantage of virtualization, you need something that is going to manage the process of keeping all of these different systems running. This is the virtual machine manager, often referred to as the hypervisor. The hypervisor is the software that manages this entire interaction between the virtual world and the physical system it's running on.
+
+Hypervisors can run on almost any system, but many modern hypervisors can take advantage of CPUs that have specifically been built with virtualization in mind. Once this hypervisor is running, it can allocate CPU cycles, memory, networking information, and keep all of that separated between all of the different virtual machines.
+
+### Type 1 Hypervisors (Bare Metal)
+
+To understand more about how all of these different operating systems interact with the hypervisor, I've created this block diagram that starts at the very bottom with the hardware. This is the physical system that the hypervisor is running on. On top of that hardware is the hypervisor, and above the hypervisor are all of the different virtual machines. You'll notice that each virtual machine has its own guest operating system and applications running within that OS.
+
+Since each one of these virtual machines has its own guest operating system installed and running, there is a significant amount of overhead that takes place every time you start a new VM. This means you'll need enough CPU cycles, enough memory, enough drive space for all of these VMs to operate simultaneously on the same physical piece of hardware.
+
+This type of hypervisor that sits right on top of the hardware is known as a Type 1 hypervisor. You might also hear this referred to as a bare metal hypervisor. That's because there's no operating system down at the lowest level; the hypervisor effectively is the primary operating system that is running on top of this hardware. Examples of a Type 1 hypervisor would be VMware's ESXi or Microsoft's Hyper-V.
+
+### Type 2 Hypervisors (Hosted)
+
+If you're running a hypervisor on your own desktop, then you're running a Type 2 hypervisor or a hosted hypervisor. This means you would have the hardware that you're currently using for your computer, you have the normal operating system that you're using (you might be running Windows as the primary operating system on your computer; I'm running macOS on my computer), and that operating system is where you would use all of your native applications.
+
+On top of that operating system, we would then run some hypervisor software on your system. You might be running VMware Workstation, Oracle VirtualBox, or Parallels Desktop to be able to provide that hypervisor running on top of your current operating system. At that point, the Type 1 hypervisor VMs and the Type 2 hypervisor VMs are exactly the same. The only difference is how you're running those VMs: with Type 1, it's running on bare metal, and on Type 2, it's running on a hosted operating system.
+
+## Hardware Requirements and Features
+
+We mentioned earlier that some CPUs have been specifically constructed to work in a virtualized environment. If you're running an Intel processor with this support, they refer to this as Virtualization Technology or VT. If you're running an AMD processor, the same type of functionality is called AMD-V.
+
+The hypervisor is allocating memory to each of these virtual machines and it's using parts of your physical memory inside of your system, so you have to make sure that you have enough RAM in your computer to be able to support all of these different virtual machines running simultaneously. Of course, each of those virtual machines contains a complete installed operating system, the applications that run in that operating system, and the data that you store in those applications. That means you'll need enough drive space to be able to support a fully built operating system and all of the necessary applications in each one of those VMs.
+
+## Networking in Virtual Environments
+
+From the networking perspective, you have complete control over how that virtual machine is able to interact with other devices in the outside world. Most of the hypervisors that you run on your local computer (the client-side virtual machine managers) have their own virtual networks that are configured internally to your system. This means the hypervisor will be in control of determining whether that VM can only communicate to itself or if it can communicate outside of that VM to other devices.
+
+### Network Configuration Options
+
+Some hypervisors will configure a shared network address. This means that the hypervisor has its own IP subnet that's different than any other network that you're currently using, and when devices on that network need to communicate out to the physical network, it performs a network address translation to be able to communicate outside the scope of that hypervisor.
+
+You can also configure a virtual machine to look and act as if it's any other device that's on your local network. We refer to this as a bridge network address. There's no network address translation, and all of your virtual machines have the same IP subnet and act as if they are on your same local network.
+
+If this is a highly secure virtual machine that should not be communicating to any other devices, you can configure your hypervisor with a private address so that virtual machine can only communicate with itself and any other devices that you decide.
+
+## Security Considerations
+
+Security is always a concern when you're running so many different operating systems on one physical device. Fortunately, there have not been any significant security breaches relating to hypervisors, but this is something that hypervisor manufacturers and developers are always aware of.
+
+### VM Escape Vulnerability
+
+One type of security vulnerability that is top of mind for these hypervisor developers is a VM escape. This is when malware might find itself onto one virtual machine and use a flaw in the hypervisor to be able to communicate to other virtual machines that are supported by that same hypervisor. This would obviously be a significant issue if someone was able to do this. This would allow malware that would normally be isolated on one single virtual machine to be able to reach out and control or access data that might be on a different virtual machine. This would obviously be a significant security concern, and thankfully we've not seen any significant breaches that are related to a VM escape.
+
+### VM Security Best Practices
+
+Of course, each of these virtual machines is its own self-contained operating system, and we have to be sure that we configure the security for that virtual machine as if it was a standalone workstation or standalone server. This means we would use traditional security controls on those devices. We would configure a firewall, we would install the appropriate anti-malware software, and configure the operating system to be hardened just like any other OS.
+
+One technique that some attackers like to use is to publish a virtual machine on the internet for anyone to be able to download and use, but of course these malware authors are embedding their malware inside of that VM. When you start running that virtual machine on your own environment, you're running an operating system that is already infected with the malware. This is why it's always a good idea to build your own virtual machine so you know exactly what software is running in those devices. If you are downloading a virtual machine from the internet, make sure that you are completely aware of the information that is contained on that VM and that you're taking the appropriate security mechanisms to keep that VM and all of your data safe.
+
+## Virtual Desktop Infrastructure (VDI)
+
+Well, if we can run a separate operating system in a window on our desktop, why can't we virtualize the entire desktop? That is a technology known as Virtual Desktop Infrastructure or VDI. This means that your desktop would run as a virtual machine on a separate device, commonly across the network or in the cloud, and the only thing that you would really need on your desk is a keyboard, a mouse, and some type of display. Sometimes you may hear this referred to as Desktop as a Service or DaaS.
+
+This means you don't need a significant CPU, a lot of memory, or even a lot of storage on your local computer. All of the work is done on the virtualized client that's running on that virtual system. Obviously, we are sending information to update the screen that is running on our local device, so we obviously need some type of network communication, but these days we tend to have significant bandwidths available to us which allow us to run technologies such as virtual desktop infrastructure.
+
+Once you're running the virtual desktop, it looks, acts, and interacts with you exactly like a normal OS. From the user's perspective, they're running an operating system that's running on their local device, even though they're really running this OS as a virtualized system across the cloud.
+
+## Application Containerization
+
+We mentioned earlier that virtual machines need their own operating system installed on each individual VM, and that adds some significant overhead to the entire virtualization process. But what if you could remove that operating system component and only virtualize the applications? That's the idea behind application containerization, where you have separate containers that are built for every application that you'd like to run on that operating system.
+
+Just like a virtual machine, each one of these apps is self-contained. It has no idea that other application containers happen to be running on that same physical system, and none of those containers are able to interact with each other unless you configure that in the containerization software. Since there is no operating system, the entire container image is much smaller than the traditional virtual machine. This makes this very lightweight; you're able to transfer them very quickly from one place to the other, and they're very portable, which means you can move them from one physical device to another without making any changes to the application container.
+
+### Virtualization vs. Containerization
+
+Here's a side-by-side view of a traditional virtualized application configuration and a containerized application configuration. You can see in the virtualized applications that each one of the VMs has their own guest operating system, but the containerized applications have a single host operating system. This certainly simplifies the process of managing the operating system since there's only one OS that you'll need to patch, update, and maintain.
+
+On top of the host operating system, you would run containerization software. One of the most popular is Docker, and then on top of Docker you would have the individual Docker containerized applications.
+
+One significant difference in containerized applications is they're relying on that host operating system, which generally means that each one of these applications must be configured to run on that host OS. You generally would not be able to run a Windows container, a Linux container, and a macOS container all on the same version of Docker. Of course, if you were running VMs, you could have different guest operating systems on each of those, but of course your trade-off is the overhead that you have with a virtualized application.

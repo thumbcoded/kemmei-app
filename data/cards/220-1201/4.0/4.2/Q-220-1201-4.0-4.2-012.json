@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A global media company needs to deploy a streaming application with low latency across several continents. Which cloud computing feature is most critical for this requirement?",
+  "answer_options": [
+    "Cloud efficiency",
+    "Button deployment",
+    "Geographical deployment",
+    "Application instance"
+  ],
+  "correct_answer": [
+    "Geographical deployment"
+  ],
+  "explanation": "Geographical deployment ensures services are hosted close to end users, reducing latency and improving performance worldwide.",
+  "tags": [
+    "geographical deployment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

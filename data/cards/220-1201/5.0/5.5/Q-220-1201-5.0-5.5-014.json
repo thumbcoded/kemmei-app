@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user is manually configuring their IP but continues to get 'limited connectivity'. They can ping 127.0.0.1 and their IP, but not the gateway. What is the most probable cause?",
+  "answer_options": [
+    "The IP stack is corrupted",
+    "They are using a reserved DHCP IP",
+    "Their subnet mask or gateway is misconfigured",
+    "Their Ethernet adapter is disabled"
+  ],
+  "correct_answer": [
+    "Their subnet mask or gateway is misconfigured"
+  ],
+  "explanation": "The ability to ping loopback and their IP confirms the NIC and stack are working. If the gateway is unreachable and IP is manual, it’s likely a config error in the subnet or gateway fields.",
+  "tags": [
+    "manually configured address",
+    "ping default gateway",
+    "internal network configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-137",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the process of elimination in motherboard troubleshooting and how do you implement it effectively?",
+  "answer_options": [
+    "Random removal of components without systematic approach",
+    "Systematically remove non-essential components to isolate problems - start with minimal configuration",
+    "Process of elimination only applies to software troubleshooting procedures",
+    "Immediately replace all components without testing individual parts"
+  ],
+  "correct_answer": [
+    "Systematically remove non-essential components to isolate problems - start with minimal configuration"
+  ],
+  "explanation": "Process of elimination for motherboards: 1) Start with minimal configuration (CPU, 1 RAM stick, power), 2) Test basic functionality, 3) Add components one at a time, 4) Test after each addition, 5) When problem appears, last added component is suspect, 6) Remove and retest to confirm. This isolates defective components and prevents damage from faulty parts.",
+  "tags": [
+    "process of elimination"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

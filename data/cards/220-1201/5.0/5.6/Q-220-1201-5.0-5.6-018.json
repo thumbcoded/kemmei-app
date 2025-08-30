@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user notices that their printed pages are coming out with deep creases. What is the most likely cause?",
+  "answer_options": [
+    "Low ink levels",
+    "Overheating fuser",
+    "Paper path obstruction or improper paper weight",
+    "Wrong print driver"
+  ],
+  "correct_answer": [
+    "Paper path obstruction or improper paper weight"
+  ],
+  "explanation": "Creased paper is often caused by path misalignments or using paper that is too thick or thin for the printer.",
+  "tags": [
+    "creased paper",
+    "paper path",
+    "paper weight"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

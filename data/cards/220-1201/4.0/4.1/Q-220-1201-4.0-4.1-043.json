@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which configuration prevents a VM from communicating with the outside world?",
+  "answer_options": [
+    "Bridge mode",
+    "Shared network address",
+    "Private address",
+    "DHCP static address"
+  ],
+  "correct_answer": [
+    "Private address"
+  ],
+  "explanation": "A private address restricts the VM to communicate only within the local virtual network or host.",
+  "tags": [
+    "private address",
+    "network isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

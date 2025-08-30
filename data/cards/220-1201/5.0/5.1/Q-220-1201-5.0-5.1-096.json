@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition is most likely to cause sluggish performance and slow application loading across reboots?",
+  "answer_options": [
+    "Corrupted video driver",
+    "Insufficient available memory",
+    "Wrong screen resolution",
+    "Disconnected printer"
+  ],
+  "correct_answer": [
+    "Insufficient available memory"
+  ],
+  "explanation": "Lack of sufficient RAM leads to excessive paging to disk, significantly slowing down overall performance.",
+  "tags": [
+    "sluggish performance",
+    "slow response",
+    "memory usage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

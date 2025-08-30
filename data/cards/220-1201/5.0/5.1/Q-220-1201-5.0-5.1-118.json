@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-118",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a critical error in system troubleshooting and how does it differ from other system errors?",
+  "answer_options": [
+    "Minor software glitch that can be ignored during normal operation",
+    "Severe system fault requiring immediate shutdown to prevent data corruption or hardware damage",
+    "Network connectivity error that affects internet access but not local operations",
+    "User-generated error from incorrect input that can be easily corrected"
+  ],
+  "correct_answer": [
+    "Severe system fault requiring immediate shutdown to prevent data corruption or hardware damage"
+  ],
+  "explanation": "A critical error is a severe system fault that requires immediate shutdown to prevent data corruption or hardware damage. It differs from other errors by: causing immediate system halt, preventing normal operation, often triggering blue screen or kernel panic, and typically indicating hardware failure or severe driver issues rather than minor software problems.",
+  "tags": [
+    "critical error"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

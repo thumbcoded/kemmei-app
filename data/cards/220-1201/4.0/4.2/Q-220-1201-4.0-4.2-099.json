@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-099",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which cost is most likely to increase if a cloud-hosted application experiences a large spike in outbound data transfers?",
+  "answer_options": [
+    "CPU usage fees",
+    "Ingress charges",
+    "Storage fees",
+    "Egress charges"
+  ],
+  "correct_answer": [
+    "Egress charges"
+  ],
+  "explanation": "When more users download content, egress traffic increases. In a metered model, this directly increases cost.",
+  "tags": [
+    "egress traffic",
+    "metered utilization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

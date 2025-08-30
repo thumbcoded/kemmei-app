@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "After resetting BIOS settings using a jumper, a system now boots but displays a date/time prompt. What does this suggest?",
+  "answer_options": [
+    "POST failure due to missing RAM",
+    "CMOS reset completed successfully",
+    "Corrupted operating system files",
+    "Faulty GPU initialization"
+  ],
+  "correct_answer": [
+    "CMOS reset completed successfully"
+  ],
+  "explanation": "Resetting BIOS via jumper clears saved settings, including date/time, which must be re-entered manually.",
+  "tags": [
+    "CMOS reset"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

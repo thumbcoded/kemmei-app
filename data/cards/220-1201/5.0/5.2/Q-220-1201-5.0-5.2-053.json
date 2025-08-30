@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following events can lead to complete RAID array failure in multi-drive configurations? (Select all that apply)",
+  "answer_options": [
+    "Failure of two drives in a RAID 5 striping with parity setup",
+    "Failure of a single drive in a RAID 0 striping array",
+    "Incorrect rebuild after RAID failure",
+    "Simultaneous rebuild and drive failure in RAID 6 double parity"
+  ],
+  "correct_answer": [
+    "Failure of two drives in a RAID 5 striping with parity setup",
+    "Failure of a single drive in a RAID 0 striping array",
+    "Incorrect rebuild after RAID failure",
+    "Simultaneous rebuild and drive failure in RAID 6 double parity"
+  ],
+  "explanation": "RAID 5 cannot tolerate more than one failure. RAID 0 fails if any drive fails. Incorrect rebuilds or additional failures during RAID 6 rebuilds can also lead to array failure.",
+  "tags": [
+    "RAID 5 striping with parity",
+    "RAID 0 striping",
+    "RAID failure",
+    "array failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

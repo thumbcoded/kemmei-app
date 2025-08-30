@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is an example of a hypervisor-related security concern?",
+  "answer_options": [
+    "Insufficient bandwidth",
+    "VM escape",
+    "Overheating of physical hardware",
+    "Invalid device drivers"
+  ],
+  "correct_answer": [
+    "VM escape"
+  ],
+  "explanation": "VM escape occurs when malware in one VM exploits a hypervisor flaw to affect other VMs or the host.",
+  "tags": [
+    "VM escape",
+    "hypervisor security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

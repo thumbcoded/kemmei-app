@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What software is commonly used to manage containers?",
+  "answer_options": [
+    "Oracle VirtualBox",
+    "VMware ESXi",
+    "Docker",
+    "Microsoft Hyper-V"
+  ],
+  "correct_answer": [
+    "Docker"
+  ],
+  "explanation": "Docker is one of the most popular tools used to manage and run application containers.",
+  "tags": [
+    "Docker"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

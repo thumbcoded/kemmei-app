@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two key requirements for enabling dual-channel memory mode on a supported motherboard.",
+  "answer_options": [
+    "Install ECC memory modules",
+    "Match memory module size and speed",
+    "Use memory from different vendors",
+    "Install modules in matching colored slots",
+    "Populate every available memory slot"
+  ],
+  "correct_answer": [
+    "Match memory module size and speed",
+    "Install modules in matching colored slots"
+  ],
+  "explanation": "Dual-channel operation requires paired modules with identical specs, installed in the correct channels—often indicated by color coding.",
+  "tags": [
+    "dual channel",
+    "memory slot colors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

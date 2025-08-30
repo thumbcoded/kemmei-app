@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which part of a domain name like 'www.example.com' represents the top level domain (TLD)?",
+  "answer_options": [
+    "www",
+    "example",
+    ".com",
+    "None, it's a subdomain"
+  ],
+  "correct_answer": [
+    ".com"
+  ],
+  "explanation": "The TLD (Top Level Domain) is the last segment of the domain name, such as .com, .org, or .net.",
+  "tags": [
+    "top level domain",
+    "gTLD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

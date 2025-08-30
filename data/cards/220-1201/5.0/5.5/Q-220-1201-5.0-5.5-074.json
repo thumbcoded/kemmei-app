@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What should you check first when a user reports they cannot access network resources after a weekend?",
+  "answer_options": [
+    "Network cable connections",
+    "User account password expiration",
+    "DHCP server status",
+    "DNS configuration"
+  ],
+  "correct_answer": [
+    "User account password expiration"
+  ],
+  "explanation": "Many organizations have password policies that expire passwords over weekends. This is a common cause of Monday morning access issues.",
+  "tags": [
+    "network diagnostics",
+    "connectivity testing",
+    "troubleshooting steps"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

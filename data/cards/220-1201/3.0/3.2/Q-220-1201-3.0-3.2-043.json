@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which SATA revision supports a maximum throughput of 6 Gbps?",
+  "answer_options": [
+    "SATA revision 1.0",
+    "SATA revision 2.0",
+    "SATA revision 3.0",
+    "SATA revision 3.2"
+  ],
+  "correct_answer": [
+    "SATA revision 3.0"
+  ],
+  "explanation": "SATA revision 3.0 supports up to 6 Gbps, making it the most widely used revision for modern hard drives and SSDs.",
+  "tags": [
+    "SATA revision 3.0"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

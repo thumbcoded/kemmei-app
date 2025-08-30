@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is typically used for Ethernet network cables?",
+  "answer_options": [
+    "RJ11",
+    "RJ45",
+    "F connector",
+    "DB9"
+  ],
+  "correct_answer": [
+    "RJ45"
+  ],
+  "explanation": "RJ45 is the standard connector used for Ethernet cables, supporting twisted-pair cabling and networking.",
+  "tags": [
+    "RJ45",
+    "Ethernet"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

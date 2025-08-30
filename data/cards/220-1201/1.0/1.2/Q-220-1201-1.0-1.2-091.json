@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of connector uses 24 pins and can be inserted in any orientation?",
+  "answer_options": [
+    "Lightning connector",
+    "USB-C connector",
+    "microUSB connector",
+    "miniUSB connector"
+  ],
+  "correct_answer": [
+    "USB-C connector"
+  ],
+  "explanation": "USB-C connectors feature 24 pins and are designed to be reversible, allowing insertion in any orientation without damaging the connector.",
+  "tags": [
+    "USB-C",
+    "connector",
+    "cable",
+    "wired"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

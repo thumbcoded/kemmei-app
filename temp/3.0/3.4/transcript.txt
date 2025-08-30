@@ -1,0 +1,1104 @@
+the memory in our system is volatile
+0:04
+That means when we power off our
+0:06
+computer all of the information in
+0:08
+memory disappears To be able to retrieve
+0:11
+that information later we need some type
+0:13
+of device that's able to maintain that
+0:15
+data even when your system has no power
+0:18
+Fortunately there are many different
+0:20
+ways to accomplish this We could have a
+0:22
+hard drive a solid state drive a flash
+0:24
+drive a memory card an optical drive and
+0:28
+other storage devices as well One of the
+0:31
+most popular forms of storage is a hard
+0:34
+drive This is a magnetic device that has
+0:37
+rapidly spinning platters that are
+0:39
+inside and all of your data is being
+0:41
+stored onto those platters This is a
+0:44
+random access method of storage So we
+0:46
+can store information anywhere on that
+0:48
+drive and access that information
+0:51
+immediately by simply accessing the
+0:53
+address where that information is stored
+0:57
+If we were to look inside of this hard
+0:58
+drive we would see there were a lot of
+1:00
+different moving parts For example there
+1:02
+are platters inside that are spinning
+1:04
+around thousands of times in a minute
+1:06
+You have a moving arm that is able to
+1:08
+take a small head that reads and writes
+1:11
+information from these spinning platters
+1:13
+And there are also other mechanical
+1:15
+components that are then moving the arm
+1:17
+back and forth Because these are
+1:20
+mechanical any one of these components
+1:22
+could potentially fail at any time You
+1:25
+obviously don't want to remove the top
+1:27
+of your hard drive because this is an
+1:29
+area that needs to remain dustfree
+1:31
+Inside your drive though are components
+1:34
+that are very similar across all hard
+1:36
+drives One of these is the spinning
+1:38
+platter and that is where all of your
+1:40
+data is being stored We also have a
+1:42
+spindle in the middle that is spinning
+1:44
+the drive at different speeds We'll look
+1:46
+at those in a moment We also have an
+1:48
+actuator that is able to move an arm
+1:51
+that has at the end of it a readr write
+1:53
+head that is actually performing the
+1:56
+reading and writing of that information
+1:58
+to the platters that are rapidly
+2:00
+spinning just underneath it Different
+2:03
+hard drives spin at different rates And
+2:05
+if you look at the specification for a
+2:07
+drive you'll see that it probably
+2:08
+rotates at 5,400 revolutions per minute
+2:12
+7,200 revolutions per minute 10,000
+2:15
+revolutions per minute or 15,000
+2:18
+revolutions per minute The reason there
+2:20
+are differences in these revolutions is
+2:23
+that the arm is in one place We have to
+2:25
+wait for the platter to spin around to
+2:27
+be able to read the data that needs to
+2:29
+move underneath that read right head The
+2:32
+faster that spindle rotates the lower
+2:34
+the latency will be which means we'll be
+2:37
+able to read or write information faster
+2:40
+if we're on a 15,000 RPM drive versus a
+2:44
+5400 RPM drive From the side view you
+2:48
+can see that often there's more than one
+2:50
+platter This drive has multiple platters
+2:52
+where information is being stored And if
+2:54
+we were able to look underneath we would
+2:56
+see that there is an actuator arm and a
+2:58
+drive head not only on the top of the
+3:00
+platter but also on the bottom of the
+3:03
+platter There are also different sizes
+3:05
+of drives inside of a desktop computer
+3:08
+We don't have to worry too much about
+3:10
+the size of a storage drive because we
+3:12
+have so much room to be able to store
+3:14
+that inside of that unit But if you have
+3:16
+a laptop or other mobile device having a
+3:19
+smaller storage device is going to save
+3:21
+you that much weight and that much space
+3:23
+in that mobile device If you're working
+3:25
+on a desktop you may be using a 3 and
+3:27
+1/2 in drive You can see the size of
+3:30
+that is listed here And the 3 and 1/2 in
+3:32
+refers to the width of the drive There's
+3:35
+also 2 and 1/2 in drives These are
+3:37
+common to see inside of mobile devices
+3:39
+and laptops And on modern computers you
+3:42
+may be using an SSD that doesn't use a 3
+3:45
+and 1/2 or 2 1/2 in Instead is a much
+3:48
+smaller 22 mm in width Many of us have
+3:51
+upgraded our hard drives to SSDs or
+3:55
+solidstate drives These contain
+3:57
+nonvolatile memory inside which means
+4:00
+there are no moving parts thus a
+4:02
+solidstate device A significant benefit
+4:05
+of having solid state drives is its raw
+4:08
+speed Solid-state drives are many times
+4:11
+faster at reading and writing
+4:13
+information than a traditional hard
+4:15
+drive So by simply replacing a hard
+4:17
+drive for an SSD you can greatly improve
+4:20
+the overall throughput of a system And
+4:23
+if we remove the top of an SSD you would
+4:25
+see that we don't have any moving
+4:27
+components inside In fact most of the
+4:30
+components that we're able to see off
+4:32
+hand are simply the memory modules where
+4:34
+your information is being
+4:36
+stored When we moved from hard drives to
+4:39
+SSDs we immediately saw an improvement
+4:42
+in performance But we also saw that we
+4:45
+were hitting the maximum limit of what a
+4:47
+traditional SATA connection would
+4:49
+provide We needed some way to increase
+4:52
+the throughput of these SSDs And one of
+4:54
+the ways we did this is to connect the
+4:56
+SSD directly to the PCI Express bus of
+5:01
+our computer One of the most common ways
+5:03
+to do this is to use an adapter card
+5:05
+where we can install the SSD on the card
+5:07
+itself and plug it directly into the PCI
+5:11
+Express bus on our motherboards This
+5:13
+meant that the motherboard was providing
+5:15
+the power and giving us the throughput
+5:17
+that we now can get from a PCI Express
+5:20
+bus which is much faster than the bus
+5:22
+that we had connected to a traditional
+5:24
+SATA drive Instead of limiting oursel to
+5:27
+the 6 Gbits per second that you would
+5:30
+commonly see with a SATA connection
+5:32
+plugging in to the PCI Express bus
+5:34
+allowed us to get speeds of around 64
+5:37
+Gbits per second per lane This greatly
+5:40
+improved performance and we were able to
+5:42
+take advantage of the full throughput
+5:44
+available to that
+5:46
+SSD But of course not every device has a
+5:50
+PCI Express bus that you can connect to
+5:52
+Laptops for example don't allow us the
+5:55
+room to be able to install a full-size
+5:57
+adapter card If we were to look at the
+6:00
+SATA technology that we're currently
+6:01
+using for hard drives it uses a standard
+6:04
+called AHCI This is the advanced host
+6:07
+controller interface This is the
+6:09
+standard used to move data from the
+6:11
+drive into memory and back again If you
+6:14
+were to look at SATA revision 3 it
+6:16
+provided throughput for the SATA
+6:18
+connection up to 6 Gbits per second But
+6:21
+as we've already seen that value is much
+6:24
+too low to be able to provide the total
+6:26
+throughput that we could get from an SSD
+6:30
+To be able to increase the speeds of
+6:32
+these throughputs we created a new
+6:34
+method of communication referred to as
+6:37
+NVMe This is the nonvolatile memory
+6:40
+express It has very low latency and can
+6:42
+support higher throughputs because it is
+6:45
+directly connecting to the PCI Express
+6:47
+bus even if that bus is one that's
+6:50
+inside of a laptop A very common
+6:52
+interface into this PCI Express bus on a
+6:55
+laptop or desktop computer is made
+6:57
+through a new interface referred to as
+7:00
+the M.2 interface And if you are using
+7:04
+NVMe on this M.2 2 interface you now
+7:07
+have a theoretical transfer speed of
+7:09
+approximately 20 Gbits per second which
+7:12
+is obviously much better than the 6
+7:14
+Gbits that we had from the SATA
+7:16
+connection But in some cases we are
+7:19
+still using these hard drives inside of
+7:21
+a desktop and we still need a way to
+7:23
+improve throughput to the information
+7:25
+that's on those hard drives To increase
+7:28
+this throughput we've added a new method
+7:30
+of communication referred to as
+7:32
+serialattach SCSI or SAS Serial attached
+7:36
+SCSI is a serialized version of the SCSI
+7:39
+technology that we've been using for
+7:41
+many years So now we can take advantage
+7:43
+of the SCSI protocol to be able to
+7:45
+control and manage the data that's on
+7:47
+these drives And by upgrading the
+7:49
+communications path to be a serial
+7:51
+connection we can now reach speeds of
+7:53
+approximately 22 1/2 Gbits per second
+7:56
+And this is obviously much faster than
+7:58
+the 6 Gbits per second than you would
+8:00
+commonly get from SATA And we expect
+8:02
+that future versions of serialattached
+8:05
+SCSI will even provide faster
+8:07
+throughputs than what we're seeing today
+8:10
+Here's the interface on a serial
+8:12
+attached SCSI drive There are two
+8:14
+different connections on this drive One
+8:15
+that's used for data and one that's used
+8:17
+for power And if you look at this drive
+8:19
+it looks very similar to the
+8:21
+configuration you might see on a SATA
+8:23
+drive In fact this is very similar with
+8:26
+the data on the left side and the power
+8:28
+on the right side If we were to put a
+8:31
+SATA drive right on top of this drive
+8:33
+you can see that indeed they are very
+8:35
+similar to each other in their form
+8:37
+factor However you will notice that the
+8:40
+SATA drive and the SAS drive are
+8:42
+slightly different in the connectors
+8:44
+that are used This is to prevent you
+8:46
+from accidentally plugging a SATA drive
+8:48
+into a SAS drive configuration and vice
+8:51
+versa So if you have large storage
+8:54
+arrays of spinning hard drives you may
+8:56
+want to focus on using SAS arrays with
+8:59
+SAS drives to get the highest throughput
+9:02
+possible for that hard drive
+9:05
+technology As our storage technologies
+9:08
+continue to shrink and our interfaces to
+9:10
+those technologies needed to become even
+9:13
+faster we considered a number of
+9:15
+different interfaces to be able to
+9:17
+connect these systems to our desktop
+9:19
+laptops and other devices We were
+9:22
+obviously already using SATA as a
+9:24
+standard and this is a representation of
+9:26
+a 2 and 1/2 in SATA drive and we created
+9:29
+two other types of interface
+9:31
+technologies One called MSATA and the
+9:33
+other referred to as M.2 MSATA refers to
+9:38
+mini SATA We took the connections that
+9:40
+were on our existing SATA drives and
+9:42
+moved them into a form factor that was
+9:44
+slightly smaller with our mini SATA MSAT
+9:47
+was a great stop gap between the
+9:49
+traditional SATA drive connectivity and
+9:52
+the eventual M.2 interface that we began
+9:55
+to use and we found quickly that instead
+9:57
+of using MSATA many manufacturers were
+10:00
+including M.2 connectivity on their
+10:02
+motherboards and mobile devices MSATA
+10:05
+did solve a number of problems
+10:07
+especially size on a system board and
+10:10
+connectivity to a higher speed
+10:12
+bus The M.2 2 interface has become a
+10:15
+very popular interface for most of our
+10:17
+storage devices especially SSDs There's
+10:21
+no additional cables that you need for
+10:23
+data or power And that M.2 drive plugs
+10:26
+in directly to the M.2 interface on your
+10:29
+system board And since we are directly
+10:31
+connecting to the bus of your system we
+10:34
+can take advantage of PCI Express speeds
+10:36
+to increase the total throughput to
+10:38
+these storage devices connected to an
+10:41
+M.2 interface Different M.2 interfaces
+10:45
+will support different types of
+10:46
+connectivity And the way that we
+10:48
+differentiate between these capabilities
+10:50
+are with small keys that are associated
+10:53
+with the drive connection itself If you
+10:55
+look at the end of the drive there'll be
+10:57
+a small spacer at the bottom that is
+11:00
+called either the B key the M key and
+11:03
+some M.2 drives will support both a B
+11:06
+and an M key Other M.2 two interfaces
+11:10
+may support the much faster NVME
+11:13
+interface So it's important to know what
+11:15
+type of interface is available on the
+11:18
+system you're connecting to Some M.2
+11:21
+interfaces will use these keys to
+11:23
+designate what type of throughputs are
+11:25
+available So you might want to check
+11:27
+with your system board or motherboard
+11:29
+documentation to see if it supports an M
+11:31
+key a B key or both Here's a closer look
+11:35
+at an M.2 two drive that supports both
+11:37
+the M key and it supports the B key This
+11:41
+means that this hardware can plug into
+11:43
+any device that does have availability
+11:45
+for either Mtype connectivity or Btype
+11:49
+connectivity This also makes for a very
+11:51
+fast installation or removal You simply
+11:54
+slide it into the interface slot and
+11:56
+fasten it down to the system
+11:58
+board Flash drives are a very handy way
+12:01
+to store information into a very small
+12:04
+form factor They consist of EROM memory
+12:07
+That's electrically erasable
+12:09
+programmable read only memory This
+12:11
+memory is nonvolatile So you can remove
+12:14
+it from your system and the power source
+12:16
+and all of the information stored on
+12:18
+that flash drive will continue to be
+12:20
+available EROM is a technology that
+12:23
+allows a certain number of writes but at
+12:26
+a certain point it will stop writing
+12:28
+that information to the drive You may
+12:30
+still be able to read the information
+12:32
+from that drive but you won't be able to
+12:34
+write anything new to that drive going
+12:37
+forward We don't really consider flash
+12:40
+drives to be very good archival or
+12:42
+backup media for a number of different
+12:45
+reasons Not only is the EPROM limited as
+12:48
+to the number of rights but it is a very
+12:50
+small storage device and it's very easy
+12:52
+to lose these This is one of the reasons
+12:55
+we always recommend that if you're
+12:56
+storing information on a flash drive
+12:58
+that you also have a backup stored in
+13:00
+another location as well USB flash
+13:04
+drives you'll find being used almost
+13:06
+everywhere but there are other types of
+13:08
+flash drives as well One of the original
+13:10
+and now relatively large types of flash
+13:13
+storage is the compact flash or CF SD
+13:17
+cards for secure digital are often used
+13:19
+in mobile devices And if you get into
+13:22
+very small devices you may find mini SD
+13:24
+or micro SD being used And if you have
+13:27
+an older digital camera you might find
+13:30
+that it uses flash drives in the XD
+13:32
+picture card
+13:34
+format We don't tend to see optical
+13:36
+drives used very much in our production
+13:38
+systems these days but there is a lot of
+13:41
+information that we've stored through
+13:42
+the years onto this optical drive format
+13:46
+Optical drives are using small bumps
+13:48
+that are written onto the drive itself
+13:50
+with a laser beam This is storage that
+13:53
+is microscopic in size and we're able to
+13:56
+store a great deal of information on a
+13:58
+single optical drive Because of this
+14:01
+method of writing information and
+14:03
+reading information using a laser these
+14:05
+tend to be relatively slow when you
+14:07
+compare them to a hard drive or to an
+14:09
+SSD But since optical drives take up
+14:12
+very little room and store quite a bit
+14:14
+of information they were a very good
+14:16
+choice for archiving data for later You
+14:19
+may find optical drives using the
+14:20
+formats of CDROM DVD ROM or Blu-ray And
+14:25
+there's often either a built-in optical
+14:27
+drive reader or something that can be
+14:29
+plugged in externally to be able to read
+14:31
+these drives If you have some older
+14:33
+optical drive archives and you need to
+14:35
+be able to read this you might want to
+14:37
+grab an external optical drive reader
+14:40
+and plug it into your system using a USB
+14:42
+connection
+
+
+we rely on our hard drives SSDs and
+0:04
+other devices to store large amounts of
+0:07
+information and often this information
+0:09
+is very important we don't want to lose
+0:12
+the data that we're storing on these
+0:13
+drives but of course these hard drives
+0:16
+are physical devices that are constantly
+0:18
+moving the platters are spinning the
+0:20
+actuator arms are moving and if any one
+0:23
+of those components is to fail
+0:25
+everything on that drive will be
+0:27
+inaccessible fortunately there are ways
+0:30
+that you could combine multiple drives
+0:32
+together to create redundancy so if you
+0:35
+do lose a drive you can be assured that
+0:38
+all of your data will still remain
+0:40
+available and as we go through this
+0:42
+video where we talk about drive
+0:43
+redundancy please keep in mind that this
+0:46
+RAID configuration we're going to speak
+0:48
+of is not a method of backup if you do
+0:52
+have an array that is using RAID to be
+0:54
+able to provide this redundancy please
+0:57
+keep in mind that you also need to
+0:58
+maintain a completely separate backup
+1:02
+process raid is an acronym that stands
+1:04
+for redundant array of independent discs
+1:08
+you might also see this referred to as a
+1:10
+redundant array of inexpensive discs
+1:13
+there are many different ways to
+1:14
+implement RAID and we'll look at some of
+1:16
+the more popular ones in this video some
+1:19
+of these methods provide a way to keep
+1:21
+your data redundant even if you lose a
+1:24
+drive but there are some RAID methods
+1:26
+where redundancy is not available so we
+1:29
+do need to know the difference between
+1:31
+one and the other in this video we'll
+1:34
+step through RAID zero you might also
+1:36
+hear this referred to as striping raid
+1:38
+one which is mirroring raid five which
+1:42
+is striping with a single par drive
+1:45
+we'll also look at RAID six which is
+1:47
+striping with two parody drives and
+1:50
+we'll also look at nested RAID which are
+1:52
+two RAIDs combined together specifically
+1:54
+RAID one and RAID zero sometimes you'll
+1:57
+see this written as RAID 10 and it
+2:00
+refers to a stripe of
+2:02
+mirrors let's start with RAID zero which
+2:04
+we refer to as striping raid zero has at
+2:08
+least two physical drives and we'll take
+2:10
+the information we're saving to these
+2:12
+drives and split it across both of these
+2:15
+storage devices for example if you have
+2:17
+a single file you could break that file
+2:19
+up into eight different parts and you
+2:21
+would store a part of that file onto
+2:24
+each of these drives for example you
+2:26
+might see one drive with block 1 A
+2:28
+another drive with block 2 A back to the
+2:31
+first drive with block 3A and so on raid
+2:34
+zero is well known for its speed because
+2:37
+you're writing a little bit of
+2:38
+information to multiple drives you're
+2:41
+effectively able to do this faster than
+2:43
+writing all of that information to a
+2:45
+single drive the problem of course is
+2:48
+that if you do lose one of these
+2:50
+physical drives you now have lost access
+2:52
+to your data because half of what was
+2:55
+there normally is no longer available
+2:58
+for that reason we often think of RAID
+3:00
+zero as having zero
+3:03
+redundancy raid one is mirroring and as
+3:06
+the name implies mirroring means that
+3:09
+we're going to have copies of
+3:10
+information across multiple drives for
+3:13
+RAID one we need at least two drives we
+3:15
+have those two here on the screen and
+3:18
+you can see that anything that we have
+3:20
+on disk zero also has an exact duplicate
+3:23
+of that information on disk 1 this means
+3:26
+that we need effectively twice as much
+3:28
+storage space to be able to store
+3:30
+exactly the same information having that
+3:33
+mirror of duplicate information means
+3:35
+that we are going to use a lot of
+3:37
+storage space to be able to maintain
+3:39
+that redundancy but one good thing about
+3:42
+mirroring is that if you do lose a
+3:44
+physical drive the other physical drive
+3:46
+containing an exact duplicate of all of
+3:49
+that data continues to be available
+3:51
+obviously we will want to replace that
+3:53
+drive as soon as possible and recreate
+3:56
+the mirror but while we're in that
+3:58
+process all of our data continues to be
+4:01
+available and we can continue to work
+4:04
+normally in our video on memory we
+4:06
+talked about how par can be used to
+4:09
+identify errors or to correct errors we
+4:12
+take that same idea and move it into
+4:14
+RAID to be able to provide redundancy if
+4:18
+we lose a physical drive one of the ways
+4:20
+we can do this with par is using RAID 5
+4:23
+or striping with parody the striping
+4:26
+that we're doing in RAID 5 is identical
+4:28
+to the striping that we were doing with
+4:30
+RAID zero take a file cut it into small
+4:33
+pieces and distribute those pieces
+4:35
+across multiple physical drives however
+4:38
+the last drive we're not going to take a
+4:41
+piece of the actual file we're going to
+4:43
+take the par of the information that we
+4:45
+just stored this means in a RAID five
+4:48
+array of four physical drives three of
+4:51
+those drives would have data and the
+4:53
+fourth drive will contain par data
+4:56
+you'll also notice the par is
+4:58
+distributed across physical drives to
+5:00
+make the recovery process more efficient
+5:03
+you also get efficiency in how much data
+5:06
+you're storing and how you're storing it
+5:08
+since you're just storing parody data on
+5:10
+a separate drive you're not having to
+5:12
+duplicate all of the data on the system
+5:15
+that means that you'll have more drive
+5:16
+space to be able to store your data
+5:18
+instead of having to make copies of your
+5:20
+data if you do lose a physical drive
+5:23
+with RAID 5 you can take the data that
+5:25
+still exists combine that with parody
+5:27
+and you're able to recreate the data
+5:29
+that's no longer there you're able to
+5:32
+effectively in real time still maintain
+5:35
+all of the data as if it was still
+5:37
+physically located on that drive this
+5:40
+parody calculation does require a bit of
+5:42
+CPU overhead so there may be times when
+5:45
+using RAID five in a recovery mode where
+5:47
+there is a bit of a performance
+5:50
+hit raid six is very similar to RAID
+5:53
+five except we're adding another storage
+5:56
+drive and adding an additional par block
+5:59
+this means if we lose a single drive
+6:01
+we're effectively running the same way
+6:03
+as RAID 5 if we lose two drives then we
+6:07
+can recreate the lost data using our
+6:10
+existing par data this means with RAID 6
+6:13
+we could lose a total of two physical
+6:15
+drives and still remain up and running
+6:18
+although in a degraded state this means
+6:21
+that we could lose two physical drives
+6:23
+in a RAID 6 array and still have access
+6:26
+to all of our data of course this does
+6:29
+mean that we need a separate physical
+6:31
+drive to store that additional par data
+6:34
+and because we're adding additional par
+6:36
+data we unfortunately are not adding
+6:39
+additional capacity when we add that
+6:41
+extra drive and create a RAID six
+6:44
+array raid 10 or what we call RAID 1 + 0
+6:49
+is combining RAID zero with RAID one
+6:52
+raid zero obviously is striping just
+6:55
+like we can see here we have three
+6:57
+physical drives we've taken a single
+6:59
+file we've split that file up into 12
+7:02
+different blocks and we've put one block
+7:04
+on each of these drives because this is
+7:07
+RAID zero we have zero redundancy so if
+7:10
+we were to lose any of these drives all
+7:12
+of our data would no longer be
+7:14
+accessible with RAID 1 + 0 we need to
+7:18
+add that RAID one functionality or
+7:20
+mirroring so we'll continue to keep our
+7:23
+stripe but we will mirror each striped
+7:26
+set of drives this means that we have
+7:29
+separate individual drives that have a
+7:31
+copy of the striped information this
+7:34
+requires at least four drives but it
+7:36
+also means that we could lose multiple
+7:39
+drives and still be up and running for
+7:41
+example in this scenario we could lose
+7:44
+one of the drives from the first mirror
+7:46
+one of the drives from the second mirror
+7:48
+and one of the drives from the third
+7:50
+mirror and we would still be up and
+7:52
+running because we would still contain
+7:54
+three separate drives from each
+7:56
+individual stripe

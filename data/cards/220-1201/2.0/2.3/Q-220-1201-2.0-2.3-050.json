@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature of relational databases allows them to link tables together for efficient queries?",
+  "answer_options": [
+    "Horizontal scaling",
+    "Table replication",
+    "Foreign key relationships",
+    "Packet inspection logic"
+  ],
+  "correct_answer": [
+    "Foreign key relationships"
+  ],
+  "explanation": "Foreign keys allow relational databases to connect related data across different tables, enabling complex queries.",
+  "tags": [
+    "relational database",
+    "database tables"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common physical issue to check when troubleshooting a storage drive?",
+  "answer_options": [
+    "Driver version mismatch",
+    "Loose cables",
+    "Software update failure",
+    "Incorrect screen resolution"
+  ],
+  "correct_answer": [
+    "Loose cables"
+  ],
+  "explanation": "Loose cables are a frequent cause of intermittent or complete drive communication failures.",
+  "tags": [
+    "loose cables"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

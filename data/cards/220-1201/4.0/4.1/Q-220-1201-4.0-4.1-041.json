@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which option describes a shared network address?",
+  "answer_options": [
+    "A unique IP assigned to each VM from your router",
+    "A virtual IP subnet behind the hypervisor with NAT to access external networks",
+    "A local-only IP that never connects to external systems",
+    "A manually assigned static IP for each VM"
+  ],
+  "correct_answer": [
+    "A virtual IP subnet behind the hypervisor with NAT to access external networks"
+  ],
+  "explanation": "In shared network setups, the hypervisor uses NAT to translate VM addresses into external traffic.",
+  "tags": [
+    "shared network address",
+    "network address translation",
+    "NAT"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

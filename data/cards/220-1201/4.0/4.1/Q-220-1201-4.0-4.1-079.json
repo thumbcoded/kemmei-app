@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes application containerization?",
+  "answer_options": [
+    "It allows different operating systems to share a virtual machine",
+    "It installs applications across multiple physical servers",
+    "It runs applications in isolated environments without full OS overhead",
+    "It requires a Type 1 hypervisor to function"
+  ],
+  "correct_answer": [
+    "It runs applications in isolated environments without full OS overhead"
+  ],
+  "explanation": "Application containerization runs apps in isolated environments using a shared OS, avoiding the need for full VMs.",
+  "tags": [
+    "application containerization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

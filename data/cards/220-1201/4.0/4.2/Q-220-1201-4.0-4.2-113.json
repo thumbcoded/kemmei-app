@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are examples of cloud elasticity? (Select all that apply)",
+  "answer_options": [
+    "Automatically deploying more instances during peak usage",
+    "Reducing the number of virtual machines during off-hours",
+    "Expanding to new regions for global reach",
+    "Maintaining multiple tenants on the same infrastructure",
+    "Manually provisioning hardware to meet traffic needs"
+  ],
+  "correct_answer": [
+    "Automatically deploying more instances during peak usage",
+    "Reducing the number of virtual machines during off-hours"
+  ],
+  "explanation": "Elasticity refers to dynamic scaling of cloud resources — up or down — based on real-time demand.",
+  "tags": [
+    "elasticity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

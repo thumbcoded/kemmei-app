@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does TRRS stand for in audio connector terminology?",
+  "answer_options": [
+    "Tip Ring Ring Sleeve",
+    "Triple Ring Ring System",
+    "Transmit Receive Ring Sleeve",
+    "Tip Receive Ring Sound"
+  ],
+  "correct_answer": [
+    "Tip Ring Ring Sleeve"
+  ],
+  "explanation": "TRRS stands for Tip Ring Ring Sleeve, describing the four connection points on a 3.5mm audio connector that supports both audio output and microphone input.",
+  "tags": [
+    "TRRS",
+    "audio jack",
+    "wired headset",
+    "microphone"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

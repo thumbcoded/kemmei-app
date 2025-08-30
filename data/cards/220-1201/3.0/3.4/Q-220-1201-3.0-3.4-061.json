@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which interface was developed as a transitional form between SATA and M.2 SSDs?",
+  "answer_options": [
+    "USB",
+    "MSATA",
+    "PCIe",
+    "NVMe"
+  ],
+  "correct_answer": [
+    "MSATA"
+  ],
+  "explanation": "MSATA (mini-SATA) was developed to provide SATA performance in a smaller form factor before M.2 became the standard.",
+  "tags": [
+    "MSATA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

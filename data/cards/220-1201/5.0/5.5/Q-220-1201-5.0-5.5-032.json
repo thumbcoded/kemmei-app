@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What tool allows you to observe traffic moving across a network interface in real time?",
+  "answer_options": [
+    "Registry Editor",
+    "Task Scheduler",
+    "Packet capture tool",
+    "Windows Update"
+  ],
+  "correct_answer": [
+    "Packet capture tool"
+  ],
+  "explanation": "Packet visibility tools like Wireshark can show actual traffic moving across a network interface.",
+  "tags": [
+    "packet visibility",
+    "network monitoring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two symptoms strongly suggest a problem with a print server rather than the printer or client? (Select two)",
+  "answer_options": [
+    "Printer test page prints fine locally",
+    "Link lights are off",
+    "All users cannot print but can access other network resources",
+    "Paper jams occur frequently",
+    "Spooler restart does not resolve issue"
+  ],
+  "correct_answer": [
+    "Printer test page prints fine locally",
+    "All users cannot print but can access other network resources"
+  ],
+  "explanation": "If the printer works independently and network is fine but jobs fail globally, the print server is likely the bottleneck.",
+  "tags": [
+    "print server",
+    "printer connectivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

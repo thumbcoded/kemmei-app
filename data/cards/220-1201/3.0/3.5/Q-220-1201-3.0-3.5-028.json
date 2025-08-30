@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following motherboard design elements can influence cooling effectiveness and thermal performance? (Select all that apply)",
+  "answer_options": [
+    "CPU socket position",
+    "Power connector location",
+    "Expansion slot spacing",
+    "Number of SATA connectors"
+  ],
+  "correct_answer": [
+    "CPU socket position",
+    "Power connector location",
+    "Expansion slot spacing"
+  ],
+  "explanation": "Layout decisions like CPU socket and connector locations directly affect heatsink/fan placement and airflow paths.",
+  "tags": [
+    "CPU socket",
+    "power connectors",
+    "airflow"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

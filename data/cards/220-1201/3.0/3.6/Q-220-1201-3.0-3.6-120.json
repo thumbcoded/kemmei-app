@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-120",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What should you check to determine the power requirements of a CPU or video card?",
+  "answer_options": [
+    "The operating system settings",
+    "Manufacturer documentation",
+    "BIOS settings",
+    "Case fan specifications"
+  ],
+  "correct_answer": [
+    "Manufacturer documentation"
+  ],
+  "explanation": "Documentation from the CPU or GPU manufacturer provides accurate power requirement values.",
+  "tags": [
+    "CPU power requirements",
+    "documentation review"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

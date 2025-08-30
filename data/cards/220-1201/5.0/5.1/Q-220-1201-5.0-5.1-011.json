@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A system is configured to boot from an external USB drive but no OS is found. What is the most likely reason?",
+  "answer_options": [
+    "The USB drive is formatted with FAT32",
+    "The USB interface is disabled in BIOS",
+    "The USB drive lacks a valid bootable image",
+    "The internal SSD is corrupt"
+  ],
+  "correct_answer": [
+    "The USB drive lacks a valid bootable image"
+  ],
+  "explanation": "Booting from removable media requires that it contain a valid bootable operating system image.",
+  "tags": [
+    "boot media"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

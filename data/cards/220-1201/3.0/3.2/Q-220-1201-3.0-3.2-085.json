@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens if you fail to fully seat a wire into a punchdown block during installation?",
+  "answer_options": [
+    "The signal strength is boosted",
+    "The wire is more secure",
+    "Connectivity problems may occur",
+    "It creates a short circuit"
+  ],
+  "correct_answer": [
+    "Connectivity problems may occur"
+  ],
+  "explanation": "Improper terminations can cause open circuits or unreliable connections that result in intermittent or failed communication.",
+  "tags": [
+    "punchdown block",
+    "termination"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

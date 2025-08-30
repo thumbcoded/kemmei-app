@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which is the correct order of resolution in the DNS hierarchy when looking up a new domain for the first time?",
+  "answer_options": [
+    "FQDN → gTLD → root server",
+    "Root server → TLD → authoritative name server",
+    "Subdomain → domain → root server",
+    "Client cache → TLD server → root server"
+  ],
+  "correct_answer": [
+    "Root server → TLD → authoritative name server"
+  ],
+  "explanation": "DNS resolution begins with root servers, which direct the query to the appropriate TLD server, which then forwards to the authoritative server.",
+  "tags": [
+    "hierarchy",
+    "root server",
+    "top level domain"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

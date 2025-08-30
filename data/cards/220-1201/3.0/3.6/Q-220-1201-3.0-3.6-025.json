@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is most likely to require its own dedicated +12V power connector directly from the power supply?",
+  "answer_options": [
+    "RAM",
+    "M.2 SSD",
+    "CPU",
+    "Case fan"
+  ],
+  "correct_answer": [
+    "CPU"
+  ],
+  "explanation": "Modern CPUs often require separate +12V rail(s) through an 8-pin (or 4+4-pin) EPS connector to deliver sufficient power.",
+  "tags": [
+    "12 volts",
+    "CPU power"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

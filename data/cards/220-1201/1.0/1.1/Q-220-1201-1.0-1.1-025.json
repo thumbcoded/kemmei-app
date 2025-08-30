@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is replacing a faulty laptop keyboard. After removing the bezel, which of the following is the next most likely step?",
+  "answer_options": [
+    "Disconnecting the laptop's battery",
+    "Reinstalling the operating system",
+    "Unplugging the keyboard’s ribbon cable",
+    "Removing the motherboard"
+  ],
+  "correct_answer": [
+    "Unplugging the keyboard’s ribbon cable"
+  ],
+  "explanation": "After accessing the keyboard, the technician typically detaches the ribbon cable from the system board to remove the keyboard.",
+  "tags": [
+    "ribbon cable",
+    "keyboard connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

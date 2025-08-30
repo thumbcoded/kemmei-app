@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-112",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting tells DHCP clients how long they can keep an assigned IP address?",
+  "answer_options": [
+    "DNS server",
+    "DHCP lease duration",
+    "Default gateway",
+    "Static IP configuration"
+  ],
+  "correct_answer": [
+    "DHCP lease duration"
+  ],
+  "explanation": "The lease duration determines how long a device retains its assigned IP address before it must renew or request a new one.",
+  "tags": [
+    "lease duration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

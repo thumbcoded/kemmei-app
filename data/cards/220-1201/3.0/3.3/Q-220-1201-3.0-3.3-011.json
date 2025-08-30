@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What performance issue occurs when the CPU must wait for data transfers to complete between RAM and the processor?",
+  "answer_options": [
+    "Cache overflow",
+    "Thermal throttling",
+    "Idle cycles due to memory bottlenecks",
+    "Memory module desynchronization"
+  ],
+  "correct_answer": [
+    "Idle cycles due to memory bottlenecks"
+  ],
+  "explanation": "The CPU experiences idle time when the memory subsystem cannot supply data quickly enough, creating a performance bottleneck despite available compute capacity.",
+  "tags": [
+    "data processing",
+    "application execution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

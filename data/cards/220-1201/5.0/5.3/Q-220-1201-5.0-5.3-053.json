@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A desktop shows graphical artifacts across multiple monitors, even after swapping cables. What is the MOST probable cause?",
+  "answer_options": [
+    "Display scaling setting",
+    "LCD panel failure",
+    "Video card hardware fault",
+    "HDMI audio mismatch"
+  ],
+  "correct_answer": [
+    "Video card hardware fault"
+  ],
+  "explanation": "Artifacts across multiple displays with known-good cables and monitors point to the GPU itself as the root cause.",
+  "tags": [
+    "video card problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

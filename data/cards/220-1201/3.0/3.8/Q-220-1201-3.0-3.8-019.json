@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of the cleaning step in the laser printing process?",
+  "answer_options": [
+    "To transfer toner to paper",
+    "To apply a uniform charge to the drum",
+    "To remove leftover toner from the drum",
+    "To melt toner onto the paper"
+  ],
+  "correct_answer": [
+    "To remove leftover toner from the drum"
+  ],
+  "explanation": "The cleaning step removes any residual toner from the drum so it can be reused for the next page.",
+  "tags": [
+    "cleaning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

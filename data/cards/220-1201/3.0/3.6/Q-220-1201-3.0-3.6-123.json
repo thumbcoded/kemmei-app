@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-123",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which power supply feature allows a system to operate in countries with different electrical standards?",
+  "answer_options": [
+    "Heat pipe cooling",
+    "RGB lighting controller",
+    "Automatic voltage switching",
+    "Modular cabling"
+  ],
+  "correct_answer": [
+    "Automatic voltage switching"
+  ],
+  "explanation": "Auto-switching PSUs detect and adjust to 110V or 220V inputs, allowing international compatibility.",
+  "tags": [
+    "voltage compatibility",
+    "power supply selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

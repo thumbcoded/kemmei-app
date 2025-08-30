@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which statements accurately describe how SDRAM synchronization works? (Select all that apply)",
+  "answer_options": [
+    "SDRAM uses a common system clock for timing data transfers",
+    "CPU and memory components stay synchronized through the shared clock signal",
+    "The synchronous design allows predictable data transfer timing",
+    "SDRAM eliminates the need for any clock signals",
+    "All memory operations occur at random intervals"
+  ],
+  "correct_answer": [
+    "SDRAM uses a common system clock for timing data transfers",
+    "CPU and memory components stay synchronized through the shared clock signal",
+    "The synchronous design allows predictable data transfer timing"
+  ],
+  "explanation": "SDRAM (Synchronous DRAM) synchronizes to a common clock, enabling predictable and coordinated data transfers between CPU and memory at high speeds.",
+  "tags": [
+    "SDRAM",
+    "synchronous dynamic RAM",
+    "common clock",
+    "memory synchronization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

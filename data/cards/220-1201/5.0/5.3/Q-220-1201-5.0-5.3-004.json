@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What should be done before replacing a projector bulb?",
+  "answer_options": [
+    "Update projector firmware",
+    "Run fan cooling cycle to cool the bulb",
+    "Reinstall the operating system",
+    "Switch to VGA input mode"
+  ],
+  "correct_answer": [
+    "Run fan cooling cycle to cool the bulb"
+  ],
+  "explanation": "Projectors use extremely hot bulbs, and allowing the fan to complete its cooling cycle prevents damage during replacement.",
+  "tags": [
+    "graceful power down"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-116",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which cloud characteristic enables users in different continents to experience low latency by accessing nearby servers?",
+  "answer_options": [
+    "High availability",
+    "Elasticity",
+    "Scalability",
+    "Geographic distribution"
+  ],
+  "correct_answer": [
+    "Geographic distribution"
+  ],
+  "explanation": "By hosting data and services across multiple global regions, geographic distribution minimizes latency for end users.",
+  "tags": [
+    "geographic distribution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

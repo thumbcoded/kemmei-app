@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which part of a MAC address identifies the manufacturer of the NIC?",
+  "answer_options": [
+    "The last three bytes",
+    "The entire address",
+    "The first three bytes",
+    "It is randomly assigned by the router"
+  ],
+  "correct_answer": [
+    "The first three bytes"
+  ],
+  "explanation": "The first 24 bits (first three bytes) of a MAC address form the Organizationally Unique Identifier (OUI), which identifies the vendor.",
+  "tags": [
+    "MAC address",
+    "NIC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

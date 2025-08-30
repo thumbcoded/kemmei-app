@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which optical media type typically holds the LEAST amount of data?",
+  "answer_options": [
+    "CD-ROM",
+    "DVD-ROM",
+    "Blu-ray",
+    "Hard drive"
+  ],
+  "correct_answer": [
+    "CD-ROM"
+  ],
+  "explanation": "CD-ROMs typically store up to 700 MB, less than DVDs (4.7 GB) and Blu-rays (25 GB or more).",
+  "tags": [
+    "CD-ROM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

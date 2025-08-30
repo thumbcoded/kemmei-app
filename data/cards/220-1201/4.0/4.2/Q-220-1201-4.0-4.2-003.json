@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of provider offers services such as virtual machines, storage, and databases over the internet?",
+  "answer_options": [
+    "Cable television provider",
+    "Cloud service provider",
+    "Internet exchange provider",
+    "Power utility company"
+  ],
+  "correct_answer": [
+    "Cloud service provider"
+  ],
+  "explanation": "Cloud service providers deliver IT resources over the internet, typically using a pay-as-you-go model.",
+  "tags": [
+    "cloud service providers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

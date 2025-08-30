@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO components in an inkjet printer can be integrated or separate depending on the model?",
+  "answer_options": [
+    "Ink cartridge",
+    "Print head",
+    "Feed roller",
+    "Paper tray",
+    "Duplexer"
+  ],
+  "correct_answer": [
+    "Ink cartridge",
+    "Print head"
+  ],
+  "explanation": "Some printers integrate the print head with the ink cartridge, while others keep them as separate parts.",
+  "tags": [
+    "ink cartridge",
+    "print head"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

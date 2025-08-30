@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company selects IaaS to host an internal application. Which factor most increases the customer’s security burden?",
+  "answer_options": [
+    "Limited visibility into hardware resources",
+    "Shared software responsibility with provider",
+    "Full responsibility for OS and app updates",
+    "Lack of access to customer data"
+  ],
+  "correct_answer": [
+    "Full responsibility for OS and app updates"
+  ],
+  "explanation": "The IaaS model requires customers to configure, maintain, and secure their own operating systems and applications.",
+  "tags": [
+    "security responsibility",
+    "IaaS",
+    "operating system maintenance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

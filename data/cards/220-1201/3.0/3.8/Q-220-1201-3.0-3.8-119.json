@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-119",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which printer component is MOST likely to require replacement after extended use, even with proper cleaning?",
+  "answer_options": [
+    "Wireless interface card",
+    "Control panel buttons",
+    "Fuser assembly",
+    "Internal speaker"
+  ],
+  "correct_answer": [
+    "Fuser assembly"
+  ],
+  "explanation": "The fuser assembly wears out over time and is a common component in a scheduled maintenance kit.",
+  "tags": [
+    "maintenance kits"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

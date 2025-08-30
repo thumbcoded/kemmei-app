@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-106",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Where is a MAC address located?",
+  "answer_options": [
+    "In the operating system kernel",
+    "In the DNS cache",
+    "In the NIC hardware",
+    "On the system BIOS chip"
+  ],
+  "correct_answer": [
+    "In the NIC hardware"
+  ],
+  "explanation": "Each NIC has a unique MAC address that is burned into the hardware and used to identify it on a network.",
+  "tags": [
+    "MAC address",
+    "NIC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a potential cause of a system freeze?",
+  "answer_options": [
+    "A high-quality power supply",
+    "Good airflow in the system",
+    "Faulty RAM or memory",
+    "A working CPU cooling fan"
+  ],
+  "correct_answer": [
+    "Faulty RAM or memory"
+  ],
+  "explanation": "System freezes can be caused by hardware issues such as faulty memory modules.",
+  "tags": [
+    "system freeze"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

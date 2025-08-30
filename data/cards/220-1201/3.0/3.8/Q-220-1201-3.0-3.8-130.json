@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-130",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What risk is associated with improper storage of thermal paper?",
+  "answer_options": [
+    "Ink cartridge leaking",
+    "Paper becoming light-sensitive",
+    "Toner clumping and smearing",
+    "Pre-darkening or fading before use"
+  ],
+  "correct_answer": [
+    "Pre-darkening or fading before use"
+  ],
+  "explanation": "Thermal paper is sensitive to heat and light. If stored improperly, it may darken or lose sensitivity before printing.",
+  "tags": [
+    "thermal paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-106",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What would happen if a network's NTP service fails and devices have significantly different times?",
+  "answer_options": [
+    "File sharing would become unavailable",
+    "Log correlation would be impossible and encryption systems might fail",
+    "Internet browsing would slow down",
+    "Email delivery would be delayed"
+  ],
+  "correct_answer": [
+    "Log correlation would be impossible and encryption systems might fail"
+  ],
+  "explanation": "Without accurate time synchronization from NTP, administrators cannot correlate log files across systems effectively, and many encryption technologies require synchronized time to function.",
+  "tags": [
+    "NTP",
+    "network time protocol",
+    "time accuracy",
+    "correlation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

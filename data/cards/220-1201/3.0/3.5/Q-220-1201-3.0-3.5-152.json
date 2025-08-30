@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-152",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of enabling virtualization support like Intel VT-x or AMD-V in the BIOS/UEFI?",
+  "answer_options": [
+    "To increase battery life on laptops",
+    "To enable access to BIOS from a virtual machine",
+    "To improve performance and compatibility of virtual machines",
+    "To allow multiple CPUs to be installed"
+  ],
+  "correct_answer": [
+    "To improve performance and compatibility of virtual machines"
+  ],
+  "explanation": "Intel VT-x and AMD-V allow the CPU to better support virtual machines by providing hardware-assisted virtualization.",
+  "tags": [
+    "Intel VT-x",
+    "AMD-V"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

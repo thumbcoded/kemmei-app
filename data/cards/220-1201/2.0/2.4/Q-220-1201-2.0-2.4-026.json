@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements are true of always-on VPNs? (Select all that apply)",
+  "answer_options": [
+    "They provide a continuous encrypted link for the device",
+    "They eliminate the need for encryption",
+    "They connect automatically when the device starts",
+    "They require user intervention to begin each session",
+    "They are often used for mobile and remote workforces"
+  ],
+  "correct_answer": [
+    "They provide a continuous encrypted link for the device",
+    "They connect automatically when the device starts",
+    "They are often used for mobile and remote workforces"
+  ],
+  "explanation": "Always-on VPNs provide seamless and persistent security for devices—ideal for remote or mobile employees.",
+  "tags": [
+    "always-on VPN",
+    "VPN",
+    "encryption"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

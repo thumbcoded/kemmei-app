@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician uses a spectrum analyzer and sees a strong narrowband spike in the 2.4 GHz range that does not correspond to any Wi-Fi channel. What does this most likely indicate?",
+  "answer_options": [
+    "A nearby access point is broadcasting on channel 6",
+    "The SSID broadcast is disabled",
+    "A non-802.11 device is emitting interference",
+    "The Wi-Fi analyzer is malfunctioning"
+  ],
+  "correct_answer": [
+    "A non-802.11 device is emitting interference"
+  ],
+  "explanation": "Such RF spikes often represent non-Wi-Fi devices like cordless phones, Bluetooth devices, or microwaves emitting in the same frequency band.",
+  "tags": [
+    "spectrum analyzer",
+    "interference"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why do solid-state drives not require defragmentation?",
+  "answer_options": [
+    "They are already compressed",
+    "They have spinning platters",
+    "They access data electronically with no seek time",
+    "They automatically delete duplicate files"
+  ],
+  "correct_answer": [
+    "They access data electronically with no seek time"
+  ],
+  "explanation": "SSDs access data directly from memory cells, so file fragmentation does not affect performance.",
+  "tags": [
+    "solid-state drive",
+    "SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

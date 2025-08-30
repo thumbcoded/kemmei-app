@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-139",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A network engineer wants to ensure that a VoIP phone always receives the same IP but without configuring it manually. What is the best solution?",
+  "answer_options": [
+    "Assign a static IP on the phone’s interface",
+    "Set the DHCP lease duration to 9999 days",
+    "Create a DHCP reservation based on its MAC address",
+    "Enable APIPA on the phone"
+  ],
+  "correct_answer": [
+    "Create a DHCP reservation based on its MAC address"
+  ],
+  "explanation": "A DHCP reservation guarantees the same IP is assigned every time, without the need for local static configuration.",
+  "tags": [
+    "MAC address",
+    "DHCP reservation",
+    "consistent IP",
+    "static assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

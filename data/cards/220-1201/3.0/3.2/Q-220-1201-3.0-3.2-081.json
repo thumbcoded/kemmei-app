@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of a punchdown block in a network wiring setup?",
+  "answer_options": [
+    "To amplify weak signals",
+    "To terminate twisted pair wires in a structured way",
+    "To convert digital signals to analog",
+    "To test fiber optic continuity"
+  ],
+  "correct_answer": [
+    "To terminate twisted pair wires in a structured way"
+  ],
+  "explanation": "A punchdown block provides a centralized and organized way to terminate twisted pair cables in commercial buildings.",
+  "tags": [
+    "punchdown block",
+    "termination"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

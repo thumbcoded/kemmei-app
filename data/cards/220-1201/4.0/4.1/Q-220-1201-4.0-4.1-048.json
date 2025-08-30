@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which component typically manages virtual networking options such as NAT, bridge, or private mode?",
+  "answer_options": [
+    "DHCP relay agent",
+    "Virtual switch",
+    "Firewall appliance",
+    "Virtual machine manager"
+  ],
+  "correct_answer": [
+    "Virtual machine manager"
+  ],
+  "explanation": "The VM manager (hypervisor) configures virtual networking options and policies for each VM.",
+  "tags": [
+    "virtual machine manager",
+    "VM networking"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

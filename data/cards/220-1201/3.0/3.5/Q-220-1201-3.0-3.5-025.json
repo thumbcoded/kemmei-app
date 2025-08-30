@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following components can directly affect cooling and airflow in a system? (Select all that apply)",
+  "answer_options": [
+    "Cooling solutions",
+    "Airflow design",
+    "Storage connectors",
+    "CPU socket"
+  ],
+  "correct_answer": [
+    "Cooling solutions",
+    "Airflow design"
+  ],
+  "explanation": "Cooling components and internal airflow planning are both critical to thermal management. Connectors and sockets play no direct role.",
+  "tags": [
+    "cooling solutions",
+    "airflow"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

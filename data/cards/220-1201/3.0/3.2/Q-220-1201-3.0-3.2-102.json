@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician plugs a USB 3.2 device into a USB 2.0 port. What happens?",
+  "answer_options": [
+    "The device won't be recognized at all",
+    "The port will automatically upgrade to 3.2 speeds",
+    "The device will operate at USB 2.0 speeds",
+    "The device will function, but only as a charging port"
+  ],
+  "correct_answer": [
+    "The device will operate at USB 2.0 speeds"
+  ],
+  "explanation": "USB is backward compatible. A USB 3.2 device plugged into a USB 2.0 port will work but only at USB 2.0 speeds (480 Mbps).",
+  "tags": [
+    "USB 3.2",
+    "USB 2.0"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

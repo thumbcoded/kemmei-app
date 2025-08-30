@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What should you check first if a monitor shows 'no signal'?",
+  "answer_options": [
+    "Replace the video card",
+    "Restart the operating system",
+    "Verify the video cable connection",
+    "Reset the BIOS settings"
+  ],
+  "correct_answer": [
+    "Verify the video cable connection"
+  ],
+  "explanation": "A 'no signal' error is often due to a loose or disconnected video cable. Always check the physical connection first.",
+  "tags": [
+    "no signal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

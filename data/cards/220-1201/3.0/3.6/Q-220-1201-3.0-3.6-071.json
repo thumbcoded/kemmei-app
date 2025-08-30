@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of power supply comes with all cables permanently attached?",
+  "answer_options": [
+    "Modular",
+    "Semi-modular",
+    "Fixed",
+    "Dual-rail"
+  ],
+  "correct_answer": [
+    "Fixed"
+  ],
+  "explanation": "Fixed power supplies have all cables permanently attached, unlike modular or semi-modular designs.",
+  "tags": [
+    "fixed connections"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

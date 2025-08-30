@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why do memory modules include notches or 'keys' on the connector edge?",
+  "answer_options": [
+    "To allow airflow during operation",
+    "To identify the manufacturer of the module",
+    "To ensure proper orientation and compatibility with the memory slot",
+    "To reduce the chance of electrostatic discharge"
+  ],
+  "correct_answer": [
+    "To ensure proper orientation and compatibility with the memory slot"
+  ],
+  "explanation": "Memory modules are keyed with notches that match specific slot types, preventing incorrect insertion and ensuring only compatible modules are installed.",
+  "tags": [
+    "memory slot",
+    "memory module",
+    "memory slot keys"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

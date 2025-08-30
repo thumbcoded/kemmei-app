@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two characteristics describe resistive touchscreens? (Select two)",
+  "answer_options": [
+    "Require finger or conductive object to work",
+    "Respond to any pressure, including gloved touch",
+    "Common in modern smartphones",
+    "Generally more durable than capacitive",
+    "Do not register input from styluses"
+  ],
+  "correct_answer": [
+    "Require finger or conductive object to work",
+    "Respond to any pressure, including gloved touch"
+  ],
+  "explanation": "Resistive screens work by pressure and can be used with fingers, styluses, or gloves — unlike capacitive types.",
+  "tags": [
+    "resistive touchscreen"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

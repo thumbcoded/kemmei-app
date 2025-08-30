@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which limitation of AHCI makes it poorly suited for SSD performance scaling?",
+  "answer_options": [
+    "It requires RAID 0 for boot",
+    "It only supports external USB storage",
+    "It uses a single command queue with limited depth",
+    "It depends on external GPU acceleration"
+  ],
+  "correct_answer": [
+    "It uses a single command queue with limited depth"
+  ],
+  "explanation": "AHCI was designed for mechanical drives and supports only one command queue with 32 entries, limiting the performance potential of modern SSDs.",
+  "tags": [
+    "AHCI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

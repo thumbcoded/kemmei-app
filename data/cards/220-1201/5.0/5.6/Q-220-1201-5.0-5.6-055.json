@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the best course of action if a document prints in landscape mode when portrait was selected in the application?",
+  "answer_options": [
+    "Replace the printer",
+    "Clean the pickup rollers",
+    "Check for an orientation mismatch",
+    "Adjust the tray alignment"
+  ],
+  "correct_answer": [
+    "Check for an orientation mismatch"
+  ],
+  "explanation": "Mismatches between application, driver, and printer settings can lead to incorrect page orientation despite correct selection in the app.",
+  "tags": [
+    "orientation mismatch"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

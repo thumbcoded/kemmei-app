@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the biggest risk associated with relying entirely on a SaaS provider for business-critical services?",
+  "answer_options": [
+    "You may need to update your own operating system",
+    "You lose the ability to scale the app to your needs",
+    "Your data and application availability depend entirely on the provider",
+    "You must hire developers to maintain the software"
+  ],
+  "correct_answer": [
+    "Your data and application availability depend entirely on the provider"
+  ],
+  "explanation": "If the SaaS provider goes offline or experiences data loss, customers typically cannot intervene directly to restore service.",
+  "tags": [
+    "SaaS",
+    "application management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

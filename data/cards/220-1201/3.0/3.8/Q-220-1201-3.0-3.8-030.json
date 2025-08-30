@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What component contains the liquid ink in an inkjet printer?",
+  "answer_options": [
+    "Fuser unit",
+    "Toner cartridge",
+    "Ink cartridge",
+    "Ribbon roll"
+  ],
+  "correct_answer": [
+    "Ink cartridge"
+  ],
+  "explanation": "The ink cartridge stores liquid ink in an inkjet printer and is replaceable.",
+  "tags": [
+    "ink cartridge"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

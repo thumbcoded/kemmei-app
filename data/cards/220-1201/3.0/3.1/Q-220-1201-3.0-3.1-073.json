@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best describes the CIE1931 color space?",
+  "answer_options": [
+    "It defines the specific color limits of all modern display panels",
+    "It is a triangle of RGB-defined values optimized for Adobe RGB",
+    "It encompasses all colors visible to the average human eye",
+    "It is used exclusively in OLED manufacturing"
+  ],
+  "correct_answer": [
+    "It encompasses all colors visible to the average human eye"
+  ],
+  "explanation": "The CIE1931 diagram is a foundational reference used to define how other color spaces relate to human vision.",
+  "tags": [
+    "CIE1931",
+    "color gamut"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

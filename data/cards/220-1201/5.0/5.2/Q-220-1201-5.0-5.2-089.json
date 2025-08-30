@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What types of alerts can RAID arrays send to notify administrators of drive issues?",
+  "answer_options": [
+    "Only visual alerts on the server console",
+    "Email messages and text messages",
+    "Only audible alarms at the server location",
+    "Alerts are only available through third-party software"
+  ],
+  "correct_answer": [
+    "Email messages and text messages"
+  ],
+  "explanation": "Many RAID arrays can send email messages or text messages to notify administrators of drive problems, even when they're not physically present at the server console. This remote notification capability is crucial for proactive maintenance.",
+  "tags": [
+    "RAID failure",
+    "array degraded"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

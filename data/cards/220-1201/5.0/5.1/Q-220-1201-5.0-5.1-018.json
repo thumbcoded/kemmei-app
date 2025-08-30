@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What typically happens immediately after a Windows stop error appears?",
+  "answer_options": [
+    "The screen dims and then returns to normal",
+    "The system automatically restarts",
+    "The user is prompted to update drivers",
+    "The error is silently logged and ignored"
+  ],
+  "correct_answer": [
+    "The system automatically restarts"
+  ],
+  "explanation": "After a Windows stop error (BSOD), the system often restarts automatically after collecting diagnostic information.",
+  "tags": [
+    "stop error",
+    "automatic restart"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

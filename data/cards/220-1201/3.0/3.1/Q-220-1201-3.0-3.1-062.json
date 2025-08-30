@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements are true about refresh rate and performance in gaming? (Select all that apply)",
+  "answer_options": [
+    "High refresh rate monitors provide smoother visuals when FPS is high",
+    "VSYNC prevents frame tearing but can introduce latency",
+    "Matching FPS to refresh rate improves perceived motion smoothness",
+    "Refresh rate affects image resolution",
+    "Higher refresh rate can reduce power draw"
+  ],
+  "correct_answer": [
+    "High refresh rate monitors provide smoother visuals when FPS is high",
+    "VSYNC prevents frame tearing but can introduce latency",
+    "Matching FPS to refresh rate improves perceived motion smoothness"
+  ],
+  "explanation": "Refresh rate and FPS synchronization impact smoothness and latency, while resolution and power draw are separate concerns.",
+  "tags": [
+    "refresh rate",
+    "FPS",
+    "VSYNC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

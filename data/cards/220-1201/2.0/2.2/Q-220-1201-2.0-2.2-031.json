@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are common Bluetooth use cases? (Select all that apply)",
+  "answer_options": [
+    "Wireless audio connections",
+    "Personal device pairing",
+    "Long-range internet connectivity",
+    "Wireless headset communication",
+    "Connecting to enterprise VPN"
+  ],
+  "correct_answer": [
+    "Wireless audio connections",
+    "Personal device pairing",
+    "Wireless headset communication"
+  ],
+  "explanation": "Bluetooth is commonly used for personal device pairing and wireless audio, but not for long-range or enterprise networking.",
+  "tags": [
+    "Bluetooth",
+    "headsets",
+    "wireless audio",
+    "personal devices"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

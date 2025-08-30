@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following statements is true regarding SO-DIMM use in performance-critical systems?",
+  "answer_options": [
+    "SO-DIMMs are ideal due to higher thermal limits",
+    "SO-DIMMs are interchangeable with full-sized DIMMs in most desktops",
+    "SO-DIMMs offer less physical bandwidth due to compact size and fewer electrical contacts",
+    "SO-DIMMs use proprietary bus standards incompatible with standard motherboards"
+  ],
+  "correct_answer": [
+    "SO-DIMMs offer less physical bandwidth due to compact size and fewer electrical contacts"
+  ],
+  "explanation": "SO-DIMMs are more compact and suited for laptops, but their smaller form factor often limits total bandwidth compared to full-sized DIMMs.",
+  "tags": [
+    "SO-DIMM",
+    "small outline DIMM",
+    "laptop memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

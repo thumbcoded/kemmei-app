@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A user reports frequent BSODs and restarts. Which three issues should you investigate first? (Select three)",
+  "answer_options": [
+    "Recent hardware changes",
+    "BIOS splash screen delay",
+    "Cooling system status",
+    "Disk fragmentation",
+    "Power supply quality",
+    "Pending Windows updates"
+  ],
+  "correct_answer": [
+    "Recent hardware changes",
+    "Cooling system status",
+    "Power supply quality"
+  ],
+  "explanation": "Hardware instability due to improper cooling, power issues, or faulty components can all trigger frequent BSODs. These are higher priorities than splash screen delays or disk fragmentation.",
+  "tags": [
+    "BSOD",
+    "cooling problems",
+    "system crash"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 3,
+  "__v": 0
+}

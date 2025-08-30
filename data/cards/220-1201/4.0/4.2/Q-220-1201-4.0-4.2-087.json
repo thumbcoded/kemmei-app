@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why an organization might choose a private cloud over a public cloud?",
+  "answer_options": [
+    "To take advantage of third-party scalability",
+    "To reduce operational control and oversight",
+    "To improve security and retain data sovereignty",
+    "To eliminate the need for in-house IT staff"
+  ],
+  "correct_answer": [
+    "To improve security and retain data sovereignty"
+  ],
+  "explanation": "Organizations with strict compliance or data privacy requirements often choose private clouds for better control and data residency guarantees.",
+  "tags": [
+    "customer isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

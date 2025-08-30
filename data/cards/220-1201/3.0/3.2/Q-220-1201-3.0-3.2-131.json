@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-131",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of cable is used to transmit data as pulses of light?",
+  "answer_options": [
+    "Twisted pair",
+    "Coaxial cable",
+    "Fiber optics",
+    "Serial cable"
+  ],
+  "correct_answer": [
+    "Fiber optics"
+  ],
+  "explanation": "Fiber optic cables use light rather than electricity to transmit data, offering high speed and low signal loss.",
+  "tags": [
+    "fiber optics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

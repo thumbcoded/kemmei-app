@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which product is an example of a hosted hypervisor?",
+  "answer_options": [
+    "VMware ESXi",
+    "Microsoft Hyper-V",
+    "Parallels Desktop",
+    "Citrix XenServer"
+  ],
+  "correct_answer": [
+    "Parallels Desktop"
+  ],
+  "explanation": "Parallels Desktop is a Type 2 (hosted) hypervisor that runs on top of macOS.",
+  "tags": [
+    "Parallels Desktop"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

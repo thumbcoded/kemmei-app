@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary difference between DVI single link and DVI dual link?",
+  "answer_options": [
+    "Dual link supports audio, single link does not",
+    "Single link is analog-only, dual link is digital-only",
+    "Dual link supports higher resolutions than single link",
+    "Single link includes a locking mechanism"
+  ],
+  "correct_answer": [
+    "Dual link supports higher resolutions than single link"
+  ],
+  "explanation": "DVI dual link includes more pins and bandwidth, allowing support for higher video resolutions.",
+  "tags": [
+    "single link",
+    "dual link"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

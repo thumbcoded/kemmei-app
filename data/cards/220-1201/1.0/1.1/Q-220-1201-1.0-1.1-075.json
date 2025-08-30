@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are common methods for migrating a laptop’s storage drive? (Select all that apply)",
+  "answer_options": [
+    "Using imaging software",
+    "Creating a full system backup and restoring it",
+    "Manually replacing the drive without transferring data",
+    "Using cloning software provided by the SSD manufacturer"
+  ],
+  "correct_answer": [
+    "Using imaging software",
+    "Creating a full system backup and restoring it",
+    "Using cloning software provided by the SSD manufacturer"
+  ],
+  "explanation": "Drive migration can be performed using imaging, backup/restore methods, or cloning utilities.",
+  "tags": [
+    "drive migration",
+    "image restore",
+    "cloning software",
+    "backup and restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

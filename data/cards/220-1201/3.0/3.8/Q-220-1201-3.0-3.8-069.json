@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What kind of paper is required for thermal printing to work correctly?",
+  "answer_options": [
+    "Glossy paper",
+    "Chemically coated paper",
+    "Bond paper",
+    "Carbon paper"
+  ],
+  "correct_answer": [
+    "Chemically coated paper"
+  ],
+  "explanation": "Thermal printers rely on chemically coated paper that reacts to heat, eliminating the need for ink or toner.",
+  "tags": [
+    "chemically coated paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

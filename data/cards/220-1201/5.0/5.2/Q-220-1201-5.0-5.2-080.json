@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main purpose of running an overnight test on a storage device?",
+  "answer_options": [
+    "To cool the drive after extended use",
+    "To let backup scripts complete",
+    "To uncover intermittent or slow-developing issues",
+    "To install firmware updates automatically"
+  ],
+  "correct_answer": [
+    "To uncover intermittent or slow-developing issues"
+  ],
+  "explanation": "Overnight tests allow extended diagnostics that can catch errors missed during short tests.",
+  "tags": [
+    "overnight test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system uses DDR5 memory rated at 5600 MT/s with a 64-bit bus. What is the theoretical peak bandwidth per channel?",
+  "answer_options": [
+    "44800 MB/s",
+    "5600 MB/s",
+    "3200 MB/s",
+    "89600 MB/s"
+  ],
+  "correct_answer": [
+    "44800 MB/s"
+  ],
+  "explanation": "Theoretical bandwidth is calculated as (Data rate × Bus width) ÷ 8. So: (5600 MT/s × 64 bits) ÷ 8 = 44800 MB/s.",
+  "tags": [
+    "data transfer rate",
+    "memory bandwidth",
+    "MT/s"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

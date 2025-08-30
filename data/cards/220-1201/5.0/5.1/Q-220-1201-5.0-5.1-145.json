@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-145",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is intermittent shutdown and what are the most common causes in desktop systems?",
+  "answer_options": [
+    "Scheduled automatic shutdowns configured in power management settings",
+    "Random unexpected shutdowns - typically caused by overheating, PSU problems, or failing components",
+    "User-initiated shutdowns that occur during normal system operation",
+    "Network-triggered shutdowns from remote administration tools"
+  ],
+  "correct_answer": [
+    "Random unexpected shutdowns - typically caused by overheating, PSU problems, or failing components"
+  ],
+  "explanation": "Intermittent shutdown is random, unexpected system shutdown without user initiation. Common causes: CPU/GPU overheating, power supply instability or failure, failing motherboard components, bad RAM, loose connections, or thermal protection activation. Troubleshoot by monitoring temperatures, testing power supply, checking connections, and running hardware diagnostics.",
+  "tags": [
+    "intermittent shutdown"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

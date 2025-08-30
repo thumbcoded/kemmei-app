@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements accurately describe the DNS hierarchy? (Select all that apply)",
+  "answer_options": [
+    "Root servers forward queries to top level domain servers",
+    "Subdomains reside above top level domains",
+    "The DNS database is distributed across global servers",
+    "Every DNS query begins with the gTLD server",
+    "FQDNs include host and domain name components"
+  ],
+  "correct_answer": [
+    "Root servers forward queries to top level domain servers",
+    "The DNS database is distributed across global servers",
+    "FQDNs include host and domain name components"
+  ],
+  "explanation": "The DNS hierarchy starts from the root, flows through TLDs, and down to domains and subdomains; the system is distributed and used to resolve full domain names.",
+  "tags": [
+    "hierarchy",
+    "root server",
+    "distributed database",
+    "FQDN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

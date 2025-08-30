@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the maximum cable length supported by eSATA for external storage connections?",
+  "answer_options": [
+    "1 meter",
+    "2 meters",
+    "3 meters",
+    "5 meters"
+  ],
+  "correct_answer": [
+    "2 meters"
+  ],
+  "explanation": "eSATA supports external SATA connections with a maximum cable length of 2 meters.",
+  "tags": [
+    "eSATA",
+    "external SATA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

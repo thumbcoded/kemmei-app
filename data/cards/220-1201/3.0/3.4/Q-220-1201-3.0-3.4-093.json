@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which component inside an optical drive is primarily responsible for reading data?",
+  "answer_options": [
+    "Stepper motor",
+    "Read/write arm",
+    "Laser assembly",
+    "Optical buffer"
+  ],
+  "correct_answer": [
+    "Laser assembly"
+  ],
+  "explanation": "The laser assembly focuses a beam to detect the physical patterns (pits and lands) on an optical disc surface.",
+  "tags": [
+    "laser beam storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

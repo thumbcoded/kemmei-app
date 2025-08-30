@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following USB versions introduced a maximum speed of 480 Mbps?",
+  "answer_options": [
+    "USB 1.1",
+    "USB 2.0",
+    "USB 3.0",
+    "USB 3.2"
+  ],
+  "correct_answer": [
+    "USB 2.0"
+  ],
+  "explanation": "USB 2.0 supports a maximum data rate of 480 Mbps, a significant improvement over USB 1.1's 12 Mbps.",
+  "tags": [
+    "USB 2.0"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

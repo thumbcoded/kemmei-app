@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following conditions could contribute to signal degradation? (Select all that apply)",
+  "answer_options": [
+    "Dense concrete walls between client and AP",
+    "Improper antenna orientation",
+    "Overlapping channels with neighboring APs",
+    "Static IP configuration",
+    "Poor DHCP lease duration"
+  ],
+  "correct_answer": [
+    "Dense concrete walls between client and AP",
+    "Improper antenna orientation",
+    "Overlapping channels with neighboring APs"
+  ],
+  "explanation": "All three listed causes affect signal propagation and quality; DHCP and static IP settings do not directly impact signal strength.",
+  "tags": [
+    "signal degradation",
+    "antenna positioning",
+    "access point issues",
+    "signal propagation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

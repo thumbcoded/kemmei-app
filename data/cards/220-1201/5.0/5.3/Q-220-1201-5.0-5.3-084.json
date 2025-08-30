@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why can't dead pixels be repaired like other monitor problems?",
+  "answer_options": [
+    "They require special tools that are too expensive for most repairs",
+    "They are internal hardware failures that can't be accessed without replacing the display",
+    "The repair process would void the monitor's warranty coverage",
+    "The pixel repair software is not widely available to consumers"
+  ],
+  "correct_answer": [
+    "They are internal hardware failures that can't be accessed without replacing the display"
+  ],
+  "explanation": "Dead pixels are failed internal components within the LCD panel itself. Unlike external issues (cables, settings, dirt), you cannot access or repair individual pixels without completely replacing the display panel, making repair economically unfeasible.",
+  "tags": [
+    "dead pixels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

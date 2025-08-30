@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a next generation firewall commonly designed to do?",
+  "answer_options": [
+    "Print documents across VLANs",
+    "Scan content and apply unified threat controls",
+    "Resolve domain names to IP addresses",
+    "Provide wireless internet access"
+  ],
+  "correct_answer": [
+    "Scan content and apply unified threat controls"
+  ],
+  "explanation": "A next generation firewall includes traditional firewall capabilities along with advanced features like content inspection and unified threat management.",
+  "tags": [
+    "next generation firewall",
+    "unified threat management",
+    "UTM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

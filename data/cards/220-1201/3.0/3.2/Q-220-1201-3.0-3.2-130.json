@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-130",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two statements describe characteristics of DB9 and RS232 communication? (Select two)",
+  "answer_options": [
+    "It uses multi-gigabit symmetric signaling for video",
+    "It requires precise timing configurations like baud rate",
+    "It is commonly used for configuring headless devices",
+    "It automatically negotiates communication protocols like USB",
+    "It is the preferred method for HDMI console control"
+  ],
+  "correct_answer": [
+    "It requires precise timing configurations like baud rate",
+    "It is commonly used for configuring headless devices"
+  ],
+  "explanation": "RS232 requires manual config (baud, parity, etc.) and is frequently used with headless systems like routers and switches via console ports.",
+  "tags": [
+    "RS232",
+    "console port",
+    "serial communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

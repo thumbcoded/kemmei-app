@@ -1,0 +1,2828 @@
+{
+  "220-1201": {
+    "1.0": {
+      "1.1": {
+        "concepts": {
+          "Battery modularity": {
+            "terms": [
+              "removable battery",
+              "modular battery",
+              "non-removable battery",
+              "internal battery",
+              "user-swappable battery"
+            ]
+          },
+          "Battery types and features": {
+            "terms": [
+              "lithium ion",
+              "li-ion",
+              "lithium polymer",
+              "LiPo",
+              "no memory effect",
+              "battery form factor"
+            ]
+          },
+          "Keyboard replacement": {
+            "terms": [
+              "keyboard bezel",
+              "keyboard swap",
+              "ribbon cable",
+              "keyboard connector",
+              "external USB keyboard"
+            ]
+          },
+          "Individual key repair": {
+            "terms": [
+              "keycap",
+              "key replacement",
+              "damaged key",
+              "replace single key"
+            ]
+          },
+          "Memory upgradeability": {
+            "terms": [
+              "SODIMM",
+              "RAM upgrade",
+              "memory module",
+              "memory slot",
+              "modular memory",
+              "soldered RAM"
+            ]
+          },
+          "Storage device types": {
+            "terms": [
+              "HDD",
+              "SSD",
+              "M.2",
+              "2.5 inch drive",
+              "spinning drive",
+              "solid state drive"
+            ]
+          },
+          "Drive replacement procedures": {
+            "terms": [
+              "screw",
+              "access panel",
+              "remove drive",
+              "replace drive",
+              "install M.2",
+              "unscrew drive"
+            ]
+          },
+          "Drive cloning and migration": {
+            "terms": [
+              "imaging software",
+              "cloning software",
+              "drive migration",
+              "image restore",
+              "backup and restore"
+            ]
+          },
+          "Wi-Fi/Bluetooth interfaces": {
+            "terms": [
+              "802.11",
+              "Wi-Fi card",
+              "Bluetooth",
+              "mini PCIe",
+              "wireless antenna",
+              "main/aux connector"
+            ]
+          },
+          "Antenna placement": {
+            "terms": [
+              "antenna wire",
+              "wrap around display",
+              "antenna connector",
+              "laptop screen antenna"
+            ]
+          },
+          "Biometric authentication": {
+            "terms": [
+              "fingerprint reader",
+              "face recognition",
+              "Windows Hello",
+              "biometric hardware"
+            ]
+          },
+          "NFC usage": {
+            "terms": [
+              "near field communication",
+              "NFC",
+              "short range",
+              "proximity authentication"
+            ]
+          },
+          "Built-in cameras and mics": {
+            "terms": [
+              "webcam",
+              "microphone",
+              "built-in camera",
+              "video conference",
+              "external camera"
+            ]
+          }
+        }
+      },
+      "1.2": {
+        "concepts": {
+          "Wired connection types": {
+            "terms": [
+              "USB",
+              "USB-C",
+              "microUSB",
+              "miniUSB",
+              "Lightning",
+              "connector",
+              "cable",
+              "wired",
+              "charging",
+              "data transfer"
+            ]
+          },
+          "Wireless connection types": {
+            "terms": [
+              "Bluetooth",
+              "NFC",
+              "near field communication",
+              "wireless",
+              "pairing",
+              "wireless headset",
+              "wireless speaker"
+            ]
+          },
+          "Tethering and hotspot": {
+            "terms": [
+              "tethering",
+              "hotspot",
+              "personal area network",
+              "PAN",
+              "internet sharing",
+              "mobile hotspot"
+            ]
+          },
+          "Stylus and drawing accessories": {
+            "terms": [
+              "stylus",
+              "digital pen",
+              "drawing pad",
+              "digitizer",
+              "pressure sensitivity",
+              "Bluetooth stylus"
+            ]
+          },
+          "Headsets and audio accessories": {
+            "terms": [
+              "headset",
+              "wired headset",
+              "wireless headset",
+              "TRRS",
+              "audio jack",
+              "microphone",
+              "Bluetooth headset"
+            ]
+          },
+          "Speakers and audio output": {
+            "terms": [
+              "speaker",
+              "wireless speaker",
+              "Bluetooth speaker",
+              "audio output",
+              "portable speaker"
+            ]
+          },
+          "Webcams and cameras": {
+            "terms": [
+              "webcam",
+              "camera",
+              "built-in camera",
+              "external camera",
+              "USB camera",
+              "video conferencing"
+            ]
+          },
+          "Docking stations and port replicators": {
+            "terms": [
+              "docking station",
+              "port replicator",
+              "USB hub",
+              "interface expansion",
+              "laptop dock"
+            ]
+          },
+          "Trackpads and input devices": {
+            "terms": [
+              "trackpad",
+              "drawing pad",
+              "track point",
+              "input device",
+              "external trackpad",
+              "function key"
+            ]
+          }
+        }
+      },
+      "1.3": {
+        "concepts": {
+          "Cellular network technologies": {
+            "terms": [
+              "cellular",
+              "3G",
+              "4G",
+              "5G",
+              "LTE",
+              "LTE-A",
+              "GSM",
+              "EDGE",
+              "bandwidth",
+              "data plan"
+            ]
+          },
+          "Wi-Fi and wireless networking": {
+            "terms": [
+              "Wi-Fi",
+              "802.11",
+              "wireless network",
+              "access point",
+              "SSID",
+              "wireless data",
+              "Wi-Fi calling"
+            ]
+          },
+          "Hotspot and tethering": {
+            "terms": [
+              "hotspot",
+              "tethering",
+              "internet sharing",
+              "mobile hotspot",
+              "personal area network",
+              "PAN"
+            ]
+          },
+          "SIM and eSIM management": {
+            "terms": [
+              "SIM",
+              "eSIM",
+              "subscriber identity module",
+              "SIM card",
+              "embedded SIM",
+              "SIM ID",
+              "phone number"
+            ]
+          },
+          "Bluetooth pairing and connectivity": {
+            "terms": [
+              "Bluetooth",
+              "pairing",
+              "PIN",
+              "discoverable",
+              "wireless headset",
+              "wireless speaker",
+              "connectivity"
+            ]
+          },
+          "Location services": {
+            "terms": [
+              "GPS",
+              "global positioning system",
+              "location services",
+              "cellular location",
+              "Wi-Fi location",
+              "triangulation"
+            ]
+          },
+          "Mobile device management (MDM)": {
+            "terms": [
+              "MDM",
+              "mobile device management",
+              "policy",
+              "BYOD",
+              "COPE",
+              "corporate owned",
+              "partition",
+              "security policy"
+            ]
+          },
+          "Device synchronization and data caps": {
+            "terms": [
+              "synchronization",
+              "data cap",
+              "calendar sync",
+              "contact sync",
+              "mail sync",
+              "cloud backup",
+              "restore"
+            ]
+          },
+          "Business applications and cloud services": {
+            "terms": [
+              "business application",
+              "Outlook",
+              "cloud storage",
+              "Gmail",
+              "Microsoft Exchange",
+              "account settings"
+            ]
+          }
+        }
+      }
+    },
+    "2.0": {
+      "2.1": {
+        "concepts": {
+          "Well-known ports and their purposes": {
+            "terms": [
+              "port number",
+              "port 20",
+              "port 21",
+              "port 22",
+              "port 23",
+              "port 25",
+              "port 53",
+              "port 80",
+              "port 110",
+              "port 143",
+              "port 443",
+              "port 3389",
+              "well-known port",
+              "application port",
+              "network service"
+            ]
+          },
+          "TCP characteristics": {
+            "terms": [
+              "transmission control protocol",
+              "TCP",
+              "connection-oriented",
+              "three-way handshake",
+              "ACK",
+              "SYN",
+              "reliable delivery",
+              "ordered data"
+            ]
+          },
+          "UDP characteristics": {
+            "terms": [
+              "user datagram protocol",
+              "UDP",
+              "connectionless",
+              "unreliable",
+              "fast delivery",
+              "low overhead",
+              "streaming",
+              "real-time traffic"
+            ]
+          },
+          "Protocol associations (by port)": {
+            "terms": [
+              "FTP",
+              "SSH",
+              "Telnet",
+              "SMTP",
+              "DNS",
+              "HTTP",
+              "POP3",
+              "IMAP",
+              "HTTPS",
+              "RDP",
+              "protocol",
+              "service",
+              "port mapping",
+              "port assignment"
+            ]
+          },
+          "Connection-oriented vs connectionless": {
+            "terms": [
+              "connection-oriented",
+              "connectionless",
+              "TCP vs UDP",
+              "reliable vs unreliable",
+              "streaming vs browsing",
+              "real-time application",
+              "error checking"
+            ]
+          },
+          "Practical use cases of TCP/UDP": {
+            "terms": [
+              "email",
+              "file transfer",
+              "web browsing",
+              "video streaming",
+              "VoIP",
+              "gaming",
+              "use case",
+              "network performance",
+              "application behavior"
+            ]
+          }
+        }
+      },
+      "2.2": {
+        "concepts": {
+          "Wi-Fi generations and standards": {
+            "terms": [
+              "802.11",
+              "Wi-Fi 5",
+              "Wi-Fi 6",
+              "Wi-Fi 6E",
+              "Wi-Fi 7",
+              "802.11ac",
+              "802.11ax",
+              "802.11be",
+              "wireless standards",
+              "naming conventions"
+            ]
+          },
+          "Wireless frequencies and bandwidths": {
+            "terms": [
+              "2.4 GHz",
+              "5 GHz",
+              "6 GHz",
+              "channel",
+              "bandwidth",
+              "20 MHz",
+              "40 MHz",
+              "80 MHz",
+              "160 MHz",
+              "spectrum",
+              "overlap"
+            ]
+          },
+          "Bluetooth technology": {
+            "terms": [
+              "Bluetooth",
+              "2.4 GHz",
+              "short range",
+              "personal devices",
+              "headsets",
+              "wireless audio",
+              "ISM band",
+              "unlicensed frequency"
+            ]
+          },
+          "RFID and NFC technologies": {
+            "terms": [
+              "RFID",
+              "radio frequency identification",
+              "NFC",
+              "near field communication",
+              "passive RFID",
+              "active RFID",
+              "tags",
+              "point-of-sale",
+              "device pairing"
+            ]
+          }
+        }
+      },
+      "2.3": {
+        "concepts": {
+          "DHCP operations": {
+            "terms": [
+              "DHCP",
+              "DORA",
+              "discover",
+              "offer",
+              "request",
+              "acknowledge",
+              "IP assignment",
+              "lease",
+              "reservation",
+              "scope"
+            ]
+          },
+          "DNS functions and features": {
+            "terms": [
+              "DNS",
+              "domain name system",
+              "IP resolution",
+              "FQDN",
+              "distributed database",
+              "resource records",
+              "A record",
+              "AAAA record",
+              "MX record",
+              "CNAME",
+              "TXT record"
+            ]
+          },
+          "DNS security and mail protections": {
+            "terms": [
+              "SPF",
+              "DKIM",
+              "DMARC",
+              "email verification",
+              "public key",
+              "digital signature",
+              "mail authentication",
+              "quarantine",
+              "spam policy",
+              "TXT record"
+            ]
+          }
+        }
+      },
+      "2.4": {
+        "concepts": {
+          "LANs and VLANs": {
+            "terms": [
+              "LAN",
+              "broadcast domain",
+              "switch",
+              "VLAN",
+              "logical separation",
+              "interface",
+              "segmentation",
+              "efficiency",
+              "VLAN ID"
+            ]
+          },
+          "VPN concepts": {
+            "terms": [
+              "VPN",
+              "virtual private network",
+              "encryption",
+              "concentrator",
+              "client-to-site",
+              "site-to-site",
+              "tunnel",
+              "firewall",
+              "always-on VPN"
+            ]
+          }
+        }
+      },
+      "2.5": {
+        "concepts": {
+          "Router functions and layer 3 switching": {
+            "terms": [
+              "router",
+              "layer 3",
+              "forwarding decision",
+              "IP address",
+              "routing table",
+              "layer 3 switch",
+              "network interconnection",
+              "subnet"
+            ]
+          },
+          "Switch types and capabilities": {
+            "terms": [
+              "switch",
+              "MAC address",
+              "ASIC",
+              "VLAN",
+              "managed switch",
+              "unmanaged switch",
+              "port mirroring",
+              "redundancy",
+              "SNMP"
+            ]
+          },
+          "Wireless access points and bridging": {
+            "terms": [
+              "access point",
+              "bridging",
+              "MAC address",
+              "wireless to wired",
+              "frame forwarding",
+              "SSID",
+              "network extender"
+            ]
+          },
+          "Patch panels and cable management": {
+            "terms": [
+              "patch panel",
+              "RJ45",
+              "punchdown",
+              "wiring closet",
+              "desk connection",
+              "static run",
+              "switch interface"
+            ]
+          },
+          "Firewalls and next-gen features": {
+            "terms": [
+              "firewall",
+              "port filtering",
+              "access list",
+              "next-generation firewall",
+              "application filter",
+              "proxy",
+              "VPN concentrator"
+            ]
+          },
+          "Power over Ethernet (PoE)": {
+            "terms": [
+              "PoE",
+              "PoE+",
+              "PoE++",
+              "in-span",
+              "mid-span",
+              "Ethernet power",
+              "injector",
+              "WAP",
+              "VoIP phone"
+            ]
+          },
+          "Cable and DSL modems": {
+            "terms": [
+              "cable modem",
+              "DSL",
+              "DOCSIS",
+              "broadband",
+              "RJ11",
+              "RJ45",
+              "coax",
+              "copper line",
+              "central office"
+            ]
+          },
+          "Optical terminals and demarc": {
+            "terms": [
+              "optical network terminal",
+              "ONT",
+              "fiber",
+              "demarcation point",
+              "ISP boundary",
+              "data port",
+              "RJ11",
+              "RJ45",
+              "F-connector"
+            ]
+          },
+          "NICs and MAC addresses": {
+            "terms": [
+              "network interface card",
+              "NIC",
+              "MAC address",
+              "expansion card",
+              "Ethernet",
+              "fiber NIC",
+              "multi-port"
+            ]
+          }
+        }
+      },
+      "2.6": {
+        "concepts": {
+          "IPv4 addressing basics": {
+            "terms": [
+              "IPv4",
+              "IP address",
+              "octet",
+              "binary",
+              "decimal",
+              "32-bit",
+              "public IP"
+            ]
+          },
+          "IPv6 features and format": {
+            "terms": [
+              "IPv6",
+              "hexadecimal",
+              "128-bit",
+              "colon notation",
+              "network prefix",
+              "host ID",
+              "DNS reliance",
+              "subnetting"
+            ]
+          },
+          "Subnet mask and gateway": {
+            "terms": [
+              "subnet mask",
+              "default gateway",
+              "local subnet",
+              "network boundary",
+              "manual IP config"
+            ]
+          },
+          "DHCP and static IPs": {
+            "terms": [
+              "DHCP",
+              "static IP",
+              "DHCP reservation",
+              "manual config",
+              "dynamic address",
+              "MAC-based assignment"
+            ]
+          },
+          "APIPA and link-local behavior": {
+            "terms": [
+              "APIPA",
+              "link-local",
+              "169.254",
+              "ARP check",
+              "self-assigned IP",
+              "DHCP failure",
+              "troubleshooting"
+            ]
+          }
+        }
+      },
+      "2.7": {
+        "concepts": {
+          "WAN connection types": {
+            "terms": [
+              "WAN",
+              "wide area network",
+              "long-distance",
+              "terrestrial network",
+              "satellite",
+              "non-terrestrial"
+            ]
+          },
+          "Fiber optic networking": {
+            "terms": [
+              "fiber",
+              "light transmission",
+              "long distance",
+              "high bandwidth",
+              "SONET",
+              "metro Ethernet",
+              "fiber to home"
+            ]
+          },
+          "Cable and DSL connectivity": {
+            "terms": [
+              "cable",
+              "DOCSIS",
+              "broadband",
+              "DSL",
+              "ADSL",
+              "RJ11",
+              "coax",
+              "frequency multiplexing"
+            ]
+          },
+          "Cellular internet and hotspots": {
+            "terms": [
+              "cellular",
+              "LTE",
+              "5G",
+              "tethering",
+              "hotspot",
+              "mobile network",
+              "carrier"
+            ]
+          },
+          "Wireless ISP and antennas": {
+            "terms": [
+              "WISP",
+              "antenna",
+              "line of sight",
+              "mesh",
+              "802.11",
+              "fixed wireless",
+              "outdoor unit"
+            ]
+          },
+          "PANs, LANs, WLANs, MANs, SANs": {
+            "terms": [
+              "PAN",
+              "LAN",
+              "WLAN",
+              "MAN",
+              "SAN",
+              "storage area network",
+              "metro area network",
+              "wireless LAN"
+            ]
+          }
+        }
+      },
+      "2.8": {
+        "concepts": {
+          "Cable crimping tools and materials": {
+            "terms": [
+              "crimper",
+              "RJ45",
+              "cable jacket",
+              "twisted pair",
+              "insulation",
+              "cutting tool",
+              "stripper"
+            ]
+          },
+          "Tone generator and probe": {
+            "terms": [
+              "tone generator",
+              "inductive probe",
+              "wire tracing",
+              "analog signal",
+              "tone",
+              "cable identification"
+            ]
+          },
+          "Wi-Fi and spectrum analyzers": {
+            "terms": [
+              "Wi-Fi analyzer",
+              "channel",
+              "signal strength",
+              "interference",
+              "spectrum analyzer",
+              "frequency scanner"
+            ]
+          },
+          "Cable testers and continuity": {
+            "terms": [
+              "cable tester",
+              "pinout",
+              "continuity",
+              "patch cable",
+              "wiring check",
+              "crossover",
+              "mismatch"
+            ]
+          },
+          "Loopback plugs": {
+            "terms": [
+              "loopback",
+              "interface test",
+              "physical layer",
+              "diagnostic mode",
+              "transmit",
+              "receive",
+              "matching data"
+            ]
+          },
+          "Taps and port mirroring": {
+            "terms": [
+              "tap",
+              "packet capture",
+              "mirror port",
+              "SPAN",
+              "protocol analyzer",
+              "port redirection",
+              "network monitor"
+            ]
+          },
+          "Punchdown blocks and organization": {
+            "terms": [
+              "punchdown",
+              "block",
+              "termination",
+              "cable management",
+              "twisted pair",
+              "organization",
+              "labeling"
+            ]
+          }
+        }
+      }
+    },
+    "3.0": {
+      "3.1": {
+        "concepts": {
+          "LCD technology and features": {
+            "terms": [
+              "LCD",
+              "liquid crystal display",
+              "polarization filter",
+              "color filter",
+              "backlight",
+              "fluorescent backlight",
+              "LED backlight",
+              "mini LED"
+            ]
+          },
+          "LCD types and use cases": {
+            "terms": [
+              "TN LCD",
+              "twisted pneumatic",
+              "IPS LCD",
+              "in-plane switching",
+              "VA LCD",
+              "vertical alignment",
+              "response time",
+              "color representation",
+              "viewing angle"
+            ]
+          },
+          "OLED technology and benefits": {
+            "terms": [
+              "OLED",
+              "organic light-emitting diode",
+              "self-emitting",
+              "no backlight",
+              "thin display",
+              "mobile devices",
+              "color accuracy"
+            ]
+          },
+          "Display specifications and metrics": {
+            "terms": [
+              "pixel density",
+              "PPI",
+              "DPI",
+              "resolution",
+              "4K",
+              "HD",
+              "aspect ratio",
+              "16:9"
+            ]
+          },
+          "Refresh rates and performance": {
+            "terms": [
+              "refresh rate",
+              "hertz",
+              "frames per second",
+              "FPS",
+              "VSYNC",
+              "stuttering",
+              "gaming display"
+            ]
+          },
+          "Color gamut and standards": {
+            "terms": [
+              "color gamut",
+              "sRGB",
+              "Adobe RGB",
+              "DCI-P3",
+              "CIE1931",
+              "color representation",
+              "graphics editing"
+            ]
+          },
+          "Touchscreen and input technologies": {
+            "terms": [
+              "touchscreen",
+              "digitizer",
+              "stylus",
+              "touch input",
+              "coordinates",
+              "tablet input",
+              "laptop touchscreen"
+            ]
+          },
+          "Backlight troubleshooting and repair": {
+            "terms": [
+              "backlight failure",
+              "dim screen",
+              "fluorescent inverter",
+              "LED replacement",
+              "screen bezel",
+              "flashlight test"
+            ]
+          }
+        }
+      },
+      "3.2": {
+        "concepts": {
+          "HDMI and DisplayPort connectors": {
+            "terms": [
+              "HDMI",
+              "High-Definition Multimedia Interface",
+              "audio and video",
+              "19-pin connector",
+              "DisplayPort",
+              "packetized video",
+              "mini DisplayPort",
+              "locking mechanism"
+            ]
+          },
+          "DVI and VGA connectors": {
+            "terms": [
+              "DVI",
+              "Digital Visual Interface",
+              "DVI-A",
+              "DVI-D",
+              "DVI-I",
+              "single link",
+              "dual link",
+              "analog signals",
+              "VGA",
+              "Video Graphics Array",
+              "DB15 connector",
+              "analog video"
+            ]
+          },
+          "USB-C and video signals": {
+            "terms": [
+              "USB-C",
+              "Thunderbolt",
+              "DisplayPort",
+              "HDMI",
+              "MHL",
+              "Mobile High-Definition Link",
+              "video over USB-C"
+            ]
+          },
+          "SATA and eSATA storage connectors": {
+            "terms": [
+              "SATA",
+              "Serial ATA",
+              "SATA revision 1.0",
+              "SATA revision 2.0",
+              "SATA revision 3.0",
+              "SATA revision 3.2",
+              "eSATA",
+              "external SATA",
+              "15-pin power connector",
+              "7-pin data connector",
+              "Molex connector"
+            ]
+          },
+          "Adapters and converters": {
+            "terms": [
+              "DVI to HDMI",
+              "DVI-A to VGA",
+              "signal converter",
+              "USB to Ethernet adapter",
+              "USB-C to USB-A adapter",
+              "USB hubs",
+              "multi-output adapters"
+            ]
+          },
+          "Copper connectors and standards": {
+            "terms": [
+              "RJ11",
+              "RJ45",
+              "Ethernet",
+              "DSL",
+              "coaxial cable",
+              "F connector",
+              "DOCSIS",
+              "cable modem"
+            ]
+          },
+          "Punchdown blocks and wiring": {
+            "terms": [
+              "punchdown block",
+              "termination",
+              "twisted pair",
+              "punchdown tool",
+              "cable management"
+            ]
+          },
+          "USB connectors and standards": {
+            "terms": [
+              "USB",
+              "Universal Serial Bus",
+              "USB 1.1",
+              "USB 2.0",
+              "USB 3.0",
+              "USB 3.1",
+              "USB 3.2",
+              "USB-C",
+              "standard A",
+              "standard B",
+              "mini B",
+              "micro B"
+            ]
+          },
+          "Lightning connectors": {
+            "terms": [
+              "Lightning connector",
+              "Apple devices",
+              "iPhone",
+              "iPad",
+              "proprietary connector",
+              "USB-C transition"
+            ]
+          },
+          "DB9 and RS232 serial connections": {
+            "terms": [
+              "DB9",
+              "RS232",
+              "serial communication",
+              "console port",
+              "legacy equipment",
+              "USB to DB9 adapter"
+            ]
+          },
+          "Fiber optic connectors": {
+            "terms": [
+              "fiber optics",
+              "ST connector",
+              "straight tip",
+              "SC connector",
+              "subscriber connector",
+              "LC connector",
+              "Lucent connector",
+              "bayonet connector",
+              "clip connector"
+            ]
+          }
+        }
+      },
+      "3.3": {
+        "concepts": {
+          "RAM characteristics and functionality": {
+            "terms": [
+              "RAM",
+              "random access memory",
+              "temporary storage",
+              "high-speed storage",
+              "active memory",
+              "data processing",
+              "application execution"
+            ]
+          },
+          "Memory modules and types": {
+            "terms": [
+              "DIM",
+              "dual inline memory module",
+              "SO-DIMM",
+              "small outline DIMM",
+              "memory chips",
+              "memory module",
+              "memory slot",
+              "laptop memory",
+              "desktop memory"
+            ]
+          },
+          "Memory installation and compatibility": {
+            "terms": [
+              "memory upgrade",
+              "motherboard compatibility",
+              "memory documentation",
+              "memory locks",
+              "memory installation",
+              "memory removal",
+              "memory slot keys"
+            ]
+          },
+          "Memory data width and transfer rates": {
+            "terms": [
+              "data width",
+              "64-bit blocks",
+              "data transfer",
+              "clock cycle",
+              "single data rate",
+              "double data rate",
+              "DDR",
+              "DDR2",
+              "DDR3",
+              "DDR4",
+              "DDR5"
+            ]
+          },
+          "Memory bandwidth and performance": {
+            "terms": [
+              "memory bandwidth",
+              "data transfer rate",
+              "mega transfers per second",
+              "MT/s",
+              "memory speed",
+              "memory throughput",
+              "CPU-memory communication"
+            ]
+          },
+          "Multi-channel memory configurations": {
+            "terms": [
+              "multi-channel memory",
+              "dual channel",
+              "triple channel",
+              "quad channel",
+              "memory slots",
+              "memory module matching",
+              "memory slot colors"
+            ]
+          },
+          "Parity and ECC memory": {
+            "terms": [
+              "parity memory",
+              "ECC memory",
+              "error correction code",
+              "parity bit",
+              "memory error detection",
+              "memory error correction",
+              "even parity",
+              "odd parity"
+            ]
+          },
+          "Memory technologies and advancements": {
+            "terms": [
+              "SDRAM",
+              "synchronous dynamic RAM",
+              "common clock",
+              "memory synchronization",
+              "memory technology",
+              "memory evolution",
+              "backward compatibility"
+            ]
+          }
+        }
+      },
+      "3.4": {
+        "concepts": {
+          "Hard drive components and functionality": {
+            "terms": [
+              "hard drive",
+              "spinning platters",
+              "actuator arm",
+              "read/write head",
+              "spindle",
+              "dust-free environment",
+              "random access storage",
+              "mechanical failure"
+            ]
+          },
+          "Hard drive speeds and performance": {
+            "terms": [
+              "RPM",
+              "5400 RPM",
+              "7200 RPM",
+              "10000 RPM",
+              "15000 RPM",
+              "latency",
+              "data access speed",
+              "spindle rotation"
+            ]
+          },
+          "Hard drive form factors": {
+            "terms": [
+              "3.5-inch drive",
+              "2.5-inch drive",
+              "desktop storage",
+              "laptop storage",
+              "mobile device storage",
+              "form factor"
+            ]
+          },
+          "Solid-state drive (SSD) characteristics": {
+            "terms": [
+              "SSD",
+              "solid-state drive",
+              "non-volatile memory",
+              "no moving parts",
+              "high-speed storage",
+              "memory modules",
+              "performance improvement"
+            ]
+          },
+          "SSD interfaces and advancements": {
+            "terms": [
+              "SATA",
+              "AHCI",
+              "PCI Express",
+              "NVMe",
+              "M.2 interface",
+              "MSATA",
+              "B key",
+              "M key",
+              "direct bus connection"
+            ]
+          },
+          "Flash storage technologies": {
+            "terms": [
+              "flash drive",
+              "EPROM",
+              "compact flash",
+              "secure digital (SD)",
+              "mini SD",
+              "micro SD",
+              "XD picture card",
+              "non-volatile storage"
+            ]
+          },
+          "Optical drive technologies": {
+            "terms": [
+              "optical drive",
+              "CD-ROM",
+              "DVD-ROM",
+              "Blu-ray",
+              "laser beam storage",
+              "archival media",
+              "external optical drive"
+            ]
+          },
+          "RAID configurations and redundancy": {
+            "terms": [
+              "RAID",
+              "redundant array of independent disks",
+              "RAID 0",
+              "RAID 1",
+              "RAID 5",
+              "RAID 6",
+              "RAID 10",
+              "striping",
+              "mirroring",
+              "parity",
+              "nested RAID",
+              "data redundancy"
+            ]
+          },
+          "Serial Attached SCSI (SAS)": {
+            "terms": [
+              "SAS",
+              "serial attached SCSI",
+              "SCSI protocol",
+              "high-speed storage",
+              "data and power connectors",
+              "SAS arrays",
+              "SATA comparison"
+            ]
+          }
+        }
+      },
+      "3.5": {
+        "concepts": {
+          "Motherboard types and form factors": {
+            "terms": [
+              "ATX",
+              "microATX",
+              "mini-ITX",
+              "form factor",
+              "mounting points",
+              "compact systems",
+              "desktop systems",
+              "server motherboards"
+            ]
+          },
+          "Motherboard components and layout": {
+            "terms": [
+              "CPU socket",
+              "memory slots",
+              "expansion slots",
+              "storage connectors",
+              "power connectors",
+              "airflow",
+              "cooling solutions"
+            ]
+          },
+          "CPU installation and compatibility": {
+            "terms": [
+              "CPU socket type",
+              "Intel socket",
+              "AMD socket",
+              "multi-CPU support",
+              "CPU alignment",
+              "CPU locking mechanism"
+            ]
+          },
+          "Expansion buses and slots": {
+            "terms": [
+              "PCI",
+              "PCIe",
+              "x1 slot",
+              "x4 slot",
+              "x8 slot",
+              "x16 slot",
+              "parallel communication",
+              "serial communication"
+            ]
+          },
+          "Expansion cards and installation": {
+            "terms": [
+              "graphics card",
+              "sound card",
+              "network interface card",
+              "capture card",
+              "multiport network card",
+              "driver installation",
+              "Windows Device Manager"
+            ]
+          },
+          "Motherboard power and connectors": {
+            "terms": [
+              "20-pin connector",
+              "24-pin connector",
+              "PCIe power connectors",
+              "6-pin connector",
+              "8-pin connector",
+              "modular power supply",
+              "DC voltage levels"
+            ]
+          },
+          "Storage interfaces and connectors": {
+            "terms": [
+              "SATA",
+              "eSATA",
+              "M.2 connector",
+              "NVMe SSD",
+              "L-shaped connector",
+              "high-speed storage"
+            ]
+          },
+          "Pin headers and case connections": {
+            "terms": [
+              "pin headers",
+              "front panel connectors",
+              "USB headers",
+              "audio headers",
+              "TPM module",
+              "case buttons",
+              "LEDs"
+            ]
+          },
+          "BIOS and UEFI functionality": {
+            "terms": [
+              "BIOS",
+              "UEFI",
+              "POST",
+              "secure boot",
+              "boot order",
+              "hardware initialization",
+              "firmware settings"
+            ]
+          },
+          "Cooling solutions and temperature management": {
+            "terms": [
+              "temperature sensors",
+              "fan controllers",
+              "heat sinks",
+              "thermal paste",
+              "liquid cooling",
+              "passive cooling",
+              "fan sizes"
+            ]
+          },
+          "Virtualization and security features": {
+            "terms": [
+              "Intel VT-x",
+              "AMD-V",
+              "TPM",
+              "Trusted Platform Module",
+              "Hardware Security Module",
+              "BitLocker",
+              "hardware encryption"
+            ]
+          },
+          "CPU architecture and performance": {
+            "terms": [
+              "32-bit CPU",
+              "64-bit CPU",
+              "multi-core processor",
+              "ARM processor",
+              "cache memory",
+              "instruction processing",
+              "power efficiency"
+            ]
+          }
+        }
+      },
+      "3.6": {
+        "concepts": {
+          "Power supply safety and precautions": {
+            "terms": [
+              "disconnect power source",
+              "electrocution risk",
+              "capacitor discharge",
+              "ground wire safety",
+              "building electrical system",
+              "power precautions"
+            ]
+          },
+          "Power supply functionality and components": {
+            "terms": [
+              "power supply",
+              "AC to DC conversion",
+              "120 volts AC",
+              "240 volts AC",
+              "DC voltages",
+              "3.3 volts",
+              "5 volts",
+              "12 volts",
+              "motherboard power"
+            ]
+          },
+          "Electrical measurements and calculations": {
+            "terms": [
+              "amps",
+              "volts",
+              "watts",
+              "current flow",
+              "voltage pressure",
+              "power calculation",
+              "real power use"
+            ]
+          },
+          "AC and DC power characteristics": {
+            "terms": [
+              "alternating current",
+              "direct current",
+              "AC wave",
+              "DC constant voltage",
+              "60 Hz",
+              "50 Hz",
+              "VAC",
+              "VDC"
+            ]
+          },
+          "Power supply input and output": {
+            "terms": [
+              "power supply input",
+              "power supply output",
+              "positive voltage",
+              "negative voltage",
+              "12 volts",
+              "5 volts",
+              "3.3 volts",
+              "standby power"
+            ]
+          },
+          "Power supply connectors and compatibility": {
+            "terms": [
+              "24-pin connector",
+              "20-pin connector",
+              "modular power supply",
+              "fixed connections",
+              "power supply documentation",
+              "connector keying"
+            ]
+          },
+          "Redundant power supplies": {
+            "terms": [
+              "redundant power supply",
+              "hot swappable",
+              "dual power supplies",
+              "server power supply",
+              "power load balancing"
+            ]
+          },
+          "Modular and hybrid power supplies": {
+            "terms": [
+              "modular power supply",
+              "hybrid power supply",
+              "fixed cables",
+              "modular cables",
+              "cable management"
+            ]
+          },
+          "Power supply wattage and efficiency": {
+            "terms": [
+              "power supply wattage",
+              "energy efficiency",
+              "80 Plus certification",
+              "bronze rating",
+              "gold rating",
+              "platinum rating",
+              "titanium rating",
+              "heat generation"
+            ]
+          },
+          "Power supply selection and requirements": {
+            "terms": [
+              "power supply selection",
+              "wattage calculation",
+              "CPU power requirements",
+              "video card power",
+              "system growth",
+              "documentation review"
+            ]
+          }
+        }
+      },
+      "3.7": {
+        "concepts": {
+          "Multi-function devices (MFDs)": {
+            "terms": [
+              "multi-function device",
+              "MFD",
+              "printer",
+              "scanner",
+              "fax",
+              "all-in-one device",
+              "wired network",
+              "wireless network",
+              "mobile printing"
+            ]
+          },
+          "Printer drivers and configuration": {
+            "terms": [
+              "printer driver",
+              "32-bit driver",
+              "64-bit driver",
+              "operating system compatibility",
+              "driver installation",
+              "printer documentation"
+            ]
+          },
+          "Page description languages (PDLs)": {
+            "terms": [
+              "PCL",
+              "printer command language",
+              "PostScript",
+              "Adobe Systems",
+              "page rendering",
+              "language compatibility"
+            ]
+          },
+          "Printer firmware and updates": {
+            "terms": [
+              "firmware",
+              "firmware update",
+              "bug fixes",
+              "new features",
+              "manufacturer website",
+              "installation process"
+            ]
+          },
+          "Printer connectivity options": {
+            "terms": [
+              "USB connection",
+              "Type A",
+              "Type B",
+              "USB-C",
+              "RJ45",
+              "Ethernet",
+              "Bluetooth",
+              "802.11 wireless",
+              "ad hoc mode",
+              "infrastructure mode"
+            ]
+          },
+          "Printer sharing and print servers": {
+            "terms": [
+              "printer sharing",
+              "print server",
+              "network printer",
+              "shared printer",
+              "print queue",
+              "web-based management"
+            ]
+          },
+          "Duplex and orientation printing": {
+            "terms": [
+              "duplex printing",
+              "double-sided printing",
+              "portrait orientation",
+              "landscape orientation",
+              "hardware requirements"
+            ]
+          },
+          "Paper trays and media selection": {
+            "terms": [
+              "paper tray",
+              "media selection",
+              "letter tray",
+              "legal tray",
+              "envelope tray",
+              "tray configuration"
+            ]
+          },
+          "Print quality and resolution": {
+            "terms": [
+              "print quality",
+              "resolution",
+              "600x600 DPI",
+              "color printing",
+              "grayscale",
+              "color saving mode"
+            ]
+          },
+          "Printer security and access control": {
+            "terms": [
+              "user authentication",
+              "badging",
+              "PIN-protected printing",
+              "secured prints",
+              "audit logs",
+              "event viewer"
+            ]
+          },
+          "Scanning and document management": {
+            "terms": [
+              "flatbed scanner",
+              "automatic document feeder",
+              "ADF",
+              "scan to email",
+              "scan to folder",
+              "scan to SMB",
+              "scan to cloud",
+              "Google Drive",
+              "Dropbox"
+            ]
+          }
+        }
+      },
+      "3.8": {
+        "concepts": {
+          "Laser printers and their components": {
+            "terms": [
+              "laser printer",
+              "photosensitive drum",
+              "toner cartridge",
+              "fuser unit",
+              "corona wire",
+              "charged roller",
+              "high voltage",
+              "onboard memory",
+              "page rendering"
+            ]
+          },
+          "Laser printing process": {
+            "terms": [
+              "charging",
+              "writing",
+              "developing",
+              "transferring",
+              "fusing",
+              "cleaning",
+              "heat and pressure",
+              "toner bonding"
+            ]
+          },
+          "Inkjet printers and their components": {
+            "terms": [
+              "inkjet printer",
+              "ink cartridge",
+              "print head",
+              "CMYK",
+              "cyan",
+              "magenta",
+              "yellow",
+              "black",
+              "high-resolution printing"
+            ]
+          },
+          "Inkjet printing process": {
+            "terms": [
+              "ink dispersion",
+              "tiny droplets",
+              "color alignment",
+              "photo printing",
+              "manual cleaning",
+              "automated cleaning cycle"
+            ]
+          },
+          "Thermal printers and their uses": {
+            "terms": [
+              "thermal printer",
+              "thermal paper",
+              "heating element",
+              "receipt printing",
+              "shipping labels",
+              "heat-sensitive output",
+              "fading over time"
+            ]
+          },
+          "Thermal printing process": {
+            "terms": [
+              "heat application",
+              "chemically coated paper",
+              "blackened areas",
+              "specialized paper",
+              "output sensitivity"
+            ]
+          },
+          "Impact printers and their uses": {
+            "terms": [
+              "impact printer",
+              "dot matrix printer",
+              "print head",
+              "inked ribbon",
+              "tractor feed",
+              "multi-part forms",
+              "carbon copies"
+            ]
+          },
+          "Impact printing process": {
+            "terms": [
+              "dot matrix pattern",
+              "perforated paper",
+              "continuous printing",
+              "low-resolution output",
+              "noisy operation"
+            ]
+          },
+          "Printer maintenance and troubleshooting": {
+            "terms": [
+              "printer maintenance",
+              "cleaning",
+              "calibration",
+              "consumables",
+              "paper jams",
+              "environmental considerations",
+              "maintenance kits",
+              "troubleshooting"
+            ]
+          },
+          "Printer consumables and replacements": {
+            "terms": [
+              "toner",
+              "ink",
+              "ribbon",
+              "thermal paper",
+              "cartridge replacement",
+              "fuser replacement",
+              "feed rollers"
+            ]
+          }
+        }
+      }
+    },
+    "4.0": {
+      "4.1": {
+        "concepts": {
+          "Virtual machine purposes and use cases": {
+            "terms": [
+              "sandbox",
+              "sandboxing",
+              "test development",
+              "application virtualization",
+              "legacy software",
+              "legacy OS",
+              "cross-platform virtualization",
+              "isolated environment",
+              "snapshot",
+              "development testing",
+              "host-based virtualization",
+              "enterprise virtualization",
+              "VM snapshots",
+              "snapshot revert",
+              "legacy application support"
+            ]
+          },
+          "Hypervisor types and characteristics": {
+            "terms": [
+              "hypervisor",
+              "virtual machine manager",
+              "Type 1 hypervisor",
+              "Type 2 hypervisor",
+              "bare metal hypervisor",
+              "hosted hypervisor",
+              "VMware ESXi",
+              "Microsoft Hyper-V",
+              "VirtualBox",
+              "Parallels Desktop",
+              "VMware Workstation",
+              "Oracle VirtualBox"
+            ]
+          },
+          "Virtualization requirements and resources": {
+            "terms": [
+              "CPU requirements",
+              "memory requirements",
+              "storage requirements",
+              "network requirements",
+              "VT",
+              "AMD-V",
+              "virtualization technology",
+              "resource allocation",
+              "overprovisioning",
+              "performance impact",
+              "CPU cycles",
+              "drive space",
+              "RAM allocation",
+              "overhead"
+            ]
+          },
+          "Virtual networking concepts": {
+            "terms": [
+              "shared network address",
+              "bridge network address",
+              "private address",
+              "network address translation",
+              "NAT",
+              "virtual network",
+              "VM networking",
+              "network isolation",
+              "IP subnet",
+              "network configuration",
+              "virtual machine manager"
+            ]
+          },
+          "Virtualization security considerations": {
+            "terms": [
+              "VM escape",
+              "hypervisor security",
+              "VM isolation",
+              "virtual machine security",
+              "malware in VMs",
+              "VM hardening",
+              "firewall configuration",
+              "anti-malware",
+              "security controls",
+              "standalone workstation security",
+              "security breaches",
+              "malware authors"
+            ]
+          },
+          "Desktop virtualization technologies": {
+            "terms": [
+              "VDI",
+              "virtual desktop infrastructure",
+              "DaaS",
+              "desktop as a service",
+              "thin client",
+              "virtual desktop",
+              "remote desktop",
+              "cloud desktop",
+              "virtualized client",
+              "network communication",
+              "keyboard and mouse",
+              "display"
+            ]
+          },
+          "Container technologies": {
+            "terms": [
+              "container",
+              "containerization",
+              "Docker",
+              "application container",
+              "container vs VM",
+              "host operating system",
+              "container image",
+              "lightweight virtualization",
+              "portable applications",
+              "containerization software",
+              "self-contained applications",
+              "operating system overhead"
+            ]
+          }
+        }
+      },
+      "4.2": {
+        "concepts": {
+          "Cloud computing fundamentals": {
+            "terms": [
+              "cloud computing",
+              "cloud service providers",
+              "public cloud service providers",
+              "server hosting",
+              "cloud benefits",
+              "cloud efficiency",
+              "financial control",
+              "instant deployment",
+              "application instance",
+              "button deployment",
+              "geographical deployment"
+            ]
+          },
+          "Cloud deployment models": {
+            "terms": [
+              "public cloud",
+              "private cloud",
+              "hybrid cloud",
+              "community cloud",
+              "internal cloud",
+              "external cloud",
+              "Microsoft cloud",
+              "Amazon cloud",
+              "Rackspace",
+              "data center deployment",
+              "cloud infrastructure",
+              "private data center"
+            ]
+          },
+          "Infrastructure as a Service (IaaS)": {
+            "terms": [
+              "IaaS",
+              "infrastructure as a service",
+              "hardware as a service",
+              "HaaS",
+              "CPU rental",
+              "storage space",
+              "operating system maintenance",
+              "security responsibility",
+              "hardware access",
+              "customer control",
+              "management overhead",
+              "web service provider",
+              "professormesser.com"
+            ]
+          },
+          "Software as a Service (SaaS)": {
+            "terms": [
+              "SaaS",
+              "software as a service",
+              "on-demand software",
+              "web-based front end",
+              "username and password",
+              "application management",
+              "no development team",
+              "Google Mail",
+              "Microsoft 365",
+              "application provider",
+              "operating system updates",
+              "software applications"
+            ]
+          },
+          "Platform as a Service (PaaS)": {
+            "terms": [
+              "PaaS",
+              "platform as a service",
+              "platform development",
+              "application building",
+              "building blocks",
+              "Salesforce.com",
+              "development platform",
+              "module arrangement",
+              "application responsibility",
+              "middle ground",
+              "hybrid model"
+            ]
+          },
+          "Shared responsibility model": {
+            "terms": [
+              "responsibility matrix",
+              "customer responsibility",
+              "provider responsibility",
+              "on-premises responsibility",
+              "physical platform",
+              "network connectivity",
+              "operating systems",
+              "applications",
+              "data responsibility",
+              "infrastructure responsibility",
+              "identity and directory",
+              "authentication"
+            ]
+          },
+          "Private vs public cloud deployment": {
+            "terms": [
+              "private cloud deployment",
+              "public cloud deployment",
+              "equipment purchase",
+              "storage acquisition",
+              "cash outlay",
+              "dedicated resources",
+              "pay-as-you-go",
+              "metered costs",
+              "shared resources",
+              "storage drives",
+              "CPUs",
+              "network sharing",
+              "customer isolation"
+            ]
+          },
+          "Cloud pricing models": {
+            "terms": [
+              "metered utilization",
+              "non-metered pricing",
+              "pay-as-you-go",
+              "fixed rate",
+              "ingress traffic",
+              "egress traffic",
+              "storage costs",
+              "traffic costs",
+              "monthly billing",
+              "busy month",
+              "slower month",
+              "maximum storage",
+              "fixed price"
+            ]
+          },
+          "Cloud characteristics and benefits": {
+            "terms": [
+              "elasticity",
+              "scalability",
+              "high availability",
+              "file synchronization",
+              "geographic distribution",
+              "multi-tenancy",
+              "uptime maintenance",
+              "data center redundancy",
+              "automatic scaling",
+              "instant deployment",
+              "scale up",
+              "scale down",
+              "redundancies",
+              "drive array",
+              "network connection",
+              "database duplication",
+              "tenants",
+              "efficiency"
+            ]
+          }
+        }
+      }
+    },
+    "5.0": {
+      "5.1": {
+        "concepts": {
+          "POST and BIOS troubleshooting": {
+            "terms": [
+              "POST",
+              "power on self test",
+              "BIOS beep codes",
+              "hardware initialization",
+              "boot failure",
+              "no boot",
+              "CMOS reset",
+              "BIOS corruption",
+              "manufacturer documentation",
+              "error codes on screen",
+              "long and short beep codes"
+            ]
+          },
+          "Boot device configuration": {
+            "terms": [
+              "boot device order",
+              "BIOS boot sequence",
+              "storage device priority",
+              "SSD boot",
+              "flash drive boot",
+              "operating system not found",
+              "boot media",
+              "startup device"
+            ]
+          },
+          "Windows stop errors": {
+            "terms": [
+              "blue screen",
+              "BSOD",
+              "blue screen of death",
+              "stop error",
+              "critical error",
+              "system crash",
+              "irrecoverable error",
+              "device ran into a problem",
+              "automatic restart"
+            ]
+          },
+          "Storage device troubleshooting": {
+            "terms": [
+              "cannot read from source disc",
+              "slow performance",
+              "clicking noises",
+              "retry reads",
+              "retry writes",
+              "click of death"
+            ]
+          },
+          "Memory problems": {
+            "terms": [
+              "memory failure",
+              "application crashes",
+              "parity errors",
+              "RAM problems",
+              "memory testing",
+              "blue screens"
+            ]
+          },
+          "CPU issues": {
+            "terms": [
+              "CPU failure",
+              "lock ups",
+              "intensive processing",
+              "CPU overheating",
+              "spontaneous reboots",
+              "system protection"
+            ]
+          },
+          "Power supply problems": {
+            "terms": [
+              "power supply failure",
+              "intermittent problems",
+              "power on then off",
+              "no fans spinning",
+              "no lights",
+              "no video",
+              "power switch",
+              "LED lights",
+              "voltage tolerances",
+              "12 volts",
+              "5 volts",
+              "3.3 volts",
+              "multimeter testing"
+            ]
+          },
+          "Video card issues": {
+            "terms": [
+              "video card problems",
+              "artifacts on display",
+              "system lock up",
+              "graphics intensive processes",
+              "video drivers",
+              "driver updates"
+            ]
+          },
+          "Motherboard problems": {
+            "terms": [
+              "motherboard failure",
+              "intermittent operation",
+              "expansion slots",
+              "connectors not operational",
+              "process of elimination",
+              "component replacement",
+              "motherboard warranty"
+            ]
+          },
+          "No display troubleshooting methodology": {
+            "terms": [
+              "computer plugged in",
+              "power switch on",
+              "back power switch",
+              "front power switch",
+              "power supply LED",
+              "motherboard LED",
+              "internal power cables",
+              "CPU power connection",
+              "minimal configuration",
+              "component removal"
+            ]
+          },
+          "System freezes": {
+            "terms": [
+              "system freeze",
+              "temporary software problem",
+              "hardware problem",
+              "CPU overheating",
+              "bad memory",
+              "faulty hard drives",
+              "power supply problems",
+              "cooling problems",
+              "event viewer",
+              "external media boot"
+            ]
+          },
+          "Slow performance troubleshooting": {
+            "terms": [
+              "slow response",
+              "applications slow to load",
+              "sluggish performance",
+              "task manager",
+              "memory usage",
+              "hard drive space",
+              "CPU utilization",
+              "malware scan",
+              "driver issues",
+              "software conflicts"
+            ]
+          },
+          "CMOS battery replacement": {
+            "terms": [
+              "CMOS battery",
+              "button style battery",
+              "low profile battery",
+              "date and time prompt",
+              "battery replacement",
+              "BIOS configuration reset",
+              "jumper reset"
+            ]
+          }
+        }
+      },
+      "5.2": {
+        "concepts": {
+          "Storage read/write failures": {
+            "terms": [
+              "cannot read from source disc",
+              "storage drive error",
+              "read failure",
+              "write failure",
+              "drive retry",
+              "area of drive",
+              "intermittent problem"
+            ]
+          },
+          "Hard drive mechanical failures": {
+            "terms": [
+              "clicking noise",
+              "click of death",
+              "grinding noises",
+              "metal on metal",
+              "actuator arms",
+              "drive heads",
+              "spinning platters",
+              "5400 RPM",
+              "physical failure",
+              "cascade effect"
+            ]
+          },
+          "Storage performance issues": {
+            "terms": [
+              "slow performance",
+              "retry reading",
+              "retry writing",
+              "continuous retry",
+              "poor performance",
+              "IOPS",
+              "input output operations per second",
+              "hard drive 200 IOPS",
+              "SSD 1 million IOPS"
+            ]
+          },
+          "Storage troubleshooting methodology": {
+            "terms": [
+              "backup data",
+              "recent backup",
+              "loose cables",
+              "damaged cables",
+              "heat problems",
+              "computer case temperature",
+              "power supply audit",
+              "manufacturer diagnostics",
+              "overnight test",
+              "sector testing"
+            ]
+          },
+          "Boot and recognition issues": {
+            "terms": [
+              "drive not recognized",
+              "boot device not found",
+              "access lights",
+              "unresponsive drive",
+              "operating system not found",
+              "bootable operating system",
+              "boot sequence",
+              "BIOS configuration",
+              "removable storage devices",
+              "USB boot priority"
+            ]
+          },
+          "Cable and connection problems": {
+            "terms": [
+              "bad cable connection",
+              "power connectors",
+              "data connectors",
+              "cable reseating",
+              "known good cables",
+              "cable swap",
+              "proper power",
+              "system BIOS access"
+            ]
+          },
+          "RAID array issues": {
+            "terms": [
+              "RAID failure",
+              "RAID 0 striping",
+              "RAID 1 mirroring",
+              "RAID 5 striping with parity",
+              "RAID 6 double parity",
+              "RAID 10 striping and mirroring",
+              "array degraded",
+              "RAID rebuild",
+              "recynchronize array",
+              "redundant array",
+              "array failure"
+            ]
+          },
+          "SMART monitoring": {
+            "terms": [
+              "SMART",
+              "self monitoring analysis reporting technology",
+              "drive statistics",
+              "power on hours",
+              "power cycle count",
+              "temperature celsius",
+              "third party utilities",
+              "drive performance analysis",
+              "predictive failure",
+              "warning signs",
+              "catastrophic failure prevention"
+            ]
+          },
+          "Drive accessibility issues": {
+            "terms": [
+              "drives disabled in BIOS",
+              "BIOS error",
+              "BIOS logs",
+              "BIOS configuration",
+              "internal drive cables",
+              "external drive power",
+              "network mapped drives",
+              "map network drive",
+              "drive letter mapping",
+              "login script",
+              "reconnect at signin"
+            ]
+          },
+          "Drive controller problems": {
+            "terms": [
+              "drive controller failure",
+              "external drive controller",
+              "RAID controller",
+              "Dell PERC H200",
+              "SAS HBA BIOS",
+              "integrated RAID",
+              "exception detected",
+              "volume inactive",
+              "configuration utility"
+            ]
+          }
+        }
+      },
+      "5.3": {
+        "concepts": {
+          "Display hardware problems": {
+            "terms": [
+              "display issues",
+              "monitor problems",
+              "screen failure",
+              "display hardware",
+              "video output",
+              "display troubleshooting"
+            ]
+          },
+          "Projector troubleshooting": {
+            "terms": [
+              "projector issues",
+              "projection problems",
+              "projector bulb",
+              "projection quality",
+              "projector connectivity",
+              "display projection"
+            ]
+          },
+          "Display scaling and resolution": {
+            "terms": [
+              "display scaling",
+              "resolution problems",
+              "DPI scaling",
+              "screen resolution",
+              "display settings",
+              "scaling issues"
+            ]
+          },
+          "Color and brightness issues": {
+            "terms": [
+              "color problems",
+              "brightness issues",
+              "color calibration",
+              "display brightness",
+              "color accuracy",
+              "display quality"
+            ]
+          },
+          "Dead pixels and burn-in": {
+            "terms": [
+              "dead pixels",
+              "stuck pixels",
+              "screen burn-in",
+              "image retention",
+              "pixel problems",
+              "display defects"
+            ]
+          },
+          "Severe display failures": {
+            "terms": [
+              "no display",
+              "black screen",
+              "display failure",
+              "screen damage",
+              "LCD failure",
+              "display replacement"
+            ]
+          }
+        }
+      },
+      "5.4": {
+        "concepts": {
+          "Mobile device battery issues": {
+            "terms": [
+              "battery problems",
+              "battery charge",
+              "battery replacement",
+              "battery loses charge rapidly",
+              "bad reception area",
+              "signal polling",
+              "airplane mode",
+              "disable unused features",
+              "802.11 disable",
+              "Bluetooth disable",
+              "GPS disable"
+            ]
+          },
+          "Battery monitoring and health": {
+            "terms": [
+              "battery statistics",
+              "iOS battery settings",
+              "iPad OS battery",
+              "Android battery settings",
+              "battery last charged",
+              "applications using battery",
+              "battery health",
+              "battery replacement time"
+            ]
+          },
+          "Battery swelling and safety": {
+            "terms": [
+              "battery swelling",
+              "swollen battery",
+              "gas buildup",
+              "battery container",
+              "device distortion",
+              "fire risk",
+              "do not pierce",
+              "do not open",
+              "replace immediately",
+              "turn off device",
+              "battery damage to device"
+            ]
+          },
+          "Mobile display damage": {
+            "terms": [
+              "broken glass",
+              "hardened glass",
+              "display replacement",
+              "glass replacement",
+              "integrated glass display",
+              "sharp glass",
+              "cut finger",
+              "glass embedded",
+              "screen protector",
+              "backup before replacement"
+            ]
+          },
+          "Charging port problems": {
+            "terms": [
+              "charging port damage",
+              "port cleaning",
+              "lint removal",
+              "compressed air cleaning",
+              "wooden toothpick",
+              "plastic tool",
+              "avoid metal tools",
+              "port replacement"
+            ]
+          },
+          "Liquid damage": {
+            "terms": [
+              "water damage",
+              "liquid spill",
+              "immediate power off",
+              "remove battery",
+              "dry completely",
+              "rice method",
+              "silica gel",
+              "professional repair",
+              "corrosion damage"
+            ]
+          },
+          "Overheating issues": {
+            "terms": [
+              "device overheating",
+              "thermal shutdown",
+              "heat dissipation",
+              "case removal",
+              "ventilation",
+              "intensive applications",
+              "charging heat",
+              "ambient temperature"
+            ]
+          },
+          "Digitizer and touch problems": {
+            "terms": [
+              "digitizer issues",
+              "touch response",
+              "touch calibration",
+              "phantom touches",
+              "unresponsive touch",
+              "partial touch failure",
+              "touch sensitivity"
+            ]
+          },
+          "Cursor drift": {
+            "terms": [
+              "cursor drift",
+              "pointer drift",
+              "erratic cursor",
+              "touchpad issues",
+              "trackpad problems",
+              "input lag",
+              "mouse pointer jumping"
+            ]
+          },
+          "Poor performance": {
+            "terms": [
+              "slow performance",
+              "app crashes",
+              "system lag",
+              "memory issues",
+              "storage full",
+              "background apps",
+              "restart device",
+              "factory reset"
+            ]
+          }
+        }
+      },
+      "5.5": {
+        "concepts": {
+          "Network troubleshooting methodology": {
+            "terms": [
+              "troubleshooting steps",
+              "baseline testing",
+              "link light check",
+              "Ethernet connection",
+              "wired connection",
+              "good connection verification",
+              "bad cable detection"
+            ]
+          },
+          "Ping testing sequence": {
+            "terms": [
+              "ping loopback",
+              "127.0.0.1",
+              "loopback address",
+              "IP stack testing",
+              "internal network configuration",
+              "ping local IP",
+              "DHCP assigned address",
+              "manually configured address",
+              "ping default gateway",
+              "local network testing",
+              "ping external address",
+              "quad 8",
+              "8.8.8.8",
+              "quad 9",
+              "9.9.9.9",
+              "quad 1",
+              "1.1.1.1"
+            ]
+          },
+          "Wireless connectivity issues": {
+            "terms": [
+              "intermittent connectivity",
+              "wireless network problems",
+              "channel interference",
+              "frequency problems",
+              "access point configuration",
+              "signal strength",
+              "closer to access point",
+              "stronger signal",
+              "different antennas",
+              "external antenna",
+              "laptop antenna",
+              "desktop antenna"
+            ]
+          },
+          "Wireless interference and optimization": {
+            "terms": [
+              "frequency evaluation",
+              "automatic channel selection",
+              "minimize interference",
+              "manual channel setting",
+              "different frequencies",
+              "multipath interference",
+              "signal bounce",
+              "flat surfaces",
+              "excessive multipath",
+              "access point placement",
+              "centralized location",
+              "signal strength increase"
+            ]
+          },
+          "Network performance monitoring": {
+            "terms": [
+              "packet visibility",
+              "network monitoring",
+              "wireless network monitoring",
+              "performance measurement",
+              "network analysis",
+              "throughput testing",
+              "bandwidth monitoring"
+            ]
+          },
+          "Connectivity verification": {
+            "terms": [
+              "connectivity testing",
+              "network diagnostics",
+              "connection status",
+              "network adapter status",
+              "IP configuration",
+              "network interface testing"
+            ]
+          },
+          "Signal quality issues": {
+            "terms": [
+              "signal quality",
+              "reception problems",
+              "weak signal",
+              "signal degradation",
+              "distance issues",
+              "antenna positioning",
+              "signal propagation"
+            ]
+          },
+          "Access point troubleshooting": {
+            "terms": [
+              "access point issues",
+              "AP configuration",
+              "access point settings",
+              "wireless AP",
+              "access point signal",
+              "AP channel settings",
+              "access point frequency"
+            ]
+          }
+        }
+      },
+      "5.6": {
+        "concepts": {
+          "Printer testing procedures": {
+            "terms": [
+              "printer test page",
+              "test print",
+              "printer diagnostics",
+              "print quality test",
+              "OS test page",
+              "printer self test"
+            ]
+          },
+          "Print quality problems": {
+            "terms": [
+              "print quality",
+              "streaks",
+              "lines on page",
+              "faded output",
+              "ghosting",
+              "double images",
+              "print defects"
+            ]
+          },
+          "Inkjet vs laser issues": {
+            "terms": [
+              "inkjet problems",
+              "laser printer issues",
+              "print heads",
+              "photosensitive drum",
+              "toner problems",
+              "ink problems"
+            ]
+          },
+          "Garbled print output": {
+            "terms": [
+              "garbled print",
+              "corrupted output",
+              "wrong driver",
+              "PCL",
+              "PostScript",
+              "page description language",
+              "print driver problems"
+            ]
+          },
+          "Paper handling problems": {
+            "terms": [
+              "paper jam",
+              "paper feed",
+              "pickup rollers",
+              "paper tray",
+              "multiple pages",
+              "no paper pickup",
+              "paper path"
+            ]
+          },
+          "Paper quality issues": {
+            "terms": [
+              "creased paper",
+              "paper weight",
+              "paper specifications",
+              "paper path problems",
+              "wrong paper type"
+            ]
+          },
+          "Print spooler issues": {
+            "terms": [
+              "print spooler",
+              "print queue",
+              "spooler crash",
+              "corrupted print job",
+              "Windows event viewer",
+              "print service"
+            ]
+          },
+          "Printer noise problems": {
+            "terms": [
+              "grinding noise",
+              "printer sounds",
+              "mechanical problems",
+              "ink cartridge seating",
+              "carriage movement",
+              "printer maintenance"
+            ]
+          },
+          "Finishing service problems": {
+            "terms": [
+              "finishing services",
+              "collating",
+              "binding",
+              "stapling",
+              "hole punch",
+              "staple jam",
+              "finishing options"
+            ]
+          },
+          "Orientation problems": {
+            "terms": [
+              "portrait",
+              "landscape",
+              "orientation mismatch",
+              "print driver settings",
+              "page orientation",
+              "printer defaults"
+            ]
+          },
+          "Paper tray configuration": {
+            "terms": [
+              "paper tray",
+              "multiple trays",
+              "paper size mismatch",
+              "tray selection",
+              "legal size",
+              "letter size",
+              "paper source"
+            ]
+          },
+          "Network printer troubleshooting": {
+            "terms": [
+              "network printer",
+              "printer IP address",
+              "print server",
+              "network configuration",
+              "wired printer",
+              "wireless printer",
+              "link lights",
+              "printer connectivity"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

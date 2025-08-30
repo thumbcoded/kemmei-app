@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the role of RAM in a virtualized environment?",
+  "answer_options": [
+    "RAM is only used by the host OS",
+    "Each VM shares the same memory block",
+    "Each VM requires a portion of physical RAM to function",
+    "RAM is virtualized and not needed"
+  ],
+  "correct_answer": [
+    "Each VM requires a portion of physical RAM to function"
+  ],
+  "explanation": "Each virtual machine requires allocated RAM from the host's physical memory.",
+  "tags": [
+    "RAM allocation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two technologies typically use coaxial cabling for signal transmission? (Select two)",
+  "answer_options": [
+    "DSL",
+    "Cable modem",
+    "Ethernet over twisted pair",
+    "Satellite TV",
+    "Fiber-to-the-home (FTTH)"
+  ],
+  "correct_answer": [
+    "Cable modem",
+    "Satellite TV"
+  ],
+  "explanation": "Coaxial cable is commonly used for cable internet via modems and for satellite TV connections.",
+  "tags": [
+    "coaxial cable",
+    "cable modem"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

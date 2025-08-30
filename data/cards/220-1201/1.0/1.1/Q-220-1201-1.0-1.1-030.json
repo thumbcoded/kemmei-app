@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A refurbished laptop fails POST and the internal keyboard is unresponsive. Select two components that should be checked before replacing the keyboard again.",
+  "answer_options": [
+    "USB ports",
+    "Ribbon cable seating",
+    "RAM module",
+    "Keyboard bezel alignment",
+    "Keyboard connector on the motherboard"
+  ],
+  "correct_answer": [
+    "Ribbon cable seating",
+    "Keyboard connector on the motherboard"
+  ],
+  "explanation": "Faulty ribbon cable installation or damage to the keyboard connector can result in unresponsive keyboards and boot issues.",
+  "tags": [
+    "ribbon cable",
+    "keyboard connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

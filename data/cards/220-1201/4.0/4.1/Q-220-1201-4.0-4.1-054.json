@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of anti-malware software inside a virtual machine?",
+  "answer_options": [
+    "To prevent physical damage to the VM",
+    "To monitor the host's activity",
+    "To protect the VM's operating system and data from malicious software",
+    "To encrypt the hypervisor"
+  ],
+  "correct_answer": [
+    "To protect the VM's operating system and data from malicious software"
+  ],
+  "explanation": "Just like physical machines, VMs need antivirus/anti-malware protection to guard against software threats.",
+  "tags": [
+    "anti-malware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

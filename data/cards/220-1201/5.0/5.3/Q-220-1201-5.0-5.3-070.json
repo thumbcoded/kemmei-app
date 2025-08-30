@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the difference between burn-in on CRT monitors versus image sticking on LCD monitors?",
+  "answer_options": [
+    "CRT burn-in is permanent phosphor damage; LCD image sticking may be temporary and removable",
+    "LCD burn-in is worse than CRT burn-in and cannot be fixed",
+    "CRT and LCD burn-in are identical problems with the same solutions",
+    "Only CRT monitors experience burn-in; LCD monitors never have this issue"
+  ],
+  "correct_answer": [
+    "CRT burn-in is permanent phosphor damage; LCD image sticking may be temporary and removable"
+  ],
+  "explanation": "CRT burn-in was permanent damage to phosphor coatings from static images. LCD 'image sticking' is similar ghosting but may be temporary - displaying different content (like a white screen overnight) can sometimes remove the stuck image from LCD panels.",
+  "tags": [
+    "burn-in",
+    "image sticking"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

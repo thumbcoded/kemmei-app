@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-101",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system passes POST but is unusably slow shortly after login. A malware scan returns clean. What should you check next?",
+  "answer_options": [
+    "Antivirus update logs",
+    "Memory and CPU usage in Task Manager",
+    "Display driver settings",
+    "Ethernet duplex configuration"
+  ],
+  "correct_answer": [
+    "Memory and CPU usage in Task Manager"
+  ],
+  "explanation": "If malware isn’t the cause, check system resource usage via Task Manager to identify bottlenecks or runaway processes.",
+  "tags": [
+    "task manager",
+    "memory usage",
+    "CPU utilization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-101",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two USB versions support speeds greater than 5 Gbps? (Select two)",
+  "answer_options": [
+    "USB 2.0",
+    "USB 3.0",
+    "USB 3.1",
+    "USB 3.2",
+    "USB 1.1"
+  ],
+  "correct_answer": [
+    "USB 3.1",
+    "USB 3.2"
+  ],
+  "explanation": "USB 3.1 supports up to 10 Gbps, while USB 3.2 supports up to 20 Gbps depending on the mode and cable.",
+  "tags": [
+    "USB 3.1",
+    "USB 3.2"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

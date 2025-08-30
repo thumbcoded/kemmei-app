@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two ports are used in DHCP communication between clients and servers? Select two.",
+  "answer_options": [
+    "TCP port 23",
+    "UDP port 68",
+    "UDP port 67",
+    "TCP port 110",
+    "UDP port 53"
+  ],
+  "correct_answer": [
+    "UDP port 67",
+    "UDP port 68"
+  ],
+  "explanation": "DHCP servers listen on UDP port 67, and clients listen on UDP port 68.",
+  "tags": [
+    "UDP port 67",
+    "UDP port 68",
+    "DHCP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

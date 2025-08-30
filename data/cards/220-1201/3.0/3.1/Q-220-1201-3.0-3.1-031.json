@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two benefits make OLED displays ideal for mobile devices? (Select two)",
+  "answer_options": [
+    "Thin and lightweight design",
+    "Better mechanical durability",
+    "Accurate color reproduction",
+    "Lower manufacturing cost",
+    "No refresh rate limitation"
+  ],
+  "correct_answer": [
+    "Thin and lightweight design",
+    "Accurate color reproduction"
+  ],
+  "explanation": "OLEDs are thin and offer high color accuracy, making them a good fit for mobile devices despite higher production costs.",
+  "tags": [
+    "mobile devices",
+    "color accuracy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A mapped network drive fails to reconnect after reboot. What option should be enabled to prevent this?",
+  "answer_options": [
+    "Drive compression",
+    "Drive letter mapping",
+    "Reformat on login",
+    "Reconnect at signin"
+  ],
+  "correct_answer": [
+    "Reconnect at signin"
+  ],
+  "explanation": "Selecting 'Reconnect at signin' ensures mapped drives attempt to reestablish connections after reboot.",
+  "tags": [
+    "reconnect at signin"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

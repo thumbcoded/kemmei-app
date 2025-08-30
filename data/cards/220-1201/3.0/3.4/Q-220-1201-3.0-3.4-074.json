@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which flash storage format is commonly used in older digital cameras?",
+  "answer_options": [
+    "secure digital (SD)",
+    "micro SD",
+    "XD picture card",
+    "EPROM"
+  ],
+  "correct_answer": [
+    "XD picture card"
+  ],
+  "explanation": "XD picture cards were once popular for digital cameras but have largely been replaced by more compact SD-based formats.",
+  "tags": [
+    "XD picture card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

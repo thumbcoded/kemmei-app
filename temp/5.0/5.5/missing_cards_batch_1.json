@@ -1,0 +1,193 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What IP address range indicates that a device has received an APIPA address instead of DHCP?",
+    "answer_options": [
+      "192.168.1.x",
+      "10.0.0.x",
+      "169.254.x.x",
+      "172.16.x.x"
+    ],
+    "correct_answer": ["169.254.x.x"],
+    "explanation": "APIPA (Automatic Private IP Addressing) uses the 169.254.x.x range when DHCP fails, providing only local subnet connectivity.",
+    "tags": ["DHCP assigned address", "IP configuration", "network diagnostics"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is port flapping in network troubleshooting?",
+    "answer_options": [
+      "A port that sends data too quickly",
+      "A network interface that repeatedly goes up and down",
+      "A switch port that forwards broadcast traffic",
+      "A wireless connection that changes frequencies"
+    ],
+    "correct_answer": ["A network interface that repeatedly goes up and down"],
+    "explanation": "Port flapping occurs when a network interface link status continuously alternates between up and down, often due to cable or physical interface issues.",
+    "tags": ["link light check", "bad cable detection", "network interface testing"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is jitter in network communications?",
+    "answer_options": [
+      "The total time for a packet to travel to its destination",
+      "The variation in delay between data packets",
+      "The amount of data lost during transmission",
+      "The frequency of wireless signal interference"
+    ],
+    "correct_answer": ["The variation in delay between data packets"],
+    "explanation": "Jitter measures the inconsistency in packet arrival times, which is critical for real-time applications like VoIP and video calls.",
+    "tags": ["network monitoring", "performance measurement", "connectivity testing"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "Which error message typically indicates an authentication problem?",
+    "answer_options": [
+      "Network unreachable",
+      "Access denied",
+      "Connection timeout",
+      "DNS resolution failed"
+    ],
+    "correct_answer": ["Access denied"],
+    "explanation": "Access denied errors typically indicate insufficient permissions or authentication failures when trying to access network resources.",
+    "tags": ["network diagnostics", "connectivity testing", "troubleshooting steps"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What does SNR stand for in wireless networking?",
+    "answer_options": [
+      "Signal Network Ratio",
+      "System Noise Reduction",
+      "Signal-to-Noise Ratio",
+      "Secure Network Registration"
+    ],
+    "correct_answer": ["Signal-to-Noise Ratio"],
+    "explanation": "SNR (Signal-to-Noise Ratio) measures the level of desired signal compared to background noise, indicating wireless connection quality.",
+    "tags": ["signal quality", "signal strength", "wireless network monitoring"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "A user gets 'limited connectivity' and has IP address 169.254.100.50. What is the most likely cause?",
+    "answer_options": [
+      "The network cable is damaged",
+      "The DHCP server is unavailable",
+      "The default gateway is incorrect",
+      "DNS servers are not responding"
+    ],
+    "correct_answer": ["The DHCP server is unavailable"],
+    "explanation": "The 169.254.x.x address indicates APIPA activation, which occurs when a device cannot reach a DHCP server to obtain a valid IP configuration.",
+    "tags": ["DHCP assigned address", "IP configuration", "connectivity testing"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "Which TWO steps should you take first when troubleshooting port flapping? (Select two)",
+    "answer_options": [
+      "Replace the network cable",
+      "Update the network driver",
+      "Try a different switch port",
+      "Restart the network service",
+      "Check for loose connections"
+    ],
+    "correct_answer": ["Replace the network cable", "Try a different switch port"],
+    "explanation": "Port flapping is usually caused by physical layer issues. Testing with a new cable and different switch port helps isolate whether the problem is with the cable or the switch interface.",
+    "tags": ["bad cable detection", "troubleshooting steps", "network interface testing"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "A VoIP call is choppy with frequent audio dropouts. Network tests show normal bandwidth. What is the most likely issue?",
+    "answer_options": [
+      "Insufficient bandwidth",
+      "High network jitter",
+      "Weak wireless signal",
+      "Incorrect codec settings"
+    ],
+    "correct_answer": ["High network jitter"],
+    "explanation": "VoIP requires consistent packet timing. High jitter causes audio dropouts even when bandwidth is adequate, as packets arrive irregularly.",
+    "tags": ["network monitoring", "performance measurement", "bandwidth monitoring"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "A user cannot access a network share after their session timed out. What type of issue is this most likely?",
+    "answer_options": [
+      "Network connectivity problem",
+      "Authentication timeout",
+      "DNS resolution failure",
+      "Bandwidth limitation"
+    ],
+    "correct_answer": ["Authentication timeout"],
+    "explanation": "Session timeouts require re-authentication to access network resources. The user needs to provide credentials again to establish a new authenticated session.",
+    "tags": ["network diagnostics", "connectivity testing", "troubleshooting steps"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "Which tool is best for measuring latency at each hop along a network path?",
+    "answer_options": [
+      "ping",
+      "traceroute",
+      "netstat",
+      "ipconfig"
+    ],
+    "correct_answer": ["traceroute"],
+    "explanation": "Traceroute shows the path packets take and measures response time at each router hop, helping identify where latency issues occur in the network path.",
+    "tags": ["network analysis", "performance measurement", "network diagnostics"],
+    "status": "approved"
+  }
+]

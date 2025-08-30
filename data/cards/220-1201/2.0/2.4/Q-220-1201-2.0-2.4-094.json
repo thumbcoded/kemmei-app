@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements accurately describe how DKIM and DMARC interact? (Select all that apply)",
+  "answer_options": [
+    "DKIM uses public key cryptography to validate email content",
+    "DMARC can specify what to do if DKIM validation fails",
+    "DKIM must be used if SPF is enabled",
+    "DMARC relies on either SPF or DKIM to function",
+    "DMARC signs email headers directly"
+  ],
+  "correct_answer": [
+    "DKIM uses public key cryptography to validate email content",
+    "DMARC can specify what to do if DKIM validation fails",
+    "DMARC relies on either SPF or DKIM to function"
+  ],
+  "explanation": "DKIM signs the message; DMARC uses DKIM or SPF to determine authentication success and enforce policy.",
+  "tags": [
+    "DKIM",
+    "DMARC",
+    "public key",
+    "Domain-based Message Authentication",
+    "digital signature"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

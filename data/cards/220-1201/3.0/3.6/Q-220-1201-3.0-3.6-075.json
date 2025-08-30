@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is replacing an old 20-pin ATX connector with a newer power supply. What should they verify before connecting the 24-pin connector?",
+  "answer_options": [
+    "That the connector is split into dual 12-pin rails",
+    "That the new connector supports PCIe 5.0",
+    "That the 24-pin connector is backward-compatible with 20-pin sockets",
+    "That the motherboard BIOS is updated"
+  ],
+  "correct_answer": [
+    "That the 24-pin connector is backward-compatible with 20-pin sockets"
+  ],
+  "explanation": "Many 24-pin connectors are designed to split or fit into 20-pin headers for backward compatibility, but checking alignment and documentation is essential.",
+  "tags": [
+    "24-pin connector",
+    "20-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

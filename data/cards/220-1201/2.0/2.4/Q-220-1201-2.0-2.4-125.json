@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-125",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A device on your network consistently gets the same IP address from DHCP even after lease expiration. What configuration most likely explains this?",
+  "answer_options": [
+    "The scope is too small to rotate IPs",
+    "The device has a static IP conflict",
+    "The DHCP server uses a reservation tied to the MAC address",
+    "DHCP is set to broadcast-only mode"
+  ],
+  "correct_answer": [
+    "The DHCP server uses a reservation tied to the MAC address"
+  ],
+  "explanation": "A DHCP reservation ensures the same IP is always given to a specific MAC address.",
+  "tags": [
+    "DHCP scope",
+    "static IP",
+    "configuration parameters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

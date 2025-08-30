@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following would most likely result in lines or streaks appearing on printed documents? (Select all that apply)",
+  "answer_options": [
+    "Dirty print heads",
+    "Scratched photosensitive drum",
+    "Low toner",
+    "Incorrect page description language",
+    "Improper cleaning cycle"
+  ],
+  "correct_answer": [
+    "Dirty print heads",
+    "Scratched photosensitive drum",
+    "Improper cleaning cycle"
+  ],
+  "explanation": "Streaks and lines are commonly caused by mechanical or maintenance issues: clogged inkjet nozzles, drum scratches, or ineffective cleaning processes in laser printers.",
+  "tags": [
+    "lines on page",
+    "photosensitive drum",
+    "print quality",
+    "inkjet problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

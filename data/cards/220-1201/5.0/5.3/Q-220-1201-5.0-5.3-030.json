@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician observes a purple-blue tint across an entire monitor screen. The monitor is otherwise functioning. Which is the MOST likely root cause?",
+  "answer_options": [
+    "Ghosting from prior image",
+    "Backlight failure",
+    "Color skew from OS or monitor settings",
+    "Screen burn-in"
+  ],
+  "correct_answer": [
+    "Color skew from OS or monitor settings"
+  ],
+  "explanation": "Color skew, such as a persistent purple-blue tint, often results from incorrect color settings either in the OS or in custom color presets.",
+  "tags": [
+    "color skew"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

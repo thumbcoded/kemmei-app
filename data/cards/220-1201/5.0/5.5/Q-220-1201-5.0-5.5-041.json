@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user's device is connected to the network but cannot reach certain internal servers. Packet capture shows no return traffic from those servers. Which is the MOST likely issue?",
+  "answer_options": [
+    "The user is connected to the wrong Wi-Fi SSID",
+    "The gateway is misconfigured",
+    "The firewall is blocking return traffic",
+    "The network adapter is disabled"
+  ],
+  "correct_answer": [
+    "The firewall is blocking return traffic"
+  ],
+  "explanation": "If packets are sent but never returned, a firewall may be filtering or rejecting the responses, especially at the server level.",
+  "tags": [
+    "packet visibility",
+    "network monitoring",
+    "connectivity testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

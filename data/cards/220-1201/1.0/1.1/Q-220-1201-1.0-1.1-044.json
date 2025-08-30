@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following terms are associated with laptop memory upgrades? (Select all that apply)",
+  "answer_options": [
+    "SODIMM",
+    "SATA",
+    "RAM upgrade",
+    "Soldered RAM"
+  ],
+  "correct_answer": [
+    "SODIMM",
+    "RAM upgrade",
+    "Soldered RAM"
+  ],
+  "explanation": "SODIMM is the physical format; RAM upgrade refers to the process; soldered RAM is a restriction in some models.",
+  "tags": [
+    "SODIMM",
+    "RAM upgrade",
+    "soldered RAM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

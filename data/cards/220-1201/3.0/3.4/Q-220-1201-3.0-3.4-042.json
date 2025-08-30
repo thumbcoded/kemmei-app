@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of these is a common benefit of switching from a hard drive to an SSD?",
+  "answer_options": [
+    "Increased weight",
+    "Lower boot speed",
+    "Performance improvement",
+    "Moving parts become more efficient"
+  ],
+  "correct_answer": [
+    "Performance improvement"
+  ],
+  "explanation": "Replacing an HDD with an SSD significantly improves overall system performance, especially in read/write speed.",
+  "tags": [
+    "performance improvement",
+    "SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

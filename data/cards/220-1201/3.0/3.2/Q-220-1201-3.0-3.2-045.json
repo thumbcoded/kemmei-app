@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the standard number of pins in a SATA data cable?",
+  "answer_options": [
+    "4",
+    "7",
+    "15",
+    "24"
+  ],
+  "correct_answer": [
+    "7"
+  ],
+  "explanation": "A SATA data cable has 7 pins and is used to connect a storage device to the motherboard.",
+  "tags": [
+    "7-pin data connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

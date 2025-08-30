@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A technician is preparing to replace a single laptop key. Which two precautions should be taken before starting the repair?",
+  "answer_options": [
+    "Disconnect all USB devices",
+    "Power off and unplug the laptop",
+    "Consult manufacturer-specific keycap layout",
+    "Apply compressed air to the keyboard",
+    "Enable BIOS-level keyboard diagnostics"
+  ],
+  "correct_answer": [
+    "Power off and unplug the laptop",
+    "Consult manufacturer-specific keycap layout"
+  ],
+  "explanation": "Working on powered systems risks shorting components. Also, laptop key mechanisms vary by vendor and model.",
+  "tags": [
+    "keycap",
+    "replace single key"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-141",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which fiber connector is best suited for legacy industrial installations that require secure locking under physical movement?",
+  "answer_options": [
+    "LC connector",
+    "SC connector",
+    "ST connector",
+    "USB-C"
+  ],
+  "correct_answer": [
+    "ST connector"
+  ],
+  "explanation": "ST connectors use a bayonet locking mechanism, making them ideal for environments with vibration or where frequent reconnection is required.",
+  "tags": [
+    "ST connector",
+    "bayonet connector",
+    "straight tip"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

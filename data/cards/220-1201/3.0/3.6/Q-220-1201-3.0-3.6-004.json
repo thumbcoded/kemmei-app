@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are basic power precautions to follow before servicing a computer? (Select all that apply)",
+  "answer_options": [
+    "Disconnect the power source",
+    "Ensure capacitors are discharged",
+    "Connect wrist strap to AC ground",
+    "Avoid touching internal components",
+    "Tie cables to power supply for grounding"
+  ],
+  "correct_answer": [
+    "Disconnect the power source",
+    "Ensure capacitors are discharged",
+    "Avoid touching internal components"
+  ],
+  "explanation": "You should always unplug the device, safely discharge capacitors, and avoid touching sensitive internal parts. Connecting to ground wires or AC outlets is dangerous.",
+  "tags": [
+    "power precautions",
+    "electrocution risk"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

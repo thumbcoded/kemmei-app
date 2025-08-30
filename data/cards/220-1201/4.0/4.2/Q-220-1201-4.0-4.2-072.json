@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is most likely a customer responsibility in a Software as a Service (SaaS) deployment?",
+  "answer_options": [
+    "Patching the operating system",
+    "Securing the physical data center",
+    "Managing user accounts and logins",
+    "Maintaining application code"
+  ],
+  "correct_answer": [
+    "Managing user accounts and logins"
+  ],
+  "explanation": "In SaaS, the provider manages the platform and application. The customer typically manages user identity and access.",
+  "tags": [
+    "customer responsibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which configuration would maximize bandwidth between the CPU and memory in a high-performance desktop system?",
+  "answer_options": [
+    "Two unmatched DDR4 modules in any two slots",
+    "A single DDR5 module running at maximum MT/s",
+    "Four matched DDR4 modules installed in correct colored slot pairs",
+    "One high-capacity ECC module placed in the first slot"
+  ],
+  "correct_answer": [
+    "Four matched DDR4 modules installed in correct colored slot pairs"
+  ],
+  "explanation": "Matched memory modules installed in appropriate slots enable multi-channel operation, which increases memory bandwidth significantly.",
+  "tags": [
+    "memory slot colors",
+    "memory module matching",
+    "memory bandwidth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

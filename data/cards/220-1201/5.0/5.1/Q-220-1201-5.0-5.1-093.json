@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of these should you check first if a computer is running slowly and is suspected of being infected?",
+  "answer_options": [
+    "Display refresh rate",
+    "Malware scan",
+    "Printer queue",
+    "BIOS time settings"
+  ],
+  "correct_answer": [
+    "Malware scan"
+  ],
+  "explanation": "Malware can consume CPU and memory resources, leading to major performance degradation.",
+  "tags": [
+    "malware scan"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

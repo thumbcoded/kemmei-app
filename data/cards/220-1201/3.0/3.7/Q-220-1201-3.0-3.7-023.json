@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which PDL is most commonly associated with HP printers?",
+  "answer_options": [
+    "PostScript",
+    "PCL",
+    "ESC/P",
+    "RAW"
+  ],
+  "correct_answer": [
+    "PCL"
+  ],
+  "explanation": "PCL (Printer Command Language) is developed by Hewlett-Packard and commonly used in HP printers.",
+  "tags": [
+    "PCL",
+    "printer command language"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

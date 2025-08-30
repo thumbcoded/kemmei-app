@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which part inside a hard disk drive moves across spinning platters to access data?",
+  "answer_options": [
+    "Drive head",
+    "Power connector",
+    "Cooling fan",
+    "Voltage regulator"
+  ],
+  "correct_answer": [
+    "Drive head"
+  ],
+  "explanation": "The drive head is attached to the actuator arm and moves across spinning platters to read and write data.",
+  "tags": [
+    "drive heads"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

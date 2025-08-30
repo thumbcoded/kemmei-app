@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician suspects a cooling issue is causing random system shutdowns. Which step should be performed FIRST?",
+  "answer_options": [
+    "Reseat the RAM modules",
+    "Update BIOS firmware",
+    "Check for thermal paste application and fan operation",
+    "Replace the CMOS battery"
+  ],
+  "correct_answer": [
+    "Check for thermal paste application and fan operation"
+  ],
+  "explanation": "Verifying proper heat transfer and airflow is the most immediate and relevant step when overheating is suspected.",
+  "tags": [
+    "cooling problems",
+    "system crash"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

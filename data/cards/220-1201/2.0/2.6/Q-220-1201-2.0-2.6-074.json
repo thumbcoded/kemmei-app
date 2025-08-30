@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why would a Windows PC with an APIPA address report 'Limited or No Connectivity'?",
+  "answer_options": [
+    "The APIPA IP is not valid for Ethernet",
+    "The device can only access the internet at reduced speed",
+    "The system detects no default gateway is present",
+    "The ARP table was flushed by DHCP"
+  ],
+  "correct_answer": [
+    "The system detects no default gateway is present"
+  ],
+  "explanation": "Windows uses this warning when an APIPA address is assigned, indicating the device cannot access external networks.",
+  "tags": [
+    "APIPA",
+    "link-local"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains high memory usage after startup, even when no programs are open?",
+  "answer_options": [
+    "Faulty RAM module",
+    "Multiple startup applications consuming memory",
+    "Screen resolution too high",
+    "DNS misconfiguration"
+  ],
+  "correct_answer": [
+    "Multiple startup applications consuming memory"
+  ],
+  "explanation": "Startup programs running in the background may consume a significant portion of memory and slow system performance.",
+  "tags": [
+    "memory usage",
+    "applications slow to load"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

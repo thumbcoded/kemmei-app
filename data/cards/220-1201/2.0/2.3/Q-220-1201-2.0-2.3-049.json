@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An organization deploys multiple redundant authentication servers. What problem are they specifically trying to avoid?",
+  "answer_options": [
+    "Slow SQL query performance",
+    "Multiple usernames per user account",
+    "Inability to authenticate users during a single server failure",
+    "Relational database corruption during sync operations"
+  ],
+  "correct_answer": [
+    "Inability to authenticate users during a single server failure"
+  ],
+  "explanation": "Redundant authentication servers ensure that users can still log in even if one server becomes unavailable.",
+  "tags": [
+    "authentication server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

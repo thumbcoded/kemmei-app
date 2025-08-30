@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What component applies heat to generate images on thermal paper?",
+  "answer_options": [
+    "Toner cartridge",
+    "Heating element",
+    "Laser diode",
+    "Fuser assembly"
+  ],
+  "correct_answer": [
+    "Heating element"
+  ],
+  "explanation": "Thermal printers use a heating element to activate the coating on thermal paper.",
+  "tags": [
+    "heating element"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

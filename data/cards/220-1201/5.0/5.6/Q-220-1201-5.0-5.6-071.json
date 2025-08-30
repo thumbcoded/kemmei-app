@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A wireless printer is powered on but not visible on the network. What is the most likely cause?",
+  "answer_options": [
+    "Print spooler crash",
+    "Low toner warning",
+    "Wireless printer not joined to the correct network",
+    "Paper size mismatch"
+  ],
+  "correct_answer": [
+    "Wireless printer not joined to the correct network"
+  ],
+  "explanation": "If the wireless printer is not on the correct Wi-Fi SSID or has lost its connection, it will not be discoverable on the network.",
+  "tags": [
+    "wireless printer",
+    "printer connectivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

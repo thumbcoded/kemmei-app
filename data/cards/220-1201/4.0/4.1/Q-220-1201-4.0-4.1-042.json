@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting allows a VM to appear like any other device on the local LAN?",
+  "answer_options": [
+    "Private mode",
+    "Shared network mode",
+    "Bridge network address",
+    "Tunnel mode"
+  ],
+  "correct_answer": [
+    "Bridge network address"
+  ],
+  "explanation": "Bridge mode connects a VM directly to the LAN, as if it were a physical device.",
+  "tags": [
+    "bridge network address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

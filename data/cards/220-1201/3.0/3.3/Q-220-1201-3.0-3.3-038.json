@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why can’t DDR4 modules be installed in a DDR3 motherboard even though they look similar?",
+  "answer_options": [
+    "BIOS compatibility prevents installation",
+    "DDR4 modules require active cooling not found in DDR3 systems",
+    "Keying notches on the memory and slot prevent physical insertion",
+    "They can be installed, but won’t operate at full speed"
+  ],
+  "correct_answer": [
+    "Keying notches on the memory and slot prevent physical insertion"
+  ],
+  "explanation": "Each DDR generation has unique physical key notches that prevent installing incompatible modules in the wrong motherboard, thus avoiding electrical mismatch or damage.",
+  "tags": [
+    "memory slot keys",
+    "motherboard compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

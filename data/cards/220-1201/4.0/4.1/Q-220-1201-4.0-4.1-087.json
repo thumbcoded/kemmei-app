@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What makes containerized applications more portable than traditional virtual machines?",
+  "answer_options": [
+    "They are embedded into the host BIOS",
+    "They package the full operating system for migration",
+    "They are self-contained and exclude the OS, reducing size and complexity",
+    "They use virtualization extensions in CPU hardware"
+  ],
+  "correct_answer": [
+    "They are self-contained and exclude the OS, reducing size and complexity"
+  ],
+  "explanation": "Container images are smaller and more portable because they package only what's needed to run the app — no OS.",
+  "tags": [
+    "container image"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

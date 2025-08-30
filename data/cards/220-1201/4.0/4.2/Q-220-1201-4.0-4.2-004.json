@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A small business wants to avoid large upfront costs for hardware. Which cloud benefit is most relevant?",
+  "answer_options": [
+    "Increased latency",
+    "Fixed hardware expenses",
+    "Financial control",
+    "Slower deployment times"
+  ],
+  "correct_answer": [
+    "Financial control"
+  ],
+  "explanation": "Cloud computing allows businesses to convert capital expenses into predictable operational costs.",
+  "tags": [
+    "financial control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

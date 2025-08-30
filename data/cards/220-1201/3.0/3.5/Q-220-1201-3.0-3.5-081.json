@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which DC voltage level is most commonly used to power the CPU and other core logic?",
+  "answer_options": [
+    "3.3 volts",
+    "5 volts",
+    "12 volts",
+    "1.8 volts"
+  ],
+  "correct_answer": [
+    "12 volts"
+  ],
+  "explanation": "The 12V rail is typically used to power the CPU, GPU, and other high-draw components via dedicated connectors.",
+  "tags": [
+    "DC voltage levels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

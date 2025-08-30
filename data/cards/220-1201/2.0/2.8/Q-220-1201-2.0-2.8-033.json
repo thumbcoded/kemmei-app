@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does a continuity test check for in a network cable?",
+  "answer_options": [
+    "MAC address assignment",
+    "Wireless channel overlap",
+    "Electrical connection from one end to the other",
+    "IP address resolution"
+  ],
+  "correct_answer": [
+    "Electrical connection from one end to the other"
+  ],
+  "explanation": "Continuity tests verify that each wire in a cable is electrically connected from one side to the other with no breaks.",
+  "tags": [
+    "continuity",
+    "cable tester"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason for putting IoT devices on segmented networks?",
+  "answer_options": [
+    "To improve their performance and speed",
+    "To limit potential security breaches if a device is compromised",
+    "To reduce network bandwidth usage",
+    "To make them easier to manage and update"
+  ],
+  "correct_answer": [
+    "To limit potential security breaches if a device is compromised"
+  ],
+  "explanation": "Organizations put IoT devices on segmented networks to limit any access that could occur should someone gain access to an IoT device, preventing lateral movement through the main network.",
+  "tags": [
+    "IoT",
+    "segmented network",
+    "device isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

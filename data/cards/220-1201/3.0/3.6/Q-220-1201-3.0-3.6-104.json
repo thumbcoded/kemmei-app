@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO of the following actions help prevent airflow issues when using a fixed-cable power supply in a compact case? (Select two)",
+  "answer_options": [
+    "Removing all unused SATA cables",
+    "Routing unused cables behind the motherboard tray",
+    "Leaving unused cables bunched near the CPU fan",
+    "Switching to a hybrid supply with modular GPU connectors",
+    "Using a dual-fan PSU for cooling"
+  ],
+  "correct_answer": [
+    "Routing unused cables behind the motherboard tray",
+    "Switching to a hybrid supply with modular GPU connectors"
+  ],
+  "explanation": "Fixed cables can restrict airflow if unmanaged. Routing behind the tray and using hybrid supplies can mitigate clutter and overheating.",
+  "tags": [
+    "fixed cables",
+    "cable management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains that nothing is printing, but many jobs are sitting in the queue. What is the most likely cause?",
+  "answer_options": [
+    "Faulty network cable",
+    "Spooler crash",
+    "Empty paper tray",
+    "Wrong page orientation"
+  ],
+  "correct_answer": [
+    "Spooler crash"
+  ],
+  "explanation": "If the spooler crashes, it prevents jobs from being forwarded to the printer even though they remain visible in the queue.",
+  "tags": [
+    "spooler crash",
+    "print queue"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

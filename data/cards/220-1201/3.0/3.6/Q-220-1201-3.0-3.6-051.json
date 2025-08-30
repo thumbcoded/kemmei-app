@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of current do wall outlets provide to the power supply?",
+  "answer_options": [
+    "Direct current (DC)",
+    "Static current (SC)",
+    "Alternating current (AC)",
+    "Modified digital current (MDC)"
+  ],
+  "correct_answer": [
+    "Alternating current (AC)"
+  ],
+  "explanation": "Wall outlets provide AC power, which is then converted to DC by the computer’s power supply.",
+  "tags": [
+    "power supply input"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What feature ensures that a power connector can only be inserted in one direction?",
+  "answer_options": [
+    "Molex crimping",
+    "Connector keying",
+    "Cable shielding",
+    "SATA labeling"
+  ],
+  "correct_answer": [
+    "Connector keying"
+  ],
+  "explanation": "Connector keying uses notches or shapes to prevent incorrect insertion and ensure correct alignment.",
+  "tags": [
+    "connector keying"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

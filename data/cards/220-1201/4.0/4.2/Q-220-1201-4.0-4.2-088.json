@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one potential drawback of deploying a private cloud?",
+  "answer_options": [
+    "Limited customization options",
+    "Shared resources with competitors",
+    "High upfront capital and maintenance costs",
+    "Inability to virtualize services"
+  ],
+  "correct_answer": [
+    "High upfront capital and maintenance costs"
+  ],
+  "explanation": "Private clouds require significant infrastructure investment and ongoing maintenance by the organization, which increases overall cost.",
+  "tags": [
+    "cash outlay"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

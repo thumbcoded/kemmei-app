@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following interfaces provides the highest theoretical throughput when using a single PCIe lane?",
+  "answer_options": [
+    "SATA III",
+    "AHCI",
+    "NVMe over PCIe",
+    "mSATA"
+  ],
+  "correct_answer": [
+    "NVMe over PCIe"
+  ],
+  "explanation": "NVMe over PCIe supports up to ~64 Gbps per lane, far exceeding the 6 Gbps limit of SATA III and the overhead-limited AHCI protocol.",
+  "tags": [
+    "non-volatile storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

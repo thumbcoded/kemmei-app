@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which symptom is a strong indicator of an impending mechanical failure in a hard disk drive?",
+  "answer_options": [
+    "Sudden reboot",
+    "Clicking noises",
+    "Unexpected screen dimming",
+    "BIOS password prompt"
+  ],
+  "correct_answer": [
+    "Clicking noises"
+  ],
+  "explanation": "Clicking noises from a hard drive, sometimes referred to as the 'click of death,' often indicate mechanical issues such as failing actuator arms.",
+  "tags": [
+    "clicking noises"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

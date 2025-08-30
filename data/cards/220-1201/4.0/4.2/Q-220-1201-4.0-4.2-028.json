@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An organization wants full control over its infrastructure and does not want to share hardware or storage with any other entity. Which deployment model should it choose?",
+  "answer_options": [
+    "Public cloud",
+    "Hybrid cloud",
+    "Community cloud",
+    "Private cloud"
+  ],
+  "correct_answer": [
+    "Private cloud"
+  ],
+  "explanation": "Private clouds offer full control and are dedicated to a single organization, ensuring no shared infrastructure.",
+  "tags": [
+    "private cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

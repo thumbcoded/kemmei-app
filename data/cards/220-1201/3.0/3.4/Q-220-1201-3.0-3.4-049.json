@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which form factor consideration can affect airflow and thermal performance in desktop PC builds?",
+  "answer_options": [
+    "Drive file system",
+    "Enclosure color",
+    "Drive form factor and placement",
+    "Memory module type"
+  ],
+  "correct_answer": [
+    "Drive form factor and placement"
+  ],
+  "explanation": "Larger 3.5-inch drives can obstruct airflow or require more spacing in compact builds, affecting cooling performance.",
+  "tags": [
+    "3.5-inch drive",
+    "form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

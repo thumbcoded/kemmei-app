@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A wireless printer is online but intermittently drops off the network. Other wireless devices are unaffected. What is the most likely cause?",
+  "answer_options": [
+    "Incorrect DNS entry",
+    "Duplicate MAC address",
+    "Unstable signal or interference specific to printer location",
+    "Spooler corruption"
+  ],
+  "correct_answer": [
+    "Unstable signal or interference specific to printer location"
+  ],
+  "explanation": "Wireless printers are more vulnerable to signal dropouts from interference or weak coverage, especially in fixed positions.",
+  "tags": [
+    "wireless printer",
+    "printer connectivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

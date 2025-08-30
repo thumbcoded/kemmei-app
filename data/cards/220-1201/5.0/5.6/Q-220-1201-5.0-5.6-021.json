@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two issues are most likely to cause multiple sheets of paper to be pulled into the printer at once? (Select two)",
+  "answer_options": [
+    "Dirty pickup rollers",
+    "Low toner level",
+    "Incorrect page orientation",
+    "Worn pickup rollers",
+    "Legal size paper in letter tray"
+  ],
+  "correct_answer": [
+    "Dirty pickup rollers",
+    "Worn pickup rollers"
+  ],
+  "explanation": "Pickup rollers that are dirty or worn may fail to separate individual pages, resulting in multiple pages being pulled in simultaneously.",
+  "tags": [
+    "multiple pages",
+    "pickup rollers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

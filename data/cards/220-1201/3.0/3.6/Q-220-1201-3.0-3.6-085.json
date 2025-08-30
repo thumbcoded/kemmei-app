@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the term for a setup where two power supplies can each support the full load of the system?",
+  "answer_options": [
+    "Dual-rail architecture",
+    "Hot swap configuration",
+    "Dual power supplies",
+    "Power factor correction"
+  ],
+  "correct_answer": [
+    "Dual power supplies"
+  ],
+  "explanation": "Dual power supplies provide redundancy by each being capable of supplying the full system power if needed.",
+  "tags": [
+    "dual power supplies"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

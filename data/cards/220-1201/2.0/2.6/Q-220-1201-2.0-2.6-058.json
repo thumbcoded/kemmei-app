@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which step occurs first during the DHCP leasing process?",
+  "answer_options": [
+    "DHCPACK",
+    "DHCPREQUEST",
+    "DHCPOFFER",
+    "DHCPDISCOVER"
+  ],
+  "correct_answer": [
+    "DHCPDISCOVER"
+  ],
+  "explanation": "The DHCPDISCOVER broadcast is the initial step where a client looks for a DHCP server to assign an IP.",
+  "tags": [
+    "DHCP",
+    "lease process"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

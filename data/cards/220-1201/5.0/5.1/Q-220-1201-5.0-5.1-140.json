@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-140",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What are software conflicts in motherboard troubleshooting and how do they manifest?",
+  "answer_options": [
+    "Software conflicts only occur between user applications and don't affect hardware",
+    "Driver conflicts, service conflicts, hardware resource conflicts causing instability and crashes",
+    "All software conflicts indicate physical hardware damage to motherboard",
+    "Software conflicts exclusively affect network connectivity and nothing else"
+  ],
+  "correct_answer": [
+    "Driver conflicts, service conflicts, hardware resource conflicts causing instability and crashes"
+  ],
+  "explanation": "Software conflicts affecting motherboards: driver conflicts between different hardware manufacturers, service conflicts from multiple hardware management utilities, resource conflicts (IRQ, DMA, I/O addresses), and compatibility issues between BIOS settings and OS. Symptoms: random crashes, BSOD, device failures, and system instability. Resolution requires systematic driver management and conflict resolution.",
+  "tags": [
+    "software conflicts"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

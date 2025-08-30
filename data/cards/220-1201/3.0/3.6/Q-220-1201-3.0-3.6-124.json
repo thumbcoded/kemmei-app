@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-124",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "You’re building a PC that includes a high-end GPU with dual 8-pin power connectors. What must be verified before selecting a power supply?",
+  "answer_options": [
+    "That the PSU has dual PCIe power cables",
+    "That the PSU fan spins in reverse",
+    "That the PSU uses gold-plated terminals",
+    "That the PSU is rated for Wi-Fi 6"
+  ],
+  "correct_answer": [
+    "That the PSU has dual PCIe power cables"
+  ],
+  "explanation": "The GPU requires two dedicated 8-pin PCIe connectors. The PSU must include enough native PCIe power outputs to support it.",
+  "tags": [
+    "connector compatibility",
+    "power supply selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

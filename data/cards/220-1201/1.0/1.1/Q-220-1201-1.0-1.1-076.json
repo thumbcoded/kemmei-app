@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is cloning a 1 TB hard drive to a 512 GB SSD. What must be true for the cloning to succeed?",
+  "answer_options": [
+    "The SSD must be the same brand as the original drive",
+    "The used space on the source drive must be less than 512 GB",
+    "The target SSD must use the NVMe protocol",
+    "The drive must be reformatted to FAT32 before cloning"
+  ],
+  "correct_answer": [
+    "The used space on the source drive must be less than 512 GB"
+  ],
+  "explanation": "Cloning transfers all data, so the used space must fit entirely on the new drive, even if the old one was larger.",
+  "tags": [
+    "drive migration",
+    "cloning software"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

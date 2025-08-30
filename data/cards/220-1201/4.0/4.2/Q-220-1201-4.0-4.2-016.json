@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which term refers to companies like AWS, Azure, or Google Cloud that offer infrastructure and services to customers over the internet?",
+  "answer_options": [
+    "Application instance",
+    "Cloud service providers",
+    "Server hosting",
+    "Button deployment"
+  ],
+  "correct_answer": [
+    "Cloud service providers"
+  ],
+  "explanation": "These companies are categorized as cloud service providers — they offer compute, storage, and platform services via APIs and consoles.",
+  "tags": [
+    "cloud service providers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

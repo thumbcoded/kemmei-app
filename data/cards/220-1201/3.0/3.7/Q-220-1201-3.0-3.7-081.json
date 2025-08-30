@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What feature delays printing until the user physically arrives and authenticates with a badge?",
+  "answer_options": [
+    "Audit logging",
+    "Duplex printing",
+    "PIN-protected printing",
+    "Badging"
+  ],
+  "correct_answer": [
+    "Badging"
+  ],
+  "explanation": "Badging ensures that the print job only executes once the authorized user verifies their identity at the printer.",
+  "tags": [
+    "badging"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of DisplayPort is smaller and often found on laptops and compact devices?",
+  "answer_options": [
+    "Micro DisplayPort",
+    "Nano DisplayPort",
+    "Mini DisplayPort",
+    "Type-C DisplayPort"
+  ],
+  "correct_answer": [
+    "Mini DisplayPort"
+  ],
+  "explanation": "Mini DisplayPort is a smaller version of DisplayPort used in compact devices like laptops.",
+  "tags": [
+    "mini DisplayPort"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

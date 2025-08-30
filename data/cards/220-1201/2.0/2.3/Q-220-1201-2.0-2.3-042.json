@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What credential pair is typically used by authentication servers to identify users?",
+  "answer_options": [
+    "IP address and MAC address",
+    "Serial number and firmware ID",
+    "Username and password",
+    "Device ID and encryption key"
+  ],
+  "correct_answer": [
+    "Username and password"
+  ],
+  "explanation": "Authentication servers rely on credentials such as a username and password to validate user identity.",
+  "tags": [
+    "username and password"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

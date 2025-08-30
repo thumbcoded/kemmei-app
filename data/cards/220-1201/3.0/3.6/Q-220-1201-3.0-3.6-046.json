@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician connects a power supply set for 120V AC into a 230V AC outlet. What is the most likely outcome?",
+  "answer_options": [
+    "The system runs normally at higher speed",
+    "The PSU automatically adjusts to 230V AC",
+    "The power supply fails catastrophically",
+    "The motherboard refuses to POST"
+  ],
+  "correct_answer": [
+    "The power supply fails catastrophically"
+  ],
+  "explanation": "Manually set PSUs do not auto-adjust. Applying 230V to a 120V PSU will likely destroy it.",
+  "tags": [
+    "alternating current",
+    "power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

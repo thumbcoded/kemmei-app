@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the recommended diagnostic path if a device exhibits cursor drift even after recalibration?",
+  "answer_options": [
+    "Reset network settings",
+    "Update the wallpaper",
+    "Replace the display assembly",
+    "Install more RAM"
+  ],
+  "correct_answer": [
+    "Replace the display assembly"
+  ],
+  "explanation": "Persistent cursor drift after calibration often points to hardware failure in the digitizer or screen, requiring replacement.",
+  "tags": [
+    "cursor drift"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

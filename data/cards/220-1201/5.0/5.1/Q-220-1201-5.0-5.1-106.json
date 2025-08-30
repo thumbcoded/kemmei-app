@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-106",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is BIOS corruption and what are the typical symptoms and solutions?",
+  "answer_options": [
+    "Software virus infection - run antivirus scan and update operating system",
+    "Firmware becomes damaged preventing proper startup - symptoms include no display, continuous beeping, boot loops",
+    "Hard drive failure causing slow boot times - replace storage device",
+    "Memory error causing random crashes - run memory diagnostic tests"
+  ],
+  "correct_answer": [
+    "Firmware becomes damaged preventing proper startup - symptoms include no display, continuous beeping, boot loops"
+  ],
+  "explanation": "BIOS corruption occurs when the firmware becomes damaged or corrupted, preventing proper system startup. Symptoms include: no display output, continuous beeping, failure to POST, or boot loops. Solutions: BIOS reset via jumper, CMOS battery removal, BIOS recovery mode, or BIOS chip replacement in severe cases.",
+  "tags": [
+    "BIOS corruption"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

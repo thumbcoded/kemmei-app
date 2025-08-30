@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two actions should you take when troubleshooting a display that remains blank during boot? (Select two)",
+  "answer_options": [
+    "Check video cable connections",
+    "Inspect display panel brightness settings",
+    "Swap the video card if another is available",
+    "Format the primary hard drive",
+    "Disable antivirus in safe mode"
+  ],
+  "correct_answer": [
+    "Check video cable connections",
+    "Swap the video card if another is available"
+  ],
+  "explanation": "Blank display during boot often points to either a physical connection issue or a video card failure.",
+  "tags": [
+    "display troubleshooting",
+    "video card problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

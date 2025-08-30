@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following describes the relationship between Intel and AMD CPU sockets?",
+  "answer_options": [
+    "They use interchangeable sockets",
+    "They use the same heat spreaders",
+    "Each uses a unique socket type",
+    "They share BIOS firmware formats"
+  ],
+  "correct_answer": [
+    "Each uses a unique socket type"
+  ],
+  "explanation": "Intel and AMD CPUs require different socket types, such as LGA vs AM4.",
+  "tags": [
+    "Intel socket",
+    "AMD socket"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

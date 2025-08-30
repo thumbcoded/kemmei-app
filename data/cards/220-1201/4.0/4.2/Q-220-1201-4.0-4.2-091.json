@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following characteristics apply to a public cloud deployment? (Select all that apply)",
+  "answer_options": [
+    "Infrastructure shared among multiple tenants",
+    "Accessible over the internet",
+    "Owned and operated by the client organization",
+    "Scalability through a third-party provider",
+    "On-premises hardware control by the client"
+  ],
+  "correct_answer": [
+    "Infrastructure shared among multiple tenants",
+    "Accessible over the internet",
+    "Scalability through a third-party provider"
+  ],
+  "explanation": "Public clouds are accessible via the internet, offer scalable infrastructure from providers like AWS or Azure, and serve multiple tenants. Ownership and control remain with the provider.",
+  "tags": [
+    "public cloud deployment",
+    "shared resources",
+    "scalability"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

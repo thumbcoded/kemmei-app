@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a typical advantage of 10,000 RPM drives compared to 7200 RPM drives?",
+  "answer_options": [
+    "Lower noise output",
+    "Reduced power consumption",
+    "Faster data access times",
+    "Larger physical size"
+  ],
+  "correct_answer": [
+    "Faster data access times"
+  ],
+  "explanation": "10,000 RPM drives spin faster, resulting in reduced rotational latency and improved access times.",
+  "tags": [
+    "10000 RPM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

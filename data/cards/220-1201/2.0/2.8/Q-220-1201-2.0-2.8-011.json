@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which characteristic of a high-quality crimp ensures long-term durability and proper contact in an RJ45 termination?",
+  "answer_options": [
+    "A visible gap between wire ends and connector tip",
+    "The locking tab clicks loudly during connection",
+    "Firm metal-to-metal contact with insulation-piercing teeth",
+    "Connector tab bends slightly upward after crimping"
+  ],
+  "correct_answer": [
+    "Firm metal-to-metal contact with insulation-piercing teeth"
+  ],
+  "explanation": "Proper crimping drives the connector’s teeth through the wire insulation, creating solid metal-to-metal electrical contact for each pin.",
+  "tags": [
+    "crimper",
+    "RJ45",
+    "connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

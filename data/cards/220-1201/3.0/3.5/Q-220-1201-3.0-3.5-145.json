@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-145",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following components may contain built-in temperature sensors? (Select all that apply)",
+  "answer_options": [
+    "CPU",
+    "GPU",
+    "Motherboard chipset",
+    "Ethernet cable"
+  ],
+  "correct_answer": [
+    "CPU",
+    "GPU",
+    "Motherboard chipset"
+  ],
+  "explanation": "Temperature sensors are commonly built into key components like CPUs, GPUs, and motherboard chipsets. Cables typically don’t contain sensors.",
+  "tags": [
+    "temperature sensors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

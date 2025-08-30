@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason for using SPF in a domain's DNS configuration?",
+  "answer_options": [
+    "To prevent unauthorized mail servers from sending email on behalf of the domain",
+    "To encrypt all outbound email traffic",
+    "To automate mail server selection via round-robin DNS",
+    "To prioritize mail delivery queues based on DNS TTL"
+  ],
+  "correct_answer": [
+    "To prevent unauthorized mail servers from sending email on behalf of the domain"
+  ],
+  "explanation": "SPF helps reduce spoofing by declaring which servers are allowed to send email from a domain.",
+  "tags": [
+    "SPF",
+    "Sender Policy Framework",
+    "email verification"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

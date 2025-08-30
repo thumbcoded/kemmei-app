@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which mobile device feature can be turned off to reduce battery usage when not needed?",
+  "answer_options": [
+    "Airplane mode",
+    "Battery statistics",
+    "Bluetooth",
+    "Multitasking"
+  ],
+  "correct_answer": [
+    "Bluetooth"
+  ],
+  "explanation": "Disabling unused features like Bluetooth, GPS, or Wi-Fi helps conserve battery life.",
+  "tags": [
+    "Bluetooth disable"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

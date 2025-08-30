@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which test is commonly used to measure how much data can be transferred over a network in a given time?",
+  "answer_options": [
+    "Memory scan",
+    "Speed test",
+    "Disk defrag",
+    "Display calibration"
+  ],
+  "correct_answer": [
+    "Speed test"
+  ],
+  "explanation": "Speed tests measure bandwidth and throughput, which are core parts of performance monitoring.",
+  "tags": [
+    "throughput testing",
+    "performance measurement",
+    "bandwidth monitoring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

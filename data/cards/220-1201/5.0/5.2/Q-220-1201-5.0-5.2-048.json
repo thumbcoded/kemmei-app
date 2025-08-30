@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician replaces a failed drive in a RAID 5 array. What step must be taken to fully restore redundancy?",
+  "answer_options": [
+    "Format the remaining drives",
+    "Recopy the backup image",
+    "Recursively delete the partition",
+    "Recynchronize the array"
+  ],
+  "correct_answer": [
+    "Recynchronize the array"
+  ],
+  "explanation": "After a failed drive is replaced, the array must be resynchronized to rebuild parity and restore full protection.",
+  "tags": [
+    "recynchronize array"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An internal cloud setup allows full infrastructure access but involves high capital expenditure. What is another term for this model?",
+  "answer_options": [
+    "External cloud",
+    "Private cloud",
+    "Hybrid cloud",
+    "Public cloud"
+  ],
+  "correct_answer": [
+    "Private cloud"
+  ],
+  "explanation": "Private clouds (also known as internal clouds) are self-managed and require upfront infrastructure investment.",
+  "tags": [
+    "private cloud",
+    "internal cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

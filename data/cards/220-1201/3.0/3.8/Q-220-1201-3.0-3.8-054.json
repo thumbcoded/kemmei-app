@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why are tiny droplets essential to high-resolution photo printing?",
+  "answer_options": [
+    "They dry faster than larger drops",
+    "They prevent ink from bleeding into the paper",
+    "They increase printing speed",
+    "They allow finer image detail"
+  ],
+  "correct_answer": [
+    "They allow finer image detail"
+  ],
+  "explanation": "Smaller droplets allow for more precise control over image gradients and detail, crucial in photo printing.",
+  "tags": [
+    "tiny droplets",
+    "photo printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

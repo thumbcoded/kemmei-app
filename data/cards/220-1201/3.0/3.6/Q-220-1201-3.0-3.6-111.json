@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-111",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to install a power supply into a system with high cooling requirements. Which efficiency rating would BEST reduce heat generation?",
+  "answer_options": [
+    "80 Plus Bronze",
+    "80 Plus Gold",
+    "80 Plus Platinum",
+    "No rating at all"
+  ],
+  "correct_answer": [
+    "80 Plus Platinum"
+  ],
+  "explanation": "Higher efficiency ratings like Platinum convert more AC to DC power and waste less energy as heat, reducing cooling needs.",
+  "tags": [
+    "energy efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

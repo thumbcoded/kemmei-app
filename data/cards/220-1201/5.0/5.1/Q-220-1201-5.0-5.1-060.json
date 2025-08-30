@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two steps should be taken when troubleshooting a power supply with no signs of activity? (Select two)",
+  "answer_options": [
+    "Check if the power strip is turned on",
+    "Run Disk Cleanup",
+    "Ensure the rear switch on the power supply is set to ON",
+    "Reinstall the video driver",
+    "Reset the system BIOS"
+  ],
+  "correct_answer": [
+    "Check if the power strip is turned on",
+    "Ensure the rear switch on the power supply is set to ON"
+  ],
+  "explanation": "Basic checks like verifying power input and switch settings should be done before advanced troubleshooting begins.",
+  "tags": [
+    "power switch",
+    "power strip"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user replaces a hard drive with an SSD and notices a major speed improvement. What likely explains this?",
+  "answer_options": [
+    "SSDs consume more power",
+    "SSDs are easier to install",
+    "SSDs offer significantly higher IOPS",
+    "SSDs generate more heat"
+  ],
+  "correct_answer": [
+    "SSDs offer significantly higher IOPS"
+  ],
+  "explanation": "Solid-state drives offer performance increases largely due to IOPS counts in the hundreds of thousands to millions.",
+  "tags": [
+    "SSD 1 million IOPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

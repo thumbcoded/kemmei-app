@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key characteristic of Infrastructure as a Service (IaaS)?",
+  "answer_options": [
+    "The customer manages only the data",
+    "The provider manages both hardware and applications",
+    "The customer rents hardware resources like CPUs and storage",
+    "Applications are delivered fully managed to the user"
+  ],
+  "correct_answer": [
+    "The customer rents hardware resources like CPUs and storage"
+  ],
+  "explanation": "In IaaS, the customer is responsible for managing the OS and apps while renting hardware resources from a provider.",
+  "tags": [
+    "IaaS",
+    "CPU rental",
+    "storage space"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

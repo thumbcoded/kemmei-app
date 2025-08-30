@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What must be verified before physically replacing a drive in a RAID array?",
+  "answer_options": [
+    "BIOS version compatibility",
+    "Correct drive is identified",
+    "Partition table type",
+    "Driver update availability"
+  ],
+  "correct_answer": [
+    "Correct drive is identified"
+  ],
+  "explanation": "With many identical drives, it's crucial to confirm you're removing the failed one — not a healthy drive.",
+  "tags": [
+    "RAID failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

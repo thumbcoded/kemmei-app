@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a multiport network card, but only one port is functional. Device Manager shows no errors. What should be checked NEXT?",
+  "answer_options": [
+    "Update the BIOS firmware",
+    "Check if additional drivers or utilities are needed for full port support",
+    "Move the card to another slot",
+    "Disable onboard LAN in the BIOS"
+  ],
+  "correct_answer": [
+    "Check if additional drivers or utilities are needed for full port support"
+  ],
+  "explanation": "Some advanced NICs require additional software to enable multiport functionality, even if basic drivers install correctly.",
+  "tags": [
+    "multiport network card",
+    "driver installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-112",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A laser printer displays a message indicating a maintenance kit is due. What should the technician do?",
+  "answer_options": [
+    "Update printer drivers",
+    "Refill toner cartridge",
+    "Replace parts such as rollers and fuser",
+    "Adjust calibration settings"
+  ],
+  "correct_answer": [
+    "Replace parts such as rollers and fuser"
+  ],
+  "explanation": "Maintenance kits typically include replacement parts like rollers, separation pads, and fuser assemblies.",
+  "tags": [
+    "maintenance kits"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

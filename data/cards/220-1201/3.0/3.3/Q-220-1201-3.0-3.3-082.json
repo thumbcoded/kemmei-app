@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does SDRAM stand for?",
+  "answer_options": [
+    "Static Dynamic Random Access Memory",
+    "Synchronous Dynamic Random Access Memory",
+    "Serial Dynamic RAM Module",
+    "Single Data Rate Access Memory"
+  ],
+  "correct_answer": [
+    "Synchronous Dynamic Random Access Memory"
+  ],
+  "explanation": "SDRAM stands for Synchronous Dynamic RAM. It synchronizes with the system's clock to transfer data efficiently.",
+  "tags": [
+    "SDRAM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary role of a printer driver?",
+  "answer_options": [
+    "It controls the speed of the network interface",
+    "It manages power supply levels for the printer",
+    "It translates data from the operating system into a format the printer understands",
+    "It installs firmware updates on the printer"
+  ],
+  "correct_answer": [
+    "It translates data from the operating system into a format the printer understands"
+  ],
+  "explanation": "Printer drivers are responsible for converting print jobs from the operating system into instructions the printer can understand and render.",
+  "tags": [
+    "printer driver"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

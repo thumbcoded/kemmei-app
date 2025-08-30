@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user notices faint outlines of a departure board even after changing screens. Attempts to clean the monitor were unsuccessful. What’s the most likely explanation?",
+  "answer_options": [
+    "Manufacturing defect",
+    "Screen burn-in",
+    "Display brightness too high",
+    "Night light setting is enabled"
+  ],
+  "correct_answer": [
+    "Screen burn-in"
+  ],
+  "explanation": "When persistent ghost images remain after content changes, especially from static images, it’s likely a case of screen burn-in—common in displays that show the same content for long periods.",
+  "tags": [
+    "screen burn-in"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

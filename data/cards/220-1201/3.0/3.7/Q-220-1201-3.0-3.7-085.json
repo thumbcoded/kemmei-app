@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A technician is configuring printer access for a shared office environment. Which two features would best help enforce accountability and secure usage? (Select two)",
+  "answer_options": [
+    "User authentication",
+    "Event Viewer logging",
+    "Duplex defaulting",
+    "Print spooling",
+    "Auto-sleep timer"
+  ],
+  "correct_answer": [
+    "User authentication",
+    "Event Viewer logging"
+  ],
+  "explanation": "Authentication restricts use to authorized individuals. Event Viewer logging allows administrators to track user and job activity.",
+  "tags": [
+    "user authentication",
+    "event viewer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

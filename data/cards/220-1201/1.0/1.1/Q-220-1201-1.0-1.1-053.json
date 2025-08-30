@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a primary benefit of M.2 SSDs in modern laptops?",
+  "answer_options": [
+    "They can store more data than HDDs",
+    "They are easier to repair than 2.5 inch SSDs",
+    "They require less physical space inside the chassis",
+    "They use rotating magnetic platters for higher capacity"
+  ],
+  "correct_answer": [
+    "They require less physical space inside the chassis"
+  ],
+  "explanation": "M.2 drives are small and slot directly into the motherboard, which is ideal for compact systems.",
+  "tags": [
+    "M.2",
+    "solid state drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

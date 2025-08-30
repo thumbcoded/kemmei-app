@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-126",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What are voltage tolerances in power supply testing and why are they important?",
+  "answer_options": [
+    "Network signal strength measurements for wireless connectivity",
+    "Acceptable DC output ranges (±5% for 12V, ±5% for 5V, ±4% for 3.3V) - critical for component stability",
+    "Temperature ranges within which power supplies can operate safely",
+    "Physical dimensions specifying power supply mounting requirements"
+  ],
+  "correct_answer": [
+    "Acceptable DC output ranges (±5% for 12V, ±5% for 5V, ±4% for 3.3V) - critical for component stability"
+  ],
+  "explanation": "Voltage tolerances define acceptable ranges for DC outputs (typically ±5% for 12V, ±5% for 5V, ±4% for 3.3V). They're important because: components are designed for specific voltages, out-of-tolerance power can damage hardware, cause instability, or prevent proper operation. Test with multimeter to verify PSU outputs fall within acceptable ranges under load.",
+  "tags": [
+    "voltage tolerances"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

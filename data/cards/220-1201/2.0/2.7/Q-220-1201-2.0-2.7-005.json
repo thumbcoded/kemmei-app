@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which internet connection type often requires line-of-sight to an outdoor antenna?",
+  "answer_options": [
+    "Cable",
+    "DSL",
+    "WISP",
+    "Fiber"
+  ],
+  "correct_answer": [
+    "WISP"
+  ],
+  "explanation": "Wireless Internet Service Providers (WISPs) typically require a clear line-of-sight to a nearby antenna for a reliable connection.",
+  "tags": [
+    "line of sight"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

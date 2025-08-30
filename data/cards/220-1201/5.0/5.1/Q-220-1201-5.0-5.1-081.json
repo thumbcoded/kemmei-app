@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a typical action when a motherboard is found to be faulty?",
+  "answer_options": [
+    "Update the CPU microcode",
+    "Reset the system clock",
+    "Replace the motherboard",
+    "Flash the video card BIOS"
+  ],
+  "correct_answer": [
+    "Replace the motherboard"
+  ],
+  "explanation": "Motherboards are not usually repairable; if faulty, they are replaced.",
+  "tags": [
+    "component replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

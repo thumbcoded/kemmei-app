@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the benefit of placing a wireless access point in a centralized location?",
+  "answer_options": [
+    "It ensures faster boot times",
+    "It reduces wired latency",
+    "It increases signal strength for users",
+    "It allows for automatic IP configuration"
+  ],
+  "correct_answer": [
+    "It increases signal strength for users"
+  ],
+  "explanation": "Placing access points centrally helps distribute signal strength evenly and reduces dead zones.",
+  "tags": [
+    "access point placement",
+    "centralized location",
+    "signal strength increase"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

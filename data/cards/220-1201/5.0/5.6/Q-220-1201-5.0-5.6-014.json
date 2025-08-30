@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician discovers that changing the print language from PostScript to PCL resolves an issue with incorrect spacing and font rendering. What does this most likely indicate?",
+  "answer_options": [
+    "The printer was low on toner",
+    "The printer tray was incorrectly selected",
+    "The printer was sent an unsupported page description language",
+    "The print head alignment was off"
+  ],
+  "correct_answer": [
+    "The printer was sent an unsupported page description language"
+  ],
+  "explanation": "Mismatched PDLs (like sending PostScript to a PCL-only printer) can cause garbled layout or unreadable characters due to rendering incompatibility.",
+  "tags": [
+    "PCL",
+    "PostScript",
+    "page description language",
+    "corrupted output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

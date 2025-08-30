@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A company is required by law to store customer data only within national borders. Which cloud deployment type best meets this requirement?",
+  "answer_options": [
+    "Hybrid cloud hosted by a third party",
+    "Public cloud hosted on a global platform",
+    "Private cloud located in-house",
+    "Community cloud across multiple institutions"
+  ],
+  "correct_answer": [
+    "Private cloud located in-house"
+  ],
+  "explanation": "Private clouds hosted on-premises can ensure complete data residency within a specific jurisdiction, making them ideal for regulatory compliance.",
+  "tags": [
+    "customer isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

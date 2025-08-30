@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which cloud deployment model combines public and private cloud infrastructure?",
+  "answer_options": [
+    "Community cloud",
+    "Distributed cloud",
+    "Hybrid cloud",
+    "Universal cloud"
+  ],
+  "correct_answer": [
+    "Hybrid cloud"
+  ],
+  "explanation": "A hybrid cloud uses both private and public cloud infrastructure, often for flexibility and scalability.",
+  "tags": [
+    "hybrid cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

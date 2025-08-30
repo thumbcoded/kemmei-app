@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A firewall rule must allow email retrieval and web browsing but block remote desktop. Which ports should be allowed?",
+  "answer_options": [
+    "80, 110, 3389",
+    "110, 443, 143",
+    "80, 110, 443",
+    "25, 80, 3389"
+  ],
+  "correct_answer": [
+    "80, 110, 443"
+  ],
+  "explanation": "Port 80 (HTTP), 443 (HTTPS), and 110 (POP3) support email and web browsing. Port 3389 is for RDP, which should be blocked.",
+  "tags": [
+    "HTTP",
+    "POP3",
+    "HTTPS",
+    "port assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

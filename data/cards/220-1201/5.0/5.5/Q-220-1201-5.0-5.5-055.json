@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is optimizing signal quality across several access points. Which TWO actions are MOST effective?",
+  "answer_options": [
+    "Assign non-overlapping AP channel settings",
+    "Configure all APs to the same channel for redundancy",
+    "Use automatic access point frequency selection",
+    "Disable SSID broadcast for hidden performance",
+    "Install firewalls between APs"
+  ],
+  "correct_answer": [
+    "Assign non-overlapping AP channel settings",
+    "Use automatic access point frequency selection"
+  ],
+  "explanation": "Non-overlapping channels reduce interference. Automatic frequency selection adapts to environmental changes.",
+  "tags": [
+    "AP channel settings",
+    "access point frequency",
+    "access point settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

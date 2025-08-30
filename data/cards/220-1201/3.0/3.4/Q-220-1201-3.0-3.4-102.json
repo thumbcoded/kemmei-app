@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature of optical discs contributes to their longevity as archival media?",
+  "answer_options": [
+    "Magneto-optical rewritability",
+    "Flash-based controller",
+    "Inert material substrate and lack of electrical dependencies",
+    "Spinning platter and actuator arm"
+  ],
+  "correct_answer": [
+    "Inert material substrate and lack of electrical dependencies"
+  ],
+  "explanation": "Optical discs are read-only (in archival form), non-volatile, and not dependent on magnetic or electrical charge retention, enhancing shelf life.",
+  "tags": [
+    "archival media"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-143",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What constitutes minimal configuration in motherboard troubleshooting and why is it effective?",
+  "answer_options": [
+    "Using the smallest possible case with compact components for space efficiency",
+    "CPU, single RAM stick, power supply, basic video - eliminates variables to isolate problems",
+    "Running system with minimum power settings to reduce electrical consumption",
+    "Installing only the oldest compatible drivers to ensure maximum compatibility"
+  ],
+  "correct_answer": [
+    "CPU, single RAM stick, power supply, basic video - eliminates variables to isolate problems"
+  ],
+  "explanation": "Minimal configuration includes: CPU, single RAM stick, power supply, and basic video output (integrated or single graphics card). This eliminates variables that could cause problems: multiple RAM sticks, expansion cards, extra drives, and unnecessary peripherals. Effective because it isolates core functionality and makes it easier to identify if problems are motherboard-related or component-related.",
+  "tags": [
+    "minimal configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two attributes are typically tracked by SMART to monitor drive health? (Select two.)",
+  "answer_options": [
+    "Power on hours",
+    "Input lag",
+    "Temperature Celsius",
+    "Transfer rate",
+    "Form factor"
+  ],
+  "correct_answer": [
+    "Power on hours",
+    "Temperature Celsius"
+  ],
+  "explanation": "SMART tracks both how long the drive has been powered (power on hours) and operating temperature (in Celsius) to detect early warning signs.",
+  "tags": [
+    "power on hours",
+    "temperature celsius"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

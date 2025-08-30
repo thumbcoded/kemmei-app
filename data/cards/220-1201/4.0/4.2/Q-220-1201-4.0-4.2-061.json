@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of these best describes a Platform as a Service (PaaS)?",
+  "answer_options": [
+    "Pre-built applications ready for immediate use",
+    "A development environment managed by the cloud provider",
+    "Raw computing resources with no OS installed",
+    "On-premises server hardware"
+  ],
+  "correct_answer": [
+    "A development environment managed by the cloud provider"
+  ],
+  "explanation": "PaaS delivers a managed environment where users can build and deploy applications without maintaining the underlying infrastructure.",
+  "tags": [
+    "platform as a service"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

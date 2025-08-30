@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the name for a device dedicated to handling VPN connections?",
+  "answer_options": [
+    "Concentrator",
+    "Repeater",
+    "Switch",
+    "Access point"
+  ],
+  "correct_answer": [
+    "Concentrator"
+  ],
+  "explanation": "A VPN concentrator is a dedicated device or appliance that manages multiple encrypted VPN tunnels.",
+  "tags": [
+    "concentrator",
+    "VPN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

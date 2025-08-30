@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-116",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which symptom would most likely result from incorrectly wiring the front panel headers?",
+  "answer_options": [
+    "USB ports stop responding",
+    "CPU fan doesn't spin",
+    "System powers on but reset button does nothing",
+    "Monitor receives no signal"
+  ],
+  "correct_answer": [
+    "System powers on but reset button does nothing"
+  ],
+  "explanation": "Incorrect wiring of front panel headers may disable buttons or LEDs without affecting core system operation.",
+  "tags": [
+    "front panel connectors",
+    "case buttons"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

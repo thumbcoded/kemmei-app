@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-108",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is the initial DHCP Discover message sent using a broadcast address?",
+  "answer_options": [
+    "To test multicast routing before address assignment",
+    "To find and register the nearest DNS server",
+    "Because the client has no usable IP or gateway info yet",
+    "To avoid IP address duplication"
+  ],
+  "correct_answer": [
+    "Because the client has no usable IP or gateway info yet"
+  ],
+  "explanation": "Clients use broadcast for Discover since they lack an IP address or route to the DHCP server at that stage.",
+  "tags": [
+    "broadcast",
+    "DHCP",
+    "discover",
+    "DORA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

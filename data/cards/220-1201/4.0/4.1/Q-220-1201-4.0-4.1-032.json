@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is having sufficient RAM critical for running multiple virtual machines?",
+  "answer_options": [
+    "RAM allows faster CPU virtualization",
+    "Each VM uses its own portion of system memory",
+    "RAM automatically reallocates based on demand",
+    "RAM reduces the need for virtualization technology"
+  ],
+  "correct_answer": [
+    "Each VM uses its own portion of system memory"
+  ],
+  "explanation": "Each virtual machine requires dedicated RAM to operate, so total memory needs scale with the number of VMs.",
+  "tags": [
+    "RAM allocation",
+    "memory requirements"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

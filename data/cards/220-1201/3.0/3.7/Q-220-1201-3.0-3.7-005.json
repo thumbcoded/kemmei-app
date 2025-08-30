@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason a multi-function device might require a phone line connection?",
+  "answer_options": [
+    "For printing over the internet",
+    "For scanning documents to email",
+    "To support fax capabilities",
+    "To update device firmware"
+  ],
+  "correct_answer": [
+    "To support fax capabilities"
+  ],
+  "explanation": "Fax functions on MFDs rely on analog phone lines to send and receive documents.",
+  "tags": [
+    "fax"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a newer AMD CPU be incompatible with an older AM4 motherboard even if the socket type matches?",
+  "answer_options": [
+    "AM4 sockets only support DDR4 memory",
+    "AM4 sockets have a limited lifespan",
+    "BIOS firmware may not support newer CPUs",
+    "The CPU pins are too short for older boards"
+  ],
+  "correct_answer": [
+    "BIOS firmware may not support newer CPUs"
+  ],
+  "explanation": "Even if the socket type matches, a motherboard may require a BIOS update to support newer CPU models.",
+  "tags": [
+    "AMD socket",
+    "CPU socket type"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

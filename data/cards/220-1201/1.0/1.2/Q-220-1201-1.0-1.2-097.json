@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What wireless technology is most commonly used to connect a Personal Area Network (PAN)?",
+  "answer_options": [
+    "Wi-Fi",
+    "Bluetooth",
+    "NFC",
+    "Cellular"
+  ],
+  "correct_answer": [
+    "Bluetooth"
+  ],
+  "explanation": "Bluetooth is the primary wireless technology used to create Personal Area Networks (PANs), connecting devices like phones, headsets, and keyboards over short distances.",
+  "tags": [
+    "Bluetooth",
+    "PAN",
+    "personal area network",
+    "wireless"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

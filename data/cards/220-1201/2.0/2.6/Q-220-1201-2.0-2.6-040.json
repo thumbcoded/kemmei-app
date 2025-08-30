@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How many usable host IPs are available in a /26 subnet?",
+  "answer_options": [
+    "62",
+    "64",
+    "30",
+    "126"
+  ],
+  "correct_answer": [
+    "62"
+  ],
+  "explanation": "/26 subnet has 64 total IPs (2⁶), with 2 reserved for network and broadcast. That leaves 62 usable.",
+  "tags": [
+    "subnet mask",
+    "host count"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

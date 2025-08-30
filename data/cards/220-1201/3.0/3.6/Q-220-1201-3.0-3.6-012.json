@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a potential consequence of working on a PSU while it is connected to a live ground loop?",
+  "answer_options": [
+    "The PSU voltage will self-regulate",
+    "The power supply will disable itself",
+    "A differential voltage could create a shock hazard",
+    "It accelerates capacitor degradation"
+  ],
+  "correct_answer": [
+    "A differential voltage could create a shock hazard"
+  ],
+  "explanation": "Live ground loops can create voltage differences across connected equipment, leading to unexpected current paths through the body.",
+  "tags": [
+    "ground wire safety"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the 'NVMe' interface provide to storage devices?",
+  "answer_options": [
+    "Wireless connection",
+    "USB compatibility",
+    "High-speed access over PCIe",
+    "Extra power for optical drives"
+  ],
+  "correct_answer": [
+    "High-speed access over PCIe"
+  ],
+  "explanation": "NVMe (Non-Volatile Memory Express) allows SSDs to communicate over PCIe for very fast data transfer speeds.",
+  "tags": [
+    "NVMe SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

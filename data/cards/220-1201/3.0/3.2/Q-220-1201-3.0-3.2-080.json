@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two statements accurately describe DOCSIS and its use in copper-based networks? (Select two)",
+  "answer_options": [
+    "DOCSIS is used to deliver Ethernet directly over fiber lines",
+    "DOCSIS modems require F connectors and coaxial cable",
+    "DOCSIS supports high-speed data over cable TV infrastructure",
+    "DOCSIS is limited to use with RJ45 connectors only",
+    "DOCSIS requires analog telephone line filtering"
+  ],
+  "correct_answer": [
+    "DOCSIS modems require F connectors and coaxial cable",
+    "DOCSIS supports high-speed data over cable TV infrastructure"
+  ],
+  "explanation": "DOCSIS enables cable modems to transmit data over coaxial cable using F connectors, leveraging the cable TV network for broadband internet.",
+  "tags": [
+    "DOCSIS",
+    "F connector",
+    "coaxial cable",
+    "cable modem"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the term 'resolution' refer to in display specifications?",
+  "answer_options": [
+    "The weight of the monitor",
+    "The number of pixels on the screen",
+    "The color depth of an image",
+    "The power efficiency rating"
+  ],
+  "correct_answer": [
+    "The number of pixels on the screen"
+  ],
+  "explanation": "Resolution describes how many horizontal and vertical pixels make up the display image, affecting its clarity.",
+  "tags": [
+    "resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

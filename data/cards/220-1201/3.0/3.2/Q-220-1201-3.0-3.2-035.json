@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two features are associated with Thunderbolt when used over USB-C? (Select two)",
+  "answer_options": [
+    "Up to 5 Gbps throughput",
+    "Reversible connector design",
+    "Support for dual 4K displays",
+    "Exclusive use of analog signals",
+    "Uses DB15 connector layout"
+  ],
+  "correct_answer": [
+    "Reversible connector design",
+    "Support for dual 4K displays"
+  ],
+  "explanation": "Thunderbolt over USB-C is reversible and supports high bandwidth for dual 4K displays or 40 Gbps total throughput.",
+  "tags": [
+    "Thunderbolt",
+    "USB-C"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

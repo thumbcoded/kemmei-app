@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a correct series of DDR memory types, from oldest to newest?",
+  "answer_options": [
+    "DDR4, DDR3, DDR2, DDR",
+    "DDR, DDR2, DDR3, DDR4",
+    "DDR2, DDR, DDR4, DDR3",
+    "DDR5, DDR4, DDR3, DDR"
+  ],
+  "correct_answer": [
+    "DDR, DDR2, DDR3, DDR4"
+  ],
+  "explanation": "The correct chronological progression of DDR memory generations is DDR → DDR2 → DDR3 → DDR4 → DDR5.",
+  "tags": [
+    "DDR",
+    "DDR2",
+    "DDR3",
+    "DDR4"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

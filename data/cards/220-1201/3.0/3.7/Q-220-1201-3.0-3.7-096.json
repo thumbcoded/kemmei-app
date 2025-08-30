@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid scan destinations on modern MFDs? (Select all that apply)",
+  "answer_options": [
+    "Scan to SMB",
+    "Scan to email",
+    "Scan to cloud",
+    "Scan to firewall",
+    "Scan to GPU"
+  ],
+  "correct_answer": [
+    "Scan to SMB",
+    "Scan to email",
+    "Scan to cloud"
+  ],
+  "explanation": "SMB, email, and cloud are all supported scan destinations on most multi-function devices. 'Firewall' and 'GPU' are irrelevant.",
+  "tags": [
+    "scan to SMB",
+    "scan to email",
+    "scan to cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

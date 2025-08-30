@@ -1,0 +1,871 @@
+0:02
+you'll often hear cloud computing
+0:03
+described as a server that's simply
+0:06
+hosted somewhere else but in reality
+0:09
+cloud computing provides extensive
+0:11
+functionality and we'll talk about some
+0:13
+of those advantages in this video today
+0:16
+it certainly allows us to take the
+0:17
+applications and services that normally
+0:20
+we would host in our own data center and
+0:22
+host those services anywhere we'd like
+0:25
+in the world one interesting
+0:26
+characteristic of cloud computing is
+0:28
+that these services are located at many
+0:30
+public cloud service providers which
+0:33
+means we have effectively as much CPU
+0:36
+drive space and network as we could
+0:38
+possibly want to use another powerful
+0:41
+characteristic of cloud computing is
+0:43
+that you can deploy an entire
+0:45
+application instance anywhere you'd like
+0:47
+at any time by simply pressing a button
+0:50
+this is very different than the old days
+0:52
+of physical data centers where you had
+0:54
+to purchase a server wait for that
+0:56
+purchase to arrive unbox the server put
+0:59
+it into a rack turn it on install the
+1:02
+operating system and the application and
+1:04
+finally connect it to a network just to
+1:07
+be able to use that app with cloud
+1:09
+computing all of this is done in a
+1:11
+matter of moments and you can deploy as
+1:13
+much or as little of this as you need
+1:16
+and of course as the demand for that app
+1:18
+tends to decrease over time you can
+1:21
+remove those resources from the cloud at
+1:23
+any moment many of these public clouds
+1:26
+are located in key geographical areas
+1:29
+around the world that means that you can
+1:31
+deploy your app to where it makes the
+1:33
+most sense if more people would use this
+1:35
+app in Europe then you may want to use a
+1:37
+Europebased cloud service provider if
+1:40
+more of your customers are in the United
+1:42
+States you may want to have some
+1:44
+US-based cloud services there the cloud
+1:47
+is also about efficiency if you only
+1:49
+have a particular application that you
+1:51
+need during particular times of the year
+1:54
+you can simply spin up those application
+1:56
+instances use that application and when
+1:58
+you're done you can turn off those
+2:00
+particular instances this means that you
+2:03
+now have more financial control over how
+2:05
+this application is deployed and you
+2:07
+don't have to put up a lot of money
+2:09
+upfront just to buy all of this
+2:11
+infrastructure instead you simply pay
+2:13
+over time by using the
+2:15
+cloud when most people think about the
+2:17
+cloud they probably think about a public
+2:20
+cloud these would be the cloud
+2:21
+infrastructures provided by Microsoft
+2:24
+Amazon Rackspace and many other cloud
+2:26
+providers we call these public clouds
+2:29
+because you're able to access these
+2:30
+clouds publicly from anywhere you happen
+2:33
+to be on the internet a private cloud is
+2:36
+a cloud infrastructure that you are
+2:38
+running in your own private data center
+2:40
+you would need to purchase all of the
+2:42
+equipment and storage required to build
+2:44
+that cloud but once that's in place in
+2:46
+your own infrastructure you can deploy
+2:49
+new applications use the capabilities of
+2:51
+these cloud-based infrastructures but
+2:53
+keep all of that information within your
+2:55
+control in your private data center many
+2:58
+organizations use a combination of both
+3:01
+of these they might have a private cloud
+3:03
+that they're running their own internal
+3:05
+and private apps on and they might also
+3:07
+have a public cloud that they use for
+3:10
+deployment and access by other folks on
+3:12
+the internet both of these are very
+3:14
+common implementations and in many
+3:16
+organizations you will see both of these
+3:18
+used
+3:19
+simultaneously the idea of purchasing
+3:22
+your own cloud and deploying it in your
+3:24
+own data center requires a bit of a cash
+3:26
+outlay so some organizations will
+3:28
+partner with other organizations that
+3:30
+provide a similar set of services and
+3:33
+build their own cloud that they can
+3:35
+share amongst all of them this means
+3:37
+that these smaller organizations can
+3:39
+still take advantage of the technologies
+3:41
+that cloud provides but it doesn't
+3:43
+require that enormous cash outlay to
+3:46
+begin
+3:47
+with not every cloud implementation is
+3:50
+designed in exactly the same way there
+3:52
+are a number of different implementation
+3:54
+models that you might find one of these
+3:57
+is infrastructure as a service or AAS
+4:01
+you might also see this referred to as
+4:03
+hardware as a service or HASS you can
+4:06
+think of this as renting time on a piece
+4:08
+of hardware that's somewhere in a cloud
+4:11
+infrastructure this means that the cloud
+4:13
+provider can provide you with a CPU and
+4:16
+storage space but you would still be
+4:18
+responsible for installing operating
+4:20
+systems maintaining the operating system
+4:22
+and keeping it up to date and
+4:24
+maintaining the security of the
+4:25
+application the cloud provider certainly
+4:28
+has access to the hardware that you're
+4:30
+using but all of that data that you're
+4:32
+storing would be within your control and
+4:35
+your control only this gives you some
+4:37
+additional security over other types of
+4:39
+cloud deployment models but it also
+4:42
+requires a lot more work to be able to
+4:44
+manage and maintain the system one
+4:47
+common use of an infrastructure as a
+4:49
+service deployment would be with
+4:51
+something like a web service provider
+4:53
+for example if you're on professor
+4:55
+messor.com right now you're using a
+4:57
+cloud-based server that was deployed in
+4:59
+an infrastructure as a service model i
+5:02
+simply rent time on those systems but
+5:04
+I'm responsible for maintaining the
+5:06
+operating system the applications and
+5:08
+the
+5:09
+data infrastructure as a service has a
+5:12
+significant management overhead
+5:14
+associated with it on the other side of
+5:16
+the spectrum would be software as a
+5:19
+service or SAS software as a service is
+5:22
+ondemand software you simply use your
+5:24
+username and password you log into a
+5:27
+system usually with a web-based front
+5:28
+end and you're able to take advantage of
+5:31
+that particular application you don't
+5:33
+have to do any type of management of the
+5:35
+application there's no operating system
+5:37
+updates you don't have to manage any
+5:39
+software applications or code and you
+5:42
+don't even have to worry about where the
+5:43
+data happens to be all of these
+5:46
+requirements are managed by the cloud
+5:47
+service provider through the software as
+5:50
+a service deployment model this also
+5:52
+means you don't need a big development
+5:54
+team to be able to write any
+5:55
+applications because the application has
+5:58
+already been written for you with
+5:59
+software as a service you would simply
+6:02
+log in and use that application and if
+6:04
+there's any updates that need to be made
+6:06
+to that application they are made by the
+6:09
+application provider themselves a good
+6:11
+example of a software as a service would
+6:13
+be things like Google Mail or Microsoft
+6:16
+365 where you don't have to build the
+6:18
+Google Mail infrastructure you simply
+6:20
+use your username and password and
+6:22
+you're able to send and receive
+6:24
+emails a deployment model that's in the
+6:27
+middle ground between infrastructure as
+6:29
+a service and software as a service is
+6:32
+one we refer to as platform as a service
+6:35
+or pass platform as a service doesn't
+6:38
+require you to maintain any operating
+6:40
+systems and you don't have to have your
+6:42
+own data center but you do have to work
+6:44
+on building the application that will
+6:46
+run on this particular platform this is
+6:49
+an interesting hybrid between the
+6:51
+software as a service model and the
+6:53
+infrastructure as a service model
+6:55
+because you still have to write the
+6:57
+application but the platform that you're
+6:59
+using to write and to run the software
+7:02
+is all operating on the platform used by
+7:04
+the platform as a service provider you
+7:07
+can think of piecing together different
+7:09
+modules of an application in the same
+7:11
+way that you might piece together
+7:13
+different types of building blocks you
+7:15
+determine how these building blocks are
+7:17
+arranged and ultimately what these
+7:19
+building blocks will provide for you but
+7:21
+it's your responsibility to put all of
+7:23
+these blocks together in a way that
+7:24
+makes sense for you and only you will
+7:27
+have access to this application because
+7:29
+you built it as part of this platform as
+7:31
+a service infrastructure there are many
+7:34
+different platform as a service
+7:36
+providers that you could choose from on
+7:37
+the internet one of the more popular
+7:39
+past providers is from Salesforce.com
+7:42
+many people know Salesforce as a
+7:45
+software as a service provider where you
+7:47
+simply log in and use their platform but
+7:49
+they also have an extensive development
+7:51
+platform that you're able to build your
+7:53
+own application to work exactly the way
+7:55
+you'd like and that particular arm of
+7:58
+Salesforce.com operates as platform as a
+8:01
+service
+8:02
+many public cloud providers will provide
+8:05
+you with a responsibility matrix so that
+8:07
+you know exactly what parts of this
+8:09
+service are managed by the cloud
+8:11
+provider and what parts of this service
+8:13
+are the responsibility of you the
+8:15
+customer for example if you're building
+8:17
+out your own cloud services or doing
+8:19
+everything on your own premises
+8:22
+effectively everything is your
+8:23
+responsibility you would need to be
+8:25
+responsible for the data the
+8:27
+infrastructure the applications that
+8:29
+you're building the network connectivity
+8:31
+the operating systems themselves and the
+8:34
+physical platform itself software as a
+8:37
+service is one where the provider is
+8:39
+managing a very large amount of that
+8:41
+infrastructure all the way from the
+8:43
+physical data center up through the
+8:44
+application itself you as the customer
+8:47
+may want to provide some additional
+8:49
+identity and directory infrastructure
+8:50
+for authentication you might want to
+8:52
+have your own accounts configured within
+8:55
+this software as a service platform and
+8:57
+you'll need to provide the computers the
+8:59
+tablets or the phones that will be used
+9:01
+to connect to this SAS provider with
+9:04
+platform as a service you as the
+9:06
+customer will be responsible for writing
+9:08
+your own applications the pass provider
+9:10
+will provide you with the platform and
+9:12
+you the customer will begin writing the
+9:14
+applications that will run on this
+9:16
+platform and with infrastructure as a
+9:19
+service the provider commonly provides
+9:21
+the data center the network connectivity
+9:23
+and the hardware for the CPU and the
+9:25
+storage you as the customer might have
+9:28
+the option for installing your own
+9:29
+operating system and as the customer you
+9:31
+will be responsible for everything else
+9:34
+that is being used on that cloud
+9:36
+deployment option
+
+0:02
+many organizations will build their own
+0:04
+private cloud they have their own data
+0:06
+center that they manage themselves they
+0:08
+will purchase their own equipment and
+0:10
+their own storage and they will install
+0:12
+and maintain everything themselves
+0:15
+sometimes you'll see this referred to as
+0:17
+an internal cloud or a private cloud all
+0:20
+of those resources in their private
+0:22
+cloud are dedicated for their use only
+0:25
+no one else will be using any of the
+0:27
+resources that they have acquired and
+0:29
+that they maintain in their own internal
+0:32
+cloud infrastructure there's obviously a
+0:34
+significant cash outlay to be able to
+0:36
+purchase all of this equipment initially
+0:38
+and install it into your data center but
+0:41
+once everything's in place you no longer
+0:43
+have those pay as you go or metered
+0:46
+costs associated with a cloud
+0:48
+infrastructure you can use as much of
+0:50
+your private cloud as you would like and
+0:52
+there's no additional cloud costs
+0:54
+associated with that some organizations
+0:57
+prefer not owning any equipment or
+1:00
+maintaining any data center and instead
+1:02
+will use a cloud that was created by
+1:04
+others in this case it would be an
+1:06
+external cloud or what we often refer to
+1:08
+as a public cloud so if you are using
+1:11
+public cloud services on Amazon on
+1:14
+Rackspace on Microsoft then all of those
+1:17
+cloud services would be considered a
+1:19
+public cloud there are many other
+1:21
+customers that are deploying their own
+1:23
+cloud-based services so both you and
+1:26
+those other customers are all sharing
+1:28
+the same resources to be able to deploy
+1:31
+all of those cloud-based technologies
+1:33
+obviously in these public clouds one
+1:35
+customer is not able to see any data
+1:37
+from another customer but all of you
+1:39
+could be using the same storage drives
+1:42
+the same CPUs and the same network as
+1:44
+every other customer in that public
+1:46
+cloud and although you didn't have to
+1:48
+pay for any additional costs up front to
+1:50
+put together this cloud you still have
+1:53
+to pay for the resources that you're
+1:55
+using some cloud providers charge you a
+1:57
+fixed rate per month or they might
+1:59
+charge as you go in more of a metered
+2:01
+pricing so your organization will need
+2:04
+to determine if a private cloud might be
+2:06
+something worth investing in or if a
+2:08
+public cloud might be a better
+2:10
+option for many organizations costs are
+2:13
+certainly an important consideration and
+2:15
+with cloud services you could be build
+2:18
+differently depending on the cloud
+2:20
+provider and the service that you're
+2:21
+using you may find that some of your
+2:23
+cloud services are build back to you
+2:26
+using metered utilization this means
+2:28
+that you as the customer are paying for
+2:30
+how much of these resources you are
+2:32
+using so if you're paying to have
+2:34
+traffic uploaded to you inside of this
+2:37
+cloud all of that traffic would be
+2:39
+ingress traffic and there may be a cost
+2:41
+associated with every bite that you
+2:43
+would transfer of that ingress traffic
+2:46
+there's probably also a cost to store
+2:48
+the data on the storage drives of that
+2:50
+cloud-based service and if customers are
+2:52
+downloading information from your cloud
+2:54
+services then you are sending that
+2:56
+information to the user and all of that
+2:58
+information would be priced on the
+3:01
+egress traffic costs and if customers
+3:03
+are downloading information from your
+3:05
+cloud services then you are sending all
+3:07
+of that traffic out or it would be
+3:09
+egress traffic and there might be a
+3:12
+different cost for egress traffic versus
+3:15
+ingress traffic at the end of the month
+3:17
+all of these costs are added up and they
+3:19
+provide you with an invoice of what you
+3:21
+would need to pay for that month if you
+3:23
+have a very busy month then you probably
+3:25
+are paying more than if it's a slower
+3:27
+month because it is a metered
+3:29
+utilization or based on how much you're
+3:32
+using on the consumer side we tend to
+3:35
+see a lot of cloud-based services priced
+3:37
+on a non-metered basis this means that
+3:40
+it is a fixed price for a certain amount
+3:43
+of resources and those services
+3:45
+generally charge you based on the
+3:47
+maximum amount of storage that you could
+3:49
+use for example you might pay a certain
+3:51
+amount for 2 GB of storage in the cloud
+3:54
+and no matter how much you upload or how
+3:56
+much you download you're always paying
+3:58
+the same amount every month for that
+4:00
+maximum block of storage
+4:03
+one of the most useful characteristics
+4:04
+of cloud computing is the ability to
+4:07
+scale up or scale down at any time this
+4:10
+means as customers or applications
+4:12
+become more active you can scale up your
+4:14
+infrastructure to be able to handle that
+4:16
+load and perhaps at different times of
+4:19
+the year when things get a little bit
+4:20
+slower you can scale down your
+4:23
+infrastructure so you're only paying for
+4:25
+what you need and of course you're able
+4:27
+to make these changes at any time and
+4:30
+very often automatically so it would not
+4:32
+be unusual for you to push a button and
+4:35
+instantly deploy a new application
+4:37
+instance to be able to handle the
+4:39
+additional load we refer to this ability
+4:41
+to instantly scale up or scale down
+4:44
+based on the load as
+4:46
+elasticity another very appealing
+4:48
+characteristic of cloud technologies is
+4:51
+that it always seems to be available
+4:53
+this ability to maintain uptime and
+4:55
+availability is an important
+4:56
+characteristic for any infrastructure
+4:59
+but with cloud-based technologies there
+5:01
+are many redundancies in place across
+5:03
+many different data centers this means
+5:05
+if one data center is having problems
+5:07
+with a particular drive array or with a
+5:09
+network connection that other parts of
+5:11
+that infrastructure can pick up the load
+5:13
+and in very extreme cases some of these
+5:16
+cloud providers will have completely
+5:18
+separate data centers and they can move
+5:20
+everyone from one data center to the
+5:22
+other to maintain that
+5:24
+uptime the cloud also allows us to
+5:27
+appear to be everywhere all at once this
+5:30
+means that we can have a database that
+5:32
+we're maintaining here in North America
+5:35
+and be able to have that information
+5:37
+automatically duplicated to other data
+5:39
+centers around the world sometimes this
+5:41
+file synchronization is something built
+5:43
+into the application and is maintained
+5:45
+by the customer but some cloud
+5:47
+infrastructures will automatically
+5:49
+synchronize this data behind the scenes
+5:51
+especially if they need to move you from
+5:53
+one data center to another and to be
+5:56
+able to get the best efficiency for the
+5:58
+infrastructure that's been installed in
+6:00
+these cloud-based data centers we need
+6:02
+to have many customers using all of this
+6:05
+equipment all the time we refer to this
+6:07
+characteristic as multi-tenency that
+6:10
+means there are many different tenants
+6:12
+effectively living in that cloud
+6:14
+infrastructure and they are all working
+6:16
+and operating simultaneously across all
+6:19
+of those resources there are obviously
+6:22
+technologies processes and procedures in
+6:25
+place to maintain separation between all
+6:27
+of these different customers but by
+6:29
+having all of these customers use all of
+6:31
+these cloud-based services
+6:33
+simultaneously the cloud provider can
+6:35
+provide an efficiency in technology and
+6:37
+an efficiency in cost

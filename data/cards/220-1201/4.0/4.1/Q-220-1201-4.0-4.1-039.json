@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why are Intel VT and AMD-V important in virtualization planning?",
+  "answer_options": [
+    "They reduce total power consumption",
+    "They eliminate the need for hypervisors",
+    "They enable hardware-level virtualization support for hypervisors",
+    "They improve network transfer rates between VMs"
+  ],
+  "correct_answer": [
+    "They enable hardware-level virtualization support for hypervisors"
+  ],
+  "explanation": "VT (Intel) and AMD-V allow hypervisors to more efficiently virtualize hardware resources.",
+  "tags": [
+    "virtualization technology",
+    "AMD-V",
+    "VT"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

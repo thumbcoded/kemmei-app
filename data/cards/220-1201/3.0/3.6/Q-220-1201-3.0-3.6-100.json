@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-100",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is installing a power supply that includes both permanently attached cables and modular connectors. What type of unit is this?",
+  "answer_options": [
+    "Fixed",
+    "Dual-rail",
+    "Hybrid",
+    "Auto-switching"
+  ],
+  "correct_answer": [
+    "Hybrid"
+  ],
+  "explanation": "Hybrid power supplies combine fixed and modular cables, providing flexibility while still keeping costs lower than fully modular units.",
+  "tags": [
+    "hybrid power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

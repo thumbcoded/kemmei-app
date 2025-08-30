@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is another name for a private cloud?",
+  "answer_options": [
+    "External cloud",
+    "Shared cloud",
+    "Internal cloud",
+    "Open cloud"
+  ],
+  "correct_answer": [
+    "Internal cloud"
+  ],
+  "explanation": "Private cloud is also known as an internal cloud because it is hosted and maintained internally by the organization.",
+  "tags": [
+    "internal cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

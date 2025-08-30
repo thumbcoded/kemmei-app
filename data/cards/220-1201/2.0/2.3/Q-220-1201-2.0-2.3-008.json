@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best describes how DNS is organized?",
+  "answer_options": [
+    "It is a flat database managed by local ISPs only",
+    "It is a peer-to-peer architecture distributed across VPNs",
+    "It is a hierarchical, distributed platform of servers",
+    "It is a centralized list stored in global DNS headquarters"
+  ],
+  "correct_answer": [
+    "It is a hierarchical, distributed platform of servers"
+  ],
+  "explanation": "DNS is a distributed hierarchical system with root servers, top-level domain servers, and authoritative servers for specific domains.",
+  "tags": [
+    "distributed platform",
+    "domain name system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

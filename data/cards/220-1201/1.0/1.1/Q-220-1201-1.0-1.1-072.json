@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main benefit of using cloning software when upgrading a laptop’s storage drive?",
+  "answer_options": [
+    "It installs the operating system from scratch",
+    "It creates a backup of documents only",
+    "It duplicates the entire contents of the original drive",
+    "It checks hardware compatibility for new drives"
+  ],
+  "correct_answer": [
+    "It duplicates the entire contents of the original drive"
+  ],
+  "explanation": "Cloning software creates an exact copy of the existing drive, including OS, files, and configurations.",
+  "tags": [
+    "cloning software",
+    "drive migration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "From the user's perspective, what is one key reason desktop virtualization can feel identical to a local OS?",
+  "answer_options": [
+    "Because the virtualization layer masks application performance",
+    "Because the user interface is cached locally",
+    "Because modern bandwidth supports near-instant feedback for screen updates and input",
+    "Because the OS is actually running on the client device"
+  ],
+  "correct_answer": [
+    "Because modern bandwidth supports near-instant feedback for screen updates and input"
+  ],
+  "explanation": "A smooth user experience is possible because of low-latency screen updates and high-speed input/output handling.",
+  "tags": [
+    "virtual desktop",
+    "network communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

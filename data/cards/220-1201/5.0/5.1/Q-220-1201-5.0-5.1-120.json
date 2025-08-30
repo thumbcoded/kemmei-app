@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-120",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is 'click of death' and what does it indicate about storage drive health?",
+  "answer_options": [
+    "Normal operating sound indicating the drive is working properly",
+    "Repetitive clicking sounds from hard drive indicating severe mechanical failure",
+    "Network connectivity sound when accessing remote storage devices",
+    "Power supply noise that affects all connected storage devices"
+  ],
+  "correct_answer": [
+    "Repetitive clicking sounds from hard drive indicating severe mechanical failure"
+  ],
+  "explanation": "The 'click of death' refers to repetitive clicking sounds from a hard drive, indicating severe mechanical failure. It occurs when read/write heads repeatedly try to access data but fail, often due to head crash, platter damage, or actuator failure. This usually means imminent drive failure and immediate data backup is critical before complete failure occurs.",
+  "tags": [
+    "click of death"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

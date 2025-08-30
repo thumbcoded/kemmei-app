@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-129",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why do different laptop manufacturers have very different processes for managing and troubleshooting their systems?",
+  "answer_options": [
+    "They use different operating systems",
+    "They have different serviceability designs and form factor limitations",
+    "They require different types of power supplies",
+    "They use proprietary diagnostic protocols"
+  ],
+  "correct_answer": [
+    "They have different serviceability designs and form factor limitations"
+  ],
+  "explanation": "Different laptop manufacturers engineer their systems with varying levels of serviceability, from easily accessible components to sealed designs, leading to different troubleshooting approaches.",
+  "tags": [
+    "manufacturer differences",
+    "serviceability",
+    "form factor limitations"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

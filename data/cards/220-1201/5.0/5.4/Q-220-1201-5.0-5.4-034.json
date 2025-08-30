@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid causes of erratic cursor movement on a touch-enabled device? (Select all that apply)",
+  "answer_options": [
+    "Digitizer issues",
+    "Phantom touches",
+    "Touch calibration",
+    "Low screen brightness",
+    "Erratic cursor"
+  ],
+  "correct_answer": [
+    "Digitizer issues",
+    "Phantom touches",
+    "Touch calibration",
+    "Erratic cursor"
+  ],
+  "explanation": "Erratic touch behavior can stem from faulty digitizers, phantom inputs, miscalibration, or broader input instability.",
+  "tags": [
+    "digitizer issues",
+    "phantom touches",
+    "touch calibration",
+    "erratic cursor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

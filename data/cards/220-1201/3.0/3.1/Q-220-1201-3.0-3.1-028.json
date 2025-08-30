@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common use case for OLED technology?",
+  "answer_options": [
+    "Large CRT TVs",
+    "Mechanical keyboards",
+    "Mobile device displays",
+    "Laser printers"
+  ],
+  "correct_answer": [
+    "Mobile device displays"
+  ],
+  "explanation": "Due to their thinness, vibrant colors, and low power usage for dark scenes, OLEDs are widely used in mobile phones and tablets.",
+  "tags": [
+    "mobile devices"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

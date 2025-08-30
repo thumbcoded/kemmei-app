@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What role do root servers play in the DNS hierarchy?",
+  "answer_options": [
+    "They store all website content",
+    "They forward DNS queries to top-level domain servers",
+    "They translate MAC addresses to IP addresses",
+    "They connect users directly to web applications"
+  ],
+  "correct_answer": [
+    "They forward DNS queries to top-level domain servers"
+  ],
+  "explanation": "Root servers are the highest level in the DNS hierarchy and direct queries to the appropriate TLD servers.",
+  "tags": [
+    "root server",
+    "hierarchy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

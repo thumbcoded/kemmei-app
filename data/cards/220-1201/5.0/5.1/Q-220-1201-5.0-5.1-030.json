@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the message 'Cannot read from source disc' typically indicate?",
+  "answer_options": [
+    "The operating system needs an update",
+    "A read error is occurring on the storage device",
+    "There is a missing video driver",
+    "The system is in sleep mode"
+  ],
+  "correct_answer": [
+    "A read error is occurring on the storage device"
+  ],
+  "explanation": "This message indicates that the system is unable to read data from the storage device, often due to drive or disc failure.",
+  "tags": [
+    "cannot read from source disc"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

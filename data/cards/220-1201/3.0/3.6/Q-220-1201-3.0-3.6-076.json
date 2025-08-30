@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to consult power supply documentation before connecting cables to components?",
+  "answer_options": [
+    "It tells you how to update the BIOS.",
+    "Different connectors may look similar but have different pinouts.",
+    "It helps configure the operating system's power plan.",
+    "It prevents electrostatic discharge (ESD)."
+  ],
+  "correct_answer": [
+    "Different connectors may look similar but have different pinouts."
+  ],
+  "explanation": "Power supply documentation provides crucial information about voltage outputs and connector layouts, which is vital to avoid incorrect connections that could damage hardware.",
+  "tags": [
+    "power supply documentation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

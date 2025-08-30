@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens to unused wattage in an oversized power supply?",
+  "answer_options": [
+    "It causes system instability",
+    "It generates excess heat automatically",
+    "It remains available without affecting system performance",
+    "It increases the voltage delivered to the CPU"
+  ],
+  "correct_answer": [
+    "It remains available without affecting system performance"
+  ],
+  "explanation": "Extra wattage does not affect performance unless components demand it; however, an inefficient unit may waste more energy as heat.",
+  "tags": [
+    "power supply wattage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

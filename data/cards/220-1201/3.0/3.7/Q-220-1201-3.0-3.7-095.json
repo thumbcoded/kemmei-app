@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two scan features would allow a user to directly access their scanned files from the internet? (Select two)",
+  "answer_options": [
+    "Scan to folder",
+    "Scan to SMB",
+    "Scan to cloud",
+    "Scan to email",
+    "Scan to fax"
+  ],
+  "correct_answer": [
+    "Scan to cloud",
+    "Scan to email"
+  ],
+  "explanation": "Both scan to cloud (e.g., Google Drive) and scan to email allow access to scanned files over the internet from remote locations.",
+  "tags": [
+    "scan to cloud",
+    "scan to email"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

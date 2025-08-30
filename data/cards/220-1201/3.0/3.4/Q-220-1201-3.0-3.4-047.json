@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which SSD feature helps extend the lifespan of NAND cells by distributing writes evenly across the drive?",
+  "answer_options": [
+    "Caching",
+    "TRIM support",
+    "Wear leveling",
+    "Overprovisioning"
+  ],
+  "correct_answer": [
+    "Wear leveling"
+  ],
+  "explanation": "Wear leveling spreads write and erase cycles evenly among NAND cells to prevent premature failure of heavily used blocks.",
+  "tags": [
+    "SSD",
+    "solid-state drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

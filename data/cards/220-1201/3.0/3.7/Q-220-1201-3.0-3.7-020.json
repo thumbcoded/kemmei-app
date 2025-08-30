@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are potential consequences of installing an incorrect printer driver? (Select all that apply)",
+  "answer_options": [
+    "Missing functionality such as scanning or duplexing",
+    "Print jobs failing to render properly",
+    "Improved print resolution and color quality",
+    "Device crashes or operating system errors"
+  ],
+  "correct_answer": [
+    "Missing functionality such as scanning or duplexing",
+    "Print jobs failing to render properly",
+    "Device crashes or operating system errors"
+  ],
+  "explanation": "Incorrect drivers may prevent access to full device features, lead to rendering issues, or even cause instability at the OS level.",
+  "tags": [
+    "printer driver"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

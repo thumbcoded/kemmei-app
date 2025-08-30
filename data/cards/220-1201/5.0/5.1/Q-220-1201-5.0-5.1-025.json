@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario best describes a 'temporary software problem' that might cause a system freeze?",
+  "answer_options": [
+    "System freeze during antivirus full scan that resolves after reboot",
+    "Repeated crash at POST every time the system powers on",
+    "BSOD during startup linked to faulty RAM",
+    "Black screen with no signal when GPU is unplugged"
+  ],
+  "correct_answer": [
+    "System freeze during antivirus full scan that resolves after reboot"
+  ],
+  "explanation": "Some system freezes are due to temporary software hangs or overloaded processes, not hardware failure.",
+  "tags": [
+    "system freeze",
+    "temporary software problem"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

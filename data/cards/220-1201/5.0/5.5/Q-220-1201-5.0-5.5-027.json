@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In an office with frequent signal drops, the admin sets each AP to a fixed channel. What mistake might this introduce if done without proper survey?",
+  "answer_options": [
+    "Improved signal strength across floors",
+    "Reduced DHCP scope efficiency",
+    "Increased risk of overlapping channel interference",
+    "Inability to access the access point settings"
+  ],
+  "correct_answer": [
+    "Increased risk of overlapping channel interference"
+  ],
+  "explanation": "Manual channel setting without a proper site survey can lead to neighboring APs using the same or overlapping channels.",
+  "tags": [
+    "manual channel setting",
+    "channel interference",
+    "access point configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

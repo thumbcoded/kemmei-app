@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO features of inkjet printing contribute to producing high-quality photo output?",
+  "answer_options": [
+    "High toner capacity",
+    "Tiny droplets",
+    "Ink dispersion",
+    "Paper fusing",
+    "Electrostatic charging"
+  ],
+  "correct_answer": [
+    "Tiny droplets",
+    "Ink dispersion"
+  ],
+  "explanation": "The fine ink droplet control and ink dispersion method enable sharp and detailed photo prints.",
+  "tags": [
+    "tiny droplets",
+    "ink dispersion"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

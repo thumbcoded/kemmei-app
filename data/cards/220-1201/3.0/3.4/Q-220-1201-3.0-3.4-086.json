@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of drive reads data using a laser instead of magnetic platters?",
+  "answer_options": [
+    "Hard disk drive",
+    "Solid-state drive",
+    "Optical drive",
+    "Flash drive"
+  ],
+  "correct_answer": [
+    "Optical drive"
+  ],
+  "explanation": "An optical drive reads and writes data using a laser beam, unlike magnetic or solid-state storage devices.",
+  "tags": [
+    "optical drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

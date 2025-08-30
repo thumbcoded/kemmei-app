@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician wants to use their smartphone to share its mobile connection with a tablet using USB. What feature should they use?",
+  "answer_options": [
+    "NFC pairing",
+    "Tethering",
+    "Hotspot",
+    "SIM unlocking"
+  ],
+  "correct_answer": [
+    "Tethering"
+  ],
+  "explanation": "USB tethering allows a direct connection between phone and tablet to share the mobile internet connection.",
+  "tags": [
+    "tethering"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

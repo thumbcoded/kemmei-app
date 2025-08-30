@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes MAC spoofing?",
+  "answer_options": [
+    "Encrypting MAC addresses for secure transmission",
+    "Changing the MAC address in a NIC’s firmware permanently",
+    "Temporarily altering a MAC address to impersonate another device",
+    "Mapping a MAC address to a hostname using DNS"
+  ],
+  "correct_answer": [
+    "Temporarily altering a MAC address to impersonate another device"
+  ],
+  "explanation": "MAC spoofing is the practice of temporarily changing a network interface’s MAC address to bypass filters or impersonate another device.",
+  "tags": [
+    "MAC address",
+    "spoofing",
+    "NIC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

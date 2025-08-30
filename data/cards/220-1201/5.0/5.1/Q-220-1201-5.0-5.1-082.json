@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What symptom is most likely to result from a motherboard short caused by an extra standoff under the board?",
+  "answer_options": [
+    "Stuck keys on keyboard",
+    "No power-on or POST activity",
+    "Low resolution display",
+    "Frequent application errors"
+  ],
+  "correct_answer": [
+    "No power-on or POST activity"
+  ],
+  "explanation": "A short circuit caused by improper mounting can prevent the motherboard from powering on or completing POST.",
+  "tags": [
+    "motherboard failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

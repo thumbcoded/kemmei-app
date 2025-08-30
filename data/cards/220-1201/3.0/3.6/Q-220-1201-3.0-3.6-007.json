@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two actions are recommended before working inside a powered-down desktop computer? (Select two)",
+  "answer_options": [
+    "Connect an antistatic strap to an outlet ground",
+    "Ensure the power supply is unplugged",
+    "Discharge the capacitors manually if possible",
+    "Remove the CPU cooler first",
+    "Flip the PSU switch to the ON position"
+  ],
+  "correct_answer": [
+    "Ensure the power supply is unplugged",
+    "Discharge the capacitors manually if possible"
+  ],
+  "explanation": "Unplugging is essential, and discharging residual voltage increases technician safety.",
+  "tags": [
+    "disconnect power source",
+    "capacitor discharge"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

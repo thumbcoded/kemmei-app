@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What are examples of embedded systems in everyday environments?",
+  "answer_options": [
+    "Desktop computers and laptops",
+    "Fire alarm systems and time clock systems",
+    "Network servers and routers",
+    "Smartphones and tablets"
+  ],
+  "correct_answer": [
+    "Fire alarm systems and time clock systems"
+  ],
+  "explanation": "Embedded systems are purpose-built devices like fire alarm systems and time clock systems where users interact with the device but don't have direct access to the underlying operating system.",
+  "tags": [
+    "embedded system",
+    "purpose-built device",
+    "smart devices"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

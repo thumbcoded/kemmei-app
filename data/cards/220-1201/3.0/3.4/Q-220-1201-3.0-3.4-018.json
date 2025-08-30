@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How does a 7200 RPM drive typically compare to a 5400 RPM drive?",
+  "answer_options": [
+    "It consumes less power",
+    "It is slower in data transfer",
+    "It is quieter",
+    "It provides faster performance"
+  ],
+  "correct_answer": [
+    "It provides faster performance"
+  ],
+  "explanation": "A 7200 RPM drive spins faster than a 5400 RPM drive, allowing quicker data access and better overall performance.",
+  "tags": [
+    "7200 RPM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

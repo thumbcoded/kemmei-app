@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A user prints a clean printer test page and OS test page, but the print quality test shows faded output and alignment issues. Which two components are most likely involved? (Select two)",
+  "answer_options": [
+    "Print driver",
+    "Toner cartridge",
+    "Printer memory",
+    "Transfer roller or drum",
+    "Print spooler"
+  ],
+  "correct_answer": [
+    "Toner cartridge",
+    "Transfer roller or drum"
+  ],
+  "explanation": "If internal diagnostics detect quality problems, it's likely hardware-related, such as toner or drum, even if software-originated prints look clean.",
+  "tags": [
+    "print quality test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

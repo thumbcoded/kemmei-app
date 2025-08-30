@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician adds multiple PCIe cards, resulting in system crashes during high I/O loads. Which motherboard component should be inspected first?",
+  "answer_options": [
+    "Memory slots",
+    "Storage connectors",
+    "Power connectors",
+    "Expansion slots"
+  ],
+  "correct_answer": [
+    "Power connectors"
+  ],
+  "explanation": "Multiple expansion cards may exceed the power delivery limits if the board's connectors or PSU are insufficient.",
+  "tags": [
+    "power connectors",
+    "expansion slots"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

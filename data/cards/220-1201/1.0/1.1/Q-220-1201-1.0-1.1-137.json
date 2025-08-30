@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-137",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason why form factor limitations affect laptop troubleshooting procedures?",
+  "answer_options": [
+    "Form factor determines the operating system compatibility",
+    "Smaller form factors require specialized tools and techniques",
+    "Form factor affects the laptop's processing capabilities",
+    "Different form factors use incompatible connection standards"
+  ],
+  "correct_answer": [
+    "Smaller form factors require specialized tools and techniques"
+  ],
+  "explanation": "Form factor limitations in laptops often require specialized tools, techniques, and extra care during troubleshooting due to restricted access and miniaturized components.",
+  "tags": [
+    "form factor limitations",
+    "laptop troubleshooting",
+    "small components"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

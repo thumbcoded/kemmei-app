@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-105",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A user needs hot-swappable external storage. Which TWO interfaces support this requirement? (Select two)",
+  "answer_options": [
+    "M.2 NVMe",
+    "USB 3.0",
+    "eSATA",
+    "SATA III"
+  ],
+  "correct_answer": [
+    "USB 3.0",
+    "eSATA"
+  ],
+  "explanation": "USB and eSATA interfaces support hot-swapping, allowing drives to be added or removed without powering down the system.",
+  "tags": [
+    "eSATA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

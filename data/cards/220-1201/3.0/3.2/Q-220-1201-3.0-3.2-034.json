@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which video interfaces can be supported over a USB-C connector with the correct cable and device support?",
+  "answer_options": [
+    "Only DisplayPort",
+    "HDMI, DisplayPort, and MHL",
+    "Only HDMI",
+    "Only Thunderbolt"
+  ],
+  "correct_answer": [
+    "HDMI, DisplayPort, and MHL"
+  ],
+  "explanation": "USB-C supports various video signals depending on the device, including HDMI, DisplayPort, and Mobile High-Definition Link (MHL).",
+  "tags": [
+    "HDMI",
+    "DisplayPort",
+    "MHL",
+    "video over USB-C"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

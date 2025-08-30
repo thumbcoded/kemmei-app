@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Pinging which address would best test whether your device can reach the internet?",
+  "answer_options": [
+    "192.168.1.1",
+    "10.0.0.1",
+    "8.8.8.8",
+    "127.0.0.1"
+  ],
+  "correct_answer": [
+    "8.8.8.8"
+  ],
+  "explanation": "Public DNS addresses like 8.8.8.8 are commonly used to test external network connectivity.",
+  "tags": [
+    "ping external address",
+    "quad 8",
+    "8.8.8.8"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

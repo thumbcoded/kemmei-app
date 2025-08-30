@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements about embedded systems are true? (Select all that apply)",
+  "answer_options": [
+    "They often lack traditional OS interfaces",
+    "They require frequent OS updates and user logins",
+    "They are designed for general-purpose computing",
+    "They may include proprietary firmware with limited user configurability",
+    "They often operate independently once powered and configured"
+  ],
+  "correct_answer": [
+    "They often lack traditional OS interfaces",
+    "They may include proprietary firmware with limited user configurability",
+    "They often operate independently once powered and configured"
+  ],
+  "explanation": "Embedded systems are self-contained, purpose-built, and usually not administered like general-purpose OS devices.",
+  "tags": [
+    "embedded system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

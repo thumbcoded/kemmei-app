@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-107",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which components are essential for enterprise log management infrastructure? (Select all that apply)",
+  "answer_options": [
+    "Central SIEM system",
+    "Adequate long-term storage space",
+    "Syslog protocol support",
+    "Correlation capabilities",
+    "Time synchronization across devices"
+  ],
+  "correct_answer": [
+    "Central SIEM system",
+    "Adequate long-term storage space",
+    "Syslog protocol support",
+    "Correlation capabilities",
+    "Time synchronization across devices"
+  ],
+  "explanation": "Enterprise log management requires a central SIEM, sufficient storage for long-term retention, Syslog for consolidation, correlation capabilities for analysis, and synchronized time for accurate log correlation.",
+  "tags": [
+    "SIEM",
+    "Syslog",
+    "log consolidation",
+    "correlation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one common use for a TXT record in a DNS configuration?",
+  "answer_options": [
+    "Mapping a domain to an IP address",
+    "Redirecting web traffic to another server",
+    "Verifying domain ownership with a third-party service",
+    "Specifying the email address for the DNS administrator"
+  ],
+  "correct_answer": [
+    "Verifying domain ownership with a third-party service"
+  ],
+  "explanation": "TXT records often store verification strings used by email or cloud providers to confirm DNS control.",
+  "tags": [
+    "TXT record",
+    "text record"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool is used on Windows to manually query a DNS server?",
+  "answer_options": [
+    "dig",
+    "ipconfig",
+    "tracert",
+    "nslookup"
+  ],
+  "correct_answer": [
+    "nslookup"
+  ],
+  "explanation": "`nslookup` is the built-in Windows utility to perform manual DNS lookups.",
+  "tags": [
+    "nslookup",
+    "DNS query",
+    "command line tools"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

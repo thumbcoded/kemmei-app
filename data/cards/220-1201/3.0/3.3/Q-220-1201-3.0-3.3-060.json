@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How can quad-channel memory architecture improve performance compared to dual-channel?",
+  "answer_options": [
+    "By enabling error correction code (ECC) on all modules",
+    "By doubling memory size per channel automatically",
+    "By allowing simultaneous data paths to four memory modules",
+    "By supporting different memory speeds in each channel"
+  ],
+  "correct_answer": [
+    "By allowing simultaneous data paths to four memory modules"
+  ],
+  "explanation": "Quad-channel memory increases total memory throughput by using four separate communication paths to transfer data in parallel.",
+  "tags": [
+    "multi-channel memory",
+    "memory throughput"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

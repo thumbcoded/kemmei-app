@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the result of a single drive failure in a RAID 5 array?",
+  "answer_options": [
+    "Total data loss",
+    "System unbootable",
+    "RAID failure",
+    "Array degraded"
+  ],
+  "correct_answer": [
+    "Array degraded"
+  ],
+  "explanation": "RAID 5 can survive one drive failure. The array becomes degraded but remains operational.",
+  "tags": [
+    "RAID 5 striping with parity",
+    "array degraded"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which voltage output is typically used for powering PCIe devices like graphics cards?",
+  "answer_options": [
+    "5 volts",
+    "3.3 volts",
+    "1.5 volts",
+    "12 volts"
+  ],
+  "correct_answer": [
+    "12 volts"
+  ],
+  "explanation": "High-power components such as GPUs use 12V output from the power supply.",
+  "tags": [
+    "power supply output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

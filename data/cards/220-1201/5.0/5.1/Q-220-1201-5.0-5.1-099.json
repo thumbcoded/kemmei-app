@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-099",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician observes frequent spikes in CPU usage, even when idle. Which is the best first step in diagnosing the issue?",
+  "answer_options": [
+    "Disable Windows Firewall",
+    "Check the Task Manager for background processes",
+    "Replace the thermal paste on the CPU",
+    "Defragment the hard drive"
+  ],
+  "correct_answer": [
+    "Check the Task Manager for background processes"
+  ],
+  "explanation": "Task Manager allows immediate visibility into which processes are consuming CPU resources. It's the fastest way to narrow down the issue.",
+  "tags": [
+    "task manager",
+    "CPU utilization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

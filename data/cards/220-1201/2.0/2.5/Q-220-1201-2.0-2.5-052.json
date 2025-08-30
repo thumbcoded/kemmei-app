@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is an access list in the context of a firewall?",
+  "answer_options": [
+    "A set of rules controlling allowed or blocked traffic",
+    "A list of connected users",
+    "A log of wireless connections",
+    "A type of VLAN configuration"
+  ],
+  "correct_answer": [
+    "A set of rules controlling allowed or blocked traffic"
+  ],
+  "explanation": "Access lists are sets of rules that define which network traffic is allowed or denied through a firewall.",
+  "tags": [
+    "firewall",
+    "access list"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

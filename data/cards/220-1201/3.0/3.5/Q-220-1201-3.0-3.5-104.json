@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are potential limitations when installing M.2 NVMe drives? (Select all that apply)",
+  "answer_options": [
+    "Thermal throttling under sustained load",
+    "Incompatibility with SATA-only M.2 slots",
+    "Form factor length may exceed motherboard support",
+    "Drive must be formatted before physical installation"
+  ],
+  "correct_answer": [
+    "Thermal throttling under sustained load",
+    "Incompatibility with SATA-only M.2 slots",
+    "Form factor length may exceed motherboard support"
+  ],
+  "explanation": "M.2 NVMe drives may overheat, may not work in SATA-only slots, and must physically fit in the slot length. Formatting is done after installation.",
+  "tags": [
+    "M.2 connector",
+    "NVMe SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

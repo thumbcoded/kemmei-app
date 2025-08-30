@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two print settings should be checked when text appears grainy or uneven? (Select two)",
+  "answer_options": [
+    "Color calibration",
+    "Duplex flip setting",
+    "Resolution (DPI)",
+    "Media tray selection",
+    "Paper size"
+  ],
+  "correct_answer": [
+    "Color calibration",
+    "Resolution (DPI)"
+  ],
+  "explanation": "Low DPI settings and poor color calibration can lead to grainy or uneven print quality, especially for images or colored text.",
+  "tags": [
+    "print quality",
+    "resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

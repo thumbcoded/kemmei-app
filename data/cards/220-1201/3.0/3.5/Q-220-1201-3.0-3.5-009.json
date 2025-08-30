@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which motherboard form factor is commonly used in rack-mounted servers and allows for extended length and additional memory banks?",
+  "answer_options": [
+    "ATX",
+    "microATX",
+    "EATX",
+    "mini-ITX"
+  ],
+  "correct_answer": [
+    "EATX"
+  ],
+  "explanation": "Extended ATX (EATX) boards are used in servers for their extra length and support for more memory or CPUs.",
+  "tags": [
+    "server motherboards",
+    "form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

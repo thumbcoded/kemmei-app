@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What are Liquid Contact Indicators (LCI) used for in mobile devices?",
+  "answer_options": [
+    "To measure battery temperature",
+    "To detect when the device has been exposed to liquid",
+    "To monitor screen brightness levels",
+    "To track data usage"
+  ],
+  "correct_answer": [
+    "To detect when the device has been exposed to liquid"
+  ],
+  "explanation": "Liquid Contact Indicators (LCI) are small indicators that change color when exposed to liquid. They are often located in charging ports or SIM ports and are checked during repairs to determine liquid damage.",
+  "tags": [
+    "water damage",
+    "corrosion damage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is pixel shift technology and why do monitors implement it?",
+  "answer_options": [
+    "A feature that increases monitor resolution by interpolating additional pixels",
+    "A slight automatic movement of the image to prevent burn-in by distributing wear across pixels",
+    "A manual adjustment that allows users to align the image on their screen",
+    "A power-saving feature that dims unused pixels to extend monitor life"
+  ],
+  "correct_answer": [
+    "A slight automatic movement of the image to prevent burn-in by distributing wear across pixels"
+  ],
+  "explanation": "Pixel shift automatically moves the displayed image by a few pixels periodically when the monitor detects static content. This prevents burn-in/image sticking by ensuring no single pixel displays the same information continuously. The movement is subtle enough to be unnoticed by users.",
+  "tags": [
+    "burn-in",
+    "image sticking"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

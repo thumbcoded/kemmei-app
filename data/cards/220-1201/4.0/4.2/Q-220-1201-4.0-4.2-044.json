@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which deployment scenario would most likely use IaaS?",
+  "answer_options": [
+    "A team accessing Microsoft 365 through web browsers",
+    "A business using Salesforce CRM out-of-the-box",
+    "An e-commerce company configuring Linux servers on AWS",
+    "A school using Google Docs to collaborate"
+  ],
+  "correct_answer": [
+    "An e-commerce company configuring Linux servers on AWS"
+  ],
+  "explanation": "Provisioning custom Linux servers on cloud infrastructure is a textbook example of an IaaS implementation.",
+  "tags": [
+    "IaaS",
+    "hardware access",
+    "web service provider"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

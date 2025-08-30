@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which RAID level offers no redundancy and results in total data loss if one drive fails?",
+  "answer_options": [
+    "RAID 1 mirroring",
+    "RAID 5 striping with parity",
+    "RAID 0 striping",
+    "RAID 6 double parity"
+  ],
+  "correct_answer": [
+    "RAID 0 striping"
+  ],
+  "explanation": "RAID 0 (striping) offers no redundancy; any single drive failure causes the entire array to fail.",
+  "tags": [
+    "RAID 0 striping"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

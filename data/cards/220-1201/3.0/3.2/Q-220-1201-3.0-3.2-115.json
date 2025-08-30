@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why did regulatory bodies like the EU push for Apple to adopt USB-C in place of Lightning?",
+  "answer_options": [
+    "To phase out fiber optic chargers",
+    "To promote proprietary accessories for all manufacturers",
+    "To standardize charging and reduce electronic waste",
+    "To limit Apple’s market access to tablets only"
+  ],
+  "correct_answer": [
+    "To standardize charging and reduce electronic waste"
+  ],
+  "explanation": "Regulators have pushed for USB-C adoption to simplify device charging, improve consumer convenience, and reduce e-waste from redundant cables.",
+  "tags": [
+    "USB-C transition"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool provides insight into both wired and wireless interface activity and connectivity status?",
+  "answer_options": [
+    "Control Panel Date/Time settings",
+    "System Restore utility",
+    "Network adapter status viewer",
+    "User Account Manager"
+  ],
+  "correct_answer": [
+    "Network adapter status viewer"
+  ],
+  "explanation": "This tool shows real-time connectivity, signal quality, and enables adapter diagnostics.",
+  "tags": [
+    "network adapter status",
+    "network interface testing",
+    "connection status"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

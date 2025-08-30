@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-122",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a key benefit of Serial Attached SCSI (SAS) over SATA?",
+  "answer_options": [
+    "Lower cost",
+    "Higher throughput",
+    "Wider compatibility",
+    "Easier installation"
+  ],
+  "correct_answer": [
+    "Higher throughput"
+  ],
+  "explanation": "SAS drives offer significantly higher data transfer speeds compared to SATA, making them ideal for high-performance environments.",
+  "tags": [
+    "SAS",
+    "SATA comparison"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

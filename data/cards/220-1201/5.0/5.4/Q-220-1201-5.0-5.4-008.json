@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a recommended diagnostic step if a user suspects their battery is degrading over time?",
+  "answer_options": [
+    "Factory reset the device",
+    "Charge it using a different outlet",
+    "View battery statistics in the operating system settings",
+    "Enable airplane mode and monitor signal"
+  ],
+  "correct_answer": [
+    "View battery statistics in the operating system settings"
+  ],
+  "explanation": "iOS, iPadOS, and Android provide detailed battery usage stats and health reports to diagnose degradation.",
+  "tags": [
+    "battery statistics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

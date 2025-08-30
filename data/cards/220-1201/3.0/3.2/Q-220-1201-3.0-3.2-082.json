@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool is used to push wires into a punchdown block?",
+  "answer_options": [
+    "Wire stripper",
+    "Cable crimper",
+    "Punchdown tool",
+    "Loopback tester"
+  ],
+  "correct_answer": [
+    "Punchdown tool"
+  ],
+  "explanation": "A punchdown tool is specifically designed to seat wires into a punchdown block by applying force and trimming the excess wire.",
+  "tags": [
+    "punchdown tool"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

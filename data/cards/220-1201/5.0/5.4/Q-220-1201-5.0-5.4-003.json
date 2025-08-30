@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting provides information about battery usage and health on mobile devices?",
+  "answer_options": [
+    "Display settings",
+    "Battery settings",
+    "App permissions",
+    "Security settings"
+  ],
+  "correct_answer": [
+    "Battery settings"
+  ],
+  "explanation": "Battery settings in iOS, iPadOS, and Android provide usage statistics and health indicators.",
+  "tags": [
+    "Android battery settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which DNS record type defines an alias for another domain name?",
+  "answer_options": [
+    "AAAA record",
+    "CNAME record",
+    "MX record",
+    "TXT record"
+  ],
+  "correct_answer": [
+    "CNAME record"
+  ],
+  "explanation": "CNAME (canonical name) records are used to define aliases that point to another domain name.",
+  "tags": [
+    "CNAME",
+    "canonical name"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

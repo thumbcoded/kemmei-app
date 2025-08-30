@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of user authentication on a shared printer?",
+  "answer_options": [
+    "To allow wireless printing",
+    "To secure physical access to the printer hardware",
+    "To control who can print or manage printer settings",
+    "To ensure fast print speed"
+  ],
+  "correct_answer": [
+    "To control who can print or manage printer settings"
+  ],
+  "explanation": "User authentication ensures that only authorized users can print or access printer management functions.",
+  "tags": [
+    "user authentication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

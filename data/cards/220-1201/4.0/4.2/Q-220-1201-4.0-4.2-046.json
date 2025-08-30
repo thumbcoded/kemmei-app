@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary benefit of Software as a Service (SaaS)?",
+  "answer_options": [
+    "The customer manages the operating system",
+    "Users must write their own application code",
+    "The application is fully managed by the provider",
+    "All servers must be installed manually by the customer"
+  ],
+  "correct_answer": [
+    "The application is fully managed by the provider"
+  ],
+  "explanation": "SaaS provides access to fully managed applications, requiring no OS or software maintenance by the user.",
+  "tags": [
+    "SaaS",
+    "application management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

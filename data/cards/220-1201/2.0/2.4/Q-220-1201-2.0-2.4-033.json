@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are characteristics of DNS? (Select all that apply)",
+  "answer_options": [
+    "Hierarchical structure",
+    "Flat-file database",
+    "Distributed database",
+    "Supports IP resolution",
+    "Requires VPN tunneling"
+  ],
+  "correct_answer": [
+    "Hierarchical structure",
+    "Distributed database",
+    "Supports IP resolution"
+  ],
+  "explanation": "DNS is a hierarchical, distributed system used for resolving domain names to IP addresses.",
+  "tags": [
+    "hierarchy",
+    "distributed database",
+    "IP resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

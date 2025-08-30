@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is troubleshooting a system that emits a continuous short beep on power-up and displays no video. No POST screen appears. Which of the following is the most likely root cause?",
+  "answer_options": [
+    "The CMOS battery has failed",
+    "The BIOS boot sequence is misconfigured",
+    "The CPU is not seated properly or has failed",
+    "The operating system is corrupted"
+  ],
+  "correct_answer": [
+    "The CPU is not seated properly or has failed"
+  ],
+  "explanation": "Continuous beep codes often indicate CPU-related issues. A misaligned or failed CPU can prevent POST from initializing any video output.",
+  "tags": [
+    "continuous beep code"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

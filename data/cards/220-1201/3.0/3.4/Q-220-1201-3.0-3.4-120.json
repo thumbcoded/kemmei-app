@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-120",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You want to build a storage array that survives the simultaneous failure of any two drives. Which RAID type should you choose?",
+  "answer_options": [
+    "RAID 1",
+    "RAID 5",
+    "RAID 6",
+    "RAID 0+1"
+  ],
+  "correct_answer": [
+    "RAID 6"
+  ],
+  "explanation": "Only RAID 6 explicitly supports dual-drive failure tolerance using two separate parity blocks.",
+  "tags": [
+    "RAID 6"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid reasons to use a packet capture tool during network troubleshooting? (Select all that apply)",
+  "answer_options": [
+    "To verify IP addressing on a client",
+    "To analyze network latency patterns",
+    "To detect protocol-level communication issues",
+    "To confirm static routing table entries",
+    "To inspect dropped or malformed packets"
+  ],
+  "correct_answer": [
+    "To analyze network latency patterns",
+    "To detect protocol-level communication issues",
+    "To inspect dropped or malformed packets"
+  ],
+  "explanation": "Packet capture tools provide low-level visibility into traffic flow, errors, and protocol behaviors not visible through basic diagnostics.",
+  "tags": [
+    "packet visibility",
+    "network analysis",
+    "network diagnostics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

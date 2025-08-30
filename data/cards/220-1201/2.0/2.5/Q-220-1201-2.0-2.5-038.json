@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main function of a patch panel in a wiring closet?",
+  "answer_options": [
+    "To organize and connect permanent cable runs to switch interfaces",
+    "To assign IP addresses to network devices",
+    "To act as a wireless access point",
+    "To monitor network traffic"
+  ],
+  "correct_answer": [
+    "To organize and connect permanent cable runs to switch interfaces"
+  ],
+  "explanation": "A patch panel allows permanent cabling from desks to be easily connected and managed from a central location.",
+  "tags": [
+    "patch panel",
+    "switch interface",
+    "wiring closet"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

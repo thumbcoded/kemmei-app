@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What happens during the writing phase of laser printing?",
+  "answer_options": [
+    "The drum is cleaned",
+    "Toner is applied to the drum",
+    "The laser neutralizes specific areas on the drum",
+    "The toner image is transferred to paper"
+  ],
+  "correct_answer": [
+    "The laser neutralizes specific areas on the drum"
+  ],
+  "explanation": "During the writing step, the laser discharges specific areas of the drum, creating an electrostatic image.",
+  "tags": [
+    "writing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

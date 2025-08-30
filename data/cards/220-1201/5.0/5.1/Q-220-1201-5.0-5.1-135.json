@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-135",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What display hardware components should you check during video troubleshooting?",
+  "answer_options": [
+    "Only the monitor screen itself without considering other components",
+    "Graphics card, monitor, cables, power supplies, motherboard video outputs, adapters",
+    "Display hardware problems are always software-related issues",
+    "Only internal components without considering external display connections"
+  ],
+  "correct_answer": [
+    "Graphics card, monitor, cables, power supplies, motherboard video outputs, adapters"
+  ],
+  "explanation": "Display hardware includes: graphics card (dedicated or integrated), monitor, video cables (VGA, DVI, HDMI, DisplayPort), power supplies (for both PC and monitor), motherboard video outputs, port adapters, and cable converters. Systematic testing of each component helps isolate hardware failures from software issues.",
+  "tags": [
+    "display hardware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

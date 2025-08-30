@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How does virtual desktop infrastructure (VDI) reduce hardware requirements on the client side?",
+  "answer_options": [
+    "By allocating physical GPU cores to every client",
+    "By running all software and storage remotely",
+    "By transferring entire VMs to client disks",
+    "By bypassing the operating system entirely"
+  ],
+  "correct_answer": [
+    "By running all software and storage remotely"
+  ],
+  "explanation": "In VDI, the desktop environment is hosted on a server, so client devices only need minimal resources.",
+  "tags": [
+    "VDI",
+    "virtualized client"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

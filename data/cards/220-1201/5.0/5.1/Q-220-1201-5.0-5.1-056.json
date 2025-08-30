@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is used to measure voltages provided by a power supply?",
+  "answer_options": [
+    "Logic analyzer",
+    "Multimeter",
+    "Ohmmeter",
+    "Oscilloscope"
+  ],
+  "correct_answer": [
+    "Multimeter"
+  ],
+  "explanation": "A multimeter can safely check for expected voltages (12V, 5V, 3.3V) from the power supply during hardware diagnostics.",
+  "tags": [
+    "multimeter testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

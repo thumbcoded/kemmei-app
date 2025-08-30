@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a printer driver on a 64-bit version of Windows but the printer fails to work correctly. What is the most likely cause?",
+  "answer_options": [
+    "The driver is unsigned",
+    "The driver is designed for a 32-bit operating system",
+    "The printer is connected via USB-C",
+    "The driver is using too much memory"
+  ],
+  "correct_answer": [
+    "The driver is designed for a 32-bit operating system"
+  ],
+  "explanation": "A mismatch between the OS architecture and the driver (e.g., using a 32-bit driver on a 64-bit OS) can cause the printer to fail or behave unpredictably.",
+  "tags": [
+    "32-bit driver",
+    "64-bit driver"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

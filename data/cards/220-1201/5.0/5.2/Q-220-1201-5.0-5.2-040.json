@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician suspects a storage issue is related to the motherboard. What is the most effective way to test this?",
+  "answer_options": [
+    "Reinstall the OS",
+    "Move the drive to another computer",
+    "Run a full defragmentation",
+    "Format the drive using diskpart"
+  ],
+  "correct_answer": [
+    "Move the drive to another computer"
+  ],
+  "explanation": "Testing the same drive in a different system helps isolate whether the issue lies with the drive or the original system's motherboard/SATA interface.",
+  "tags": [
+    "internal drive cables"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

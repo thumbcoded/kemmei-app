@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-121",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What constitutes a storage drive error and what are the common types you might encounter?",
+  "answer_options": [
+    "Only physical damage to the drive casing or connectors",
+    "Problems reading/writing data including bad sectors, file system corruption, connection errors",
+    "Exclusively software-related issues that don't affect hardware operation",
+    "Network delays when accessing cloud-based storage services"
+  ],
+  "correct_answer": [
+    "Problems reading/writing data including bad sectors, file system corruption, connection errors"
+  ],
+  "explanation": "Storage drive errors indicate problems reading/writing data. Common types: bad sectors (physical damage), file system corruption, connection errors, timeout errors, seek errors, and CRC errors. These manifest as slow performance, clicking sounds, files becoming inaccessible, or 'cannot read from source disc' messages. SMART monitoring helps detect these early.",
+  "tags": [
+    "storage drive error"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

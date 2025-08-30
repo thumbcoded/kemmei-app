@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is 'ingress' traffic in the context of cloud usage?",
+  "answer_options": [
+    "Traffic entering the user network from the cloud",
+    "Data stored temporarily in a CDN",
+    "Data uploaded to a cloud service",
+    "Internal replication within the cloud data center"
+  ],
+  "correct_answer": [
+    "Data uploaded to a cloud service"
+  ],
+  "explanation": "Ingress refers to data that is uploaded into the cloud by the user or application.",
+  "tags": [
+    "ingress traffic"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

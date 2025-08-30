@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why are Blu-ray discs able to store more data than CDs and DVDs?",
+  "answer_options": [
+    "They spin faster during reading",
+    "They use larger bumps for better reflectivity",
+    "They use a shorter wavelength laser allowing tighter track spacing",
+    "They are thicker and more durable"
+  ],
+  "correct_answer": [
+    "They use a shorter wavelength laser allowing tighter track spacing"
+  ],
+  "explanation": "Blu-ray uses a blue-violet laser (~405 nm) vs. the red laser used in CDs/DVDs, allowing more data to be packed per square millimeter.",
+  "tags": [
+    "Blu-ray"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

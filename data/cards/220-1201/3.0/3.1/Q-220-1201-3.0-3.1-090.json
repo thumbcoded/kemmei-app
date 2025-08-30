@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is likely to be replaced if a laptop with a fluorescent backlight has no display lighting?",
+  "answer_options": [
+    "RAM module",
+    "Fluorescent inverter",
+    "Hard drive",
+    "Cooling fan"
+  ],
+  "correct_answer": [
+    "Fluorescent inverter"
+  ],
+  "explanation": "Fluorescent backlights require an inverter to convert DC to the high-voltage AC needed by the bulb. A failed inverter often causes a black screen.",
+  "tags": [
+    "fluorescent inverter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

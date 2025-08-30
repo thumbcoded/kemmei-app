@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common aspect ratio used in modern displays?",
+  "answer_options": [
+    "4:3",
+    "5:4",
+    "16:9",
+    "3:2"
+  ],
+  "correct_answer": [
+    "16:9"
+  ],
+  "explanation": "The 16:9 aspect ratio is a widescreen format used in most modern TVs, monitors, and laptops.",
+  "tags": [
+    "aspect ratio",
+    "16:9"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

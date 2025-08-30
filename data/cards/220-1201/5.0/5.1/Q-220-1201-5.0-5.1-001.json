@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of the POST process during computer startup?",
+  "answer_options": [
+    "To install operating system updates",
+    "To test core hardware components",
+    "To launch user applications",
+    "To connect to a wireless network"
+  ],
+  "correct_answer": [
+    "To test core hardware components"
+  ],
+  "explanation": "The Power-On Self-Test (POST) verifies that essential hardware components like the CPU, memory, and video system are functioning before the system attempts to boot.",
+  "tags": [
+    "POST"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

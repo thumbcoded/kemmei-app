@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "When troubleshooting faded output, what kind of diagnostic is most appropriate to isolate print density or toner issues?",
+  "answer_options": [
+    "Network ping test",
+    "Print quality test",
+    "Driver reinstall",
+    "Memory self-test"
+  ],
+  "correct_answer": [
+    "Print quality test"
+  ],
+  "explanation": "A print quality test reveals issues with toner distribution, ink delivery, and image consistency.",
+  "tags": [
+    "print quality test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

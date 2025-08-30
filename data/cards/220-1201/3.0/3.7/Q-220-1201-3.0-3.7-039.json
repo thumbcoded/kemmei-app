@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which wireless technology allows a printer to connect directly to a wireless access point?",
+  "answer_options": [
+    "Bluetooth",
+    "802.11 ad hoc",
+    "802.11 infrastructure",
+    "USB-C"
+  ],
+  "correct_answer": [
+    "802.11 infrastructure"
+  ],
+  "explanation": "802.11 infrastructure mode allows a printer to connect through a wireless access point so it can be shared across the network.",
+  "tags": [
+    "802.11 wireless",
+    "infrastructure mode"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

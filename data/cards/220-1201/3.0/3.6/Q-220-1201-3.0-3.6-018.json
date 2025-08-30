@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens if you connect a power supply set to 120V input into a 230V outlet?",
+  "answer_options": [
+    "It runs at lower efficiency",
+    "The power supply shuts down automatically",
+    "The PSU becomes more energy efficient",
+    "It likely suffers catastrophic failure"
+  ],
+  "correct_answer": [
+    "It likely suffers catastrophic failure"
+  ],
+  "explanation": "Connecting a PSU configured for 120V to a 230V outlet can overload the components, often resulting in sparks, smoke, or permanent damage.",
+  "tags": [
+    "120 volts AC",
+    "230 volts AC",
+    "power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

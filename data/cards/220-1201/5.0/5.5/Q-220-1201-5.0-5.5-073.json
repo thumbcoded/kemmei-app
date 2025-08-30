@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company's VoIP system works well in the morning but becomes unusable during lunch hours. Traceroute shows increased latency at the ISP level. What is the most likely cause?",
+  "answer_options": [
+    "Equipment overheating during warmer hours",
+    "Network congestion during peak usage times",
+    "Scheduled maintenance by the ISP",
+    "Power fluctuations affecting network equipment"
+  ],
+  "correct_answer": [
+    "Network congestion during peak usage times"
+  ],
+  "explanation": "Increased latency at the ISP during specific times indicates network congestion when many users are active, affecting real-time applications like VoIP.",
+  "tags": [
+    "network monitoring",
+    "performance measurement",
+    "bandwidth monitoring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

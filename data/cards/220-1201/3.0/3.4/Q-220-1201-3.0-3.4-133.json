@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-133",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO advantages do SAS drives offer over SATA drives in enterprise environments? (Select two)",
+  "answer_options": [
+    "Lower latency and command queuing depth",
+    "Dual-port connectivity for redundancy",
+    "Lower cost per GB",
+    "Wider availability in consumer laptops",
+    "Support for higher RPM and faster sustained read/write"
+  ],
+  "correct_answer": [
+    "Dual-port connectivity for redundancy",
+    "Support for higher RPM and faster sustained read/write"
+  ],
+  "explanation": "SAS drives offer enterprise performance benefits like redundancy and higher sustained throughput, ideal for servers and data centers.",
+  "tags": [
+    "SAS",
+    "SATA comparison"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

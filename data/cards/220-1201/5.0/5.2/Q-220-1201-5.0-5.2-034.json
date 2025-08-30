@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which BIOS feature determines whether the system will try to boot from removable media before internal drives?",
+  "answer_options": [
+    "BIOS logs",
+    "Boot sequence",
+    "CPU multiplier",
+    "BIOS password"
+  ],
+  "correct_answer": [
+    "Boot sequence"
+  ],
+  "explanation": "The boot sequence defines the order of devices the BIOS attempts to boot from, including USB or SSDs.",
+  "tags": [
+    "boot sequence"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

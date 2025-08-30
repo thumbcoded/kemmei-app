@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does a successful printer self-test indicate?",
+  "answer_options": [
+    "Print driver is functioning correctly",
+    "Print spooler is operating properly",
+    "Printer hardware and internal software are functional",
+    "User permissions are configured"
+  ],
+  "correct_answer": [
+    "Printer hardware and internal software are functional"
+  ],
+  "explanation": "A self-test confirms the printer's onboard systems are functioning independently of the host system or drivers.",
+  "tags": [
+    "printer self test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

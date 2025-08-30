@@ -1,0 +1,663 @@
+{
+  "220-1201": {
+    "2.0": {
+      "2.1": {
+        "concepts": {
+          "Well-known ports and their purposes": {
+            "terms": [
+              "port number",
+              "port 20",
+              "port 21",
+              "port 22",
+              "port 23",
+              "port 25",
+              "port 53",
+              "port 80",
+              "port 110",
+              "port 143",
+              "port 443",
+              "port 3389",
+              "well-known port",
+              "application port",
+              "network service"
+            ]
+          },
+          "TCP characteristics": {
+            "terms": [
+              "transmission control protocol",
+              "TCP",
+              "connection-oriented",
+              "three-way handshake",
+              "ACK",
+              "SYN",
+              "reliable delivery",
+              "ordered data"
+            ]
+          },
+          "UDP characteristics": {
+            "terms": [
+              "user datagram protocol",
+              "UDP",
+              "connectionless",
+              "unreliable",
+              "fast delivery",
+              "low overhead",
+              "streaming",
+              "real-time traffic"
+            ]
+          },
+          "Protocol associations (by port)": {
+            "terms": [
+              "FTP",
+              "SSH",
+              "Telnet",
+              "SMTP",
+              "DNS",
+              "HTTP",
+              "POP3",
+              "IMAP",
+              "HTTPS",
+              "RDP",
+              "protocol",
+              "service",
+              "port mapping",
+              "port assignment"
+            ]
+          },
+          "Connection-oriented vs connectionless": {
+            "terms": [
+              "connection-oriented",
+              "connectionless",
+              "TCP vs UDP",
+              "reliable vs unreliable",
+              "streaming vs browsing",
+              "real-time application",
+              "error checking"
+            ]
+          },
+          "Practical use cases of TCP/UDP": {
+            "terms": [
+              "email",
+              "file transfer",
+              "web browsing",
+              "video streaming",
+              "VoIP",
+              "gaming",
+              "use case",
+              "network performance",
+              "application behavior"
+            ]
+          }
+        }
+      },
+      "2.2": {
+        "concepts": {
+          "Wi-Fi generations and standards": {
+            "terms": [
+              "802.11",
+              "Wi-Fi 5",
+              "Wi-Fi 6",
+              "Wi-Fi 6E",
+              "Wi-Fi 7",
+              "802.11ac",
+              "802.11ax",
+              "802.11be",
+              "wireless standards",
+              "naming conventions"
+            ]
+          },
+          "Wireless frequencies and bandwidths": {
+            "terms": [
+              "2.4 GHz",
+              "5 GHz",
+              "6 GHz",
+              "channel",
+              "bandwidth",
+              "20 MHz",
+              "40 MHz",
+              "80 MHz",
+              "160 MHz",
+              "spectrum",
+              "overlap"
+            ]
+          },
+          "Bluetooth technology": {
+            "terms": [
+              "Bluetooth",
+              "2.4 GHz",
+              "short range",
+              "personal devices",
+              "headsets",
+              "wireless audio",
+              "ISM band",
+              "unlicensed frequency"
+            ]
+          },
+          "RFID and NFC technologies": {
+            "terms": [
+              "RFID",
+              "radio frequency identification",
+              "NFC",
+              "near field communication",
+              "passive RFID",
+              "active RFID",
+              "tags",
+              "point-of-sale",
+              "device pairing"
+            ]
+          }
+        }
+      },
+      "2.3": {
+        "concepts": {
+          "DHCP operations": {
+            "terms": [
+              "DHCP",
+              "DORA",
+              "discover",
+              "offer",
+              "request",
+              "acknowledge",
+              "IP assignment",
+              "lease",
+              "reservation",
+              "scope"
+            ]
+          },
+          "DNS functions and features": {
+            "terms": [
+              "DNS",
+              "domain name system",
+              "IP resolution",
+              "FQDN",
+              "distributed database",
+              "resource records",
+              "A record",
+              "AAAA record",
+              "MX record",
+              "CNAME",
+              "TXT record"
+            ]
+          },
+          "DNS security and mail protections": {
+            "terms": [
+              "SPF",
+              "DKIM",
+              "DMARC",
+              "email verification",
+              "public key",
+              "digital signature",
+              "mail authentication",
+              "quarantine",
+              "spam policy",
+              "TXT record"
+            ]
+          }
+        }
+      },
+      "2.4": {
+        "concepts": {
+          "DNS hierarchy and structure": {
+            "terms": [
+              "DNS",
+              "domain name system",
+              "hierarchy",
+              "distributed database",
+              "root server",
+              "top level domain",
+              "gTLD",
+              "country code",
+              "FQDN",
+              "fully qualified domain name",
+              "IP resolution",
+              "subdomain"
+            ]
+          },
+          "DNS tools and utilities": {
+            "terms": [
+              "dig",
+              "nslookup",
+              "DNS query",
+              "DNS lookup",
+              "DNS server",
+              "DNS resolution",
+              "command line tools"
+            ]
+          },
+          "DNS record types": {
+            "terms": [
+              "resource record",
+              "RR",
+              "A record",
+              "AAAA record",
+              "address record",
+              "IPv4 address",
+              "IPv6 address",
+              "CNAME",
+              "canonical name",
+              "MX record",
+              "mail exchanger",
+              "TXT record",
+              "text record",
+              "TTL",
+              "time to live"
+            ]
+          },
+          "DNS security and email authentication": {
+            "terms": [
+              "DKIM",
+              "DomainKeys Identified Mail",
+              "SPF",
+              "Sender Policy Framework",
+              "DMARC",
+              "Domain-based Message Authentication",
+              "public key",
+              "private key",
+              "digital signature",
+              "email verification",
+              "mail authentication",
+              "spam policy",
+              "quarantine",
+              "email security"
+            ]
+          },
+          "DHCP operations and DORA process": {
+            "terms": [
+              "DHCP",
+              "Dynamic Host Configuration Protocol",
+              "DORA",
+              "discover",
+              "offer",
+              "request",
+              "acknowledge",
+              "IP assignment",
+              "automatic configuration",
+              "UDP port 67",
+              "UDP port 68",
+              "broadcast",
+              "lease",
+              "IP address lease"
+            ]
+          },
+          "DHCP scopes and configuration": {
+            "terms": [
+              "DHCP scope",
+              "IP pool",
+              "subnet mask",
+              "default gateway",
+              "DNS server",
+              "lease duration",
+              "excluded addresses",
+              "DHCP options",
+              "configuration parameters",
+              "static IP",
+              "dynamic IP"
+            ]
+          },
+          "DHCP reservations and static assignments": {
+            "terms": [
+              "DHCP reservation",
+              "static DHCP",
+              "IP reservation",
+              "MAC address",
+              "static assignment",
+              "reserved IP",
+              "MAC-based assignment",
+              "consistent IP"
+            ]
+          },
+          "LANs and VLANs": {
+            "terms": [
+              "LAN",
+              "local area network",
+              "broadcast domain",
+              "switch",
+              "VLAN",
+              "virtual local area network",
+              "logical separation",
+              "interface",
+              "segmentation",
+              "efficiency",
+              "VLAN ID",
+              "network isolation"
+            ]
+          },
+          "VPN concepts": {
+            "terms": [
+              "VPN",
+              "virtual private network",
+              "encryption",
+              "concentrator",
+              "client-to-site",
+              "site-to-site",
+              "tunnel",
+              "firewall",
+              "always-on VPN",
+              "encrypted channel",
+              "remote access"
+            ]
+          }
+        }
+      },
+      "2.5": {
+        "concepts": {
+          "Router functions and layer 3 switching": {
+            "terms": [
+              "router",
+              "layer 3",
+              "forwarding decision",
+              "IP address",
+              "routing table",
+              "layer 3 switch",
+              "network interconnection",
+              "subnet"
+            ]
+          },
+          "Switch types and capabilities": {
+            "terms": [
+              "switch",
+              "MAC address",
+              "ASIC",
+              "VLAN",
+              "managed switch",
+              "unmanaged switch",
+              "port mirroring",
+              "redundancy",
+              "SNMP"
+            ]
+          },
+          "Wireless access points and bridging": {
+            "terms": [
+              "access point",
+              "bridging",
+              "MAC address",
+              "wireless to wired",
+              "frame forwarding",
+              "SSID",
+              "network extender"
+            ]
+          },
+          "Patch panels and cable management": {
+            "terms": [
+              "patch panel",
+              "RJ45",
+              "punchdown",
+              "wiring closet",
+              "desk connection",
+              "static run",
+              "switch interface"
+            ]
+          },
+          "Firewalls and next-gen features": {
+            "terms": [
+              "firewall",
+              "port filtering",
+              "access list",
+              "next-generation firewall",
+              "application filter",
+              "proxy",
+              "VPN concentrator"
+            ]
+          },
+          "Power over Ethernet (PoE)": {
+            "terms": [
+              "PoE",
+              "PoE+",
+              "PoE++",
+              "in-span",
+              "mid-span",
+              "Ethernet power",
+              "injector",
+              "WAP",
+              "VoIP phone"
+            ]
+          },
+          "Cable and DSL modems": {
+            "terms": [
+              "cable modem",
+              "DSL",
+              "DOCSIS",
+              "broadband",
+              "RJ11",
+              "RJ45",
+              "coax",
+              "copper line",
+              "central office"
+            ]
+          },
+          "Optical terminals and demarc": {
+            "terms": [
+              "optical network terminal",
+              "ONT",
+              "fiber",
+              "demarcation point",
+              "ISP boundary",
+              "data port",
+              "RJ11",
+              "RJ45",
+              "F-connector"
+            ]
+          },
+          "NICs and MAC addresses": {
+            "terms": [
+              "network interface card",
+              "NIC",
+              "MAC address",
+              "expansion card",
+              "Ethernet",
+              "fiber NIC",
+              "multi-port"
+            ]
+          }
+        }
+      },
+      "2.6": {
+        "concepts": {
+          "IPv4 addressing basics": {
+            "terms": [
+              "IPv4",
+              "IP address",
+              "octet",
+              "binary",
+              "decimal",
+              "32-bit",
+              "public IP"
+            ]
+          },
+          "IPv6 features and format": {
+            "terms": [
+              "IPv6",
+              "hexadecimal",
+              "128-bit",
+              "colon notation",
+              "network prefix",
+              "host ID",
+              "DNS reliance",
+              "subnetting"
+            ]
+          },
+          "Subnet mask and gateway": {
+            "terms": [
+              "subnet mask",
+              "default gateway",
+              "local subnet",
+              "network boundary",
+              "manual IP config"
+            ]
+          },
+          "DHCP and static IPs": {
+            "terms": [
+              "DHCP",
+              "static IP",
+              "DHCP reservation",
+              "manual config",
+              "dynamic address",
+              "MAC-based assignment"
+            ]
+          },
+          "APIPA and link-local behavior": {
+            "terms": [
+              "APIPA",
+              "link-local",
+              "169.254",
+              "ARP check",
+              "self-assigned IP",
+              "DHCP failure",
+              "troubleshooting"
+            ]
+          }
+        }
+      },
+      "2.7": {
+        "concepts": {
+          "WAN connection types": {
+            "terms": [
+              "WAN",
+              "wide area network",
+              "long-distance",
+              "terrestrial network",
+              "satellite",
+              "non-terrestrial"
+            ]
+          },
+          "Fiber optic networking": {
+            "terms": [
+              "fiber",
+              "light transmission",
+              "long distance",
+              "high bandwidth",
+              "SONET",
+              "metro Ethernet",
+              "fiber to home"
+            ]
+          },
+          "Cable and DSL connectivity": {
+            "terms": [
+              "cable",
+              "DOCSIS",
+              "broadband",
+              "DSL",
+              "ADSL",
+              "RJ11",
+              "coax",
+              "frequency multiplexing"
+            ]
+          },
+          "Cellular internet and hotspots": {
+            "terms": [
+              "cellular",
+              "LTE",
+              "5G",
+              "tethering",
+              "hotspot",
+              "mobile network",
+              "carrier"
+            ]
+          },
+          "Wireless ISP and antennas": {
+            "terms": [
+              "WISP",
+              "antenna",
+              "line of sight",
+              "mesh",
+              "802.11",
+              "fixed wireless",
+              "outdoor unit"
+            ]
+          },
+          "PANs, LANs, WLANs, MANs, SANs": {
+            "terms": [
+              "PAN",
+              "LAN",
+              "WLAN",
+              "MAN",
+              "SAN",
+              "storage area network",
+              "metro area network",
+              "wireless LAN"
+            ]
+          }
+        }
+      },
+      "2.8": {
+        "concepts": {
+          "Cable crimping tools and materials": {
+            "terms": [
+              "crimper",
+              "RJ45",
+              "cable jacket",
+              "twisted pair",
+              "insulation",
+              "cutting tool",
+              "stripper"
+            ]
+          },
+          "Tone generator and probe": {
+            "terms": [
+              "tone generator",
+              "inductive probe",
+              "wire tracing",
+              "analog signal",
+              "tone",
+              "cable identification"
+            ]
+          },
+          "Wi-Fi and spectrum analyzers": {
+            "terms": [
+              "Wi-Fi analyzer",
+              "channel",
+              "signal strength",
+              "interference",
+              "spectrum analyzer",
+              "frequency scanner"
+            ]
+          },
+          "Cable testers and continuity": {
+            "terms": [
+              "cable tester",
+              "pinout",
+              "continuity",
+              "patch cable",
+              "wiring check",
+              "crossover",
+              "mismatch"
+            ]
+          },
+          "Loopback plugs": {
+            "terms": [
+              "loopback",
+              "interface test",
+              "physical layer",
+              "diagnostic mode",
+              "transmit",
+              "receive",
+              "matching data"
+            ]
+          },
+          "Taps and port mirroring": {
+            "terms": [
+              "tap",
+              "packet capture",
+              "mirror port",
+              "SPAN",
+              "protocol analyzer",
+              "port redirection",
+              "network monitor"
+            ]
+          },
+          "Punchdown blocks and organization": {
+            "terms": [
+              "punchdown",
+              "block",
+              "termination",
+              "cable management",
+              "twisted pair",
+              "organization",
+              "labeling"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

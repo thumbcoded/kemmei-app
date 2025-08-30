@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What condition is most likely if you see duplicate or shadowed images on laser printouts?",
+  "answer_options": [
+    "Paper jam",
+    "Ghosting",
+    "Garbled print",
+    "Staple jam"
+  ],
+  "correct_answer": [
+    "Ghosting"
+  ],
+  "explanation": "Ghosting is a print defect where faint copies of the image appear elsewhere on the page, often due to a dirty or malfunctioning drum.",
+  "tags": [
+    "print quality",
+    "ghosting",
+    "laser printer issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

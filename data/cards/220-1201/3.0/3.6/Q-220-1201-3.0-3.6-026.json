@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main purpose of dual-redundant hot-swappable power supplies in enterprise systems?",
+  "answer_options": [
+    "To increase overall wattage available",
+    "To reduce system heat output",
+    "To support faster boot times",
+    "To maintain uptime in case of PSU failure"
+  ],
+  "correct_answer": [
+    "To maintain uptime in case of PSU failure"
+  ],
+  "explanation": "Redundant power supplies ensure the system continues to run if one unit fails or is replaced, which is essential in servers.",
+  "tags": [
+    "redundant power supply",
+    "hot-swappable"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

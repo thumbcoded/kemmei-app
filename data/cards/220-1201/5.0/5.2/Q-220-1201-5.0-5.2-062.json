@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician suspects a failed RAID controller in a Dell server. During boot, which BIOS-labeled component should they look for?",
+  "answer_options": [
+    "Intel VT-x Module",
+    "Dell PERC H200",
+    "Windows Boot Loader",
+    "UEFI Secure Boot"
+  ],
+  "correct_answer": [
+    "Dell PERC H200"
+  ],
+  "explanation": "The Dell PERC H200 is a RAID controller that appears during POST and BIOS-level RAID diagnostics.",
+  "tags": [
+    "Dell PERC H200"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician notices that thermal prints are consistently light or faded. What is the MOST likely cause?",
+  "answer_options": [
+    "Low toner level",
+    "Worn fuser roller",
+    "Incorrect paper type",
+    "Misaligned print head"
+  ],
+  "correct_answer": [
+    "Incorrect paper type"
+  ],
+  "explanation": "Using non-thermal or improperly coated paper prevents the printer from producing blackened areas effectively.",
+  "tags": [
+    "blackened areas",
+    "chemically coated paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

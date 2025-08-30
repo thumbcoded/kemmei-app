@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are symptoms or causes of poor synchronization between FPS and refresh rate? (Select all that apply)",
+  "answer_options": [
+    "Stuttering",
+    "Screen tearing",
+    "Input lag",
+    "Resolution mismatch",
+    "Increased brightness"
+  ],
+  "correct_answer": [
+    "Stuttering",
+    "Screen tearing",
+    "Input lag"
+  ],
+  "explanation": "Mismatch between FPS and refresh rate can lead to stuttering, tearing, and sometimes input lag. It does not affect resolution or brightness.",
+  "tags": [
+    "stuttering",
+    "refresh rate",
+    "FPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In a congested Wi-Fi environment with multiple access points, what troubleshooting step can improve mobile device connectivity?",
+  "answer_options": [
+    "Increase the device's transmission power",
+    "Change the access point to a different channel or frequency",
+    "Disable mobile data completely",
+    "Reset the device's network settings"
+  ],
+  "correct_answer": [
+    "Change the access point to a different channel or frequency"
+  ],
+  "explanation": "In areas with many access points causing interference, changing to a different channel or frequency can significantly improve communication between the mobile device and access point.",
+  "tags": [
+    "intensive applications",
+    "system lag"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

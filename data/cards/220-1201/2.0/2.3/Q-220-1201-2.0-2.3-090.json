@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Where can email servers be deployed in modern environments?",
+  "answer_options": [
+    "Only in local data centers",
+    "Only in the cloud",
+    "Either in the cloud or local data centers",
+    "Only on individual user computers"
+  ],
+  "correct_answer": [
+    "Either in the cloud or local data centers"
+  ],
+  "explanation": "Email servers can be deployed in the cloud (managed by service providers) or in local data centers that organizations manage themselves.",
+  "tags": [
+    "cloud email",
+    "local email servers",
+    "email server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

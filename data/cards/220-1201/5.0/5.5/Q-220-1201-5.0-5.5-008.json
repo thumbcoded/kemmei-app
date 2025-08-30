@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user’s device has a link light, but pinging the default gateway fails. What is the most likely cause?",
+  "answer_options": [
+    "The Ethernet cable is unplugged",
+    "The device has no IP address",
+    "The gateway device is down or unreachable",
+    "The user typed the wrong loopback address"
+  ],
+  "correct_answer": [
+    "The gateway device is down or unreachable"
+  ],
+  "explanation": "A link light and local IP suggest a valid connection, but if the gateway is unreachable, the issue likely lies with the gateway device.",
+  "tags": [
+    "ping default gateway",
+    "local network testing",
+    "good connection verification"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

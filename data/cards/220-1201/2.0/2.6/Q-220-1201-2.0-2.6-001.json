@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How many bits are in an IPv4 address?",
+  "answer_options": [
+    "64",
+    "32",
+    "16",
+    "128"
+  ],
+  "correct_answer": [
+    "32"
+  ],
+  "explanation": "IPv4 addresses are 32-bit values, typically represented in dotted decimal format.",
+  "tags": [
+    "IPv4",
+    "32-bit"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

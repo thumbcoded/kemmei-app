@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the function of the parity bit in a parity memory module?",
+  "answer_options": [
+    "It increases the memory speed for faster access",
+    "It enables the use of dual-channel configurations",
+    "It adds redundancy to make the byte's total number of 1s even or odd",
+    "It improves performance by lowering latency"
+  ],
+  "correct_answer": [
+    "It adds redundancy to make the byte's total number of 1s even or odd"
+  ],
+  "explanation": "The parity bit is used to detect single-bit errors by checking parity conditions.",
+  "tags": [
+    "parity bit",
+    "even parity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

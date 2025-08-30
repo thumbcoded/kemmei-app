@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following accurately describe tradeoffs between capacitive and resistive touchscreens? (Select all that apply)",
+  "answer_options": [
+    "Capacitive is better for gesture-based interfaces",
+    "Resistive allows use with gloves or stylus",
+    "Capacitive generally provides sharper display quality",
+    "Resistive is more durable under outdoor conditions",
+    "Capacitive screens are easier to repair"
+  ],
+  "correct_answer": [
+    "Capacitive is better for gesture-based interfaces",
+    "Resistive allows use with gloves or stylus",
+    "Capacitive generally provides sharper display quality"
+  ],
+  "explanation": "Capacitive screens offer visual and usability advantages, while resistive screens support broader input types and sometimes lower cost.",
+  "tags": [
+    "capacitive touchscreen",
+    "resistive touchscreen"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

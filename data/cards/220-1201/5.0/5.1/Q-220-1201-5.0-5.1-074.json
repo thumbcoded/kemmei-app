@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which three symptoms most strongly indicate a video card hardware failure? (Select three)",
+  "answer_options": [
+    "No signal to monitor during POST",
+    "Artifacts on display during 3D rendering",
+    "System freezes when launching games",
+    "Slow USB file transfers",
+    "Distorted printer output"
+  ],
+  "correct_answer": [
+    "No signal to monitor during POST",
+    "Artifacts on display during 3D rendering",
+    "System freezes when launching games"
+  ],
+  "explanation": "These symptoms point directly to graphics processing issues that suggest a hardware failure in the video card.",
+  "tags": [
+    "video card problems",
+    "artifacts on display",
+    "graphics intensive processes"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 3,
+  "__v": 0
+}

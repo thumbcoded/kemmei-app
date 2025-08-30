@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why can a disconnected computer still pose an electrocution risk?",
+  "answer_options": [
+    "Hard drives spin for hours",
+    "Capacitors may still hold a charge",
+    "The system uses static electricity",
+    "The fans continue running"
+  ],
+  "correct_answer": [
+    "Capacitors may still hold a charge"
+  ],
+  "explanation": "Capacitors inside a power supply can store dangerous electrical charges even after the system is unplugged.",
+  "tags": [
+    "capacitor discharge",
+    "electrocution risk"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

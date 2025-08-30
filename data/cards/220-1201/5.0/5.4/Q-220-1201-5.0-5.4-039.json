@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which option may help speed up a slow mobile device?",
+  "answer_options": [
+    "Install older versions of apps",
+    "Turn on airplane mode",
+    "Restart the device",
+    "Disable vibration"
+  ],
+  "correct_answer": [
+    "Restart the device"
+  ],
+  "explanation": "Restarting clears background processes and can improve performance on a slow device.",
+  "tags": [
+    "restart device"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

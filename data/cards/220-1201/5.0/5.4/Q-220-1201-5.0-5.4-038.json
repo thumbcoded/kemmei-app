@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common reason for a mobile device to feel hot during use?",
+  "answer_options": [
+    "Low battery percentage",
+    "Wi-Fi signal interference",
+    "Running intensive applications",
+    "Bluetooth pairing"
+  ],
+  "correct_answer": [
+    "Running intensive applications"
+  ],
+  "explanation": "Using apps that demand heavy CPU usage can cause the device to heat up quickly, especially in warm environments.",
+  "tags": [
+    "intensive applications"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

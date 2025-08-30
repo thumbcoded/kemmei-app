@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes why malware authors might distribute pre-built virtual machines?",
+  "answer_options": [
+    "To allow users to try software for free",
+    "To bypass operating system licensing restrictions",
+    "To hide malicious code inside a VM that appears legitimate",
+    "To avoid hypervisor compatibility issues"
+  ],
+  "correct_answer": [
+    "To hide malicious code inside a VM that appears legitimate"
+  ],
+  "explanation": "Malware authors may embed threats in downloadable VMs to exploit unsuspecting users who trust their content.",
+  "tags": [
+    "malware in VMs",
+    "malware authors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

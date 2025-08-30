@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are advantages of using public cloud service providers? (Select all that apply)",
+  "answer_options": [
+    "Scalability without large capital investment",
+    "Localized, non-redundant storage",
+    "Access to global infrastructure",
+    "On-demand computing resources"
+  ],
+  "correct_answer": [
+    "Scalability without large capital investment",
+    "Access to global infrastructure",
+    "On-demand computing resources"
+  ],
+  "explanation": "Public cloud providers offer scalable, global resources with a pay-as-you-go model, making infrastructure more accessible.",
+  "tags": [
+    "public cloud service providers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,143 @@
+# Printer Troubleshooting
+
+## Basic Printer Testing
+
+Troubleshooting printer issues can be challenging. You never know if the issue is related to an application, a printer driver, the operating system, or the printer itself. One of the ways that you can narrow down this problem is by printing a test page from your operating system.
+
+### Operating System Test Page
+
+In Windows, there's a built-in function to create a test page. This means that you aren't using an application—you're simply using the operating system and the device driver as it's currently configured. You might also have a way to perform a test print from the printer itself. That will test from the hardware of the printer, and the operating system and device driver have no impact on the printer level test.
+
+Here's an example of a Windows printer test page. This was created by pressing that print test page button from the device driver itself. We're not only interested in the quality of the output, but we're also interested in the information that is contained on the page. We have information about the printer properties and how they're configured. We also know the print driver properties and we know exactly what printer driver files are associated with this printer.
+
+## Print Quality Issues
+
+### Line and Streak Problems
+
+You may find that your printer test page does not have the quality you were expecting. For example, you might have a single line that goes all the way down the page. If this is an inkjet printer, then you probably have dirty print heads, so simply cleaning those print heads can probably remove that line.
+
+If this is a laser printer, it's probably a scratch that is on the photosensitive drum that's used inside of that printer. And as the drum is rotating around, that scratch is simply leaving a black mark all the way down the page.
+
+### Faded Output
+
+If the output is faded or it's difficult to read what's on the page, then you're probably running out of toner or you're very low on ink.
+
+### Ghosting and Speckling
+
+And if you're seeing double images on the page or there's speckling on the page, then the laser printer optical drum is probably not cleaning properly and you're seeing a ghost or shadow from the previous rotation of that drum.
+
+Here's what a scratch on that photosensitive drum would look like—it's just a single black line that goes all the way down the page. And if the cleaning process is not working properly, then you're probably seeing a normal part of the page and then a copy of that that's a little bit lighter later on down the page. This ghosting will continue until you're able to correct the cleaning problem inside of your laser printer.
+
+## Garbled Print Output
+
+Here's a page of output you definitely don't want to see coming out of your printer. This garbled print might be caused by a number of different issues. One of them might be a bad printer driver, or you've specified the wrong model of printer in your Windows configuration. In those cases, you might be sending the wrong page description language to the printer. The printer might be expecting PCL and you might be sending PostScript, or vice versa.
+
+### Troubleshooting Garbled Output
+
+Of course, we don't know if this is related to the print driver or the operating system, or if we have a physical problem with the printer. So if you have a way to print a test print on the printer, you'll be able to see if you're able to get good output or if the printer also provides this garbled output.
+
+If your printer test works properly and your Windows driver test works properly, then it could be that the application is sending bad information to the printer. You may want to try a different application or try upgrading the application you currently have to see if you can improve the output.
+
+## Paper Handling Issues
+
+### Paper Jams
+
+Occasionally you'll find that the paper will jam inside the printer. What you don't want to do is pull that paper so that you're ripping it and leaving part of that paper inside the printer mechanism. Some printers will release their printer mechanisms when you open the top of the printer, and that might make it a lot easier to be able to remove that paper.
+
+### Pickup Roller Problems
+
+If no paper is being pulled from your printer tray, or you're getting multiple pages pulled at the same time to go through the printer, then you might have a problem with either the paper tray or with the pickup rollers. These pickup rollers need to be clean and they do wear over time. If you're performing a printer maintenance using an official maintenance kit from the printer manufacturer, they very often will include additional pickup rollers to avoid this kind of problem.
+
+### Paper Creases
+
+And sometimes you'll notice that the output from your printer, especially with a laser printer, will have creases in the paper itself. That may be because of a problem in the paper path as it's moving through the printer, or it may be that you're using a paper that is a different weight than what is recommended by the printer manufacturer. Make sure you check your printer documentation so you know exactly what the recommended weight of paper would be for that specific printer.
+
+Here's a closer view of these pickup rollers and the rollers inside of your printer. You can see that these are relatively new—they don't seem to have any creases on them and you can see there's not much wear on the rollers that are currently installed.
+
+## Print Spooler Issues
+
+If your printer is not printing but you look at the printer queue and there's a lot of jobs that are queued up waiting to be printed, then your problem might be with the printer spooler itself. The printer spooler is a middle point between the application and the printer. The application sends a print job to the spooler, and the spooler is responsible for then sending that print job to the printer.
+
+### Spooler Failures
+
+If one of those print jobs is corrupted, it may cause this spooler to either crash or freeze. Some print spoolers will restart automatically. For example, this one in Windows on the first failure will restart this service. The second failure will restart again, but if there is a subsequent failure, it will completely stop and require your intervention.
+
+You may be able to go to your Windows Event Viewer, specifically the Windows Print Service as part of that Event Viewer, and see if any of these corruptions or any other problems with the print spooler are occurring. It may just be that one print job is causing the issue for everyone else, but once that print spooler fails, nothing else in the queue is going to be printed.
+
+You as the administrator are able to delete that print job or move it to the bottom of the list, let everything else print, and then you can troubleshoot that specific print job.
+
+## Printer Hardware Issues
+
+### Grinding Noises
+
+Our printers commonly make noises, but they're not usually a grinding noise. We don't really have to grind anything up inside the printer to get it to print properly. Instead, this may indicate that some other type of problem is occurring. Maybe it's a paper jam inside the printer, or maybe an ink cartridge has come loose or needs to be seated down so that it doesn't rub against any other parts of the printer.
+
+Each printer operates in a different way and has a different number of steps for troubleshooting, so make sure you check the manual for your printer to see what you should do if you happen to hear any grinding noises. Or it may be a bad part that requires a specialist to be able to take the printer to their office or to visit on site, take the printer completely apart, find that bad part, replace it, and then put everything back together.
+
+### Cartridge Seating Issues
+
+This could certainly cause some noise inside the printer if you don't properly seat those ink cartridges. It will certainly cause some noise when you finally send a print job and that carriage tries to go back and forth inside of the printer.
+
+## Finishing Services Issues
+
+Our printers do more than simply print information on a page. Very often they are also providing finishing services. That finishing would be collating, binding, stapling, and performing an additional task once the output has been created.
+
+### Stapling and Collating
+
+Some larger printers will collate multiple copies together and then staple each copy as it's created. Occasionally you'll have a staple jam and you'll need to remove that staple to continue the process. Every printer is a little bit different on how you remove those staple jams, so make sure you check with your printer documentation.
+
+### Hole Punching
+
+And some printers can perform hole punches. That hole punch is determined by the application and the driver that you're using. So if the holes are not lining up exactly where you would expect, make sure you check with the application that you're using and make sure you're using the latest print driver.
+
+## Orientation Issues
+
+On most printers, we can choose to print a portrait mode or a landscape mode. If you're printing a page in portrait and you get the output in landscape, then there has definitely been a mismatch somewhere along the line.
+
+### Driver Configuration
+
+Normally this setting is handled in the print driver of your operating system, so make sure you check the defaults for the print driver and then also check the settings that you're sending out when you choose to print from your application. You may find that this is a problem with the print driver, and simply upgrading the print driver will solve the problem.
+
+### Printer Default Settings
+
+If the print driver is not telling the printer the proper orientation, you may be able to control this at the printer itself. Printers usually have a default setting on whether they will print in a portrait mode or landscape mode, and adjusting that at the printer may affect all of the subsequent output from that device.
+
+## Paper Tray Management
+
+The printers that we use in our offices tend to have multiple paper trays. You can see that on the printer that we have here that on the bottom is one, two, three, four different paper trays that you could select paper from.
+
+### Tray Selection
+
+When you perform that output from your application, you would normally tell the printer when you're sending the print job that you would like all of the output to come from the paper that is in paper tray number one. One of the things you have to make sure is that the paper tray that you're choosing matches the size of the paper associated with the output. For example, you don't want to send output that was designed for a 14-inch legal size page to a paper tray that only has 11-inch letter size paper.
+
+### Driver Configuration
+
+You'll normally see the list of paper trays in the print driver when you're ready to print, so you'll be able to choose the proper tray from that list. It might be a good idea as the network administrator to confirm that the list of trays that you see in the print driver matches the trays that are physically installed on the printer.
+
+### Paper Size Mismatches
+
+If there is a mismatch between the size of the paper that you wanted to print and the size of the paper that's in that print tray, you may see messages on the screen of your printer that tell you that this paper is mismatched and you'll need to load the appropriate page for this particular output.
+
+Here's a view from the output where I'm choosing to print to my laser printer. This says that the paper source is the main tray and the media is automatically selected, but you might want to configure your printer driver with the specifics of what type of paper are contained within that main tray.
+
+So here are the properties for this printer driver, and you can see that I have the option to decide what a manual feed size paper would be. In this case, on my printer it's a letter size paper, and then you can specify what size of paper is contained within the main tray, and you can see there are a number of options available that you can configure for that main tray of the printer.
+
+## Network Printer Troubleshooting
+
+When you're troubleshooting these corporate printers, you also have to be very good at troubleshooting networks. That's because these printers tend to be connected to our wired and our wireless networks.
+
+### Network Connection Testing
+
+We would want to perform the same type of network troubleshooting as we do for any other device on the network. You would first need to confirm whether this is a printer that's connected to the wired network or the wireless network. That way you'll know whether you're troubleshooting a problem with the cable or whether you're troubleshooting a problem with interference on the wireless network.
+
+### IP Configuration
+
+You would then want to confirm that the IP address settings of the printer are configured properly for that device. So you want to check the IP address, the subnet mask, the default gateway, any DNS settings, and any other important network configuration settings.
+
+### Print Server Management
+
+And you may want to check to see if the print server inside of this printer is working properly. Most printers have their own print server, and there's usually a management front end where you can look at the print server, stop it, restart it, and perform any management of the pending print jobs.
+
+### Physical Connection Verification
+
+And because this is a network device, you can also look for link lights. For example, on this printer it has a connection on the back of the printer, and you can see if it's connected to the network, if it has an active link, and if it is sending and receiving data.

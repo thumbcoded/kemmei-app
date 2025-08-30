@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of a network tap?",
+  "answer_options": [
+    "To increase Wi-Fi coverage",
+    "To block unauthorized network traffic",
+    "To copy network traffic for analysis",
+    "To terminate cable ends"
+  ],
+  "correct_answer": [
+    "To copy network traffic for analysis"
+  ],
+  "explanation": "Network taps create an exact copy of data flowing through a cable for monitoring without interrupting the original traffic.",
+  "tags": [
+    "network tap",
+    "traffic analysis"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

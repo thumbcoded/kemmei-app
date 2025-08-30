@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main danger of attaching an antistatic wrist strap directly to a building ground?",
+  "answer_options": [
+    "You can build up ESD charge faster",
+    "It may trigger a power surge",
+    "You could be exposed to a live current",
+    "It causes capacitor imbalance"
+  ],
+  "correct_answer": [
+    "You could be exposed to a live current"
+  ],
+  "explanation": "Building grounds may become live if wired improperly, exposing technicians to shock if connected directly.",
+  "tags": [
+    "ground wire safety",
+    "building electrical system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

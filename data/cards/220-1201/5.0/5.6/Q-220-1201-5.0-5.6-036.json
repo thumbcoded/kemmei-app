@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of running scheduled printer maintenance tasks?",
+  "answer_options": [
+    "Prevent print spooler overflow",
+    "Avoid mechanical failure due to wear and debris",
+    "Reinstall printer drivers automatically",
+    "Reset all tray configurations to factory defaults"
+  ],
+  "correct_answer": [
+    "Avoid mechanical failure due to wear and debris"
+  ],
+  "explanation": "Scheduled maintenance helps prevent wear-induced issues such as noisy rollers, carriage misalignment, and mechanical jams.",
+  "tags": [
+    "printer maintenance",
+    "mechanical problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

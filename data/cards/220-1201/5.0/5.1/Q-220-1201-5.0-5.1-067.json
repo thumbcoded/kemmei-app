@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component should you check if the screen goes black when launching a game?",
+  "answer_options": [
+    "RAM",
+    "Video card",
+    "Motherboard battery",
+    "Power button"
+  ],
+  "correct_answer": [
+    "Video card"
+  ],
+  "explanation": "Games are graphics-intensive processes. If the screen goes black, it may be due to a problem with the video card.",
+  "tags": [
+    "video card problems",
+    "graphics intensive processes"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

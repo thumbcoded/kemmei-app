@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component allows a network printer to accept and manage jobs independently?",
+  "answer_options": [
+    "Wireless adapter",
+    "Duplexing unit",
+    "Print server",
+    "Ethernet switch"
+  ],
+  "correct_answer": [
+    "Print server"
+  ],
+  "explanation": "The print server handles incoming print jobs and manages them, often with its own embedded interface.",
+  "tags": [
+    "print server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

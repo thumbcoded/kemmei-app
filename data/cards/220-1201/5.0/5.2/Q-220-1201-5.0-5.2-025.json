@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are SMART metrics commonly used to anticipate drive failure? (Select all that apply)",
+  "answer_options": [
+    "Power on hours",
+    "Temperature Celsius",
+    "Power cycle count",
+    "Retry reading",
+    "Input lag"
+  ],
+  "correct_answer": [
+    "Power on hours",
+    "Temperature Celsius",
+    "Power cycle count",
+    "Retry reading"
+  ],
+  "explanation": "SMART tracks time powered on, number of power cycles, internal temperature, and retry events to assess drive health.",
+  "tags": [
+    "power on hours",
+    "temperature celsius",
+    "power cycle count",
+    "retry reading"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

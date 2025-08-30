@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which configuration scenario is most likely to cause performance issues due to asymmetric memory access in a quad-channel setup?",
+  "answer_options": [
+    "Installing identical memory modules across all slots",
+    "Using four different capacity modules in each channel",
+    "Leaving two slots empty while using matched modules in the others",
+    "Using ECC memory in a non-ECC motherboard"
+  ],
+  "correct_answer": [
+    "Using four different capacity modules in each channel"
+  ],
+  "explanation": "Using memory modules of varying capacity in a multi-channel setup may disable channel interleaving and reduce performance, resulting in asymmetric access.",
+  "tags": [
+    "multi-channel memory",
+    "quad channel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

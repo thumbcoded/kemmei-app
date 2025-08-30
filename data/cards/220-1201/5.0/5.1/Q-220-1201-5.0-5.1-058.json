@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which voltages are typically delivered by a standard ATX power supply to a motherboard?",
+  "answer_options": [
+    "3.3V, 5V, 12V",
+    "5V, 9V, 24V",
+    "1.2V, 1.8V, 3.3V",
+    "6V, 12V, 24V"
+  ],
+  "correct_answer": [
+    "3.3V, 5V, 12V"
+  ],
+  "explanation": "Standard ATX power supplies provide 3.3V, 5V, and 12V rails for different components, including the motherboard and CPU.",
+  "tags": [
+    "12 volts",
+    "5 volts",
+    "3.3 volts",
+    "power supply failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

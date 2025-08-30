@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two panel characteristics directly impact viewing experience in multi-angle setups like collaborative design or public displays? (Select two)",
+  "answer_options": [
+    "Viewing angle",
+    "Panel curvature",
+    "Response time",
+    "Color representation",
+    "Power efficiency"
+  ],
+  "correct_answer": [
+    "Viewing angle",
+    "Color representation"
+  ],
+  "explanation": "Wide viewing angles and consistent color accuracy are crucial for environments where viewers aren’t directly in front of the screen.",
+  "tags": [
+    "viewing angle",
+    "color representation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What would MOST likely happen if the laser writing step fails but all other components function correctly?",
+  "answer_options": [
+    "Blank pages are printed",
+    "Toner builds up inside the printer",
+    "Paper gets jammed at the fuser",
+    "Excess toner is fused to the drum"
+  ],
+  "correct_answer": [
+    "Blank pages are printed"
+  ],
+  "explanation": "If the laser fails to discharge parts of the drum, no image is formed — so toner doesn't stick and blank pages result.",
+  "tags": [
+    "writing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

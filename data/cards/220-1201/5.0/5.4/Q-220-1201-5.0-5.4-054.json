@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common sign that a mobile device may be infected with malware?",
+  "answer_options": [
+    "Device runs cooler than normal",
+    "Battery life improves significantly",
+    "Unusual applications appear or excessive data transfers occur",
+    "Screen brightness automatically decreases"
+  ],
+  "correct_answer": [
+    "Unusual applications appear or excessive data transfers occur"
+  ],
+  "explanation": "Malware often manifests as unusual applications, large amounts of data transfers, or applications using more CPU than normal as the malware uses the device for malicious purposes.",
+  "tags": [
+    "device overheating",
+    "slow performance",
+    "app crashes"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

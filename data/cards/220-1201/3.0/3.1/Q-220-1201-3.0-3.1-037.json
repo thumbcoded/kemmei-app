@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following features directly result from OLED’s lack of a backlight? (Select all that apply)",
+  "answer_options": [
+    "Thinner overall panel design",
+    "Independent pixel control",
+    "Decreased power draw when displaying black",
+    "Improved resistance to humidity",
+    "No need for color filters"
+  ],
+  "correct_answer": [
+    "Thinner overall panel design",
+    "Independent pixel control",
+    "Decreased power draw when displaying black"
+  ],
+  "explanation": "Without a backlight, OLEDs achieve thin design, turn off pixels individually, and conserve power with dark content. Humidity and color filter behaviors are not directly related.",
+  "tags": [
+    "no backlight",
+    "self-emitting",
+    "thin display"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

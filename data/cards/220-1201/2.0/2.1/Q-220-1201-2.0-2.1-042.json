@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary port used by DNS to resolve domain names?",
+  "answer_options": [
+    "TCP 53",
+    "UDP 53",
+    "TCP 25",
+    "UDP 67"
+  ],
+  "correct_answer": [
+    "UDP 53"
+  ],
+  "explanation": "DNS (Domain Name System) typically uses UDP port 53 for fast name resolution.",
+  "tags": [
+    "DNS",
+    "port mapping",
+    "protocol"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

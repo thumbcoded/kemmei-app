@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does MHL stand for in the context of mobile video signals?",
+  "answer_options": [
+    "Media High-speed Line",
+    "Mobile Host Link",
+    "Mobile High-Definition Link",
+    "Mini HDMI Line"
+  ],
+  "correct_answer": [
+    "Mobile High-Definition Link"
+  ],
+  "explanation": "MHL stands for Mobile High-Definition Link and allows video signals to be sent from mobile devices.",
+  "tags": [
+    "MHL",
+    "Mobile High-Definition Link"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

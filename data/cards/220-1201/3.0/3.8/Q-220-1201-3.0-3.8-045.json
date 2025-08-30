@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "If your inkjet printer prints with misaligned colors, which process should you run?",
+  "answer_options": [
+    "Factory reset",
+    "Color alignment",
+    "Toner remapping",
+    "Paper size calibration"
+  ],
+  "correct_answer": [
+    "Color alignment"
+  ],
+  "explanation": "Color alignment ensures that CMYK inks are printed in the correct position relative to each other.",
+  "tags": [
+    "color alignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

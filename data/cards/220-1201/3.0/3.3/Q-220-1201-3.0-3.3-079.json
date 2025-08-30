@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature makes ECC memory more reliable than parity memory in server environments?",
+  "answer_options": [
+    "ECC uses higher-quality silicon than parity memory",
+    "ECC can detect and correct errors without halting the system",
+    "ECC modules use less power during idle states",
+    "ECC is backward-compatible with DDR2 and DDR3 platforms"
+  ],
+  "correct_answer": [
+    "ECC can detect and correct errors without halting the system"
+  ],
+  "explanation": "Unlike parity memory, ECC memory can correct single-bit errors on the fly, preventing system crashes and improving uptime in critical systems.",
+  "tags": [
+    "ECC memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two HDMI features or limitations may require active adapters or signal boosters in professional setups? (Select two)",
+  "answer_options": [
+    "HDMI’s 19-pin design",
+    "Maximum length before signal degradation",
+    "Lack of locking mechanism",
+    "Inability to output DisplayPort-native signals",
+    "Support for audio return channel (ARC)"
+  ],
+  "correct_answer": [
+    "Maximum length before signal degradation",
+    "Inability to output DisplayPort-native signals"
+  ],
+  "explanation": "HDMI signals degrade beyond ~20 meters, often requiring boosters or active cables. HDMI cannot natively output DisplayPort signals, so active conversion is required for that direction.",
+  "tags": [
+    "HDMI",
+    "19-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

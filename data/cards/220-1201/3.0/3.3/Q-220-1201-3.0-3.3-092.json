@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements about the evolution of DDR memory are true? (Select all that apply)",
+  "answer_options": [
+    "Each new DDR generation increases data transfer rates.",
+    "DDR memory versions are physically incompatible with each other.",
+    "DDR4 modules can be used in DDR3 slots with an adapter.",
+    "DDR5 offers faster communication between memory and CPU than DDR4.",
+    "Backward compatibility is not a design priority in DDR memory advancements."
+  ],
+  "correct_answer": [
+    "Each new DDR generation increases data transfer rates.",
+    "DDR memory versions are physically incompatible with each other.",
+    "DDR5 offers faster communication between memory and CPU than DDR4.",
+    "Backward compatibility is not a design priority in DDR memory advancements."
+  ],
+  "explanation": "DDR improvements focus on speed and bandwidth, not on maintaining backward compatibility.",
+  "tags": [
+    "DDR5",
+    "DDR4",
+    "backward compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

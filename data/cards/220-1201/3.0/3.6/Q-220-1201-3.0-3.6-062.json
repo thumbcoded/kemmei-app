@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector is typically used to provide power to a motherboard in modern desktop systems?",
+  "answer_options": [
+    "24-pin connector",
+    "4-pin Molex connector",
+    "6-pin PCIe connector",
+    "15-pin SATA connector"
+  ],
+  "correct_answer": [
+    "24-pin connector"
+  ],
+  "explanation": "Modern motherboards typically use a 24-pin connector as the primary power interface from the power supply.",
+  "tags": [
+    "24-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

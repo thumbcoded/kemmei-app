@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of a SCADA system in an industrial environment?",
+  "answer_options": [
+    "To send marketing emails to clients",
+    "To control and monitor industrial processes remotely",
+    "To back up database servers",
+    "To manage local file shares"
+  ],
+  "correct_answer": [
+    "To control and monitor industrial processes remotely"
+  ],
+  "explanation": "SCADA systems (Supervisory Control and Data Acquisition) are used to monitor and control industrial equipment over a network.",
+  "tags": [
+    "SCADA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

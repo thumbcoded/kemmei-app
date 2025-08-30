@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid steps in the laser printing process? (Select all that apply)",
+  "answer_options": [
+    "Charging",
+    "Writing",
+    "Developing",
+    "Flashing",
+    "Transferring",
+    "Blotting"
+  ],
+  "correct_answer": [
+    "Charging",
+    "Writing",
+    "Developing",
+    "Transferring"
+  ],
+  "explanation": "Flashing and blotting are not valid steps. The process includes Charging, Writing, Developing, Transferring, Fusing, and Cleaning.",
+  "tags": [
+    "charging",
+    "writing",
+    "developing",
+    "transferring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

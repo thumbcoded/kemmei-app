@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two of the following are typical uses for fiber optic networking? (Select two)",
+  "answer_options": [
+    "Home Wi-Fi signal extension",
+    "SONET backbone connections",
+    "Metro Ethernet services",
+    "Power over Ethernet cabling"
+  ],
+  "correct_answer": [
+    "SONET backbone connections",
+    "Metro Ethernet services"
+  ],
+  "explanation": "Fiber is commonly used in SONET and Metro Ethernet infrastructures due to its ability to carry large amounts of data over long distances.",
+  "tags": [
+    "SONET",
+    "metro Ethernet"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How does doubling the number of memory channels affect theoretical memory bandwidth?",
+  "answer_options": [
+    "It halves the total latency across modules",
+    "It increases bandwidth by approximately 25%",
+    "It has no effect unless CPU clock speed is also doubled",
+    "It doubles the memory bandwidth available to the CPU"
+  ],
+  "correct_answer": [
+    "It doubles the memory bandwidth available to the CPU"
+  ],
+  "explanation": "Adding memory channels allows the CPU to read/write data to multiple modules simultaneously, effectively doubling available bandwidth in a dual-channel configuration.",
+  "tags": [
+    "memory bandwidth",
+    "memory throughput",
+    "dual channel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

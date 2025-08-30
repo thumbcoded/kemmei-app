@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which proprietary Apple connector has 8 pins and was designed to support higher power output than older USB standards?",
+  "answer_options": [
+    "USB-C",
+    "Lightning connector",
+    "Thunderbolt",
+    "30-pin dock connector"
+  ],
+  "correct_answer": [
+    "Lightning connector"
+  ],
+  "explanation": "Apple's Lightning connector features 8 pins and was specifically designed to provide higher power output for faster charging compared to older USB connection standards.",
+  "tags": [
+    "Lightning",
+    "connector",
+    "charging",
+    "wired"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

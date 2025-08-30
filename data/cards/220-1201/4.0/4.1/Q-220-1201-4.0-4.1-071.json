@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is a thin client suitable for accessing Desktop as a Service (DaaS) solutions?",
+  "answer_options": [
+    "It has built-in virtualization hardware",
+    "It connects to a local hypervisor for direct VM access",
+    "It only needs to support basic peripherals and network communication",
+    "It includes a full OS capable of VM management"
+  ],
+  "correct_answer": [
+    "It only needs to support basic peripherals and network communication"
+  ],
+  "explanation": "Thin clients are ideal for DaaS because the computing is handled remotely; the endpoint only handles display, input, and networking.",
+  "tags": [
+    "thin client",
+    "DaaS",
+    "network communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

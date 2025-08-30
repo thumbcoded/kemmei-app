@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In an LCD display, how does rotating the liquid crystals affect the image?",
+  "answer_options": [
+    "It changes the pixel resolution",
+    "It determines the light’s polarization and visibility",
+    "It powers the backlight circuit",
+    "It controls image scaling functions"
+  ],
+  "correct_answer": [
+    "It determines the light’s polarization and visibility"
+  ],
+  "explanation": "Liquid crystals twist or untwist in response to voltage, changing light polarization and controlling whether light passes through to create visible pixels.",
+  "tags": [
+    "LCD",
+    "polarization filter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

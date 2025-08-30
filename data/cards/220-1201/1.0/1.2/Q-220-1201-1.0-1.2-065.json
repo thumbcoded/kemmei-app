@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which application is most commonly associated with the use of webcams on laptops?",
+  "answer_options": [
+    "Disk encryption",
+    "Video conferencing",
+    "Wireless printing",
+    "Firmware updates"
+  ],
+  "correct_answer": [
+    "Video conferencing"
+  ],
+  "explanation": "Webcams are widely used for video calls in platforms like Zoom, Teams, and Skype.",
+  "tags": [
+    "webcam",
+    "video conferencing",
+    "built-in camera"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

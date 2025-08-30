@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which best explains why DNS can resolve any domain globally despite not relying on a single central server?",
+  "answer_options": [
+    "All DNS servers maintain a complete replica of every domain",
+    "Root and TLD servers replicate all queries to regional servers",
+    "The distributed database architecture allows partial storage of global records",
+    "DNS operates in peer-to-peer mode, skipping centralized resolution"
+  ],
+  "correct_answer": [
+    "The distributed database architecture allows partial storage of global records"
+  ],
+  "explanation": "No single DNS server holds all records. Instead, the system is globally distributed, with zones delegated to appropriate authoritative servers.",
+  "tags": [
+    "distributed database",
+    "domain name system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

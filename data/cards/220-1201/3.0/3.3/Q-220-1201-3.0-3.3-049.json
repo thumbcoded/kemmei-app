@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why can a high-speed CPU still experience performance issues due to memory bandwidth?",
+  "answer_options": [
+    "Memory voltage becomes unstable at high speeds",
+    "CPU has to wait during data transfers due to limited memory throughput",
+    "The CPU’s cache size limits data exchange with RAM",
+    "Multi-threading increases memory error rates"
+  ],
+  "correct_answer": [
+    "CPU has to wait during data transfers due to limited memory throughput"
+  ],
+  "explanation": "Even with a fast CPU, memory bandwidth limitations can cause the processor to sit idle while waiting for data from RAM, creating a bottleneck in system performance.",
+  "tags": [
+    "memory bandwidth",
+    "CPU-memory communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

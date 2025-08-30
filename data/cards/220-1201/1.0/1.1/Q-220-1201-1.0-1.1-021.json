@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which laptop component is most commonly replaced due to frequent use?",
+  "answer_options": [
+    "Battery",
+    "Display panel",
+    "Keyboard",
+    "Touchpad"
+  ],
+  "correct_answer": [
+    "Keyboard"
+  ],
+  "explanation": "The keyboard is often the most-used and most-replaced component in a laptop due to wear from daily use.",
+  "tags": [
+    "keyboard swap"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

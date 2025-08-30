@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario is a common use case for legacy OS virtualization?",
+  "answer_options": [
+    "Running antivirus scans",
+    "Using unsupported software in a virtual Windows XP machine",
+    "Speeding up modern games",
+    "Compressing media files faster"
+  ],
+  "correct_answer": [
+    "Using unsupported software in a virtual Windows XP machine"
+  ],
+  "explanation": "Legacy OS virtualization allows older software to run in an environment that supports outdated systems like Windows XP.",
+  "tags": [
+    "legacy OS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

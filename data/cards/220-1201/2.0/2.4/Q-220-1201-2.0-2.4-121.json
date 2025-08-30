@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-121",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician configures a DHCP scope but accidentally overlaps the IP range with statically assigned printers. What issue is most likely to occur?",
+  "answer_options": [
+    "VLAN mismatches",
+    "MAC address conflicts",
+    "Duplicate IP address conflicts",
+    "DHCP server denial-of-service"
+  ],
+  "correct_answer": [
+    "Duplicate IP address conflicts"
+  ],
+  "explanation": "If static IPs fall within the DHCP range, duplicate IP assignments may occur, leading to conflicts and connectivity issues.",
+  "tags": [
+    "static IP",
+    "DHCP scope",
+    "IP pool"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

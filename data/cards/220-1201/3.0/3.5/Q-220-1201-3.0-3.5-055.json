@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a key reason why PCIe has replaced PCI in modern systems?",
+  "answer_options": [
+    "PCIe is cheaper to manufacture",
+    "PCIe allows shared bandwidth across all slots",
+    "PCIe offers higher performance with dedicated lanes",
+    "PCI requires less power"
+  ],
+  "correct_answer": [
+    "PCIe offers higher performance with dedicated lanes"
+  ],
+  "explanation": "Each PCIe slot has its own dedicated connection to the CPU/chipset, offering higher bandwidth and scalability.",
+  "tags": [
+    "PCIe",
+    "serial communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

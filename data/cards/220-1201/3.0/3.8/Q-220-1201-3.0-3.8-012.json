@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "During diagnostics, a printer is failing to begin the print process and shows no signs of charging the drum. Which subsystem should be checked first?",
+  "answer_options": [
+    "Fuser unit",
+    "Toner cartridge",
+    "High voltage power supply",
+    "Page rendering engine"
+  ],
+  "correct_answer": [
+    "High voltage power supply"
+  ],
+  "explanation": "The high voltage power supply is responsible for energizing the corona wire or roller to charge the drum. If the charging step fails entirely, this is the primary suspect.",
+  "tags": [
+    "high voltage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

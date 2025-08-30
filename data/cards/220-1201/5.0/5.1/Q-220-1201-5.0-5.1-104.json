@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What are the common causes of boot failure and what should be your first troubleshooting steps?",
+  "answer_options": [
+    "Always replace the motherboard first, then check connections",
+    "Check power connections, verify boot device connections, check BIOS boot order, listen for POST beep codes",
+    "Immediately run memory diagnostics and replace all RAM modules",
+    "Format the hard drive and reinstall the operating system"
+  ],
+  "correct_answer": [
+    "Check power connections, verify boot device connections, check BIOS boot order, listen for POST beep codes"
+  ],
+  "explanation": "Common causes include corrupted boot files, failed storage devices, incorrect boot order, or hardware failures. First steps: 1) Check power connections and ensure system powers on, 2) Verify boot device is properly connected, 3) Check BIOS/UEFI boot order settings, 4) Listen for POST beep codes that indicate hardware problems.",
+  "tags": [
+    "boot failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

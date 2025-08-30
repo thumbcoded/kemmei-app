@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What common method is often suggested but is ineffective for drying out a wet mobile device?",
+  "answer_options": [
+    "Using desiccant packets",
+    "Wiping it with a dry towel",
+    "Putting it in a bag of rice",
+    "Letting it air dry"
+  ],
+  "correct_answer": [
+    "Putting it in a bag of rice"
+  ],
+  "explanation": "Rice is not very effective at removing moisture; using silica gel desiccants is a better option.",
+  "tags": [
+    "rice method"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

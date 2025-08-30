@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key difference between SSD and HDD failure patterns when data recovery is needed?",
+  "answer_options": [
+    "SSDs always fail completely while HDDs can be partially recovered",
+    "HDDs are more reliable than SSDs in all failure scenarios",
+    "Failed SSDs may still be readable but not writable, while HDDs typically have mechanical failures",
+    "SSDs can be repaired easily while HDDs require professional services"
+  ],
+  "correct_answer": [
+    "Failed SSDs may still be readable but not writable, while HDDs typically have mechanical failures"
+  ],
+  "explanation": "When SSDs fail, you often can't write to them but may still be able to read existing data. HDDs typically fail due to mechanical issues (clicking, grinding) that affect both reading and writing. Both types can result in data corruption or complete inaccessibility.",
+  "tags": [
+    "SSD 1 million IOPS",
+    "physical failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

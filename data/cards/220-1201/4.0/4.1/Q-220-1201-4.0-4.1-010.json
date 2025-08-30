@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You need to test malware behavior in a controlled virtual machine. Which setup most effectively ensures the host system remains secure during the test?",
+  "answer_options": [
+    "Enable snapshot revert and test in a standard user account",
+    "Run the malware in host OS but isolate it with a firewall",
+    "Use sandboxing inside a virtual machine with no shared resources",
+    "Run the test with administrative privileges inside a virtual machine"
+  ],
+  "correct_answer": [
+    "Use sandboxing inside a virtual machine with no shared resources"
+  ],
+  "explanation": "Sandboxing within a VM ensures isolation. Avoiding shared folders, clipboards, or bridges prevents malware from leaking into the host.",
+  "tags": [
+    "sandboxing",
+    "isolated environment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

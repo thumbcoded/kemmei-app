@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following record types may be returned in response to a DNS query for host information? (Select all that apply)",
+  "answer_options": [
+    "A record",
+    "AAAA record",
+    "MX record",
+    "CNAME record"
+  ],
+  "correct_answer": [
+    "A record",
+    "AAAA record",
+    "CNAME record"
+  ],
+  "explanation": "A and AAAA return IPv4/IPv6 addresses. CNAME points to canonical hostnames. MX is only returned when querying for mail-related records.",
+  "tags": [
+    "A record",
+    "AAAA record",
+    "CNAME",
+    "canonical name",
+    "IPv4 address",
+    "IPv6 address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

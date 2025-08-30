@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "You're troubleshooting a system with intermittent crashes after a power supply upgrade. Which TWO steps should be taken to verify connector compatibility? (Select two)",
+  "answer_options": [
+    "Check connector keying to confirm correct physical alignment",
+    "Compare PSU and motherboard documentation for pinout details",
+    "Verify that all cables are black and sleeved",
+    "Ensure the PCIe connectors are gold-plated",
+    "Run a GPU stress test without checking cabling first"
+  ],
+  "correct_answer": [
+    "Check connector keying to confirm correct physical alignment",
+    "Compare PSU and motherboard documentation for pinout details"
+  ],
+  "explanation": "Connector keying prevents incorrect orientation, but documentation review is essential for verifying voltage delivery and pin function on modular setups.",
+  "tags": [
+    "connector keying",
+    "power supply documentation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

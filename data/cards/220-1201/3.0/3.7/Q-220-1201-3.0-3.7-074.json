@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following options can typically be adjusted to control print output quality? (Select all that apply)",
+  "answer_options": [
+    "Resolution (DPI)",
+    "Color mode (color or grayscale)",
+    "Scan-to-cloud",
+    "Color saving mode"
+  ],
+  "correct_answer": [
+    "Resolution (DPI)",
+    "Color mode (color or grayscale)",
+    "Color saving mode"
+  ],
+  "explanation": "Print output quality is influenced by DPI resolution, color mode, and whether a color saving mode is used. Scan-to-cloud is unrelated to printing quality.",
+  "tags": [
+    "print quality",
+    "color printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

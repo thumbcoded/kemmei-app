@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature helps prevent accidental unplugging of a DisplayPort cable?",
+  "answer_options": [
+    "Magnetic tips",
+    "Threaded connectors",
+    "Locking mechanism",
+    "Rubber grip"
+  ],
+  "correct_answer": [
+    "Locking mechanism"
+  ],
+  "explanation": "DisplayPort connectors include a small latch that locks the cable in place, requiring a button press to disconnect.",
+  "tags": [
+    "locking mechanism"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool should you use to verify the type of voltage coming from a wall outlet?",
+  "answer_options": [
+    "Power inverter",
+    "Wattmeter",
+    "Multimeter",
+    "Line tester"
+  ],
+  "correct_answer": [
+    "Multimeter"
+  ],
+  "explanation": "A multimeter can measure both AC and DC voltages, helping verify the outlet’s voltage type and range.",
+  "tags": [
+    "power calculation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

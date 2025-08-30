@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-101",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is troubleshooting an impact printer that prints very faint characters. What is the MOST likely cause?",
+  "answer_options": [
+    "Clogged nozzles",
+    "Fuser overheating",
+    "Dry thermal paper",
+    "Worn ribbon or weak pin impact"
+  ],
+  "correct_answer": [
+    "Worn ribbon or weak pin impact"
+  ],
+  "explanation": "Faint output may result from an old ribbon or failing pins that don’t strike with enough force.",
+  "tags": [
+    "dot matrix pattern",
+    "low-resolution output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

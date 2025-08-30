@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of DNS record specifies the mail server responsible for a domain?",
+  "answer_options": [
+    "MX record",
+    "TXT record",
+    "AAAA record",
+    "CNAME record"
+  ],
+  "correct_answer": [
+    "MX record"
+  ],
+  "explanation": "MX (Mail Exchanger) records identify the mail server responsible for handling email for a domain.",
+  "tags": [
+    "MX record",
+    "mail exchanger"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which record lists authorized mail servers allowed to send email on behalf of a domain?",
+  "answer_options": [
+    "MX",
+    "SPF",
+    "CNAME",
+    "NS"
+  ],
+  "correct_answer": [
+    "SPF"
+  ],
+  "explanation": "SPF (Sender Policy Framework) records list the mail servers that are permitted to send email for a domain.",
+  "tags": [
+    "SPF",
+    "Sender Policy Framework",
+    "email verification"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

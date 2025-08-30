@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO steps directly involve electrostatic charge manipulation during the laser printing process?",
+  "answer_options": [
+    "Charging",
+    "Writing",
+    "Developing",
+    "Fusing",
+    "Cleaning"
+  ],
+  "correct_answer": [
+    "Charging",
+    "Writing"
+  ],
+  "explanation": "Charging applies a uniform negative charge to the drum, and Writing uses the laser to discharge targeted areas.",
+  "tags": [
+    "charging",
+    "writing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

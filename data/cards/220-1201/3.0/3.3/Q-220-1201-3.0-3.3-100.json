@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-100",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason computer manufacturers ship systems with two 16GB memory modules instead of one 32GB module?",
+  "answer_options": [
+    "Two modules cost less than one larger module",
+    "Two modules enable dual-channel memory operation for better performance",
+    "One large module would overheat the system",
+    "Two modules provide automatic backup if one fails"
+  ],
+  "correct_answer": [
+    "Two modules enable dual-channel memory operation for better performance"
+  ],
+  "explanation": "Using two identical modules allows the motherboard to operate in dual-channel mode, doubling memory bandwidth compared to single-channel operation.",
+  "tags": [
+    "dual channel",
+    "memory module matching",
+    "memory performance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

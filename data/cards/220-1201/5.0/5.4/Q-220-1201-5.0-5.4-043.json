@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition might trigger a mobile device’s thermal shutdown feature?",
+  "answer_options": [
+    "Inactivity timeout",
+    "Firmware update pending",
+    "Exposure to direct sunlight while running apps",
+    "Too many push notifications"
+  ],
+  "correct_answer": [
+    "Exposure to direct sunlight while running apps"
+  ],
+  "explanation": "High ambient temperature combined with CPU activity can exceed safe thermal limits, causing a protective shutdown.",
+  "tags": [
+    "thermal shutdown"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

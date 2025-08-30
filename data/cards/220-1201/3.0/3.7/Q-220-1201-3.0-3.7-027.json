@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A print job with complex graphics renders incorrectly when sent to a network printer using a PCL driver. Which change is most likely to resolve the issue?",
+  "answer_options": [
+    "Update the printer’s firmware",
+    "Switch to a PostScript driver",
+    "Enable duplex mode",
+    "Lower the print resolution"
+  ],
+  "correct_answer": [
+    "Switch to a PostScript driver"
+  ],
+  "explanation": "PostScript is designed to handle complex graphic rendering, while PCL may not interpret such jobs reliably. Changing to a PostScript driver can fix rendering issues.",
+  "tags": [
+    "PostScript"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

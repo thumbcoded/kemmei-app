@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is one key difference between OLED and LCD displays?",
+  "answer_options": [
+    "OLEDs require a backlight",
+    "OLEDs are self-emitting and do not need a backlight",
+    "LCDs have better color accuracy than OLEDs",
+    "OLEDs are thicker than LCDs"
+  ],
+  "correct_answer": [
+    "OLEDs are self-emitting and do not need a backlight"
+  ],
+  "explanation": "OLEDs produce their own light, eliminating the need for a separate backlight like in LCDs.",
+  "tags": [
+    "self-emitting",
+    "no backlight"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

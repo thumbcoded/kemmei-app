@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key difference in the management responsibility between cloud email and local email servers?",
+  "answer_options": [
+    "Cloud email requires manual HTML coding",
+    "Cloud email provides more flexible network segmentation",
+    "Local email servers require internal maintenance and updates",
+    "Local email servers offer better encryption than cloud email"
+  ],
+  "correct_answer": [
+    "Local email servers require internal maintenance and updates"
+  ],
+  "explanation": "Local email servers give organizations direct control but also make them responsible for updates, security patches, and hardware upkeep.",
+  "tags": [
+    "local email servers",
+    "email server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

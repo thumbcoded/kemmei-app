@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the refresh rate of a display refer to?",
+  "answer_options": [
+    "The screen’s brightness level",
+    "The number of pixels per inch",
+    "How often the image updates per second",
+    "The delay in keyboard input"
+  ],
+  "correct_answer": [
+    "How often the image updates per second"
+  ],
+  "explanation": "Refresh rate is how many times the screen updates the image every second, measured in hertz (Hz).",
+  "tags": [
+    "refresh rate"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

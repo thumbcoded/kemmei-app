@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-124",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common reason for using a USB to DB9 adapter in modern IT environments?",
+  "answer_options": [
+    "To extend HDMI signal over Ethernet",
+    "To connect a USB printer to a console port",
+    "To interface legacy serial devices with computers lacking serial ports",
+    "To convert analog video to digital signal"
+  ],
+  "correct_answer": [
+    "To interface legacy serial devices with computers lacking serial ports"
+  ],
+  "explanation": "Many modern laptops and desktops no longer include DB9 serial ports, so USB-to-DB9 adapters are used to access legacy hardware.",
+  "tags": [
+    "USB to DB9 adapter",
+    "legacy equipment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

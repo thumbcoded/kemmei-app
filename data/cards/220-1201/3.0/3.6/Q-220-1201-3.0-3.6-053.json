@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of standby power (5VSB) from a power supply?",
+  "answer_options": [
+    "To power the CPU continuously",
+    "To enable network communication",
+    "To allow the system to wake from sleep or respond to events while off",
+    "To power cooling fans during shutdown"
+  ],
+  "correct_answer": [
+    "To allow the system to wake from sleep or respond to events while off"
+  ],
+  "explanation": "Standby power keeps certain circuits alive for wake-on-LAN and soft power features.",
+  "tags": [
+    "standby power"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which BIOS setting determines whether the system will attempt to boot from a USB drive before an SSD?",
+  "answer_options": [
+    "Fan curve control",
+    "USB boot priority",
+    "Voltage regulation",
+    "Overclocking profile"
+  ],
+  "correct_answer": [
+    "USB boot priority"
+  ],
+  "explanation": "USB boot priority defines whether the system will try removable USB storage before fixed drives during boot.",
+  "tags": [
+    "USB boot priority"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

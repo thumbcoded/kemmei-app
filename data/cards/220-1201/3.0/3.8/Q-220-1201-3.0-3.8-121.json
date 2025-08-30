@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-121",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What kind of paper is required for thermal printers to function?",
+  "answer_options": [
+    "Matte photo paper",
+    "Bond paper",
+    "Thermal paper",
+    "Cardstock"
+  ],
+  "correct_answer": [
+    "Thermal paper"
+  ],
+  "explanation": "Thermal printers use chemically treated paper that darkens when exposed to heat.",
+  "tags": [
+    "thermal paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

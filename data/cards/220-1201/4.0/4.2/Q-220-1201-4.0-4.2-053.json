@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key difference between SaaS and IaaS?",
+  "answer_options": [
+    "SaaS users configure firewalls and storage arrays",
+    "IaaS provides more built-in applications",
+    "SaaS removes the need to manage operating system updates",
+    "SaaS requires manual hypervisor tuning"
+  ],
+  "correct_answer": [
+    "SaaS removes the need to manage operating system updates"
+  ],
+  "explanation": "In SaaS, the provider manages the OS, platform, and app stack, freeing the user from technical maintenance tasks.",
+  "tags": [
+    "SaaS",
+    "operating system updates"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

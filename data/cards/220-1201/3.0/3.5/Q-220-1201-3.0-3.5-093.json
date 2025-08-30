@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is used for high-speed internal SSDs that connect directly to the motherboard?",
+  "answer_options": [
+    "USB-C",
+    "SATA",
+    "M.2",
+    "eSATA"
+  ],
+  "correct_answer": [
+    "M.2"
+  ],
+  "explanation": "M.2 connectors are used for small, high-speed storage devices, including NVMe SSDs, that plug directly into the motherboard.",
+  "tags": [
+    "M.2 connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

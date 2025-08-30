@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component in an LCD helps display different colors to the user?",
+  "answer_options": [
+    "Polarization filter",
+    "Color filter",
+    "Refresh controller",
+    "Graphics processor"
+  ],
+  "correct_answer": [
+    "Color filter"
+  ],
+  "explanation": "The color filter in an LCD helps create red, green, and blue images that form the final display.",
+  "tags": [
+    "color filter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

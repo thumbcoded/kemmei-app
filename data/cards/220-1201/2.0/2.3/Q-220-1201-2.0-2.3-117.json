@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which types of devices are commonly found in IoT deployments? (Select all that apply)",
+  "answer_options": [
+    "Smart refrigerators and coffee makers",
+    "Voice-controlled smart speakers",
+    "Thermostats and heating controls",
+    "Smart doorbells and garage door openers",
+    "Network servers and databases"
+  ],
+  "correct_answer": [
+    "Smart refrigerators and coffee makers",
+    "Voice-controlled smart speakers",
+    "Thermostats and heating controls",
+    "Smart doorbells and garage door openers"
+  ],
+  "explanation": "IoT devices include a broad category of smart appliances, voice-controlled devices, climate controls, and access control devices that connect to networks for enhanced functionality.",
+  "tags": [
+    "IoT",
+    "smart devices",
+    "internet of things"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

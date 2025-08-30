@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-100",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which technical limitation caused the decline in adoption of CD-ROMs for software distribution?",
+  "answer_options": [
+    "Too fragile for mobile use",
+    "Insufficient storage capacity for modern applications",
+    "Incompatibility with Windows systems",
+    "Requirement for RAID arrays"
+  ],
+  "correct_answer": [
+    "Insufficient storage capacity for modern applications"
+  ],
+  "explanation": "At 700 MB, CD-ROMs lack the capacity needed for modern software, which increasingly requires multiple GBs of storage.",
+  "tags": [
+    "CD-ROM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

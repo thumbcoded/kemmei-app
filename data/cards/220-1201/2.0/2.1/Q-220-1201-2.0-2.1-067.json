@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In which scenario would TCP be a poor choice compared to UDP?",
+  "answer_options": [
+    "Sending bank transaction records",
+    "Live voice chat in a multiplayer game",
+    "Downloading a large software package",
+    "Accessing a secure website"
+  ],
+  "correct_answer": [
+    "Live voice chat in a multiplayer game"
+  ],
+  "explanation": "Voice chat requires speed, not perfect delivery. TCP's retransmissions cause lag, making it suboptimal.",
+  "tags": [
+    "real-time application",
+    "streaming vs browsing",
+    "TCP vs UDP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

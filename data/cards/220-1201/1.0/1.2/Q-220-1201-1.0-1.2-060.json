@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a phone fail to redirect audio to an external Bluetooth speaker even though it shows as connected?",
+  "answer_options": [
+    "The speaker is too loud",
+    "The phone is in silent mode",
+    "Audio routing settings may be overridden or stuck",
+    "The speaker does not support any audio codecs"
+  ],
+  "correct_answer": [
+    "Audio routing settings may be overridden or stuck"
+  ],
+  "explanation": "Some OS-level bugs or app behaviors may prevent proper audio routing even when Bluetooth pairing succeeds.",
+  "tags": [
+    "Bluetooth speaker",
+    "audio output",
+    "compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

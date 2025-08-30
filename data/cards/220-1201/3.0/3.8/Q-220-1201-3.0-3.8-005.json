@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component helps render the page data before printing begins?",
+  "answer_options": [
+    "Fuser unit",
+    "Toner cartridge",
+    "Onboard memory",
+    "Photosensitive drum"
+  ],
+  "correct_answer": [
+    "Onboard memory"
+  ],
+  "explanation": "Laser printers use onboard memory and a processor to render and store page data before printing.",
+  "tags": [
+    "onboard memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

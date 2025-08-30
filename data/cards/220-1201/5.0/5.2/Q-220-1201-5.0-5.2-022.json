@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician uses third-party software to graph SMART data over time. What is the main goal of this analysis?",
+  "answer_options": [
+    "Increase IOPS values",
+    "Enhance disk encryption",
+    "Perform drive performance analysis",
+    "Backup system registry"
+  ],
+  "correct_answer": [
+    "Perform drive performance analysis"
+  ],
+  "explanation": "Drive performance analysis with third-party utilities helps monitor trends and predict hardware issues before failure occurs.",
+  "tags": [
+    "drive performance analysis"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician uses `nslookup` but receives a 'Non-authoritative answer'. What does this indicate?",
+  "answer_options": [
+    "The DNS server refused the query",
+    "The DNS resolution failed entirely",
+    "The DNS server responded using cached data or a recursive resolver",
+    "The DNS server returned a spoofed IP address"
+  ],
+  "correct_answer": [
+    "The DNS server responded using cached data or a recursive resolver"
+  ],
+  "explanation": "Non-authoritative answers mean the response came from a server that isn’t authoritative for the domain, often via cache or a resolver.",
+  "tags": [
+    "nslookup",
+    "DNS server",
+    "DNS resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

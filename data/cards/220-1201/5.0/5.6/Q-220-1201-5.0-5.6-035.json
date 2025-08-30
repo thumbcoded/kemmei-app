@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "After a recent cartridge replacement, a technician observes erratic print carriage motion and loud grinding. Which two actions should be taken? (Select two)",
+  "answer_options": [
+    "Reset the print spooler",
+    "Inspect the ink cartridge seating",
+    "Perform printer maintenance mode",
+    "Realign the paper feed sensor",
+    "Check for internal obstructions along the carriage path"
+  ],
+  "correct_answer": [
+    "Inspect the ink cartridge seating",
+    "Check for internal obstructions along the carriage path"
+  ],
+  "explanation": "Grinding and movement issues after cartridge changes often stem from improper seating or internal mechanical blockages.",
+  "tags": [
+    "grinding noise",
+    "carriage movement",
+    "ink cartridge seating",
+    "mechanical problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

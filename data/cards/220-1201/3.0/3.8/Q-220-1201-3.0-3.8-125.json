@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-125",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which precaution should be taken when replacing a laser printer’s toner cartridge?",
+  "answer_options": [
+    "Shake the cartridge vigorously",
+    "Avoid touching the drum surface",
+    "Leave it in direct sunlight before use",
+    "Submerge in water to remove static"
+  ],
+  "correct_answer": [
+    "Avoid touching the drum surface"
+  ],
+  "explanation": "The drum surface is light-sensitive and easily damaged by fingerprints or scratches.",
+  "tags": [
+    "toner"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

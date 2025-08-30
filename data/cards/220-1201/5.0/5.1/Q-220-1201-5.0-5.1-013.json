@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "A system is producing a pattern of one long and two short beeps. (Select all that apply)",
+  "answer_options": [
+    "This indicates a video card failure on many BIOS versions",
+    "Documentation from the motherboard manufacturer should be consulted",
+    "The issue lies with the operating system bootloader",
+    "Replacing the CMOS battery will likely fix the issue",
+    "POST is providing diagnostic information through beep codes"
+  ],
+  "correct_answer": [
+    "This indicates a video card failure on many BIOS versions",
+    "Documentation from the motherboard manufacturer should be consulted",
+    "POST is providing diagnostic information through beep codes"
+  ],
+  "explanation": "Beep codes such as '1 long, 2 short' often point to video failures. These codes vary across BIOS vendors, so the official documentation should be used for decoding.",
+  "tags": [
+    "long and short beep codes",
+    "manufacturer documentation",
+    "POST"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

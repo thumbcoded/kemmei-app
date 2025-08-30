@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "In a metered cloud billing model, what is typically charged as 'egress' traffic?",
+  "answer_options": [
+    "Data sent to the cloud service",
+    "Data downloaded from the cloud to users",
+    "Data written to local storage",
+    "Data exchanged between CPUs"
+  ],
+  "correct_answer": [
+    "Data downloaded from the cloud to users"
+  ],
+  "explanation": "Egress traffic refers to outbound data leaving the cloud service, typically downloaded by end users.",
+  "tags": [
+    "egress traffic"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

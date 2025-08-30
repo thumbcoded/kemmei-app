@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-138",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What should you consider regarding motherboard warranty during troubleshooting and repairs?",
+  "answer_options": [
+    "Warranty considerations are irrelevant during troubleshooting procedures",
+    "Check warranty status before disassembly, document problems, follow RMA procedures if covered",
+    "All motherboards have lifetime warranties that cover any type of damage",
+    "Warranty only covers software issues and never hardware problems"
+  ],
+  "correct_answer": [
+    "Check warranty status before disassembly, document problems, follow RMA procedures if covered"
+  ],
+  "explanation": "Motherboard warranty considerations: 1) Check warranty status and terms before opening case, 2) Document problems and symptoms, 3) Take photos of damage if visible, 4) Follow manufacturer's RMA procedures, 5) Avoid actions that void warranty (removing warranty stickers, physical damage from troubleshooting), 6) Keep purchase receipts and original packaging.",
+  "tags": [
+    "motherboard warranty"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

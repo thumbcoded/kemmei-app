@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which TCP flag is used to initiate a connection?",
+  "answer_options": [
+    "ACK",
+    "FIN",
+    "SYN",
+    "RST"
+  ],
+  "correct_answer": [
+    "SYN"
+  ],
+  "explanation": "The SYN (synchronize) flag is used to initiate a TCP connection as part of the three-way handshake.",
+  "tags": [
+    "SYN",
+    "three-way handshake"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

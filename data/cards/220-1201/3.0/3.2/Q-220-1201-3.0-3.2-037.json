@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "MHL is most often used to transmit video signals from which type of device?",
+  "answer_options": [
+    "Desktop graphics cards",
+    "Mobile phones and tablets",
+    "Fiber-optic modems",
+    "USB-C flash drives"
+  ],
+  "correct_answer": [
+    "Mobile phones and tablets"
+  ],
+  "explanation": "MHL (Mobile High-Definition Link) allows smartphones and tablets to send video and audio through USB or HDMI adapters.",
+  "tags": [
+    "MHL",
+    "Mobile High-Definition Link"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

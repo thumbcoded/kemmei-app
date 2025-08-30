@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the most likely outcome when a liquid crystal display is physically damaged?",
+  "answer_options": [
+    "The image appears slightly shifted",
+    "The screen develops colored lines and black patches",
+    "The system boots into Safe Mode",
+    "Brightness settings are reset"
+  ],
+  "correct_answer": [
+    "The screen develops colored lines and black patches"
+  ],
+  "explanation": "Physical damage to LCD panels often leads to visible lines, dark regions, or blotches due to cracked internal components.",
+  "tags": [
+    "liquid crystal display damage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

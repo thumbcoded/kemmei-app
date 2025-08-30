@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which flash storage interface was introduced as a bridge between SATA and M.2 but is now largely obsolete?",
+  "answer_options": [
+    "M.2",
+    "mSATA",
+    "NVMe",
+    "AHCI"
+  ],
+  "correct_answer": [
+    "mSATA"
+  ],
+  "explanation": "mSATA (mini-SATA) was an early form factor for SSDs but has been mostly replaced by the more versatile and faster M.2 interface.",
+  "tags": [
+    "non-volatile storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

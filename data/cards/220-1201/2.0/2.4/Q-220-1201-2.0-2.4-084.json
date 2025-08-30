@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of cryptographic key is published in the DNS for verifying DKIM signatures?",
+  "answer_options": [
+    "Private key",
+    "Session key",
+    "Public key",
+    "Symmetric key"
+  ],
+  "correct_answer": [
+    "Public key"
+  ],
+  "explanation": "DKIM uses a public key stored in DNS to validate email signatures created with the sender’s private key.",
+  "tags": [
+    "public key",
+    "DKIM",
+    "digital signature"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

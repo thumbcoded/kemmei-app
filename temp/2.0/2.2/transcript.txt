@@ -1,0 +1,43 @@
+Wireless Technologies
+
+When we hear the term wireless technologies, most of us probably think about the wireless networks that we use at home or at our business to be able to connect to other devices on the network or to the internet. This type of network is one that is standardized by the IEEE. This is the Institute of Electrical and Electronics Engineers. And the committee that handles the standards for this type of network is the 802.11 committee. That's why you'll often hear these networks referred to as 802.11 networks.
+
+However, the 802.11 committee realizes that using the 802.11 name along with a series of letters to designate what version of the network it happens to be might be confusing for some. So in order to make this a bit easier to follow, they've changed the naming convention so that the 802.11 AC standard is also called Wi-Fi 5. They then referred to the 802.11 AX standard as Wi-Fi 6 and Wi-Fi 6E for extended. And the 802.11BE standard is also called Wi-Fi 7. This makes it a bit easier to differentiate between versions. So instead of using those 802.11 names, you can simply use Wi-Fi 5, Wi-Fi 6, Wi-Fi 7 and so on.
+
+Wi-Fi Frequencies and Channels
+
+Our Wi-Fi networks have a number of different frequencies that they might use to be able to facilitate this communication. And different standards of Wi-Fi use different frequencies. Most Wi-Fi networks will use frequencies in the 2.4 GHz range, the 5 GHz range and the 6 GHz range. And some access points and devices can communicate across multiple ranges simultaneously.
+
+Instead of having to memorize or reference a specific frequency, the 802.11 committee has grouped frequencies together into channels. These channels are much easier to remember than the exact frequency value and allows you to quickly refer to where a frequency might be based on a broader channel number. You can see these channels being used if you look at the wireless configuration for your device.
+
+On my device I'm running in the 2.4 GHz range on channel 6. If you go back to the IEEE standards you can see that that is also the 2.437 GHz frequency that's being used for channel 6. I'm also using the 5 GHz range. And you can see I'm using channel 44. If we look that up we can see that I'm communicating on 5.220 GHz. You can see that it's much easier to refer back to channel 44 rather than specifying the 5.220 GHz frequency.
+
+Bandwidth and Spectrum Comparison
+
+We refer to the amount of spectrum that we would use as the bandwidth for that communication. And it's very common to see bandwidths of 20, 40, 80 or 160 MHz. Let's compare the different bandwidths and frequencies that might be in use on an 802.11 network.
+
+Let's start with the 2.4 GHz spectrum. Relatively speaking, 2.4 GHz doesn't provide you with many frequencies. And if you're using that in a confined area with a lot of wireless networks you may find that there's a lot of interference from other devices. This is showing three different 20 megahertz ranges that do not overlap in the 2.4 GHz spectrum, which means there's really three channels to choose from if you're running something in 2.4 GHz.
+
+You can see now why we expanded into the 5 GHz range where you have many more frequencies available. Not only in 20 MHz bandwidths, but if you wanted to use even more bandwidth on that network to increase your throughput, you could have 40 MHz, 80 MHz or 160 MHz in the 5 GHz spectrum. And when you look at 6 GHz you can see that you have much more spectrum to work with, many more frequencies available that allow you a lot of different bandwidths across the 6 GHz range.
+
+Bluetooth Technology
+
+But 802.11 is not the only way to transmit wirelessly. If you're using a wireless headset or wireless speakers, you're probably using Bluetooth to be able to connect those devices to your computer. Bluetooth technology uses the 2.4 GHz range. You might also see this referred to as the unlicensed ISM frequencies. That stands for the industrial, scientific and medical band. These are frequencies that don't require any specialized licenses to be able to use them, which is why we can simply turn on our computers and be able to connect to other devices using 802.11 or Bluetooth.
+
+With 802.11 we can move around a building and still have access to the network. But Bluetooth ranges are a bit more confined. This is why we often will see these being used with devices that are personally connected to us. If you're using consumer devices with Bluetooth, they have a maximum range of about 10 meters.
+
+RFID - Radio Frequency Identification
+
+Another popular wireless technology is RFID or radio frequency identification. RFID has many different uses. You might find it in the badges you use to gain access to your building. There might be RFID tags inside products you might purchase or across an assembly line. You might also find RFID technology inside of our pets. This allows you to scan the pet and know immediately who that pet belongs to.
+
+This is an example of an RFID tag that's about the size of this grain of rice that's right next to it. There are also other styles of tags. This one is flat - commonly see this inside of access cards. This design around the outside is the antenna. And if you look closely at the middle you'll see the actual RFID chip.
+
+You'll notice there's no battery connected to this RFID tag. It usually sits idle with no power whatsoever. But when you bring a scanner close to this device, the power from that radio frequency is enough to power the RFID tag. The scanner then receives an ID code from the tag and then compares that to the information it has in a database to determine what that ID tag is referencing.
+
+There are also other types of RFID tags you might run into that do have batteries that are able to be actively powered so that you're able to scan that device from a longer distance away.
+
+NFC - Near Field Communication
+
+And many of our mobile devices these days have another style of wireless technology known as NFC or near field communication. NFC builds on the technology of RFID, which is generally a one-way communication, and extends that to have two-way communication to your NFC devices.
+
+One popular use of NFC is to use your phone or your smartwatch to pay for products at a point of sale terminal. And if you've ever set up a device that needs to connect to a Bluetooth network or a wireless network, it often uses NFC in conjunction with your mobile phone to be able to give it the configuration parameters it needs to connect to your network. And since many people are carrying around their phones with NFC functionality, you could use that to open a door or to provide a type of identification.

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-124",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which printer task involves removing and replacing a used cartridge?",
+  "answer_options": [
+    "Calibration",
+    "Cartridge replacement",
+    "Firmware update",
+    "Roller cleaning"
+  ],
+  "correct_answer": [
+    "Cartridge replacement"
+  ],
+  "explanation": "Cartridge replacement is a routine procedure in printers to restore ink or toner supply.",
+  "tags": [
+    "cartridge replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

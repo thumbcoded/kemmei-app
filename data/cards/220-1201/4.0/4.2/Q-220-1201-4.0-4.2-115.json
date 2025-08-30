@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two potential concerns related to multi-tenancy in a cloud environment.",
+  "answer_options": [
+    "Data separation between customers",
+    "Hardware ownership by end users",
+    "Cost efficiency for the provider",
+    "Vendor lock-in",
+    "Security isolation between tenants"
+  ],
+  "correct_answer": [
+    "Data separation between customers",
+    "Security isolation between tenants"
+  ],
+  "explanation": "Multi-tenancy raises concerns about securely isolating and separating customer data in a shared environment.",
+  "tags": [
+    "multi-tenancy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

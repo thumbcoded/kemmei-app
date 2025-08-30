@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-120",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which item is a common consumable in an inkjet printer?",
+  "answer_options": [
+    "Toner cartridge",
+    "Ribbon cartridge",
+    "Ink cartridge",
+    "Thermal paper"
+  ],
+  "correct_answer": [
+    "Ink cartridge"
+  ],
+  "explanation": "Ink cartridges are regularly replaced in inkjet printers as part of normal use.",
+  "tags": [
+    "ink"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

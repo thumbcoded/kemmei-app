@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician observes a device with battery swelling but still functioning. What is the most appropriate recommendation to the customer?",
+  "answer_options": [
+    "Use the device until performance is impacted",
+    "Puncture the battery and remove the gas buildup",
+    "Turn off the device and replace the battery immediately",
+    "Place the device in airplane mode to reduce battery use"
+  ],
+  "correct_answer": [
+    "Turn off the device and replace the battery immediately"
+  ],
+  "explanation": "Even if the device still operates, a swollen battery presents serious fire risk and should not be used further. Immediate replacement is necessary.",
+  "tags": [
+    "battery swelling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

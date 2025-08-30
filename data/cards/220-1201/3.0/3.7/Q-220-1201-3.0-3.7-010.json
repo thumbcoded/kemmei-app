@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is setting up an MFD for remote printing and scanning in a secure office. Which two of the following configurations should they prioritize? (Select two)",
+  "answer_options": [
+    "Assigning a static IP address",
+    "Disabling DHCP on the router",
+    "Configuring SSL/TLS for email transmission",
+    "Enabling Bluetooth connectivity",
+    "Changing the default admin password"
+  ],
+  "correct_answer": [
+    "Assigning a static IP address",
+    "Configuring SSL/TLS for email transmission"
+  ],
+  "explanation": "A static IP simplifies consistent access for network devices. Secure scan-to-email requires TLS encryption to protect sensitive data.",
+  "tags": [
+    "multi-function device"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

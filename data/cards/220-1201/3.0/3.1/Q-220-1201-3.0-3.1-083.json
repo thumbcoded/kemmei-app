@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which factor most limits resistive touchscreens in modern smartphone use?",
+  "answer_options": [
+    "Poor compatibility with stylus input",
+    "Lack of multi-touch capability and lower image clarity",
+    "Excessive power consumption",
+    "Dependence on infrared emitters"
+  ],
+  "correct_answer": [
+    "Lack of multi-touch capability and lower image clarity"
+  ],
+  "explanation": "Resistive touchscreens are typically single-touch and involve multiple layers that reduce display clarity, making them less suitable for modern multitouch apps.",
+  "tags": [
+    "resistive touchscreen"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

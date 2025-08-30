@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A technician observes that a PCIe network card does not function in one slot but works in another. What is the likely issue?",
+  "answer_options": [
+    "Incorrect BIOS boot order",
+    "Corrupt operating system",
+    "Damaged expansion slot",
+    "Bad CMOS battery"
+  ],
+  "correct_answer": [
+    "Damaged expansion slot"
+  ],
+  "explanation": "If the card functions in a different slot, the original expansion slot may be damaged or non-functional.",
+  "tags": [
+    "expansion slots"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

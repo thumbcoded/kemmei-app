@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two reasons why virtualizing legacy applications may be preferred over using modern compatibility layers.",
+  "answer_options": [
+    "Virtual machines ensure isolation from host system vulnerabilities",
+    "Legacy applications often lack user interfaces on modern systems",
+    "Snapshots reduce the need for antivirus tools",
+    "The legacy OS environment can be exactly replicated and preserved"
+  ],
+  "correct_answer": [
+    "Virtual machines ensure isolation from host system vulnerabilities",
+    "The legacy OS environment can be exactly replicated and preserved"
+  ],
+  "explanation": "VMs provide both security and fidelity. Running legacy OSes directly avoids instability introduced by translation layers or compatibility hacks.",
+  "tags": [
+    "legacy application support",
+    "legacy OS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

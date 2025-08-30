@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company prints instructional booklets using duplex printing. Some pages appear upside down when folded. What is the most appropriate solution?",
+  "answer_options": [
+    "Enable manual feed mode",
+    "Switch from portrait to landscape orientation",
+    "Adjust the duplex setting to flip on the correct edge",
+    "Reduce the print resolution to 300 DPI"
+  ],
+  "correct_answer": [
+    "Adjust the duplex setting to flip on the correct edge"
+  ],
+  "explanation": "Incorrect flip settings (long vs. short edge) on duplex printers can cause back-side pages to appear upside down when printed in booklet form.",
+  "tags": [
+    "duplex printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

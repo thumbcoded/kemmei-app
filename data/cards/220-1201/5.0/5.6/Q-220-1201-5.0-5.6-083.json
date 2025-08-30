@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician prints a test page directly from a printer's control panel and sees clean output. However, OS-initiated print jobs appear garbled. What does this suggest?",
+  "answer_options": [
+    "Printer hardware failure",
+    "Driver mismatch or OS-side issue",
+    "Printer self-test failed",
+    "Toner cartridge needs replacement"
+  ],
+  "correct_answer": [
+    "Driver mismatch or OS-side issue"
+  ],
+  "explanation": "If the printer self-test works but OS-based output is garbled, the likely issue is with the driver or application software.",
+  "tags": [
+    "printer self test",
+    "OS test page"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes 'random access storage' in a hard drive?",
+  "answer_options": [
+    "Data can only be written sequentially",
+    "Data is accessed in a random pattern to prevent wear",
+    "Data is accessed directly from any location on the drive",
+    "Data must be read from start to end every time"
+  ],
+  "correct_answer": [
+    "Data is accessed directly from any location on the drive"
+  ],
+  "explanation": "Random access means the drive can jump to any location without needing to read all preceding data, unlike sequential storage.",
+  "tags": [
+    "random access storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

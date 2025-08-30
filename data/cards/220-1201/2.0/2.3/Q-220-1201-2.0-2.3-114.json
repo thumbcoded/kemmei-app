@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-114",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary security concern when deploying IoT devices in enterprise networks?",
+  "answer_options": [
+    "High power consumption",
+    "Manufacturers may lack network security expertise",
+    "Expensive licensing costs",
+    "Incompatible network protocols"
+  ],
+  "correct_answer": [
+    "Manufacturers may lack network security expertise"
+  ],
+  "explanation": "Companies that make appliances like refrigerators, speakers, or thermostats are good at making those devices but may not be good at connecting to networks and maintaining network security.",
+  "tags": [
+    "IoT",
+    "segmented network",
+    "device isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

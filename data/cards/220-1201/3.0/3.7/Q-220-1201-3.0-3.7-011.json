@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following should be included in the security hardening of a multi-function device? (Select all that apply)",
+  "answer_options": [
+    "Changing default administrator credentials",
+    "Disabling unused protocols (e.g., FTP, Telnet)",
+    "Allowing anonymous printing for public users",
+    "Enabling audit logging",
+    "Using factory reset daily to clear data"
+  ],
+  "correct_answer": [
+    "Changing default administrator credentials",
+    "Disabling unused protocols (e.g., FTP, Telnet)",
+    "Enabling audit logging"
+  ],
+  "explanation": "Security hardening of MFDs includes securing access credentials, minimizing attack surfaces by disabling unnecessary services, and enabling logging for accountability.",
+  "tags": [
+    "multi-function device"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

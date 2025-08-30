@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You access the web interface of a network printer and notice the IP address differs from the one in the print server queue. What is the best action to take?",
+  "answer_options": [
+    "Reboot the printer",
+    "Assign a static IP and update the print server",
+    "Clear the print queue and retry",
+    "Update the printer firmware"
+  ],
+  "correct_answer": [
+    "Assign a static IP and update the print server"
+  ],
+  "explanation": "Dynamic IPs can change. Assigning a static IP and syncing it with the print server ensures consistent network routing.",
+  "tags": [
+    "printer IP address",
+    "print server",
+    "network configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

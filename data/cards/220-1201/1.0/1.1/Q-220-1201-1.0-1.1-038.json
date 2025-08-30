@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician attempts to replace a broken keycap but finds the retainer clip is a non-standard design not found in standard kits. What is the best next step?",
+  "answer_options": [
+    "Attempt to adapt a similar clip from another model",
+    "Replace the keyboard assembly",
+    "Superglue the clip to the keycap",
+    "Submit the laptop for full warranty replacement"
+  ],
+  "correct_answer": [
+    "Replace the keyboard assembly"
+  ],
+  "explanation": "If the key mechanism uses a proprietary part and replacements are unavailable, the entire keyboard may need to be replaced.",
+  "tags": [
+    "key replacement",
+    "damaged key"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

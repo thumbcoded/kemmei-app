@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What advanced diagnostic step can help determine whether garbled output is due to an OS-level issue or the printer hardware itself?",
+  "answer_options": [
+    "Cleaning the print heads",
+    "Printing a test page from the printer's control panel",
+    "Reinstalling the printer driver",
+    "Swapping to a new toner cartridge"
+  ],
+  "correct_answer": [
+    "Printing a test page from the printer's control panel"
+  ],
+  "explanation": "A printer-internal test page bypasses the OS and driver entirely. If that page prints fine, the problem is with software, not the printer hardware.",
+  "tags": [
+    "print quality",
+    "garbled print",
+    "corrupted output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

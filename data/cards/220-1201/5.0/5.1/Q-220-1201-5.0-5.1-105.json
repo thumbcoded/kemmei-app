@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-105",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does a 'no boot' condition mean and how do you differentiate it from other startup problems?",
+  "answer_options": [
+    "Computer has no power at all - no lights, fans, or sounds",
+    "Computer powers on but fails to load any operating system or reach bootable state",
+    "Computer starts but immediately shuts down due to overheating",
+    "Computer displays BIOS setup screen but won't continue"
+  ],
+  "correct_answer": [
+    "Computer powers on but fails to load any operating system or reach bootable state"
+  ],
+  "explanation": "A 'no boot' condition means the computer powers on but fails to load any operating system or reach a bootable state. It's differentiated by: system powers on (lights/fans work), POST may complete (no beep codes), but no OS loading occurs. This differs from no power (nothing happens) or POST failure (beep codes present).",
+  "tags": [
+    "no boot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What enables DDR memory to achieve higher transfer rates than SDR memory?",
+  "answer_options": [
+    "It runs at a lower voltage",
+    "It has fewer pins and smaller size",
+    "It transfers data on both edges of the clock cycle",
+    "It uses cache memory to reduce latency"
+  ],
+  "correct_answer": [
+    "It transfers data on both edges of the clock cycle"
+  ],
+  "explanation": "DDR (Double Data Rate) memory improves on SDR by transferring data on both the rising and falling edges of the clock cycle, doubling throughput without increasing clock speed.",
+  "tags": [
+    "double data rate",
+    "DDR",
+    "clock cycle"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

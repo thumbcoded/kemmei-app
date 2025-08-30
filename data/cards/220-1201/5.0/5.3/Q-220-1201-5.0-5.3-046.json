@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario typically requires a full display replacement?",
+  "answer_options": [
+    "Color calibration mismatch",
+    "Display set to incorrect input",
+    "Internal LCD failure",
+    "Auto-dimming enabled"
+  ],
+  "correct_answer": [
+    "Internal LCD failure"
+  ],
+  "explanation": "When the LCD panel itself fails, the issue cannot be resolved by software or configuration — a replacement is required.",
+  "tags": [
+    "LCD failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

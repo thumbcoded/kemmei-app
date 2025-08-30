@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following could negatively impact print quality if not configured correctly? (Select all that apply)",
+  "answer_options": [
+    "Incorrect paper type",
+    "Low DPI resolution",
+    "Misaligned printhead",
+    "Scan-to-USB enabled"
+  ],
+  "correct_answer": [
+    "Incorrect paper type",
+    "Low DPI resolution",
+    "Misaligned printhead"
+  ],
+  "explanation": "Improper paper type, resolution, and printhead alignment are all common culprits for poor print quality. Scan-to-USB is unrelated to printing quality.",
+  "tags": [
+    "print quality",
+    "resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

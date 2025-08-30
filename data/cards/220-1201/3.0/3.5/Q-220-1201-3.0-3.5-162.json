@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-162",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user enabled Secure Boot and now their Linux installation fails to load. What is the MOST likely cause?",
+  "answer_options": [
+    "The CPU does not support VT-x or AMD-V",
+    "Linux does not support TPM",
+    "The Linux bootloader is unsigned or improperly signed",
+    "Secure Boot requires a hardware security module (HSM)"
+  ],
+  "correct_answer": [
+    "The Linux bootloader is unsigned or improperly signed"
+  ],
+  "explanation": "Secure Boot checks digital signatures; if the Linux bootloader isn't signed correctly, it won't pass validation.",
+  "tags": [
+    "secure boot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

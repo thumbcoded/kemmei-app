@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main benefit of using patch panels for cable management in a network closet?",
+  "answer_options": [
+    "Simplifies reconfiguration and troubleshooting of cable connections",
+    "Increases Wi-Fi range",
+    "Automatically assigns VLANs",
+    "Reduces cable signal loss to zero"
+  ],
+  "correct_answer": [
+    "Simplifies reconfiguration and troubleshooting of cable connections"
+  ],
+  "explanation": "Patch panels keep wiring organized, making it easier to trace, change, or repair network connections.",
+  "tags": [
+    "patch panel",
+    "cable management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

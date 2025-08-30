@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following steps are part of the laser printing process? (Select all that apply)",
+  "answer_options": [
+    "Charging",
+    "Writing",
+    "Developing",
+    "Binding",
+    "Transferring",
+    "Fusing"
+  ],
+  "correct_answer": [
+    "Charging",
+    "Writing",
+    "Developing",
+    "Transferring",
+    "Fusing"
+  ],
+  "explanation": "Binding is not part of the laser printing process. The correct steps are Charging, Writing, Developing, Transferring, and Fusing.",
+  "tags": [
+    "laser printer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-112",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains Apple’s transition from Lightning to USB-C?",
+  "answer_options": [
+    "To reduce battery drain on iPhones",
+    "To align with industry-wide charging and data standards",
+    "To support VGA displays natively",
+    "To increase cable cost and reduce third-party use"
+  ],
+  "correct_answer": [
+    "To align with industry-wide charging and data standards"
+  ],
+  "explanation": "Apple is moving toward USB-C to comply with industry and regulatory expectations around universal charging and data interfaces.",
+  "tags": [
+    "USB-C transition"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

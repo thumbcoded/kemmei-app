@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why should anti-malware tools be installed inside each virtual machine?",
+  "answer_options": [
+    "They reduce load on the hypervisor",
+    "They detect host OS vulnerabilities",
+    "They protect against malware threats that operate within the guest OS",
+    "They are required to run any applications"
+  ],
+  "correct_answer": [
+    "They protect against malware threats that operate within the guest OS"
+  ],
+  "explanation": "Each VM is its own environment and must be protected individually from local malware infections.",
+  "tags": [
+    "anti-malware",
+    "virtual machine security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

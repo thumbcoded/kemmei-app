@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A mobile device is experiencing delays opening files, even after clearing storage space. What is the most likely root cause?",
+  "answer_options": [
+    "Software update required",
+    "Low screen brightness",
+    "Storage hardware failure",
+    "Malware infection"
+  ],
+  "correct_answer": [
+    "Storage hardware failure"
+  ],
+  "explanation": "Delays in file access despite free storage often point to hardware problems with the internal storage component.",
+  "tags": [
+    "slow performance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

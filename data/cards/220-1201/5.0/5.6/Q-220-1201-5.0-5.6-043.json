@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What tool allows administrators to review historical errors related to spooler service failures in a Windows environment?",
+  "answer_options": [
+    "Resource Monitor",
+    "System Configuration (msconfig)",
+    "Windows Event Viewer",
+    "Device Manager"
+  ],
+  "correct_answer": [
+    "Windows Event Viewer"
+  ],
+  "explanation": "The Print Service log in Windows Event Viewer shows spooler-related warnings, crashes, and failure timestamps.",
+  "tags": [
+    "Windows event viewer",
+    "spooler crash"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

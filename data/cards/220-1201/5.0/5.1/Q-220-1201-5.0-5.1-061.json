@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "If a system shows a power supply LED lit but no video or fans start, what should be checked next?",
+  "answer_options": [
+    "Video resolution settings",
+    "Internal power connections to motherboard and CPU",
+    "CMOS battery charge level",
+    "Monitor refresh rate"
+  ],
+  "correct_answer": [
+    "Internal power connections to motherboard and CPU"
+  ],
+  "explanation": "Even if the PSU is receiving power, loose or missing internal power cables can prevent system components from activating.",
+  "tags": [
+    "internal power cables"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

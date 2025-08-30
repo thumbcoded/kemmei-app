@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An organization uses internal DNS servers that cache external query results. What potential issue can arise if the DNS cache becomes corrupted?",
+  "answer_options": [
+    "Users will be redirected to the wrong DHCP server",
+    "All local DHCP leases will be revoked",
+    "Clients may be directed to incorrect or unreachable IP addresses",
+    "Reverse DNS lookups will bypass DNS resolution"
+  ],
+  "correct_answer": [
+    "Clients may be directed to incorrect or unreachable IP addresses"
+  ],
+  "explanation": "A corrupted DNS cache can cause clients to receive outdated or incorrect IP mappings, leading to connection failures or potential security issues.",
+  "tags": [
+    "DNS cache"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

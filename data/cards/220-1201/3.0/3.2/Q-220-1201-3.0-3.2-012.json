@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a DisplayPort-to-HDMI passive adapter work in one direction but not the other?",
+  "answer_options": [
+    "DisplayPort only supports analog signals",
+    "Passive adapters only convert HDMI audio, not video",
+    "DisplayPort sends HDMI-compatible signals but HDMI does not send DisplayPort-compatible signals",
+    "The adapter rewires pins and changes the voltage levels automatically"
+  ],
+  "correct_answer": [
+    "DisplayPort sends HDMI-compatible signals but HDMI does not send DisplayPort-compatible signals"
+  ],
+  "explanation": "DisplayPort can output a compatible HDMI signal for use with passive adapters, but HDMI cannot generate a DisplayPort-compatible output without active conversion.",
+  "tags": [
+    "DisplayPort",
+    "HDMI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why must thermal paper be stored in a temperature-controlled environment before use?",
+  "answer_options": [
+    "To prevent jamming in the feed roller",
+    "To avoid premature darkening from heat exposure",
+    "To reduce wear on the heating element",
+    "To preserve its glossy coating"
+  ],
+  "correct_answer": [
+    "To avoid premature darkening from heat exposure"
+  ],
+  "explanation": "Thermal paper can darken when exposed to heat, even before printing, which can ruin the roll.",
+  "tags": [
+    "thermal paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

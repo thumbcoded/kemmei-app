@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes a Type 1 hypervisor in terms of system architecture?",
+  "answer_options": [
+    "It requires a full-featured host operating system to function",
+    "It runs applications directly without guest operating systems",
+    "It installs on top of a host OS and shares drivers",
+    "It runs directly on physical hardware and manages guest OSes independently"
+  ],
+  "correct_answer": [
+    "It runs directly on physical hardware and manages guest OSes independently"
+  ],
+  "explanation": "Type 1 hypervisors (bare metal) act as the OS on the system, providing direct access to hardware for managing VMs.",
+  "tags": [
+    "Type 1 hypervisor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

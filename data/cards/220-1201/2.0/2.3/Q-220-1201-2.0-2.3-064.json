@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does a proxy server do with client requests?",
+  "answer_options": [
+    "Routes the request directly to the client device",
+    "Forwards the request and response while evaluating content",
+    "Blocks all encrypted content by default",
+    "Delivers print jobs to local printers"
+  ],
+  "correct_answer": [
+    "Forwards the request and response while evaluating content"
+  ],
+  "explanation": "A proxy server makes requests on behalf of clients, inspects the response, and only forwards safe content to the client.",
+  "tags": [
+    "proxy server",
+    "content inspection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

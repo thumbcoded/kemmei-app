@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which unit represents the electrical pressure in a circuit?",
+  "answer_options": [
+    "Watt",
+    "Volt",
+    "Amp",
+    "Ohm"
+  ],
+  "correct_answer": [
+    "Volt"
+  ],
+  "explanation": "Voltage, measured in volts (V), represents the electrical pressure that pushes current through a conductor.",
+  "tags": [
+    "volts"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

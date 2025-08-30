@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main advantage of centralized file storage in an organization?",
+  "answer_options": [
+    "Faster file access speeds",
+    "Reduced storage costs",
+    "Easy sharing among multiple users",
+    "Better file compression"
+  ],
+  "correct_answer": [
+    "Easy sharing among multiple users"
+  ],
+  "explanation": "Centralized file storage allows multiple people in an organization to easily access and share documents, spreadsheets, and other files from a single location.",
+  "tags": [
+    "centralized storage",
+    "document sharing",
+    "file sharing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

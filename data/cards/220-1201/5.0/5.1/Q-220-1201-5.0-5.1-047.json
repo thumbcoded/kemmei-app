@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A system randomly crashes during high-performance tasks. Which is the most likely cause?",
+  "answer_options": [
+    "CPU failure due to overheating",
+    "Outdated mouse driver",
+    "Faulty power supply fan",
+    "Display resolution mismatch"
+  ],
+  "correct_answer": [
+    "CPU failure due to overheating"
+  ],
+  "explanation": "If the CPU overheats during intensive processing, it may cause lock-ups, crashes, or spontaneous reboots to prevent damage.",
+  "tags": [
+    "CPU failure",
+    "intensive processing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

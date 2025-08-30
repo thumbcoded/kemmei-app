@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-134",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which factor most directly impacts the serviceability of a laptop?",
+  "answer_options": [
+    "The operating system version",
+    "The manufacturer's design approach",
+    "The laptop's processing speed",
+    "The warranty coverage period"
+  ],
+  "correct_answer": [
+    "The manufacturer's design approach"
+  ],
+  "explanation": "Different manufacturers engineer their laptops with varying levels of serviceability, from easily accessible modular designs to sealed units requiring complete disassembly.",
+  "tags": [
+    "manufacturer differences",
+    "serviceability",
+    "laptop troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

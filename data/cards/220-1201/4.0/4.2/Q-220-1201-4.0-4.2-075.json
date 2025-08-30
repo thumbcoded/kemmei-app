@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In which cloud model is the customer responsible for managing the operating system and applications, but not the physical infrastructure?",
+  "answer_options": [
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "On-premises"
+  ],
+  "correct_answer": [
+    "IaaS"
+  ],
+  "explanation": "In Infrastructure as a Service (IaaS), the provider handles the hardware, but the customer manages OS, applications, and data.",
+  "tags": [
+    "customer responsibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which color standard is the default for most web and desktop content?",
+  "answer_options": [
+    "DCI-P3",
+    "Adobe RGB",
+    "CIE1931",
+    "sRGB"
+  ],
+  "correct_answer": [
+    "sRGB"
+  ],
+  "explanation": "sRGB is the default color space for standard displays and web content.",
+  "tags": [
+    "sRGB"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

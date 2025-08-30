@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-114",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A 600W 80 Plus Bronze PSU is operating under a 300W load. Approximately how much power is being drawn from the wall?",
+  "answer_options": [
+    "240W",
+    "300W",
+    "360W",
+    "600W"
+  ],
+  "correct_answer": [
+    "360W"
+  ],
+  "explanation": "Bronze-rated PSUs are ~83% efficient at 50% load. If 300W is delivered to components, ~360W is drawn from the wall.",
+  "tags": [
+    "power supply wattage",
+    "energy efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

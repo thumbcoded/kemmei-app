@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What allows OLED pixels to emit their own light without needing external illumination?",
+  "answer_options": [
+    "Inorganic compounds that react to voltage",
+    "A network of optical waveguides",
+    "Organic materials that glow when energized",
+    "Electrically-charged backlight crystals"
+  ],
+  "correct_answer": [
+    "Organic materials that glow when energized"
+  ],
+  "explanation": "OLEDs use organic electroluminescent compounds that emit visible light directly when electricity is applied.",
+  "tags": [
+    "organic light-emitting diode",
+    "self-emitting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

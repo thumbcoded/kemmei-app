@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-142",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two characteristics distinguish LC connectors in fiber optic deployments? (Select two)",
+  "answer_options": [
+    "Use of bayonet-style twist lock",
+    "Very small size suited for high-density panels",
+    "Clip-style latch for secure connection",
+    "Primary use in coaxial networking",
+    "Built-in diagnostic loopback functionality"
+  ],
+  "correct_answer": [
+    "Very small size suited for high-density panels",
+    "Clip-style latch for secure connection"
+  ],
+  "explanation": "LC connectors are compact and feature a clip-style latch, making them ideal for dense installations where space and security matter.",
+  "tags": [
+    "LC connector",
+    "clip connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

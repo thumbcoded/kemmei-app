@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a likely consequence of loading letter-size paper into a tray configured for legal size in the print driver?",
+  "answer_options": [
+    "The printer will automatically resize the output",
+    "Pages will be printed in landscape mode by default",
+    "A paper size mismatch error will occur",
+    "The printer will reboot after each job"
+  ],
+  "correct_answer": [
+    "A paper size mismatch error will occur"
+  ],
+  "explanation": "If the driver expects legal-size paper but detects letter-size in the tray, it will halt printing with a mismatch error until resolved.",
+  "tags": [
+    "paper size mismatch",
+    "letter size",
+    "legal size",
+    "tray selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

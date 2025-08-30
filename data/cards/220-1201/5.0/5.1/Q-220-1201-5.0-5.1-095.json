@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What tool can be used to identify a process using excessive CPU?",
+  "answer_options": [
+    "Disk Cleanup",
+    "System Restore",
+    "Task Manager",
+    "Device Manager"
+  ],
+  "correct_answer": [
+    "Task Manager"
+  ],
+  "explanation": "Task Manager allows technicians to view real-time CPU usage by process, helping to isolate performance issues.",
+  "tags": [
+    "task manager",
+    "CPU utilization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

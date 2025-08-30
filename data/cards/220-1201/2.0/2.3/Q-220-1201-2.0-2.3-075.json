@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which term refers to systems that are still operational despite being outdated and no longer in general use?",
+  "answer_options": [
+    "Next-gen systems",
+    "IoT devices",
+    "Legacy systems",
+    "Virtual systems"
+  ],
+  "correct_answer": [
+    "Legacy systems"
+  ],
+  "explanation": "Legacy systems are older computing systems that are still used because they perform vital tasks.",
+  "tags": [
+    "legacy systems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

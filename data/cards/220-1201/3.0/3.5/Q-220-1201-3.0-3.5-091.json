@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a 24-pin motherboard connector appear to be split into a 20-pin and a detachable 4-pin block?",
+  "answer_options": [
+    "To allow use in older 20-pin boards",
+    "To reduce EMI noise in the main power rail",
+    "To provide surge protection to USB ports",
+    "To support dual CPU configurations"
+  ],
+  "correct_answer": [
+    "To allow use in older 20-pin boards"
+  ],
+  "explanation": "Many PSUs feature 20+4 pin connectors so they can be compatible with both old 20-pin and modern 24-pin motherboards.",
+  "tags": [
+    "20-pin connector",
+    "24-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

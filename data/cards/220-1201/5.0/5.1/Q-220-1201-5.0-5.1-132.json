@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-132",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How do you diagnose and resolve display issues that aren't related to complete video failure?",
+  "answer_options": [
+    "Display issues only occur due to software problems and require reinstalling applications",
+    "Check resolution settings, refresh rates, color depth, cable quality, monitor compatibility",
+    "Display problems are always caused by network connectivity issues",
+    "All display issues require immediate replacement of the graphics card"
+  ],
+  "correct_answer": [
+    "Check resolution settings, refresh rates, color depth, cable quality, monitor compatibility"
+  ],
+  "explanation": "Display issues (distortion, wrong colors, flickering) require systematic checking: 1) Verify resolution and refresh rate settings, 2) Test different color depths, 3) Check cable quality and connections, 4) Test monitor with different source, 5) Update graphics drivers, 6) Check for electromagnetic interference, 7) Verify monitor specifications match output capabilities.",
+  "tags": [
+    "display issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

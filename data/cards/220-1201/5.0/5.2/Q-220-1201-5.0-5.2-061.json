@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does it mean when a volume is marked 'inactive' in a RAID controller interface?",
+  "answer_options": [
+    "The drive is in sleep mode",
+    "The data is backed up",
+    "The volume is not currently operational",
+    "The volume is set to read-only"
+  ],
+  "correct_answer": [
+    "The volume is not currently operational"
+  ],
+  "explanation": "An 'inactive' volume typically indicates that the RAID controller cannot access or mount that volume normally.",
+  "tags": [
+    "volume inactive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

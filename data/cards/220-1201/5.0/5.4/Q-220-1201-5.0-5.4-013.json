@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature can reduce power consumption from signal polling in areas with poor reception?",
+  "answer_options": [
+    "Enabling 5G auto-switching",
+    "Disabling 802.11",
+    "Turning on airplane mode",
+    "Switching to GPS-only mode"
+  ],
+  "correct_answer": [
+    "Turning on airplane mode"
+  ],
+  "explanation": "Airplane mode disables wireless radios, preventing constant signal polling and reducing battery drain in areas with poor reception.",
+  "tags": [
+    "airplane mode"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

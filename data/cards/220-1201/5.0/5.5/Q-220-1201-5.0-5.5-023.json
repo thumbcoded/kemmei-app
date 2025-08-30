@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains of inconsistent wireless performance. You notice the signal improves significantly when they move their laptop closer to the AP. What is the best recommendation?",
+  "answer_options": [
+    "Switch to a static IP address",
+    "Use a different DNS provider",
+    "Use a laptop antenna or move closer to access point",
+    "Reboot the DHCP server"
+  ],
+  "correct_answer": [
+    "Use a laptop antenna or move closer to access point"
+  ],
+  "explanation": "Closer proximity to the access point improves signal strength; using a better antenna may help too.",
+  "tags": [
+    "laptop antenna",
+    "closer to access point",
+    "signal strength"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

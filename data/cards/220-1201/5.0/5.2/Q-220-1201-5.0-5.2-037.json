@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which indicator on the front of a desktop is helpful in confirming whether a drive is receiving data requests?",
+  "answer_options": [
+    "BIOS battery LED",
+    "Access lights",
+    "Fan RPM display",
+    "Thermal sensor"
+  ],
+  "correct_answer": [
+    "Access lights"
+  ],
+  "explanation": "Access lights flash when the drive is actively processing read/write operations.",
+  "tags": [
+    "access lights"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

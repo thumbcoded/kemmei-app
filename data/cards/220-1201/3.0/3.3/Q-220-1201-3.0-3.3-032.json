@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the general process to remove a memory module from a desktop motherboard?",
+  "answer_options": [
+    "Twist the module clockwise and pull",
+    "Lift the CPU cooler and pull up the RAM",
+    "Release the side locks and pull the module straight out",
+    "Loosen the screws around the memory slot"
+  ],
+  "correct_answer": [
+    "Release the side locks and pull the module straight out"
+  ],
+  "explanation": "To remove a DIMM, press the side locks outward; the module will lift slightly, allowing you to remove it.",
+  "tags": [
+    "memory removal",
+    "memory installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

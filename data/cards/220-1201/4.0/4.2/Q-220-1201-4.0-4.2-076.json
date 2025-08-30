@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which layer of the cloud platform is typically managed by the customer in a PaaS model?",
+  "answer_options": [
+    "Virtual machine hypervisor",
+    "Network switches and firewalls",
+    "Application logic and data",
+    "Operating system kernel"
+  ],
+  "correct_answer": [
+    "Application logic and data"
+  ],
+  "explanation": "In Platform as a Service (PaaS), the customer is responsible for building and deploying the app, while the provider manages the OS and platform.",
+  "tags": [
+    "physical platform"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

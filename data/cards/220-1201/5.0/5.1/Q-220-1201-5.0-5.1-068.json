@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains their screen flickers while watching videos. What should you check first?",
+  "answer_options": [
+    "Power strip",
+    "Printer queue",
+    "Video drivers",
+    "Ethernet cable"
+  ],
+  "correct_answer": [
+    "Video drivers"
+  ],
+  "explanation": "Outdated or corrupted video drivers can cause flickering, especially during high video load.",
+  "tags": [
+    "video drivers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

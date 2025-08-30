@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which symptom best describes an intermittent motherboard problem?",
+  "answer_options": [
+    "Computer freezes when typing",
+    "System boots only every third attempt",
+    "Incorrect print layout",
+    "Monitor brightness fluctuates"
+  ],
+  "correct_answer": [
+    "System boots only every third attempt"
+  ],
+  "explanation": "Intermittent motherboard issues can cause unpredictable boot behavior or inconsistent hardware operation.",
+  "tags": [
+    "intermittent operation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

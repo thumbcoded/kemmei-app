@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "What are characteristics of embedded systems? (Select two)",
+  "answer_options": [
+    "Users have direct access to the operating system",
+    "They are purpose-built for specific functions",
+    "They require frequent manual updates",
+    "Users interact with the device but not the OS directly",
+    "They always need internet connectivity"
+  ],
+  "correct_answer": [
+    "They are purpose-built for specific functions",
+    "Users interact with the device but not the OS directly"
+  ],
+  "explanation": "Embedded systems are purpose-built devices where users interact with the device on a daily basis but don't directly interact with the underlying operating system.",
+  "tags": [
+    "embedded system",
+    "purpose-built device",
+    "smart devices"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

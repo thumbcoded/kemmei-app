@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Where would you most commonly find a punchdown block installed?",
+  "answer_options": [
+    "Inside a desktop computer",
+    "In a wall jack near user workstations",
+    "In a patch panel or wiring closet",
+    "At the ISP’s central office"
+  ],
+  "correct_answer": [
+    "In a patch panel or wiring closet"
+  ],
+  "explanation": "Punchdown blocks are typically located in wiring closets or patch panels to centralize network cable terminations.",
+  "tags": [
+    "punchdown block",
+    "organization",
+    "closet"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

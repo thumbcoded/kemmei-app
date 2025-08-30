@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-140",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician must troubleshoot a laptop where a single misaligned component could damage multiple systems. This scenario best illustrates which laptop troubleshooting principle?",
+  "answer_options": [
+    "Manufacturer differences require specific procedures",
+    "Precise specifications demand careful, methodical approaches",
+    "Form factor limitations restrict repair options",
+    "Small components are inherently unreliable"
+  ],
+  "correct_answer": [
+    "Precise specifications demand careful, methodical approaches"
+  ],
+  "explanation": "This scenario demonstrates how laptop's precise engineering specifications require methodical, careful troubleshooting approaches where small errors can cascade into larger system damage.",
+  "tags": [
+    "precise specifications",
+    "laptop troubleshooting",
+    "small components"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

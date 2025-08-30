@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-119",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two configuration parameters are typically provided by DHCP along with the IP address? Select two.",
+  "answer_options": [
+    "Subnet mask",
+    "DNS server",
+    "MAC address",
+    "VLAN ID",
+    "System uptime"
+  ],
+  "correct_answer": [
+    "Subnet mask",
+    "DNS server"
+  ],
+  "explanation": "Common DHCP options include subnet mask and DNS server. MAC addresses are not assigned by DHCP.",
+  "tags": [
+    "subnet mask",
+    "DNS server",
+    "configuration parameters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

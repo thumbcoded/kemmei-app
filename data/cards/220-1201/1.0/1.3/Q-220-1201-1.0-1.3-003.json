@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are examples of cellular network generations? (Select all that apply)",
+  "answer_options": [
+    "3G",
+    "LTE",
+    "802.11ac",
+    "5G"
+  ],
+  "correct_answer": [
+    "3G",
+    "LTE",
+    "5G"
+  ],
+  "explanation": "3G, LTE (a type of 4G), and 5G are all cellular technologies. 802.11ac is a Wi-Fi standard, not cellular.",
+  "tags": [
+    "cellular",
+    "3G",
+    "LTE",
+    "5G"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

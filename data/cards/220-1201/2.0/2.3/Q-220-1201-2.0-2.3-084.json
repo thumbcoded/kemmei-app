@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "An IT team is designing network segmentation for a SCADA deployment. Which TWO strategies would most effectively reduce the risk of unauthorized access?",
+  "answer_options": [
+    "Allow SCADA traffic over the default VLAN",
+    "Use physically separate switches for SCADA and corporate networks",
+    "Integrate SCADA systems directly into the main Active Directory domain",
+    "Restrict access via jump servers and firewall rules",
+    "Enable port forwarding from SCADA to the internet for remote access"
+  ],
+  "correct_answer": [
+    "Use physically separate switches for SCADA and corporate networks",
+    "Restrict access via jump servers and firewall rules"
+  ],
+  "explanation": "SCADA systems require strict isolation, often using physical separation and access gateways. Direct integration with corporate networks increases risk.",
+  "tags": [
+    "SCADA",
+    "segmented network"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which printer setting may override application-level page orientation if not configured properly?",
+  "answer_options": [
+    "Duplex printing",
+    "Printer defaults",
+    "Tray configuration",
+    "Paper weight"
+  ],
+  "correct_answer": [
+    "Printer defaults"
+  ],
+  "explanation": "Printer default settings for orientation can override what the application specifies, particularly if the driver is outdated or not communicating properly.",
+  "tags": [
+    "printer defaults"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

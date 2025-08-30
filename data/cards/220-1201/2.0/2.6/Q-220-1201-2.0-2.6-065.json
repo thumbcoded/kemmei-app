@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What step does a device take before assigning itself an APIPA address?",
+  "answer_options": [
+    "Sends a ping to the gateway",
+    "Performs a DNS lookup",
+    "Sends an ARP request",
+    "Restarts the network interface"
+  ],
+  "correct_answer": [
+    "Sends an ARP request"
+  ],
+  "explanation": "Before assigning a self-generated IP from the APIPA range, the device sends an ARP request to ensure no conflict exists.",
+  "tags": [
+    "ARP check",
+    "APIPA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

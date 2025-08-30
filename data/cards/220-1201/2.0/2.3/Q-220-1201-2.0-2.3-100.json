@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-100",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What happens when NTP synchronization fails on network devices?",
+  "answer_options": [
+    "Devices stop functioning completely",
+    "Log file correlation becomes difficult and encryption may fail",
+    "Internet connectivity is lost",
+    "File sharing services become unavailable"
+  ],
+  "correct_answer": [
+    "Log file correlation becomes difficult and encryption may fail"
+  ],
+  "explanation": "Accurate time is critical for comparing log files across systems and many encryption technologies require correct date and time to function properly.",
+  "tags": [
+    "NTP",
+    "time accuracy",
+    "log files"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

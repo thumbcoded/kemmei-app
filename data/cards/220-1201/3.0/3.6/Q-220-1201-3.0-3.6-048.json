@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason a power supply converts AC to DC before distribution to components?",
+  "answer_options": [
+    "AC is more dangerous at low voltage",
+    "DC supports longer cable lengths",
+    "Computer circuits require a steady voltage level",
+    "DC can travel through grounded components safely"
+  ],
+  "correct_answer": [
+    "Computer circuits require a steady voltage level"
+  ],
+  "explanation": "Digital electronics rely on steady, non-fluctuating voltage to operate consistently and avoid signal instability.",
+  "tags": [
+    "direct current",
+    "AC to DC conversion"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

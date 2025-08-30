@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician notices that toner is being applied unevenly across each page. Which TWO components are most likely involved in this issue?",
+  "answer_options": [
+    "Fuser unit",
+    "Photosensitive drum",
+    "Corona wire",
+    "Onboard memory",
+    "High voltage power supply"
+  ],
+  "correct_answer": [
+    "Photosensitive drum",
+    "Corona wire"
+  ],
+  "explanation": "Uneven toner application is usually caused by a worn drum or inconsistent charge from a damaged corona wire.",
+  "tags": [
+    "photosensitive drum",
+    "corona wire"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

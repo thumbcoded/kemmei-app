@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes the main drawback of TN LCD panels?",
+  "answer_options": [
+    "Slow response times",
+    "Poor viewing angles and color accuracy",
+    "High manufacturing costs",
+    "Frequent burn-in issues"
+  ],
+  "correct_answer": [
+    "Poor viewing angles and color accuracy"
+  ],
+  "explanation": "TN panels are fast and inexpensive but suffer from limited viewing angles and subpar color performance.",
+  "tags": [
+    "TN LCD",
+    "color representation",
+    "viewing angle"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

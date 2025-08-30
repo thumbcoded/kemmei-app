@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which factors should be considered when planning file sharing infrastructure? (Select all that apply)",
+  "answer_options": [
+    "Operating system compatibility (Windows, macOS)",
+    "External sharing requirements",
+    "Protocol selection (SMB, AFP)",
+    "User interface preferences",
+    "File management capabilities"
+  ],
+  "correct_answer": [
+    "Operating system compatibility (Windows, macOS)",
+    "External sharing requirements",
+    "Protocol selection (SMB, AFP)",
+    "File management capabilities"
+  ],
+  "explanation": "File sharing infrastructure planning must consider operating system compatibility, external sharing needs, appropriate protocols for each environment, and file management functionality.",
+  "tags": [
+    "file sharing",
+    "SMB",
+    "AFP",
+    "centralized storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

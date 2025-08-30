@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-133",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What are common monitor problems and how do you distinguish them from graphics card issues?",
+  "answer_options": [
+    "Monitor problems only affect brightness and have no other symptoms",
+    "Dead pixels, backlight failure, power issues - test with different source to isolate from graphics card",
+    "All monitor problems automatically indicate graphics card failure",
+    "Monitor problems only occur during specific software applications"
+  ],
+  "correct_answer": [
+    "Dead pixels, backlight failure, power issues - test with different source to isolate from graphics card"
+  ],
+  "explanation": "Monitor problems include: dead pixels, backlight failure, power issues, button malfunctions, and physical damage. Distinguish from graphics card issues by: testing monitor with different source (laptop, phone), checking for problems across all inputs, verifying power LED status, and testing known good monitor with suspect system.",
+  "tags": [
+    "monitor problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

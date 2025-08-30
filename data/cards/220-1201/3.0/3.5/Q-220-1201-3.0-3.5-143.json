@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-143",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How do fan controllers improve system performance?",
+  "answer_options": [
+    "They increase hard drive speed",
+    "They optimize fan speeds based on temperature",
+    "They boost GPU clock rates",
+    "They reduce CPU voltage automatically"
+  ],
+  "correct_answer": [
+    "They optimize fan speeds based on temperature"
+  ],
+  "explanation": "Fan controllers monitor temperature readings and adjust fan speeds to maintain balance between cooling and noise.",
+  "tags": [
+    "fan controllers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

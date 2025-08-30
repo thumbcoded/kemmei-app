@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is NOT a benefit of flash drives?",
+  "answer_options": [
+    "Small form factor",
+    "Unlimited write cycles",
+    "Portability",
+    "No moving parts"
+  ],
+  "correct_answer": [
+    "Unlimited write cycles"
+  ],
+  "explanation": "EPROM-based flash drives have a limited number of write cycles and are not ideal for archival or frequent rewrite operations.",
+  "tags": [
+    "flash drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

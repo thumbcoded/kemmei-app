@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-125",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a new GPU into a system and reuses an older 500W PSU. The system powers on briefly and then shuts down. What is the MOST likely cause?",
+  "answer_options": [
+    "Incorrect RAM type",
+    "GPU firmware is outdated",
+    "PSU does not meet system wattage requirements",
+    "Case fans are wired incorrectly"
+  ],
+  "correct_answer": [
+    "PSU does not meet system wattage requirements"
+  ],
+  "explanation": "A new GPU can significantly increase power draw. If the PSU lacks sufficient wattage, the system may fail during POST or under load.",
+  "tags": [
+    "wattage calculation",
+    "power supply selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

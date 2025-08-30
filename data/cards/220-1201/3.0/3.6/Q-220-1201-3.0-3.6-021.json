@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does the 80 Plus certification on a power supply indicate?",
+  "answer_options": [
+    "It supports 80 amps of output",
+    "It is guaranteed to support gaming GPUs",
+    "It meets a minimum efficiency standard",
+    "It uses titanium cooling plates"
+  ],
+  "correct_answer": [
+    "It meets a minimum efficiency standard"
+  ],
+  "explanation": "80 Plus certification guarantees that the PSU meets at least 80% efficiency at 20%, 50%, and 100% load.",
+  "tags": [
+    "efficiency",
+    "80 Plus certification"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician suspects a failed backlight inverter in a CCFL-based laptop. What observation best supports this diagnosis?",
+  "answer_options": [
+    "Display is completely dead, with no image visible even under a flashlight",
+    "The screen works intermittently, especially when pressure is applied to the lid",
+    "The display is dark, but an image is visible when illuminated externally",
+    "The screen shows vertical lines and random colors"
+  ],
+  "correct_answer": [
+    "The display is dark, but an image is visible when illuminated externally"
+  ],
+  "explanation": "If the LCD image is visible under external light, the screen and GPU are functioning, but the backlight — powered by the inverter in CCFL systems — is likely dead.",
+  "tags": [
+    "fluorescent inverter",
+    "backlight failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

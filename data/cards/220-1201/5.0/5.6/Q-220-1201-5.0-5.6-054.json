@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which component typically determines whether a print job will include hole punching?",
+  "answer_options": [
+    "Paper tray selection",
+    "Operating system spooler",
+    "Print driver settings",
+    "Printer's default firmware"
+  ],
+  "correct_answer": [
+    "Print driver settings"
+  ],
+  "explanation": "Hole punch functionality is enabled or configured via print driver settings, often controlled by the originating application.",
+  "tags": [
+    "print driver settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

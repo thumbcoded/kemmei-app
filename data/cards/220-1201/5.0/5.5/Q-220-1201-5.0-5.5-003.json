@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool allows you to verify if a device received an IP from DHCP or is using a manual address?",
+  "answer_options": [
+    "Loopback ping",
+    "Cable tester",
+    "IP configuration utility",
+    "DNS lookup"
+  ],
+  "correct_answer": [
+    "IP configuration utility"
+  ],
+  "explanation": "Viewing IP settings helps determine if a device is using a DHCP-assigned or manually configured IP address.",
+  "tags": [
+    "DHCP assigned address",
+    "manually configured address",
+    "internal network configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

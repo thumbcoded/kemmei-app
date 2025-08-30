@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario would MOST benefit from upgrading a SATA SSD to an NVMe SSD?",
+  "answer_options": [
+    "A user browsing the web and checking email",
+    "A workstation performing large-scale data analytics with high IOPS demands",
+    "A file server storing long-term archive documents",
+    "A media center streaming 1080p videos from local storage"
+  ],
+  "correct_answer": [
+    "A workstation performing large-scale data analytics with high IOPS demands"
+  ],
+  "explanation": "NVMe excels in scenarios requiring fast, concurrent access to large volumes of data, such as analytics workloads or virtualization.",
+  "tags": [
+    "NVMe",
+    "high-speed storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

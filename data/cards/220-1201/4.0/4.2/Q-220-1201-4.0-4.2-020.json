@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Two small healthcare providers partner to build and share a cloud platform. What cloud model does this describe?",
+  "answer_options": [
+    "Private cloud",
+    "Hybrid cloud",
+    "Public cloud",
+    "Community cloud"
+  ],
+  "correct_answer": [
+    "Community cloud"
+  ],
+  "explanation": "A community cloud is shared between multiple organizations with similar requirements or interests.",
+  "tags": [
+    "community cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-130",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is system lock up in video card troubleshooting and what causes this specific symptom?",
+  "answer_options": [
+    "Security feature that prevents unauthorized access to graphics settings",
+    "Graphics processing failure causing system freeze during graphics-intensive tasks, requires hard reset",
+    "Power saving mode that reduces video card performance during idle periods",
+    "Driver installation process that temporarily disables video output"
+  ],
+  "correct_answer": [
+    "Graphics processing failure causing system freeze during graphics-intensive tasks, requires hard reset"
+  ],
+  "explanation": "System lock up from video cards occurs when graphics processing failures cause the entire system to freeze, requiring hard reset. Causes: overheating GPU, failing GPU memory, driver conflicts, inadequate power supply to graphics card, or defective GPU chip. Distinguished from crashes by complete system unresponsiveness during graphics-intensive tasks.",
+  "tags": [
+    "system lock up"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition most likely indicates failure due to degradation in a specific region of the storage medium?",
+  "answer_options": [
+    "Intermittent system freeze",
+    "Corrupt bootloader",
+    "Read failure in one area of drive",
+    "Drive controller mismatch"
+  ],
+  "correct_answer": [
+    "Read failure in one area of drive"
+  ],
+  "explanation": "Localized read failures typically point to physical degradation or damage to that specific portion of the drive surface.",
+  "tags": [
+    "read failure",
+    "area of drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

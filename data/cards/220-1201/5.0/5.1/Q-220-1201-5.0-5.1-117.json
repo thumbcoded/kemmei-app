@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a jumper reset and how do you safely perform this procedure on a motherboard?",
+  "answer_options": [
+    "Software command that remotely resets BIOS settings through operating system",
+    "Physical jumper on motherboard to clear CMOS - move jumper to reset position for 10-15 seconds",
+    "Network protocol that allows remote BIOS configuration management",
+    "Automatic process that occurs when system detects hardware configuration changes"
+  ],
+  "correct_answer": [
+    "Physical jumper on motherboard to clear CMOS - move jumper to reset position for 10-15 seconds"
+  ],
+  "explanation": "A jumper reset uses a physical jumper on the motherboard to clear CMOS/BIOS settings. Procedure: 1) Power off and unplug system, 2) Ground yourself, 3) Locate CMOS reset jumper (usually near battery), 4) Move jumper from normal position to reset position for 10-15 seconds, 5) Return jumper to normal position, 6) Power on and reconfigure BIOS settings.",
+  "tags": [
+    "jumper reset"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

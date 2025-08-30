@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which combination correctly pairs interface type and protocol?",
+  "answer_options": [
+    "SATA — NVMe",
+    "M.2 — AHCI only",
+    "M.2 — NVMe or AHCI",
+    "MSATA — NVMe only"
+  ],
+  "correct_answer": [
+    "M.2 — NVMe or AHCI"
+  ],
+  "explanation": "The M.2 interface supports both SATA (using AHCI) and PCIe (using NVMe), depending on the drive and keying.",
+  "tags": [
+    "M.2 interface",
+    "NVMe",
+    "AHCI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

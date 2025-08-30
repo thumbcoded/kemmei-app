@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does a hypervisor manage when distributing processor workload to VMs?",
+  "answer_options": [
+    "Instruction sets",
+    "BIOS settings",
+    "CPU cycles",
+    "Virtual hard disks"
+  ],
+  "correct_answer": [
+    "CPU cycles"
+  ],
+  "explanation": "Hypervisors allocate CPU cycles among VMs to balance performance.",
+  "tags": [
+    "CPU cycles"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

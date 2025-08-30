@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why failures may only occur in one portion of a drive's storage space?",
+  "answer_options": [
+    "Insufficient memory",
+    "BIOS misconfiguration",
+    "Corruption in the area of drive",
+    "Outdated video drivers"
+  ],
+  "correct_answer": [
+    "Corruption in the area of drive"
+  ],
+  "explanation": "Failures that are limited to a specific physical or logical section suggest a localized fault in that area of the drive.",
+  "tags": [
+    "area of drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

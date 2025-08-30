@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens to print jobs when a network-connected printer becomes unavailable?",
+  "answer_options": [
+    "Print jobs are automatically deleted",
+    "Print jobs wait in the print queue until the printer is available",
+    "Print jobs are redirected to another printer",
+    "Users must restart their computers"
+  ],
+  "correct_answer": [
+    "Print jobs wait in the print queue until the printer is available"
+  ],
+  "explanation": "The print service manages print jobs by queuing them up and ensuring they print successfully when the printing device becomes available again.",
+  "tags": [
+    "print queue",
+    "printer management",
+    "print service"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

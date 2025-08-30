@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What might be a sign of heat problems inside a computer case?",
+  "answer_options": [
+    "USB ports stop working",
+    "Hard drive LEDs flicker",
+    "Unusual system slowdowns or crashes",
+    "Increased Wi-Fi speeds"
+  ],
+  "correct_answer": [
+    "Unusual system slowdowns or crashes"
+  ],
+  "explanation": "Overheating can affect drive and system stability, leading to slowdowns or unexpected shutdowns.",
+  "tags": [
+    "heat problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

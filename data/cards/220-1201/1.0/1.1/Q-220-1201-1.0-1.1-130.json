@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-130",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which factors contribute to the complexity of laptop troubleshooting compared to desktop systems? (Select all that apply)",
+  "answer_options": [
+    "Very small components packed in tight spaces",
+    "Manufacturer-specific serviceability designs",
+    "Form factor limitations affecting access",
+    "Standardized component layouts",
+    "Precise specifications requiring careful handling"
+  ],
+  "correct_answer": [
+    "Very small components packed in tight spaces",
+    "Manufacturer-specific serviceability designs",
+    "Form factor limitations affecting access",
+    "Precise specifications requiring careful handling"
+  ],
+  "explanation": "Laptop troubleshooting complexity stems from miniaturized components, varying manufacturer approaches to serviceability, physical access limitations, and the need for precise handling due to tight engineering tolerances.",
+  "tags": [
+    "small components",
+    "manufacturer differences",
+    "form factor limitations",
+    "precise specifications"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

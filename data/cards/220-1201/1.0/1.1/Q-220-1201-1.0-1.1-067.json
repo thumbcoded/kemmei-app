@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A technician is replacing a 2.5 inch HDD in a laptop. Which two of the following must they do during the process?",
+  "answer_options": [
+    "Disconnect the display",
+    "Unscrew the drive bracket",
+    "Remove the access panel",
+    "Disconnect the Wi-Fi antenna",
+    "Apply heat to loosen the SSD"
+  ],
+  "correct_answer": [
+    "Unscrew the drive bracket",
+    "Remove the access panel"
+  ],
+  "explanation": "Replacing a 2.5 inch drive usually involves removing the back panel and unmounting the drive via its bracket screws.",
+  "tags": [
+    "remove drive",
+    "access panel",
+    "screw"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

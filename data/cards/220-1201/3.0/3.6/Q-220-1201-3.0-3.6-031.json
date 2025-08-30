@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "You are using a power supply rated for 240V and 0.5A. How many watts of power is it consuming?",
+  "answer_options": [
+    "60 watts",
+    "120 watts",
+    "240 watts",
+    "480 watts"
+  ],
+  "correct_answer": [
+    "120 watts"
+  ],
+  "explanation": "Wattage = Volts × Amps, so 240V × 0.5A = 120W.",
+  "tags": [
+    "power calculation",
+    "watts"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

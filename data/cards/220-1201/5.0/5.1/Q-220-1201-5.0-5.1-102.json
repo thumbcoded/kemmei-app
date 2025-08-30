@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does POST stand for and what is its primary function during computer startup?",
+  "answer_options": [
+    "Process Operating System Tasks - manages system processes",
+    "Power-On Self-Test - diagnostic tests of core hardware components",
+    "Program Operational Status Test - checks software functionality",
+    "Primary Operating System Troubleshoot - fixes boot problems"
+  ],
+  "correct_answer": [
+    "Power-On Self-Test - diagnostic tests of core hardware components"
+  ],
+  "explanation": "POST stands for Power-On Self-Test. It is a series of diagnostic tests that run automatically when you turn on your computer to check if core components (CPU, memory, video subsystem) are installed and operational before the operating system loads.",
+  "tags": [
+    "power on self test",
+    "POST"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

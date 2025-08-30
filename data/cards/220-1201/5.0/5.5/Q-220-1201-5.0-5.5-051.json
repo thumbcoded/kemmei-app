@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A warehouse has good Wi-Fi in open areas but poor coverage behind shelves and machinery. What’s the MOST likely issue?",
+  "answer_options": [
+    "Incorrect DHCP configuration",
+    "Authentication timeout",
+    "Obstructed signal propagation",
+    "Low DNS resolution speed"
+  ],
+  "correct_answer": [
+    "Obstructed signal propagation"
+  ],
+  "explanation": "Obstacles like shelving and machinery can degrade signal strength and prevent proper propagation.",
+  "tags": [
+    "signal propagation",
+    "signal degradation",
+    "reception problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,832 @@
+0:01
+when you're troubleshooting a network
+0:03
+problem there are a series of steps that
+0:05
+can give you a baseline of what might be
+0:08
+working and what might not be working
+0:10
+The first thing you might want to check
+0:12
+is to see if you have a link light This
+0:14
+is a light that's on the Ethernet
+0:16
+connection that you're using So this
+0:18
+would be for a wired connection to the
+0:21
+network If you're plugged in and you see
+0:23
+a light then you're at least
+0:24
+communicating and sending a signal to
+0:26
+the device that's on the other end If
+0:29
+you don't see a light then you might not
+0:30
+have a good connection or you might have
+0:32
+a bad cable You then might want to ping
+0:34
+the loop back address of the device that
+0:36
+you're using So you would simply ping
+0:40
+127.0.0.1 and see if you get a response
+0:42
+back It may seem odd that you're pinging
+0:45
+a device that you're physically sitting
+0:47
+in front of but this is really checking
+0:49
+to see if the IP stack that's in your
+0:51
+system is operating normally If there's
+0:54
+any problem with the internal network
+0:56
+configuration of your operating system
+0:59
+then you will not receive a ping back
+1:01
+from this loop back address From there
+1:03
+you might want to ping your local IP
+1:05
+address This would be the IP address
+1:07
+that was assigned to your device from a
+1:09
+DHCP server or perhaps it's an address
+1:11
+that you configured manually In either
+1:14
+case you should ping that IP address to
+1:16
+see if you get a response This would
+1:18
+verify that you indeed have a link light
+1:21
+and you are connected to the rest of the
+1:23
+network Now let's try pinging a device
+1:25
+that is somewhere else on our local
+1:27
+network And since most local networks
+1:29
+have a default gateway that's a perfect
+1:31
+IP address to try So check the IP
+1:34
+address configuration of your computer
+1:36
+where it says default gateway and try
+1:38
+pinging that IP address That will at
+1:41
+least confirm that you're able to ping
+1:42
+from your device to another device on
+1:45
+your local network and receive the
+1:47
+response If all of that is working it's
+1:49
+time to try pinging a device that is
+1:51
+outside of your local network If you
+1:54
+happen to know another IP address that's
+1:56
+outside of your local network you could
+1:58
+try that one Or you could try some of
+1:59
+the more popular addresses on the
+2:01
+internet such as quad 8 quad 9 or quad 1
+2:06
+If you're having intermittent
+2:07
+connectivity on your wireless network
+2:09
+then the problem may be associated with
+2:11
+the channel or the frequencies that
+2:13
+you're using So you may be able to avoid
+2:15
+interference from other devices by
+2:18
+simply changing the configuration of
+2:19
+your access point Of course our wireless
+2:22
+connectivity expects that we'll be able
+2:24
+to send and receive enough signal to be
+2:26
+able to communicate This means we may
+2:28
+want to get closer to our access point
+2:30
+so we have a stronger signal You might
+2:33
+want to try different antennas on your
+2:35
+access point to see if you can
+2:36
+communicate over a wider distance And
+2:38
+many devices support the ability to plug
+2:41
+in an external antenna to their laptop
+2:43
+or desktop computer Many access points
+2:46
+can evaluate other frequencies that may
+2:48
+be in use in your area It will then
+2:51
+automatically choose an access point
+2:53
+that minimizes any interference with
+2:55
+other devices You're also able to set
+2:57
+that channel manually on your access
+2:59
+point That might be a good way to try
+3:01
+different frequencies to see which one
+3:03
+works best for you Some access points
+3:06
+have problems receiving multiple signals
+3:08
+that have bounced off of things that may
+3:10
+be around us We refer to this as
+3:12
+multipath interference Sometimes flat
+3:15
+surfaces can cause a problem on wireless
+3:17
+networks when there's an excessive
+3:19
+amount of multipath interference And
+3:21
+sometimes the access point is simply too
+3:24
+far away By moving that access point to
+3:26
+a centralized area you're effectively
+3:29
+increasing the signal strength for
+3:30
+everyone who's using that access
+3:33
+point It's obviously difficult to be
+3:36
+able to see the packets as they're
+3:38
+moving through the network or going
+3:40
+across our wireless network For that
+3:42
+reason when things start to have a
+3:44
+problem on a computer one of the most
+3:46
+common complaints is that the network is
+3:49
+slow In reality the problem might be
+3:52
+with the CPU or memory inside of their
+3:54
+local device It could be with the
+3:56
+application server There might be an
+3:58
+issue with the database server And it
+4:00
+may have nothing to do with the network
+4:02
+But it's up to you as the network
+4:03
+administrator to determine if the
+4:05
+problem is on those external devices or
+4:07
+if the problem really is a network issue
+4:10
+An easy test would be to perform a ping
+4:12
+from one end of the network to the other
+4:15
+and be able to evaluate the response
+4:17
+times that we're getting back This is
+4:19
+something you could also validate by
+4:20
+performing a speed test If you can get
+4:23
+very good numbers on a speed test across
+4:25
+the internet then you probably are not
+4:27
+having a significant network issue You
+4:30
+then might want to look at every hop
+4:32
+along the way to determine what type of
+4:34
+performance you might be seeing So you
+4:36
+might want to look at network
+4:38
+utilization on each one of those network
+4:40
+links Evaluate the number of errors see
+4:43
+how much throughput you might have
+4:44
+through each one of those connections
+4:46
+and then determine if there's any
+4:48
+filtering firewalling or ACLs that might
+4:51
+be in place And ultimately you may need
+4:53
+to take a packet capture from multiple
+4:55
+points on the network This will give you
+4:57
+undeniable information on whether the
+4:59
+slowdown is occurring on the network or
+5:01
+if it's with the application
+5:04
+Windows provides ongoing network
+5:06
+information in the system tray of the
+5:08
+operating system but occasionally you
+5:10
+might see an alert that says limited or
+5:12
+no connectivity or it might say no
+5:15
+internet access You can start
+5:17
+troubleshooting this problem by looking
+5:18
+at the local IP address of your device
+5:21
+If you've received an IP address from a
+5:23
+DHCP server or this address was
+5:25
+configured statically then you should be
+5:27
+able to communicate outside of your
+5:29
+local subnet But if there is a problem
+5:31
+with the DHCP server you may have
+5:33
+received an automatic private IP address
+5:36
+That is an AP IPA address This is one
+5:40
+that will only have local connectivity
+5:42
+on your subnet and you will not be able
+5:44
+to communicate outside of your local
+5:46
+subnet If that's the case you will
+5:48
+certainly see a message saying limited
+5:50
+or no connectivity or a message that
+5:52
+says no internet access If you do have a
+5:55
+good IP address then you should try
+5:57
+communicating outside of your local
+5:59
+subnet try your local gateway and then
+6:01
+try pinging a remote IP address that's
+6:03
+on the other side of that local gateway
+6:06
+As you move further and further through
+6:08
+the network you will eventually find a
+6:10
+place where you're no longer able to
+6:12
+ping And that should be the point where
+6:14
+you can apply all of your
+6:15
+troubleshooting efforts to solve this
+6:17
+limited or no connectivity
+6:19
+issue These days we perform a lot of
+6:22
+real-time communication on our networks
+6:24
+It might be a real-time conference call
+6:26
+with video or it may be a voiceover IP
+6:29
+communication When you're in these video
+6:31
+calls or you're listening on a phone
+6:33
+call you're expecting to always be
+6:35
+receiving information so that you can
+6:37
+see that the video is changing and you
+6:39
+can always hear what's happening on the
+6:41
+other side If you were to lose data
+6:43
+during the middle of this real-time
+6:45
+communication you can't rewind that
+6:48
+communication and go back to what was
+6:49
+missed you simply lose that information
+6:52
+and you continue on with your call One
+6:55
+of the ways that we're able to measure
+6:57
+how often this data is being transmitted
+6:59
+through the network is through a metric
+7:01
+known as jitter Jitter is a measurement
+7:04
+of how much time exists between
+7:07
+different data frames that we're
+7:08
+receiving Hopefully we're able to get a
+7:11
+consistent amount of data coming through
+7:13
+the network But if there are significant
+7:15
+delays between these packets you'll see
+7:18
+that these jitter numbers begin to
+7:19
+increase What we're hoping to see is
+7:22
+over time we will see a consistent
+7:25
+amount of data being received by our
+7:27
+workstation and that data is coming in
+7:29
+at regular intervals There's not
+7:31
+significant gaps between any one of
+7:34
+these Therefore these jitter values will
+7:36
+be relatively small If there's some type
+7:39
+of network congestion or any errors you
+7:41
+may find that it is not a consistent
+7:43
+amount of data that we're receiving We
+7:45
+might see a group of data and then a
+7:48
+longer gap between then another grouping
+7:50
+of data and then a longer gap between
+7:52
+there and so on In this case there's a
+7:55
+significant amount of jitter between
+7:56
+these particular frames and it will
+7:58
+probably cause our video to freeze or
+8:01
+our phone call to be very choppy
+8:04
+These applications are expecting you to
+8:06
+be able to send data through the network
+8:08
+and have very low latency as it's moving
+8:10
+from one part of the network to the
+8:12
+other Anytime you're running a real-time
+8:14
+application it will be very demanding
+8:16
+and you'll know immediately either on
+8:18
+the screen or listening to the audio
+8:20
+that you're having problems
+8:22
+communicating with this real-time
+8:24
+communication If you're communicating
+8:26
+across the internet you may want to run
+8:27
+a speed test This will tell you overall
+8:30
+how much information you're able to
+8:31
+transfer over what period of time This
+8:34
+might help you identify links that may
+8:36
+be too slow for this real-time
+8:38
+application With an older installation
+8:41
+it may be that the equipment simply
+8:43
+can't handle the demands of these modern
+8:45
+applications and you may want to
+8:47
+consider performing a router or switch
+8:49
+upgrade And if you have a packet capture
+8:51
+you will have a detailed overview of
+8:54
+exactly what was going on on that
+8:55
+network and you'll be able to determine
+8:57
+if the issue is related to the amount of
+8:59
+traffic how quickly we're receiving the
+9:02
+traffic or if the problem may be related
+9:04
+to something else
+9:06
+Port flapping is when you have a link
+9:08
+light on your Ethernet connection and
+9:10
+then you don't have a link light and
+9:12
+then you have a link light again and
+9:14
+then you don't have a link light and
+9:16
+that interface continues to go up and
+9:18
+down and up and down Many times this is
+9:22
+a physical problem and it may be
+9:23
+associated with the cable that you're
+9:25
+using By replacing the cable or putting
+9:27
+on a new connector you may find that
+9:29
+you're able to resolve this port
+9:31
+flapping problem The problem could also
+9:33
+be the physical interface on the switch
+9:35
+that you're connecting to So if you move
+9:37
+your Ethernet cable to a different port
+9:39
+on that switch you'll be able to
+9:41
+determine if the problem follows the
+9:43
+cable or if the problem is resolved And
+9:46
+ultimately you may find that it is
+9:48
+related to the cable If this is a simple
+9:50
+patch cable it might be relatively easy
+9:52
+to swap out or you may need to bring in
+9:54
+a crew to run a new cable across the
+9:56
+entire length of the building
+9:59
+Latency is defined as the delays between
+10:02
+the
+10:03
+request and the response Anytime we have
+10:07
+a measurement of those two we can
+10:09
+identify how quick or how slow our
+10:12
+network might be performing There's of
+10:14
+course going to be some latency on the
+10:15
+network because we have to send this
+10:17
+information to another device That
+10:19
+information has to be received processed
+10:21
+and then the answer has to be sent back
+10:23
+Sometimes we can measure that latency in
+10:25
+micros secondsonds Other times it might
+10:28
+be measured in seconds or even minutes
+10:30
+It would be useful to know what the
+10:32
+response times are during each hop along
+10:35
+the way This may require you to have
+10:37
+multiple measurements or to be able to
+10:39
+have multiple devices all measuring at
+10:42
+the same time This would allow you to
+10:43
+look at a packet capture and be able to
+10:45
+calculate the total response time across
+10:47
+the network and then how much latency
+10:50
+might also be included by the
+10:51
+application itself
+10:54
+One of the challenges we have with
+10:55
+wireless networks is there may be other
+10:57
+devices around us that are creating
+10:59
+interference Sometimes these are devices
+11:01
+you weren't really expecting to cause a
+11:04
+problem with your wireless network For
+11:06
+example fluorescent lights microwave
+11:08
+ovens cordless telephones and other high
+11:10
+power sources can create quite a bit of
+11:12
+interference that can certainly create
+11:14
+performance problems on a wireless
+11:16
+network And sometimes you may have no
+11:18
+control over this interference
+11:20
+especially if you're in a building with
+11:21
+many tenants They may have their own
+11:23
+wireless networks and their own
+11:25
+microwave ovens and you may have no
+11:27
+control over how and when they use those
+11:30
+devices One way that you can visually
+11:32
+see how much signal you're receiving and
+11:34
+how much interference you're receiving
+11:36
+is by looking at a signal to noise ratio
+11:39
+Many operating systems can provide you
+11:41
+with an overview of signal to noise
+11:43
+ratios and create a graph over time so
+11:46
+that you can get an idea of just how
+11:48
+much interference may be in the air
+11:49
+around you With a signal to noise ratio
+11:52
+measurement or an SNR we of course want
+11:55
+to know how much signal we're receiving
+11:57
+And then we want to compare that to how
+11:59
+much noise or interference we're getting
+12:01
+on that same network If we're broadly
+12:04
+looking at a signal to noise ratio like
+12:05
+this one we're able to get a breakdown
+12:07
+of that signal and noise Although we're
+12:10
+not sure where the noise may be coming
+12:12
+from we can certainly measure the impact
+12:14
+it's having on our devices We obviously
+12:16
+want the signal to noiseise ratio to be
+12:19
+a very large ratio You certainly don't
+12:21
+want a one:one relationship between
+12:23
+signal and noise That means you have
+12:25
+just as much noise as you do signal
+12:28
+Ideally you would have much more signal
+12:30
+and very little noise Here's a graph of
+12:33
+signal to noise ratio where we see quite
+12:35
+a bit of noise and then we only have a
+12:38
+little bit of signal on top of that The
+12:40
+ratio here is almost a 1 one with this
+12:43
+particular wireless network What we
+12:45
+would prefer to see is a little bit of
+12:48
+noise at the bottom and much more signal
+12:50
+and someone who's using this network is
+12:53
+having a much better wireless
+12:55
+experience Sometimes our problems are
+12:58
+not associated with the network and in
+13:00
+many ways not associated with the
+13:02
+application Instead it might be that we
+13:04
+don't have permission to access the
+13:06
+resources that we're trying to access In
+13:09
+those cases we might have an
+13:10
+authentication issue where we need to
+13:12
+provide our username our password and
+13:15
+any other type of authentication factor
+13:17
+It may be that we authenticated
+13:19
+previously to that resource but now that
+13:21
+authentication is timed out and now we
+13:23
+need to refresh that connection to be
+13:25
+able to log in again Or it may be part
+13:28
+of a background process where we provide
+13:30
+a username and password that that
+13:32
+service will use Because this is running
+13:35
+in the background we may not see any
+13:37
+error messages or get any feedback if
+13:40
+that authentication doesn't work And of
+13:42
+course a packet capture will show you
+13:44
+everything about this connection So if
+13:46
+we see in the packet capture that we
+13:48
+requested a resource and immediately got
+13:50
+a denied permission then our problem
+13:52
+might be related to an authentication
+13:55
+issue Some of the most difficult network
+13:57
+problems to troubleshoot are those that
+13:59
+are intermittent This means sometimes
+14:01
+the network is working normally and
+14:03
+other times it isn't To be able to
+14:06
+properly troubleshoot this we need to be
+14:08
+looking at the problem when it's
+14:10
+happening and that may be a challenge if
+14:12
+it's only happening at certain times of
+14:14
+the day Some of the things you can do is
+14:16
+to set an ongoing ping like the one I
+14:18
+have here where I'm constantly pinging a
+14:21
+device every second to see the
+14:23
+connectivity that I'm getting You could
+14:25
+also run a trace route to a known
+14:27
+location or run speed tests occasionally
+14:29
+to see what the performance might be on
+14:31
+the network If the intermittent problem
+14:33
+that you're seeing is one that is going
+14:35
+to a third party then you may have to
+14:37
+work directly with that third party to
+14:38
+help troubleshoot where this problem is
+14:40
+occurring This may add more complexity
+14:42
+to troubleshooting the problem So you
+14:44
+want to be sure to have as much
+14:46
+information as possible to help with the
+14:47
+troubleshooting process And if you are
+14:50
+working with a third party you may want
+14:51
+to check your contract for your service
+14:53
+level agreement This will give you
+14:55
+information on what the expectation of
+14:57
+uptime and availability might be for
+14:59
+that third party And it might also tell
+15:01
+you what the response time is for
+15:03
+getting support

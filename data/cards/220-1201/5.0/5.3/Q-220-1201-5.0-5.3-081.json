@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does it mean when a monitor has both HDMI and analog audio inputs?",
+  "answer_options": [
+    "You must use both inputs simultaneously for stereo sound",
+    "The monitor can receive audio from different sources than the video",
+    "One input is for headphones, the other for speakers",
+    "The analog input is only for microphone connections"
+  ],
+  "correct_answer": [
+    "The monitor can receive audio from different sources than the video"
+  ],
+  "explanation": "Some monitors allow mixed configurations where video comes from one connection (like HDMI) while audio comes from a separate analog input. This provides flexibility when your video source doesn't include audio.",
+  "tags": [
+    "monitor audio troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

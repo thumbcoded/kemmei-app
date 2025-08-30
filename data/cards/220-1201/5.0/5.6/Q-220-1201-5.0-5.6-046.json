@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid troubleshooting steps when dealing with recurring spooler crashes? (Select all that apply)",
+  "answer_options": [
+    "Inspect print driver compatibility",
+    "Monitor the Print Service log in Windows Event Viewer",
+    "Update the printer's IP address to dynamic",
+    "Delete stuck jobs from the print queue",
+    "Change the printer’s orientation mode"
+  ],
+  "correct_answer": [
+    "Inspect print driver compatibility",
+    "Monitor the Print Service log in Windows Event Viewer",
+    "Delete stuck jobs from the print queue"
+  ],
+  "explanation": "Driver issues, job corruption, and logged spooler errors are primary root causes. Changing IP or orientation has no direct impact on spooler service behavior.",
+  "tags": [
+    "spooler crash",
+    "print queue",
+    "Windows event viewer",
+    "print spooler"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

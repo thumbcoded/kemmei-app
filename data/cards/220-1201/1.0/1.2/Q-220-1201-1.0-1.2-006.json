@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one major advantage of the Lightning connector over older USB connectors like miniUSB or microUSB?",
+  "answer_options": [
+    "It supports wireless charging",
+    "It has a stronger grip in the port",
+    "It can be inserted in either direction",
+    "It is larger for durability"
+  ],
+  "correct_answer": [
+    "It can be inserted in either direction"
+  ],
+  "explanation": "The Lightning connector is reversible, solving one of the usability issues of earlier USB connectors.",
+  "tags": [
+    "Lightning",
+    "connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

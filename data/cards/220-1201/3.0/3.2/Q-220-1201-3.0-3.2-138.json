@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-138",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two connectors are commonly used in modern fiber optic installations? (Select two)",
+  "answer_options": [
+    "RJ11",
+    "SC connector",
+    "ST connector",
+    "LC connector",
+    "VGA"
+  ],
+  "correct_answer": [
+    "SC connector",
+    "LC connector"
+  ],
+  "explanation": "SC and LC connectors are widely used in modern fiber optic networks for their reliability and compactness.",
+  "tags": [
+    "SC connector",
+    "LC connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

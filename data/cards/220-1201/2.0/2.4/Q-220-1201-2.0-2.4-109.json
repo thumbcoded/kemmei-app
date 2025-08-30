@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician suspects DHCP communication is blocked on a network. Which test best confirms this suspicion?",
+  "answer_options": [
+    "Ping the DHCP server IP address",
+    "Attempt to connect via TCP port 67",
+    "Monitor traffic for UDP port 67 and 68 activity during boot",
+    "Check if DNS queries succeed during startup"
+  ],
+  "correct_answer": [
+    "Monitor traffic for UDP port 67 and 68 activity during boot"
+  ],
+  "explanation": "DHCP operates over UDP ports 67 and 68. Monitoring these during startup helps confirm whether DORA is occurring.",
+  "tags": [
+    "UDP port 67",
+    "UDP port 68",
+    "DHCP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

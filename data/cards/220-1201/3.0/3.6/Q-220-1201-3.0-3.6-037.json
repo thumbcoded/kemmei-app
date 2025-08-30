@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are required or useful for performing electrical measurements and calculations? (Select all that apply)",
+  "answer_options": [
+    "Multimeter",
+    "Specification sheet for components",
+    "Grounding strap",
+    "Amperage values",
+    "Watt-hour meter"
+  ],
+  "correct_answer": [
+    "Multimeter",
+    "Specification sheet for components",
+    "Amperage values"
+  ],
+  "explanation": "To calculate or verify power, you need tools to measure volts/amps (like a multimeter) and component specs to know draw. A grounding strap is for ESD, not measurement.",
+  "tags": [
+    "power calculation",
+    "amps",
+    "volts"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

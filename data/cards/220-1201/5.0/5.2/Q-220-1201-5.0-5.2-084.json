@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "After swapping SATA cables to troubleshoot a failing SSD, the drive still fails intermittently. What is the most likely next step?",
+  "answer_options": [
+    "Run a sector testing utility",
+    "Reset the Windows firewall",
+    "Change the screen resolution",
+    "Update the BIOS wallpaper"
+  ],
+  "correct_answer": [
+    "Run a sector testing utility"
+  ],
+  "explanation": "If the physical connection has been ruled out, sector testing is the next step to identify logical or physical damage.",
+  "tags": [
+    "sector testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

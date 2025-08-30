@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of printer uses liquid ink sprayed in tiny droplets onto paper?",
+  "answer_options": [
+    "Laser printer",
+    "Inkjet printer",
+    "Thermal printer",
+    "Dot matrix printer"
+  ],
+  "correct_answer": [
+    "Inkjet printer"
+  ],
+  "explanation": "Inkjet printers use liquid ink and spray tiny droplets onto the paper for high-resolution printing.",
+  "tags": [
+    "inkjet printer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

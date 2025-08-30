@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid indicators of a RAID or storage controller issue? (Select all that apply)",
+  "answer_options": [
+    "Volume inactive",
+    "Drives not detected by BIOS",
+    "Exception detected",
+    "Device overheating alert",
+    "Foreign configuration detected"
+  ],
+  "correct_answer": [
+    "Volume inactive",
+    "Drives not detected by BIOS",
+    "Exception detected",
+    "Foreign configuration detected"
+  ],
+  "explanation": "Controller-related issues may present as missing drives, 'exception detected' errors, foreign configurations, or volumes showing as inactive.",
+  "tags": [
+    "volume inactive",
+    "drive controller failure",
+    "exception detected"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

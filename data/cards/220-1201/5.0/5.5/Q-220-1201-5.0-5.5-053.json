@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician notices a sudden drop in Wi-Fi performance every day at noon near the break room. Which is the MOST likely cause?",
+  "answer_options": [
+    "Incorrect access point password",
+    "Power saving mode on the AP",
+    "Signal interference from nearby devices",
+    "Firmware rollback on the router"
+  ],
+  "correct_answer": [
+    "Signal interference from nearby devices"
+  ],
+  "explanation": "Time-based signal drops often indicate interference from recurring sources like microwaves or cordless phones.",
+  "tags": [
+    "signal degradation",
+    "reception problems",
+    "access point issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

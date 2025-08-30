@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is configuring scan destinations for a multi-function printer. Which protocol is typically used for 'scan to SMB' functionality?",
+  "answer_options": [
+    "HTTP",
+    "FTP",
+    "SMB",
+    "SNMP"
+  ],
+  "correct_answer": [
+    "SMB"
+  ],
+  "explanation": "SMB (Server Message Block) is the standard protocol used to send scanned files to shared folders on a network.",
+  "tags": [
+    "scan to SMB"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

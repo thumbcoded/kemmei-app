@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements are true regarding PCIe architecture? (Select all that apply)",
+  "answer_options": [
+    "Each device gets dedicated lanes to the chipset",
+    "PCIe slots are always backward compatible by version",
+    "PCIe x8 cards fit in x16 slots",
+    "PCIe uses a shared bandwidth model"
+  ],
+  "correct_answer": [
+    "Each device gets dedicated lanes to the chipset",
+    "PCIe x8 cards fit in x16 slots"
+  ],
+  "explanation": "PCIe provides point-to-point lanes per device and allows smaller lane cards to fit larger physical slots. However, version compatibility is not guaranteed by all motherboards.",
+  "tags": [
+    "PCIe",
+    "x8 slot",
+    "x16 slot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

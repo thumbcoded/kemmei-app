@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are considered printer finishing services? (Select all that apply)",
+  "answer_options": [
+    "Collating",
+    "Stapling",
+    "Hole punch",
+    "Page orientation",
+    "Tray selection"
+  ],
+  "correct_answer": [
+    "Collating",
+    "Stapling",
+    "Hole punch"
+  ],
+  "explanation": "Finishing services typically refer to operations performed after printing: collating, stapling, and hole punching are common examples.",
+  "tags": [
+    "collating",
+    "stapling",
+    "hole punch"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

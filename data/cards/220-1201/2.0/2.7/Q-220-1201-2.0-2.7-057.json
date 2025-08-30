@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of network typically connects personal devices such as smartphones and fitness trackers?",
+  "answer_options": [
+    "LAN",
+    "WAN",
+    "PAN",
+    "MAN"
+  ],
+  "correct_answer": [
+    "PAN"
+  ],
+  "explanation": "A Personal Area Network (PAN) is used to connect devices like phones, wearables, and headsets over technologies such as Bluetooth.",
+  "tags": [
+    "PAN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

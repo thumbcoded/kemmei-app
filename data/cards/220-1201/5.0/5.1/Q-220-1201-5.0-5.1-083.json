@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A motherboard issue is suspected. Which two symptoms would support this? (Select two)",
+  "answer_options": [
+    "Built-in audio and Ethernet both fail",
+    "Optical drive tray won’t open",
+    "System doesn’t boot unless power is cycled twice",
+    "Touchpad not responding in Windows",
+    "Battery charge light flickers randomly"
+  ],
+  "correct_answer": [
+    "Built-in audio and Ethernet both fail",
+    "System doesn’t boot unless power is cycled twice"
+  ],
+  "explanation": "Multiple onboard features failing or boot behavior that varies with power cycling are signs of motherboard malfunction.",
+  "tags": [
+    "connectors not operational",
+    "intermittent operation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

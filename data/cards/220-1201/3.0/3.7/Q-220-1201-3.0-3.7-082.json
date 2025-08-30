@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature requires a passcode to be entered on the printer before printing begins?",
+  "answer_options": [
+    "Audit logging",
+    "PIN-protected printing",
+    "User authentication",
+    "Secure boot"
+  ],
+  "correct_answer": [
+    "PIN-protected printing"
+  ],
+  "explanation": "PIN-protected printing holds the job until the user enters their personal identification number at the printer.",
+  "tags": [
+    "PIN-protected printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

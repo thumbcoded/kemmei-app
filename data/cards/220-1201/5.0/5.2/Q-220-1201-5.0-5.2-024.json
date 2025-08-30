@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one benefit of using SMART to identify a predictive failure?",
+  "answer_options": [
+    "It automatically repairs the drive",
+    "It prevents malware from infecting the disk",
+    "It enables early intervention before data loss occurs",
+    "It encrypts SMART statistics for secure viewing"
+  ],
+  "correct_answer": [
+    "It enables early intervention before data loss occurs"
+  ],
+  "explanation": "SMART can reveal predictive failure trends, giving users time to back up data and replace the drive before failure.",
+  "tags": [
+    "predictive failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

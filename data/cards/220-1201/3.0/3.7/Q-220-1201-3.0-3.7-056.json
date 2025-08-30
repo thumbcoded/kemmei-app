@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which printing orientation positions the longer side of the paper at the top and bottom?",
+  "answer_options": [
+    "Portrait",
+    "Landscape",
+    "Duplex",
+    "Auto-rotate"
+  ],
+  "correct_answer": [
+    "Portrait"
+  ],
+  "explanation": "Portrait orientation means the page is taller than it is wide, with the longer side running from top to bottom.",
+  "tags": [
+    "portrait orientation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

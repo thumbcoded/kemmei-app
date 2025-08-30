@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains of flickering horizontal bars across the screen. The cable and resolution have already been verified. What is another possible cause?",
+  "answer_options": [
+    "Color calibration mismatch",
+    "Enable vibrant colors mode",
+    "Backlight replacement needed",
+    "Display driver acceleration problem"
+  ],
+  "correct_answer": [
+    "Display driver acceleration problem"
+  ],
+  "explanation": "Display flickering may occur due to hardware acceleration incompatibilities. Disabling it can improve stability in these cases.",
+  "tags": [
+    "display quality"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

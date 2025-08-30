@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "You're setting up a RAID array with both performance and redundancy. Which TWO RAID levels could meet this need?",
+  "answer_options": [
+    "RAID 0",
+    "RAID 1",
+    "RAID 5",
+    "RAID 6",
+    "RAID 10"
+  ],
+  "correct_answer": [
+    "RAID 5",
+    "RAID 10"
+  ],
+  "explanation": "RAID 5 provides striping with parity; RAID 10 provides both striping and mirroring. Both offer performance and redundancy.",
+  "tags": [
+    "RAID 5",
+    "RAID 10",
+    "data redundancy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

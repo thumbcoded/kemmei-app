@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does NFC stand for?",
+  "answer_options": [
+    "Network Field Communication",
+    "Near Field Communication",
+    "New Frequency Channel",
+    "Network File Communication"
+  ],
+  "correct_answer": [
+    "Near Field Communication"
+  ],
+  "explanation": "NFC stands for Near Field Communication, a wireless technology used for short-range data transmission, commonly used in payment systems and access control.",
+  "tags": [
+    "NFC",
+    "near field communication",
+    "wireless"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

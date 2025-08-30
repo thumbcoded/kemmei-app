@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In enterprise laptop design, what is the most significant challenge of integrating a 2.5-inch drive over an M.2 SSD?",
+  "answer_options": [
+    "2.5-inch drives use outdated file systems",
+    "They require external power adapters",
+    "They demand more physical space and cabling",
+    "They interfere with wireless antenna placement"
+  ],
+  "correct_answer": [
+    "They demand more physical space and cabling"
+  ],
+  "explanation": "M.2 SSDs connect directly to the motherboard and require no cabling, unlike 2.5-inch drives which need both power and SATA cables and a mounting bay.",
+  "tags": [
+    "2.5-inch drive",
+    "form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

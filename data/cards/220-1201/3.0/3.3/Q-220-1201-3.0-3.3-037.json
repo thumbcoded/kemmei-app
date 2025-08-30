@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the likely consequence of installing non-matching memory modules in a dual-channel compatible motherboard?",
+  "answer_options": [
+    "System will boot in safe mode only",
+    "Dual-channel functionality will be disabled, reverting to single-channel",
+    "BIOS will automatically synchronize the modules",
+    "System performance will double due to module diversity"
+  ],
+  "correct_answer": [
+    "Dual-channel functionality will be disabled, reverting to single-channel"
+  ],
+  "explanation": "To enable multi-channel memory configurations, the installed modules must match in speed, size, and type. Mismatched modules will cause the motherboard to fall back to single-channel mode.",
+  "tags": [
+    "memory module matching",
+    "memory installation",
+    "motherboard compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

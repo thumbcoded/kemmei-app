@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which change to a wireless access point is MOST likely to improve performance in a congested office environment?",
+  "answer_options": [
+    "Disabling WPA2 encryption",
+    "Setting a static IP address",
+    "Manually adjusting the access point frequency",
+    "Enabling SSID broadcast"
+  ],
+  "correct_answer": [
+    "Manually adjusting the access point frequency"
+  ],
+  "explanation": "Manually tuning the AP to a less congested frequency band helps avoid interference and improve signal quality.",
+  "tags": [
+    "access point frequency",
+    "AP configuration",
+    "access point settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which brand and model is shown in BIOS during drive controller initialization on some Dell servers?",
+  "answer_options": [
+    "Intel RST 800",
+    "Dell PERC H200",
+    "Seagate XCal",
+    "Western Digital Blue"
+  ],
+  "correct_answer": [
+    "Dell PERC H200"
+  ],
+  "explanation": "The Dell PERC H200 is a common RAID controller visible during boot in Dell systems.",
+  "tags": [
+    "Dell PERC H200"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

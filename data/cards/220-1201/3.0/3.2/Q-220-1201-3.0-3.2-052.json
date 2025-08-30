@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why can't standard internal SATA cables be used for eSATA devices?",
+  "answer_options": [
+    "eSATA uses optical signaling instead of copper",
+    "Internal SATA cables are not shielded for external use",
+    "SATA connectors have fewer pins than eSATA",
+    "eSATA requires analog signaling for legacy support"
+  ],
+  "correct_answer": [
+    "Internal SATA cables are not shielded for external use"
+  ],
+  "explanation": "eSATA cables and connectors are designed for external durability and shielding, unlike standard internal SATA cables.",
+  "tags": [
+    "eSATA",
+    "external SATA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

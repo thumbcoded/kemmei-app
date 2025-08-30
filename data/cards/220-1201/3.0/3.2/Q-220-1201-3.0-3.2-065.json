@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What limitation might you encounter when using a multi-output adapter with HDMI, DisplayPort, and VGA simultaneously?",
+  "answer_options": [
+    "Only one output may function at a time due to shared bandwidth",
+    "The adapter will automatically switch to analog output only",
+    "HDMI will always override other outputs regardless of device",
+    "Signal converters inside adapters require manual power input"
+  ],
+  "correct_answer": [
+    "Only one output may function at a time due to shared bandwidth"
+  ],
+  "explanation": "Many multi-output adapters are designed to support only one active video output at a time, due to bandwidth or chipset limitations.",
+  "tags": [
+    "multi-output adapters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

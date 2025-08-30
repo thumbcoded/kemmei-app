@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which keying configuration allows an M.2 SSD to support both SATA and PCIe interfaces?",
+  "answer_options": [
+    "B key",
+    "M key",
+    "B+M key",
+    "S key"
+  ],
+  "correct_answer": [
+    "B+M key"
+  ],
+  "explanation": "A B+M keyed M.2 SSD can fit into sockets supporting either B or M key configurations, allowing broader compatibility with SATA and PCIe NVMe slots.",
+  "tags": [
+    "non-volatile storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

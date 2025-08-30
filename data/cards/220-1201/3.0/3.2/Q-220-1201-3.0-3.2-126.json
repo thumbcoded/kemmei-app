@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-126",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two characteristics are typical of RS232 serial connections? (Select two)",
+  "answer_options": [
+    "Use of differential pairs for high-speed data",
+    "Voltage-based signaling on a single wire per direction",
+    "Requirement of a console or terminal emulator for configuration",
+    "Multi-gigabit data rates and reversible connectors",
+    "Support for audio-video transmission"
+  ],
+  "correct_answer": [
+    "Voltage-based signaling on a single wire per direction",
+    "Requirement of a console or terminal emulator for configuration"
+  ],
+  "explanation": "RS232 uses one wire per signal direction with voltage-based signaling and often requires terminal software to access devices like routers.",
+  "tags": [
+    "RS232",
+    "console port"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

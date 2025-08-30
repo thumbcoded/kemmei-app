@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following could prevent HDMI audio from working even if video displays correctly?",
+  "answer_options": [
+    "Improper refresh rate",
+    "Outdated chipset drivers",
+    "Muted monitor speakers",
+    "Incorrect audio input setting on monitor"
+  ],
+  "correct_answer": [
+    "Incorrect audio input setting on monitor"
+  ],
+  "explanation": "Even with an HDMI signal, audio may not play if the monitor is set to expect audio from a different source or input.",
+  "tags": [
+    "audio input matching"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

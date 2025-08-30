@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How do you distinguish between a dead pixel and dirt on the monitor screen?",
+  "answer_options": [
+    "Dead pixels are always white; dirt spots are always black",
+    "Clean the screen thoroughly - if the spot remains, it's likely a dead pixel",
+    "Dead pixels only appear in the center of the screen",
+    "Dirt can be removed with software calibration tools"
+  ],
+  "correct_answer": [
+    "Clean the screen thoroughly - if the spot remains, it's likely a dead pixel"
+  ],
+  "explanation": "Before assuming you have a dead pixel (which requires monitor replacement), clean the screen thoroughly. Dirt or debris on the screen surface can mimic dead pixels. If the spot persists after cleaning, it's likely a failed pixel that cannot be repaired.",
+  "tags": [
+    "dead pixels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

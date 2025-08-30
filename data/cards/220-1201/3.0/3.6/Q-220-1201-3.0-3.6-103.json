@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a hybrid power supply, which limitation may still require extra cable management compared to a fully modular unit?",
+  "answer_options": [
+    "Limited total wattage",
+    "Non-removable core cables",
+    "Single-rail output design",
+    "Incompatible with mini-ITX boards"
+  ],
+  "correct_answer": [
+    "Non-removable core cables"
+  ],
+  "explanation": "Hybrid units include fixed cables (usually motherboard power), which still need to be routed even if unused.",
+  "tags": [
+    "hybrid power supply",
+    "cable management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

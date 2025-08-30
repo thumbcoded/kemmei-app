@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which adapter would you use to connect a DVI-A video card output to an analog monitor?",
+  "answer_options": [
+    "DVI to HDMI",
+    "USB to Ethernet adapter",
+    "DVI-A to VGA",
+    "HDMI to DisplayPort"
+  ],
+  "correct_answer": [
+    "DVI-A to VGA"
+  ],
+  "explanation": "DVI-A carries analog signals and can be converted to VGA using a passive adapter.",
+  "tags": [
+    "DVI-A to VGA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

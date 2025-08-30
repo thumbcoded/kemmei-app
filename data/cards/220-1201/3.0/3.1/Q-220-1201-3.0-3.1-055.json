@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens when a game's frame rate exceeds the monitor's refresh rate?",
+  "answer_options": [
+    "The image becomes sharper",
+    "Screen tearing may occur",
+    "Colors become more saturated",
+    "The system automatically increases brightness"
+  ],
+  "correct_answer": [
+    "Screen tearing may occur"
+  ],
+  "explanation": "When FPS exceeds the monitor’s refresh rate, frames may be partially drawn, causing screen tearing.",
+  "tags": [
+    "frames per second",
+    "refresh rate",
+    "stuttering"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

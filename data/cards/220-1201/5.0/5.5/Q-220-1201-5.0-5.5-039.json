@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician suspects network slowdowns are due to a single user's bandwidth usage. Which tool is MOST appropriate to confirm this?",
+  "answer_options": [
+    "Task Scheduler",
+    "Event Viewer",
+    "Bandwidth monitoring tool",
+    "IP configuration utility"
+  ],
+  "correct_answer": [
+    "Bandwidth monitoring tool"
+  ],
+  "explanation": "Bandwidth monitoring tools show which users or devices are using excessive throughput on the network.",
+  "tags": [
+    "bandwidth monitoring",
+    "performance measurement",
+    "network analysis"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

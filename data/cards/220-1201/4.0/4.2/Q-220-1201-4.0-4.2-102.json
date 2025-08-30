@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements accurately describe metered pricing in cloud computing? (Select all that apply)",
+  "answer_options": [
+    "You pay based on actual resource consumption",
+    "Cost is independent of usage level",
+    "Higher egress traffic increases total cost",
+    "It typically includes fixed monthly fees",
+    "Storage and bandwidth are often separately billed"
+  ],
+  "correct_answer": [
+    "You pay based on actual resource consumption",
+    "Higher egress traffic increases total cost",
+    "Storage and bandwidth are often separately billed"
+  ],
+  "explanation": "Metered pricing links charges directly to usage — including compute time, egress bandwidth, and storage. Fixed-fee models are characteristic of non-metered pricing.",
+  "tags": [
+    "metered utilization",
+    "egress traffic",
+    "traffic costs"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

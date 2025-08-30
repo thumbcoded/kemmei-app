@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is reversible and supports multiple signal types, including video and power?",
+  "answer_options": [
+    "HDMI",
+    "USB-C",
+    "VGA",
+    "DVI"
+  ],
+  "correct_answer": [
+    "USB-C"
+  ],
+  "explanation": "USB-C is a reversible connector that can carry USB data, power, and video signals like DisplayPort or HDMI.",
+  "tags": [
+    "USB-C"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

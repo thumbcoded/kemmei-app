@@ -1,0 +1,125 @@
+# Multi-Function Devices (MFDs) - Technical Overview
+
+## Introduction to Multi-Function Devices
+
+Many organizations use peripherals that are able to accomplish many things in one single unit. We refer to these as multi-function devices or MFDs. These might be a printer, a scanner, and a fax all in one device, and these might connect to a wired network, a wireless network, they might have a phone line connection for the fax capabilities, or you may be able to send it print jobs from your mobile device across the web.
+
+With devices that are able to do so many different things, there are also so many opportunities for things to go wrong, and as the technician, you'll be the one repairing these multi-function devices.
+
+A multi-function device at home might be a relatively small unit about the size of a typical printer, but in an office environment these might be relatively large, so you might have to find a separate area for setting this up that is outside of the normal walkway. These multifunction devices need a power connection, they often need a wired network connection, and you need to install them in a place that is accessible by everyone in the organization.
+
+## Installation and Configuration
+
+We not only need to physically install this multi-function device, we also need to configure our workstation so that it can properly print to these devices. To accomplish this, we'll need to install the printer drivers on everyone's computer for that specific model of multi-function device.
+
+This follows a similar process for a standalone printer. We need to find exactly the right printer driver for the operating system that we happen to be using, and we need to make sure that if we're using a 32-bit operating system that we're using a 32-bit print driver, and if we're using a 64-bit operating system that we have a 64-bit printer driver.
+
+To be able to take advantage of all of the multi-function capabilities of this device, we need to make sure that we are using the correct printer driver. So check your documentation and confirm that you're using the right printer driver for the model of device that you're installing.
+
+## Page Description Languages
+
+Another important consideration is the page description language that is being used by that multi-function device. You'll commonly find two different page description languages used:
+
+### PCL (Printer Command Language)
+One is a PCL or a printer command language that is created by Hewlett-Packard. If you have an HP printer, it's probably capable of using the printer command language.
+
+### PostScript
+The printer might also support a page description language known as PostScript. This was originally created by Adobe Systems and it's a very common language to find across many different types of printers.
+
+If we were to look at the communication that was occurring between your workstation and the printer, you would have output that's very similar to this. This is the PostScript language that is received by the printer. The printer is able to read this document and then render a printed page based on the information inside of this PostScript file. The printer is able to interpret that language, it renders the page and then prints it, and the final output looks something like this.
+
+If you have a PCL printer, you need to make sure that you're using a PCL printer driver. If you have a printer that talks PostScript, then you'll need to make sure you have a PostScript printer driver. There are some printers where you can select the printer to use either PCL or PostScript, so you want to be sure to use the appropriate driver for the configuration of your printer.
+
+## Firmware Management
+
+These multi-function devices have many different capabilities, and of course there's no operating system that we normally would have access to on these devices. When you start this system, it loads the operating system for this device that we refer to as **firmware**. This firmware controls what this device does when you send it printer output, when you have it scan information, or when you're sending a fax.
+
+There are many times that the manufacturer of these multi-function devices will fix a bug or they may release new features. To do this, they'll provide a new version of firmware for this device, and you'll need to install that firmware to either upgrade and fix those bugs or to provide those additional features.
+
+This firmware is usually available on the multifunction device website, and they have an entire set of instructions on the process that's used to properly install the firmware. Make sure you reference this documentation because every multifunction device has a different process for upgrading the firmware.
+
+## Connectivity Options
+
+If you're directly connecting to one of these multifunction devices, there are a number of interfaces that you might find:
+
+### USB Connections
+One is a USB connection. This is a very common connection that we're all very familiar with, but there are certainly more than one type of USB connection. For example, you might be plugging into your computer using this Type A connection, but the printer itself might be using a Type B or even a USB-C connection.
+
+### Ethernet Connections
+We might also be plugging directly into a network, and in that case we may be connecting to an RJ45 Ethernet connection on the back of that multi-function device. In some of these devices, you may be able to connect to multiple interfaces simultaneously, so you might plug your computer into the USB Type B connection and then you might also plug your network connection into the RJ45 Ethernet connection.
+
+### Wireless Connections
+Your printer might also connect to devices over a wireless link. Some printers will support a Bluetooth connection. Bluetooth, of course, has a limited range, so if you're planning to use Bluetooth as your connection, you'll need to be in close proximity to the multi-function device.
+
+A more common wireless connection is probably the 802.11, specifically the infrastructure mode of 802.11. This means that the multifunction device will connect to an access point, giving everyone on the network the ability to communicate to that device.
+
+Some multifunction devices support 802.11 wireless connectivity in an ad hoc mode. This is a point-to-point connection between two devices where an access point is not going to be used. If you have a single computer that needs to communicate to a multi-function device in an area where an access point is not located, then you'll probably use the 802.11 ad hoc mode.
+
+## Sharing and Print Servers
+
+In many organizations, there will be many people that need access to this multi-function device, and one of the ways that you can share this device is from a computer that is directly connected to that multi-function device. You would normally do this through the operating system running on that computer. There's usually a sharing tab in the printer properties, and then you can decide the name of that printer that will be used on the network.
+
+One of the challenges in using this method of printer sharing is if the computer connected to the printer is turned off, no one is able to print to that printer. Instead, most organizations will use a **print server**. This is a separate service that's usually running inside the printer itself, although there are also external print servers that you can purchase.
+
+These print servers allow you to send print jobs directly to the print server, and the print server then manages the printing process to the multi-function device. For management, there's usually a web-based frontend to the print server or some type of client software that allows you to see what jobs may be in the queue and allows you to administratively add and remove jobs from that printer queue.
+
+## Printing Features
+
+### Duplex Printing
+Nobody likes to waste printer paper, and one of the ways that you can conserve this paper is to print on both sides of the page. Many printers will allow this functionality through a duplex capability. This will allow you to send a print job to the printer, tell it to print in a duplex mode, and the output that you get from the printer will automatically be printed on both sides of the page. Not all printers support a duplex process, and it may require additional hardware installed in the printer to be able to provide duplex printing.
+
+### Orientation Options
+These multi-function devices also support printing in different orientations. You can print in a portrait orientation where the page is longer towards the top and the bottom, or you can print in a landscape orientation where the longer side of the page is on the left and right side of the output. As the page is going through the multi-function device, the page itself is not turning—the printer is simply printing in the orientation that you selected.
+
+### Multiple Paper Trays
+You may find on some of these larger multi-function devices that there are multiple paper trays on that device, and when you're printing your output, you can choose which paper tray will be used as this final output. This may have plain paper in the top tray, you might have letterhead in another tray, and you might have different sizes of paper in different trays.
+
+During the printing process, you have the option to choose which tray you'd like to use. This particular printer uses the letter tray as the one that is automatically selected, and that letter tray is tray number one. You can also print to number 10 envelopes in tray number two, you can print on legal size paper on tray number three, you can print on 9 by 12-inch envelopes on tray number four.
+
+So if you find that your output is being printed from the wrong tray, you might want to check your settings when you're sending that print job to the printer. During the printing process, you'll have the option to select the one that is automatic, or you can manually choose exactly which tray you'd like to use for that particular print job.
+
+### Print Quality Options
+You also have the option to choose what type of quality you would like for the final output. This usually gives you an option to decide what level of resolution you would like to use during the output, whether you'd like to use color or grayscale in that output, and if you are using color, you might have the option to use a color saving mode so that you're not using as much ink as you would with a non-color saving mode.
+
+On this printer, the resolution is defined as the print quality. You can see by default it's set to 600 by 600, but if you'd like to save some toner in this particular laser printer, you could set that to a lower resolution. This one also supports color printing—the default is a true color, but you could also modify that to be a different quality of color output, which might save you some of the resources in this multi-function device.
+
+## Security Features
+
+### User Authentication
+If you do have a printer that is a unique style of printer or it's one that prints very expensive types of output, you may want to limit who has access to print on that multi-function device. You can normally provide this through user authentication. This might be built into the printer sharing that you already set up, or may be part of the print server that you're using. You would set rights and permissions for individual users or groups of users, and you can define who's allowed to print on the printer and who's allowed to manage that printer.
+
+### Badging
+One of the challenges that you have when you have a central printing device is that it's usually in the open where anyone can access that device, but if you're printing sensitive information, you may not want that information simply sitting on top of the printer. For that reason, you may want to enable badging.
+
+With badging, you would send your print job to the printer, but the printer is not going to print that particular job. Instead, the printer will wait for you to physically visit the printer and use your badge to authenticate yourself with the printing device. Then it will start to print the output while you're standing in front of the printer, ensuring security of that output.
+
+### Audit Logging
+Printing anything in a physical format costs money, and some of these printers can output high resolution in full color, which costs even more money. For that reason, many organizations will want to audit who is printing to the printer and how much they're printing.
+
+Many printers include an audit log in the printer itself or in the operating system that's used to share the printer. You can usually find this in the security monitoring of the printer, or if you're using Windows, you can find that information in the event viewer.
+
+### Secured Prints
+Some multifunction devices allow you to configure secured prints. This allows you to define a passcode for that printer. You send the print job to the printer, and then you have to visit the printer to manually input that passcode before the printer will start the printing process.
+
+This is another way of ensuring the protection of the information that you're printing without requiring any external cards or separate pieces of equipment. You simply visit the printer, type in your PIN, and it prints the output.
+
+You would normally configure this on the printer. This printer supports Windows PIN protected printing, and inside of your Windows operating system, you would specify what personal identification number or PIN you would like to use. You would then visit the printer, you would input your personal identification number, and your output would begin to print.
+
+## Scanning Capabilities
+
+Not only can these multifunction devices be output devices, we can also use them as input devices. Many of these multi-function devices are flatbed scanners. This means that we can take a printed physical document, put it on top of the multi-function device, it will scan this device and create a digital format of that physical page.
+
+Some of these might even include an ADF or an automatic document feeder, so you can put many pages into the multifunction device, hit one button to scan, and it will go through many pages and scan all of those to a digital file.
+
+### Scan-to-Email
+Our modern multifunction devices can scan information and email you the results of that individual scan. For small scanning jobs, it might make sense to send that to your email, but for larger scanning jobs, your email inbox may not be the best place to send these very large attachments.
+
+### Scan-to-Folder (SMB)
+Instead, you might want to scan directly to a shared drive on your network. We refer to this as scanning to a folder or scanning to SMB. That stands for Server Message Block, which is the standard format used on Microsoft Windows devices. This is effectively sending anything that's scanned to an existing Microsoft share, and then you can simply visit that share drive on your computer to access your digitized files.
+
+### Scan-to-Cloud
+In today's world of cloud computing and high-speed networking, we can also scan to an external device that's located in the cloud. So we might want to specify a Google Drive account or a Dropbox account, put our paper into the scanner, hit a button, and everything will be sent to our drive in the cloud.
+
+---
+
+*This document provides a comprehensive overview of multi-function devices, their installation, configuration, and various capabilities in modern office environments.*

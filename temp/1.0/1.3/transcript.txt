@@ -1,0 +1,89 @@
+Mobile Device Connectivity and Management
+
+Cellular Networks and Technologies
+
+If you have a mobile phone, you probably also refer to it as your cell phone. That term "cell" comes from the cellular networks that we use to be able to communicate using these phones. These operate by having antennas that separate areas of the land into what we're calling cells. They're antennas that allow us coverage inside of those cells using a number of different frequencies, and all of that together makes up our cellular networks. These cellular networks provide both voice and data communication, and you get to decide how that information is used by your mobile device. For example, you can turn on and off the cellular data functionality and perhaps only use this as voice communication, or you may be familiar with airplane mode that disables all of the communication on this device and then you can pick and choose which ones you'd like to turn on.
+
+Cellular technology really started taking off with 3G technology in 1998. 3G allowed us to send and receive larger amounts of data over these networks, which means that we were able to increase the capabilities of our mobile devices. This allowed us to have GPS functionality, which we'll talk more about in a moment. We have mobile television, video on demand, video conferencing, and other data-related services all enabled thanks to 3G.
+
+We then upgraded from 3G into the 4G technologies. Sometimes we refer to these as Long-Term Evolution or LTE. 4G is based on a technology called GSM, which is the Global System for Mobile Communications. Sometimes you may hear this referred to as EDGE or the Enhanced Data Rates for GSM Evolution. This allowed us to have bandwidths up to 150 megabits per second, so we were able to take those data capabilities in 3G and expand on them with 4G.
+
+We were then able to upgrade LTE to LTE Advanced or LTE-A. That standard allowed throughputs of up to 300 megabits per second, greatly increasing the amount of data we could send over these networks.
+
+Our modern mobile networks use our fifth generation of networking or 5G. 5G was introduced in 2020 and it greatly improved the bandwidth that we were able to push over these networks. This 5G technology over higher frequencies is designed to support up to 10 gigabits per second, and if you're running over other frequencies with 5G, you could have 100 to 900 megabits per second of total throughput.
+
+Having that much bandwidth available for a single device changes how we're able to use these devices. For example, Internet of Things or IoT now allows much more functionality because we're not constrained by the amount of bandwidth that we could send. So we're able to take these Internet of Things devices over these 5G networks and instantly send large amounts of data over these wireless networks. This allows us to get notifications faster, we can transmit and receive much more data, which allows us to send a lot more into the cloud for processing.
+
+Wi-Fi and Wireless Networks
+
+Just as our cellular technologies have increased in speed and function, we have also had similar increases with 802.11 wireless. These are high-speed 802.11 networks that we commonly use at home and in our offices. This allows us to have very high-speed throughput without any type of wired connection. These do have a limited range, however, and we have a local access point that everyone connects to to be able to gain access to the 802.11 network.
+
+This Wi-Fi functionality enables voice, video, data, and almost any other type of data transfer. This 802.11 network provides functionality for many different types of applications, and many mobile phones allow you to communicate voice communication over the 802.11 network. So if you're in an area where your 4G or 5G network doesn't have very good signal, you could use that phone over your Wi-Fi network. This allows you to receive and send calls just as if you were connected to a 4G or 5G network.
+
+Hotspot and Tethering
+
+We can also turn our mobile phones into an internet router and have multiple devices use our phone for internet access. We refer to this as hotspot functionality. Our phone is connecting to the cellular network using 5G, and then other devices are connecting to our phone over 802.11. This means that you can take your phone anywhere and have everyone use your phone for internet access. This is something that is commonly built into the operating systems and functionality of our existing mobile phones, but it does require that your carrier enable or allow that functionality. Not all carriers do, and sometimes there's an extra charge, so make sure you check with your mobile carrier to see what options might be available for you.
+
+SIM and eSIM Management
+
+One way that your mobile carrier is able to recognize your mobile device is through the use of a Subscriber Identity Module or a SIM. This is sometimes a physical card that's inside of your mobile phone, and it contains all of the information that identifies what your phone is on that mobile network. This means that you could potentially take that SIM out of your phone, put it in a different phone, and now you've moved your number to a different physical device.
+
+That SIM contains information about the carrier that you're using and the subscriber, which is you, the user of the phone. It has a SIM ID and a phone number associated with it. It contains the information about that cellular network that you're connected to, and there's storage space on the SIM itself that allows you to store contacts and messages on the SIM. So when you move the SIM from one phone to another, you can also move those contacts and messages.
+
+Newer phones no longer use a physical SIM card but instead use an electronic version or embedded SIM. Sometimes you'll see this as an eSIM. That eSIM is a physical part of that phone and can't be physically unplugged and plugged into a new phone, but you can move that SIM inside of that device using the software on the phone. So if you'd like to add or move an eSIM into the phone that you're using, you can choose the option to add an eSIM, and it gives you then options on how you might want to transfer that from an existing phone or to use a QR code for the transfer.
+
+Having that eSIM makes it so much easier to manage that transfer between devices. If you've ever dealt with a SIM, which is the physical card, you can see that they're very small. You often need a special tool to be able to unplug or disconnect those, and you can see that this phone supports multiple SIMs simultaneously so that you could have multiple phone numbers or profiles on the same mobile phone device.
+
+Bluetooth Pairing and Connectivity
+
+If you've ever had to connect a Bluetooth device such as a headset or an external speaker, then you know there's a process you have to go through to make sure that those two devices are paired successfully. This is not only a process that ensures security but it also makes sure that you're able to connect to that device automatically later on. This process commonly uses a Personal Identification Number or a PIN to verify the connectivity when you set it up initially, and fortunately, you only have to go through this pairing process one time for a piece of hardware. Once it's paired, you can connect and disconnect from that Bluetooth device and you don't have to go through this pairing process every single time.
+
+Although the Bluetooth pairing process is very similar between devices, there may be nuances or differences depending on the device you're connecting to, so check your documentation to make sure you know the appropriate Personal Identification Number or where you would find that information on your Bluetooth device.
+
+You would start the pairing process by enabling Bluetooth on both of the devices that will connect to each other. If you're an iOS or Android user, you'll find this enable and disable function under Settings and Bluetooth. You would then set both of those devices to be discoverable by each other. This may require a specific key sequence or startup process, so make sure you check your Bluetooth device documentation to know how to put your device into a discoverable mode.
+
+Once you do this, you'll see devices start to appear on your mobile device, and then you can select that to begin the pairing process. Before the pairing process completes, it asks you to confirm a Personal Identification Number. This might be one that is embedded into the Bluetooth device, or it may be dynamic so that it changes every time you try to pair with that device. Again, your documentation will tell you where to find that PIN, and you'll need to confirm that PIN or type it in on one of those Bluetooth devices.
+
+At that point, the Bluetooth pairing process is complete and those two devices can communicate with each other. You can test this by powering down one of those devices, powering it back up, and making sure that it's able to automatically reconnect over the Bluetooth connection.
+
+Location Services
+
+If you've ever used the maps functionality on your mobile phone, then you know the GPS capability can be very helpful. GPS is the Global Positioning System, and it's a technology that was created by the United States Department of Defense. This technology uses satellites that are circling the Earth, and if you can see four of those satellites with your phone, then you'll get accurate GPS readings.
+
+This GPS functionality uses differences in the signal that is received from these multiple satellites to determine your longitude, your latitude, and the altitude above sea level. So if you're using maps or you're using an app that has location functionality, it may be using GPS to determine that. But GPS is not the only way to determine where you are. Some apps use the Wi-Fi networks that are around you to get a better idea of where you might be, even if GPS is not currently available. And some cellular networks are able to triangulate based on the different cellular towers to determine where you might be as well. So if you are having a problem communicating or receiving GPS signals, you may be able to use these other technologies to locate where you might be.
+
+Mobile Device Management (MDM)
+
+If you have an organization and you need to manage all of the mobile phones used in the organization, then you need a Mobile Device Manager or MDM. This allows you to manage devices that may be owned by your company or devices that are personally owned. This would be a BYOD where someone is bringing their own device to use at work. When that occurs, you need some way to be able to centrally manage all of your mobile devices from one place.
+
+This is a relatively specialized function, and so you need specialized software to be able to do this. An MDM allows you as the system administrator to set certain rules and parameters on how these mobile devices are used. So you could set policies on which applications are allowed or not allowed. You can configure or disable functionality of things like your camera or GPS and effectively control almost every aspect of these mobile devices.
+
+This also allows you as a company to set up a partitioned area on someone's personal phone for use by the organization. This allows your users to have their own private data that is protected and private to them and have a different part of the phone that is partitioned off just for corporate data. And from a security perspective, you can require the use of certain security policies. For example, you may require everyone in your organization to use screen locks, and those screen locks need to have a Personal Identification Number or other type of access in order to unlock that phone.
+
+BYOD vs COPE
+
+BYOD is an interesting challenge for organizations. This, of course, stands for Bring Your Own Device. You may see this also referred to as Bring Your Own Technology. The employee owns the phone, and since they already have a phone, that simplifies things for the employee so that they don't have to carry around two different mobile devices. But we need to have some way to protect the company data that is stored in that phone and to make sure that all the user's personal information remains personal and private.
+
+This allows you to configure from the Mobile Device Manager what part of that device is home or private and what part of that device is used for work purposes. You can also set different parameters for how the data is protected on that device, and you also need to set policies on what happens to the data on that device if the phone is upgraded, traded in, or if the phone is lost.
+
+Some organizations don't allow user phones to be used inside of the company. Instead, the company will provide the phones through COPE. This is Corporate Owned, Personally Enabled. The company purchases the phone, they assign that phone to a user, and then they manage that as a corporate device. Although the corporation does have full control of that device, in many organizations they allow the user to use it as a personal device as well.
+
+Since the company has purchased the phone, they have complete control over the phone and they manage every aspect of how that particular device is managed. This is very similar to how organizations might manage laptops, desktops, and other computing devices. The company determines how information is stored on the device, what type of information is stored on the device, or perhaps more importantly, what happens to that data if the device is changed out or if the device is lost.
+
+Some organizations will add some flexibility to the process and allow the user to choose from a selection of devices. We refer to that as CYOD or Choose Your Own Device.
+
+Device Synchronization and Business Applications
+
+Having management of all of your mobile devices from a central MDM policy screen provides a lot of flexibility and saves a lot of time. For example, you can configure your corporate email settings on the Mobile Device Manager that's pushed down to everyone's phone, and so they don't have to make any changes at all to gain access to their inbox. They simply turn on their phone and everything works as it should.
+
+The security team may decide that they would like additional security on these mobile devices since they are outside of the company and can be lost easily. So they may require things like two-factor authentication, and they can specify what type of multi-factor authentication they would like. And from the MDM, you can determine what applications are allowed on that device, if there are certain applications that are forbidden to be installed on that device, and you can even push those applications to be installed automatically.
+
+The MDM also allows you to configure how this device will be synchronized over the air. Since these devices are rarely plugged into a central facility, we need some way to back up the data that's being stored on these mobile phones. Some of these settings are already preconfigured. For example, your telephone information and messages is something that we know will always be configured and set up on these devices. But different organizations might use different types of email. One organization might use Gmail, another organization might use Microsoft Outlook. Each organization does things a different way with different settings, and so the MDM allows you to have all of those configured in one central place.
+
+It also allows you to turn on how the data will be synchronized. You can specify whether data will be synchronized over the Wi-Fi network only or if it will use the cellular network as well. This is also important for understanding how this data will also be restored if this device fails, is damaged, or you need to replace it.
+
+You can also get into the granular settings of the synchronization. For example, you can specify what specific types of data will be synchronized. Will we synchronize calendar settings? Will we synchronize contact details? And we may want to even change how the data is going to be synchronized at different times of the day. For example, some organizations may not want to use the cellular network due to cost limitations. Maybe you can only synchronize this data if it's on an 802.11 or local network.
+
+Fortunately, most of our mobile devices have settings where we can specify how much of this cellular network can be used and for what purposes. You want to check with the contract that you have with your cellular provider to see how much data would be allowed over this network and at what particular time. And you as the administrator could configure, for example, if automatic downloads are configured and if they are configured, what size applications can be downloaded over the mobile network.
+
+When you're setting up business applications on these devices, you're often configuring things like Outlook email, cloud storage, and other services. You would commonly set those up in the account settings of that device where you would need to provide a username, a password, or some other type of authentication factor. From there, you can get even more granular control over exactly what will be synchronized, and you can choose mail, contacts, calendars, reminders, notes, or other settings. You can also set this up to be different from other services, so your synchronization settings for Microsoft Exchange might be very different than the synchronizations that you configure for Google Mail.

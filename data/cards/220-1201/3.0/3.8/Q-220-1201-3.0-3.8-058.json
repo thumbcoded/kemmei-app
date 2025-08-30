@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common use for thermal printers?",
+  "answer_options": [
+    "Photo printing",
+    "Shipping labels",
+    "Architectural blueprints",
+    "3D modeling"
+  ],
+  "correct_answer": [
+    "Shipping labels"
+  ],
+  "explanation": "Thermal printers are widely used for shipping labels and other fast, low-maintenance print jobs.",
+  "tags": [
+    "shipping labels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key difference between a container and a traditional virtual machine (VM)?",
+  "answer_options": [
+    "Containers require their own operating system",
+    "Containers are more hardware-intensive than VMs",
+    "Containers run without a guest operating system",
+    "Containers include full hypervisors"
+  ],
+  "correct_answer": [
+    "Containers run without a guest operating system"
+  ],
+  "explanation": "Unlike VMs, containers do not include an entire OS, making them lightweight and faster to deploy.",
+  "tags": [
+    "container"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

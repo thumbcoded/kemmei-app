@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following may indicate a failing motherboard? (Select all that apply)",
+  "answer_options": [
+    "BIOS resets after every shutdown",
+    "Built-in audio and Ethernet fail simultaneously",
+    "Sudden shutdowns with no error messages",
+    "Incorrect date and time after reboot",
+    "Touchscreen doesn't work in one application"
+  ],
+  "correct_answer": [
+    "BIOS resets after every shutdown",
+    "Built-in audio and Ethernet fail simultaneously",
+    "Sudden shutdowns with no error messages",
+    "Incorrect date and time after reboot"
+  ],
+  "explanation": "Failing motherboards may cause onboard component failures, spontaneous shutdowns, and CMOS-related symptoms like time resets.",
+  "tags": [
+    "motherboard failure",
+    "connectors not operational"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

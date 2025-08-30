@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following symptoms may indicate a motherboard failure?",
+  "answer_options": [
+    "Loud clicking from a hard drive",
+    "Screen resolution issues",
+    "No response from multiple USB ports",
+    "Applications closing unexpectedly"
+  ],
+  "correct_answer": [
+    "No response from multiple USB ports"
+  ],
+  "explanation": "If multiple connectors like USB ports stop working, the motherboard may be failing or have damaged traces.",
+  "tags": [
+    "motherboard failure",
+    "connectors not operational"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting is most likely to correct screen discoloration caused by user-modified tint and contrast values?",
+  "answer_options": [
+    "Adjust resolution to native",
+    "Disable hardware acceleration",
+    "Use factory reset settings",
+    "Enable auto-dimming function"
+  ],
+  "correct_answer": [
+    "Use factory reset settings"
+  ],
+  "explanation": "Factory reset clears all custom adjustments to color, tint, contrast, and other display controls, restoring standard image quality.",
+  "tags": [
+    "factory reset settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

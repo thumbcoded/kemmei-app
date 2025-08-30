@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following statements about inkjet maintenance are true? (Select all that apply)",
+  "answer_options": [
+    "Manual cleaning can be used if automatic cleaning fails",
+    "Color alignment may improve print clarity",
+    "Tiny droplets are produced using ink dispersion",
+    "Paper jams are resolved by toner remapping"
+  ],
+  "correct_answer": [
+    "Manual cleaning can be used if automatic cleaning fails",
+    "Color alignment may improve print clarity",
+    "Tiny droplets are produced using ink dispersion"
+  ],
+  "explanation": "Manual cleaning is a fallback option, color alignment ensures crisp prints, and ink dispersion controls droplet delivery. Toner remapping does not exist for inkjets.",
+  "tags": [
+    "manual cleaning",
+    "color alignment",
+    "tiny droplets",
+    "ink dispersion"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

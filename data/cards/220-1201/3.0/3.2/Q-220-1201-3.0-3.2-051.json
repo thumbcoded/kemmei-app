@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which SATA revision introduced support for up to 16 Gbps and is commonly used with modern SSDs?",
+  "answer_options": [
+    "SATA revision 1.0",
+    "SATA revision 2.0",
+    "SATA revision 3.0",
+    "SATA revision 3.2"
+  ],
+  "correct_answer": [
+    "SATA revision 3.2"
+  ],
+  "explanation": "SATA revision 3.2 introduced SATA Express and increased speeds to 16 Gbps, accommodating faster SSD interfaces.",
+  "tags": [
+    "SATA revision 3.2"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

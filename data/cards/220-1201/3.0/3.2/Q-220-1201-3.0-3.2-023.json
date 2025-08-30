@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of a DB15 connector in display systems?",
+  "answer_options": [
+    "To connect HDMI audio receivers",
+    "To transmit digital video and audio",
+    "To carry analog video from a VGA port",
+    "To connect to optical fiber patch panels"
+  ],
+  "correct_answer": [
+    "To carry analog video from a VGA port"
+  ],
+  "explanation": "The DB15 connector is used by VGA to carry analog video signals from older display hardware.",
+  "tags": [
+    "DB15 connector",
+    "VGA",
+    "analog video"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

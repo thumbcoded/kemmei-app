@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best represents the evolution in data transfer rates from DDR2 to DDR5 memory?",
+  "answer_options": [
+    "Gradual decrease in latency with slower throughput",
+    "Introduction of ECC memory modules",
+    "Progressively higher transfer rates with no backward compatibility",
+    "Reduced memory module sizes across all generations"
+  ],
+  "correct_answer": [
+    "Progressively higher transfer rates with no backward compatibility"
+  ],
+  "explanation": "DDR generations (DDR2 → DDR5) have continually increased data transfer speeds but are not backward compatible with earlier generations due to architectural changes.",
+  "tags": [
+    "DDR2",
+    "DDR3",
+    "DDR4",
+    "DDR5"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

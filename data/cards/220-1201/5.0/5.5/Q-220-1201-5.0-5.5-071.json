@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A wireless device shows good signal strength but poor SNR readings. What does this indicate?",
+  "answer_options": [
+    "The device is too far from the access point",
+    "There is significant interference in the area",
+    "The access point is malfunctioning",
+    "The wireless adapter needs driver updates"
+  ],
+  "correct_answer": [
+    "There is significant interference in the area"
+  ],
+  "explanation": "Good signal strength with poor SNR indicates high noise levels relative to the signal, typically caused by interference from other devices or sources.",
+  "tags": [
+    "signal quality",
+    "wireless network monitoring",
+    "channel interference"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

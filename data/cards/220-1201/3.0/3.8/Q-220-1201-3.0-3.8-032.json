@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which four colors are most commonly used in inkjet printers for color printing?",
+  "answer_options": [
+    "Red, green, blue, black",
+    "Cyan, magenta, yellow, black",
+    "Black, white, gray, blue",
+    "Cyan, yellow, red, black"
+  ],
+  "correct_answer": [
+    "Cyan, magenta, yellow, black"
+  ],
+  "explanation": "Inkjet printers typically use the CMYK color model: Cyan, Magenta, Yellow, and Black.",
+  "tags": [
+    "CMYK"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

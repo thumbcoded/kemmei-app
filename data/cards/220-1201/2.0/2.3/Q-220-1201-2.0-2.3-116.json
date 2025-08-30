@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-116",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which statements about embedded systems are true? (Select all that apply)",
+  "answer_options": [
+    "They require minimal ongoing maintenance",
+    "Manufacturers provide necessary management tools",
+    "Users have direct operating system access",
+    "They are purpose-built for specific functions",
+    "They are self-contained units"
+  ],
+  "correct_answer": [
+    "They require minimal ongoing maintenance",
+    "Manufacturers provide necessary management tools",
+    "They are purpose-built for specific functions",
+    "They are self-contained units"
+  ],
+  "explanation": "Embedded systems are purpose-built, self-contained units that require minimal ongoing maintenance, with manufacturers providing the necessary tools for support and management.",
+  "tags": [
+    "embedded system",
+    "purpose-built device",
+    "smart devices"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

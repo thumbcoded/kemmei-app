@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following steps can help troubleshoot a network printer that is not responding? (Select all that apply)",
+  "answer_options": [
+    "Check link lights",
+    "Verify printer IP address",
+    "Clean the pickup rollers",
+    "Access the printer's web interface",
+    "Update the video driver"
+  ],
+  "correct_answer": [
+    "Check link lights",
+    "Verify printer IP address",
+    "Access the printer's web interface"
+  ],
+  "explanation": "All three steps relate directly to diagnosing network printer connectivity issues.",
+  "tags": [
+    "link lights",
+    "printer IP address",
+    "printer connectivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

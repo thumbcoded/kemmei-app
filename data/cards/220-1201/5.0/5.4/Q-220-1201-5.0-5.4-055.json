@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What should be done if a mobile device shows signs of malware infection?",
+  "answer_options": [
+    "Ignore it as mobile devices cannot get malware",
+    "Only restart the device",
+    "Run anti-malware or antivirus software designed for mobile devices",
+    "Immediately dispose of the device"
+  ],
+  "correct_answer": [
+    "Run anti-malware or antivirus software designed for mobile devices"
+  ],
+  "explanation": "There are many types of anti-malware and antivirus software available for mobile devices that should be used to detect and remove malicious software.",
+  "tags": [
+    "slow performance",
+    "app crashes"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

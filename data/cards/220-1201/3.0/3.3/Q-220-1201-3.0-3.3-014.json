@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How does double data rate (DDR) memory improve over single data rate (SDR) memory technologies?",
+  "answer_options": [
+    "It uses ECC to prevent parity errors.",
+    "It enables memory to retain data after power loss.",
+    "It allows data transfers on both rising and falling clock edges.",
+    "It synchronizes memory and CPU using independent clocks."
+  ],
+  "correct_answer": [
+    "It allows data transfers on both rising and falling clock edges."
+  ],
+  "explanation": "DDR memory effectively doubles the data transfer rate by performing read/write operations on both edges of each clock cycle.",
+  "tags": [
+    "RAM",
+    "high-speed storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

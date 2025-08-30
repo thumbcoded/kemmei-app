@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-133",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a new hard drive, but it doesn't show up in the boot sequence. What should be checked FIRST in the UEFI settings?",
+  "answer_options": [
+    "TPM status",
+    "UEFI time zone setting",
+    "Drive controller mode (AHCI/RAID)",
+    "Whether the new drive is recognized and listed"
+  ],
+  "correct_answer": [
+    "Whether the new drive is recognized and listed"
+  ],
+  "explanation": "If the drive is not visible to the UEFI, it won’t be included in the boot list regardless of controller mode or other settings.",
+  "tags": [
+    "UEFI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

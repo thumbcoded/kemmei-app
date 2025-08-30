@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What setting on an access point might help avoid signal degradation caused by interference?",
+  "answer_options": [
+    "File sharing permissions",
+    "Guest network access",
+    "AP channel settings",
+    "Screen brightness"
+  ],
+  "correct_answer": [
+    "AP channel settings"
+  ],
+  "explanation": "Adjusting the channel can reduce interference from neighboring wireless networks.",
+  "tags": [
+    "AP channel settings",
+    "access point settings",
+    "signal degradation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

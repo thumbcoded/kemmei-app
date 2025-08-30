@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How many pins are in a standard Type A HDMI connector?",
+  "answer_options": [
+    "9",
+    "15",
+    "19",
+    "24"
+  ],
+  "correct_answer": [
+    "19"
+  ],
+  "explanation": "The standard HDMI Type A connector has 19 pins and is commonly used for consumer video equipment.",
+  "tags": [
+    "19-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

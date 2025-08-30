@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which upgrade most directly improves memory throughput in systems constrained by bandwidth?",
+  "answer_options": [
+    "Switching from DDR3 to ECC RAM",
+    "Installing memory modules with a lower CAS latency",
+    "Using matched pairs of RAM in a multi-channel configuration",
+    "Adding more memory modules of varying capacities"
+  ],
+  "correct_answer": [
+    "Using matched pairs of RAM in a multi-channel configuration"
+  ],
+  "explanation": "Multi-channel memory increases the available pathways between RAM and CPU, improving overall memory bandwidth. Matched modules ensure the motherboard can use this feature.",
+  "tags": [
+    "multi-channel memory",
+    "memory throughput",
+    "data transfer rate"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

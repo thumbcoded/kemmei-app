@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-121",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the abbreviation SAS stand for in storage technology?",
+  "answer_options": [
+    "Serial Advanced Storage",
+    "Serial Attached SCSI",
+    "Storage Array Standard",
+    "Synchronous Access Storage"
+  ],
+  "correct_answer": [
+    "Serial Attached SCSI"
+  ],
+  "explanation": "SAS stands for Serial Attached SCSI, a modern version of the SCSI protocol using serial communication.",
+  "tags": [
+    "serial attached SCSI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of the TRIM command in SSD operation?",
+  "answer_options": [
+    "It defragments the SSD for better performance",
+    "It allows deleted blocks to be marked for future overwrite",
+    "It slows wear leveling by pausing writes",
+    "It stores system firmware securely"
+  ],
+  "correct_answer": [
+    "It allows deleted blocks to be marked for future overwrite"
+  ],
+  "explanation": "TRIM lets the OS inform the SSD which blocks are no longer in use, helping the drive maintain performance and lifespan.",
+  "tags": [
+    "SSD",
+    "non-volatile memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

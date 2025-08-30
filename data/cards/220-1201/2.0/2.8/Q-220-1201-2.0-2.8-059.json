@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of a punchdown block in networking?",
+  "answer_options": [
+    "To splice fiber optic cables",
+    "To test signal continuity in coaxial cable",
+    "To connect and organize twisted pair wiring",
+    "To terminate USB connections"
+  ],
+  "correct_answer": [
+    "To connect and organize twisted pair wiring"
+  ],
+  "explanation": "Punchdown blocks are used to neatly terminate and interconnect twisted pair cables in structured wiring installations.",
+  "tags": [
+    "punchdown block",
+    "organization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

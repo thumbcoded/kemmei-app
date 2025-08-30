@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-123",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of connection does SAS use for transferring data?",
+  "answer_options": [
+    "Parallel connection",
+    "Serial connection",
+    "Fiber-optic connection",
+    "Wireless link"
+  ],
+  "correct_answer": [
+    "Serial connection"
+  ],
+  "explanation": "SAS uses a serial connection, which improves speed and efficiency over the older parallel SCSI interface.",
+  "tags": [
+    "SAS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

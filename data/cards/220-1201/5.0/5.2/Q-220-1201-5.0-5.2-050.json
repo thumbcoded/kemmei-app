@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two RAID types can tolerate at least two simultaneous drive failures without immediate data loss? (Select two.)",
+  "answer_options": [
+    "RAID 0 striping",
+    "RAID 1 mirroring",
+    "RAID 5 striping with parity",
+    "RAID 6 double parity",
+    "RAID 10 striping and mirroring"
+  ],
+  "correct_answer": [
+    "RAID 6 double parity",
+    "RAID 10 striping and mirroring"
+  ],
+  "explanation": "RAID 6 includes dual parity, and RAID 10 uses mirrored stripes, both of which tolerate two drive failures under specific conditions.",
+  "tags": [
+    "RAID 6 double parity",
+    "RAID 10 striping and mirroring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

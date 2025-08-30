@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following expansion cards would most likely be used in a professional livestreaming setup?",
+  "answer_options": [
+    "Sound card",
+    "Capture card",
+    "Network card",
+    "RAID controller"
+  ],
+  "correct_answer": [
+    "Capture card"
+  ],
+  "explanation": "Capture cards allow external video sources (like consoles or cameras) to be recorded or streamed through the system.",
+  "tags": [
+    "capture card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

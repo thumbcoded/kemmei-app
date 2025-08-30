@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-132",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which fiber connector type uses a bayonet-style twist lock and is known for its round metal body?",
+  "answer_options": [
+    "SC connector",
+    "ST connector",
+    "LC connector",
+    "RJ45 connector"
+  ],
+  "correct_answer": [
+    "ST connector"
+  ],
+  "explanation": "The ST (Straight Tip) connector is round and locks using a bayonet-style twist mechanism, making it secure and easy to insert.",
+  "tags": [
+    "ST connector",
+    "straight tip",
+    "bayonet connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

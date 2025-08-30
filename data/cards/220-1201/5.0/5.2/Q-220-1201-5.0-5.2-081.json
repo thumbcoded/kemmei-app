@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are best practices when preparing to run a full diagnostic on a potentially failing drive? (Select all that apply)",
+  "answer_options": [
+    "Confirm recent backup",
+    "Check cable condition",
+    "Run sector testing",
+    "Lower screen brightness",
+    "Verify free disk space"
+  ],
+  "correct_answer": [
+    "Confirm recent backup",
+    "Check cable condition",
+    "Run sector testing"
+  ],
+  "explanation": "Confirming backups, ensuring good cabling, and running a sector test are all key steps before drive diagnostics.",
+  "tags": [
+    "recent backup",
+    "damaged cables",
+    "sector testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

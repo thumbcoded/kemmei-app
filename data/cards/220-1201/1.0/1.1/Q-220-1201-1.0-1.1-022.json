@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of the keyboard bezel during keyboard replacement?",
+  "answer_options": [
+    "To secure the display to the lid",
+    "To hold the keyboard in place",
+    "To connect the keyboard to the motherboard",
+    "To ground the keyboard for electrostatic safety"
+  ],
+  "correct_answer": [
+    "To hold the keyboard in place"
+  ],
+  "explanation": "The keyboard bezel is often removed to access and release the keyboard from the laptop chassis.",
+  "tags": [
+    "keyboard bezel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

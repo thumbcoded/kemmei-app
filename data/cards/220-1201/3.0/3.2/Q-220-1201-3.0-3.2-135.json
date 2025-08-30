@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-135",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which fiber connector is square-shaped, uses a push-pull locking mechanism, and is commonly used in patch panels?",
+  "answer_options": [
+    "LC connector",
+    "SC connector",
+    "ST connector",
+    "RJ11 connector"
+  ],
+  "correct_answer": [
+    "SC connector"
+  ],
+  "explanation": "The SC (Subscriber Connector) is square, uses a push-pull design, and is a standard in structured cabling environments.",
+  "tags": [
+    "SC connector",
+    "subscriber connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

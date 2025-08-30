@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-131",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What are driver updates in video troubleshooting and what is the proper procedure for updating them?",
+  "answer_options": [
+    "Automatic system updates that occur without user intervention",
+    "Bug fixes and performance improvements - download from manufacturer, use DDU, install new drivers",
+    "Hardware modifications that require physical component replacement",
+    "Network configuration changes that affect video streaming quality"
+  ],
+  "correct_answer": [
+    "Bug fixes and performance improvements - download from manufacturer, use DDU, install new drivers"
+  ],
+  "explanation": "Driver updates provide bug fixes, performance improvements, and new features for video cards. Procedure: 1) Download latest drivers from manufacturer (NVIDIA/AMD), 2) Use Display Driver Uninstaller (DDU) to completely remove old drivers, 3) Restart in safe mode, 4) Install new drivers, 5) Restart normally, 6) Test stability and performance. Always create restore point before updating.",
+  "tags": [
+    "driver updates"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

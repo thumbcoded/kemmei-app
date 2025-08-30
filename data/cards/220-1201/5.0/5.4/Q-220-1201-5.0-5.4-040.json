@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a symptom of insufficient storage on a mobile device?",
+  "answer_options": [
+    "Longer charging time",
+    "Wi-Fi disconnects frequently",
+    "System lag and crashes",
+    "Bluetooth won’t pair"
+  ],
+  "correct_answer": [
+    "System lag and crashes"
+  ],
+  "explanation": "Lack of storage can prevent background operations and cause apps or the system to slow down or crash.",
+  "tags": [
+    "storage full"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

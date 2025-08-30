@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which metric compares how many read and write operations a storage device can perform in a second?",
+  "answer_options": [
+    "Clock speed",
+    "Latency",
+    "IOPS",
+    "Temperature Celsius"
+  ],
+  "correct_answer": [
+    "IOPS"
+  ],
+  "explanation": "IOPS stands for Input/Output Operations Per Second and measures storage device performance.",
+  "tags": [
+    "IOPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key difference between a hybrid cloud and a community cloud?",
+  "answer_options": [
+    "Hybrid cloud involves only public cloud providers",
+    "Community cloud is always hosted externally",
+    "Hybrid cloud blends public and private environments, while community cloud is jointly managed by similar organizations",
+    "Community cloud includes both internal and external users"
+  ],
+  "correct_answer": [
+    "Hybrid cloud blends public and private environments, while community cloud is jointly managed by similar organizations"
+  ],
+  "explanation": "Hybrid cloud focuses on infrastructure types, while community cloud focuses on shared use among trusted partners.",
+  "tags": [
+    "hybrid cloud",
+    "community cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

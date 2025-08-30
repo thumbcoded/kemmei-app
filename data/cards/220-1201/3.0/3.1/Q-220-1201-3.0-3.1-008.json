@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is an advantage of LED backlighting compared to fluorescent backlighting in LCDs?",
+  "answer_options": [
+    "Lower image resolution",
+    "Larger screen size support",
+    "More precise brightness control",
+    "Reduced screen refresh rate"
+  ],
+  "correct_answer": [
+    "More precise brightness control"
+  ],
+  "explanation": "LED backlighting allows for finer brightness zones and is more energy-efficient than fluorescent alternatives.",
+  "tags": [
+    "LED backlight"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

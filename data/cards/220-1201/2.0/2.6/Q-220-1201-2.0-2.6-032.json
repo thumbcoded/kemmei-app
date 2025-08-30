@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What value is typically used as the default gateway on a small home network?",
+  "answer_options": [
+    "192.168.1.1",
+    "255.255.255.0",
+    "169.254.0.1",
+    "10.0.0.255"
+  ],
+  "correct_answer": [
+    "192.168.1.1"
+  ],
+  "explanation": "192.168.1.1 is a common default gateway IP used by home routers.",
+  "tags": [
+    "default gateway",
+    "manual IP config"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

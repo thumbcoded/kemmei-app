@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A developer prefers not to worry about OS patches or middleware but wants to deploy and scale their own app. Which cloud model supports this?",
+  "answer_options": [
+    "IaaS",
+    "PaaS",
+    "SaaS",
+    "DaaS"
+  ],
+  "correct_answer": [
+    "PaaS"
+  ],
+  "explanation": "PaaS removes infrastructure and OS maintenance from the developer’s responsibility while allowing full app deployment control.",
+  "tags": [
+    "PaaS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

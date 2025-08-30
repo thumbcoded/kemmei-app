@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-119",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO case components typically use momentary switches connected to the front panel header? (Select two)",
+  "answer_options": [
+    "Power switch",
+    "Reset switch",
+    "HDD activity LED",
+    "TPM module"
+  ],
+  "correct_answer": [
+    "Power switch",
+    "Reset switch"
+  ],
+  "explanation": "Power and reset buttons use momentary switches that send a short signal via pin headers when pressed.",
+  "tags": [
+    "case buttons",
+    "front panel connectors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

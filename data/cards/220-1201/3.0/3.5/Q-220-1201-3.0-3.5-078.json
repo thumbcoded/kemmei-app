@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following provides additional power to high-end graphics cards?",
+  "answer_options": [
+    "20-pin connector",
+    "SATA power connector",
+    "PCIe power connector",
+    "CPU fan header"
+  ],
+  "correct_answer": [
+    "PCIe power connector"
+  ],
+  "explanation": "High-performance GPUs draw additional power from 6-pin or 8-pin PCIe power connectors, beyond what the PCIe slot provides.",
+  "tags": [
+    "PCIe power connectors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

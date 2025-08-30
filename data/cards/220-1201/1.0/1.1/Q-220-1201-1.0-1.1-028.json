@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician replaces a laptop keyboard, but the new keyboard remains unresponsive. The ribbon cable is properly connected. Which of the following is the most likely next step?",
+  "answer_options": [
+    "Replace the entire motherboard",
+    "Update the laptop BIOS",
+    "Inspect the ribbon cable connector for damage",
+    "Perform a factory reset of the operating system"
+  ],
+  "correct_answer": [
+    "Inspect the ribbon cable connector for damage"
+  ],
+  "explanation": "Even with a proper ribbon cable connection, a damaged or misaligned connector can cause complete keyboard failure.",
+  "tags": [
+    "keyboard connector",
+    "ribbon cable"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

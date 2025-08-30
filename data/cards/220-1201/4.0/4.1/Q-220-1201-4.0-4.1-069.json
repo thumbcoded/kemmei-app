@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are benefits of using Virtual Desktop Infrastructure (VDI)? (Select all that apply)",
+  "answer_options": [
+    "Centralized management of desktop environments",
+    "Reduced hardware requirements for endpoints",
+    "Increased local application storage",
+    "Seamless access to desktop environments from remote locations"
+  ],
+  "correct_answer": [
+    "Centralized management of desktop environments",
+    "Reduced hardware requirements for endpoints",
+    "Seamless access to desktop environments from remote locations"
+  ],
+  "explanation": "VDI benefits include centralized control, flexible access, and lower endpoint hardware demands.",
+  "tags": [
+    "virtual desktop infrastructure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

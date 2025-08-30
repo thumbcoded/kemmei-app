@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main limitation of USB-based port replicators compared to dedicated docking stations?",
+  "answer_options": [
+    "They cannot support external monitors",
+    "They have limited bandwidth for high-performance applications",
+    "They require proprietary drivers",
+    "They only work with specific laptop models"
+  ],
+  "correct_answer": [
+    "They have limited bandwidth for high-performance applications"
+  ],
+  "explanation": "USB-based port replicators are limited by USB bandwidth, which may not support multiple high-resolution displays or high-performance peripherals as effectively as dedicated docking stations.",
+  "tags": [
+    "port replicator",
+    "USB hub",
+    "interface expansion",
+    "docking station"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

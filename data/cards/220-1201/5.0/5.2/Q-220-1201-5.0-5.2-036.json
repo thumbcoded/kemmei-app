@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user sees an 'Operating System not found' error, but the BIOS shows the drive is detected. What is most likely the issue?",
+  "answer_options": [
+    "Drive letter conflict",
+    "No bootable operating system",
+    "Damaged video card",
+    "Insufficient memory"
+  ],
+  "correct_answer": [
+    "No bootable operating system"
+  ],
+  "explanation": "This message appears when the BIOS sees the drive, but no valid OS is found on it to boot.",
+  "tags": [
+    "operating system not found",
+    "bootable operating system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

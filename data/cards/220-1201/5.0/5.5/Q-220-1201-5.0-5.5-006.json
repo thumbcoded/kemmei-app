@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "You can ping 127.0.0.1 successfully but cannot ping your own IP address. What does this most likely indicate?",
+  "answer_options": [
+    "The network cable is unplugged",
+    "The local IP address is invalid",
+    "The IP stack is not functioning",
+    "The loopback address is misconfigured"
+  ],
+  "correct_answer": [
+    "The local IP address is invalid"
+  ],
+  "explanation": "Successful loopback ping confirms the IP stack is working, but failure to ping the local IP suggests misconfiguration or invalid IP settings.",
+  "tags": [
+    "127.0.0.1",
+    "ping local IP",
+    "loopback address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes server hosting in the context of cloud computing?",
+  "answer_options": [
+    "Hosting services from a local server in a business office",
+    "Deploying websites using peer-to-peer sharing",
+    "Leasing virtual servers from a third-party provider",
+    "Using personal computers as redundant clusters"
+  ],
+  "correct_answer": [
+    "Leasing virtual servers from a third-party provider"
+  ],
+  "explanation": "Cloud server hosting provides businesses access to virtual machines hosted and managed by cloud providers.",
+  "tags": [
+    "server hosting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

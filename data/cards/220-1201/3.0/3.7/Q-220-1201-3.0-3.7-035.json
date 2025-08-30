@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "After applying a firmware update, a multi-function printer no longer recognizes advanced print jobs sent from legacy software. What is the most likely cause?",
+  "answer_options": [
+    "The printer’s power settings were reset",
+    "The update removed support for older page description languages",
+    "The network settings were misconfigured",
+    "The firmware update was incomplete"
+  ],
+  "correct_answer": [
+    "The update removed support for older page description languages"
+  ],
+  "explanation": "Some firmware updates change or remove support for outdated languages or protocols. Incompatibility with legacy software may result if backward compatibility is lost.",
+  "tags": [
+    "firmware update"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

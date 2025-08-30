@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You suspect the boot process is being interrupted due to corrupted UEFI configuration. Which recovery step should be attempted first before full OS reinstallation?",
+  "answer_options": [
+    "Replace the CMOS battery",
+    "Perform a BIOS/UEFI reset using the motherboard jumper",
+    "Format the drive and perform a clean OS install",
+    "Reseat the system RAM modules"
+  ],
+  "correct_answer": [
+    "Perform a BIOS/UEFI reset using the motherboard jumper"
+  ],
+  "explanation": "Corrupted UEFI settings can prevent a system from reaching the OS loader. A hardware-based BIOS reset (via jumper) clears corrupted config and allows recovery.",
+  "tags": [
+    "BIOS reset",
+    "UEFI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

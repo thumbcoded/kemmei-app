@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a key physical difference between RJ11 and RJ45 connectors?",
+  "answer_options": [
+    "RJ11 is wider and has 8 pins; RJ45 is narrower with 6 pins",
+    "RJ11 is used for coaxial cable; RJ45 is for Ethernet fiber",
+    "RJ11 has 4–6 pins and is smaller; RJ45 has 8 pins and is wider",
+    "Both use the same cable but differ in plug color"
+  ],
+  "correct_answer": [
+    "RJ11 has 4–6 pins and is smaller; RJ45 has 8 pins and is wider"
+  ],
+  "explanation": "RJ11 is smaller and typically used for phone lines with 4–6 pins, while RJ45 is wider with 8 pins for Ethernet networking.",
+  "tags": [
+    "RJ11",
+    "RJ45"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What input method allows users to perform gestures like pinch-to-zoom and two-finger scrolling on laptops?",
+  "answer_options": [
+    "Track point",
+    "Function keys",
+    "Trackpad",
+    "External mouse"
+  ],
+  "correct_answer": [
+    "Trackpad"
+  ],
+  "explanation": "Trackpads support multi-touch gestures including pinch-to-zoom, two-finger scrolling, and other gesture-based interactions that traditional pointing devices cannot easily perform.",
+  "tags": [
+    "trackpad",
+    "gesture",
+    "input device",
+    "multitouch"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

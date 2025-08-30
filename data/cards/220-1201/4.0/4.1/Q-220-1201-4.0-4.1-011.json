@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A team uses snapshots to revert VM states during development. Which limitation should they consider when relying on this approach?",
+  "answer_options": [
+    "Snapshots permanently erase previous VM configurations",
+    "Snapshots prevent VM resource overprovisioning",
+    "Snapshots can consume significant disk space over time",
+    "Snapshots prevent the use of cross-platform virtualization"
+  ],
+  "correct_answer": [
+    "Snapshots can consume significant disk space over time"
+  ],
+  "explanation": "Frequent snapshots accumulate VM state data, which grows disk usage substantially if not pruned.",
+  "tags": [
+    "VM snapshots"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

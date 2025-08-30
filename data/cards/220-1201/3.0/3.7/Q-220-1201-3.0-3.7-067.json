@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A printer consistently jams when pulling paper from Tray 2, which is configured for thick card stock. Tray 1 with plain paper works fine. What is the most likely issue?",
+  "answer_options": [
+    "The printer firmware is outdated",
+    "The print job is too large",
+    "Tray 2 is not configured for the correct media type",
+    "Tray 1 is set as the default tray"
+  ],
+  "correct_answer": [
+    "Tray 2 is not configured for the correct media type"
+  ],
+  "explanation": "If the printer expects plain paper but is pulling heavier media like card stock, feeding problems and jams can occur unless the tray is properly configured for the correct media type.",
+  "tags": [
+    "media selection",
+    "paper tray"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

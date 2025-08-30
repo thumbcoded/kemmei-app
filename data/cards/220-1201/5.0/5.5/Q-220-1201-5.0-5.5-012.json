@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "During network troubleshooting, a device successfully pings 1.1.1.1 but fails to load websites. What’s the most likely cause?",
+  "answer_options": [
+    "The network cable is faulty",
+    "The device has an incorrect DNS configuration",
+    "The IP stack is non-functional",
+    "The gateway is misconfigured"
+  ],
+  "correct_answer": [
+    "The device has an incorrect DNS configuration"
+  ],
+  "explanation": "Reaching 1.1.1.1 confirms external connectivity. Failure to load websites suggests a DNS resolution issue, not a connection problem.",
+  "tags": [
+    "ping external address",
+    "1.1.1.1",
+    "quad 1"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

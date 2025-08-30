@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the 'D' in the DORA process stand for?",
+  "answer_options": [
+    "Deliver",
+    "Default",
+    "Discover",
+    "Distribute"
+  ],
+  "correct_answer": [
+    "Discover"
+  ],
+  "explanation": "The 'D' in DORA stands for Discover — the first step in which the client broadcasts to locate available DHCP servers.",
+  "tags": [
+    "DORA",
+    "discover"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key benefit of using encryption in a VPN tunnel?",
+  "answer_options": [
+    "Prevents eavesdropping on transmitted data",
+    "Increases internet speed",
+    "Reduces power usage",
+    "Removes the need for firewalls"
+  ],
+  "correct_answer": [
+    "Prevents eavesdropping on transmitted data"
+  ],
+  "explanation": "Encryption ensures that data passing through the VPN tunnel cannot be read by unauthorized parties.",
+  "tags": [
+    "encryption",
+    "VPN",
+    "tunnel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

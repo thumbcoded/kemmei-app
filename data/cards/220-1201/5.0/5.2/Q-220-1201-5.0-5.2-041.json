@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which BIOS feature allows you to determine if previous storage-related errors occurred during POST?",
+  "answer_options": [
+    "BIOS configuration",
+    "BIOS logs",
+    "USB boot priority",
+    "Drive letter mapping"
+  ],
+  "correct_answer": [
+    "BIOS logs"
+  ],
+  "explanation": "BIOS logs provide a history of detected hardware issues and can indicate POST or storage initialization errors.",
+  "tags": [
+    "BIOS logs"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-180",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following factors influence CPU instruction processing performance? (Select all that apply)",
+  "answer_options": [
+    "Pipeline depth",
+    "Branch prediction accuracy",
+    "Instruction set architecture (ISA)",
+    "Power supply wattage"
+  ],
+  "correct_answer": [
+    "Pipeline depth",
+    "Branch prediction accuracy",
+    "Instruction set architecture (ISA)"
+  ],
+  "explanation": "Instruction processing is affected by microarchitectural design, including pipeline behavior and the ISA. Power supply wattage affects system stability, not instruction speed.",
+  "tags": [
+    "instruction processing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

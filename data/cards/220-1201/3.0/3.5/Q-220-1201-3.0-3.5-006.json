@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following form factors allows for the greatest number of expansion slots and connectivity options?",
+  "answer_options": [
+    "ATX",
+    "microATX",
+    "mini-ITX",
+    "FlexATX"
+  ],
+  "correct_answer": [
+    "ATX"
+  ],
+  "explanation": "ATX motherboards typically offer the most expansion slots and connectivity options due to their larger size.",
+  "tags": [
+    "ATX",
+    "form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

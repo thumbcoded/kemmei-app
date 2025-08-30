@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In the laser printing process, what causes toner to stick only to certain areas of the drum?",
+  "answer_options": [
+    "The fuser applies pressure",
+    "Toner is magnetized during transfer",
+    "The laser discharges areas that attract toner",
+    "Paper has an adhesive coating"
+  ],
+  "correct_answer": [
+    "The laser discharges areas that attract toner"
+  ],
+  "explanation": "Only the laser-discharged portions of the drum attract toner during the developing step.",
+  "tags": [
+    "writing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

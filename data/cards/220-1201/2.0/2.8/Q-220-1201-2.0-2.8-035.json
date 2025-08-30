@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician tests a patch cable and sees that one LED fails to light on the remote end of the tester. What does this most likely indicate?",
+  "answer_options": [
+    "The cable is crossover type",
+    "The wire is too long",
+    "One conductor is open and not connected",
+    "The tester battery is too low"
+  ],
+  "correct_answer": [
+    "One conductor is open and not connected"
+  ],
+  "explanation": "A missing LED on one pin usually indicates that wire is broken or disconnected at one end of the cable.",
+  "tags": [
+    "continuity",
+    "open"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

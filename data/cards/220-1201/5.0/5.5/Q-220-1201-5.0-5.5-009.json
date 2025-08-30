@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "When a device fails to ping 8.8.8.8 but can ping the default gateway, what does this suggest?",
+  "answer_options": [
+    "The Ethernet cable is damaged",
+    "The loopback address is misconfigured",
+    "There is no internet connectivity beyond the local network",
+    "The device has an invalid IP address"
+  ],
+  "correct_answer": [
+    "There is no internet connectivity beyond the local network"
+  ],
+  "explanation": "Pinging the gateway confirms local access. Failure to reach an external IP like 8.8.8.8 indicates a WAN or ISP issue.",
+  "tags": [
+    "ping external address",
+    "8.8.8.8",
+    "quad 8"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

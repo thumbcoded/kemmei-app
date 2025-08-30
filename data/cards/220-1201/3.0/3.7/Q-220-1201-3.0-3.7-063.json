@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following could prevent a duplex-capable printer from performing double-sided printing? (Select all that apply)",
+  "answer_options": [
+    "Incorrect print driver",
+    "Orientation mismatch between pages",
+    "Missing duplex hardware accessory",
+    "Print job set to simplex",
+    "Using PCL instead of PostScript"
+  ],
+  "correct_answer": [
+    "Incorrect print driver",
+    "Missing duplex hardware accessory",
+    "Print job set to simplex"
+  ],
+  "explanation": "Duplex printing can fail if the driver doesn't support duplexing, if required hardware isn't installed, or if the job itself is set to simplex (single-sided). Orientation doesn't prevent duplexing; it affects layout.",
+  "tags": [
+    "duplex printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

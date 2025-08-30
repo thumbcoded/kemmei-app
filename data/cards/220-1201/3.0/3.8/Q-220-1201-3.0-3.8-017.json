@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which step applies toner to the drum in a laser printer?",
+  "answer_options": [
+    "Charging",
+    "Developing",
+    "Fusing",
+    "Cleaning"
+  ],
+  "correct_answer": [
+    "Developing"
+  ],
+  "explanation": "During the developing step, toner is attracted to the areas of the drum that were discharged by the laser.",
+  "tags": [
+    "developing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

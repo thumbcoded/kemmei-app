@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the most likely cause of wireless signal degradation in a room with many metal filing cabinets and large mirrors?",
+  "answer_options": [
+    "Incorrect default gateway",
+    "Multipath interference",
+    "Weak DHCP scope",
+    "AP uses 802.11ac instead of 802.11n"
+  ],
+  "correct_answer": [
+    "Multipath interference"
+  ],
+  "explanation": "Multipath interference occurs when signals reflect off flat surfaces and arrive at different times, degrading performance.",
+  "tags": [
+    "multipath interference",
+    "flat surfaces",
+    "signal bounce"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

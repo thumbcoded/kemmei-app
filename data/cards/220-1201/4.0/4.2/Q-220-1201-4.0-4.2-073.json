@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "In a cloud environment, which entity is generally responsible for maintaining physical hardware?",
+  "answer_options": [
+    "The customer",
+    "The internet service provider",
+    "The cloud provider",
+    "The software vendor"
+  ],
+  "correct_answer": [
+    "The cloud provider"
+  ],
+  "explanation": "In all cloud models (IaaS, PaaS, SaaS), the provider manages the physical infrastructure.",
+  "tags": [
+    "provider responsibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

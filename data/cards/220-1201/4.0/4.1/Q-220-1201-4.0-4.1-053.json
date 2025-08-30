@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is one major reason to treat each virtual machine as if it were a standalone workstation?",
+  "answer_options": [
+    "Because it reduces the need for CPU virtualization",
+    "Because VMs cannot run their own operating systems",
+    "Because VMs require their own licenses",
+    "Because each VM must be independently secured"
+  ],
+  "correct_answer": [
+    "Because each VM must be independently secured"
+  ],
+  "explanation": "Each VM is a fully functional OS and should be hardened, protected with anti-malware, and configured securely.",
+  "tags": [
+    "virtual machine security",
+    "standalone workstation security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

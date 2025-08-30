@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two best practices when securing a virtual machine downloaded from the internet.",
+  "answer_options": [
+    "Trust that the file has been scanned by the host OS",
+    "Inspect the VM's contents and apply appropriate security tools",
+    "Run the VM as administrator with full network access",
+    "Only download from known and trusted sources"
+  ],
+  "correct_answer": [
+    "Inspect the VM's contents and apply appropriate security tools",
+    "Only download from known and trusted sources"
+  ],
+  "explanation": "Downloaded VMs may be pre-infected; validate their contents and secure them before use.",
+  "tags": [
+    "malware in VMs",
+    "malware authors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What type of device allows stylus-based input on a desktop or laptop computer?",
+  "answer_options": [
+    "External touchpad",
+    "Docking station",
+    "Drawing pad or digitizer",
+    "Trackball mouse"
+  ],
+  "correct_answer": [
+    "Drawing pad or digitizer"
+  ],
+  "explanation": "External drawing pads (digitizers) allow stylus input with precision, typically for design or illustration work.",
+  "tags": [
+    "drawing pad",
+    "digitizer",
+    "stylus"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

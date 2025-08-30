@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which deployment model typically includes shared CPUs and network infrastructure with other customers?",
+  "answer_options": [
+    "Private cloud",
+    "Public cloud",
+    "Hybrid cloud",
+    "Internal data warehouse"
+  ],
+  "correct_answer": [
+    "Public cloud"
+  ],
+  "explanation": "In a public cloud, multiple customers share infrastructure like CPUs, storage drives, and networks, while maintaining data isolation.",
+  "tags": [
+    "shared resources",
+    "CPUs",
+    "network sharing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

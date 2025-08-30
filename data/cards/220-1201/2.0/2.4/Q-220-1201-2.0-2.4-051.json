@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary function of the `dig` command?",
+  "answer_options": [
+    "Trace network routes",
+    "Configure local DNS settings",
+    "Query DNS servers for name resolution",
+    "Ping a remote host"
+  ],
+  "correct_answer": [
+    "Query DNS servers for name resolution"
+  ],
+  "explanation": "`dig` is commonly used on Linux/macOS to perform DNS queries and view detailed resolution info.",
+  "tags": [
+    "dig",
+    "DNS resolution",
+    "command line tools"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

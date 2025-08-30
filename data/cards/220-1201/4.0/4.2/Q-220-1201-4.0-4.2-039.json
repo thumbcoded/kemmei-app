@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two responsibilities typically fall on the customer in an IaaS deployment? (Select two)",
+  "answer_options": [
+    "Physical security of the data center",
+    "Installing and configuring the operating system",
+    "Patching system vulnerabilities",
+    "Maintaining the hardware infrastructure"
+  ],
+  "correct_answer": [
+    "Installing and configuring the operating system",
+    "Patching system vulnerabilities"
+  ],
+  "explanation": "In IaaS, the provider supplies hardware access while the customer manages the OS, software, and security.",
+  "tags": [
+    "IaaS",
+    "operating system maintenance",
+    "security responsibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

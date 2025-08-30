@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following advanced print settings or conditions can degrade output resolution or perceived print quality? (Select all that apply)",
+  "answer_options": [
+    "Toner save or economy mode",
+    "Driver mismatch with printer model",
+    "Overly aggressive color correction",
+    "Using high-DPI PDLs like PostScript",
+    "Using low-resolution source images"
+  ],
+  "correct_answer": [
+    "Toner save or economy mode",
+    "Driver mismatch with printer model",
+    "Overly aggressive color correction",
+    "Using low-resolution source images"
+  ],
+  "explanation": "Print quality can suffer from toner-saving features, mismatched drivers, poor color calibration, or poor source materials. PostScript, being high-quality, is not a degradation factor.",
+  "tags": [
+    "print quality",
+    "resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

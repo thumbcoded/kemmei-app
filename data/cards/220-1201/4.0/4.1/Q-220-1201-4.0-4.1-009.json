@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following actions involve VM snapshot functionality? (Select all that apply)",
+  "answer_options": [
+    "Saving the VM's current memory and disk state",
+    "Backing up all host system data",
+    "Reverting the VM after failed updates",
+    "Migrating VM to another physical server"
+  ],
+  "correct_answer": [
+    "Saving the VM's current memory and disk state",
+    "Reverting the VM after failed updates"
+  ],
+  "explanation": "Snapshots store the current VM configuration and allow you to roll back after issues. They do not back up the host or perform migrations.",
+  "tags": [
+    "VM snapshots",
+    "snapshot revert"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two components are commonly associated with backlight-related display issues in older laptops? (Select two)",
+  "answer_options": [
+    "LED driver board",
+    "Fluorescent inverter",
+    "Graphics processing unit",
+    "Screen bezel",
+    "Cooling fan"
+  ],
+  "correct_answer": [
+    "Fluorescent inverter",
+    "Screen bezel"
+  ],
+  "explanation": "The inverter powers the fluorescent backlight, and the bezel must be removed to access or inspect these parts.",
+  "tags": [
+    "fluorescent inverter",
+    "screen bezel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

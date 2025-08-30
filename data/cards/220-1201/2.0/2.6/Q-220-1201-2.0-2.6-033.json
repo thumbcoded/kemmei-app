@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which subnet mask allows up to 254 usable host addresses on a network?",
+  "answer_options": [
+    "255.255.0.0",
+    "255.255.255.0",
+    "255.255.255.128",
+    "255.255.255.252"
+  ],
+  "correct_answer": [
+    "255.255.255.0"
+  ],
+  "explanation": "A /24 mask (255.255.255.0) provides 256 total IPs, with 254 usable for hosts after excluding network and broadcast addresses.",
+  "tags": [
+    "subnet mask",
+    "usable hosts"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

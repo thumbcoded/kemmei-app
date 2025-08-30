@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-119",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How do you identify if a system problem is a hardware problem versus a software problem?",
+  "answer_options": [
+    "Hardware problems only occur during business hours, software problems occur anytime",
+    "Hardware problems are consistent across different OS, occur during POST/boot, have physical symptoms",
+    "Software problems always require complete system reinstallation to resolve",
+    "Hardware problems can only be diagnosed by manufacturer technicians"
+  ],
+  "correct_answer": [
+    "Hardware problems are consistent across different OS, occur during POST/boot, have physical symptoms"
+  ],
+  "explanation": "Hardware problem indicators: consistent failures across different OS, occurs during POST/boot, physical symptoms (overheating, noises), fails hardware diagnostics. Software problem indicators: works in safe mode, occurs after software changes, random crashes during specific applications, resolves with driver updates. Test with minimal configuration and bootable diagnostics to isolate.",
+  "tags": [
+    "hardware problem"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

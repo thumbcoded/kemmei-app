@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A tablet is showing symptoms of pointer drift during stylus use. Which underlying issue could be responsible?",
+  "answer_options": [
+    "Battery drain",
+    "Pointer drift",
+    "App crash",
+    "LCD refresh rate mismatch"
+  ],
+  "correct_answer": [
+    "Pointer drift"
+  ],
+  "explanation": "Pointer drift can cause touches or stylus input to appear offset or incorrect, leading to inaccurate navigation.",
+  "tags": [
+    "pointer drift"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

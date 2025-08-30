@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is responsible for moving the read/write head over the platters?",
+  "answer_options": [
+    "Spindle",
+    "PCB controller",
+    "Actuator arm",
+    "Cache module"
+  ],
+  "correct_answer": [
+    "Actuator arm"
+  ],
+  "explanation": "The actuator arm precisely moves the read/write head to the correct track on the platter.",
+  "tags": [
+    "actuator arm"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

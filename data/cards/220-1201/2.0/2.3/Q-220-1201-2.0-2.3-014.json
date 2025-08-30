@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which DNS feature allows administrators to identify the domain name associated with a specific IP address?",
+  "answer_options": [
+    "DNS cache flushing",
+    "PTR record in reverse DNS",
+    "CNAME forwarding",
+    "Zone file propagation"
+  ],
+  "correct_answer": [
+    "PTR record in reverse DNS"
+  ],
+  "explanation": "A PTR (pointer) record in a reverse DNS zone maps IP addresses back to domain names, enabling reverse lookups.",
+  "tags": [
+    "reverse DNS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

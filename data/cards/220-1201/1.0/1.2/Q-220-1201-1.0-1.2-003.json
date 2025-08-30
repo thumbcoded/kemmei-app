@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which proprietary wired connector is used primarily on older Apple mobile devices?",
+  "answer_options": [
+    "USB-C",
+    "Lightning",
+    "microUSB",
+    "USB-A"
+  ],
+  "correct_answer": [
+    "Lightning"
+  ],
+  "explanation": "The Lightning connector is a proprietary Apple design used for charging and data transfer on older iPhones and iPads.",
+  "tags": [
+    "Lightning",
+    "connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

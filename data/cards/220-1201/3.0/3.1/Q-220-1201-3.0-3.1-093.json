@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In a laptop with LED backlighting, which repair step is most likely if the screen remains dark but is still generating an image?",
+  "answer_options": [
+    "Replace the entire LCD panel",
+    "Replace the LED backlight strip or driver board",
+    "Update the display driver",
+    "Swap the keyboard connector"
+  ],
+  "correct_answer": [
+    "Replace the LED backlight strip or driver board"
+  ],
+  "explanation": "LED-based screens rely on backlight strips or small driver circuits. If the image is there but not lit, replacing these is a common repair.",
+  "tags": [
+    "LED replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains that their system boots inconsistently and freezes randomly. Other components test fine. What’s the most likely root cause?",
+  "answer_options": [
+    "Incompatible printer driver",
+    "Failing motherboard traces or VRM instability",
+    "Corrupt browser profile",
+    "Display refresh mismatch"
+  ],
+  "correct_answer": [
+    "Failing motherboard traces or VRM instability"
+  ],
+  "explanation": "Inconsistent boot behavior with no pattern, especially when all other components pass diagnostics, often points to a damaged or unstable motherboard.",
+  "tags": [
+    "intermittent operation",
+    "motherboard failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

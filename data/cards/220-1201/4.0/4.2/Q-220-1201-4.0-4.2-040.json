@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best illustrates the 'customer control' aspect of IaaS?",
+  "answer_options": [
+    "Customers have root access to physical switches and routers",
+    "Customers define and maintain their virtual machines and services",
+    "Customers determine how the vendor deploys hardware",
+    "Customers install patches for the vendor’s proprietary code"
+  ],
+  "correct_answer": [
+    "Customers define and maintain their virtual machines and services"
+  ],
+  "explanation": "IaaS gives customers control over their VMs, OS, and app stack, while the provider manages the infrastructure beneath.",
+  "tags": [
+    "customer control",
+    "IaaS",
+    "hardware access"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

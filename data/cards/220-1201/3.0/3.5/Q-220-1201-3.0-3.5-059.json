@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO differences distinguish PCI from PCIe technology? (Select two)",
+  "answer_options": [
+    "PCI uses serial communication",
+    "PCIe supports more devices per bus",
+    "PCIe uses serial communication with lane scalability",
+    "PCI supports more total bandwidth per card"
+  ],
+  "correct_answer": [
+    "PCIe supports more devices per bus",
+    "PCIe uses serial communication with lane scalability"
+  ],
+  "explanation": "PCIe allows greater scalability and performance through lane-based serial communication and point-to-point architecture.",
+  "tags": [
+    "PCI",
+    "PCIe",
+    "serial communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

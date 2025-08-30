@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company requires scanned documents to be automatically uploaded to cloud storage. The IT department configures the device but users report failures. What is the most likely cause?",
+  "answer_options": [
+    "Incorrect duplex print settings",
+    "Misconfigured scan to SMB path",
+    "Incorrect authentication for scan to cloud",
+    "No paper in the automatic document feeder"
+  ],
+  "correct_answer": [
+    "Incorrect authentication for scan to cloud"
+  ],
+  "explanation": "Cloud-based scan destinations like Google Drive require proper authentication (e.g., OAuth or API token). If missing, the scan fails to upload.",
+  "tags": [
+    "scan to cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

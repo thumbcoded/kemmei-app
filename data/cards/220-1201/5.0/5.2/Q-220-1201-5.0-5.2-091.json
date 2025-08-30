@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does raw SMART data show that requires technical knowledge to interpret?",
+  "answer_options": [
+    "Simple pass/fail status for each drive",
+    "Detailed statistics like power-on hours and temperature readings",
+    "Only the drive's serial number and model",
+    "Automatic recommendations for drive replacement"
+  ],
+  "correct_answer": [
+    "Detailed statistics like power-on hours and temperature readings"
+  ],
+  "explanation": "Raw SMART data provides detailed technical statistics such as power-on hours, power cycle count, temperature readings, and other metrics. Understanding what these values mean requires technical knowledge, which is why third-party analysis tools are often preferred.",
+  "tags": [
+    "power on hours",
+    "temperature celsius"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is the flashlight test considered useful in diagnosing laptop screen issues?",
+  "answer_options": [
+    "It verifies touch panel input",
+    "It helps locate dead pixels",
+    "It confirms whether the GPU is overheating",
+    "It reveals a functioning image despite backlight failure"
+  ],
+  "correct_answer": [
+    "It reveals a functioning image despite backlight failure"
+  ],
+  "explanation": "A working image seen with a flashlight confirms that the LCD is operating correctly and points to a backlight or inverter issue instead.",
+  "tags": [
+    "flashlight test",
+    "dim screen"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

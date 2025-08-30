@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main function of a traditional firewall?",
+  "answer_options": [
+    "Allow or block network traffic based on port numbers",
+    "Assign IP addresses to network clients",
+    "Route packets between VLANs",
+    "Provide Wi-Fi connectivity"
+  ],
+  "correct_answer": [
+    "Allow or block network traffic based on port numbers"
+  ],
+  "explanation": "Traditional firewalls filter traffic using port numbers and access lists to allow or deny connections.",
+  "tags": [
+    "firewall",
+    "port filtering",
+    "access list"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

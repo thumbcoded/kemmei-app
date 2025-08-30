@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Two monitors both support 4K resolution, but one is 27 inches and the other is 65 inches. What effect does this difference have?",
+  "answer_options": [
+    "The 65-inch display will be sharper due to more pixels",
+    "The 27-inch display will have a higher pixel density",
+    "Both displays have identical pixel density",
+    "The 65-inch display will consume less power"
+  ],
+  "correct_answer": [
+    "The 27-inch display will have a higher pixel density"
+  ],
+  "explanation": "Pixel density (PPI) is higher on the smaller screen because the same number of pixels are packed into a smaller space, making images sharper.",
+  "tags": [
+    "PPI",
+    "pixel density"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What component detects touch input and converts it into coordinates on the screen?",
+  "answer_options": [
+    "Trackpad",
+    "Inverter",
+    "Digitizer",
+    "Backlight"
+  ],
+  "correct_answer": [
+    "Digitizer"
+  ],
+  "explanation": "A digitizer is a layer behind the screen that translates touches into digital coordinates.",
+  "tags": [
+    "digitizer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

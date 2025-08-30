@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes PaaS from SaaS?",
+  "answer_options": [
+    "PaaS provides full operating system control to the customer",
+    "PaaS allows users to deploy their own applications onto a managed platform",
+    "PaaS includes pre-built email and office applications",
+    "PaaS hosts finished products for end users with no customization"
+  ],
+  "correct_answer": [
+    "PaaS allows users to deploy their own applications onto a managed platform"
+  ],
+  "explanation": "Unlike SaaS, which provides ready-to-use apps, PaaS enables developers to create and deploy apps in a managed environment.",
+  "tags": [
+    "PaaS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

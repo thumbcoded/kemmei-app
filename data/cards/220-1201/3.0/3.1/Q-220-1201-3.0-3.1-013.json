@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are involved in the full light path from backlight to your eyes in a modern LCD? (Select all that apply)",
+  "answer_options": [
+    "Backlight",
+    "Liquid crystals",
+    "Color filter",
+    "Polarization filters",
+    "Touch digitizer"
+  ],
+  "correct_answer": [
+    "Backlight",
+    "Liquid crystals",
+    "Color filter",
+    "Polarization filters"
+  ],
+  "explanation": "The backlight provides light, which passes through liquid crystals, color filters, and polarizers to form the image. The touch digitizer is an input layer, not part of the image path.",
+  "tags": [
+    "backlight",
+    "color filter",
+    "polarization filter",
+    "LCD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

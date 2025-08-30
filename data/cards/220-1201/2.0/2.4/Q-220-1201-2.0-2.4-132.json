@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-132",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why a network admin would use a DHCP reservation instead of a dynamic assignment?",
+  "answer_options": [
+    "To prevent lease expiration",
+    "To ensure a device always has the same IP address",
+    "To avoid using the MAC address",
+    "To restrict a device from connecting to the network"
+  ],
+  "correct_answer": [
+    "To ensure a device always has the same IP address"
+  ],
+  "explanation": "Reservations are used to provide a consistent IP for a device without requiring manual configuration.",
+  "tags": [
+    "DHCP reservation",
+    "consistent IP",
+    "IP reservation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

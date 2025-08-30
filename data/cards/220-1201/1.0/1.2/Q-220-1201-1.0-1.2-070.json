@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user connects an external USB webcam to a laptop, but it is not recognized by their video conferencing app. What is the most likely solution?",
+  "answer_options": [
+    "Disable airplane mode on the laptop",
+    "Change the default camera input in the app settings",
+    "Connect to the internet first",
+    "Adjust the monitor resolution"
+  ],
+  "correct_answer": [
+    "Change the default camera input in the app settings"
+  ],
+  "explanation": "Apps may default to the built-in camera. Users must switch to the external USB webcam in software settings.",
+  "tags": [
+    "USB camera",
+    "external camera",
+    "video conferencing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

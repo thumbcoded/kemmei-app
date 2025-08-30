@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which mobile device feature allows multiple users to connect and share one phone’s internet connection via Wi-Fi?",
+  "answer_options": [
+    "Bluetooth PAN",
+    "NFC sharing",
+    "Mobile hotspot",
+    "USB tethering"
+  ],
+  "correct_answer": [
+    "Mobile hotspot"
+  ],
+  "explanation": "A mobile hotspot allows a single phone to provide internet access to multiple devices simultaneously using Wi-Fi.",
+  "tags": [
+    "mobile hotspot",
+    "hotspot",
+    "internet sharing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

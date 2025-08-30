@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-172",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key performance advantage of a multi-core processor?",
+  "answer_options": [
+    "It increases the clock speed of each core",
+    "It allows more heat to be generated for overclocking",
+    "It can execute multiple tasks simultaneously",
+    "It reduces power consumption per task"
+  ],
+  "correct_answer": [
+    "It can execute multiple tasks simultaneously"
+  ],
+  "explanation": "Multi-core CPUs allow multiple processes or threads to be executed at once, improving multitasking and performance.",
+  "tags": [
+    "multi-core processor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

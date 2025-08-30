@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "While attempting to repair a sticky key, a technician accidentally breaks the plastic hinge under the keycap. What is the correct next step?",
+  "answer_options": [
+    "Replace the entire keyboard",
+    "Superglue the keycap back on",
+    "Replace the damaged key and hinge assembly",
+    "Disable the key in BIOS"
+  ],
+  "correct_answer": [
+    "Replace the damaged key and hinge assembly"
+  ],
+  "explanation": "If the key mechanism is damaged, individual components like hinges and clips can be replaced without swapping the entire keyboard.",
+  "tags": [
+    "damaged key",
+    "key replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

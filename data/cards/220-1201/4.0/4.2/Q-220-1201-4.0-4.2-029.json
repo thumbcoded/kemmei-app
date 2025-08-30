@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company stores its employee HR records on-premises but uses Amazon Web Services (AWS) to host its customer-facing website. What cloud model is this?",
+  "answer_options": [
+    "Community cloud",
+    "Internal cloud",
+    "Hybrid cloud",
+    "External cloud"
+  ],
+  "correct_answer": [
+    "Hybrid cloud"
+  ],
+  "explanation": "A hybrid cloud blends private and public infrastructure depending on workload sensitivity or accessibility needs.",
+  "tags": [
+    "hybrid cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

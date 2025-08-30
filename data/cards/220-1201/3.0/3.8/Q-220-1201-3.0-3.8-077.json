@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario would MOST likely lead to random black marks across a thermal printout?",
+  "answer_options": [
+    "Low humidity environment",
+    "Exposure of the paper to heat before printing",
+    "Use of plain bond paper",
+    "Driver misconfiguration"
+  ],
+  "correct_answer": [
+    "Exposure of the paper to heat before printing"
+  ],
+  "explanation": "Preheated areas of thermal paper can darken prematurely, producing black marks unrelated to the print job.",
+  "tags": [
+    "output sensitivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

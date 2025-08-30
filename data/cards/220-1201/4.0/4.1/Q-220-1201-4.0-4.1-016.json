@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which term is another name for a Type 1 hypervisor?",
+  "answer_options": [
+    "Virtual machine manager",
+    "Bare metal hypervisor",
+    "Hosted hypervisor",
+    "Type 2 hypervisor"
+  ],
+  "correct_answer": [
+    "Bare metal hypervisor"
+  ],
+  "explanation": "Type 1 hypervisors are also known as bare metal hypervisors because they run directly on the host hardware.",
+  "tags": [
+    "bare metal hypervisor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

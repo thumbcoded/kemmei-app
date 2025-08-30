@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes a signal converter from a passive adapter?",
+  "answer_options": [
+    "Converters are used only for USB, not video",
+    "Adapters can convert between digital and analog signals",
+    "Signal converters actively translate between signal types, while passive adapters rely on signal compatibility",
+    "Passive adapters require external power"
+  ],
+  "correct_answer": [
+    "Signal converters actively translate between signal types, while passive adapters rely on signal compatibility"
+  ],
+  "explanation": "Signal converters handle protocol translation (e.g., DisplayPort to HDMI), while passive adapters only reroute pins when formats are already compatible.",
+  "tags": [
+    "signal converter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

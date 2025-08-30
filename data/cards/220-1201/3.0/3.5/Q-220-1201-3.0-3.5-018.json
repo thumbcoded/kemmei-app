@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the function of expansion slots on a motherboard?",
+  "answer_options": [
+    "To connect hard drives",
+    "To install RAM",
+    "To add optional cards like graphics or sound cards",
+    "To power the CPU"
+  ],
+  "correct_answer": [
+    "To add optional cards like graphics or sound cards"
+  ],
+  "explanation": "Expansion slots (such as PCIe) allow users to install additional cards for graphics, sound, and networking.",
+  "tags": [
+    "expansion slots"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,884 @@
+0:01
+here's an image of a pretty common data
+0:04
+center where you have rack after rack
+0:06
+after rack of equipment and you can see
+0:09
+there is a lot of equipment on one row
+0:11
+of this and there are many rows in this
+0:14
+particular data center there is a lot of
+0:17
+technology in this data center and there
+0:18
+are many different services running on
+0:21
+each of these individual racks in this
+0:23
+video we'll look at different services
+0:25
+that you might expect to find in a data
+0:27
+center like this one
+0:29
+we're all very used to typing in a
+0:31
+website into our browser address bar so
+0:34
+we might go to google.com or professor
+0:36
+messor.com but behind the scenes there
+0:39
+is some work done to convert that fully
+0:41
+qualified domain name to an IP address
+0:44
+the device that's doing that conversion
+0:46
+is a DNS server dns of course stands for
+0:49
+domain name system and it's responsible
+0:51
+not only for resolving an IP address
+0:53
+from a fully qualified domain name it
+0:56
+can also provide that same service in
+0:58
+reverse and provide much more as well
+1:01
+this is a distributed platform with
+1:02
+thousands and thousands of DNS servers
+1:05
+running on the internet at any
+1:07
+particular time and the load across
+1:09
+these DNS servers is distributed
+1:12
+primarily based on the domain names that
+1:14
+they support so there are a group of
+1:16
+servers that support professor
+1:18
+messor.com and anytime you type in my
+1:21
+website it accesses either those servers
+1:23
+or a cached version of information from
+1:26
+those servers to be able to provide you
+1:28
+with the appropriate IP address this is
+1:30
+something that's usually managed by your
+1:32
+service provider or you may have a
+1:34
+number of internal DNS servers that's
+1:37
+managed by your local organization
+1:40
+another important service is DHCP or
+1:43
+dynamic host configuration protocol this
+1:46
+is the protocol that's able to
+1:48
+automatically assign IP address and
+1:50
+other configuration settings anytime you
+1:52
+start your computer you don't have to
+1:54
+remember IP addresses or type anything
+1:57
+in dhcp will take care of all of that
+2:00
+work for you this is a widely used
+2:02
+service that you will see not only in a
+2:04
+local network at home but also the
+2:06
+networks that we would use in our
+2:08
+enterprise and in the enterprise we tend
+2:10
+to have multiple DHCP servers for
+2:12
+redundancy if one DHCP server is
+2:15
+suddenly unavailable we have other
+2:17
+servers that can still provide IP
+2:19
+address information for devices on the
+2:22
+network file sharing provides a way to
+2:25
+centrally store information so that you
+2:28
+and other people in the organization can
+2:30
+easily access it this is a great way to
+2:32
+share spreadsheets documents and
+2:34
+anything else that you need to share
+2:36
+with other people within your
+2:37
+organization or with people that may be
+2:39
+outside of your organization there's
+2:42
+usually a standard type of file service
+2:44
+if you're running in Windows you
+2:46
+probably have a service that is using
+2:48
+SMB or server message block if you have
+2:51
+Mac OS in your environment you're
+2:53
+probably using Apple filing protocol
+2:55
+there are many different standards for
+2:56
+sharing information and it depends on
+2:58
+the applications and the operating
+3:00
+systems that you happen to be using most
+3:02
+of the time you don't even know if
+3:04
+you're using SMB AFP or some other type
+3:07
+of file sharing system the operating
+3:09
+system tends to hide those protocols so
+3:11
+all you see is a file management
+3:13
+frontend where you can drag drop rename
+3:16
+and modify the files that are stored in
+3:18
+that folder
+3:20
+although a great deal of our work is
+3:22
+done digitally there are still times
+3:24
+when we need to print information onto a
+3:26
+piece of paper to be able to do that
+3:28
+we're going to use a printer but we need
+3:30
+some type of service that will manage
+3:32
+the process of receiving these print
+3:34
+jobs queuing them up inside of the
+3:36
+printer and then making sure that all of
+3:38
+those print jobs print successfully on
+3:40
+those printing devices sometimes this is
+3:43
+a separate computer that is connected to
+3:45
+the printer and that separate computer
+3:46
+is running the print service software or
+3:49
+it may be built into the printer itself
+3:51
+there may be a network card that you
+3:53
+slide in that card not only provides
+3:55
+your interface to the network it also
+3:57
+provides the print service software if
+4:00
+you were to look at the documentation
+4:01
+for your printer you'll probably see
+4:03
+that it supports a number of different
+4:04
+protocols for printing across the
+4:06
+network such as SMB which is server
+4:09
+message block IP which is the internet
+4:11
+printing protocol and LPD which is the
+4:14
+line printer
+4:16
+demon email continues to be one of the
+4:19
+most popular applications used around
+4:21
+the world and of course we need email
+4:24
+servers so that we can send and receive
+4:26
+these email messages these email servers
+4:29
+may be in the cloud and managed by your
+4:31
+internet service provider or cloud
+4:33
+service provider or you may have local
+4:35
+email servers in your own data center
+4:37
+that you're managing yourself this is
+4:39
+one of those rare services that has a
+4:41
+very high uptime expectation you always
+4:44
+expect your email to be flowing and you
+4:46
+always expect there to be access to your
+4:48
+email messages and as system
+4:50
+administrators we have to make sure that
+4:52
+we're planning designing and
+4:54
+implementing email services so that they
+4:56
+are available as much as
+4:59
+possible if you're managing switches
+5:01
+routers servers firewalls and almost any
+5:04
+other type of device on your network
+5:07
+then you're probably collecting log
+5:08
+files on all of those devices often
+5:11
+you'll want to consolidate all of those
+5:13
+log files back to one central database
+5:16
+and the protocol that allows you to do
+5:17
+that is SIS log there's usually a
+5:20
+central server called a SIM this stands
+5:22
+for security information and event
+5:25
+manager the SIM is a central
+5:27
+consolidation point for all of your log
+5:30
+files and it allows you to correlate
+5:32
+information together even across very
+5:34
+diverse systems since you're bringing
+5:36
+back a lot of log information to one
+5:39
+central point it's very common that your
+5:41
+SIS log server have a lot of log space
+5:44
+available because you will be keeping
+5:46
+logs for a very long time across many
+5:48
+different
+5:50
+systems if you're accessing information
+5:52
+from a browser then you're connecting to
+5:54
+a web server a web server is one that
+5:57
+responds to all of these browser
+5:59
+requests and generally is using the HTTP
+6:02
+or HTTPS protocol that of course is the
+6:05
+hypertext transfer protocol and
+6:07
+hypertext transfer protocol secure
+6:10
+developers build pages in a protocol
+6:12
+known as the hypertext markup language
+6:15
+or HTML and those are web files that are
+6:18
+stored on the web server your browser
+6:20
+accesses those files interprets the HTML
+6:24
+and presents to you the graphical
+6:25
+display in your browser
+6:28
+if you've ever connected to your
+6:30
+corporate network and provided your
+6:31
+username and password then you've
+6:34
+probably interacted with an
+6:35
+authentication server you'll sometimes
+6:37
+hear this referred to as a AAA server
+6:39
+which stands for authentication
+6:41
+authorization and accounting the primary
+6:44
+job of the authentication server is to
+6:46
+check your username and password and
+6:48
+then provide access to whatever services
+6:50
+you might need this usually has a
+6:52
+centralized database so that you can
+6:54
+easily administer all of the users on
+6:56
+your network all from one central point
+6:59
+you don't generally see an
+7:00
+authentication server on a home network
+7:02
+primarily because there's not a lot of
+7:04
+services that you would need to connect
+7:06
+to and secondly we usually will just use
+7:08
+a username password and share that among
+7:11
+our family members but in an enterprise
+7:13
+environment we have to provide the
+7:14
+highest levels of security and we do
+7:16
+that by making sure that everyone has
+7:18
+their own set of credentials since the
+7:21
+authentication server is an important
+7:22
+step to gain access to every other
+7:24
+resource in the organization we usually
+7:27
+create redundant authentication servers
+7:29
+so that if one happens to fail we're
+7:31
+still able to
+7:33
+authenticate most organizations are
+7:35
+collecting a lot of different types of
+7:37
+information and we need somewhere to
+7:38
+store that information one of the most
+7:40
+common places is a database server
+7:43
+database servers store information in
+7:45
+database tables you can think of these
+7:47
+tables as a very large spreadsheet and
+7:49
+they have the ability to connect tables
+7:52
+to each other to form a relational
+7:54
+database that way you can have separate
+7:56
+links where different types of data have
+7:58
+relationships to other types of data in
+8:01
+other tables this creates relationships
+8:03
+between different tables and allows you
+8:05
+to easily link data together and find
+8:08
+exactly what you're looking for a
+8:10
+standard language used to store and
+8:13
+retrieve information from this database
+8:15
+is known as structured query language
+8:17
+you'll hear this referred to as SQL or
+8:19
+SQL you'll see SQL mentioned in some of
+8:22
+the popular database servers such as
+8:24
+Microsoft SQL Server MySQL and
+8:27
+others have you noticed that the time
+8:29
+and the date on your computer is always
+8:31
+very accurate we're able to get that
+8:33
+level of accuracy because your computer
+8:35
+is talked to an NTP server or network
+8:38
+time protocol this is more important
+8:40
+than you might think because we use time
+8:43
+for so many different things on the
+8:45
+network not only to compare log files
+8:47
+across multiple systems but many of our
+8:50
+encryption technologies require that all
+8:52
+of your systems are running with the
+8:54
+correct date and the correct time we
+8:56
+will generally have one or more NTP
+8:59
+servers running they are referencing a
+9:02
+central clock so that all of them have
+9:04
+exactly the right date and time and then
+9:06
+on your local computer whether you're
+9:08
+running Windows Mac OS Linux or any
+9:10
+other operating system there is an NTP
+9:13
+client your NTP client is configured to
+9:15
+access a particular NTP server and it
+9:18
+checks in with that server periodically
+9:20
+to make sure that the date and time are
+9:22
+always
+9:23
+accurate all of us have received
+9:25
+unsolicited emails known as spam and
+9:28
+often we have a separate filter that
+9:30
+puts spam into a separate folder or
+9:33
+keeps it out of our inbox we're able to
+9:36
+perform that function thanks to a spam
+9:38
+gateway this is often a separate service
+9:40
+that's in the cloud or on a separate
+9:42
+server that evaluates every email
+9:45
+message that's coming in determines if
+9:47
+it might be legitimate or might be spam
+9:50
+and then categorizes it properly in your
+9:52
+email system you'll notice sometimes
+9:54
+that you have to go into your spam
+9:56
+folder to see if you can find legitimate
+9:58
+messages because this process is not
+10:00
+always 100% accurate this is an
+10:03
+important service that keeps the
+10:05
+unsolicited information away from your
+10:07
+eyes and allows you to focus on what's
+10:09
+important in your email
+10:11
+inbox many organizations will put an
+10:14
+all-in-one security appliance on the
+10:17
+outside of their network between them
+10:19
+and the internet sometimes we refer to
+10:21
+this as a next generation firewall a
+10:23
+unified threat management system or UTM
+10:26
+or perhaps a web security gateway these
+10:29
+devices have many different functions
+10:32
+all combined into one single device this
+10:34
+will have URL filtering or content
+10:37
+inspection it might be looking for
+10:39
+malware either in the email messages or
+10:41
+real-time network traffic it could have
+10:43
+a spam filter built into it it might
+10:46
+even have a CSU DSU for connecting to
+10:48
+older wide area network connections on
+10:51
+the back may be router and switch
+10:53
+interfaces along with firewall
+10:55
+functionality IPS functionality and even
+10:58
+ways to shape the bandwidth to minimize
+11:01
+the impact of certain applications on
+11:03
+the network and there might even be VPN
+11:06
+functionality that allows you to connect
+11:07
+securely to other sites or to have
+11:09
+endusers connect directly to this device
+11:12
+over a secure channel
+11:15
+one of the ways that organizations
+11:17
+maintain the uptime and availability of
+11:19
+their services is to have those services
+11:21
+running on a load balancer load
+11:24
+balancers are designed to connect many
+11:26
+different devices all at the same time
+11:28
+and be able to share the load across
+11:31
+those many systems so an organization
+11:33
+might build a web server farm with
+11:35
+multiple web servers and they have those
+11:38
+web servers connected to a load balancer
+11:40
+as incoming requests are received those
+11:43
+requests are distributed evenly across
+11:45
+all of those servers if one of those
+11:47
+servers was to fail the load balancer
+11:50
+would automatically know that that
+11:51
+server was no longer communicating and
+11:54
+would take it out of the rotation the
+11:56
+remaining devices on that load balancer
+11:58
+would then share the load with that
+12:00
+server now out of the picture this gives
+12:02
+the technicians time to evaluate the
+12:05
+problem resolve that issue and put the
+12:07
+server back onto the load balancer where
+12:09
+the load balancer will automatically
+12:11
+know that it's back in service and begin
+12:13
+sending additional requests to the
+12:15
+server now that it's up and running this
+12:17
+process occurs very quickly and the end
+12:20
+users have no idea that an outage even
+12:23
+occurred some organizations will take
+12:26
+advantage of a proxy server for either
+12:28
+inbound or outbound communication a
+12:31
+proxy server receives a request from a
+12:33
+client it then makes that request on
+12:36
+behalf of the client to that service
+12:39
+receives the response from that service
+12:41
+and evaluates the response if everything
+12:44
+within that response looks appropriate
+12:46
+and is secure it then now sends that
+12:48
+response to the end user this is
+12:51
+primarily used as a security tool but it
+12:53
+could also be used for access control it
+12:56
+can provide some level of caching it
+12:58
+also has the ability to do content
+13:00
+scanning so that you can limit what type
+13:02
+of information is able to be received
+13:04
+through that proxy server often the
+13:06
+proxy server is sitting invisibly in the
+13:09
+network and the end users have no idea
+13:11
+that there is a proxy that is evaluating
+13:13
+the inbound and outbound traffic from
+13:16
+their
+13:17
+device if you work in an organization
+13:19
+that has a lot of industrial equipment
+13:21
+then you're probably familiar with SCADA
+13:23
+or ICS scada is the supervisory control
+13:26
+and data acquisition system you might
+13:29
+also see this referred to as a
+13:31
+industrial control system or ICS so if
+13:34
+you work for a company that provides
+13:36
+power services maybe you work in the oil
+13:38
+and gas industry or a manufacturing
+13:40
+company you're probably very familiar
+13:42
+with controlling that largecale
+13:44
+equipment using the SCADA technology
+13:47
+this is a specialized system that allows
+13:49
+you to view manage control and maintain
+13:53
+these systems remotely and it does it
+13:55
+all across the network which obviously
+13:58
+means that we need a very secure network
+14:00
+so that no one else gains access to
+14:02
+these very valuable and in many cases
+14:05
+very important systems most
+14:07
+organizations with these SCADA systems
+14:10
+will have a completely segmented network
+14:12
+that is only accessible either by
+14:14
+physically visiting that particular part
+14:16
+of the network or accessing it through a
+14:19
+very controlled
+14:21
+system one of the interesting
+14:23
+characteristics of technology is once
+14:25
+you set it up and turn it on it will go
+14:27
+forever as long as it has power and the
+14:30
+system continues to be working properly
+14:32
+and it's not unusual to walk through a
+14:34
+data center and see equipment that was
+14:36
+installed 10 15 20 years ago or even
+14:40
+longer we usually refer to these older
+14:42
+systems as legacy systems just because
+14:45
+something is old doesn't mean that it's
+14:47
+not important and in many cases these
+14:50
+legacy systems can be very important
+14:52
+which is probably the reason that they
+14:54
+haven't been swapped out already and you
+14:56
+may find that learning how to manage and
+14:59
+maintain the legacy system can be just
+15:02
+as important as managing and maintaining
+15:04
+the brand new systems another important
+15:07
+service might be an embedded system an
+15:09
+embedded system is a purpose-built
+15:11
+device where very often we do not have
+15:14
+direct access to the operating system
+15:16
+that is running on that embedded system
+15:19
+for example if you think about a fire
+15:20
+alarm system or a time clock system
+15:23
+these are usually self-contained units
+15:26
+where you are interacting with those
+15:28
+devices on a daily basis but you don't
+15:30
+directly interact with the operating
+15:32
+system it's up to the manufacturer of
+15:34
+that equipment to provide you with the
+15:36
+tools to support it but very often it's
+15:38
+a system that doesn't require a lot of
+15:40
+ongoing maintenance the manufacturer of
+15:43
+the system will usually give you
+15:44
+everything you need to be able to keep
+15:46
+that system up and running but very
+15:48
+often you don't have to do a lot of
+15:50
+ongoing maintenance with an embedded
+15:53
+system another category of services that
+15:55
+has become very popular are IoT devices
+15:58
+or internet of things this is a broad
+16:01
+category of devices which could be
+16:04
+appliances such as refrigerators or
+16:06
+coffee makers it might be smart devices
+16:09
+where you can talk to the device and
+16:11
+have it perform a series of functions or
+16:13
+maybe this deals with air conditioning
+16:15
+or heating controls within your
+16:17
+organization some IoT devices can
+16:19
+provide access through a doorbell or a
+16:22
+garage door and one of the challenges
+16:24
+with IoT devices is that the companies
+16:26
+making refrigerators or speakers or
+16:29
+thermostats are very good at making
+16:32
+those appliances and air control systems
+16:35
+but they may not be good at connecting
+16:37
+to networks and maintaining security of
+16:39
+those networks for that reason you may
+16:42
+want to put these IoT devices on their
+16:44
+own segmented network to limit any
+16:47
+access that could occur should someone
+16:49
+gain access to an IoT device

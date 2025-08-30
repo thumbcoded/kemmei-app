@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which symptom may indicate a memory failure?",
+  "answer_options": [
+    "Clicking noises",
+    "Frequent application crashes",
+    "Monitor flickering",
+    "No Wi-Fi connectivity"
+  ],
+  "correct_answer": [
+    "Frequent application crashes"
+  ],
+  "explanation": "Unstable or faulty memory can cause applications to crash unexpectedly during use.",
+  "tags": [
+    "memory failure",
+    "application crashes"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

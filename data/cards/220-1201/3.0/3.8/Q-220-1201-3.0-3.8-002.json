@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component in a laser printer applies heat and pressure to bond toner to the paper?",
+  "answer_options": [
+    "Toner cartridge",
+    "Corona wire",
+    "Fuser unit",
+    "Charged roller"
+  ],
+  "correct_answer": [
+    "Fuser unit"
+  ],
+  "explanation": "The fuser unit uses heat and pressure to fuse the toner particles to the paper.",
+  "tags": [
+    "fuser unit"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

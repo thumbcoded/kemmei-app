@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the '80 Plus' label on a power supply refer to?",
+  "answer_options": [
+    "Voltage output capacity",
+    "Overclocking capability",
+    "Minimum 80% energy efficiency",
+    "Support for multiple CPUs"
+  ],
+  "correct_answer": [
+    "Minimum 80% energy efficiency"
+  ],
+  "explanation": "The '80 Plus' certification means that the power supply is at least 80% efficient at converting AC to DC power.",
+  "tags": [
+    "80 Plus certification",
+    "energy efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

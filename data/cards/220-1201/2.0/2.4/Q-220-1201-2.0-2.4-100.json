@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-100",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which transport protocol does DHCP use to send and receive messages?",
+  "answer_options": [
+    "TCP",
+    "UDP",
+    "ICMP",
+    "HTTP"
+  ],
+  "correct_answer": [
+    "UDP"
+  ],
+  "explanation": "DHCP operates over UDP because it's a connectionless process that doesn't require session establishment.",
+  "tags": [
+    "DHCP",
+    "UDP port 67",
+    "UDP port 68"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

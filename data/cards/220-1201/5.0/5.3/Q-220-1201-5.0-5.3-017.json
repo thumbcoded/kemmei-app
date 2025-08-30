@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which term refers to a pixel on an LCD display that is permanently dark?",
+  "answer_options": [
+    "Image sticking",
+    "Ghosting",
+    "Dead pixel",
+    "Stuck pixel"
+  ],
+  "correct_answer": [
+    "Dead pixel"
+  ],
+  "explanation": "A dead pixel is one that remains black at all times and does not change state, indicating a hardware defect.",
+  "tags": [
+    "dead pixels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

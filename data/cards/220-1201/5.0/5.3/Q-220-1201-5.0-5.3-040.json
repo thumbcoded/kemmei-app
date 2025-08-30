@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A display appears blurry despite using the monitor's rated resolution. System info confirms a resolution of 1920x1080 on a 1920x1080 panel. What setting is most likely misconfigured?",
+  "answer_options": [
+    "Monitor specifications",
+    "DPI scaling",
+    "Hardware acceleration",
+    "Video refresh rate"
+  ],
+  "correct_answer": [
+    "DPI scaling"
+  ],
+  "explanation": "Improper DPI scaling can blur elements or cause resizing artifacts even when the resolution is correct. Verifying DPI or text scaling is key.",
+  "tags": [
+    "DPI scaling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

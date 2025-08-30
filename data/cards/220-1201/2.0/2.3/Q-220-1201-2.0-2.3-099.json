@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-099",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How do users typically interact with proxy servers in enterprise networks?",
+  "answer_options": [
+    "Users must manually configure proxy settings for each application",
+    "Users are unaware of the proxy as it operates transparently",
+    "Users must provide credentials to the proxy server",
+    "Users must install special proxy client software"
+  ],
+  "correct_answer": [
+    "Users are unaware of the proxy as it operates transparently"
+  ],
+  "explanation": "Proxy servers often sit invisibly in the network, and end users have no idea that there is a proxy evaluating the inbound and outbound traffic from their device.",
+  "tags": [
+    "proxy server",
+    "content inspection",
+    "access control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

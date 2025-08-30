@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-105",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which signal types can be transmitted through a USB-C connector? (Select all that apply)",
+  "answer_options": [
+    "USB data signals",
+    "DisplayPort video",
+    "HDMI video",
+    "Thunderbolt data",
+    "Ethernet networking"
+  ],
+  "correct_answer": [
+    "USB data signals",
+    "DisplayPort video",
+    "HDMI video",
+    "Thunderbolt data"
+  ],
+  "explanation": "USB-C's versatile design allows it to carry multiple signal types including standard USB data, DisplayPort, HDMI video output, and Thunderbolt high-speed data through alternate modes.",
+  "tags": [
+    "USB-C",
+    "connector",
+    "data transfer",
+    "video"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

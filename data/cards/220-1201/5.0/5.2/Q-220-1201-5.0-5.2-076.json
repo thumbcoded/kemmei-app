@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the most likely cause if a SATA hard drive disappears intermittently from the BIOS?",
+  "answer_options": [
+    "Driver corruption",
+    "Antivirus conflict",
+    "Damaged cables",
+    "Overclocked CPU"
+  ],
+  "correct_answer": [
+    "Damaged cables"
+  ],
+  "explanation": "Intermittent drive detection often points to damaged or failing SATA data or power cables.",
+  "tags": [
+    "damaged cables"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of battery is commonly used to maintain BIOS settings and date/time?",
+  "answer_options": [
+    "Lithium-ion pack",
+    "Button style battery",
+    "Nickel-metal hydride cell",
+    "Rectangular 9V battery"
+  ],
+  "correct_answer": [
+    "Button style battery"
+  ],
+  "explanation": "A small button-style battery powers the CMOS memory to preserve BIOS settings when the system is unplugged.",
+  "tags": [
+    "button style battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

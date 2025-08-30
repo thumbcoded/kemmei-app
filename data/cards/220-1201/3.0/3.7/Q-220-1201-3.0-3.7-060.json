@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following print settings affect how text appears on a printed page? (Select all that apply)",
+  "answer_options": [
+    "Orientation",
+    "Duplex printing",
+    "Font type",
+    "Paper tray selection",
+    "Flip on edge setting"
+  ],
+  "correct_answer": [
+    "Orientation",
+    "Duplex printing",
+    "Flip on edge setting"
+  ],
+  "explanation": "Orientation and flip settings directly impact layout and how text appears. Font type changes appearance, but is unrelated to duplex/orientation configuration. Paper tray only affects source.",
+  "tags": [
+    "duplex printing",
+    "orientation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

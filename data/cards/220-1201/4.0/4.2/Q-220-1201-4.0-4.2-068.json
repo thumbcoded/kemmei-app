@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario best illustrates the division of responsibility in a PaaS environment?",
+  "answer_options": [
+    "The provider manages the software and the customer manages the network infrastructure",
+    "The provider handles OS and infrastructure while the customer builds and maintains the application",
+    "The customer installs the OS and the provider runs database backups",
+    "Both customer and provider share full hardware access"
+  ],
+  "correct_answer": [
+    "The provider handles OS and infrastructure while the customer builds and maintains the application"
+  ],
+  "explanation": "In PaaS, providers supply the platform and runtime. Customers focus on the application code and logic.",
+  "tags": [
+    "PaaS",
+    "application building"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

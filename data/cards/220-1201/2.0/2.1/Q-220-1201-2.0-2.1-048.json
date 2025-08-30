@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the difference between HTTPS and HTTP in terms of port usage?",
+  "answer_options": [
+    "HTTP uses port 80, HTTPS uses port 443",
+    "HTTP uses port 443, HTTPS uses port 80",
+    "Both use the same port",
+    "HTTP uses port 25, HTTPS uses port 110"
+  ],
+  "correct_answer": [
+    "HTTP uses port 80, HTTPS uses port 443"
+  ],
+  "explanation": "HTTP uses port 80 for unencrypted traffic, while HTTPS uses port 443 for encrypted communication.",
+  "tags": [
+    "HTTP",
+    "HTTPS",
+    "port mapping"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

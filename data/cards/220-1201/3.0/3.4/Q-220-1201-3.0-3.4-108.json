@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-108",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of using RAID in a storage system?",
+  "answer_options": [
+    "To replace the need for backups",
+    "To reduce electricity consumption",
+    "To improve data redundancy and/or performance",
+    "To increase CPU processing speed"
+  ],
+  "correct_answer": [
+    "To improve data redundancy and/or performance"
+  ],
+  "explanation": "RAID is used to provide redundancy in case of drive failure and/or improve read/write performance by spreading data across drives.",
+  "tags": [
+    "data redundancy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

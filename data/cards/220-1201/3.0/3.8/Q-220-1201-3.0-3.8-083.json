@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component in a dot matrix printer holds ink and is struck by pins to produce output?",
+  "answer_options": [
+    "Toner cartridge",
+    "Fuser assembly",
+    "Inked ribbon",
+    "Print drum"
+  ],
+  "correct_answer": [
+    "Inked ribbon"
+  ],
+  "explanation": "In dot matrix printers, the inked ribbon is struck by the print head pins to transfer ink to the paper.",
+  "tags": [
+    "inked ribbon"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

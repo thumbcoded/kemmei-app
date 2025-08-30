@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to verify the battery form factor before purchasing a replacement laptop battery?",
+  "answer_options": [
+    "To ensure maximum battery lifespan",
+    "To ensure compatibility with all Wi-Fi standards",
+    "To ensure it physically fits the laptop’s battery compartment",
+    "To prevent overheating in high-performance use"
+  ],
+  "correct_answer": [
+    "To ensure it physically fits the laptop’s battery compartment"
+  ],
+  "explanation": "Form factor dictates shape, size, and connector location, which must match the laptop’s design.",
+  "tags": [
+    "battery form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

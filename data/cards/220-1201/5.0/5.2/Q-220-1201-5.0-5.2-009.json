@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a potential consequence of metal-on-metal contact inside a hard disk drive?",
+  "answer_options": [
+    "Electrostatic discharge",
+    "Firmware corruption",
+    "Physical failure",
+    "Software conflict"
+  ],
+  "correct_answer": [
+    "Physical failure"
+  ],
+  "explanation": "Metal-on-metal scraping can severely damage internal drive components, resulting in physical failure.",
+  "tags": [
+    "physical failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-126",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main purpose of a DHCP reservation?",
+  "answer_options": [
+    "To block devices from obtaining IP addresses",
+    "To assign IPs randomly from a pool",
+    "To always give the same IP to a specific device",
+    "To assign a new MAC address to a device"
+  ],
+  "correct_answer": [
+    "To always give the same IP to a specific device"
+  ],
+  "explanation": "A DHCP reservation ensures that a specific MAC address always receives the same IP address when connecting to the network.",
+  "tags": [
+    "DHCP reservation",
+    "consistent IP",
+    "reserved IP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

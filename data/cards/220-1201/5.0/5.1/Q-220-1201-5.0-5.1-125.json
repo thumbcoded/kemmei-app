@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-125",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What does 'no video' symptom indicate during troubleshooting and what are the systematic steps to resolve it?",
+  "answer_options": [
+    "Audio system malfunction affecting multimedia playback capabilities",
+    "Monitor displays no signal despite system powering on - check connections, test components systematically",
+    "Network streaming issue preventing access to online video content",
+    "Software codec problem preventing video file playback in applications"
+  ],
+  "correct_answer": [
+    "Monitor displays no signal despite system powering on - check connections, test components systematically"
+  ],
+  "explanation": "No video means the monitor displays no signal despite system appearing to power on. Resolution steps: 1) Check monitor power and input selection, 2) Verify video cable connections, 3) Test with known good monitor/cable, 4) Reseat graphics card, 5) Try onboard video if available, 6) Check PSU video card power connectors, 7) Test RAM, 8) Clear CMOS if needed.",
+  "tags": [
+    "no video"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

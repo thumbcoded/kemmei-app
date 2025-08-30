@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-129",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports ghosted images repeating down the page when printing. Which consumable is MOST likely to blame?",
+  "answer_options": [
+    "Empty ink cartridge",
+    "Damaged thermal paper",
+    "Worn drum or fuser assembly",
+    "Old print head"
+  ],
+  "correct_answer": [
+    "Worn drum or fuser assembly"
+  ],
+  "explanation": "A worn drum or fuser fails to fully remove residual toner from the drum, causing ghosting effects on subsequent rotations.",
+  "tags": [
+    "fuser replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

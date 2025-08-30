@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to replace a failed power supply in a live server. What feature makes this task safe to perform without shutting down the system?",
+  "answer_options": [
+    "Voltage auto-switching",
+    "Dual-rail power output",
+    "Hot swappable design",
+    "Passive cooling fan"
+  ],
+  "correct_answer": [
+    "Hot swappable design"
+  ],
+  "explanation": "Hot swappable power supplies are specifically built for safe removal and insertion while the system remains operational.",
+  "tags": [
+    "hot swappable"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

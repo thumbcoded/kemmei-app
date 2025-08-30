@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is typically used with coaxial cables for cable TV and internet modems?",
+  "answer_options": [
+    "RJ11",
+    "RJ45",
+    "F connector",
+    "SC connector"
+  ],
+  "correct_answer": [
+    "F connector"
+  ],
+  "explanation": "F connectors are used with coaxial cables for applications like cable TV and cable internet modems.",
+  "tags": [
+    "F connector",
+    "coaxial cable"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

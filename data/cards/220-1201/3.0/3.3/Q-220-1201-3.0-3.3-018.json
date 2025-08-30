@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How is memory typically installed in a desktop motherboard?",
+  "answer_options": [
+    "Horizontally, with top-mounted clips",
+    "By inserting memory chips directly into the CPU socket",
+    "Vertically, with side locking clips in memory slots",
+    "Using screws and brackets to attach it to the chassis"
+  ],
+  "correct_answer": [
+    "Vertically, with side locking clips in memory slots"
+  ],
+  "explanation": "DIMMs are inserted vertically into memory slots on the motherboard and locked into place using side clips.",
+  "tags": [
+    "memory module",
+    "memory slot",
+    "desktop memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

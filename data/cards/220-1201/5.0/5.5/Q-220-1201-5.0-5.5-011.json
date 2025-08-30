@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician can ping 127.0.0.1 and their local IP address, but not the default gateway. Which troubleshooting step would most accurately help isolate the issue next?",
+  "answer_options": [
+    "Run a speed test",
+    "Ping an external IP address like 8.8.8.8",
+    "Verify default gateway configuration",
+    "Restart the DHCP server"
+  ],
+  "correct_answer": [
+    "Verify default gateway configuration"
+  ],
+  "explanation": "The ability to ping loopback and local IP means the stack is functional. The next logical step is to ensure the gateway is correctly configured before looking further.",
+  "tags": [
+    "ping loopback",
+    "ping local IP",
+    "ping default gateway",
+    "internal network configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which RAID configuration provides the best combination of performance and fault tolerance at the cost of requiring at least four drives?",
+  "answer_options": [
+    "RAID 1",
+    "RAID 5",
+    "RAID 10",
+    "RAID 6"
+  ],
+  "correct_answer": [
+    "RAID 10"
+  ],
+  "explanation": "RAID 10 mirrors each stripe, allowing for redundancy and high read/write speed, but requires at least four drives.",
+  "tags": [
+    "RAID 10"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

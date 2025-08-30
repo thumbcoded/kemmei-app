@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common type of impact printer?",
+  "answer_options": [
+    "Laser printer",
+    "Dot matrix printer",
+    "Thermal printer",
+    "LED printer"
+  ],
+  "correct_answer": [
+    "Dot matrix printer"
+  ],
+  "explanation": "Dot matrix printers are the most common type of impact printer, using a matrix of pins to strike the ribbon.",
+  "tags": [
+    "dot matrix printer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Where would you typically enable printer sharing on a Windows workstation?",
+  "answer_options": [
+    "Device Manager",
+    "Print Spooler settings",
+    "Printer properties > Sharing tab",
+    "Group Policy Editor"
+  ],
+  "correct_answer": [
+    "Printer properties > Sharing tab"
+  ],
+  "explanation": "Printer sharing is usually enabled from the printer’s properties menu, specifically in the Sharing tab.",
+  "tags": [
+    "printer sharing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

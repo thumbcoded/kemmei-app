@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What must an email server do after retrieving an MX record to determine the IP address for delivery?",
+  "answer_options": [
+    "Use ARP to locate the host",
+    "Perform a DNS lookup for the domain's SPF",
+    "Query the DNS again to resolve the A or AAAA record of the mail server",
+    "Wait for the next TTL refresh"
+  ],
+  "correct_answer": [
+    "Query the DNS again to resolve the A or AAAA record of the mail server"
+  ],
+  "explanation": "MX records provide the host name of the mail server. The system must then resolve that host’s A or AAAA record for the actual IP address.",
+  "tags": [
+    "MX record",
+    "mail exchanger",
+    "A record",
+    "AAAA record"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

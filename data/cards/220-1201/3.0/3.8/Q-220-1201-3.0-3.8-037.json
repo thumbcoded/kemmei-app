@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following colors are part of the CMYK model? (Select all that apply)",
+  "answer_options": [
+    "Cyan",
+    "Magenta",
+    "Yellow",
+    "Blue",
+    "Black"
+  ],
+  "correct_answer": [
+    "Cyan",
+    "Magenta",
+    "Yellow",
+    "Black"
+  ],
+  "explanation": "The CMYK color model used in inkjet printers includes Cyan, Magenta, Yellow, and Black.",
+  "tags": [
+    "cyan",
+    "magenta",
+    "yellow",
+    "black"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

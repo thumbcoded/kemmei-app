@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician hears repetitive clicking sounds and observes repeated read attempts from a hard drive. What is the most likely issue?",
+  "answer_options": [
+    "File system corruption",
+    "Click of death",
+    "Overheating RAM",
+    "Damaged partition table"
+  ],
+  "correct_answer": [
+    "Click of death"
+  ],
+  "explanation": "Repetitive clicking sounds combined with read failures suggest a mechanical failure known as the 'click of death.'",
+  "tags": [
+    "click of death"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

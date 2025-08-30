@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "During troubleshooting, a test print from the OS prints correctly with finishing services, but prints from the user's app do not. What should you check first?",
+  "answer_options": [
+    "Print spooler corruption",
+    "Paper size settings in printer defaults",
+    "Finishing service configuration in the application",
+    "Photosensitive drum damage"
+  ],
+  "correct_answer": [
+    "Finishing service configuration in the application"
+  ],
+  "explanation": "If finishing services like stapling or collating are missing only in the app, the application-specific settings or profile likely omit those features.",
+  "tags": [
+    "collating",
+    "stapling",
+    "finishing options"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

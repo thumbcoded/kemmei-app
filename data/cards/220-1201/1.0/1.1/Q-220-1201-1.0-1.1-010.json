@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A company maintains two fleets of laptops: one with user-swappable batteries and another with internal non-removable batteries. Select two key support implications of the internal battery design.",
+  "answer_options": [
+    "Requires fewer technical staff for servicing",
+    "Demands longer repair times per incident",
+    "Allows faster power restoration in the field",
+    "Introduces downtime during scheduled battery replacements",
+    "Simplifies remote diagnostics of battery failures"
+  ],
+  "correct_answer": [
+    "Demands longer repair times per incident",
+    "Introduces downtime during scheduled battery replacements"
+  ],
+  "explanation": "Internal batteries complicate servicing, increasing downtime and technician workload compared to swappable battery models.",
+  "tags": [
+    "non-removable battery",
+    "internal battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

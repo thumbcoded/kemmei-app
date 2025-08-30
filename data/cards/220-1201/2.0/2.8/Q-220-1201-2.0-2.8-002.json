@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following describes the RJ45 connector before crimping?",
+  "answer_options": [
+    "It has flattened copper tabs",
+    "It is already fused with the cable insulation",
+    "Its copper pins stick up with sharp ends",
+    "It has an integrated tone generator"
+  ],
+  "correct_answer": [
+    "Its copper pins stick up with sharp ends"
+  ],
+  "explanation": "Before crimping, an RJ45 connector has pointed copper contacts that pierce through the insulation of each wire during the crimping process.",
+  "tags": [
+    "RJ45"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

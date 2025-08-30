@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a Wi-Fi card into a laptop’s mini PCIe slot, but no wireless networks are detected. The card is recognized by the OS. What is the most likely cause?",
+  "answer_options": [
+    "The card requires a SATA power connection",
+    "The wrong slot was used; Wi-Fi only runs on M.2",
+    "The antenna cables were not attached",
+    "The card must be formatted before use"
+  ],
+  "correct_answer": [
+    "The antenna cables were not attached"
+  ],
+  "explanation": "If the OS detects the card but no networks appear, the most common issue is that the main and aux antenna wires were left disconnected.",
+  "tags": [
+    "wireless antenna",
+    "main/aux connector",
+    "Wi-Fi card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

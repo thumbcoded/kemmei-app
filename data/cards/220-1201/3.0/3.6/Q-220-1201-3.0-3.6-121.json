@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-121",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A system has a CPU rated at 95W, a GPU that draws 250W, and additional components requiring 100W total. What is the MINIMUM wattage rating you should look for in a power supply to support the system and allow for growth?",
+  "answer_options": [
+    "350W",
+    "450W",
+    "550W",
+    "700W"
+  ],
+  "correct_answer": [
+    "700W"
+  ],
+  "explanation": "The system draws about 445W; adding a 50% safety margin brings the minimum recommended PSU to ~667W. A 700W unit provides room for upgrades and efficiency.",
+  "tags": [
+    "wattage calculation",
+    "system growth",
+    "power supply selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

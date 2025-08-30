@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-124",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How do SAS connectors differ from SATA connectors despite looking similar?",
+  "answer_options": [
+    "They are identical and interchangeable",
+    "SAS connectors are slightly smaller",
+    "SAS connectors prevent incorrect plug-ins with keying differences",
+    "SAS connectors use different colored cables"
+  ],
+  "correct_answer": [
+    "SAS connectors prevent incorrect plug-ins with keying differences"
+  ],
+  "explanation": "Although they look alike, SAS connectors have physical differences to prevent incorrect connections with SATA drives.",
+  "tags": [
+    "data and power connectors",
+    "SATA comparison"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

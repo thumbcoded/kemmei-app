@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following can improve wireless performance in a large open-plan office? (Select all that apply)",
+  "answer_options": [
+    "Move access points closer to walls",
+    "Use external antennas for desktops",
+    "Evaluate frequency use in the environment",
+    "Enable automatic channel selection",
+    "Place access points in a centralized location"
+  ],
+  "correct_answer": [
+    "Use external antennas for desktops",
+    "Evaluate frequency use in the environment",
+    "Enable automatic channel selection",
+    "Place access points in a centralized location"
+  ],
+  "explanation": "All listed correct options contribute to optimizing signal coverage and minimizing interference.",
+  "tags": [
+    "external antenna",
+    "frequency evaluation",
+    "automatic channel selection",
+    "centralized location",
+    "signal strength increase"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

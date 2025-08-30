@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main drawback of DSL compared to fiber connections?",
+  "answer_options": [
+    "It is more expensive",
+    "It requires satellite alignment",
+    "It has lower speeds and performance degrades over distance",
+    "It uses proprietary cabling"
+  ],
+  "correct_answer": [
+    "It has lower speeds and performance degrades over distance"
+  ],
+  "explanation": "DSL performance degrades the farther you are from the provider's central office, unlike fiber which maintains speed over long distances.",
+  "tags": [
+    "DSL",
+    "fiber"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

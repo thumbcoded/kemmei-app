@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "You are evaluating SSDs for a new laptop. Which TWO characteristics make flash-based SSDs better suited for mobile use than spinning hard drives?",
+  "answer_options": [
+    "Lower cost per GB",
+    "No moving parts",
+    "Higher heat output",
+    "Smaller physical footprint",
+    "Uses magnetic storage"
+  ],
+  "correct_answer": [
+    "No moving parts",
+    "Smaller physical footprint"
+  ],
+  "explanation": "Flash-based SSDs are compact and contain no moving parts, making them ideal for mobile environments where durability and space efficiency matter.",
+  "tags": [
+    "non-volatile storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

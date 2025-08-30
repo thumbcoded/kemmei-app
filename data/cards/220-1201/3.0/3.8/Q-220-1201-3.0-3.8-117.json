@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A printer produces faded text despite a full toner cartridge. What is the MOST likely maintenance-related cause?",
+  "answer_options": [
+    "Calibration is required",
+    "The ribbon is misaligned",
+    "Environmental interference from sunlight",
+    "Output tray is overloaded"
+  ],
+  "correct_answer": [
+    "Calibration is required"
+  ],
+  "explanation": "Poor calibration can cause the toner not to align properly or fail to transfer efficiently, leading to faded output.",
+  "tags": [
+    "calibration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

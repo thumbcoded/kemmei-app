@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a high-end GPU, but the system randomly crashes under load. The PSU has a 6-pin PCIe connector, but the GPU requires 8-pin. What’s the MOST likely cause?",
+  "answer_options": [
+    "Driver conflict",
+    "CPU power draw is too high",
+    "Insufficient voltage on the 12V rail",
+    "Not enough lanes on the PCIe slot"
+  ],
+  "correct_answer": [
+    "Insufficient voltage on the 12V rail"
+  ],
+  "explanation": "Using a 6-pin connector in place of an 8-pin on a high-power GPU can cause undervoltage under load, leading to instability.",
+  "tags": [
+    "6-pin connector",
+    "8-pin connector",
+    "PCIe power connectors",
+    "DC voltage levels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

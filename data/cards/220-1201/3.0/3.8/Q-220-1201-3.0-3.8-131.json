@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-131",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO symptoms may suggest feed rollers need replacement?",
+  "answer_options": [
+    "Paper skewing during print",
+    "Toner failing to fuse to paper",
+    "Multiple sheets feeding at once",
+    "Color banding in output",
+    "Faded print in center only"
+  ],
+  "correct_answer": [
+    "Paper skewing during print",
+    "Multiple sheets feeding at once"
+  ],
+  "explanation": "Worn feed rollers can fail to grip paper evenly, causing skewed feeding or pulling too many sheets.",
+  "tags": [
+    "feed rollers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

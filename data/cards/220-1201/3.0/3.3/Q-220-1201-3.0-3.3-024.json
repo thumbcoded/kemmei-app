@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why are memory modules such as DDR2, DDR3, and DDR4 not physically interchangeable?",
+  "answer_options": [
+    "They use different voltages that damage mismatched motherboards",
+    "They require BIOS updates before installation",
+    "Their notches (keys) are located differently to prevent improper installation",
+    "They use different chip packaging materials"
+  ],
+  "correct_answer": [
+    "Their notches (keys) are located differently to prevent improper installation"
+  ],
+  "explanation": "Each memory generation (DDR2, DDR3, DDR4) has a unique notch location. This mechanical keying prevents incompatible modules from being installed into the wrong motherboard slot.",
+  "tags": [
+    "memory slot",
+    "memory module",
+    "DDR"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

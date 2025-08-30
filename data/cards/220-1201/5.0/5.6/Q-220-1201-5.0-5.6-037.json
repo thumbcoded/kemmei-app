@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following symptoms could indicate mechanical problems in a printer? (Select all that apply)",
+  "answer_options": [
+    "Grinding noise during startup",
+    "Carriage stalling mid-print",
+    "Streaks on printed pages",
+    "Paper not feeding from tray",
+    "Unusual internal rattling when idle"
+  ],
+  "correct_answer": [
+    "Grinding noise during startup",
+    "Carriage stalling mid-print",
+    "Unusual internal rattling when idle"
+  ],
+  "explanation": "Mechanical issues are often accompanied by abnormal noises, movement problems, and signs of internal component friction or failure.",
+  "tags": [
+    "grinding noise",
+    "carriage movement",
+    "printer sounds",
+    "mechanical problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

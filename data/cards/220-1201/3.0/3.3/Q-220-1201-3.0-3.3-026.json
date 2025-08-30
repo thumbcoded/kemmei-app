@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician tries to install DDR4 memory into a DDR3-compatible motherboard, but the module doesn't fit. Why?",
+  "answer_options": [
+    "The motherboard BIOS is outdated",
+    "The DIMM is incompatible due to different notch positions",
+    "The voltage regulator needs to be disabled first",
+    "The CPU socket must be changed to support newer memory"
+  ],
+  "correct_answer": [
+    "The DIMM is incompatible due to different notch positions"
+  ],
+  "explanation": "Even though both are DIMMs, DDR3 and DDR4 have differently positioned notches to prevent incorrect installation.",
+  "tags": [
+    "DIM",
+    "memory slot",
+    "memory module"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

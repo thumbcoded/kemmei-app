@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common cause of intermittent connectivity on a wireless network?",
+  "answer_options": [
+    "Loose Ethernet cable",
+    "Incorrect subnet mask",
+    "Channel interference",
+    "Loopback address misconfiguration"
+  ],
+  "correct_answer": [
+    "Channel interference"
+  ],
+  "explanation": "Wireless networks can experience interference from other devices operating on the same or overlapping channels.",
+  "tags": [
+    "intermittent connectivity",
+    "channel interference"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

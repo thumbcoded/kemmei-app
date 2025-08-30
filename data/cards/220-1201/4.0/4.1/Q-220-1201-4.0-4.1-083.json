@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is true about container behavior by default?",
+  "answer_options": [
+    "Containers are aware of each other and share memory automatically",
+    "Containers communicate through a shared file system",
+    "Containers are isolated and unaware of others unless explicitly connected",
+    "Containers always share the same application binary"
+  ],
+  "correct_answer": [
+    "Containers are isolated and unaware of others unless explicitly connected"
+  ],
+  "explanation": "Containers are self-contained and do not interact unless the container engine is configured to allow it.",
+  "tags": [
+    "container",
+    "application containerization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

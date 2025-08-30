@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What key characteristic of SDRAM allows it to align with the CPU’s timing mechanisms?",
+  "answer_options": [
+    "Independent timing circuit",
+    "Variable refresh rate",
+    "Synchronous operation with a common clock",
+    "Dynamic addressing scheme"
+  ],
+  "correct_answer": [
+    "Synchronous operation with a common clock"
+  ],
+  "explanation": "SDRAM is synchronized to the system’s clock, allowing coordinated operations with the CPU.",
+  "tags": [
+    "SDRAM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

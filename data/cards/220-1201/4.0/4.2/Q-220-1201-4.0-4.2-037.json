@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In an IaaS model, which of the following tasks is the customer's responsibility?",
+  "answer_options": [
+    "Maintaining physical data center cooling",
+    "Securing the physical servers",
+    "Updating the operating system",
+    "Managing the provider's network infrastructure"
+  ],
+  "correct_answer": [
+    "Updating the operating system"
+  ],
+  "explanation": "In IaaS, customers handle OS installation, patching, and management, while the provider handles the physical layer.",
+  "tags": [
+    "IaaS",
+    "operating system maintenance",
+    "customer control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

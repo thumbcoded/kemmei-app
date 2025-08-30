@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-141",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "An enterprise IT department is developing laptop troubleshooting protocols for a mixed-vendor environment. Which considerations are most critical for success? (Select all that apply)",
+  "answer_options": [
+    "Documenting manufacturer-specific access procedures",
+    "Training staff on form factor limitations for each model",
+    "Understanding precise specification requirements per brand",
+    "Using identical tools for all laptop models",
+    "Implementing universal repair timelines regardless of complexity"
+  ],
+  "correct_answer": [
+    "Documenting manufacturer-specific access procedures",
+    "Training staff on form factor limitations for each model",
+    "Understanding precise specification requirements per brand"
+  ],
+  "explanation": "Success in a mixed-vendor environment requires comprehensive understanding of each manufacturer's serviceability approach, form factor constraints, and specification requirements to ensure effective and safe troubleshooting.",
+  "tags": [
+    "manufacturer differences",
+    "form factor limitations",
+    "precise specifications",
+    "serviceability",
+    "laptop troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

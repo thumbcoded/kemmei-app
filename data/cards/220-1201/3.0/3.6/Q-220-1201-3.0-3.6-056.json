@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the function of the small switch found on some power supplies labeled 115V/230V?",
+  "answer_options": [
+    "It selects between standby and full power modes",
+    "It adjusts the fan speed for cooling efficiency",
+    "It switches the AC input voltage based on region",
+    "It enables dual-rail output for GPUs"
+  ],
+  "correct_answer": [
+    "It switches the AC input voltage based on region"
+  ],
+  "explanation": "Some power supplies have a manual input voltage switch to toggle between 115V (U.S.) and 230V (Europe/Asia) AC input levels.",
+  "tags": [
+    "power supply input"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

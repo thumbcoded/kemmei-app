@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are characteristics of Near Field Communication (NFC)? (Select all that apply)",
+  "answer_options": [
+    "Based on RFID technology",
+    "Supports secure two-way data exchange",
+    "Operates at up to 10 meters range",
+    "Used in contactless payment systems",
+    "Requires external battery power to function"
+  ],
+  "correct_answer": [
+    "Based on RFID technology",
+    "Supports secure two-way data exchange",
+    "Used in contactless payment systems"
+  ],
+  "explanation": "NFC is derived from RFID, but adds two-way data transfer. It supports applications like contactless payments and doesn’t require power in passive mode.",
+  "tags": [
+    "NFC",
+    "near field communication",
+    "point-of-sale"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

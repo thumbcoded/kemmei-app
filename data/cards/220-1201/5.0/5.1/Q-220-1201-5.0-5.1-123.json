@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-123",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What are system lock ups and how do they differ from other CPU-related problems?",
+  "answer_options": [
+    "Scheduled maintenance periods when system access is restricted",
+    "CPU becomes unresponsive, entire system freezes requiring hard reset, differs from crashes or reboots",
+    "Security feature that prevents unauthorized access to system resources",
+    "Power saving mode that reduces CPU performance during idle periods"
+  ],
+  "correct_answer": [
+    "CPU becomes unresponsive, entire system freezes requiring hard reset, differs from crashes or reboots"
+  ],
+  "explanation": "System lock ups occur when the CPU becomes unresponsive and the entire system freezes, requiring a hard reset. They differ from crashes (which show error messages) or reboots (which restart automatically). Lock ups typically indicate: CPU overheating, power supply issues, bad RAM, motherboard problems, or driver conflicts causing kernel-level freezing.",
+  "tags": [
+    "lock ups"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In gaming displays, why is matching the refresh rate to the frame rate important?",
+  "answer_options": [
+    "It reduces screen flicker and increases input lag",
+    "It optimizes display resolution for rendering",
+    "It ensures smoother motion and reduces artifacts",
+    "It enhances Wi-Fi signal strength"
+  ],
+  "correct_answer": [
+    "It ensures smoother motion and reduces artifacts"
+  ],
+  "explanation": "Matching FPS and refresh rate reduces motion stutter and tearing, especially in fast-moving games.",
+  "tags": [
+    "refresh rate",
+    "frames per second",
+    "gaming display"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

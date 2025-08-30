@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why is thermal printer paper considered specialized?",
+  "answer_options": [
+    "It contains embedded magnets",
+    "It requires ink to work",
+    "It reacts to heat for image production",
+    "It uses micro-particles for high resolution"
+  ],
+  "correct_answer": [
+    "It reacts to heat for image production"
+  ],
+  "explanation": "Specialized thermal paper is designed to change color (usually black) when heated.",
+  "tags": [
+    "specialized paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

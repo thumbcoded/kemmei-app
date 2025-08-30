@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the role of a page description language (PDL) in printing?",
+  "answer_options": [
+    "It controls print head alignment",
+    "It determines how print jobs are stored in the spooler",
+    "It defines how a document is formatted and rendered for a printer",
+    "It manages printer network settings"
+  ],
+  "correct_answer": [
+    "It defines how a document is formatted and rendered for a printer"
+  ],
+  "explanation": "PDLs like PCL and PostScript tell the printer how to render elements such as fonts and graphics on the page.",
+  "tags": [
+    "page description language",
+    "PCL",
+    "PostScript"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What might cause sluggish performance on a system with a nearly full hard drive?",
+  "answer_options": [
+    "Improper video resolution",
+    "Network packet loss",
+    "Lack of space for temporary files",
+    "Corrupt antivirus definitions"
+  ],
+  "correct_answer": [
+    "Lack of space for temporary files"
+  ],
+  "explanation": "If the drive is full, the system may be unable to store swap files or temp data, leading to poor performance.",
+  "tags": [
+    "sluggish performance",
+    "hard drive space"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

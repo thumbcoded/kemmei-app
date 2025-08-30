@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the PRIMARY reason CMYK is used instead of RGB for inkjet printing?",
+  "answer_options": [
+    "CMYK uses fewer cartridges",
+    "RGB colors are incompatible with ink",
+    "CMYK corresponds to pigment absorption and subtraction",
+    "CMYK offers better on-screen preview accuracy"
+  ],
+  "correct_answer": [
+    "CMYK corresponds to pigment absorption and subtraction"
+  ],
+  "explanation": "CMYK is a subtractive color model suited for printing, where ink absorbs light rather than emitting it like RGB.",
+  "tags": [
+    "CMYK"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

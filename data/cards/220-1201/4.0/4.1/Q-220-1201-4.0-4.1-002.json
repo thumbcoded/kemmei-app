@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which term describes an isolated environment used for secure application testing?",
+  "answer_options": [
+    "Snapshot",
+    "Legacy OS",
+    "Sandbox",
+    "Virtual appliance"
+  ],
+  "correct_answer": [
+    "Sandbox"
+  ],
+  "explanation": "A sandbox is an isolated virtual machine environment used for secure testing and development.",
+  "tags": [
+    "sandbox"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

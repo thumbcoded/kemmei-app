@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common reason for applications taking a long time to load on a computer?",
+  "answer_options": [
+    "Bad video card driver",
+    "Corrupt BIOS configuration",
+    "Slow response due to low available memory",
+    "Invalid boot order"
+  ],
+  "correct_answer": [
+    "Slow response due to low available memory"
+  ],
+  "explanation": "Insufficient memory can cause the system to use disk-based paging, which slows down application loading significantly.",
+  "tags": [
+    "slow response",
+    "applications slow to load"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

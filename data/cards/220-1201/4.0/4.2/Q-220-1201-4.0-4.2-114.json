@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-114",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which statements correctly describe the concept of high availability in cloud computing? (Select all that apply)",
+  "answer_options": [
+    "It ensures continued service during hardware failures",
+    "It requires the customer to manually implement backups",
+    "It uses redundancy across data centers",
+    "It eliminates the need for network connectivity",
+    "It may include failover mechanisms to alternate sites"
+  ],
+  "correct_answer": [
+    "It ensures continued service during hardware failures",
+    "It uses redundancy across data centers",
+    "It may include failover mechanisms to alternate sites"
+  ],
+  "explanation": "High availability uses redundancy and automated failover to keep services online even if infrastructure fails.",
+  "tags": [
+    "high availability"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

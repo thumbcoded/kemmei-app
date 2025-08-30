@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-111",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does a DHCP scope primarily define?",
+  "answer_options": [
+    "The type of encryption used on the network",
+    "A pool of IP addresses and configuration details for DHCP clients",
+    "The routing paths between VLANs",
+    "The hostname for each device on the network"
+  ],
+  "correct_answer": [
+    "A pool of IP addresses and configuration details for DHCP clients"
+  ],
+  "explanation": "A DHCP scope defines the range of IP addresses and configuration parameters (like subnet mask and gateway) a DHCP server can assign.",
+  "tags": [
+    "DHCP scope",
+    "IP pool",
+    "configuration parameters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

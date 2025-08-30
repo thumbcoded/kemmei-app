@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Where would you typically go to investigate an 'exception detected' message from a RAID controller?",
+  "answer_options": [
+    "Task Manager",
+    "Configuration utility",
+    "Printer properties",
+    "Device Manager"
+  ],
+  "correct_answer": [
+    "Configuration utility"
+  ],
+  "explanation": "Most RAID controllers have a built-in configuration utility accessible during POST to investigate issues.",
+  "tags": [
+    "configuration utility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

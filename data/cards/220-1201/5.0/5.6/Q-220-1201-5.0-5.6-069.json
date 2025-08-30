@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting must be verified to ensure proper routing of print jobs in a TCP/IP-based print environment?",
+  "answer_options": [
+    "Print resolution",
+    "Printer IP address",
+    "Tray alignment",
+    "Default paper size"
+  ],
+  "correct_answer": [
+    "Printer IP address"
+  ],
+  "explanation": "A correct and reachable IP address is required for job delivery in network-based printing.",
+  "tags": [
+    "printer IP address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

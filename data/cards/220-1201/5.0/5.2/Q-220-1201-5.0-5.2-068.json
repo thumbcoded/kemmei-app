@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a risk of using integrated RAID without battery-backed write cache during a power failure?",
+  "answer_options": [
+    "The BIOS will reset",
+    "User accounts will be deleted",
+    "Data in transit may be lost or corrupted",
+    "The RAID configuration utility will become inaccessible"
+  ],
+  "correct_answer": [
+    "Data in transit may be lost or corrupted"
+  ],
+  "explanation": "Integrated RAID without backup power risks losing write-cache data during outages, leading to possible corruption.",
+  "tags": [
+    "integrated RAID"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

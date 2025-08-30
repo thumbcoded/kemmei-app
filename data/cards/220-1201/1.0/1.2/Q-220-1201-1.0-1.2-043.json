@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is typically used for analog headsets with microphone support?",
+  "answer_options": [
+    "USB-C",
+    "TRRS",
+    "Lightning",
+    "VGA"
+  ],
+  "correct_answer": [
+    "TRRS"
+  ],
+  "explanation": "TRRS (Tip-Ring-Ring-Sleeve) connectors support both audio output and microphone input in analog headsets.",
+  "tags": [
+    "TRRS",
+    "audio jack",
+    "wired headset"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

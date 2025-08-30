@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does a solid link light on an Ethernet port typically indicate?",
+  "answer_options": [
+    "The cable is unplugged",
+    "There is a bad cable",
+    "There is an active Ethernet connection",
+    "The device is turned off"
+  ],
+  "correct_answer": [
+    "There is an active Ethernet connection"
+  ],
+  "explanation": "A solid link light usually means the physical Ethernet connection is established.",
+  "tags": [
+    "link light check",
+    "Ethernet connection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

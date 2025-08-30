@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two factors should be confirmed before running a manufacturer’s diagnostic utility? (Select two.)",
+  "answer_options": [
+    "Drive model compatibility",
+    "Availability of backup data",
+    "Amount of RAM installed",
+    "Presence of antivirus software",
+    "Free disk space on C:"
+  ],
+  "correct_answer": [
+    "Drive model compatibility",
+    "Availability of backup data"
+  ],
+  "explanation": "Backups should be confirmed before testing, and the diagnostic must match the drive vendor/model.",
+  "tags": [
+    "backup data",
+    "manufacturer diagnostics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

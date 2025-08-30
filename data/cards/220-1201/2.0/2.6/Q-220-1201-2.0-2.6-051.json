@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is typically assigned to a client by a DHCP server?",
+  "answer_options": [
+    "IP address, subnet mask, default gateway, and DNS server",
+    "MAC address, VLAN tag, and proxy settings",
+    "SSID, firewall rules, and NAT configuration",
+    "Username, password, and encryption key"
+  ],
+  "correct_answer": [
+    "IP address, subnet mask, default gateway, and DNS server"
+  ],
+  "explanation": "DHCP provides all the IP configuration info needed for basic network communication, including IP, mask, gateway, and DNS.",
+  "tags": [
+    "DHCP",
+    "dynamic address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

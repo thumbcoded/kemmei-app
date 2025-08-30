@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes the structure of DNS?",
+  "answer_options": [
+    "Flat file database",
+    "Hierarchical and distributed",
+    "Blockchain-based network",
+    "Linear peer-to-peer list"
+  ],
+  "correct_answer": [
+    "Hierarchical and distributed"
+  ],
+  "explanation": "DNS is both hierarchical and distributed, allowing scalability and global availability.",
+  "tags": [
+    "hierarchy",
+    "distributed database",
+    "domain name system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

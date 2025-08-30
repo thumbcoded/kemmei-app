@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-116",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is BIOS configuration reset and when would you perform this procedure?",
+  "answer_options": [
+    "Updates BIOS firmware to the latest version from manufacturer",
+    "Restores all firmware settings to factory defaults, used for boot problems or corrupted settings",
+    "Creates a backup copy of current BIOS settings for restoration later",
+    "Optimizes BIOS settings automatically for better system performance"
+  ],
+  "correct_answer": [
+    "Restores all firmware settings to factory defaults, used for boot problems or corrupted settings"
+  ],
+  "explanation": "BIOS configuration reset restores all firmware settings to factory defaults, clearing custom configurations. Perform when: experiencing boot problems after BIOS changes, system instability from overclocking, password recovery needs, or corrupted settings. Methods include: load defaults in BIOS menu, CMOS jumper reset, or battery removal (older systems).",
+  "tags": [
+    "BIOS configuration reset"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

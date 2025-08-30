@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What would most likely happen if a network’s NTP service fails and devices have unsynchronized clocks?",
+  "answer_options": [
+    "Printers will stop accepting print jobs",
+    "Authentication protocols will run faster",
+    "Log file timestamps will become inconsistent, affecting correlation",
+    "Bandwidth will increase across all subnets"
+  ],
+  "correct_answer": [
+    "Log file timestamps will become inconsistent, affecting correlation"
+  ],
+  "explanation": "Inconsistent system clocks disrupt event correlation in SIEM systems, making security analysis and incident response difficult.",
+  "tags": [
+    "NTP",
+    "network time protocol",
+    "time accuracy",
+    "correlation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

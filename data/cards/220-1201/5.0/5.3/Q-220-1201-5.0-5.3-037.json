@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO settings can improve visibility when using a high-resolution display? (Select two)",
+  "answer_options": [
+    "100% scaling",
+    "200% scaling",
+    "Horizontal pixels",
+    "Text scaling",
+    "Refresh rate"
+  ],
+  "correct_answer": [
+    "200% scaling",
+    "Text scaling"
+  ],
+  "explanation": "Increasing scaling percentages and applying text scaling allows content to remain legible on dense displays without affecting resolution.",
+  "tags": [
+    "200% scaling",
+    "text scaling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

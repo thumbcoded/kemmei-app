@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What might help remove image sticking from an LCD monitor?",
+  "answer_options": [
+    "Replacing the monitor's backlight",
+    "Displaying a white screen for several hours",
+    "Increasing the monitor's refresh rate",
+    "Adjusting the color temperature settings"
+  ],
+  "correct_answer": [
+    "Displaying a white screen for several hours"
+  ],
+  "explanation": "Unlike permanent CRT burn-in, LCD image sticking may be temporary. Displaying different content like a solid white screen overnight can sometimes remove the stuck image by exercising the affected pixels differently.",
+  "tags": [
+    "burn-in",
+    "image sticking"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

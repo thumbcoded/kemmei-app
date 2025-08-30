@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "If your document prints in an unexpected layout despite being correctly set in the application, what should you check next?",
+  "answer_options": [
+    "Update the printer firmware",
+    "Adjust the printer's power settings",
+    "Verify the printer defaults",
+    "Reinstall the paper tray"
+  ],
+  "correct_answer": [
+    "Verify the printer defaults"
+  ],
+  "explanation": "Incorrect printer defaults may override application-specific settings like orientation or tray selection.",
+  "tags": [
+    "printer defaults"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

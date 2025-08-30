@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which record would you modify if you want to shorten the cache time of a DNS entry?",
+  "answer_options": [
+    "CNAME record",
+    "MX record",
+    "TTL field",
+    "AAAA record"
+  ],
+  "correct_answer": [
+    "TTL field"
+  ],
+  "explanation": "The TTL (Time to Live) field determines how long DNS entries can be cached. A shorter TTL causes quicker expiration.",
+  "tags": [
+    "TTL",
+    "time to live"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A system uses two power supplies that each handle half the total load. What type of setup is this?",
+  "answer_options": [
+    "Power throttling",
+    "Dual-rail output",
+    "Power load balancing",
+    "Active-passive configuration"
+  ],
+  "correct_answer": [
+    "Power load balancing"
+  ],
+  "explanation": "In a load-balanced setup, both power supplies share the load equally under normal operation.",
+  "tags": [
+    "power load balancing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

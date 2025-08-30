@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two statements accurately describe a private cloud? (Select two)",
+  "answer_options": [
+    "It is also called an external cloud",
+    "It is hosted within the organization’s own data center",
+    "It shares hardware with other customers",
+    "It provides full control over infrastructure and security"
+  ],
+  "correct_answer": [
+    "It is hosted within the organization’s own data center",
+    "It provides full control over infrastructure and security"
+  ],
+  "explanation": "Private (internal) clouds are fully owned and operated by a single organization and not shared.",
+  "tags": [
+    "private cloud",
+    "internal cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

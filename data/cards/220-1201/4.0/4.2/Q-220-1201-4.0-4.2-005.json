@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What term describes launching a new application environment with a single mouse click?",
+  "answer_options": [
+    "Manual provisioning",
+    "Remote administration",
+    "Button deployment",
+    "Cloud bursting"
+  ],
+  "correct_answer": [
+    "Button deployment"
+  ],
+  "explanation": "Button deployment refers to automating infrastructure setup using predefined templates or orchestration tools.",
+  "tags": [
+    "button deployment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

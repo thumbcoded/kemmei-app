@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component inside a power supply adjusts voltage depending on the country’s power standards?",
+  "answer_options": [
+    "Cooling fan",
+    "Bridge rectifier",
+    "Voltage selector switch",
+    "Power cable"
+  ],
+  "correct_answer": [
+    "Voltage selector switch"
+  ],
+  "explanation": "Older power supplies include a manual voltage selector to toggle between 120V and 230V AC input standards.",
+  "tags": [
+    "power supply",
+    "120 volts AC",
+    "240 volts AC"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

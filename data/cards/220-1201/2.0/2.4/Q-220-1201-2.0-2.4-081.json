@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which DNS-based system uses a public key to help verify the authenticity of email messages?",
+  "answer_options": [
+    "SPF",
+    "DKIM",
+    "DMARC",
+    "SSL"
+  ],
+  "correct_answer": [
+    "DKIM"
+  ],
+  "explanation": "DKIM (DomainKeys Identified Mail) uses a public/private key pair to digitally sign emails, ensuring their authenticity.",
+  "tags": [
+    "DKIM",
+    "public key",
+    "digital signature"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

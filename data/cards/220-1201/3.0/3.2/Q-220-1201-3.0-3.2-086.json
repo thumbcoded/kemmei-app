@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to maintain the twist in twisted pair cabling as close to the punchdown block as possible?",
+  "answer_options": [
+    "To reduce power consumption",
+    "To improve wireless signal strength",
+    "To minimize crosstalk and electromagnetic interference",
+    "To ensure the cable fits in a conduit"
+  ],
+  "correct_answer": [
+    "To minimize crosstalk and electromagnetic interference"
+  ],
+  "explanation": "Twisted pair cabling reduces EMI and crosstalk. Untwisting too far before termination can compromise signal integrity.",
+  "tags": [
+    "twisted pair",
+    "termination"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

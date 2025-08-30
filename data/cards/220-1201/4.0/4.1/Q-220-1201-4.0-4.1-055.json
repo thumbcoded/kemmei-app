@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the best practice when downloading virtual machines from public sources?",
+  "answer_options": [
+    "Always download from forums for faster access",
+    "Verify the source and security of the VM before use",
+    "Run the VM in production immediately",
+    "Use shared credentials for convenience"
+  ],
+  "correct_answer": [
+    "Verify the source and security of the VM before use"
+  ],
+  "explanation": "Malware authors may hide threats in publicly shared VMs. Always vet the source before using any downloaded VM.",
+  "tags": [
+    "malware in VMs",
+    "malware authors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

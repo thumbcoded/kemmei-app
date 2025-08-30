@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-122",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a toner cartridge used in?",
+  "answer_options": [
+    "Inkjet printer",
+    "Thermal printer",
+    "Dot matrix printer",
+    "Laser printer"
+  ],
+  "correct_answer": [
+    "Laser printer"
+  ],
+  "explanation": "Laser printers use toner cartridges filled with dry powder to create text and images.",
+  "tags": [
+    "toner"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

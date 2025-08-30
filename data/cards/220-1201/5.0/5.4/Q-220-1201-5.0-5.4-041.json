@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following can help prevent a mobile device from overheating in direct sunlight?",
+  "answer_options": [
+    "Turn off cellular data",
+    "Leave the device on the dashboard",
+    "Keep the device in shade",
+    "Close all running apps"
+  ],
+  "correct_answer": [
+    "Keep the device in shade"
+  ],
+  "explanation": "Direct sunlight can overheat devices quickly. Keeping them shaded is a simple and effective preventative measure.",
+  "tags": [
+    "ambient temperature"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

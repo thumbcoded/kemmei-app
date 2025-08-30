@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following SATA revisions introduced support for 3.0 Gbps transfer rates?",
+  "answer_options": [
+    "SATA revision 1.0",
+    "SATA revision 2.0",
+    "SATA revision 3.0",
+    "SATA revision 3.2"
+  ],
+  "correct_answer": [
+    "SATA revision 2.0"
+  ],
+  "explanation": "SATA revision 2.0 increased the transfer rate from 1.5 Gbps (revision 1.0) to 3.0 Gbps.",
+  "tags": [
+    "SATA revision 2.0"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes the benefit of using a VM snapshot before a configuration change?",
+  "answer_options": [
+    "It improves CPU performance",
+    "It prevents data loss in all cases",
+    "It allows for quick restoration to a known-good state",
+    "It enables dual-booting with another OS"
+  ],
+  "correct_answer": [
+    "It allows for quick restoration to a known-good state"
+  ],
+  "explanation": "Snapshots let you preserve the current VM state, so you can easily revert if something breaks.",
+  "tags": [
+    "snapshot revert"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

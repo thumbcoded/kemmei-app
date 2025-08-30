@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary use of wired mobile device connectors such as USB and Lightning?",
+  "answer_options": [
+    "Charging and data synchronization",
+    "Mobile gaming",
+    "Wireless networking",
+    "Voice communication"
+  ],
+  "correct_answer": [
+    "Charging and data synchronization"
+  ],
+  "explanation": "Wired connectors are primarily used for power charging and syncing data between devices.",
+  "tags": [
+    "charging",
+    "data transfer",
+    "USB",
+    "Lightning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

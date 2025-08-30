@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-100",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user purchases a third-party stylus for their tablet, but it only provides basic touch input without pressure sensitivity or palm rejection. What is the most likely cause?",
+  "answer_options": [
+    "The stylus battery is low",
+    "The stylus is not device-specific and lacks compatibility",
+    "The tablet's screen needs calibration",
+    "The stylus requires a firmware update"
+  ],
+  "correct_answer": [
+    "The stylus is not device-specific and lacks compatibility"
+  ],
+  "explanation": "Advanced stylus features like pressure sensitivity and palm rejection require specific compatibility between the stylus and device. Generic styluses typically only provide basic touch input.",
+  "tags": [
+    "stylus",
+    "compatibility",
+    "pressure sensitivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

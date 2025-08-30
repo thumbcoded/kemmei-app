@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which resolution is typically referred to as '4K'?",
+  "answer_options": [
+    "1920 × 1080",
+    "3840 × 2160",
+    "2560 × 1440",
+    "1280 × 720"
+  ],
+  "correct_answer": [
+    "3840 × 2160"
+  ],
+  "explanation": "4K resolution means the display contains 3840 horizontal pixels and 2160 vertical pixels.",
+  "tags": [
+    "4K"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

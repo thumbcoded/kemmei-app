@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-136",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is video output troubleshooting and what are the key things to verify?",
+  "answer_options": [
+    "Only checking software video player applications and codecs",
+    "Verify signal generation from PC, cable integrity, monitor input selection, compatibility",
+    "Video output problems are exclusively network streaming issues",
+    "Only testing with high-resolution displays and gaming applications"
+  ],
+  "correct_answer": [
+    "Verify signal generation from PC, cable integrity, monitor input selection, compatibility"
+  ],
+  "explanation": "Video output troubleshooting verifies: 1) PC generates video signal (test with known good monitor), 2) Cable carries signal properly (test with different cable), 3) Monitor receives and displays signal (check input selection), 4) Resolution/refresh rate compatibility, 5) Proper video output selection (integrated vs dedicated graphics).",
+  "tags": [
+    "video output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

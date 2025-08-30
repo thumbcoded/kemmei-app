@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid features for improving printer security and access control? (Select all that apply)",
+  "answer_options": [
+    "User authentication",
+    "Badging",
+    "Duplex binding",
+    "PIN-protected printing",
+    "Audit logs"
+  ],
+  "correct_answer": [
+    "User authentication",
+    "Badging",
+    "PIN-protected printing",
+    "Audit logs"
+  ],
+  "explanation": "All listed options except duplex binding are used to control access and track printer usage. Duplex binding is unrelated to security.",
+  "tags": [
+    "user authentication",
+    "badging",
+    "PIN-protected printing",
+    "audit logs"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

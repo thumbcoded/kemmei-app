@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "After a user swaps to a different monitor, they report distorted colors and faint ghosting of previous images. What’s the most likely root cause?",
+  "answer_options": [
+    "The monitor is set to an unsupported refresh rate",
+    "The image sticking effect has occurred",
+    "The HDMI cable is loose",
+    "The native resolution does not match the monitor"
+  ],
+  "correct_answer": [
+    "The image sticking effect has occurred"
+  ],
+  "explanation": "If faint remnants of previous content remain visible, it’s likely due to image sticking or burn-in, especially common in older LCD panels.",
+  "tags": [
+    "image sticking"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

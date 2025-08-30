@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What hardware problem is most likely if a system reboots randomly during CPU-intensive tasks?",
+  "answer_options": [
+    "Hard drive is full",
+    "RAM is unseated",
+    "CPU is overheating",
+    "Display driver is outdated"
+  ],
+  "correct_answer": [
+    "CPU is overheating"
+  ],
+  "explanation": "Overheating during intensive processing may cause the CPU to shut down or reboot the system to protect itself.",
+  "tags": [
+    "CPU overheating",
+    "spontaneous reboots"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-142",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which factor is MOST important when selecting a CPU fan and heat sink combo?",
+  "answer_options": [
+    "Whether the motherboard supports TPM",
+    "Number of SATA ports",
+    "Compatibility with the CPU socket",
+    "Presence of RGB lighting"
+  ],
+  "correct_answer": [
+    "Compatibility with the CPU socket"
+  ],
+  "explanation": "Cooling solutions must physically match the CPU socket type to be properly installed and function correctly.",
+  "tags": [
+    "heat sinks"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

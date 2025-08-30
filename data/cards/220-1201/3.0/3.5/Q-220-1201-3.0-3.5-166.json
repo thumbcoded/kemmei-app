@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-166",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to prevent users from disabling Secure Boot. What is the BEST way to do this?",
+  "answer_options": [
+    "Remove the system battery",
+    "Disable TPM in BIOS",
+    "Set an admin password in BIOS/UEFI",
+    "Enable virtualization support"
+  ],
+  "correct_answer": [
+    "Set an admin password in BIOS/UEFI"
+  ],
+  "explanation": "An admin (supervisor) password in BIOS/UEFI restricts changes to Secure Boot and other critical security settings.",
+  "tags": [
+    "secure boot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

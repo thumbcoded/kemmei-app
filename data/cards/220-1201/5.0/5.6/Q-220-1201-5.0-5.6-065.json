@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is one of the first steps when troubleshooting a network printer that is not responding?",
+  "answer_options": [
+    "Update the printer driver",
+    "Check the power supply wattage",
+    "Verify the printer IP address and network configuration",
+    "Reset the print queue"
+  ],
+  "correct_answer": [
+    "Verify the printer IP address and network configuration"
+  ],
+  "explanation": "Correct IP configuration is essential for network communication; it’s often the first point of failure.",
+  "tags": [
+    "printer IP address",
+    "network configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

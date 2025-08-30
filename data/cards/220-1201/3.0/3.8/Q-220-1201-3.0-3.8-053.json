@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition MOST likely requires manual cleaning of the print head?",
+  "answer_options": [
+    "Low ink warning",
+    "Failed calibration",
+    "Repeated cleaning cycle failures",
+    "Misaligned paper tray"
+  ],
+  "correct_answer": [
+    "Repeated cleaning cycle failures"
+  ],
+  "explanation": "If automated cleaning fails to clear clogging, manual cleaning may be required to restore nozzle functionality.",
+  "tags": [
+    "manual cleaning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

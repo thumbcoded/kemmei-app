@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which device in a computer is responsible for converting AC power into usable DC power?",
+  "answer_options": [
+    "CPU",
+    "Power supply unit (PSU)",
+    "Motherboard",
+    "Transformer"
+  ],
+  "correct_answer": [
+    "Power supply unit (PSU)"
+  ],
+  "explanation": "The PSU takes AC input from the wall and converts it into regulated DC voltages for internal components.",
+  "tags": [
+    "power supply",
+    "AC to DC conversion"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

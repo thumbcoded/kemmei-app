@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common refresh rate for general-purpose monitors?",
+  "answer_options": [
+    "15 Hz",
+    "30 Hz",
+    "60 Hz",
+    "144 Hz"
+  ],
+  "correct_answer": [
+    "60 Hz"
+  ],
+  "explanation": "60 Hz is the standard refresh rate for most non-gaming monitors.",
+  "tags": [
+    "refresh rate"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

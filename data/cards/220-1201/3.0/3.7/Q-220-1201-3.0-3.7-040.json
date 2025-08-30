@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a major limitation of using Bluetooth for printer connectivity?",
+  "answer_options": [
+    "It requires special cables",
+    "It only works with Android devices",
+    "It has limited range",
+    "It cannot send color print jobs"
+  ],
+  "correct_answer": [
+    "It has limited range"
+  ],
+  "explanation": "Bluetooth connections are limited to short ranges, which makes them suitable only for close proximity connections.",
+  "tags": [
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

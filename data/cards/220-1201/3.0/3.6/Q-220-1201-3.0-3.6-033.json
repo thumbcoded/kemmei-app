@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does a measurement of 60 Hz refer to in an electrical system?",
+  "answer_options": [
+    "The number of volts present",
+    "The temperature of the PSU",
+    "The resistance in the circuit",
+    "The number of AC cycles per second"
+  ],
+  "correct_answer": [
+    "The number of AC cycles per second"
+  ],
+  "explanation": "Hertz (Hz) measures frequency, and in AC power it indicates how many times the current changes direction per second.",
+  "tags": [
+    "hertz"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

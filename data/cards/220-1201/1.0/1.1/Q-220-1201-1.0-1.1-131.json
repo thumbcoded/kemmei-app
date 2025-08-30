@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-131",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to service two different laptop models. One allows easy memory and storage replacement, while the other requires complete disassembly for component access. What does this illustrate about laptop troubleshooting?",
+  "answer_options": [
+    "All laptops follow the same service procedures",
+    "Manufacturer differences significantly impact serviceability and troubleshooting approaches",
+    "Newer laptops are always easier to service than older models",
+    "Component type determines service difficulty regardless of manufacturer"
+  ],
+  "correct_answer": [
+    "Manufacturer differences significantly impact serviceability and troubleshooting approaches"
+  ],
+  "explanation": "This scenario demonstrates how different manufacturers design their laptops with varying levels of serviceability, requiring technicians to adapt their troubleshooting approaches based on the specific system design.",
+  "tags": [
+    "manufacturer differences",
+    "serviceability",
+    "laptop troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why are containers considered more lightweight and portable than virtual machines?",
+  "answer_options": [
+    "They use hardware-level virtualization",
+    "They run multiple guest operating systems simultaneously",
+    "They exclude the operating system from the container image",
+    "They run on a hypervisor that reduces image size"
+  ],
+  "correct_answer": [
+    "They exclude the operating system from the container image"
+  ],
+  "explanation": "Containers rely on the host OS, so they only need the app and its dependencies — no full guest OS required.",
+  "tags": [
+    "container image",
+    "container"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

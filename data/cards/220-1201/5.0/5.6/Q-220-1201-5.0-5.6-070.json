@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two features on a wired printer help confirm physical network connectivity? (Select two)",
+  "answer_options": [
+    "MAC address",
+    "Link lights",
+    "WPS button",
+    "Network printer test page",
+    "RJ-45 connector"
+  ],
+  "correct_answer": [
+    "Link lights",
+    "RJ-45 connector"
+  ],
+  "explanation": "Link lights and the presence of a wired (RJ-45) connection confirm physical network connectivity for wired printers.",
+  "tags": [
+    "wired printer",
+    "link lights"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

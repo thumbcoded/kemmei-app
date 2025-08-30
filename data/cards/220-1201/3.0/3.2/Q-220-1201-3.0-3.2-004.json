@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which display connector uses a packetized video format similar to Ethernet?",
+  "answer_options": [
+    "HDMI",
+    "DVI",
+    "VGA",
+    "DisplayPort"
+  ],
+  "correct_answer": [
+    "DisplayPort"
+  ],
+  "explanation": "DisplayPort sends data in a packetized format, much like how Ethernet packets are structured.",
+  "tags": [
+    "packetized video"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why do virtual machines significantly increase system overhead compared to containers?",
+  "answer_options": [
+    "VMs are built with more graphical processing features",
+    "Each VM runs a full operating system, consuming CPU, RAM, and disk",
+    "Containers require more storage space than virtual machines",
+    "VMs run without using hypervisors"
+  ],
+  "correct_answer": [
+    "Each VM runs a full operating system, consuming CPU, RAM, and disk"
+  ],
+  "explanation": "Each virtual machine includes its own OS, contributing to higher overhead versus lightweight containers.",
+  "tags": [
+    "overhead"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

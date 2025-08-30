@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user places a single sheet on glass to scan it. Which component is being used?",
+  "answer_options": [
+    "Automatic document feeder",
+    "Flatbed scanner",
+    "Laser print engine",
+    "Print server"
+  ],
+  "correct_answer": [
+    "Flatbed scanner"
+  ],
+  "explanation": "Flatbed scanners allow you to scan one document at a time using a glass surface under a hinged lid.",
+  "tags": [
+    "flatbed scanner"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

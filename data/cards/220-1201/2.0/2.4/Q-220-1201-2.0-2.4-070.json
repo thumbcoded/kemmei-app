@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the TTL field in a DNS record determine?",
+  "answer_options": [
+    "The domain name of the record owner",
+    "The encryption method for DNSSEC",
+    "The time a record can be cached before it expires",
+    "The number of allowed DNS queries per hour"
+  ],
+  "correct_answer": [
+    "The time a record can be cached before it expires"
+  ],
+  "explanation": "TTL (Time to Live) defines how long a DNS record may be stored in cache before being refreshed.",
+  "tags": [
+    "TTL",
+    "time to live"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why can thin clients used in a VDI environment be built with minimal local CPU, memory, and storage?",
+  "answer_options": [
+    "Because thin clients use AI to simulate hardware resources",
+    "Because all application processing occurs in the cloud-hosted virtual machine",
+    "Because thin clients are preloaded with virtualized apps",
+    "Because thin clients use containers instead of full OS environments"
+  ],
+  "correct_answer": [
+    "Because all application processing occurs in the cloud-hosted virtual machine"
+  ],
+  "explanation": "In VDI, the desktop OS runs remotely. The thin client handles only input, output, and network traffic.",
+  "tags": [
+    "virtualized client",
+    "VDI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-128",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which electrical characteristic of RS232 signaling makes it more vulnerable to noise over long distances?",
+  "answer_options": [
+    "It uses fiber for transmission",
+    "It relies on high-frequency modulation",
+    "It uses single-ended signaling with large voltage swings",
+    "It is wireless and reflects ambient radio waves"
+  ],
+  "correct_answer": [
+    "It uses single-ended signaling with large voltage swings"
+  ],
+  "explanation": "RS232 uses single-ended signaling (not differential), making it more susceptible to electrical noise and signal degradation across long runs.",
+  "tags": [
+    "RS232",
+    "serial communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

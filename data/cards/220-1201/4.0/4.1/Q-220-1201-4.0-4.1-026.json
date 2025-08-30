@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why are Type 2 hypervisors generally considered less suitable for enterprise production environments?",
+  "answer_options": [
+    "They lack support for guest operating systems",
+    "They can't run more than one VM at a time",
+    "They depend on a host OS, which adds performance and security limitations",
+    "They do not allow access to local storage devices"
+  ],
+  "correct_answer": [
+    "They depend on a host OS, which adds performance and security limitations"
+  ],
+  "explanation": "Type 2 hypervisors rely on a full OS to function, adding overhead and risk in enterprise-grade deployment.",
+  "tags": [
+    "Type 2 hypervisor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

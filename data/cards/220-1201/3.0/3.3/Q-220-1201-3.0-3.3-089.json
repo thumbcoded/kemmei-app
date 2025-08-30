@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the function of the key notches on DDR memory modules?",
+  "answer_options": [
+    "They increase data transfer performance",
+    "They help maintain proper electrical grounding",
+    "They ensure modules are installed in the correct orientation and generation-specific slots",
+    "They enable ECC functionality on supported modules"
+  ],
+  "correct_answer": [
+    "They ensure modules are installed in the correct orientation and generation-specific slots"
+  ],
+  "explanation": "Each DDR version has key notches in specific positions to prevent incorrect installation and ensure compatibility with supported motherboards.",
+  "tags": [
+    "backward compatibility",
+    "memory technology"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

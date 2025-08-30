@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why must memory modules be matched in type, speed, and capacity when implementing dual or quad channel configurations?",
+  "answer_options": [
+    "To avoid invalidating the CPU cache",
+    "To allow the motherboard to use DMA",
+    "To prevent RAM overheating under load",
+    "To ensure the channels operate synchronously for optimal throughput"
+  ],
+  "correct_answer": [
+    "To ensure the channels operate synchronously for optimal throughput"
+  ],
+  "explanation": "Multi-channel memory systems require identical modules so that each channel can operate in lockstep, avoiding synchronization errors and maximizing data bandwidth.",
+  "tags": [
+    "active memory",
+    "RAM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

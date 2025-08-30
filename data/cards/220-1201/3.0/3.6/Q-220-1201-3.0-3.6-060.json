@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician installs a 1000W PSU in a system that draws only 350W. What happens to the unused capacity?",
+  "answer_options": [
+    "It is stored as electrical potential",
+    "It increases the motherboard's output",
+    "It is unused, but available if needed",
+    "It gets dumped as heat"
+  ],
+  "correct_answer": [
+    "It is unused, but available if needed"
+  ],
+  "explanation": "The PSU only supplies the power the system demands. The rest of its capacity is simply available for future use, such as upgrades.",
+  "tags": [
+    "power supply output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

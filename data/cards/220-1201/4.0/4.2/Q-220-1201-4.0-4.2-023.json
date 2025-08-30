@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A university and a research lab jointly develop and operate a shared cloud infrastructure. Which cloud model does this represent?",
+  "answer_options": [
+    "Hybrid cloud",
+    "Public cloud",
+    "Community cloud",
+    "External cloud"
+  ],
+  "correct_answer": [
+    "Community cloud"
+  ],
+  "explanation": "A community cloud is shared among several organizations with common interests or objectives.",
+  "tags": [
+    "community cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

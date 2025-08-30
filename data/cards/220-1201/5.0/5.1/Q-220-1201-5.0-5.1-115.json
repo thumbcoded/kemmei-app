@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the proper procedure for battery replacement on a motherboard?",
+  "answer_options": [
+    "Hot-swap the battery while system is running to maintain BIOS settings",
+    "Power down completely, ground yourself, remove old battery noting polarity, insert new battery correctly",
+    "Only replace batteries during scheduled maintenance windows with manufacturer",
+    "Use any available battery regardless of type as long as voltage matches"
+  ],
+  "correct_answer": [
+    "Power down completely, ground yourself, remove old battery noting polarity, insert new battery correctly"
+  ],
+  "explanation": "Procedure: 1) Power down and unplug system completely, 2) Ground yourself to prevent ESD, 3) Locate battery (usually coin cell CR2032), 4) Carefully remove old battery noting polarity, 5) Insert new battery with correct polarity (+/-), 6) Power on and reconfigure BIOS settings, 7) Save settings and verify date/time retention after restart.",
+  "tags": [
+    "battery replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

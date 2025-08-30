@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-125",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why SAS drives are often used in enterprise environments instead of SATA drives?",
+  "answer_options": [
+    "They are less expensive",
+    "They are hot-swappable and support faster sustained speeds",
+    "They use a simpler connector design",
+    "They offer better compatibility with consumer-grade systems"
+  ],
+  "correct_answer": [
+    "They are hot-swappable and support faster sustained speeds"
+  ],
+  "explanation": "SAS drives support enterprise-grade features like hot swapping, faster speeds, and high reliability.",
+  "tags": [
+    "SAS",
+    "SATA comparison"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

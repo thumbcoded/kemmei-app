@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-179",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO characteristics of RISC architectures (used in ARM processors) contribute to power efficiency? (Select two)",
+  "answer_options": [
+    "Fewer clock cycles per instruction",
+    "Complex decoding stages",
+    "Simplified instruction sets",
+    "Higher thermal output"
+  ],
+  "correct_answer": [
+    "Fewer clock cycles per instruction",
+    "Simplified instruction sets"
+  ],
+  "explanation": "RISC architectures like ARM use simple instructions and fewer clock cycles, which reduces power usage and heat.",
+  "tags": [
+    "ARM processor",
+    "power efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

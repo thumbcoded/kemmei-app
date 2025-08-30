@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the correct action to take after inserting a CPU into its socket?",
+  "answer_options": [
+    "Apply pressure to lock it in",
+    "Force it into place",
+    "Use the CPU locking mechanism",
+    "Apply thermal paste to secure it"
+  ],
+  "correct_answer": [
+    "Use the CPU locking mechanism"
+  ],
+  "explanation": "After aligning and placing the CPU into its socket, the locking mechanism should be closed to secure it.",
+  "tags": [
+    "CPU locking mechanism"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

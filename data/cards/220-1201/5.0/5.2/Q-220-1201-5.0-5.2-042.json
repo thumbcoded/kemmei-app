@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A mapped drive is missing after boot. Which two settings or actions can help restore automatic access? (Select two.)",
+  "answer_options": [
+    "Run SMART diagnostics",
+    "Enable Reconnect at signin",
+    "Verify login script execution",
+    "Enable BIOS secure boot",
+    "Run chkdsk on drive C:"
+  ],
+  "correct_answer": [
+    "Enable Reconnect at signin",
+    "Verify login script execution"
+  ],
+  "explanation": "Mapped network drives rely on login scripts and the 'Reconnect at signin' option to automatically remount the remote location.",
+  "tags": [
+    "reconnect at signin",
+    "login script"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

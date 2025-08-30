@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which best describes the role of a virtual machine manager (hypervisor) during virtualization?",
+  "answer_options": [
+    "It converts guest OSes into host OSes",
+    "It shares CPU and memory resources among physical machines",
+    "It mediates the interaction between virtual machines and physical hardware",
+    "It installs guest operating systems onto the host"
+  ],
+  "correct_answer": [
+    "It mediates the interaction between virtual machines and physical hardware"
+  ],
+  "explanation": "The hypervisor acts as a bridge between the virtual machines and the host’s physical hardware resources.",
+  "tags": [
+    "virtual machine manager"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

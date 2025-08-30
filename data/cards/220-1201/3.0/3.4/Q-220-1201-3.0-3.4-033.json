@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why are smaller hard drive form factors preferred in mobile device storage?",
+  "answer_options": [
+    "They offer higher capacity",
+    "They reduce weight and save space",
+    "They are faster than larger drives",
+    "They are less expensive to manufacture"
+  ],
+  "correct_answer": [
+    "They reduce weight and save space"
+  ],
+  "explanation": "Mobile device storage prioritizes compactness and weight reduction, which is why smaller form factors are ideal.",
+  "tags": [
+    "mobile device storage",
+    "form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

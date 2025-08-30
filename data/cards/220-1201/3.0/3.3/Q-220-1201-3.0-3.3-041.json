@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the '64-bit' data width of memory refer to?",
+  "answer_options": [
+    "The number of memory slots on a motherboard",
+    "The total memory capacity of a system",
+    "The number of bits transferred in one memory operation",
+    "The size of the CPU register"
+  ],
+  "correct_answer": [
+    "The number of bits transferred in one memory operation"
+  ],
+  "explanation": "A 64-bit data width means each memory operation transfers 64 bits of data at once. This is a standard data width for modern memory modules.",
+  "tags": [
+    "data width",
+    "64-bit blocks"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

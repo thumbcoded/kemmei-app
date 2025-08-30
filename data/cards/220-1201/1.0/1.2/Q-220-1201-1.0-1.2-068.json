@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which tasks typically involve the use of a webcam? (Select all that apply)",
+  "answer_options": [
+    "Recording a presentation",
+    "Live streaming to an audience",
+    "Online video meetings",
+    "Printing a document",
+    "Unlocking a device using facial recognition"
+  ],
+  "correct_answer": [
+    "Recording a presentation",
+    "Live streaming to an audience",
+    "Online video meetings",
+    "Unlocking a device using facial recognition"
+  ],
+  "explanation": "Webcams are used in video capture, streaming, conferencing, and biometric facial unlock — not for printing.",
+  "tags": [
+    "webcam",
+    "camera",
+    "video conferencing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

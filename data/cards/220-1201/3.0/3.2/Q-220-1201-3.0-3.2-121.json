@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-121",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What kind of communication method is used by RS232 connections?",
+  "answer_options": [
+    "Serial communication",
+    "Parallel communication",
+    "Optical signaling",
+    "Wireless transmission"
+  ],
+  "correct_answer": [
+    "Serial communication"
+  ],
+  "explanation": "RS232 uses serial communication, meaning data is sent one bit at a time over a single wire.",
+  "tags": [
+    "serial communication",
+    "RS232"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

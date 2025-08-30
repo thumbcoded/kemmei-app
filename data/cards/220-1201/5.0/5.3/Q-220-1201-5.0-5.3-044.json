@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is the BEST example of a severe hardware display failure?",
+  "answer_options": [
+    "A single dead pixel near the corner",
+    "Text appears slightly blurry",
+    "Screen shows flickering blocks and horizontal lines",
+    "Night mode makes the colors look blue"
+  ],
+  "correct_answer": [
+    "Screen shows flickering blocks and horizontal lines"
+  ],
+  "explanation": "Blocks of corrupted display and full-screen flickering are classic signs of severe hardware failure in the LCD panel or video output system.",
+  "tags": [
+    "severe display problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

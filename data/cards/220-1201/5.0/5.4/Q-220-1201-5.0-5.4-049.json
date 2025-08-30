@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common limitation of older mobile devices when running modern apps?",
+  "answer_options": [
+    "Cannot connect to cellular networks",
+    "Hardware limitations prevent smooth performance",
+    "Digitizers fail to detect input",
+    "No access to app stores"
+  ],
+  "correct_answer": [
+    "Hardware limitations prevent smooth performance"
+  ],
+  "explanation": "Legacy hardware may not meet the demands of newer apps, resulting in sluggish or unresponsive performance.",
+  "tags": [
+    "slow performance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

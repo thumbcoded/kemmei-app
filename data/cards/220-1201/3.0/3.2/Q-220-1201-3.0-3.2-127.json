@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-127",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician connects a USB-to-DB9 adapter to a switch's console port, but sees no output in the terminal. What is the MOST likely issue?",
+  "answer_options": [
+    "The DB9 connector must be inserted upside down",
+    "RS232 requires fiber optic drivers",
+    "The baud rate or COM port configuration is incorrect",
+    "The USB standard is incompatible with serial transmission"
+  ],
+  "correct_answer": [
+    "The baud rate or COM port configuration is incorrect"
+  ],
+  "explanation": "RS232 console sessions require matching settings like baud rate, stop bits, and correct COM port to establish a connection.",
+  "tags": [
+    "console port",
+    "RS232",
+    "USB to DB9 adapter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

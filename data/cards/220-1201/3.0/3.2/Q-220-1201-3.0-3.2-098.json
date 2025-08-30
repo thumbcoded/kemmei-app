@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which USB version introduced SuperSpeed, allowing for data transfer rates up to 5 Gbps?",
+  "answer_options": [
+    "USB 1.1",
+    "USB 2.0",
+    "USB 3.0",
+    "USB 3.2"
+  ],
+  "correct_answer": [
+    "USB 3.0"
+  ],
+  "explanation": "USB 3.0, also known as SuperSpeed USB, supports transfer rates up to 5 Gbps and introduced blue connectors for visual distinction.",
+  "tags": [
+    "USB 3.0"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

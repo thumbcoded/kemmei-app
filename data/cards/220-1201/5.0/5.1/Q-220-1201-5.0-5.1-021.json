@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following hardware issues is most likely to cause recurring blue screen errors during normal system operation?",
+  "answer_options": [
+    "Disconnected keyboard",
+    "CPU overheating",
+    "Missing printer driver",
+    "Outdated web browser"
+  ],
+  "correct_answer": [
+    "CPU overheating"
+  ],
+  "explanation": "Overheating CPUs can cause the system to crash, resulting in BSODs as the system shuts down to prevent damage.",
+  "tags": [
+    "blue screen",
+    "CPU overheating"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

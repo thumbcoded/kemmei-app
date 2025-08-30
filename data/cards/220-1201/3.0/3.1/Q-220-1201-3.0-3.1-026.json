@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does OLED stand for?",
+  "answer_options": [
+    "Optical Light-Emitting Display",
+    "Organic Light-Emitting Diode",
+    "Optimized Light Enhancement Device",
+    "Organic Luminescent Electro Display"
+  ],
+  "correct_answer": [
+    "Organic Light-Emitting Diode"
+  ],
+  "explanation": "OLED stands for Organic Light-Emitting Diode, a display technology that emits light from organic compounds.",
+  "tags": [
+    "organic light-emitting diode"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

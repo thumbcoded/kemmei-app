@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO reasons explain why impact printers are still used in some business environments?",
+  "answer_options": [
+    "Quiet operation",
+    "Support for multi-part forms",
+    "High-speed photo printing",
+    "Ability to create carbon copies",
+    "Full CMYK color printing"
+  ],
+  "correct_answer": [
+    "Support for multi-part forms",
+    "Ability to create carbon copies"
+  ],
+  "explanation": "Impact printers remain useful for tasks that require simultaneous duplication of forms, such as invoices or logs.",
+  "tags": [
+    "multi-part forms",
+    "carbon copies"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

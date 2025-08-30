@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two configurations would most benefit competitive gaming performance? (Select two)",
+  "answer_options": [
+    "60 Hz display with low input lag",
+    "144 Hz gaming display",
+    "VSYNC always enabled",
+    "FPS limiter at 60",
+    "High refresh rate with FPS matching GPU output"
+  ],
+  "correct_answer": [
+    "144 Hz gaming display",
+    "High refresh rate with FPS matching GPU output"
+  ],
+  "explanation": "Competitive gaming benefits from high refresh rate displays and frame rates that closely match the monitor’s capabilities.",
+  "tags": [
+    "gaming display",
+    "refresh rate",
+    "FPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

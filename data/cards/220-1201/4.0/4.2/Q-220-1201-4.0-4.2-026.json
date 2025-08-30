@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which cloud deployment model allows an organization to maintain sensitive data internally while using public resources for less-critical workloads?",
+  "answer_options": [
+    "Hybrid cloud",
+    "Community cloud",
+    "Internal cloud",
+    "External cloud"
+  ],
+  "correct_answer": [
+    "Hybrid cloud"
+  ],
+  "explanation": "Hybrid cloud allows sensitive operations to stay private while leveraging public infrastructure for other needs.",
+  "tags": [
+    "hybrid cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

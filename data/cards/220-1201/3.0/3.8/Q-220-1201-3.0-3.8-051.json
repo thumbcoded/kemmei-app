@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician replaces the ink cartridges, but streaks still appear in all colors. What is the MOST likely next step?",
+  "answer_options": [
+    "Reinstall the printer driver",
+    "Perform a color alignment",
+    "Run an automated cleaning cycle",
+    "Change the print resolution"
+  ],
+  "correct_answer": [
+    "Run an automated cleaning cycle"
+  ],
+  "explanation": "Replacing cartridges does not clean the print head. An automated cleaning cycle helps clear dried ink causing streaks.",
+  "tags": [
+    "automated cleaning cycle"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

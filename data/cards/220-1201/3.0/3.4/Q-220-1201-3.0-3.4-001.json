@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of the spinning platters inside a hard drive?",
+  "answer_options": [
+    "To cool the internal components",
+    "To store data magnetically",
+    "To power the actuator arm",
+    "To provide Wi-Fi connectivity"
+  ],
+  "correct_answer": [
+    "To store data magnetically"
+  ],
+  "explanation": "The platters rotate at high speeds and store data magnetically, allowing the read/write head to access different sectors of data.",
+  "tags": [
+    "spinning platters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common feature of multi-output adapters?",
+  "answer_options": [
+    "They convert analog to coaxial",
+    "They combine Ethernet, video, and USB ports into one device",
+    "They only work on mobile phones",
+    "They split HDMI signals into multiple monitors"
+  ],
+  "correct_answer": [
+    "They combine Ethernet, video, and USB ports into one device"
+  ],
+  "explanation": "Multi-output adapters (e.g., USB-C docks) often offer several ports such as USB, Ethernet, DisplayPort, and HDMI from a single connector.",
+  "tags": [
+    "multi-output adapters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

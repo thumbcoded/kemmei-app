@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "In a high-performance build, which TWO motherboard components most directly influence airflow planning? (Select two)",
+  "answer_options": [
+    "Cooling solutions",
+    "Storage connectors",
+    "Expansion slots",
+    "Memory slots"
+  ],
+  "correct_answer": [
+    "Cooling solutions",
+    "Expansion slots"
+  ],
+  "explanation": "Expansion cards often restrict airflow paths, and cooling solutions must be strategically placed for efficiency.",
+  "tags": [
+    "cooling solutions",
+    "expansion slots",
+    "airflow"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

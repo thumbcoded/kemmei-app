@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which of the following are valid outputs you can expect from a DNS query using `dig`? Select two.",
+  "answer_options": [
+    "The domain registrar’s email address",
+    "The authoritative name server for the domain",
+    "The resolved IP address",
+    "MAC address of the web server",
+    "Current TCP window size"
+  ],
+  "correct_answer": [
+    "The authoritative name server for the domain",
+    "The resolved IP address"
+  ],
+  "explanation": "`dig` returns DNS record details such as resolved IPs and authoritative servers but not registrar or MAC address info.",
+  "tags": [
+    "dig",
+    "DNS query",
+    "DNS resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

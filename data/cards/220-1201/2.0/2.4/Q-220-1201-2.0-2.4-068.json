@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which DNS record is used to store readable data like verification information or email policies?",
+  "answer_options": [
+    "TXT record",
+    "A record",
+    "MX record",
+    "AAAA record"
+  ],
+  "correct_answer": [
+    "TXT record"
+  ],
+  "explanation": "TXT records store arbitrary human-readable text, often used for SPF, DKIM, and domain verification.",
+  "tags": [
+    "TXT record",
+    "text record"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

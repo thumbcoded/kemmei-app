@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a multi-floor office, users on the top floor report weak wireless signal despite an AP being nearby. Which is the BEST explanation?",
+  "answer_options": [
+    "The AP is using an invalid SSID",
+    "The AP has poor antenna positioning for vertical coverage",
+    "The DHCP scope is exhausted",
+    "The users are using the wrong DNS server"
+  ],
+  "correct_answer": [
+    "The AP has poor antenna positioning for vertical coverage"
+  ],
+  "explanation": "Antenna alignment matters; standard antennas broadcast horizontally and may not effectively cover multiple floors.",
+  "tags": [
+    "antenna positioning",
+    "signal quality",
+    "access point signal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An organization is evaluating costs for moving to a public cloud model. Which of the following would most likely influence their ability to manage costs over time?",
+  "answer_options": [
+    "Cloud service providers",
+    "Financial control",
+    "Geographical deployment",
+    "Server hosting"
+  ],
+  "correct_answer": [
+    "Financial control"
+  ],
+  "explanation": "Financial control allows organizations to monitor usage and adjust resources dynamically, avoiding unnecessary costs.",
+  "tags": [
+    "financial control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

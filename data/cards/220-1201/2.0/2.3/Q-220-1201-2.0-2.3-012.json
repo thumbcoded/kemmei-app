@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are characteristics of the DNS system? (Select all that apply)",
+  "answer_options": [
+    "Hierarchical structure with root, TLD, and authoritative servers",
+    "Resolves IP addresses to MAC addresses",
+    "Supports reverse lookups using PTR records",
+    "Caches query results for performance optimization",
+    "Operates as a centralized service hosted by a single ISP"
+  ],
+  "correct_answer": [
+    "Hierarchical structure with root, TLD, and authoritative servers",
+    "Supports reverse lookups using PTR records",
+    "Caches query results for performance optimization"
+  ],
+  "explanation": "DNS is hierarchical and distributed, supports forward and reverse lookups, and uses caching to reduce response time. It is not centralized, and resolving MAC addresses is handled by ARP, not DNS.",
+  "tags": [
+    "domain name system",
+    "DNS cache",
+    "reverse DNS",
+    "distributed platform"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

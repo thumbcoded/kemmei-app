@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-140",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to frequently unplug and replug fiber connections in an environment prone to vibration. Which connector is least ideal?",
+  "answer_options": [
+    "LC connector",
+    "ST connector",
+    "SC connector",
+    "RJ45"
+  ],
+  "correct_answer": [
+    "SC connector"
+  ],
+  "explanation": "The push-pull design of SC connectors may not hold as securely under repeated strain or vibration compared to bayonet (ST) or clip (LC) mechanisms.",
+  "tags": [
+    "SC connector",
+    "subscriber connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

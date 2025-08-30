@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-122",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is read failure in storage devices and what troubleshooting steps should you take?",
+  "answer_options": [
+    "Software permission error preventing file access by user applications",
+    "Storage device cannot successfully retrieve data from specific sectors or areas",
+    "Network interruption preventing access to remote file servers",
+    "Display problem preventing visual confirmation of file contents"
+  ],
+  "correct_answer": [
+    "Storage device cannot successfully retrieve data from specific sectors or areas"
+  ],
+  "explanation": "Read failure occurs when the storage device cannot successfully retrieve data from specific sectors or areas. Troubleshooting: 1) Run CHKDSK or disk repair utilities, 2) Check SMART status for bad sectors, 3) Test with different cables/connections, 4) Backup critical data immediately, 5) Consider drive replacement if failures are frequent or increasing, 6) Verify power supply stability.",
+  "tags": [
+    "read failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

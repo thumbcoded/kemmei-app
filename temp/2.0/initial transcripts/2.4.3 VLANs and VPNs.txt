@@ -1,0 +1,384 @@
+0:01
+let's start our conversation referring
+0:04
+to LANs or local area networks this is a
+0:08
+group of devices that are connected
+0:10
+together into a single broadcast domain
+0:14
+that means if we send a broadcast out on
+0:16
+one of these devices to this LAN all of
+0:20
+the other devices in this LAN will also
+0:23
+see the broadcast over on this side we
+0:25
+have a separate switch and because it is
+0:27
+a separate switch it is a separate
+0:30
+broadcast domain which means any device
+0:32
+on this network that sends a broadcast
+0:34
+would only be seen by other devices
+0:37
+connected to that same broadcast domain
+0:39
+that means if we send a broadcast over
+0:41
+on the red network no devices on the
+0:44
+blue network will be able to see that
+0:46
+broadcast because this is a single
+0:48
+broadcast domain that is separate from
+0:51
+all of the other broadcast domains from
+0:54
+a security and an organizational
+0:56
+perspective this is a very good design
+0:58
+everyone on the red network is connected
+1:00
+to the red network switch and everybody
+1:03
+on the blue network is connected to the
+1:04
+blue network switch but one of the
+1:06
+challenges with this is that it doesn't
+1:08
+make very efficient use of our switches
+1:11
+for example we have a switch here with
+1:12
+24 interfaces and only two devices are
+1:15
+connected to that device we have a
+1:18
+separate 24- port switch on this side
+1:20
+and that switch also only has two
+1:22
+devices on it if we wanted to save money
+1:25
+and save space in our rack we would put
+1:27
+all of these devices on the same
+1:29
+physical switch but when we do that we
+1:32
+have a problem with all of these devices
+1:34
+being on the same broadcast domain
+1:37
+fortunately many of our modern switches
+1:40
+have the ability to configure a virtual
+1:43
+local area network or a VLAN a virtual
+1:46
+local area network means that we can
+1:48
+assign different interfaces on a switch
+1:51
+to belong to a particular VLAN this is a
+1:54
+very good example of combining two
+1:56
+separate switches into one single switch
+1:59
+but then assigning different interfaces
+2:01
+to different VLANs that means we can
+2:03
+have some interfaces on the switch on
+2:05
+the red VLAN and other interfaces on the
+2:08
+switch on the blue VLAN and because
+2:11
+these VLANs are also separate broadcast
+2:14
+domains if we send a broadcast from any
+2:16
+of these devices on the blue network
+2:18
+that broadcast is only seen by other
+2:21
+devices on these blue network interfaces
+2:24
+the same thing applies for the red
+2:25
+network if we send a broadcast on a red
+2:28
+network device only devices that are
+2:30
+part of that VLAN will be able to see
+2:32
+that broadcast now we have a single
+2:35
+switch with a single power source taking
+2:37
+up the space of a single switch in one
+2:40
+rack and we're able to support multiple
+2:43
+VLANs on that same physical device this
+2:46
+is obviously a much more efficient way
+2:48
+to combine these network interfaces
+2:50
+together and it's a way that we could
+2:52
+take what used to be two physical
+2:54
+devices and now have them running on one
+2:57
+single device with logical separation
+3:00
+between these different interfaces
+3:03
+we can support many VLANs on a single
+3:06
+switch this particular switch has been
+3:07
+configured with three separate VLANs and
+3:10
+we can have some devices connected to
+3:12
+VLAN one which is the gate room we have
+3:15
+other devices that are connected to VLAN
+3:17
+2 that's the dialing room and then VLAN
+3:20
+3 is the infirmary the devices on one
+3:23
+VLAN are not able to communicate to
+3:25
+devices on the other VLANs because they
+3:28
+have been put into a completely separate
+3:30
+broadcast domain from a networking
+3:32
+perspective there might be a good reason
+3:34
+to allow these different VLANs to
+3:36
+communicate to each other and in that
+3:38
+particular case we need a router to be
+3:40
+able to route information from one VLAN
+3:42
+to another some switches allow you to
+3:44
+configure routing functionality within
+3:46
+that switch itself or you may use an
+3:49
+external router just to provide
+3:51
+communication between these different
+3:53
+VLANs another important service that
+3:55
+you'll find on most people's networks is
+3:57
+a VPN or virtual private network this
+4:01
+allows devices to communicate to each
+4:03
+other across a network but it encrypts
+4:05
+all of the data that's being sent over
+4:07
+the network if someone was to capture
+4:09
+that data and view it in a packet
+4:12
+capture program or something similar
+4:14
+they wouldn't be able to understand
+4:15
+anything that was being sent back and
+4:17
+forth between those devices there's
+4:19
+usually a specialized device that is
+4:21
+able to encrypt and decrypt this
+4:24
+information in real time we refer to
+4:26
+that device as a concentrator this is
+4:28
+usually built into a firewall or some
+4:30
+other type of purpose-built appliance
+4:32
+this allows everyone to connect to a
+4:34
+central concentrator which is then
+4:36
+responsible for converting between the
+4:38
+encrypted data coming across the network
+4:41
+decrypting that so that we can view it
+4:43
+on the inside of our network and
+4:45
+reversing that process to send
+4:46
+information back to the originating
+4:48
+station this is commonly implemented as
+4:51
+hardware but there are VPN concentrator
+4:53
+solutions that are provided as software
+4:56
+only that we can run on an existing
+4:58
+server many operating systems have VPN
+5:01
+client software that's built into the
+5:03
+operating system itself but you might
+5:05
+also have third-party VPN software that
+5:07
+you would then install into an operating
+5:10
+system if you've ever worked from home
+5:13
+then you've probably used a client to
+5:16
+siteVPN the client would be you the
+5:18
+remote user at home and the site would
+5:21
+be a concentrator at a central point
+5:23
+usually at the edge of a much larger
+5:26
+corporate network all of the users and
+5:28
+devices that are outside the building
+5:30
+would connect to that central
+5:32
+concentrator across the internet and
+5:34
+that concentrator is obviously connected
+5:36
+to the internal corporate network this
+5:39
+means that all of the communication from
+5:40
+the remote user to the concentrator are
+5:43
+always encrypted so we know that all of
+5:45
+the data we're sending over the network
+5:47
+is completely protected the concentrator
+5:50
+is responsible for taking that encrypted
+5:52
+communication decrypting it and sending
+5:54
+it on its way to the resources that
+5:56
+we're accessing inside of our corporate
+5:58
+network this might also be configured as
+6:01
+an always on configuration so the moment
+6:03
+the remote user turns on and logs into
+6:06
+their laptop it automatically creates
+6:08
+that link to the concentrator this means
+6:10
+you don't have to worry about manually
+6:12
+starting your VPN software if you are on
+6:15
+your network and connected to the
+6:16
+internet then you always have an
+6:18
+encrypted channel all the way back to
+6:20
+your VPN concentrator for large
+6:22
+organizations you might have a corporate
+6:24
+network at a central location and then
+6:26
+you might have other remote sites at
+6:28
+other physical locations one of the ways
+6:30
+that you're able to connect those sites
+6:32
+together is through an existing internet
+6:34
+link of course we're always concerned
+6:36
+about security and somebody being able
+6:38
+to see the information we're sending
+6:40
+over the internet so it's very common
+6:42
+for organizations to connect these sites
+6:44
+together using a
+6:46
+sightto-sightVPN this is usually
+6:47
+implemented using firewalls so you'd
+6:49
+have a firewall connecting to the
+6:51
+corporate network the internet and then
+6:53
+a separate firewall that's connecting to
+6:55
+that remote site you would then
+6:57
+configure a sight to-sightVPN between
+6:59
+these two sites so that anytime you're
+7:02
+sending information from your remote
+7:03
+site back to the corporate network it
+7:05
+will always be going through an
+7:07
+encrypted channel the firewalls act as
+7:09
+your VPN concentrator so anything on the
+7:11
+inside of your network is in the clear
+7:14
+but anytime you have to send information
+7:15
+across the internet to a remote site it
+7:18
+will always be encrypted using the sight
+7:20
+to-sightVPN

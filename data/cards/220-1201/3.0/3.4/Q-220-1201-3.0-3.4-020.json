@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a valid metric used to compare hard drive performance?",
+  "answer_options": [
+    "Color of the drive casing",
+    "File system type",
+    "Revolutions per minute (RPM)",
+    "Screen refresh rate"
+  ],
+  "correct_answer": [
+    "Revolutions per minute (RPM)"
+  ],
+  "explanation": "RPM is a standard metric used to describe and compare the speed of hard drive platters, affecting data access time.",
+  "tags": [
+    "RPM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

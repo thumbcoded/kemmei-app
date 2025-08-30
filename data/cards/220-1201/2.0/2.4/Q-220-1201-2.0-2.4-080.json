@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company uses mail.example.com as its email server. You are asked to configure the appropriate DNS records. Which two must be configured to ensure mail delivery works and IP resolution succeeds?",
+  "answer_options": [
+    "A TXT record and a CNAME record",
+    "An MX record and an A or AAAA record for mail.example.com",
+    "A PTR record and a TTL update",
+    "An MX record and a TXT record for SPF"
+  ],
+  "correct_answer": [
+    "An MX record and an A or AAAA record for mail.example.com"
+  ],
+  "explanation": "The MX record tells the world where to send mail. The A/AAAA record provides the IP address for the mail server.",
+  "tags": [
+    "MX record",
+    "mail exchanger",
+    "A record",
+    "AAAA record",
+    "IPv4 address",
+    "IPv6 address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

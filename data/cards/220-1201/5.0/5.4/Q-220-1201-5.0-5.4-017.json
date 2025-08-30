@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why should you back up your device before replacing a broken display?",
+  "answer_options": [
+    "To restore deleted apps",
+    "To save power settings",
+    "To ensure data is preserved in case something goes wrong",
+    "To free up storage"
+  ],
+  "correct_answer": [
+    "To ensure data is preserved in case something goes wrong"
+  ],
+  "explanation": "Backing up ensures that important data is safe during repair, especially if the replacement fails.",
+  "tags": [
+    "backup before replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

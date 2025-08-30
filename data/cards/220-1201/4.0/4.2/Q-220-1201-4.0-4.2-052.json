@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a benefit of SaaS for organizations without a development team?",
+  "answer_options": [
+    "Applications are built and deployed manually",
+    "The provider offers on-demand software with no coding required",
+    "Developers have access to OS-level scripting",
+    "Customers install and patch every app update"
+  ],
+  "correct_answer": [
+    "The provider offers on-demand software with no coding required"
+  ],
+  "explanation": "SaaS is especially useful for organizations without coding teams because the provider manages the app lifecycle.",
+  "tags": [
+    "SaaS",
+    "no development team",
+    "on-demand software"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician observes that a client device's wireless signal fluctuates throughout the day, especially when a nearby microwave is in use. What is the MOST likely issue?",
+  "answer_options": [
+    "Improper SSID broadcast",
+    "Excessive multipath interference",
+    "Channel interference from non-Wi-Fi devices",
+    "Incorrect antenna orientation"
+  ],
+  "correct_answer": [
+    "Channel interference from non-Wi-Fi devices"
+  ],
+  "explanation": "Devices like microwaves can cause interference on the 2.4 GHz band, leading to inconsistent connectivity.",
+  "tags": [
+    "channel interference",
+    "wireless network problems",
+    "intermittent connectivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two conditions are most likely to lead to inconsistent finishing behavior such as random failure to staple or punch pages? (Select two)",
+  "answer_options": [
+    "Faulty power supply",
+    "Mismatched page orientation settings",
+    "Driver does not detect finishing hardware",
+    "High humidity in the print room",
+    "Application lacks finishing configuration"
+  ],
+  "correct_answer": [
+    "Driver does not detect finishing hardware",
+    "Application lacks finishing configuration"
+  ],
+  "explanation": "For finishing tasks to execute properly, both the driver and the application must be aware of the finishing hardware and be configured to use it.",
+  "tags": [
+    "finishing options",
+    "print driver settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

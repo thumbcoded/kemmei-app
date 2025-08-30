@@ -1,0 +1,813 @@
+0:02
+if you've ever communicated across a
+0:03
+network then you've probably used IP
+0:05
+version 4 ipv4 is one of the most
+0:08
+popular protocols in the world and you
+0:10
+need to know how to configure a system
+0:12
+with IPv4 configuration parameters as
+0:14
+part of the A+ exam objectives not only
+0:18
+do we need to understand IP version 4 we
+0:20
+need to understand the most recent
+0:22
+version of IP which is IP version 6
+0:25
+there are some similarities in operation
+0:27
+between these two different IP versions
+0:29
+but there are significant differences on
+0:32
+how they look and how you configure them
+0:33
+on a system ip version 4 is a 32bit
+0:38
+address there are 32 ones and zeros that
+0:41
+work together to create that IP version
+0:43
+4 address from a human perspective it's
+0:46
+easier to represent this in a decimal
+0:48
+form and we represent it as four
+0:50
+separate decimal numbers for example on
+0:53
+this address we have
+0:57
+192.168.131 and all of those together
+0:59
+make up the IPv4 address if you wanted
+1:02
+to represent this in binary you could
+1:04
+write out all the ones and zeros
+1:06
+associated with each of those numbers
+1:09
+each of those four numbers is referred
+1:11
+to as an octet because it is made up of
+1:13
+eight different ones or zeros sometimes
+1:16
+we refer to this as a bite or eight
+1:18
+individual bits when you combine all of
+1:21
+them together you have 32 bits which is
+1:23
+also equal to four total bytes another
+1:26
+interesting thing to keep in mind is
+1:28
+that these eight bits together can
+1:30
+consist of a number between 0ero and
+1:33
+255 so none of these octets will ever
+1:36
+exceed the value of
+1:39
+255 for us to communicate across the
+1:42
+public internet every device needs to
+1:44
+have a unique IP address for example one
+1:47
+device could have an IP address of
+1:49
+1.1.1.1 and that device can communicate
+1:52
+to a device that has an IP address of
+1:55
+2.2.2.2 as you can probably tell there's
+1:58
+a finite number of IPv4 addresses that
+2:00
+you can create based on the combinations
+2:03
+of numbers that might be available and
+2:05
+if you do the math there are about 4.29
+2:07
+billion combinations of IPv4 addresses
+2:10
+that you could create however there are
+2:13
+over 20 billion different devices
+2:15
+connected to the internet and that
+2:17
+number is rapidly growing so how do we
+2:19
+connect and communicate between all of
+2:22
+these different 20 billion devices if
+2:24
+there's only 4.29 billion addresses to
+2:27
+go around one of the ways we're able to
+2:29
+do that is by taking some of those
+2:32
+addresses and changing them into a
+2:34
+private address using a technology known
+2:37
+as network address translation
+2:39
+orNAT on the internet public addresses
+2:42
+can talk to public addresses but on a
+2:45
+company's network there may be a single
+2:47
+link out to the internet where there
+2:49
+might be a single public IP address but
+2:51
+inside of their private network may be
+2:54
+hundreds or even thousands of other
+2:56
+devices that we could assign a private
+2:58
+address private addresses allow us to
+3:00
+communicate with each other inside of
+3:02
+our private network and using network
+3:04
+address translation we can communicate
+3:07
+outside of our network the benefit
+3:09
+though is that none of those private
+3:10
+addresses go towards that entire pool of
+3:13
+IP version 4 this means that we could
+3:15
+have hundreds or even thousands of those
+3:17
+devices internally and then when we need
+3:20
+to communicate out to the internet we
+3:22
+can do that over a single IP version 4
+3:25
+address this range of private addresses
+3:27
+that you might configure on your local
+3:29
+network is defined in an RFC numbered
+3:32
+1918 rfc stands for request for comment
+3:36
+and in this particular form this means
+3:38
+it's a standard that we use across the
+3:41
+world for IPv4 addressing if we were to
+3:44
+look at RFC1918 you would see three
+3:46
+separate ranges that you could use as
+3:49
+private addresses on the inside of your
+3:51
+network and some of these addresses
+3:53
+you've probably seen before for example
+3:55
+you can use the range
+3:57
+10.0.0.0 through
+4:01
+10.255.255.255 this allows us a
+4:03
+combination of over 16 million different
+4:05
+addresses that we could have inside of
+4:07
+our network which is probably why this
+4:09
+is one of the most popular address
+4:11
+ranges used inside of a large corporate
+4:13
+network on a smaller network you might
+4:15
+use the range
+4:18
+172.16.0.0 through
+4:22
+172.31.255.255 this combination gives us
+4:24
+just over 1 million addresses that we
+4:26
+could use to define private devices on
+4:29
+our internal network and if you use a
+4:32
+network at home then your local device
+4:34
+probably assigns IP addresses using the
+4:36
+last private range
+4:39
+192.168.0.0 through
+4:44
+192.168.255.255 this provides a total
+4:46
+number of just over 65,000 addresses
+4:48
+before network at home that is plenty of
+4:51
+IP addresses to use to be able to have a
+4:54
+private network internally that you
+4:56
+could then network address translate
+4:58
+into a single address on the outside of
+5:00
+your
+5:01
+network when we started designing IPv6
+5:04
+being able to get around this problem
+5:06
+with a limited number of IP addresses
+5:08
+was one of the major architectural
+5:10
+concerns for that reason IPv6 addresses
+5:14
+are much larger than IPv4 ip version 4
+5:17
+addresses are 32 bits in length and IPv6
+5:21
+address is 128 bits in length this
+5:24
+greatly expands the size of available
+5:26
+addresses to
+5:28
+340 unicilian addresses this means if
+5:32
+there's about 6.8 billion people each
+5:34
+one of those folks can have a very large
+5:37
+number of addresses for each individual
+5:39
+user this greatly expands the number of
+5:42
+addresses available across the world and
+5:45
+removes any limitations that we
+5:47
+previously had with IP version 4 the
+5:50
+structure of IPv6 is also very different
+5:53
+you'll see IPv6 addresses written in
+5:55
+hexadesimal format rather than decimal
+5:58
+so that we can fit a lot more of this
+6:00
+address into a smaller place for example
+6:02
+this is an IPv6 address written out with
+6:05
+the hexadimal ranges and double colons
+6:07
+and colons to separate the different
+6:10
+areas of the network if we were to write
+6:12
+this out in its full and complete form
+6:14
+it would be the one that is on the
+6:16
+screen in the middle here of FE80
+6:19
+col 0 0
+6:21
+col 0000000
+6:24
+0000 col 5 delta18 col 0652 colie fox
+6:31
+delta
+6:33
+8fox52 that is a very large address to
+6:36
+be able to write out but it gives us
+6:38
+enough addresses that we could use this
+6:40
+across the world for the global internet
+6:43
+and connect everyone who needs that
+6:45
+connectivity just like IP version 4 we
+6:48
+can show IP version 6 addresses in
+6:51
+binary and in this particular case
+6:53
+instead of having an octet to be a
+6:55
+single group in this case it's double
+6:57
+that size at 16 bits or two octets for
+7:01
+each one of these groups that's another
+7:03
+reason that we display this in
+7:05
+hexadeimal form rather than having very
+7:08
+large numbers with periods in between
+7:11
+instead we can use hexadeimal to make
+7:13
+this much smaller and use colons to
+7:15
+separate each of these individual blocks
+7:17
+within an IPv6 address and if you count
+7:20
+up the IPv6 address in total it's 128
+7:24
+bits in length or a total of 16 bytes
+7:27
+because the IPv6 address is much larger
+7:30
+and much more difficult to memorize than
+7:32
+IP version 4 DNS now becomes very
+7:35
+important instead of having to memorize
+7:38
+an IP version 6 address we'll rely on
+7:40
+DNS to be able to reference these
+7:42
+addresses by their fully qualified
+7:44
+domain name we also don't do a lot of
+7:46
+subnetting with IP version 6 because
+7:49
+quite frankly we don't need to we have
+7:51
+an enormous number of networks and an
+7:53
+enormous number of devices that we could
+7:55
+put on each of those networks usually
+7:58
+the first half of the IPv6 address or
+8:00
+the first 64 bits are considered to be
+8:03
+the network prefix which means the
+8:05
+default subnet mask for any IPv6 address
+8:08
+is usually a /64 that means the last 64
+8:12
+bits of the IPv6 address are used as the
+8:15
+host address so our network is the first
+8:18
+half and the hosts are the second half
+8:21
+so if you're designing and implementing
+8:22
+an IPv6 network you're probably using
+8:25
+the first half of that IPv6 address as
+8:28
+the network prefix and the second half
+8:30
+of the IPv6 address as the specific host
+8:33
+ID
+
+0:02
+if you're responsible for configuring IP
+0:04
+addresses on a device you know there are
+0:06
+a number of important parameters that
+0:09
+you'll need to add one of these of
+0:11
+course is the IP address itself every
+0:13
+device needs a different IP address and
+0:16
+you may need to assign these manually or
+0:18
+configure this IP address into the
+0:21
+configuration of the service so you may
+0:23
+add for example
+0:27
+192.168.1.165 and now you've configured
+0:29
+the IP address but of course you don't
+0:32
+have an IP address unless you also have
+0:34
+a subnet mask the subnet mask is used by
+0:37
+that local device to determine which
+0:40
+subnet it actually sits on when we refer
+0:42
+to an IP subnet we're referring to this
+0:45
+combination of an IP address and a
+0:47
+subnet mask a typical subnet mask might
+0:50
+be 255.255
+0:53
+255.255.0 and since the subnet mask is
+0:56
+not something that's commonly sent
+0:58
+across the network we'll need to get
+1:00
+with the network administrator for that
+1:01
+IP subnet to confirm that we have the
+1:04
+correct subnet mask and if this device
+1:06
+needs to communicate outside of this
+1:08
+local subnet they'll need the IP address
+1:11
+of the local router this is often
+1:13
+referred to as a default gateway for
+1:16
+example the default gateway on this
+1:17
+network might be
+1:20
+192.168.1.1 you'll commonly be provided
+1:22
+with all three of these by the network
+1:24
+administrator and this is what will give
+1:26
+you the basic connectivity to
+1:28
+communicate on your local subnet and
+1:30
+outside of this local subnet there may
+1:33
+be other parameters that you need to
+1:35
+manually configure such as DNS server
+1:37
+configurations NTP servers voiceover IP
+1:41
+servers and other important IP
+1:43
+configuration parameters
+1:45
+in an earlier video we talked about DHCP
+1:48
+or the dynamic host configuration
+1:50
+protocol and how it's used to
+1:52
+automatically assign IP addresses on
+1:54
+your devices but there may be times when
+1:56
+we don't want to have our IP address
+1:58
+pulled randomly from a DHCP pool instead
+2:01
+we would like the IP address for a
+2:03
+device to always be that IP address we
+2:06
+refer to this IP address that doesn't
+2:08
+change as a static IP address one common
+2:12
+way to assign a static IP address is to
+2:14
+type it in manually on that device you
+2:17
+can usually find this in the
+2:18
+configuration settings of this device
+2:20
+where you can input the IP address the
+2:22
+subnet mask the gateway a preferred DNS
+2:25
+and other important IP address
+2:27
+configuration options this is one where
+2:30
+we have to make sure that what we're
+2:31
+typing in is exactly correct because
+2:33
+this is not something that's provided
+2:35
+automatically if we make a mistake
+2:37
+typing this in then this device won't be
+2:39
+able to communicate properly on the
+2:41
+network but manually configuring IP
+2:44
+addresses on all of your network devices
+2:46
+can be timeconuming and difficult to
+2:49
+manage what if you'd like to change the
+2:51
+IP address of your default gateway or
+2:53
+what if the IP addresses of your DNS
+2:55
+servers happens to change you would have
+2:57
+to manually go back to all of those
+2:59
+devices and type in the new parameters
+3:02
+that process may be something easy to
+3:04
+manage if you have a handful of devices
+3:06
+at home but in a company where you have
+3:08
+hundreds or even thousands of devices
+3:11
+manually configuring static IP addresses
+3:13
+is not very scalable generally speaking
+3:16
+manually configuring IP addresses is not
+3:19
+the best practice but there are ways to
+3:22
+manually set static IP addresses on a
+3:25
+device on the DHCP server itself that's
+3:28
+a central point where you can manage all
+3:30
+of these IP addresses and it's a
+3:32
+configuration setting inside the DHCP
+3:35
+server called a DHCP reservation this is
+3:38
+a process that links the MAC address of
+3:41
+this device to a specific IP address so
+3:44
+instead of configuring these manually
+3:46
+you would change that configuration
+3:48
+setting to DHCP this device will then
+3:51
+access the DHCP server find that there
+3:54
+is a DHCP reservation and always use the
+3:56
+same static address because it has been
+3:59
+administratively assigned on the DHCP
+4:02
+server itself now if you change the IP
+4:05
+address of your default gateway or the
+4:07
+IP addresses of your DNS servers change
+4:09
+you configure that on your DHCP server
+4:12
+and the next time the system starts up
+4:14
+it will receive the new set of IP
+4:16
+parameters without you having to
+4:18
+manually visit that
+4:20
+device most of us rely on DHCP to
+4:23
+provide that automatic IP addressing
+4:26
+mechanism if you're working on a
+4:27
+computer at home at work at a hotel or a
+4:30
+coffee shop you've probably been
+4:32
+assigned an IP address automatically
+4:34
+using their local DHCP server but what
+4:38
+if you're on a network that doesn't have
+4:40
+a DHCP server and your system is
+4:42
+configured to look for that DHCP
+4:45
+configuration in those situations your
+4:47
+device is not going to receive a DHCP
+4:49
+address and so it's up to the device to
+4:52
+determine what to do next in most cases
+4:55
+the operating system is going to assign
+4:57
+an
+4:58
+API address this stands for an automatic
+5:01
+private IP addressing scheme we also
+5:04
+refer to this as an IP version 4 link
+5:07
+local address this is an IP address that
+5:09
+allows you to communicate with other
+5:11
+devices on your local IP address subnet
+5:14
+but it's not able to route outside of
+5:16
+your local subnet this means you might
+5:19
+not have internet connectivity because
+5:21
+you're not able to route outside of your
+5:23
+local subnet with an APIPA address but
+5:26
+you are able to communicate with other
+5:27
+devices on your local subnet so that you
+5:30
+can do some basic network
+5:31
+troubleshooting and determine why you're
+5:33
+not able to communicate with the DHCP
+5:36
+server the APIPA standard sets a block
+5:39
+of addresses that could possibly be used
+5:42
+for this link local address this is a
+5:45
+very large range it ranges between
+5:48
+169.254.0.0 through
+5:53
+169.254.255.255 this standard also
+5:55
+reserves the first 256 addresses and the
+5:59
+last 256 addresses which means the IP
+6:02
+address that you'll receive on your
+6:04
+device via APIPA will be
+6:08
+169.254.1.0 through
+6:13
+169.254.254.255 if you look at the IP
+6:15
+address on your device and you notice
+6:17
+that it's in this range then you know
+6:19
+your device has assigned itself an APIPA
+6:23
+address this also means that your DHCP
+6:26
+server is probably not communicating and
+6:28
+you'll need to troubleshoot that before
+6:30
+you're able to receive DHCP assigned
+6:33
+addresses again when your computer
+6:35
+realizes that DHCP servers are not
+6:38
+responding and it automatically assigns
+6:40
+itself an API address it has to make
+6:43
+sure that nobody else is using the
+6:45
+random IP address that it chose in that
+6:47
+very large block to be able to make this
+6:50
+determination your device sends an ARP
+6:53
+request out to the network asking if any
+6:55
+other device is currently using the IP
+6:58
+address that it would like to use for
+7:00
+example your device could randomly
+7:02
+choose 169.25
+7:06
+254.77.77 so it will send an ARP request
+7:09
+to your local subnet with a broadcast
+7:11
+that says "Does anybody else out there
+7:14
+have
+7:17
+169.254.77.77?" And if it does not
+7:18
+receive a response it assumes that that
+7:20
+address is available to use and it will
+7:23
+automatically assign that IP address to
+7:25
+your local machine
+7:28
+so if you're currently using DHCP and
+7:30
+you notice that occasionally the IP
+7:32
+address of your device will change to a
+7:34
+different IP then you may want to set
+7:36
+something that is more static if you're
+7:39
+on a corporate network then you're
+7:40
+probably using some type of static IP
+7:43
+addressing already your switches your
+7:45
+firewalls your routers and your printers
+7:47
+are probably configured with a static IP
+7:50
+address you could of course disable DHCP
+7:53
+on those devices and manually type in
+7:55
+all of your IP address configuration
+7:57
+settings but more commonly we'll use an
+8:00
+IP reservation on the DHCP server so
+8:03
+that every time you start your router
+8:05
+your switch your printer or any of these
+8:07
+other devices they will automatically
+8:09
+receive the same IP address from the
+8:11
+DHCP server because you've configured an
+8:14
+IP reservation

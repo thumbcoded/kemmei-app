@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of battery is designed to be serviced only by a technician?",
+  "answer_options": [
+    "Removable battery",
+    "Modular battery",
+    "Non-removable battery",
+    "User-swappable battery"
+  ],
+  "correct_answer": [
+    "Non-removable battery"
+  ],
+  "explanation": "Non-removable (internal) batteries are not user-serviceable and usually require disassembly by a trained technician.",
+  "tags": [
+    "non-removable battery",
+    "internal battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

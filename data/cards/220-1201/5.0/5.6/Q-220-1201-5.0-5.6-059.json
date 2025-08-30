@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An office printer outputs jobs in landscape despite correct portrait settings in the application and driver. Which setting is most likely overriding the desired behavior?",
+  "answer_options": [
+    "Application resolution settings",
+    "Duplex mode override",
+    "Printer default orientation",
+    "User authentication method"
+  ],
+  "correct_answer": [
+    "Printer default orientation"
+  ],
+  "explanation": "When both application and driver specify portrait but landscape is printed, the printer's own internal default orientation is likely overriding the job.",
+  "tags": [
+    "printer defaults",
+    "orientation mismatch"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

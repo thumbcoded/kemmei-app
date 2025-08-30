@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main benefit of DNS being a distributed database?",
+  "answer_options": [
+    "It eliminates the need for caching.",
+    "It ensures faster internet speed for each user.",
+    "It spreads DNS data across multiple servers to increase redundancy and reliability.",
+    "It allows DNS to support only private IP addresses."
+  ],
+  "correct_answer": [
+    "It spreads DNS data across multiple servers to increase redundancy and reliability."
+  ],
+  "explanation": "DNS’s distributed nature ensures scalability and fault tolerance by spreading records globally.",
+  "tags": [
+    "distributed database",
+    "domain name system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains that audio occasionally stops working on their HDMI-connected monitor. What is the MOST likely cause if the issue occurs only after the system wakes from sleep?",
+  "answer_options": [
+    "Speaker wires are damaged",
+    "Monitor is overheating",
+    "The OS fails to remap the default audio device",
+    "The monitor resolution resets to low"
+  ],
+  "correct_answer": [
+    "The OS fails to remap the default audio device"
+  ],
+  "explanation": "Windows may not re-select HDMI audio after sleep or hibernation. This results in the system output defaulting to internal speakers or no output at all.",
+  "tags": [
+    "operating system audio"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

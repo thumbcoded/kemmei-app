@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the typical rotation speed of a consumer hard disk drive?",
+  "answer_options": [
+    "1000 RPM",
+    "5400 RPM",
+    "720 RPM",
+    "30000 RPM"
+  ],
+  "correct_answer": [
+    "5400 RPM"
+  ],
+  "explanation": "5400 RPM is a common spindle speed for consumer-grade hard drives.",
+  "tags": [
+    "5400 RPM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

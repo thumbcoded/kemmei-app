@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-114",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What triggers a date and time prompt during startup and how do you resolve it?",
+  "answer_options": [
+    "Network connectivity issues preventing automatic time synchronization",
+    "CMOS battery dead/dying, BIOS settings reset, or real-time clock power loss",
+    "Hard drive corruption affecting system time settings",
+    "Operating system update requiring time zone reconfiguration"
+  ],
+  "correct_answer": [
+    "CMOS battery dead/dying, BIOS settings reset, or real-time clock power loss"
+  ],
+  "explanation": "A date and time prompt appears when: the CMOS battery is dead/dying, BIOS settings were reset, or the real-time clock lost power. Resolution: 1) Replace the CMOS battery, 2) Set correct date and time in BIOS, 3) Save BIOS settings, 4) If recurring, check for BIOS corruption or motherboard RTC failure requiring professional repair.",
+  "tags": [
+    "date and time prompt"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

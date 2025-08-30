@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why are specialized systems like SCADA typically placed on segmented networks?",
+  "answer_options": [
+    "To increase internet speed",
+    "To simplify printer sharing",
+    "To enhance security by isolating critical systems",
+    "To ensure better Wi-Fi coverage"
+  ],
+  "correct_answer": [
+    "To enhance security by isolating critical systems"
+  ],
+  "explanation": "SCADA and ICS systems are sensitive and mission-critical, so they are placed on segmented networks for security and access control.",
+  "tags": [
+    "segmented network"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

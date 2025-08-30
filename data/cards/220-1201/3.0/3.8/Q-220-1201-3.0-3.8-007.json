@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In the laser printing process, which step immediately follows toner application to the drum?",
+  "answer_options": [
+    "Charging",
+    "Fusing",
+    "Transferring",
+    "Writing"
+  ],
+  "correct_answer": [
+    "Transferring"
+  ],
+  "explanation": "Once the toner adheres to the laser-written areas of the drum, it is transferred to paper in the next step.",
+  "tags": [
+    "laser printer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

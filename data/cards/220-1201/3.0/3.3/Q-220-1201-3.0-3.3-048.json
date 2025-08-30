@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "If a DDR5 memory module is labeled '5600 MT/s', what does this indicate?",
+  "answer_options": [
+    "It operates at 5600 MHz internally",
+    "It can perform 5600 million transfers per second",
+    "It requires 5.6 volts to operate",
+    "It has a CAS latency of 56"
+  ],
+  "correct_answer": [
+    "It can perform 5600 million transfers per second"
+  ],
+  "explanation": "'5600 MT/s' means the module supports 5,600 million transfers per second, a key indicator of its memory bandwidth.",
+  "tags": [
+    "DDR5",
+    "MT/s",
+    "data transfer rate"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

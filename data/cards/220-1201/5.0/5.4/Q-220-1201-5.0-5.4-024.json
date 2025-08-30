@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician identifies corrosion on the system board after water damage. What is the most appropriate next step?",
+  "answer_options": [
+    "Dry the board with a towel and power it on",
+    "Apply isopropyl alcohol to dissolve the corrosion",
+    "Replace the battery and test operation",
+    "Refer to professional repair service"
+  ],
+  "correct_answer": [
+    "Refer to professional repair service"
+  ],
+  "explanation": "Corrosion damage can compromise system integrity and is best handled by qualified professionals.",
+  "tags": [
+    "corrosion damage",
+    "professional repair"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

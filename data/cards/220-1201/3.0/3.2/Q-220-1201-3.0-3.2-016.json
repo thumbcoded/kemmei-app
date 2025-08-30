@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector is known for sending analog video signals and typically has a blue, 15-pin layout?",
+  "answer_options": [
+    "DVI-D",
+    "HDMI",
+    "DisplayPort",
+    "VGA"
+  ],
+  "correct_answer": [
+    "VGA"
+  ],
+  "explanation": "VGA (Video Graphics Array) is an analog video connector with a 15-pin layout, usually colored blue.",
+  "tags": [
+    "VGA",
+    "analog video",
+    "DB15 connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

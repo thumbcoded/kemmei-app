@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What explains the localized blackening of thermal paper during operation?",
+  "answer_options": [
+    "Paper absorbs heat randomly from ambient temperature",
+    "The paper is electrostatically charged at specific points",
+    "The heating element applies targeted heat that reacts with the paper coating",
+    "The ink is ejected as microdroplets onto a porous surface"
+  ],
+  "correct_answer": [
+    "The heating element applies targeted heat that reacts with the paper coating"
+  ],
+  "explanation": "Thermal printers apply localized heat through a heating element to cause specific parts of chemically treated paper to darken.",
+  "tags": [
+    "heat application",
+    "chemically coated paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

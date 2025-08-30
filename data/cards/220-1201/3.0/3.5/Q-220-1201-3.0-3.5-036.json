@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What would most likely happen if a user attempted to install an AMD CPU into an Intel motherboard?",
+  "answer_options": [
+    "The system would boot but crash under load",
+    "The CPU would physically not fit into the socket",
+    "The CPU would be underclocked",
+    "The BIOS would automatically disable the CPU"
+  ],
+  "correct_answer": [
+    "The CPU would physically not fit into the socket"
+  ],
+  "explanation": "Intel and AMD CPUs use different socket types that are physically incompatible, preventing installation.",
+  "tags": [
+    "Intel socket",
+    "AMD socket",
+    "CPU socket type"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

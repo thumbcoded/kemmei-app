@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a major trade-off when using containers compared to virtual machines?",
+  "answer_options": [
+    "Containers cannot isolate applications",
+    "Containers consume more storage and memory",
+    "Containers require each app to be compatible with the host OS",
+    "Containers cannot be used on cloud platforms"
+  ],
+  "correct_answer": [
+    "Containers require each app to be compatible with the host OS"
+  ],
+  "explanation": "Because containers rely on the host operating system, all applications must run within that OS's environment.",
+  "tags": [
+    "container"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

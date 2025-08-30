@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is printer firmware?",
+  "answer_options": [
+    "A removable storage chip inside the printer",
+    "A hardware-based scanner module",
+    "The built-in software that controls printer functions",
+    "A physical circuit board that processes print jobs"
+  ],
+  "correct_answer": [
+    "The built-in software that controls printer functions"
+  ],
+  "explanation": "Firmware is a type of embedded software installed on the printer that governs how the device functions, including printing, scanning, and faxing.",
+  "tags": [
+    "firmware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

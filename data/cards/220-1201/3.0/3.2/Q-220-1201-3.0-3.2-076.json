@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector and cabling type would be most appropriate for a DSL installation?",
+  "answer_options": [
+    "RJ45 with Cat 6 cable",
+    "F connector with coaxial cable",
+    "SC connector with fiber optic",
+    "RJ11 with telephone-grade twisted pair"
+  ],
+  "correct_answer": [
+    "RJ11 with telephone-grade twisted pair"
+  ],
+  "explanation": "DSL uses RJ11 connectors with standard telephone wiring to deliver broadband internet over copper lines.",
+  "tags": [
+    "RJ11",
+    "DSL"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

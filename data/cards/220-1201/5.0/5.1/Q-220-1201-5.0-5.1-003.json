@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What should you do first when you hear beeps during POST but see no video on screen?",
+  "answer_options": [
+    "Install a new graphics driver",
+    "Check BIOS settings for misconfiguration",
+    "Replace the motherboard",
+    "Install a fresh copy of Windows"
+  ],
+  "correct_answer": [
+    "Check BIOS settings for misconfiguration"
+  ],
+  "explanation": "No video plus POST beeps may indicate a misconfigured or faulty video subsystem. Reviewing the BIOS configuration is a key early step.",
+  "tags": [
+    "BIOS boot sequence"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is one benefit of Desktop as a Service (DaaS)?",
+  "answer_options": [
+    "Allows direct access to hypervisor settings",
+    "Enables lightweight, centralized desktop delivery via cloud infrastructure",
+    "Installs virtual desktops on local hardware permanently",
+    "Creates containers for isolated application testing"
+  ],
+  "correct_answer": [
+    "Enables lightweight, centralized desktop delivery via cloud infrastructure"
+  ],
+  "explanation": "DaaS provides hosted virtual desktops accessible from anywhere over the internet.",
+  "tags": [
+    "DaaS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

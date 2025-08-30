@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What risk arises if two DHCP servers are configured on the same subnet without proper coordination?",
+  "answer_options": [
+    "DNS queries will bypass reverse resolution",
+    "Clients may receive conflicting or duplicate IP addresses",
+    "The subnet mask will be misconfigured on all hosts",
+    "Static routes will override DHCP leases"
+  ],
+  "correct_answer": [
+    "Clients may receive conflicting or duplicate IP addresses"
+  ],
+  "explanation": "Uncoordinated DHCP servers can assign the same IP to different clients, leading to address conflicts and connectivity issues.",
+  "tags": [
+    "DHCP server",
+    "multiple DHCP servers",
+    "redundancy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

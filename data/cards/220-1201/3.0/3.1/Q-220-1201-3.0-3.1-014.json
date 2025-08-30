@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which LCD type is known for its fast response times and is commonly used in gaming monitors?",
+  "answer_options": [
+    "IPS LCD",
+    "VA LCD",
+    "TN LCD",
+    "OLED"
+  ],
+  "correct_answer": [
+    "TN LCD"
+  ],
+  "explanation": "TN (Twisted Nematic) LCDs offer fast response times, making them popular for gaming displays.",
+  "tags": [
+    "TN LCD",
+    "response time"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

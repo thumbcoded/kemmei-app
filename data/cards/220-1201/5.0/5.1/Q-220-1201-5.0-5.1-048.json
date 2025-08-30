@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which Windows utility restarts the computer to run a memory test outside of the operating system?",
+  "answer_options": [
+    "System File Checker",
+    "Windows Memory Diagnostic",
+    "Task Manager",
+    "Device Manager"
+  ],
+  "correct_answer": [
+    "Windows Memory Diagnostic"
+  ],
+  "explanation": "Windows Memory Diagnostic reboots the system to test RAM outside the OS, helping isolate memory issues.",
+  "tags": [
+    "memory testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-111",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How does multi-tenancy benefit cloud service providers?",
+  "answer_options": [
+    "Reduces the need for virtualization",
+    "Increases operational costs",
+    "Enables higher efficiency through resource sharing",
+    "Improves single-user customization options"
+  ],
+  "correct_answer": [
+    "Enables higher efficiency through resource sharing"
+  ],
+  "explanation": "Multi-tenancy allows providers to use hardware more efficiently by hosting multiple customers on the same infrastructure.",
+  "tags": [
+    "multi-tenancy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

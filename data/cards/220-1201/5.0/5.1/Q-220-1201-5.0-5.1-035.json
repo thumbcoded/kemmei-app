@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two symptoms are likely caused by a storage drive beginning to fail? (Select two)",
+  "answer_options": [
+    "Cannot read from source disc",
+    "System fan not spinning",
+    "Retry reads",
+    "Incorrect screen resolution",
+    "No Wi-Fi connection"
+  ],
+  "correct_answer": [
+    "Cannot read from source disc",
+    "Retry reads"
+  ],
+  "explanation": "These are direct signs that the system is unable to reliably access sectors on the storage drive, indicating possible drive degradation.",
+  "tags": [
+    "cannot read from source disc",
+    "retry reads"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO characteristics of laser beam storage make optical media less ideal for high-speed operations?",
+  "answer_options": [
+    "Rotational latency",
+    "High power consumption",
+    "Slower seek times compared to SSDs",
+    "Volatile data retention",
+    "Large write cache requirements"
+  ],
+  "correct_answer": [
+    "Rotational latency",
+    "Slower seek times compared to SSDs"
+  ],
+  "explanation": "Optical drives rely on mechanical rotation and single-point laser reading, which limits access speed versus modern flash-based alternatives.",
+  "tags": [
+    "laser beam storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

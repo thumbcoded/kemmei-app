@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which voltage is most commonly used by SATA drives, CPU fans, and some logic circuits on the motherboard?",
+  "answer_options": [
+    "1.2V",
+    "3.3V",
+    "5V",
+    "12V"
+  ],
+  "correct_answer": [
+    "5V"
+  ],
+  "explanation": "The 5V rail powers SATA drives, some fans, and digital logic circuits on the motherboard.",
+  "tags": [
+    "DC voltage levels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

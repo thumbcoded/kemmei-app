@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting reduces the amount of toner or ink used during color printing?",
+  "answer_options": [
+    "High DPI mode",
+    "Portrait orientation",
+    "Color saving mode",
+    "Scan-to-email"
+  ],
+  "correct_answer": [
+    "Color saving mode"
+  ],
+  "explanation": "Color saving mode conserves ink or toner by reducing color intensity or switching to grayscale alternatives when possible.",
+  "tags": [
+    "color printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

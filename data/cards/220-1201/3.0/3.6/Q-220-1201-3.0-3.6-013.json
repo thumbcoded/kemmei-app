@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main function of a power supply inside a computer?",
+  "answer_options": [
+    "Convert DC to AC power",
+    "Store and regulate heat",
+    "Convert AC to DC power",
+    "Amplify motherboard signals"
+  ],
+  "correct_answer": [
+    "Convert AC to DC power"
+  ],
+  "explanation": "Power supplies convert the alternating current (AC) from wall outlets into direct current (DC) required by computer components.",
+  "tags": [
+    "power supply",
+    "AC to DC conversion"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Twisted pair cables are commonly used for what kind of networking?",
+  "answer_options": [
+    "Fiber channel",
+    "Wired Ethernet",
+    "Infrared remote",
+    "Power over coax"
+  ],
+  "correct_answer": [
+    "Wired Ethernet"
+  ],
+  "explanation": "Twisted pair cabling is the standard for most wired Ethernet networks due to its effectiveness and ease of installation.",
+  "tags": [
+    "twisted pair"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

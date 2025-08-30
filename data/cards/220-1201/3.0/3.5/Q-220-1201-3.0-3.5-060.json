@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to maximize GPU performance on a board with limited PCIe lanes. Which configuration is ideal?",
+  "answer_options": [
+    "Install the GPU in any available slot",
+    "Use an x1 slot for the GPU to reserve bandwidth",
+    "Install the GPU in a slot with full x16 electrical support",
+    "Install two x8 GPUs for better load balancing"
+  ],
+  "correct_answer": [
+    "Install the GPU in a slot with full x16 electrical support"
+  ],
+  "explanation": "To maximize GPU performance, it should be installed in a PCIe x16 slot that is also electrically wired for 16 lanes.",
+  "tags": [
+    "PCIe",
+    "x16 slot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

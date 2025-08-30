@@ -1,0 +1,55 @@
+<!-- progress.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kemmei — Progress</title>
+  <link rel="stylesheet" href="css/progress.css">
+  <link rel="stylesheet" href="css/shared-ui.css">
+</head>
+<body class="index-page">
+  <div class="floating-dark-toggle">
+    <label class="dark-mode-toggle">
+      <input type="checkbox" id="darkModeToggle" />
+      <span class="toggle-slider"></span>
+      <span class="toggle-label">🌙</span>
+    </label>
+  </div>
+
+  <!-- Main content container -->
+  <div class="index-container">
+    <!-- Title section (top) -->
+    <div class="progress-header">
+      <h2>📈 Your Flashcard Progress</h2>
+    </div>
+    
+    <!-- Content section (middle) -->
+    <div class="progress-content">
+      <div id="progressStats"></div>
+    </div>
+    
+    <!-- Button section (bottom) -->
+    <div class="progress-footer">
+      <div class="progress-buttons">
+        <div class="reset-wrapper">
+          <button id="resetProgress">🗑️ Clear All Progress</button>
+          <div id="confirmModal" class="modal hidden">
+            <div class="modal-content">
+              <p>❗ Are you sure you want to clear all your progress?<br>This cannot be undone.</p>
+              <div class="modal-buttons">
+                <button id="confirmYes">✔️ Yes, clear it</button>
+                <button id="confirmNo">✖️ Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="dashboard.html" id="backToDash">🏠 Back</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/progress.js"></script>
+  <script src="js/shared-ui.js"></script>
+  <div id="toast" class="toast hidden">✔️ Your progress has been cleared.</div>
+</body>
+</html>

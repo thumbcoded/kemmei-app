@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which two values must be known to calculate the wattage of a device? (Select two)",
+  "answer_options": [
+    "Amps",
+    "Ohms",
+    "Volts",
+    "Hertz",
+    "Watts"
+  ],
+  "correct_answer": [
+    "Amps",
+    "Volts"
+  ],
+  "explanation": "Wattage is calculated by multiplying volts × amps. Ohms and hertz are unrelated to this specific calculation.",
+  "tags": [
+    "power calculation",
+    "volts",
+    "amps"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

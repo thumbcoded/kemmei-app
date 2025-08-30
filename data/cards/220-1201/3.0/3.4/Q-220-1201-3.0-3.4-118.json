@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-118",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key disadvantage of RAID 5 compared to RAID 1 in terms of system performance during a drive failure?",
+  "answer_options": [
+    "RAID 5 cannot recover from drive failure",
+    "RAID 1 uses less disk space for redundancy",
+    "RAID 5 imposes parity overhead during recovery",
+    "RAID 1 requires three or more drives"
+  ],
+  "correct_answer": [
+    "RAID 5 imposes parity overhead during recovery"
+  ],
+  "explanation": "RAID 5 must calculate missing data using parity during recovery, which increases CPU usage and reduces performance.",
+  "tags": [
+    "RAID 5",
+    "parity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

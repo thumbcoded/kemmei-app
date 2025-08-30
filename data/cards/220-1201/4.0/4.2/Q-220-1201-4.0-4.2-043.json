@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which benefit of IaaS most directly supports DevOps teams managing short-lived development environments?",
+  "answer_options": [
+    "Software customization restrictions",
+    "Metered billing based on email storage",
+    "Rapid provisioning of CPU and storage on demand",
+    "Physical network control by the user"
+  ],
+  "correct_answer": [
+    "Rapid provisioning of CPU and storage on demand"
+  ],
+  "explanation": "IaaS allows dynamic allocation of hardware resources, which suits agile and temporary DevOps workflows.",
+  "tags": [
+    "IaaS",
+    "CPU rental",
+    "storage space"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

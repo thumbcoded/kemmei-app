@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-111",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which RAID level uses striping with a single parity block and requires at least three drives?",
+  "answer_options": [
+    "RAID 0",
+    "RAID 1",
+    "RAID 5",
+    "RAID 10"
+  ],
+  "correct_answer": [
+    "RAID 5"
+  ],
+  "explanation": "RAID 5 uses striping with distributed parity, requiring at least three drives to operate and providing fault tolerance.",
+  "tags": [
+    "RAID 5",
+    "parity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

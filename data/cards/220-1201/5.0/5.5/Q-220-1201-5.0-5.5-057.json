@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What IP address range indicates that a device has received an APIPA address instead of DHCP?",
+  "answer_options": [
+    "192.168.1.x",
+    "10.0.0.x",
+    "169.254.x.x",
+    "172.16.x.x"
+  ],
+  "correct_answer": [
+    "169.254.x.x"
+  ],
+  "explanation": "APIPA (Automatic Private IP Addressing) uses the 169.254.x.x range when DHCP fails, providing only local subnet connectivity.",
+  "tags": [
+    "DHCP assigned address",
+    "IP configuration",
+    "network diagnostics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

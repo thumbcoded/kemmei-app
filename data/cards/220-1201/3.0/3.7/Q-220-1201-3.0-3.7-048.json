@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of interface is often used to manage print jobs on a modern print server?",
+  "answer_options": [
+    "Telnet",
+    "Web-based management",
+    "Bluetooth configuration",
+    "Command prompt only"
+  ],
+  "correct_answer": [
+    "Web-based management"
+  ],
+  "explanation": "Most print servers offer a web interface that allows administrators to view queues and manage print jobs.",
+  "tags": [
+    "web-based management",
+    "print server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

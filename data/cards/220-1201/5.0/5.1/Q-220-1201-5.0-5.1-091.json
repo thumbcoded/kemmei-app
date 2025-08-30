@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which built-in Windows tool shows how much memory and CPU are currently in use?",
+  "answer_options": [
+    "Event Viewer",
+    "Task Manager",
+    "Disk Management",
+    "System Configuration"
+  ],
+  "correct_answer": [
+    "Task Manager"
+  ],
+  "explanation": "Task Manager provides real-time information on CPU, memory, disk, and network usage.",
+  "tags": [
+    "task manager",
+    "memory usage",
+    "CPU utilization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A desktop system fails POST and displays no video output. The system emits a pattern of long and short beeps. What are two appropriate next steps? (Select two)",
+  "answer_options": [
+    "Check manufacturer documentation for beep codes",
+    "Replace the operating system",
+    "Reseat the video card or onboard video cable",
+    "Replace the CMOS battery",
+    "Reset wireless settings"
+  ],
+  "correct_answer": [
+    "Check manufacturer documentation for beep codes",
+    "Reseat the video card or onboard video cable"
+  ],
+  "explanation": "Beep codes help diagnose hardware issues. Video-related errors can cause no display. Manufacturer documentation and video subsystem inspection are key.",
+  "tags": [
+    "long and short beep codes",
+    "manufacturer documentation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

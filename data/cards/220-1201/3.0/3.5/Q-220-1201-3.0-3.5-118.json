@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-118",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to match polarity when connecting front panel LEDs to the pin headers?",
+  "answer_options": [
+    "Incorrect polarity causes permanent damage",
+    "Incorrect polarity causes system boot failure",
+    "LEDs are polarized and will not light if reversed",
+    "LEDs control fan speed through PWM"
+  ],
+  "correct_answer": [
+    "LEDs are polarized and will not light if reversed"
+  ],
+  "explanation": "LEDs require correct polarity to function. Reversing the connector won't damage the system but will prevent illumination.",
+  "tags": [
+    "LEDs",
+    "front panel connectors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

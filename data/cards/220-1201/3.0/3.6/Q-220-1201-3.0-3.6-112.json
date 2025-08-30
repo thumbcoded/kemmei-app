@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-112",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A user wants to upgrade their power supply. Which TWO of the following are valid reasons to choose a higher wattage unit? (Select two)",
+  "answer_options": [
+    "To improve the speed of the operating system",
+    "To accommodate a new high-end graphics card",
+    "To reduce the power supply’s physical size",
+    "To provide headroom for future component upgrades",
+    "To eliminate the need for CPU cooling"
+  ],
+  "correct_answer": [
+    "To accommodate a new high-end graphics card",
+    "To provide headroom for future component upgrades"
+  ],
+  "explanation": "Higher wattage units support additional hardware and future upgrades. They do not directly affect performance or eliminate thermal needs.",
+  "tags": [
+    "power supply wattage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

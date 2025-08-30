@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-132",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why can SAS controllers recognize SATA drives, but SATA controllers cannot use SAS drives?",
+  "answer_options": [
+    "SAS drives use proprietary firmware that requires activation",
+    "SATA lacks the signaling and protocol support for SAS negotiation",
+    "SAS uses an outdated interface incompatible with modern buses",
+    "SATA power cables are incompatible with SAS connectors"
+  ],
+  "correct_answer": [
+    "SATA lacks the signaling and protocol support for SAS negotiation"
+  ],
+  "explanation": "SAS controllers are built to negotiate both SAS and SATA protocols. SATA controllers cannot interpret SAS signaling layers.",
+  "tags": [
+    "SAS",
+    "SATA comparison"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

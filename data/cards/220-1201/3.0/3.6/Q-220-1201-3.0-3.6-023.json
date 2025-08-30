@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system uses 120V AC input and draws 2 amps. How much power is it consuming?",
+  "answer_options": [
+    "60 watts",
+    "120 watts",
+    "180 watts",
+    "240 watts"
+  ],
+  "correct_answer": [
+    "240 watts"
+  ],
+  "explanation": "Power (watts) is calculated by multiplying volts × amps: 120V × 2A = 240W.",
+  "tags": [
+    "wattage",
+    "power calculation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What supplies the powdery material used to form images in a laser printer?",
+  "answer_options": [
+    "Fuser unit",
+    "Charged roller",
+    "Toner cartridge",
+    "Photosensitive drum"
+  ],
+  "correct_answer": [
+    "Toner cartridge"
+  ],
+  "explanation": "The toner cartridge contains the powdered toner used to create the image on paper.",
+  "tags": [
+    "toner cartridge"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

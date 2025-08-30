@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does FPS stand for in display performance?",
+  "answer_options": [
+    "Fast Picture Sync",
+    "Frames Per Second",
+    "Final Pixel Shift",
+    "Full Panel Sweep"
+  ],
+  "correct_answer": [
+    "Frames Per Second"
+  ],
+  "explanation": "FPS means Frames Per Second — how many individual frames your graphics hardware produces every second.",
+  "tags": [
+    "frames per second",
+    "FPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

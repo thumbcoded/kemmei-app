@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A thermal printer produces completely blank paper, even though the printer feeds normally. What is the MOST likely cause?",
+  "answer_options": [
+    "Damaged stepper motor",
+    "Unsupported file format",
+    "Incorrect or non-thermal paper installed",
+    "Firmware update pending"
+  ],
+  "correct_answer": [
+    "Incorrect or non-thermal paper installed"
+  ],
+  "explanation": "Without chemically coated paper, thermal printers cannot produce visible output, even if the feed mechanism works.",
+  "tags": [
+    "chemically coated paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

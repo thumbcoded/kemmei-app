@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a primary risk when incorrectly identifying a failed disk in a RAID 10 configuration?",
+  "answer_options": [
+    "Performance increase",
+    "Parental control reset",
+    "Data from mirrored pair is destroyed",
+    "Logical volume expands"
+  ],
+  "correct_answer": [
+    "Data from mirrored pair is destroyed"
+  ],
+  "explanation": "Accidentally removing a working mirror drive instead of the failed one may break redundancy and destroy usable data.",
+  "tags": [
+    "RAID 10 striping and mirroring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

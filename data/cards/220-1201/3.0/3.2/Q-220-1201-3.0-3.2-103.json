@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which key improvement did USB 3.2 introduce over USB 3.1?",
+  "answer_options": [
+    "Support for analog video output",
+    "Reversible connector design",
+    "Support for two-lane communication for up to 20 Gbps",
+    "Elimination of all legacy connectors"
+  ],
+  "correct_answer": [
+    "Support for two-lane communication for up to 20 Gbps"
+  ],
+  "explanation": "USB 3.2 allows two-lane operation on USB-C cables, effectively doubling throughput to 20 Gbps in certain modes.",
+  "tags": [
+    "USB 3.2",
+    "USB-C"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why are flash drives not considered ideal for archival storage?",
+  "answer_options": [
+    "They are too large for modern devices",
+    "They require power to retain data",
+    "They have limited write endurance and are easy to lose",
+    "They are slower than mechanical hard drives"
+  ],
+  "correct_answer": [
+    "They have limited write endurance and are easy to lose"
+  ],
+  "explanation": "Flash drives use EPROM which has a finite number of write cycles, and their small size makes them prone to being lost.",
+  "tags": [
+    "flash drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-100",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system has slow boot times, sluggish performance, and excessive disk activity. What’s the most likely cause?",
+  "answer_options": [
+    "Low screen resolution",
+    "Video driver incompatibility",
+    "Insufficient available memory and disk space",
+    "Improper display scaling"
+  ],
+  "correct_answer": [
+    "Insufficient available memory and disk space"
+  ],
+  "explanation": "When memory is low, Windows uses disk swap space. If the disk is also nearly full, performance plummets across the board.",
+  "tags": [
+    "memory usage",
+    "hard drive space",
+    "sluggish performance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

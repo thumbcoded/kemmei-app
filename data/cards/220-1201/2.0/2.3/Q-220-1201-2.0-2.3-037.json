@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is achieving high uptime critical for enterprise email servers?",
+  "answer_options": [
+    "Email servers use DNSSEC, which requires consistent uptime",
+    "Email messages are usually transmitted using HTTP which is unreliable",
+    "Email remains a primary form of business communication and users expect constant availability",
+    "Email servers cannot cache messages if the server is offline"
+  ],
+  "correct_answer": [
+    "Email remains a primary form of business communication and users expect constant availability"
+  ],
+  "explanation": "High uptime is expected for email services because business operations rely heavily on consistent, uninterrupted communication.",
+  "tags": [
+    "email server",
+    "email availability",
+    "high uptime"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

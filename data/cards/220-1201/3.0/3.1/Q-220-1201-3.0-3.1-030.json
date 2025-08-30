@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why OLED displays can achieve true blacks?",
+  "answer_options": [
+    "They use dual-layer color filters",
+    "Pixels can turn off completely when displaying black",
+    "They increase backlight brightness in dark areas",
+    "They use vertical alignment to block light"
+  ],
+  "correct_answer": [
+    "Pixels can turn off completely when displaying black"
+  ],
+  "explanation": "In OLED displays, each pixel emits its own light and can turn off entirely, producing deep blacks with no light leakage.",
+  "tags": [
+    "self-emitting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

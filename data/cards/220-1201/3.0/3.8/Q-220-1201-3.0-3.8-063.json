@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of document is LEAST appropriate to print with a thermal printer?",
+  "answer_options": [
+    "A grocery store receipt",
+    "A shipping label",
+    "A 7-year tax record",
+    "A temporary parking pass"
+  ],
+  "correct_answer": [
+    "A 7-year tax record"
+  ],
+  "explanation": "Thermal prints fade over time and are not suitable for archival documents or long-term storage.",
+  "tags": [
+    "fading over time"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

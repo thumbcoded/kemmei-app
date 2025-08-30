@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following issues can result in a drive not being detected by the BIOS or operating system? (Select all that apply)",
+  "answer_options": [
+    "Drives disabled in BIOS",
+    "Bad cable connection",
+    "External drive power not connected",
+    "Drive letter mapping not configured",
+    "Incorrect boot sequence"
+  ],
+  "correct_answer": [
+    "Drives disabled in BIOS",
+    "Bad cable connection",
+    "External drive power not connected"
+  ],
+  "explanation": "Connectivity issues like disabled BIOS settings, poor cable contact, or missing power can prevent drive detection. Drive letter mapping and boot sequence issues do not affect basic drive recognition.",
+  "tags": [
+    "drives disabled in BIOS",
+    "bad cable connection",
+    "external drive power"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

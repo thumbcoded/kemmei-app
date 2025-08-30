@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What are drive recovery services typically known for when dealing with failed storage drives?",
+  "answer_options": [
+    "Quick and inexpensive data recovery",
+    "Free recovery for consumer drives",
+    "Expensive and time-consuming data recovery",
+    "Only work with SSD drives"
+  ],
+  "correct_answer": [
+    "Expensive and time-consuming data recovery"
+  ],
+  "explanation": "Drive recovery services are typically expensive and time-consuming. This is one of the main reasons why having a good backup strategy is so important - it can solve storage problems much faster and cheaper than professional recovery services.",
+  "tags": [
+    "backup data",
+    "recent backup"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

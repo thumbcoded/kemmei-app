@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-140",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a benefit of using static DHCP over traditional static IP configuration in large deployments?",
+  "answer_options": [
+    "Eliminates the need for IP address planning",
+    "Avoids the need for DHCP servers",
+    "Simplifies centralized management of consistent IPs",
+    "Automatically detects rogue DHCP servers"
+  ],
+  "correct_answer": [
+    "Simplifies centralized management of consistent IPs"
+  ],
+  "explanation": "Static DHCP allows administrators to control IP assignments centrally without configuring individual devices manually.",
+  "tags": [
+    "static DHCP",
+    "consistent IP",
+    "static assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

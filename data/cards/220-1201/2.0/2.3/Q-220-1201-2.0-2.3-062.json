@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are benefits of implementing a load balancer? (Select all that apply)",
+  "answer_options": [
+    "Increases service availability",
+    "Improves uptime by distributing load",
+    "Allows centralized IP address assignment",
+    "Enhances application scalability",
+    "Performs correlation for event logs"
+  ],
+  "correct_answer": [
+    "Increases service availability",
+    "Improves uptime by distributing load",
+    "Enhances application scalability"
+  ],
+  "explanation": "Load balancers help ensure availability, distribute traffic evenly, and support application scalability in high-demand environments.",
+  "tags": [
+    "load balancer",
+    "uptime",
+    "availability"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

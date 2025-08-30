@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO design characteristics make impact printers suitable for legacy industrial systems?",
+  "answer_options": [
+    "Support for USB-C and wireless connectivity",
+    "Low noise and high color accuracy",
+    "Ability to print through carbon forms",
+    "Reliability in continuous-form paper environments",
+    "High-resolution dot patterns"
+  ],
+  "correct_answer": [
+    "Ability to print through carbon forms",
+    "Reliability in continuous-form paper environments"
+  ],
+  "explanation": "Impact printers are ideal for legacy systems that require multiple copies and long continuous-form output like logs or reports.",
+  "tags": [
+    "carbon copies",
+    "multi-part forms"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

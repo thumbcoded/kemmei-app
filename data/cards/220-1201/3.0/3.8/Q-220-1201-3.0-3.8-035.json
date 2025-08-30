@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which color in the CMYK model is used along with magenta, yellow, and black to produce full-color prints?",
+  "answer_options": [
+    "Blue",
+    "Red",
+    "Green",
+    "Cyan"
+  ],
+  "correct_answer": [
+    "Cyan"
+  ],
+  "explanation": "The 'C' in CMYK stands for Cyan, which is used along with Magenta, Yellow, and Black.",
+  "tags": [
+    "cyan"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

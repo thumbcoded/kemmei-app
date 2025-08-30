@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of these is a current high-speed cellular technology?",
+  "answer_options": [
+    "802.11ac",
+    "5G",
+    "DSL",
+    "DOCSIS"
+  ],
+  "correct_answer": [
+    "5G"
+  ],
+  "explanation": "5G is the fifth generation of cellular networking, offering high-speed mobile internet.",
+  "tags": [
+    "5G"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

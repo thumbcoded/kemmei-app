@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician observes that paper jams occur only when using a specific tray. What is the most probable cause?",
+  "answer_options": [
+    "Defective toner cartridge",
+    "Incorrect paper weight for the tray",
+    "Incompatible print driver",
+    "Low ink level"
+  ],
+  "correct_answer": [
+    "Incorrect paper weight for the tray"
+  ],
+  "explanation": "Using heavier or lighter paper than the tray is designed for can lead to jams as the rollers may not handle it properly.",
+  "tags": [
+    "paper weight",
+    "paper tray",
+    "paper jam"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

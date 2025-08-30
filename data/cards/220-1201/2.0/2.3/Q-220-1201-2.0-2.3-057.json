@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which feature allows a SIEM to detect suspicious patterns across multiple systems?",
+  "answer_options": [
+    "Log rotation",
+    "Protocol encapsulation",
+    "Event correlation",
+    "DHCP lease tracking"
+  ],
+  "correct_answer": [
+    "Event correlation"
+  ],
+  "explanation": "SIEM tools use correlation to combine log data from different sources and detect security incidents that may go unnoticed individually.",
+  "tags": [
+    "SIEM",
+    "correlation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

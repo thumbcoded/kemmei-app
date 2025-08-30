@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You are installing a new modular power supply into a high-end workstation. After powering on, the system does not boot and there is no fan spin on the GPU. Which of the following is the MOST likely issue?",
+  "answer_options": [
+    "The 24-pin motherboard connector is incompatible with the chipset",
+    "The SATA power cable is not compatible with modular design",
+    "You connected the modular PCIe power cable into a CPU power socket",
+    "The system requires a dual-rail power supply"
+  ],
+  "correct_answer": [
+    "You connected the modular PCIe power cable into a CPU power socket"
+  ],
+  "explanation": "On modular PSUs, connectors may look identical, but pinouts differ between CPU and PCIe power. Misconnecting them can prevent power delivery to the GPU and damage components.",
+  "tags": [
+    "modular power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

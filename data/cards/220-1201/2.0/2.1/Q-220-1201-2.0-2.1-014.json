@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true about well-known ports? (Select all that apply)",
+  "answer_options": [
+    "They range from 0 to 1023",
+    "They are assigned to commonly used applications like FTP and HTTP",
+    "They are dynamically chosen by the client",
+    "They can be manually configured by system administrators",
+    "They are exclusively used for TCP-based applications"
+  ],
+  "correct_answer": [
+    "They range from 0 to 1023",
+    "They are assigned to commonly used applications like FTP and HTTP",
+    "They can be manually configured by system administrators"
+  ],
+  "explanation": "Well-known ports are in the 0–1023 range and are designated for standard services. Admins may reassign ports in some configurations. They're not limited to TCP only (e.g., DNS uses both TCP and UDP).",
+  "tags": [
+    "well-known port",
+    "network service"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

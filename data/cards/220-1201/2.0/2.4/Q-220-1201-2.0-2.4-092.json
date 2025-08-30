@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company wants to ensure only its internal mail servers can send email. What must it include in its SPF record?",
+  "answer_options": [
+    "A list of authorized sending IP addresses or hostnames",
+    "A digital signature hash of all email content",
+    "A DMARC quarantine directive",
+    "A private key in DNS"
+  ],
+  "correct_answer": [
+    "A list of authorized sending IP addresses or hostnames"
+  ],
+  "explanation": "SPF works by listing which mail servers (via IPs or hostnames) are allowed to send mail for a domain.",
+  "tags": [
+    "SPF",
+    "Sender Policy Framework",
+    "email verification"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

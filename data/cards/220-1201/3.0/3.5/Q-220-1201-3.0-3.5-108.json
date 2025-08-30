@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-108",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component connects to the 'HD AUDIO' header on a motherboard?",
+  "answer_options": [
+    "Power LED",
+    "Front headphone/mic jacks",
+    "System fan",
+    "CPU"
+  ],
+  "correct_answer": [
+    "Front headphone/mic jacks"
+  ],
+  "explanation": "The HD AUDIO header connects to the case's front panel 3.5mm audio jacks for input and output.",
+  "tags": [
+    "audio headers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

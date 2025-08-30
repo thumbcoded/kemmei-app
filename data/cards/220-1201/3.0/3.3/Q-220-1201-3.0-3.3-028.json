@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to consult system documentation before installing new memory?",
+  "answer_options": [
+    "To find out how to overclock the CPU",
+    "To verify memory compatibility with the motherboard",
+    "To unlock hidden memory slots",
+    "To enable external memory ports"
+  ],
+  "correct_answer": [
+    "To verify memory compatibility with the motherboard"
+  ],
+  "explanation": "Motherboards support specific memory types and configurations, so system documentation helps ensure you're installing compatible RAM.",
+  "tags": [
+    "memory upgrade",
+    "motherboard compatibility",
+    "memory documentation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

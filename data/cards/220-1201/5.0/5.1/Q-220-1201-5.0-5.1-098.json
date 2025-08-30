@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following could cause a system to exhibit slow performance? (Select all that apply)",
+  "answer_options": [
+    "Low available memory",
+    "High CPU utilization from background processes",
+    "Hard drive nearly full",
+    "Missing audio driver"
+  ],
+  "correct_answer": [
+    "Low available memory",
+    "High CPU utilization from background processes",
+    "Hard drive nearly full"
+  ],
+  "explanation": "Memory, CPU, and disk space limitations directly impact system performance. Missing audio drivers don’t typically affect overall speed.",
+  "tags": [
+    "slow response",
+    "CPU utilization",
+    "memory usage",
+    "hard drive space"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

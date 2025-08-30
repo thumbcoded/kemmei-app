@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why a 3.5-inch drive is more commonly used in desktop systems than in mobile devices?",
+  "answer_options": [
+    "It provides higher rotational speeds, which reduce heat in mobile devices",
+    "It requires a SATAe interface that laptops do not support",
+    "It offers more internal space for platters and typically higher capacities",
+    "It is more energy-efficient and optimized for battery life"
+  ],
+  "correct_answer": [
+    "It offers more internal space for platters and typically higher capacities"
+  ],
+  "explanation": "3.5-inch drives provide more surface area for platters, which allows for higher capacities than smaller form factors like 2.5-inch drives.",
+  "tags": [
+    "3.5-inch drive",
+    "desktop storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

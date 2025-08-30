@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What paper type is commonly used in impact printers to assist in page separation?",
+  "answer_options": [
+    "Glossy paper",
+    "Perforated paper",
+    "Photo paper",
+    "Thermal paper"
+  ],
+  "correct_answer": [
+    "Perforated paper"
+  ],
+  "explanation": "Perforated paper allows for easy tearing of continuous-form sheets used in impact printing.",
+  "tags": [
+    "perforated paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

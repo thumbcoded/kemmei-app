@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which formula best describes rotational latency in a hard drive operating at 7200 RPM?",
+  "answer_options": [
+    "60 ÷ 7200 = ~0.0083 seconds per revolution",
+    "7200 ÷ 60 = 120 seconds per access",
+    "7200 × 2 = average latency in milliseconds",
+    "Latency is fixed at 10 milliseconds regardless of speed"
+  ],
+  "correct_answer": [
+    "60 ÷ 7200 = ~0.0083 seconds per revolution"
+  ],
+  "explanation": "One full revolution takes about 8.3 milliseconds at 7200 RPM. Average latency is usually half a rotation (~4.15 ms).",
+  "tags": [
+    "latency",
+    "7200 RPM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

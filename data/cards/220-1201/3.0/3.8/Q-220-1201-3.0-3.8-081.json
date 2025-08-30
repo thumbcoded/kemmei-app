@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of printer physically strikes an inked ribbon to produce characters on paper?",
+  "answer_options": [
+    "Laser printer",
+    "Thermal printer",
+    "Impact printer",
+    "Inkjet printer"
+  ],
+  "correct_answer": [
+    "Impact printer"
+  ],
+  "explanation": "Impact printers physically strike an inked ribbon to transfer characters onto the page.",
+  "tags": [
+    "impact printer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

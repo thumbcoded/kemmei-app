@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-122",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What kind of adapter is often required to use DB9 devices on modern computers?",
+  "answer_options": [
+    "HDMI to VGA adapter",
+    "USB to DB9 adapter",
+    "RJ45 to RJ11 adapter",
+    "DisplayPort to DB25 adapter"
+  ],
+  "correct_answer": [
+    "USB to DB9 adapter"
+  ],
+  "explanation": "Since most modern computers lack DB9 ports, USB to DB9 adapters are used to connect serial devices.",
+  "tags": [
+    "USB to DB9 adapter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

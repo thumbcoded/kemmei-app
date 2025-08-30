@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports that they can view shared files on a macOS system but cannot access those on a Windows server. Which protocol is most likely misconfigured on the Windows server?",
+  "answer_options": [
+    "LPD",
+    "IPP",
+    "SMB",
+    "AFP"
+  ],
+  "correct_answer": [
+    "SMB"
+  ],
+  "explanation": "SMB (Server Message Block) is used for file sharing in Windows environments. A misconfigured or disabled SMB service would prevent access to shared resources.",
+  "tags": [
+    "SMB",
+    "server message block"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

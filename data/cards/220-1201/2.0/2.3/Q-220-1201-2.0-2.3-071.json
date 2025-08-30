@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is URL filtering considered an important layer in a defense-in-depth strategy?",
+  "answer_options": [
+    "It performs automated patching for the OS",
+    "It eliminates the need for antivirus software",
+    "It prevents users from accessing known malicious or high-risk sites",
+    "It disables unused network ports on the switch"
+  ],
+  "correct_answer": [
+    "It prevents users from accessing known malicious or high-risk sites"
+  ],
+  "explanation": "URL filtering stops users from visiting domains associated with malware or phishing, reducing exposure even before payloads are delivered.",
+  "tags": [
+    "URL filtering",
+    "access control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

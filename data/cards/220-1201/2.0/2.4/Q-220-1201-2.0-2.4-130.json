@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-130",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which device type would MOST likely require a consistent IP address via DHCP reservation?",
+  "answer_options": [
+    "Guest smartphone",
+    "Personal laptop",
+    "Network printer",
+    "Tablet used for browsing"
+  ],
+  "correct_answer": [
+    "Network printer"
+  ],
+  "explanation": "Devices like printers benefit from consistent IPs so that users and services can always locate them.",
+  "tags": [
+    "reserved IP",
+    "DHCP reservation",
+    "static assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

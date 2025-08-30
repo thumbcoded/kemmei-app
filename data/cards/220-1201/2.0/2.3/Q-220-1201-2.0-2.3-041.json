@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a component of AAA servers?",
+  "answer_options": [
+    "Authentication, Authorization, and Accounting",
+    "Automation, Allocation, and Access",
+    "Acknowledgment, Availability, and Assignment",
+    "Assignment, Application, and Activation"
+  ],
+  "correct_answer": [
+    "Authentication, Authorization, and Accounting"
+  ],
+  "explanation": "AAA servers handle Authentication (verifying identity), Authorization (granting access), and Accounting (tracking usage).",
+  "tags": [
+    "AAA server",
+    "authentication",
+    "authorization",
+    "accounting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains the function of a browser request in relation to a web server?",
+  "answer_options": [
+    "It sends an email to the server to fetch user credentials",
+    "It initiates a DNS lookup for all IP addresses on the network",
+    "It requests specific content or resources using protocols like HTTP or HTTPS",
+    "It manages database tables for website content"
+  ],
+  "correct_answer": [
+    "It requests specific content or resources using protocols like HTTP or HTTPS"
+  ],
+  "explanation": "A browser sends requests to a web server to retrieve web content (like HTML files) using HTTP or HTTPS protocols.",
+  "tags": [
+    "browser requests",
+    "HTTP",
+    "HTTPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

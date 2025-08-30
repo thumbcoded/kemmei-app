@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What would be the impact of a prolonged outage affecting several root server clusters?",
+  "answer_options": [
+    "Only country code domains would be inaccessible",
+    "All DNS records would be lost permanently",
+    "New DNS lookups could fail if local caches expire",
+    "Existing DNS entries would stop resolving immediately"
+  ],
+  "correct_answer": [
+    "New DNS lookups could fail if local caches expire"
+  ],
+  "explanation": "Cached DNS entries allow continued resolution, but once expired, failed access to root servers would prevent new lookups for uncached FQDNs.",
+  "tags": [
+    "root server",
+    "hierarchy",
+    "distributed database"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

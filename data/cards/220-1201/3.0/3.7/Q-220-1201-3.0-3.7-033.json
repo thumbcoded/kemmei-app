@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "A technician is preparing to update firmware on several networked printers. Which two steps should they complete first to ensure a smooth update process? (Select two)",
+  "answer_options": [
+    "Restart the print spooler",
+    "Verify the model and current firmware version",
+    "Back up print jobs in the queue",
+    "Download the correct update from the manufacturer’s website",
+    "Clear the DNS cache"
+  ],
+  "correct_answer": [
+    "Verify the model and current firmware version",
+    "Download the correct update from the manufacturer’s website"
+  ],
+  "explanation": "Identifying the correct printer model and current firmware version ensures you select the correct update. Always download firmware directly from the official vendor source.",
+  "tags": [
+    "firmware",
+    "manufacturer website"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

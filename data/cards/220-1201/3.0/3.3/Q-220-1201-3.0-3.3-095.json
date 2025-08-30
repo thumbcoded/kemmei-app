@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "If a DDR5-6400 memory module transfers data at 6400 MT/s, approximately how many million transfers occur in one second?",
+  "answer_options": [
+    "640 million",
+    "3200 million",
+    "6400 million",
+    "12800 million"
+  ],
+  "correct_answer": [
+    "6400 million"
+  ],
+  "explanation": "MT/s stands for mega transfers per second, so 6400 MT/s means exactly 6400 million transfers per second.",
+  "tags": [
+    "MT/s",
+    "data transfer rate",
+    "memory speed"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

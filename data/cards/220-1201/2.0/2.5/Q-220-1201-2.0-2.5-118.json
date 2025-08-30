@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-118",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true about MAC addresses and NIC behavior? (Select all that apply)",
+  "answer_options": [
+    "Each NIC has a unique factory-assigned MAC address",
+    "MAC addresses operate at the Data Link layer (Layer 2)",
+    "A NIC’s MAC address is used by routers for packet forwarding decisions",
+    "MAC filtering can be bypassed with spoofing techniques",
+    "MAC addresses are required for DNS resolution"
+  ],
+  "correct_answer": [
+    "Each NIC has a unique factory-assigned MAC address",
+    "MAC addresses operate at the Data Link layer (Layer 2)",
+    "MAC filtering can be bypassed with spoofing techniques"
+  ],
+  "explanation": "MAC addresses are Layer 2 identifiers burned into NICs. Routers forward based on IP, not MAC. DNS doesn't use MAC addresses.",
+  "tags": [
+    "MAC address",
+    "NIC",
+    "spoofing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

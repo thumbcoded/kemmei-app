@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-086",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In a load-balanced redundant power supply setup, what happens if one power supply fails?",
+  "answer_options": [
+    "The system shuts down immediately",
+    "The second power supply takes on 100% of the load",
+    "Power is reduced to all non-critical components",
+    "The system automatically reboots"
+  ],
+  "correct_answer": [
+    "The second power supply takes on 100% of the load"
+  ],
+  "explanation": "In load-balanced redundancy, each power supply shares half the load during normal operation. If one fails, the other seamlessly handles the full load.",
+  "tags": [
+    "power load balancing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

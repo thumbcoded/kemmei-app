@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How is UDP commonly described in terms of reliability?",
+  "answer_options": [
+    "Very reliable and secure",
+    "Unreliable with no acknowledgment",
+    "Partially reliable with flow control",
+    "Requires encryption to function"
+  ],
+  "correct_answer": [
+    "Unreliable with no acknowledgment"
+  ],
+  "explanation": "UDP does not acknowledge data receipt or support retransmission, so it is considered unreliable.",
+  "tags": [
+    "unreliable",
+    "UDP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of LED lights on a power supply?",
+  "answer_options": [
+    "To indicate RAM slot usage",
+    "To signal BIOS updates",
+    "To confirm power is present even when the system is off",
+    "To measure hard drive temperature"
+  ],
+  "correct_answer": [
+    "To confirm power is present even when the system is off"
+  ],
+  "explanation": "An illuminated power supply LED indicates that the unit is receiving external power, even if the system is not powered on.",
+  "tags": [
+    "LED lights"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

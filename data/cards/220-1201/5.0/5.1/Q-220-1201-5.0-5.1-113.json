@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What are low profile batteries on motherboards and when are they typically used?",
+  "answer_options": [
+    "High-capacity batteries used in gaming motherboards for overclocking",
+    "Thin, flat CMOS batteries for compact motherboards in small form factor PCs",
+    "Rechargeable batteries that provide backup power during outages",
+    "External batteries connected via USB for portable systems"
+  ],
+  "correct_answer": [
+    "Thin, flat CMOS batteries for compact motherboards in small form factor PCs"
+  ],
+  "explanation": "Low profile batteries are thin, flat CMOS batteries designed for compact motherboards where space is limited, such as in small form factor PCs, laptops, or embedded systems. They serve the same function as standard coin cell batteries (maintaining BIOS settings and real-time clock) but in a smaller form factor to fit tight spaces.",
+  "tags": [
+    "low profile battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

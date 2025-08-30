@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why can parity memory fail to detect certain types of errors?",
+  "answer_options": [
+    "It does not include a parity bit with stored bytes",
+    "It only checks for even parity, missing multi-bit errors",
+    "It attempts to correct errors instead of halting the system",
+    "It is incompatible with ECC systems"
+  ],
+  "correct_answer": [
+    "It only checks for even parity, missing multi-bit errors"
+  ],
+  "explanation": "Parity memory uses a single parity bit for each byte, allowing detection of some errors but not all—especially if multiple bits are affected.",
+  "tags": [
+    "parity memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

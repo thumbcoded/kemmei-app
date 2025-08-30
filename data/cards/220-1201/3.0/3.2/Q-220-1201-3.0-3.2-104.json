@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a major limitation of the USB mini B connector compared to modern USB-C?",
+  "answer_options": [
+    "It only supports fiber optic signals",
+    "It provides higher voltage but lower current",
+    "It lacks orientation flexibility and has limited data rates",
+    "It does not support audio playback on mobile devices"
+  ],
+  "correct_answer": [
+    "It lacks orientation flexibility and has limited data rates"
+  ],
+  "explanation": "USB mini B must be inserted in one orientation and supports lower speeds than modern USB-C, which is reversible and supports higher power and data rates.",
+  "tags": [
+    "mini B",
+    "USB-C"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

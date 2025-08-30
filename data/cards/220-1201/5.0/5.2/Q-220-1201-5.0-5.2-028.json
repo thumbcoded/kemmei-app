@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary performance benefit of replacing a traditional hard drive with an SSD in terms of IOPS?",
+  "answer_options": [
+    "Lower power draw",
+    "Reduced form factor",
+    "SSD 1 million IOPS",
+    "Extended SMART retention"
+  ],
+  "correct_answer": [
+    "SSD 1 million IOPS"
+  ],
+  "explanation": "Solid-state drives commonly achieve IOPS ratings in the hundreds of thousands to millions, drastically improving performance.",
+  "tags": [
+    "SSD 1 million IOPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

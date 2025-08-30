@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two effects of increasing a hard drive’s RPM rating.",
+  "answer_options": [
+    "Higher latency",
+    "Faster access to data",
+    "Greater heat generation",
+    "Lower mechanical reliability",
+    "Larger storage capacity"
+  ],
+  "correct_answer": [
+    "Faster access to data",
+    "Greater heat generation"
+  ],
+  "explanation": "While higher RPMs boost performance, they also increase heat and power draw, potentially reducing mechanical lifespan.",
+  "tags": [
+    "RPM",
+    "data access speed"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

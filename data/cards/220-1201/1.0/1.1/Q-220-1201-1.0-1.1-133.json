@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-133",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main challenge when working with laptop components compared to desktop components?",
+  "answer_options": [
+    "Laptops use different electrical standards",
+    "Laptop components are packed into very small spaces",
+    "Laptops require specialized diagnostic equipment",
+    "Laptop components are more expensive to replace"
+  ],
+  "correct_answer": [
+    "Laptop components are packed into very small spaces"
+  ],
+  "explanation": "The primary challenge with laptop troubleshooting is that components are miniaturized and packed into very small spaces, making access and handling more difficult than desktop systems.",
+  "tags": [
+    "small components",
+    "laptop troubleshooting",
+    "form factor limitations"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

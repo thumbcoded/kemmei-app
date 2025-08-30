@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is troubleshooting printouts that appear fuzzy and slightly smudged. Which setting is most likely misconfigured?",
+  "answer_options": [
+    "Duplex mode",
+    "Paper type setting",
+    "Scan resolution",
+    "USB timeout"
+  ],
+  "correct_answer": [
+    "Paper type setting"
+  ],
+  "explanation": "If the printer is set to print on plain paper but is actually printing on glossy or thick paper, toner may not adhere properly, causing smudging or fuzziness.",
+  "tags": [
+    "print quality"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why are optical drives no longer commonly included in new laptops?",
+  "answer_options": [
+    "Optical drives consume too much RAM",
+    "Flash storage is less durable",
+    "Most data transfer needs are now met via USB or cloud",
+    "They are not compatible with UEFI systems"
+  ],
+  "correct_answer": [
+    "Most data transfer needs are now met via USB or cloud"
+  ],
+  "explanation": "USB flash drives and cloud-based storage have replaced many use cases for optical drives, reducing their demand in modern systems.",
+  "tags": [
+    "optical drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

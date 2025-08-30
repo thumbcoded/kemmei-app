@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does a VPN concentrator do?",
+  "answer_options": [
+    "Encrypts and manages multiple VPN tunnels",
+    "Assigns dynamic IP addresses to clients",
+    "Filters web content",
+    "Routes wireless frames"
+  ],
+  "correct_answer": [
+    "Encrypts and manages multiple VPN tunnels"
+  ],
+  "explanation": "A VPN concentrator handles the creation, management, and encryption of many VPN connections at once.",
+  "tags": [
+    "concentrator",
+    "VPN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is responsible for decrypting VPN traffic at the central office in a client-to-site VPN?",
+  "answer_options": [
+    "VPN concentrator",
+    "Access point",
+    "DHCP server",
+    "Load balancer"
+  ],
+  "correct_answer": [
+    "VPN concentrator"
+  ],
+  "explanation": "A VPN concentrator decrypts encrypted traffic coming from remote clients and forwards it to the internal network.",
+  "tags": [
+    "VPN",
+    "concentrator",
+    "client-to-site"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

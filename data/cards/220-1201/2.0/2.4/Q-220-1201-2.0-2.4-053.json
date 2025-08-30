@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of server responds to DNS queries with IP address information?",
+  "answer_options": [
+    "DHCP server",
+    "FTP server",
+    "DNS server",
+    "Web proxy"
+  ],
+  "correct_answer": [
+    "DNS server"
+  ],
+  "explanation": "A DNS server resolves domain names into IP addresses in response to queries.",
+  "tags": [
+    "DNS server",
+    "DNS query"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

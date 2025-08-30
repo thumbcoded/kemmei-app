@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main purpose of SMART on modern storage drives?",
+  "answer_options": [
+    "To reduce power consumption",
+    "To enable faster boot times",
+    "To monitor and report drive health",
+    "To encrypt stored data"
+  ],
+  "correct_answer": [
+    "To monitor and report drive health"
+  ],
+  "explanation": "SMART (Self-Monitoring, Analysis, and Reporting Technology) helps detect early signs of drive issues and predict failure.",
+  "tags": [
+    "SMART"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

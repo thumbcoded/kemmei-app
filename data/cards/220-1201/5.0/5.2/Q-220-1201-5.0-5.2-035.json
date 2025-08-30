@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two actions are commonly used to fix a drive that is not recognized due to connection issues? (Select two.)",
+  "answer_options": [
+    "Install new video drivers",
+    "Cable reseating",
+    "Run defragmentation",
+    "Cable swap",
+    "Format drive"
+  ],
+  "correct_answer": [
+    "Cable reseating",
+    "Cable swap"
+  ],
+  "explanation": "Swapping cables or reseating existing connections can fix poor or faulty cable contacts.",
+  "tags": [
+    "cable reseating",
+    "cable swap"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

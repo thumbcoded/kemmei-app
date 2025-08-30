@@ -1,0 +1,281 @@
+{
+  "220-1201": {
+    "4.0": {
+      "4.1": {
+        "concepts": {
+          "Virtual machine purposes and use cases": {
+            "terms": [
+              "sandbox",
+              "sandboxing",
+              "test development",
+              "application virtualization",
+              "legacy software",
+              "legacy OS",
+              "cross-platform virtualization",
+              "isolated environment",
+              "snapshot",
+              "development testing",
+              "host-based virtualization",
+              "enterprise virtualization",
+              "VM snapshots",
+              "snapshot revert",
+              "legacy application support"
+            ]
+          },
+          "Hypervisor types and characteristics": {
+            "terms": [
+              "hypervisor",
+              "virtual machine manager",
+              "Type 1 hypervisor",
+              "Type 2 hypervisor",
+              "bare metal hypervisor",
+              "hosted hypervisor",
+              "VMware ESXi",
+              "Microsoft Hyper-V",
+              "VirtualBox",
+              "Parallels Desktop",
+              "VMware Workstation",
+              "Oracle VirtualBox"
+            ]
+          },
+          "Virtualization requirements and resources": {
+            "terms": [
+              "CPU requirements",
+              "memory requirements",
+              "storage requirements",
+              "network requirements",
+              "VT",
+              "AMD-V",
+              "virtualization technology",
+              "resource allocation",
+              "overprovisioning",
+              "performance impact",
+              "CPU cycles",
+              "drive space",
+              "RAM allocation",
+              "overhead"
+            ]
+          },
+          "Virtual networking concepts": {
+            "terms": [
+              "shared network address",
+              "bridge network address",
+              "private address",
+              "network address translation",
+              "NAT",
+              "virtual network",
+              "VM networking",
+              "network isolation",
+              "IP subnet",
+              "network configuration",
+              "virtual machine manager"
+            ]
+          },
+          "Virtualization security considerations": {
+            "terms": [
+              "VM escape",
+              "hypervisor security",
+              "VM isolation",
+              "virtual machine security",
+              "malware in VMs",
+              "VM hardening",
+              "firewall configuration",
+              "anti-malware",
+              "security controls",
+              "standalone workstation security",
+              "security breaches",
+              "malware authors"
+            ]
+          },
+          "Desktop virtualization technologies": {
+            "terms": [
+              "VDI",
+              "virtual desktop infrastructure",
+              "DaaS",
+              "desktop as a service",
+              "thin client",
+              "virtual desktop",
+              "remote desktop",
+              "cloud desktop",
+              "virtualized client",
+              "network communication",
+              "keyboard and mouse",
+              "display"
+            ]
+          },
+          "Container technologies": {
+            "terms": [
+              "container",
+              "containerization",
+              "Docker",
+              "application container",
+              "container vs VM",
+              "host operating system",
+              "container image",
+              "lightweight virtualization",
+              "portable applications",
+              "containerization software",
+              "self-contained applications",
+              "operating system overhead"
+            ]
+          }
+        }
+      },
+      "4.2": {
+        "concepts": {
+          "Cloud computing fundamentals": {
+            "terms": [
+              "cloud computing",
+              "cloud service providers",
+              "public cloud service providers",
+              "server hosting",
+              "cloud benefits",
+              "cloud efficiency",
+              "financial control",
+              "instant deployment",
+              "application instance",
+              "button deployment",
+              "geographical deployment"
+            ]
+          },
+          "Cloud deployment models": {
+            "terms": [
+              "public cloud",
+              "private cloud",
+              "hybrid cloud",
+              "community cloud",
+              "internal cloud",
+              "external cloud",
+              "Microsoft cloud",
+              "Amazon cloud",
+              "Rackspace",
+              "data center deployment",
+              "cloud infrastructure",
+              "private data center"
+            ]
+          },
+          "Infrastructure as a Service (IaaS)": {
+            "terms": [
+              "IaaS",
+              "infrastructure as a service",
+              "hardware as a service",
+              "HaaS",
+              "CPU rental",
+              "storage space",
+              "operating system maintenance",
+              "security responsibility",
+              "hardware access",
+              "customer control",
+              "management overhead",
+              "web service provider",
+              "professormesser.com"
+            ]
+          },
+          "Software as a Service (SaaS)": {
+            "terms": [
+              "SaaS",
+              "software as a service",
+              "on-demand software",
+              "web-based front end",
+              "username and password",
+              "application management",
+              "no development team",
+              "Google Mail",
+              "Microsoft 365",
+              "application provider",
+              "operating system updates",
+              "software applications"
+            ]
+          },
+          "Platform as a Service (PaaS)": {
+            "terms": [
+              "PaaS",
+              "platform as a service",
+              "platform development",
+              "application building",
+              "building blocks",
+              "Salesforce.com",
+              "development platform",
+              "module arrangement",
+              "application responsibility",
+              "middle ground",
+              "hybrid model"
+            ]
+          },
+          "Shared responsibility model": {
+            "terms": [
+              "responsibility matrix",
+              "customer responsibility",
+              "provider responsibility",
+              "on-premises responsibility",
+              "physical platform",
+              "network connectivity",
+              "operating systems",
+              "applications",
+              "data responsibility",
+              "infrastructure responsibility",
+              "identity and directory",
+              "authentication"
+            ]
+          },
+          "Private vs public cloud deployment": {
+            "terms": [
+              "private cloud deployment",
+              "public cloud deployment",
+              "equipment purchase",
+              "storage acquisition",
+              "cash outlay",
+              "dedicated resources",
+              "pay-as-you-go",
+              "metered costs",
+              "shared resources",
+              "storage drives",
+              "CPUs",
+              "network sharing",
+              "customer isolation"
+            ]
+          },
+          "Cloud pricing models": {
+            "terms": [
+              "metered utilization",
+              "non-metered pricing",
+              "pay-as-you-go",
+              "fixed rate",
+              "ingress traffic",
+              "egress traffic",
+              "storage costs",
+              "traffic costs",
+              "monthly billing",
+              "busy month",
+              "slower month",
+              "maximum storage",
+              "fixed price"
+            ]
+          },
+          "Cloud characteristics and benefits": {
+            "terms": [
+              "elasticity",
+              "scalability",
+              "high availability",
+              "file synchronization",
+              "geographic distribution",
+              "multi-tenancy",
+              "uptime maintenance",
+              "data center redundancy",
+              "automatic scaling",
+              "instant deployment",
+              "scale up",
+              "scale down",
+              "redundancies",
+              "drive array",
+              "network connection",
+              "database duplication",
+              "tenants",
+              "efficiency"
+            ]
+          }
+        }
+      }
+    }
+}
+}

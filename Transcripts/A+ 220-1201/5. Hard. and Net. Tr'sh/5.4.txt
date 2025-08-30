@@ -1,0 +1,203 @@
+# Mobile Device Troubleshooting
+
+## Battery Issues
+
+Our laptops, tablets, and phones need a battery to provide us with power when we're moving from one place to another. Unfortunately, these batteries do not last forever, so if you're having problems maintaining a charge in those batteries, it may be time to swap that battery out for a new one.
+
+### Rapid Battery Drain
+
+You might also find that your battery tends to lose its charge rapidly. This may not be because the battery is old, but instead it may be because your device is using too much of the battery. This might be because your mobile phone is in a bad reception area, so it's constantly checking to see if it can find a good signal and be able to use that as its primary connection source.
+
+This process of constantly polling for a signal can very rapidly decrease the amount of power available in your battery. So you may want to turn on airplane mode even when you're on the ground, especially if you're in one of these areas where you have such bad reception.
+
+### Power Management
+
+This might also be a good time to disable any features that you aren't using. If you're not connected to an 802.11 network, you might want to disable that particular function, and the same thing applies to Bluetooth and GPS signals.
+
+### Battery Statistics and Health
+
+Many operating systems include detailed statistics of how well the battery is working, and you can find those both in iOS, iPadOS, and Android under the settings option and then you would choose battery. This provides you with extensive details about when the battery was last charged, what applications may be using the most amount of the battery, and you can get details about how healthy this battery is and when it might be time to replace it.
+
+### Swollen Batteries
+
+The batteries inside of our mobile devices are very small and very thin. This is a good example of one, but if there is any problem with this battery, you'll find that it swells up into a package of gas that's inside of this container. This also often distorts or pops open the mobile device where this battery happens to be inside because there's no more room for that battery to fit inside of that device.
+
+These battery containers are designed for this very situation. All of the gas inside of this will be kept in that single container and will not leak out. This is something you should not try to open or try to pierce. This is a significant fire risk and you want to replace this as soon as possible.
+
+Sometimes you'll find that the battery is still working inside of this device even when you see this buildup of gas that has been accumulated. You should however not continue to use this battery. You should turn off this device and replace this battery right away.
+
+Unfortunately, this battery bulging with all of this gas can sometimes damage the mobile device that it's contained in. Of course, that's much better than a fire or some type of hazardous fumes being released, so we'll take that type of swollen battery and damage to the mobile device over something that might be much worse.
+
+## Display Issues
+
+### Broken Glass
+
+The displays on these mobile devices are protected with a very strong sheet of glass. Although this glass is hardened and designed to be on these mobile devices, it can occasionally break. If that happens, you'll need to replace the display to be able to get this back into working condition.
+
+Before you replace the display, it's always a good idea to back up this system just in case a problem occurs during the replacement. Unfortunately, there's no easy way to just replace the glass. Very often the glass is integrated into the display itself, so you will have to replace the display to be able to replace the glass.
+
+Keep in mind of course that this is glass and because it's broken, it can be very sharp. You don't want to use your finger on this display because it's very likely that you will cut your finger or embed some glass within your finger itself. Sometimes you can use a screen protector to avoid any type of cuts, or you may want to use simply glass tape to cover any part of the display that may have some of these broken pieces.
+
+## Charging Problems
+
+If you have a mobile device, then you're constantly aware of how often you may need to charge that device. Unfortunately, you may run into a situation where you're plugging everything in to charge but the system still is not charging the battery.
+
+### Troubleshooting Charging Issues
+
+In that case, we'll want to check all of those different components that we're using for the charging process. Check the charging cable itself and the interfaces that we're connecting to on the mobile device. Although there may be enough room on the interface to plug in the power source, you may find that debris or other things inside of that interface may block the device from charging. So make sure you check inside of that connector so that everything is clear and unobstructed.
+
+If you're very mobile, then your charging cable can tend to wear over time and you may find that the cable simply has a short or is broken in a place where it's not able to charge your mobile device any longer. You may need to try a cable that you know is working properly in another device to see if the issue is with the interface, the mobile device, or the cable that you're using.
+
+### Power Adapter Testing
+
+And if you're not sure if the power adapter that you're using to charge this with is working properly, you may want to use a multimeter. You'll of course want to check your outlet on the wall and make sure that it's providing power, and then check the output from your power adapter that it's providing power to the cable.
+
+## Network Connectivity Issues
+
+The ability to take your mobile device practically anywhere and communicate with anyone else in the world is a remarkable technology, but it does require that we have connectivity to the network. This wireless connectivity can be hampered by a number of different issues, whether you're on a Wi-Fi network or a cellular network.
+
+### Cellular Network Issues
+
+On your cellular network, you want to check that you're close enough to a tower to be able to have enough signal strength to be able to communicate back and forth. Where you're located has a big impact on how well you're able to communicate. If you're inside a building, you may find that stepping outside gives you the signal you need to be able to complete that communication.
+
+### Wi-Fi Connectivity
+
+Wi-Fi of course has a very limited range, so you'll need to be somewhere near an access point to be able to communicate on that network. And if there's anything else in the area that's interfering with this Wi-Fi network, you may have problems communicating to that access point.
+
+If there are a lot of access points in the area, especially in a very congested area, you might want to change your access point to be a different channel or different frequency and see if that improves the communication between your mobile device and the access point over the Wi-Fi network.
+
+## Liquid Damage
+
+Our mobile devices do not work very well when there's liquid around. Just a small amount of liquid or water can destroy a mobile device.
+
+### Liquid Contact Indicators
+
+Inside of our mobile devices are a small indicator known as a liquid contact indicator or LCI. This is an indicator that changes color anytime it's near liquid. These are often located inside of the charging port or inside of your SIM port. When you're taking your phone in to be repaired, this is one of the first things they check to see if your phone has been subject to any type of liquid damage.
+
+### Immediate Response to Liquid Damage
+
+If you have spilled liquid on your phone, the first thing you should do is power it down and do not connect it to a power source. You want to remove it from any case it happens to be in. If there are any cards or batteries that you can remove, you'll want to take those out of the phone as well and make sure that it's able to get plenty of air so that it can dry out.
+
+### Drying Methods
+
+You'll often hear people taking a phone and putting it into a bag of rice. In reality, putting a phone or any other type of mobile device in a bag of rice doesn't do very much for you. The idea is that the rice would be able to pull that liquid and absorb it from the phone, making the inside of the phone dry out that much faster. In reality, rice doesn't absorb water very well.
+
+Instead, you'll want to use something like the desiccants that you might see when you order a new piece of technology. These are these small packages that are inside the box. You can of course buy these separately. Instead of putting rice in a bag with the phone, you might want to take some desiccant and put it in the bag with the phone, which will be a much better way to absorb that moisture.
+
+### Recovery Process
+
+If you do drop your phone in a puddle and it turns off, what you want to do is ignore that phone for a day. You don't want to turn it on, you don't want to charge it, don't connect it to a power source, don't heat it, don't put it into an oven, don't move it around—just leave it in one place. If you can put it into a bag with some desiccant, that's probably the best thing you can do.
+
+One of the things that is an advantage to rice is that people are putting it in rice and then leaving it alone for 24 hours. Unfortunately, the rice doesn't provide any other advantages other than isolating that device, but occasionally that's all you need is to have someone not touch the phone for 24 hours.
+
+If after a day the phone appears to be dry, you can then try powering up the phone and see if it will work. Hopefully that power-on process will work properly, but if it doesn't, you may end up needing to take the phone in for additional service.
+
+## Overheating Issues
+
+In normal operations, our mobile phones and tablets can get relatively hot. There are cooling systems within these phones that can help passively cool them, but if you happen to have the phone in a very warm area or you happen to leave it in the sun, you may find that the phone turns itself off automatically in order to preserve those electronics.
+
+### Heat Management
+
+And if you're in the sun and you're charging or discharging the battery or using applications that use a lot of CPU, you may find that the phone heats up very, very quickly. You might be able to check the apps that are running on your phone. Your battery report will show you which apps are using the most amount of battery, and then you can decide if certain applications should be running or not running in order to control the temperature inside of that phone.
+
+And if at all possible, you want to avoid putting these mobile devices anywhere in direct sunlight. You certainly don't want to put them on your dashboard or anywhere else there might be an excessive amount of heat.
+
+## Frozen or Unresponsive Devices
+
+If you pick up your phone and you notice the screen is completely black and then you touch the screen and get no response from it, then we may need to reset this device to see if we can regain control.
+
+### iOS Device Reset
+
+On an Apple device, you may be able to press the power button, slide to power it off, and then press the power button again to turn the device back on. Some iOS devices require you to hold down the power button and some other button such as the home or the volume button for 10 seconds, and that will force a reset of the device.
+
+### Android Device Reset
+
+There are many different manufacturers of Android devices, so there are many different ways to perform this reset. You may be able to simply remove the battery, put it back in, and power on the device, or there may be a series of keys such as a power button or holding a power and a volume button until the device resets. Different phones have different combinations of keys to do this reset, so you want to check with the documentation of your device to know exactly what the reset process is for your phone or your tablet.
+
+## Physical Damage
+
+Our mobile phones and mobile devices are designed to be mobile, so they're designed to take a little bit of abuse, but they are not immune to any type of damage. And there may be times when you find that certain interfaces or parts of the device are damaged and don't allow it to work properly.
+
+### Damaged Charging Ports
+
+For example, if you damage the USB interface on the device, you will not be able to transfer any data to the device and you certainly won't be able to charge it. This might be caused by roughly handling the charging cable or simply using the phone in a way that causes that interface to be damaged.
+
+Your first clue that you're having a problem is that the device is either charging intermittently or it's not charging at all. You may have to look at that interface very closely to see if there's any damage, and if there is damage, it may require that you replace the entire system board on that mobile device. Most of these interfaces are not modular, so it does require a complete replacement of the system board just to swap out that single interface on the phone.
+
+## Malware and Security Issues
+
+Whether you're on a desktop computer, a laptop computer, or any type of mobile device, you should always be concerned about malware. There is malware that will run on all of these platforms, and the malware developers would love to infect your mobile device and use it for their own purposes.
+
+### Signs of Malware
+
+If your mobile device has some unusual applications or large amounts of data transfers, or you notice that one particular application is using more CPU than it normally would, that might indicate that malware is embedded in that particular device.
+
+### Anti-Malware Protection
+
+There's many types of anti-malware and antivirus software available for our mobile devices. You might want to run one just to make sure that no one has put any type of malicious software on your mobile phone.
+
+## Cursor Drift Issues
+
+If you're not touching your tablet or your phone but you notice that certain apps are activating themselves or things are flashing on the screen as if you are touching the device, then you may have a problem with cursor drift. This describes a device that is starting up applications and moving things around the screen even though no one is directly interacting with that device.
+
+### Hardware vs. Software Issues
+
+This is not something that's malicious. This is instead a bad display or a bad digitizer on that device. Some older devices have a calibration app that make you touch different parts of the screen so that it can figure out where the top, the middle, and the bottom might be of your display. Once you perform that calibration, you can usually solve any issues of cursor drift, but if this continues, you might have a hardware issue and you may have to swap out the entire display.
+
+## App Installation Problems
+
+Maybe you've gone to the app store, you've picked out a new app that you'd like to install, but the app never gets installed onto your device.
+
+### Storage Issues
+
+If this is your device, it's probably because there's not enough available space. You want to check the storage capacity of your device, and if there are some applications taking up more room than necessary, you might want to delete the data or the application itself.
+
+### Network and Compatibility Issues
+
+We also have to keep in mind that all of these applications are being downloaded from a central source across the network. If this is a very large application, then you'll need plenty of bandwidth and connectivity to be able to make that happen. And if your network connection is less than optimal, you may not be able to install the app at this time.
+
+You also want to check that the app you're installing is compatible with the device that you're using. Many app stores will do this automatically, but it's always a good idea to double-check that the app that you're running on your device is compatible with the device and the operating system version that you're running.
+
+### Authentication Requirements
+
+And many of these app stores require you to authenticate before you can ever download. So even if you select an app, you may still need to add a username, a password, and any other credentials to be able to finally download that application.
+
+## Stylus Issues
+
+The stylus technology that we use today on our phones and our tablets is remarkable. We can get very granular control of the information on the screen by using one of these wireless external stylus.
+
+### Battery and Connectivity
+
+Many of these stylus are active, that means they require power to be able to interact with your device, and there is a battery inside of this that needs to be charged. And if your stylus isn't working, make sure you check the status of the battery—it may just need to be recharged.
+
+Many of these also communicate over Bluetooth, and you'll want to check the Bluetooth settings in your mobile device and make sure that that stylus is paired with your tablet or your mobile phone. If it isn't, you can go through the Bluetooth pairing process so that you can finally use that stylus with your mobile device.
+
+### Physical Damage
+
+Like any other mobile device that we take from place to place, it's very possible to damage that stylus. The stylus itself can be damaged, so make sure you look it over for any type of physical problem, and the tip on the stylus may also be damaged. Fortunately, you can often buy replacement tips for a stylus and be able to swap those out relatively easily.
+
+### Reset Options
+
+And if none of these happen to work, you may want to reset your mobile device and if you can reset the stylus as well and have everything start from the very beginning. Very often powering it off and powering it back on again solves a number of problems that you can't solve otherwise.
+
+## Performance Issues
+
+And there might be times when your mobile device is simply not performing the way you would hope. It may be running very slowly or perhaps stuttering anytime it tries to show any video.
+
+### Software Updates
+
+One of the first things to try might be to update the software that's running on that mobile device. Check the operating system of the device itself and the apps that you're using and make sure you're using the latest versions on this machine.
+
+### Storage and Hardware Issues
+
+We also need storage on the device to be able to swap things in and out or to store our documents, so make sure you check the status of the storage on this device and that you're not running out of room. You may see the device slow down or simply restart because you don't have enough storage space on that phone.
+
+This could also be related to bad hardware, especially if the storage components of that device are damaged. It may take longer to write information to storage or read information from that storage. That's why it might seem like the problem is with the application, but in reality it's with the hardware of your tablet or your mobile phone.
+
+### Background Applications
+
+Or perhaps you have an application running in the background that's using an excessive amount of CPU cycles or of memory. Make sure you check the apps that are currently running on your device, and you might want to close anything that's not currently being used.
+
+### Hardware Limitations
+
+And sometimes you may be using a device that's simply too old to run the latest applications. In those cases, there's not much you can do other than to upgrade your phone, your tablet, or any other mobile device that might be outdated.

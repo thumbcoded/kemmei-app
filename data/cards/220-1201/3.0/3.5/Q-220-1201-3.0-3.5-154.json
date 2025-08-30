@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-154",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a Trusted Platform Module (TPM) used for?",
+  "answer_options": [
+    "Providing Wi-Fi access in BIOS",
+    "Displaying system information",
+    "Hardware-based encryption and key management",
+    "Updating the system BIOS"
+  ],
+  "correct_answer": [
+    "Hardware-based encryption and key management"
+  ],
+  "explanation": "TPM provides secure storage for encryption keys and is used for features like BitLocker.",
+  "tags": [
+    "TPM",
+    "Trusted Platform Module"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system passes POST and powers on, but onboard audio and several USB ports are nonfunctional. What is the technician's best next step?",
+  "answer_options": [
+    "Disable fast boot in BIOS",
+    "Replace the CMOS battery",
+    "Replace the motherboard",
+    "Reinstall the operating system"
+  ],
+  "correct_answer": [
+    "Replace the motherboard"
+  ],
+  "explanation": "When multiple onboard peripherals fail and power delivery is fine, it often indicates deeper motherboard circuitry failure that warrants replacement.",
+  "tags": [
+    "connectors not operational",
+    "component replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

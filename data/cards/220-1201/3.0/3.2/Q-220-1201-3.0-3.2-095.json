@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector is most commonly used to connect standard USB peripherals like mice or keyboards?",
+  "answer_options": [
+    "USB-C",
+    "USB standard A",
+    "USB standard B",
+    "USB mini B"
+  ],
+  "correct_answer": [
+    "USB standard A"
+  ],
+  "explanation": "USB standard A is the rectangular connector used for connecting most common USB devices such as keyboards, mice, and flash drives.",
+  "tags": [
+    "standard A"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

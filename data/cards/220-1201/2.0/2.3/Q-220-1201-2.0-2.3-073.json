@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are typical functions of a unified threat management (UTM) appliance? (Select all that apply)",
+  "answer_options": [
+    "Content inspection",
+    "Spam filtering",
+    "Print job management",
+    "URL filtering",
+    "Malware detection"
+  ],
+  "correct_answer": [
+    "Content inspection",
+    "Spam filtering",
+    "URL filtering",
+    "Malware detection"
+  ],
+  "explanation": "UTM devices consolidate security tools like spam filtering, URL filtering, content inspection, and malware detection into one appliance.",
+  "tags": [
+    "unified threat management",
+    "spam filter",
+    "URL filtering",
+    "content inspection",
+    "malware detection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

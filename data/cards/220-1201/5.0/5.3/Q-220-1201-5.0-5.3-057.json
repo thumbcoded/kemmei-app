@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A monitor with speakers is connected via HDMI. The monitor shows video but no sound. What should you check?",
+  "answer_options": [
+    "Monitor resolution is too low",
+    "Display scaling is incorrect",
+    "Audio is muted in the monitor menu",
+    "Mouse driver is outdated"
+  ],
+  "correct_answer": [
+    "Audio is muted in the monitor menu"
+  ],
+  "explanation": "If the HDMI connection is delivering video but no audio, it’s important to check that the monitor’s internal audio is not muted.",
+  "tags": [
+    "muted speakers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

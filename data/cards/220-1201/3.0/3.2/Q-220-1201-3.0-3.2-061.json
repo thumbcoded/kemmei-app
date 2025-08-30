@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario most likely requires an active signal converter rather than a simple adapter?",
+  "answer_options": [
+    "Connecting a USB-C phone to a USB-A charger",
+    "Using DVI-D to HDMI",
+    "Converting VGA output to HDMI input on a modern display",
+    "Plugging a USB mouse into a hub"
+  ],
+  "correct_answer": [
+    "Converting VGA output to HDMI input on a modern display"
+  ],
+  "explanation": "VGA is analog and HDMI is digital, so this conversion requires an active signal converter to process the analog-to-digital transition.",
+  "tags": [
+    "signal converter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

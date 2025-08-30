@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A company wants to prevent confidential documents from sitting unattended in the printer tray. Which solution is best suited for this purpose?",
+  "answer_options": [
+    "Enable duplex printing",
+    "Set default resolution to low DPI",
+    "Use PIN-protected printing",
+    "Disable paper tray access"
+  ],
+  "correct_answer": [
+    "Use PIN-protected printing"
+  ],
+  "explanation": "PIN-protected printing ensures jobs are held until the user enters their PIN at the printer, preventing unauthorized access to sensitive documents.",
+  "tags": [
+    "PIN-protected printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

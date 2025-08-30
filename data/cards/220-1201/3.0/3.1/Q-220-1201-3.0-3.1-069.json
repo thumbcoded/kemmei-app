@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of the CIE1931 color space?",
+  "answer_options": [
+    "It sets refresh rate standards",
+    "It measures luminance in OLEDs",
+    "It models human color perception",
+    "It compresses color values for video encoding"
+  ],
+  "correct_answer": [
+    "It models human color perception"
+  ],
+  "explanation": "The CIE1931 diagram represents all colors visible to the human eye, serving as a reference for defining other color gamuts.",
+  "tags": [
+    "CIE1931",
+    "color gamut"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

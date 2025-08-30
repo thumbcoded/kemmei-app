@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A company wants to avoid unpredictable monthly cloud bills due to fluctuating traffic. Which pricing model is most suitable?",
+  "answer_options": [
+    "Pay-per-click pricing",
+    "Non-metered pricing",
+    "Ingress-based billing",
+    "Time-based subscription"
+  ],
+  "correct_answer": [
+    "Non-metered pricing"
+  ],
+  "explanation": "Non-metered pricing provides fixed costs regardless of actual usage, which helps manage predictable monthly budgets.",
+  "tags": [
+    "non-metered pricing",
+    "storage costs"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

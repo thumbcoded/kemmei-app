@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which role does the application provider play in SaaS?",
+  "answer_options": [
+    "They supply hardware only; the customer builds the app",
+    "They offer authentication servers but no user-facing apps",
+    "They manage the infrastructure, app logic, and updates",
+    "They host source code for customer-compiled programs"
+  ],
+  "correct_answer": [
+    "They manage the infrastructure, app logic, and updates"
+  ],
+  "explanation": "In SaaS, the application provider manages the entire stack and keeps the application running and updated.",
+  "tags": [
+    "application provider",
+    "software as a service"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

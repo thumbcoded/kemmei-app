@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A hard drive is trying multiple times to read the same sector. What is this behavior called?",
+  "answer_options": [
+    "Read failure",
+    "Retry reads",
+    "Storage optimization",
+    "Write caching"
+  ],
+  "correct_answer": [
+    "Retry reads"
+  ],
+  "explanation": "Retry reads occur when a drive attempts multiple times to access a failing or problematic storage sector.",
+  "tags": [
+    "retry reads"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

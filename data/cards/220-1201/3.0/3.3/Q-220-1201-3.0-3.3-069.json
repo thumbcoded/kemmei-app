@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select two outcomes of incorrectly populating memory slots in a quad-channel motherboard.",
+  "answer_options": [
+    "Memory channels will be disabled or operate in single-channel mode",
+    "BIOS will automatically adjust timings for performance boost",
+    "Memory will overheat due to bus congestion",
+    "System may fail POST or operate at reduced memory throughput",
+    "ECC will automatically compensate for mismatched modules"
+  ],
+  "correct_answer": [
+    "Memory channels will be disabled or operate in single-channel mode",
+    "System may fail POST or operate at reduced memory throughput"
+  ],
+  "explanation": "Incorrect population or mismatched modules can prevent multi-channel operation and degrade overall system performance.",
+  "tags": [
+    "multi-channel memory",
+    "memory module matching"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

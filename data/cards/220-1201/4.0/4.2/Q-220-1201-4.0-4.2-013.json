@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A DevOps team wants to increase deployment speed and reduce human error. Which two features of cloud computing are most relevant to this goal? (Select two)",
+  "answer_options": [
+    "Cloud service providers",
+    "Button deployment",
+    "Geographical deployment",
+    "Cloud efficiency"
+  ],
+  "correct_answer": [
+    "Button deployment",
+    "Cloud efficiency"
+  ],
+  "explanation": "Button deployment and cloud efficiency support automation, orchestration, and repeatability — key to fast, reliable deployments.",
+  "tags": [
+    "button deployment",
+    "cloud efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

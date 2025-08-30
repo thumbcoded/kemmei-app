@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which LCD panel type uses a 'vertical alignment' of liquid crystals when idle?",
+  "answer_options": [
+    "VA LCD",
+    "IPS LCD",
+    "TN LCD",
+    "CCFL LCD"
+  ],
+  "correct_answer": [
+    "VA LCD"
+  ],
+  "explanation": "VA (Vertical Alignment) LCDs have liquid crystals aligned vertically when no voltage is applied, aiding in deeper black levels.",
+  "tags": [
+    "VA LCD",
+    "vertical alignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

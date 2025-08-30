@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which scenarios would benefit most from using a drawing pad with digitizer technology? (Select all that apply)",
+  "answer_options": [
+    "Digital art creation requiring precise control",
+    "Basic web browsing and email",
+    "Professional graphic design work",
+    "Simple document editing",
+    "Detailed architectural drawings"
+  ],
+  "correct_answer": [
+    "Digital art creation requiring precise control",
+    "Professional graphic design work",
+    "Detailed architectural drawings"
+  ],
+  "explanation": "Drawing pads with digitizers are specialized input devices best suited for precision work like digital art, graphic design, and technical drawings where fine control and pressure sensitivity are essential.",
+  "tags": [
+    "drawing pad",
+    "digitizer",
+    "stylus",
+    "pressure sensitivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

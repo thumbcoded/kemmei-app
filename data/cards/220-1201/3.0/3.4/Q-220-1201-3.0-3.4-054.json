@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of failure is more likely in SSDs compared to HDDs?",
+  "answer_options": [
+    "Spindle seizure",
+    "Actuator arm misalignment",
+    "NAND cell wear or controller failure",
+    "Head crash due to sudden movement"
+  ],
+  "correct_answer": [
+    "NAND cell wear or controller failure"
+  ],
+  "explanation": "SSDs are immune to mechanical issues but can fail due to worn-out memory cells or controller logic errors.",
+  "tags": [
+    "SSD",
+    "memory modules"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key benefit of using duplex printing?",
+  "answer_options": [
+    "Increases print speed",
+    "Reduces ink usage",
+    "Saves paper",
+    "Improves print resolution"
+  ],
+  "correct_answer": [
+    "Saves paper"
+  ],
+  "explanation": "By printing on both sides of a sheet, duplex printing significantly reduces the total amount of paper used.",
+  "tags": [
+    "duplex printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

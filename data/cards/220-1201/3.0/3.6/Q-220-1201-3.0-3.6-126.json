@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-126",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "You are building a custom PC with two graphics cards, a high-performance CPU, and several drives. Which TWO power supply selection criteria are MOST important? (Select two)",
+  "answer_options": [
+    "ATX form factor support",
+    "Multi-rail or single-rail output design",
+    "Voltage compatibility with target country",
+    "Support for ECC RAM",
+    "Availability of required PCIe connectors"
+  ],
+  "correct_answer": [
+    "Voltage compatibility with target country",
+    "Availability of required PCIe connectors"
+  ],
+  "explanation": "The PSU must operate at the destination’s voltage and include enough PCIe connectors for multi-GPU setups.",
+  "tags": [
+    "voltage compatibility",
+    "connector compatibility",
+    "power supply selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

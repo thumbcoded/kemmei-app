@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does a DNS lookup help you discover?",
+  "answer_options": [
+    "A website’s encryption certificate",
+    "The website's domain registrar",
+    "The IP address associated with a domain name",
+    "The subnet mask of your local network"
+  ],
+  "correct_answer": [
+    "The IP address associated with a domain name"
+  ],
+  "explanation": "DNS lookups convert domain names (like google.com) into corresponding IP addresses.",
+  "tags": [
+    "DNS lookup",
+    "DNS resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

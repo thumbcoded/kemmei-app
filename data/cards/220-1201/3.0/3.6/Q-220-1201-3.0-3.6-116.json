@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-116",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following BEST describes the efficiency behavior of a Titanium-rated power supply under typical load?",
+  "answer_options": [
+    "Fixed 90% efficiency across all loads",
+    "Peak efficiency near 20% load",
+    "Efficiency increases linearly with load",
+    "High efficiency maintained across a wide load range"
+  ],
+  "correct_answer": [
+    "High efficiency maintained across a wide load range"
+  ],
+  "explanation": "Titanium-rated PSUs maintain high efficiency (90–96%) across various load levels including low loads, unlike lower-tier models.",
+  "tags": [
+    "titanium rating",
+    "energy efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

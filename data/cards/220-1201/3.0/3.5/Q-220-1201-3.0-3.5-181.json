@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-181",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A high-performance CPU is overheating during multitasking despite adequate cooling. Which architectural design may be contributing?",
+  "answer_options": [
+    "Use of RISC instruction sets",
+    "Excessive L3 cache size",
+    "High clock speeds across multiple active cores",
+    "Underclocking of GPU"
+  ],
+  "correct_answer": [
+    "High clock speeds across multiple active cores"
+  ],
+  "explanation": "Running many active cores at high frequency increases thermal output, especially under full workloads.",
+  "tags": [
+    "multi-core processor",
+    "power efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

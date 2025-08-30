@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector delivers power from the PSU to the motherboard?",
+  "answer_options": [
+    "SATA power connector",
+    "24-pin connector",
+    "8-pin CPU connector",
+    "PCIe 6-pin connector"
+  ],
+  "correct_answer": [
+    "24-pin connector"
+  ],
+  "explanation": "The 24-pin connector is the main power cable from the PSU to the motherboard, delivering 3.3V, 5V, and 12V.",
+  "tags": [
+    "24-pin connector",
+    "motherboard power"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

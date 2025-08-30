@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the first action you should take before opening a computer to work on its internal components?",
+  "answer_options": [
+    "Ground yourself to the case",
+    "Turn off the monitor",
+    "Disconnect power source",
+    "Remove the CMOS battery"
+  ],
+  "correct_answer": [
+    "Disconnect power source"
+  ],
+  "explanation": "To prevent electric shock or equipment damage, always disconnect the power source before working on any internal components.",
+  "tags": [
+    "disconnect power source"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

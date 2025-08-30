@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario would benefit most from using a drive with high RPM and low latency?",
+  "answer_options": [
+    "Streaming a movie from a media server",
+    "Performing batch writes to SSD-based cache",
+    "Hosting a high-speed database with many IOPS",
+    "Downloading files from the internet"
+  ],
+  "correct_answer": [
+    "Hosting a high-speed database with many IOPS"
+  ],
+  "explanation": "High-RPM drives reduce latency and are ideal for high-I/O workloads like databases that require rapid random reads and writes.",
+  "tags": [
+    "RPM",
+    "latency",
+    "data access speed"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What printing capability is a key benefit of inkjet printers?",
+  "answer_options": [
+    "Bulk monochrome output",
+    "Impact-based printing",
+    "High-resolution printing",
+    "Continuous feed printing"
+  ],
+  "correct_answer": [
+    "High-resolution printing"
+  ],
+  "explanation": "Inkjet printers are well-known for producing crisp, high-resolution prints, particularly for photos and color graphics.",
+  "tags": [
+    "high-resolution printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

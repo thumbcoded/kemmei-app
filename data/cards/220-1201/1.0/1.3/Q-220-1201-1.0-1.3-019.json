@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of enabling hotspot functionality on a mobile phone?",
+  "answer_options": [
+    "To share photos between devices",
+    "To connect the phone to a public Wi-Fi network",
+    "To allow other devices to access the internet through the phone",
+    "To extend the phone's battery life"
+  ],
+  "correct_answer": [
+    "To allow other devices to access the internet through the phone"
+  ],
+  "explanation": "Hotspot functionality lets your phone act as a router, allowing other devices to use your phone’s cellular connection for internet access.",
+  "tags": [
+    "hotspot",
+    "internet sharing",
+    "mobile hotspot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

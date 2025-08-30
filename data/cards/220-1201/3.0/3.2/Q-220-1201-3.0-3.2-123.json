@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-123",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which characteristic is true of RS232 serial communication?",
+  "answer_options": [
+    "It uses differential signaling with high speeds",
+    "It supports parallel data transmission",
+    "It transmits data one bit at a time using voltage level signals",
+    "It is wireless and requires no cabling"
+  ],
+  "correct_answer": [
+    "It transmits data one bit at a time using voltage level signals"
+  ],
+  "explanation": "RS232 sends data serially over a single channel using voltage-based signaling to represent binary values.",
+  "tags": [
+    "RS232",
+    "serial communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

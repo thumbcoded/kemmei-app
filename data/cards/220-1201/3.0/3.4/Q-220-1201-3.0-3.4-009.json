@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two mechanical components found in a traditional hard disk drive.",
+  "answer_options": [
+    "Actuator arm",
+    "Flash memory chip",
+    "Spindle",
+    "SATA connector",
+    "Memory controller"
+  ],
+  "correct_answer": [
+    "Actuator arm",
+    "Spindle"
+  ],
+  "explanation": "Both the actuator arm and spindle are mechanical parts. The actuator moves the read/write head; the spindle spins the platters.",
+  "tags": [
+    "actuator arm",
+    "spindle"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

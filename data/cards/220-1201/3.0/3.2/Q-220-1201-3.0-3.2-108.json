@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-108",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which devices are most likely to include a Lightning connector?",
+  "answer_options": [
+    "Android phones and tablets",
+    "Apple iPhones and iPads",
+    "Windows laptops",
+    "Gaming consoles"
+  ],
+  "correct_answer": [
+    "Apple iPhones and iPads"
+  ],
+  "explanation": "Lightning connectors are commonly found on Apple’s mobile devices like iPhones and iPads.",
+  "tags": [
+    "iPhone",
+    "iPad",
+    "Apple devices"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

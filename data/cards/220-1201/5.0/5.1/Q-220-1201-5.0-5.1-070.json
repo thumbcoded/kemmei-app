@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the most likely reason for distorted resolution and poor image quality after replacing a graphics card?",
+  "answer_options": [
+    "Incorrect printer settings",
+    "Video drivers are missing or outdated",
+    "The motherboard BIOS is corrupted",
+    "The SSD is full"
+  ],
+  "correct_answer": [
+    "Video drivers are missing or outdated"
+  ],
+  "explanation": "Replacing a graphics card usually requires updated drivers. Without them, the system may default to low-resolution settings.",
+  "tags": [
+    "video drivers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

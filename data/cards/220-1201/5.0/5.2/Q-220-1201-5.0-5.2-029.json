@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-029",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user sees the message 'boot device not found' when starting their computer. What is the most likely cause?",
+  "answer_options": [
+    "Bad RAM module",
+    "Corrupt printer driver",
+    "Incorrect boot sequence",
+    "Outdated antivirus definition"
+  ],
+  "correct_answer": [
+    "Incorrect boot sequence"
+  ],
+  "explanation": "If the boot sequence is misconfigured in BIOS, the system may not locate the correct drive with a bootable OS.",
+  "tags": [
+    "boot device not found",
+    "boot sequence"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

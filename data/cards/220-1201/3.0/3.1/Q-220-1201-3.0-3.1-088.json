@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What simple tool can be used to confirm if an image is still present on a screen with suspected backlight failure?",
+  "answer_options": [
+    "Compressed air canister",
+    "Ethernet loopback plug",
+    "Flashlight",
+    "Multimeter"
+  ],
+  "correct_answer": [
+    "Flashlight"
+  ],
+  "explanation": "Using a flashlight at an angle can help determine whether the LCD panel is displaying an image without backlight illumination.",
+  "tags": [
+    "flashlight test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

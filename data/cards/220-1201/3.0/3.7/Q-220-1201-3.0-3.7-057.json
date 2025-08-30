@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following might be required to enable duplex printing on some printers?",
+  "answer_options": [
+    "PostScript driver",
+    "Additional memory",
+    "Firmware update",
+    "Additional hardware"
+  ],
+  "correct_answer": [
+    "Additional hardware"
+  ],
+  "explanation": "Not all printers support duplex printing natively—some may require additional hardware to enable double-sided printing.",
+  "tags": [
+    "duplex printing",
+    "hardware requirements"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

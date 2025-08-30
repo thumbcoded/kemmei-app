@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What key feature allows VA LCDs to produce deeper blacks than IPS panels?",
+  "answer_options": [
+    "Faster refresh rates",
+    "Horizontal alignment of liquid crystals",
+    "Vertical alignment that blocks backlight more effectively",
+    "Integrated contrast filters"
+  ],
+  "correct_answer": [
+    "Vertical alignment that blocks backlight more effectively"
+  ],
+  "explanation": "VA (Vertical Alignment) LCDs align their liquid crystals in a way that blocks more light in the 'off' state, resulting in better black levels.",
+  "tags": [
+    "vertical alignment",
+    "VA LCD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

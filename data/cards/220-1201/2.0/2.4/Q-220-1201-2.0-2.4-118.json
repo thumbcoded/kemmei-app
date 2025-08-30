@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-118",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one reason a technician might shorten the DHCP lease duration?",
+  "answer_options": [
+    "To reduce wireless range",
+    "To free up IPs faster on networks with frequent device turnover",
+    "To avoid interference from DNS records",
+    "To limit router CPU usage"
+  ],
+  "correct_answer": [
+    "To free up IPs faster on networks with frequent device turnover"
+  ],
+  "explanation": "Shorter lease durations ensure unused IPs return to the pool more quickly, helpful in guest or high-churn environments.",
+  "tags": [
+    "lease duration",
+    "IP pool"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

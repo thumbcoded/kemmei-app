@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician is troubleshooting a user's inability to print from their smartphone to an MFD. Which feature is most likely misconfigured or unsupported?",
+  "answer_options": [
+    "Fax capability",
+    "Mobile printing",
+    "Auto-duplexing",
+    "USB port access"
+  ],
+  "correct_answer": [
+    "Mobile printing"
+  ],
+  "explanation": "Mobile printing enables users to send print jobs from mobile devices to networked MFDs. If it's not configured, printing from a phone will fail.",
+  "tags": [
+    "mobile printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

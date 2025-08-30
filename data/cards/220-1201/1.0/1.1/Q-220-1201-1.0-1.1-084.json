@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which technology is used for short-range personal area network communication, such as connecting a mouse or keyboard?",
+  "answer_options": [
+    "NFC",
+    "Wi-Fi",
+    "Z-Wave",
+    "Bluetooth"
+  ],
+  "correct_answer": [
+    "Bluetooth"
+  ],
+  "explanation": "Bluetooth is ideal for PAN (Personal Area Network) applications like connecting peripheral devices.",
+  "tags": [
+    "Bluetooth"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-129",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a benefit of using DHCP reservations instead of manually configuring static IPs on each device?",
+  "answer_options": [
+    "Reduces DHCP server load",
+    "Avoids the need for MAC addresses",
+    "Simplifies updates to IP address schemes",
+    "Increases broadcast range"
+  ],
+  "correct_answer": [
+    "Simplifies updates to IP address schemes"
+  ],
+  "explanation": "With DHCP reservations, administrators can make changes on the server side without reconfiguring each device manually.",
+  "tags": [
+    "static assignment",
+    "DHCP reservation",
+    "consistent IP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

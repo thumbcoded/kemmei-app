@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user cannot access their mapped network drive after logon. What part of the login process might be missing?",
+  "answer_options": [
+    "UEFI secure boot",
+    "Login script",
+    "Task scheduler",
+    "File permission hash"
+  ],
+  "correct_answer": [
+    "Login script"
+  ],
+  "explanation": "Mapped network drives are often configured via login scripts that run when a user signs in.",
+  "tags": [
+    "login script"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

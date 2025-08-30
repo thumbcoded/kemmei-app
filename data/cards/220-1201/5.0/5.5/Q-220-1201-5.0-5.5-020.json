@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "You are experiencing poor wireless signal in one part of your office. What is the most effective step to improve coverage for all users?",
+  "answer_options": [
+    "Change to a static IP address",
+    "Enable loopback address testing",
+    "Move the access point to a centralized location",
+    "Lower the access point’s broadcast power"
+  ],
+  "correct_answer": [
+    "Move the access point to a centralized location"
+  ],
+  "explanation": "A centralized access point ensures even distribution of signal and minimizes weak zones.",
+  "tags": [
+    "access point placement",
+    "centralized location"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

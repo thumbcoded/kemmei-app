@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A laptop trackpad frequently jumps the pointer around without user input. What is the likely issue?",
+  "answer_options": [
+    "Trackpad problems",
+    "Stuck key on keyboard",
+    "Low disk space",
+    "Driver update required"
+  ],
+  "correct_answer": [
+    "Trackpad problems"
+  ],
+  "explanation": "Unexpected pointer movements on a laptop often point to malfunctioning or overly sensitive trackpads.",
+  "tags": [
+    "trackpad problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

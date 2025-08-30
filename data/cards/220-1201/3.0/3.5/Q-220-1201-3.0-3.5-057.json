@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A PCIe x16 graphics card is operating at reduced bandwidth. Which of the following configurations could explain this behavior?",
+  "answer_options": [
+    "It was installed in a PCI slot",
+    "The x16 slot is electrically wired for x4 lanes",
+    "The card is backward incompatible",
+    "The motherboard supports only PCIe v1.0"
+  ],
+  "correct_answer": [
+    "The x16 slot is electrically wired for x4 lanes"
+  ],
+  "explanation": "Some motherboard x16 physical slots are electrically connected for fewer lanes (e.g., x4), reducing performance.",
+  "tags": [
+    "PCIe",
+    "x16 slot",
+    "x4 slot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

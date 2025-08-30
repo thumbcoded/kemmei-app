@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which action should be performed to ensure the system’s power source is adequate for connected storage devices?",
+  "answer_options": [
+    "Enable TRIM support",
+    "Run a power supply audit",
+    "Change CPU fan curve",
+    "Disable Wi-Fi adapter"
+  ],
+  "correct_answer": [
+    "Run a power supply audit"
+  ],
+  "explanation": "A power supply audit confirms that the PSU can handle all attached devices, especially when drives are added.",
+  "tags": [
+    "power supply audit"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

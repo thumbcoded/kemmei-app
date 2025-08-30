@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of the 8-pin EPS connector coming from a PSU?",
+  "answer_options": [
+    "It powers PCI Express cards",
+    "It delivers power to the CPU",
+    "It connects the front panel LEDs",
+    "It supplies standby power"
+  ],
+  "correct_answer": [
+    "It delivers power to the CPU"
+  ],
+  "explanation": "The 8-pin (or 4+4-pin) EPS connector provides dedicated +12V power directly to the CPU socket area on the motherboard.",
+  "tags": [
+    "power supply output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

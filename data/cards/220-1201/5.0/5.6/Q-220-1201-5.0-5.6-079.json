@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is typically evaluated when performing a print quality test?",
+  "answer_options": [
+    "Printer IP address",
+    "Page orientation settings",
+    "Toner or ink application and image clarity",
+    "Print server response time"
+  ],
+  "correct_answer": [
+    "Toner or ink application and image clarity"
+  ],
+  "explanation": "A print quality test helps determine issues like faded text, streaks, or smudges caused by toner or ink delivery problems.",
+  "tags": [
+    "print quality test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

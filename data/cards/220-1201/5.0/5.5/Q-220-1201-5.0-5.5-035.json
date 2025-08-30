@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician wants to verify whether a device received its network settings from DHCP. Which tool should they use?",
+  "answer_options": [
+    "Device Manager",
+    "Disk Management",
+    "IP configuration utility",
+    "Task Manager"
+  ],
+  "correct_answer": [
+    "IP configuration utility"
+  ],
+  "explanation": "The IP config command or GUI tools can show if an IP address was assigned manually or via DHCP.",
+  "tags": [
+    "IP configuration",
+    "network diagnostics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

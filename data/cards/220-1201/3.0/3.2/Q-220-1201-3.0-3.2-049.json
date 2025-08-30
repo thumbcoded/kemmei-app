@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two connector types are typically required to connect an internal SATA hard drive? (Select two)",
+  "answer_options": [
+    "7-pin data connector",
+    "15-pin power connector",
+    "RJ45 connector",
+    "DisplayPort connector",
+    "VGA connector"
+  ],
+  "correct_answer": [
+    "7-pin data connector",
+    "15-pin power connector"
+  ],
+  "explanation": "SATA hard drives use a 7-pin connector for data and a 15-pin connector for power.",
+  "tags": [
+    "7-pin data connector",
+    "15-pin power connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

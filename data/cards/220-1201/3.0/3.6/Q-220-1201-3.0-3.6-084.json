@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "In which type of device are redundant power supplies most commonly found?",
+  "answer_options": [
+    "Gaming laptop",
+    "Smartphone",
+    "Desktop PC",
+    "Server"
+  ],
+  "correct_answer": [
+    "Server"
+  ],
+  "explanation": "Servers often include redundant power supplies to ensure maximum uptime and fault tolerance.",
+  "tags": [
+    "server power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

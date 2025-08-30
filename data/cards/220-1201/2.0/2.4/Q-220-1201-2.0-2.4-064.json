@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are reasons a DNS lookup might return inconsistent results across systems? (Select all that apply)",
+  "answer_options": [
+    "Different local DNS server configurations",
+    "Local DNS cache differences",
+    "Use of UDP instead of TCP",
+    "Incorrect netmask on querying host",
+    "Geographically distributed DNS resolvers"
+  ],
+  "correct_answer": [
+    "Different local DNS server configurations",
+    "Local DNS cache differences",
+    "Geographically distributed DNS resolvers"
+  ],
+  "explanation": "DNS resolution can vary due to cache, server settings, and geographically-aware responses. IP/subnet config typically doesn't impact DNS directly.",
+  "tags": [
+    "DNS lookup",
+    "DNS server",
+    "DNS resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

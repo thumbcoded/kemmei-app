@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why might an enterprise network use multiple DHCP servers?",
+  "answer_options": [
+    "To reduce bandwidth consumption",
+    "To support IPv6 traffic",
+    "To provide redundancy in case one server fails",
+    "To enable DNS caching"
+  ],
+  "correct_answer": [
+    "To provide redundancy in case one server fails"
+  ],
+  "explanation": "Multiple DHCP servers ensure availability and prevent network disruption if one server becomes unavailable.",
+  "tags": [
+    "DHCP",
+    "DHCP server",
+    "redundancy",
+    "multiple DHCP servers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

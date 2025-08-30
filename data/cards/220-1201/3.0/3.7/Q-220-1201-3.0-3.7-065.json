@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of configuring multiple paper trays in a printer?",
+  "answer_options": [
+    "To store extra toner cartridges",
+    "To allow for different paper types and sizes",
+    "To increase print resolution",
+    "To enable wireless printing"
+  ],
+  "correct_answer": [
+    "To allow for different paper types and sizes"
+  ],
+  "explanation": "Multiple paper trays allow you to select between plain paper, letterhead, envelopes, and other media formats.",
+  "tags": [
+    "media selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

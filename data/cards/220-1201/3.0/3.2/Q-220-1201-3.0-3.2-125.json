@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-125",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why are DB9 connections still found on networking and industrial equipment?",
+  "answer_options": [
+    "They offer faster speeds than USB 3.2",
+    "They provide secure wireless connectivity",
+    "They are durable and reliable for low-bandwidth communication",
+    "They are required for PCIe communication"
+  ],
+  "correct_answer": [
+    "They are durable and reliable for low-bandwidth communication"
+  ],
+  "explanation": "DB9 connectors are robust and sufficient for simple data tasks like configuration or control, making them useful for long-term industrial deployment.",
+  "tags": [
+    "DB9",
+    "legacy equipment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

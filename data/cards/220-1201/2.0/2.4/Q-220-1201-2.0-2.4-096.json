@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of DHCP on a network?",
+  "answer_options": [
+    "To manually assign IP addresses",
+    "To automatically assign IP addresses and configuration settings",
+    "To encrypt network traffic",
+    "To create VLANs"
+  ],
+  "correct_answer": [
+    "To automatically assign IP addresses and configuration settings"
+  ],
+  "explanation": "DHCP (Dynamic Host Configuration Protocol) enables automatic configuration of IP settings including address, gateway, DNS, and more.",
+  "tags": [
+    "DHCP",
+    "Dynamic Host Configuration Protocol",
+    "automatic configuration",
+    "IP assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

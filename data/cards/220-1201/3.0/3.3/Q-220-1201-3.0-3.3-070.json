@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How does multi-channel memory improve CPU efficiency in high-performance systems?",
+  "answer_options": [
+    "By enabling higher clock speeds on memory modules",
+    "By minimizing the need for memory parity checks",
+    "By reducing CPU idle cycles through parallel memory access",
+    "By dynamically changing voltage levels per channel"
+  ],
+  "correct_answer": [
+    "By reducing CPU idle cycles through parallel memory access"
+  ],
+  "explanation": "Multi-channel memory configurations allow simultaneous memory access, reducing CPU wait times and increasing effective memory throughput.",
+  "tags": [
+    "CPU-memory communication",
+    "multi-channel memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

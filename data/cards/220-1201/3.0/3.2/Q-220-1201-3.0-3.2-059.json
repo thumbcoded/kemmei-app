@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a USB hub primarily used for?",
+  "answer_options": [
+    "Extending wireless range",
+    "Converting HDMI to DVI",
+    "Connecting multiple USB devices through one port",
+    "Providing VGA output for laptops"
+  ],
+  "correct_answer": [
+    "Connecting multiple USB devices through one port"
+  ],
+  "explanation": "USB hubs allow you to plug multiple USB peripherals into a single USB port on your computer.",
+  "tags": [
+    "USB hubs"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

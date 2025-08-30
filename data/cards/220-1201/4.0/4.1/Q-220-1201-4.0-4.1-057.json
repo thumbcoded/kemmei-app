@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary risk associated with a 'VM escape' attack?",
+  "answer_options": [
+    "A VM loses internet connectivity",
+    "Malware infects the host or other VMs through the hypervisor",
+    "The guest operating system crashes",
+    "The virtual machine manager deletes saved snapshots"
+  ],
+  "correct_answer": [
+    "Malware infects the host or other VMs through the hypervisor"
+  ],
+  "explanation": "A VM escape allows malicious code in one VM to break out and impact other VMs or the host system.",
+  "tags": [
+    "VM escape",
+    "hypervisor security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

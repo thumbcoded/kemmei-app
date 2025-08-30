@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens if the read/write head contacts the platter surface?",
+  "answer_options": [
+    "The drive shifts to SSD fallback mode",
+    "An error message is displayed immediately",
+    "The drive's cache attempts data correction",
+    "The platter surface may be damaged, causing data loss"
+  ],
+  "correct_answer": [
+    "The platter surface may be damaged, causing data loss"
+  ],
+  "explanation": "Contact between the head and platter is known as a head crash and can cause irreversible physical and data damage.",
+  "tags": [
+    "read/write head"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

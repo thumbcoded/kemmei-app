@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component on the motherboard must match the CPU for proper installation?",
+  "answer_options": [
+    "RAM slot",
+    "Power connector",
+    "Expansion slot",
+    "CPU socket type"
+  ],
+  "correct_answer": [
+    "CPU socket type"
+  ],
+  "explanation": "The CPU must match the socket type on the motherboard, such as Intel LGA or AMD AM4.",
+  "tags": [
+    "CPU socket type"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

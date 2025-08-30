@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to avoid opening a hard drive outside of a cleanroom environment?",
+  "answer_options": [
+    "To prevent static electricity buildup",
+    "To protect the hard drive from password loss",
+    "To avoid exposure to harmful radiation",
+    "To prevent dust contamination of internal components"
+  ],
+  "correct_answer": [
+    "To prevent dust contamination of internal components"
+  ],
+  "explanation": "Even tiny dust particles can interfere with the precise movement of the read/write head and damage data integrity.",
+  "tags": [
+    "dust-free environment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

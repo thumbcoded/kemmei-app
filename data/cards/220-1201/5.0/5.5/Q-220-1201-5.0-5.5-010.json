@@ -1,0 +1,39 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid public IP addresses commonly used to test external connectivity? (Select all that apply)",
+  "answer_options": [
+    "8.8.8.8",
+    "127.0.0.1",
+    "1.1.1.1",
+    "9.9.9.9",
+    "255.255.255.255"
+  ],
+  "correct_answer": [
+    "8.8.8.8",
+    "1.1.1.1",
+    "9.9.9.9"
+  ],
+  "explanation": "8.8.8.8 (Google), 1.1.1.1 (Cloudflare), and 9.9.9.9 (Quad9) are public DNS servers often used to test internet reachability.",
+  "tags": [
+    "8.8.8.8",
+    "1.1.1.1",
+    "9.9.9.9",
+    "ping external address",
+    "quad 8",
+    "quad 9",
+    "quad 1"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

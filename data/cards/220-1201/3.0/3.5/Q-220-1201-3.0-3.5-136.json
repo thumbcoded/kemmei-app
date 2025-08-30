@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-136",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following would most likely indicate a CMOS battery failure?",
+  "answer_options": [
+    "Operating system crashes on login",
+    "POST fails with multiple beeps",
+    "System time resets after each power cycle",
+    "Hard drive makes clicking noise"
+  ],
+  "correct_answer": [
+    "System time resets after each power cycle"
+  ],
+  "explanation": "A failing CMOS battery causes BIOS/UEFI settings to reset, including date/time, on each restart.",
+  "tags": [
+    "BIOS",
+    "firmware settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

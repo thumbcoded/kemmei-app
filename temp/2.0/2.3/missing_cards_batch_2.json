@@ -1,0 +1,195 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "Why do SIEM systems require significant log storage space?",
+    "answer_options": [
+      "To store backup copies of all network devices",
+      "To keep logs for a very long time across many different systems",
+      "To cache frequently accessed web pages",
+      "To store user email messages"
+    ],
+    "correct_answer": ["To keep logs for a very long time across many different systems"],
+    "explanation": "SIEM systems consolidate log information from many devices to one central point and need substantial storage space because they keep logs for extended periods across diverse systems.",
+    "tags": ["SIEM", "log files", "central database"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "How do users typically interact with proxy servers in enterprise networks?",
+    "answer_options": [
+      "Users must manually configure proxy settings for each application",
+      "Users are unaware of the proxy as it operates transparently",
+      "Users must provide credentials to the proxy server",
+      "Users must install special proxy client software"
+    ],
+    "correct_answer": ["Users are unaware of the proxy as it operates transparently"],
+    "explanation": "Proxy servers often sit invisibly in the network, and end users have no idea that there is a proxy evaluating the inbound and outbound traffic from their device.",
+    "tags": ["proxy server", "content inspection", "access control"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What happens when NTP synchronization fails on network devices?",
+    "answer_options": [
+      "Devices stop functioning completely",
+      "Log file correlation becomes difficult and encryption may fail",
+      "Internet connectivity is lost",
+      "File sharing services become unavailable"
+    ],
+    "correct_answer": ["Log file correlation becomes difficult and encryption may fail"],
+    "explanation": "Accurate time is critical for comparing log files across systems and many encryption technologies require correct date and time to function properly.",
+    "tags": ["NTP", "time accuracy", "log files"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "What automated functions does a load balancer perform when a server fails? (Select two)",
+    "answer_options": [
+      "Automatically detect server failure",
+      "Remove failed server from rotation",
+      "Restart the failed server",
+      "Send error messages to users",
+      "Increase network bandwidth"
+    ],
+    "correct_answer": ["Automatically detect server failure", "Remove failed server from rotation"],
+    "explanation": "Load balancers automatically detect when servers stop communicating and remove them from rotation, allowing remaining servers to handle the load until the failed server is restored.",
+    "tags": ["load balancer", "availability", "server farm"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What security evaluation process does a proxy server perform before forwarding responses?",
+    "answer_options": [
+      "Checks if the response content is appropriate and secure",
+      "Encrypts all response data",
+      "Compresses the response to save bandwidth",
+      "Translates the response to different languages"
+    ],
+    "correct_answer": ["Checks if the response content is appropriate and secure"],
+    "explanation": "A proxy server receives responses from services and evaluates them to ensure everything looks appropriate and secure before sending the response to the end user.",
+    "tags": ["proxy server", "content inspection", "malware detection"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "Which benefits do transparent proxy servers provide? (Select two)",
+    "answer_options": [
+      "Content scanning capabilities",
+      "Faster internet connections",
+      "Access control enforcement",
+      "Automatic software updates",
+      "Increased storage capacity"
+    ],
+    "correct_answer": ["Content scanning capabilities", "Access control enforcement"],
+    "explanation": "Transparent proxy servers provide content scanning to limit what information can be received and access control to manage what users can access, all while operating invisibly.",
+    "tags": ["proxy server", "content inspection", "access control"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "How does a load balancer know when a previously failed server is ready to receive traffic again?",
+    "answer_options": [
+      "An administrator manually adds it back",
+      "The load balancer automatically detects it's back in service",
+      "The server sends a special recovery message",
+      "Users report that the service is working"
+    ],
+    "correct_answer": ["The load balancer automatically detects it's back in service"],
+    "explanation": "Load balancers automatically know when a server is back in service and will begin sending additional requests to the server once it's up and running again.",
+    "tags": ["load balancer", "availability", "uptime"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "In a large-scale deployment, what storage challenge does a SIEM face without proper log consolidation?",
+    "answer_options": [
+      "Insufficient processing power for real-time analysis",
+      "Inability to correlate events across distributed systems",
+      "Excessive network bandwidth consumption",
+      "Inadequate user access controls"
+    ],
+    "correct_answer": ["Inability to correlate events across distributed systems"],
+    "explanation": "Without proper log consolidation, a SIEM cannot effectively correlate information across diverse systems, which is essential for detecting patterns and security threats in large deployments.",
+    "tags": ["SIEM", "log consolidation", "correlation"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "What would happen if a network's NTP service fails and devices have significantly different times?",
+    "answer_options": [
+      "File sharing would become unavailable",
+      "Log correlation would be impossible and encryption systems might fail",
+      "Internet browsing would slow down",
+      "Email delivery would be delayed"
+    ],
+    "correct_answer": ["Log correlation would be impossible and encryption systems might fail"],
+    "explanation": "Without accurate time synchronization from NTP, administrators cannot correlate log files across systems effectively, and many encryption technologies require synchronized time to function.",
+    "tags": ["NTP", "network time protocol", "time accuracy", "correlation"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "hard",
+    "question_type": "select_all",
+    "question_text": "Which components are essential for enterprise log management infrastructure? (Select all that apply)",
+    "answer_options": [
+      "Central SIEM system",
+      "Adequate long-term storage space",
+      "Syslog protocol support",
+      "Correlation capabilities",
+      "Time synchronization across devices"
+    ],
+    "correct_answer": ["Central SIEM system", "Adequate long-term storage space", "Syslog protocol support", "Correlation capabilities", "Time synchronization across devices"],
+    "explanation": "Enterprise log management requires a central SIEM, sufficient storage for long-term retention, Syslog for consolidation, correlation capabilities for analysis, and synchronized time for accurate log correlation.",
+    "tags": ["SIEM", "Syslog", "log consolidation", "correlation"],
+    "status": "approved"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What IP address is used to test a device’s internal IP stack?",
+  "answer_options": [
+    "192.168.0.1",
+    "8.8.8.8",
+    "127.0.0.1",
+    "255.255.255.255"
+  ],
+  "correct_answer": [
+    "127.0.0.1"
+  ],
+  "explanation": "127.0.0.1 is the loopback address used to verify internal IP functionality.",
+  "tags": [
+    "ping loopback",
+    "127.0.0.1",
+    "loopback address",
+    "IP stack testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

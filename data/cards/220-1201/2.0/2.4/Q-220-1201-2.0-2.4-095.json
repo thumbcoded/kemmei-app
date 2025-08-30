@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which DMARC policy is best suited for gradually testing authentication settings before enforcing stricter rules?",
+  "answer_options": [
+    "none",
+    "quarantine",
+    "reject",
+    "mandatory"
+  ],
+  "correct_answer": [
+    "none"
+  ],
+  "explanation": "A 'none' policy in DMARC allows senders to monitor email failures without affecting delivery — useful for initial testing.",
+  "tags": [
+    "DMARC",
+    "Domain-based Message Authentication",
+    "email authentication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

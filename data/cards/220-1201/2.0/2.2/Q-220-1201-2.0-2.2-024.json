@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Select three reasons why the 6 GHz band improves wireless performance compared to 2.4 GHz and 5 GHz:",
+  "answer_options": [
+    "Wider available spectrum",
+    "Less device congestion",
+    "Backward compatibility with 802.11a",
+    "Support for legacy wireless clients",
+    "More non-overlapping channels"
+  ],
+  "correct_answer": [
+    "Wider available spectrum",
+    "Less device congestion",
+    "More non-overlapping channels"
+  ],
+  "explanation": "The 6 GHz band provides more contiguous spectrum, fewer legacy devices competing, and more available channels for high-bandwidth communication.",
+  "tags": [
+    "6 GHz",
+    "bandwidth",
+    "channel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

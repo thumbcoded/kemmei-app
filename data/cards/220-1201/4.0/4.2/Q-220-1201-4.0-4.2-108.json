@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-108",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is 'multi-tenancy' in cloud computing?",
+  "answer_options": [
+    "A service that allows only one user at a time",
+    "Hosting user data on separate physical servers",
+    "A model where many customers share the same infrastructure",
+    "The use of dedicated servers for each application"
+  ],
+  "correct_answer": [
+    "A model where many customers share the same infrastructure"
+  ],
+  "explanation": "Multi-tenancy allows cloud providers to maximize efficiency by serving many users on shared systems.",
+  "tags": [
+    "multi-tenancy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

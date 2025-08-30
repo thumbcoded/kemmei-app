@@ -1,0 +1,192 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is a startup device in BIOS context and how does it differ from storage devices?",
+    "answer_options": [
+      "Startup devices are only USB drives that can boot the system",
+      "Any device configured in BIOS that can contain bootable code, differs from storage in requiring valid boot sectors",
+      "Storage devices that are connected internally to the motherboard",
+      "Network devices that provide internet connectivity during boot"
+    ],
+    "correct_answer": ["Any device configured in BIOS that can contain bootable code, differs from storage in requiring valid boot sectors"],
+    "explanation": "A startup device is any device configured in BIOS that can contain bootable code, including storage drives, USB devices, optical drives, or network interfaces (PXE). It differs from storage devices in that not all storage devices are bootable - they must contain valid boot sectors and operating systems to function as startup devices.",
+    "tags": ["startup device"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What are low profile batteries on motherboards and when are they typically used?",
+    "answer_options": [
+      "High-capacity batteries used in gaming motherboards for overclocking",
+      "Thin, flat CMOS batteries for compact motherboards in small form factor PCs",
+      "Rechargeable batteries that provide backup power during outages",
+      "External batteries connected via USB for portable systems"
+    ],
+    "correct_answer": ["Thin, flat CMOS batteries for compact motherboards in small form factor PCs"],
+    "explanation": "Low profile batteries are thin, flat CMOS batteries designed for compact motherboards where space is limited, such as in small form factor PCs, laptops, or embedded systems. They serve the same function as standard coin cell batteries (maintaining BIOS settings and real-time clock) but in a smaller form factor to fit tight spaces.",
+    "tags": ["low profile battery"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What triggers a date and time prompt during startup and how do you resolve it?",
+    "answer_options": [
+      "Network connectivity issues preventing automatic time synchronization",
+      "CMOS battery dead/dying, BIOS settings reset, or real-time clock power loss",
+      "Hard drive corruption affecting system time settings",
+      "Operating system update requiring time zone reconfiguration"
+    ],
+    "correct_answer": ["CMOS battery dead/dying, BIOS settings reset, or real-time clock power loss"],
+    "explanation": "A date and time prompt appears when: the CMOS battery is dead/dying, BIOS settings were reset, or the real-time clock lost power. Resolution: 1) Replace the CMOS battery, 2) Set correct date and time in BIOS, 3) Save BIOS settings, 4) If recurring, check for BIOS corruption or motherboard RTC failure requiring professional repair.",
+    "tags": ["date and time prompt"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is the proper procedure for battery replacement on a motherboard?",
+    "answer_options": [
+      "Hot-swap the battery while system is running to maintain BIOS settings",
+      "Power down completely, ground yourself, remove old battery noting polarity, insert new battery correctly",
+      "Only replace batteries during scheduled maintenance windows with manufacturer",
+      "Use any available battery regardless of type as long as voltage matches"
+    ],
+    "correct_answer": ["Power down completely, ground yourself, remove old battery noting polarity, insert new battery correctly"],
+    "explanation": "Procedure: 1) Power down and unplug system completely, 2) Ground yourself to prevent ESD, 3) Locate battery (usually coin cell CR2032), 4) Carefully remove old battery noting polarity, 5) Insert new battery with correct polarity (+/-), 6) Power on and reconfigure BIOS settings, 7) Save settings and verify date/time retention after restart.",
+    "tags": ["battery replacement"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What is BIOS configuration reset and when would you perform this procedure?",
+    "answer_options": [
+      "Updates BIOS firmware to the latest version from manufacturer",
+      "Restores all firmware settings to factory defaults, used for boot problems or corrupted settings",
+      "Creates a backup copy of current BIOS settings for restoration later",
+      "Optimizes BIOS settings automatically for better system performance"
+    ],
+    "correct_answer": ["Restores all firmware settings to factory defaults, used for boot problems or corrupted settings"],
+    "explanation": "BIOS configuration reset restores all firmware settings to factory defaults, clearing custom configurations. Perform when: experiencing boot problems after BIOS changes, system instability from overclocking, password recovery needs, or corrupted settings. Methods include: load defaults in BIOS menu, CMOS jumper reset, or battery removal (older systems).",
+    "tags": ["BIOS configuration reset"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "What is a jumper reset and how do you safely perform this procedure on a motherboard?",
+    "answer_options": [
+      "Software command that remotely resets BIOS settings through operating system",
+      "Physical jumper on motherboard to clear CMOS - move jumper to reset position for 10-15 seconds",
+      "Network protocol that allows remote BIOS configuration management",
+      "Automatic process that occurs when system detects hardware configuration changes"
+    ],
+    "correct_answer": ["Physical jumper on motherboard to clear CMOS - move jumper to reset position for 10-15 seconds"],
+    "explanation": "A jumper reset uses a physical jumper on the motherboard to clear CMOS/BIOS settings. Procedure: 1) Power off and unplug system, 2) Ground yourself, 3) Locate CMOS reset jumper (usually near battery), 4) Move jumper from normal position to reset position for 10-15 seconds, 5) Return jumper to normal position, 6) Power on and reconfigure BIOS settings.",
+    "tags": ["jumper reset"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What is a critical error in system troubleshooting and how does it differ from other system errors?",
+    "answer_options": [
+      "Minor software glitch that can be ignored during normal operation",
+      "Severe system fault requiring immediate shutdown to prevent data corruption or hardware damage",
+      "Network connectivity error that affects internet access but not local operations",
+      "User-generated error from incorrect input that can be easily corrected"
+    ],
+    "correct_answer": ["Severe system fault requiring immediate shutdown to prevent data corruption or hardware damage"],
+    "explanation": "A critical error is a severe system fault that requires immediate shutdown to prevent data corruption or hardware damage. It differs from other errors by: causing immediate system halt, preventing normal operation, often triggering blue screen or kernel panic, and typically indicating hardware failure or severe driver issues rather than minor software problems.",
+    "tags": ["critical error"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "How do you identify if a system problem is a hardware problem versus a software problem?",
+    "answer_options": [
+      "Hardware problems only occur during business hours, software problems occur anytime",
+      "Hardware problems are consistent across different OS, occur during POST/boot, have physical symptoms",
+      "Software problems always require complete system reinstallation to resolve",
+      "Hardware problems can only be diagnosed by manufacturer technicians"
+    ],
+    "correct_answer": ["Hardware problems are consistent across different OS, occur during POST/boot, have physical symptoms"],
+    "explanation": "Hardware problem indicators: consistent failures across different OS, occurs during POST/boot, physical symptoms (overheating, noises), fails hardware diagnostics. Software problem indicators: works in safe mode, occurs after software changes, random crashes during specific applications, resolves with driver updates. Test with minimal configuration and bootable diagnostics to isolate.",
+    "tags": ["hardware problem"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is 'click of death' and what does it indicate about storage drive health?",
+    "answer_options": [
+      "Normal operating sound indicating the drive is working properly",
+      "Repetitive clicking sounds from hard drive indicating severe mechanical failure",
+      "Network connectivity sound when accessing remote storage devices",
+      "Power supply noise that affects all connected storage devices"
+    ],
+    "correct_answer": ["Repetitive clicking sounds from hard drive indicating severe mechanical failure"],
+    "explanation": "The 'click of death' refers to repetitive clicking sounds from a hard drive, indicating severe mechanical failure. It occurs when read/write heads repeatedly try to access data but fail, often due to head crash, platter damage, or actuator failure. This usually means imminent drive failure and immediate data backup is critical before complete failure occurs.",
+    "tags": ["click of death"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.1",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What constitutes a storage drive error and what are the common types you might encounter?",
+    "answer_options": [
+      "Only physical damage to the drive casing or connectors",
+      "Problems reading/writing data including bad sectors, file system corruption, connection errors",
+      "Exclusively software-related issues that don't affect hardware operation",
+      "Network delays when accessing cloud-based storage services"
+    ],
+    "correct_answer": ["Problems reading/writing data including bad sectors, file system corruption, connection errors"],
+    "explanation": "Storage drive errors indicate problems reading/writing data. Common types: bad sectors (physical damage), file system corruption, connection errors, timeout errors, seek errors, and CRC errors. These manifest as slow performance, clicking sounds, files becoming inaccessible, or 'cannot read from source disc' messages. SMART monitoring helps detect these early.",
+    "tags": ["storage drive error"],
+    "status": "approved"
+  }
+]

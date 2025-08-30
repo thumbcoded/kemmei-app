@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why does increasing RPM improve performance only to a certain point in hard drives?",
+  "answer_options": [
+    "Latency becomes negative above 15000 RPM",
+    "The OS cannot handle speeds above 7200 RPM",
+    "Mechanical limitations and heat increase faster than performance",
+    "High RPM disables error correction features"
+  ],
+  "correct_answer": [
+    "Mechanical limitations and heat increase faster than performance"
+  ],
+  "explanation": "Higher RPM reduces latency, but it also increases friction, vibration, and heat, leading to diminishing returns and shorter lifespan.",
+  "tags": [
+    "15000 RPM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

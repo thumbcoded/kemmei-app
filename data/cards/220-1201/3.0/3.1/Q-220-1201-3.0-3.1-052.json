@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which unit is used to measure refresh rate?",
+  "answer_options": [
+    "Watts",
+    "Frames",
+    "Pixels",
+    "Hertz"
+  ],
+  "correct_answer": [
+    "Hertz"
+  ],
+  "explanation": "Refresh rate is measured in hertz (Hz), indicating how many times per second the screen redraws.",
+  "tags": [
+    "hertz"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

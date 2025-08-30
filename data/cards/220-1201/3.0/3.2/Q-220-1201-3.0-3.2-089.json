@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What common wiring issue can result from excessive untwisting of pairs during termination at a punchdown block?",
+  "answer_options": [
+    "Increased heat in the cable",
+    "Short circuits across the block",
+    "Signal degradation due to EMI and crosstalk",
+    "Mismatched connector polarity"
+  ],
+  "correct_answer": [
+    "Signal degradation due to EMI and crosstalk"
+  ],
+  "explanation": "The twist in twisted pair cables minimizes EMI. Untwisting more than half an inch before the punchdown can lead to poor signal performance.",
+  "tags": [
+    "twisted pair",
+    "termination"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

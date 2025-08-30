@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following ports are both associated with FTP?",
+  "answer_options": [
+    "20 and 21",
+    "23 and 25",
+    "110 and 143",
+    "53 and 80"
+  ],
+  "correct_answer": [
+    "20 and 21"
+  ],
+  "explanation": "FTP uses port 21 for control (commands) and port 20 for data transfer.",
+  "tags": [
+    "port 20",
+    "port 21",
+    "network service"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

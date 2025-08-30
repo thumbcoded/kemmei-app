@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is 127.0.0.1 a special address in IPv4?",
+  "answer_options": [
+    "It is reserved for dynamic assignment",
+    "It is used for internal loopback testing",
+    "It is the first usable address in a subnet",
+    "It is reserved for multicast applications"
+  ],
+  "correct_answer": [
+    "It is used for internal loopback testing"
+  ],
+  "explanation": "127.0.0.1 is a loopback address used to test a device’s internal networking stack without sending traffic onto the network.",
+  "tags": [
+    "IPv4",
+    "loopback"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

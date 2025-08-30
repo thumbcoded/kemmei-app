@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which USB connector is commonly found on the computer end of a direct printer connection?",
+  "answer_options": [
+    "Type A",
+    "Type B",
+    "USB-C",
+    "RJ45"
+  ],
+  "correct_answer": [
+    "Type A"
+  ],
+  "explanation": "USB Type A connectors are the standard flat rectangular connectors used on most computers to connect peripherals like printers.",
+  "tags": [
+    "USB connection",
+    "Type A"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

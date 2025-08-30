@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO conditions must be met for ECC memory to function properly? (Select two)",
+  "answer_options": [
+    "The system BIOS must support ECC decoding",
+    "The motherboard must be ECC-compatible",
+    "The CPU must have integrated graphics",
+    "The memory must be installed in single-channel mode",
+    "Parity must be disabled"
+  ],
+  "correct_answer": [
+    "The system BIOS must support ECC decoding",
+    "The motherboard must be ECC-compatible"
+  ],
+  "explanation": "ECC requires both motherboard and BIOS-level support to detect and correct memory errors successfully.",
+  "tags": [
+    "ECC memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

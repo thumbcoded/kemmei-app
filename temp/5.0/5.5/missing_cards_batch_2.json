@@ -1,0 +1,197 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "A technician observes that a switch port's link light flickers on and off every few seconds. After trying a different cable, the issue persists. What should be the next troubleshooting step?",
+    "answer_options": [
+      "Replace the network interface card",
+      "Test the cable on a different switch port",
+      "Update the switch firmware",
+      "Check the port configuration settings"
+    ],
+    "correct_answer": ["Test the cable on a different switch port"],
+    "explanation": "Since cable replacement didn't resolve the port flapping, testing the same cable on a different switch port helps determine if the issue is with the specific switch port hardware.",
+    "tags": ["bad cable detection", "link light check", "troubleshooting steps"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "hard",
+    "question_type": "select_multiple",
+    "question_text": "A video conference application experiences frequent freezing despite adequate bandwidth. Which TWO factors are most likely causing this issue? (Select two)",
+    "answer_options": [
+      "Insufficient upload speed",
+      "High network jitter",
+      "Inconsistent packet timing",
+      "Low signal strength",
+      "DNS resolution delays"
+    ],
+    "correct_answer": ["High network jitter", "Inconsistent packet timing"],
+    "explanation": "Video conferencing requires consistent packet delivery timing. High jitter and inconsistent packet timing cause freezing even when bandwidth is sufficient.",
+    "tags": ["network monitoring", "performance measurement", "bandwidth monitoring"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "An intermittent connectivity issue occurs only during business hours. Continuous ping shows normal response times most of the time, but occasional packet loss. What is the best approach?",
+    "answer_options": [
+      "Replace all network cables immediately",
+      "Monitor network utilization during peak hours",
+      "Restart all network equipment",
+      "Reconfigure all IP addresses"
+    ],
+    "correct_answer": ["Monitor network utilization during peak hours"],
+    "explanation": "Intermittent issues during business hours suggest network congestion. Monitoring utilization helps identify if increased traffic during peak times is causing packet loss.",
+    "tags": ["intermittent connectivity", "network monitoring", "bandwidth monitoring"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "hard",
+    "question_type": "select_all",
+    "question_text": "Which of the following could cause authentication failures when accessing network resources? (Select all that apply)",
+    "answer_options": [
+      "Expired user password",
+      "Account lockout due to failed attempts",
+      "Incorrect domain name",
+      "Network cable disconnected",
+      "Time synchronization issues",
+      "Disabled user account"
+    ],
+    "correct_answer": ["Expired user password", "Account lockout due to failed attempts", "Incorrect domain name", "Time synchronization issues", "Disabled user account"],
+    "explanation": "Authentication can fail due to credential issues (expired/wrong password), account status (locked/disabled), domain problems, or time sync issues affecting authentication protocols.",
+    "tags": ["connectivity testing", "network diagnostics", "troubleshooting steps"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "A wireless device shows good signal strength but poor SNR readings. What does this indicate?",
+    "answer_options": [
+      "The device is too far from the access point",
+      "There is significant interference in the area",
+      "The access point is malfunctioning",
+      "The wireless adapter needs driver updates"
+    ],
+    "correct_answer": ["There is significant interference in the area"],
+    "explanation": "Good signal strength with poor SNR indicates high noise levels relative to the signal, typically caused by interference from other devices or sources.",
+    "tags": ["signal quality", "wireless network monitoring", "channel interference"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "When troubleshooting intermittent network issues, which TWO monitoring techniques are most effective? (Select two)",
+    "answer_options": [
+      "Continuous ping to test connectivity",
+      "Single bandwidth test",
+      "Periodic speed tests over time",
+      "One-time cable test",
+      "Static IP configuration check"
+    ],
+    "correct_answer": ["Continuous ping to test connectivity", "Periodic speed tests over time"],
+    "explanation": "Intermittent issues require ongoing monitoring. Continuous ping reveals connectivity patterns, while periodic speed tests show performance variations over time.",
+    "tags": ["intermittent connectivity", "network monitoring", "connectivity testing"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "A company's VoIP system works well in the morning but becomes unusable during lunch hours. Traceroute shows increased latency at the ISP level. What is the most likely cause?",
+    "answer_options": [
+      "Equipment overheating during warmer hours",
+      "Network congestion during peak usage times",
+      "Scheduled maintenance by the ISP",
+      "Power fluctuations affecting network equipment"
+    ],
+    "correct_answer": ["Network congestion during peak usage times"],
+    "explanation": "Increased latency at the ISP during specific times indicates network congestion when many users are active, affecting real-time applications like VoIP.",
+    "tags": ["network monitoring", "performance measurement", "bandwidth monitoring"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What should you check first when a user reports they cannot access network resources after a weekend?",
+    "answer_options": [
+      "Network cable connections",
+      "User account password expiration",
+      "DHCP server status",
+      "DNS configuration"
+    ],
+    "correct_answer": ["User account password expiration"],
+    "explanation": "Many organizations have password policies that expire passwords over weekends. This is a common cause of Monday morning access issues.",
+    "tags": ["network diagnostics", "connectivity testing", "troubleshooting steps"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "A service level agreement (SLA) specifies 99.9% uptime. During troubleshooting, you discover the third-party service was down for 45 minutes last month. How should you proceed?",
+    "answer_options": [
+      "Ignore it since it was brief",
+      "Document the incident for SLA review",
+      "Immediately switch service providers",
+      "Upgrade to a higher service tier"
+    ],
+    "correct_answer": ["Document the incident for SLA review"],
+    "explanation": "45 minutes of downtime in a month may exceed the SLA commitment. Proper documentation is needed to review compliance and potentially seek remediation from the provider.",
+    "tags": ["network monitoring", "network analysis", "performance measurement"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.5",
+    "difficulty": "hard",
+    "question_type": "select_multiple",
+    "question_text": "A technician is analyzing network latency across multiple hops using traceroute. Which TWO factors indicate where the latency issue is occurring? (Select two)",
+    "answer_options": [
+      "Sudden increase in response time at a specific hop",
+      "Consistent response times across all hops",
+      "Timeout responses from certain routers",
+      "IPv6 addresses in the trace results",
+      "Decreasing response times toward the destination"
+    ],
+    "correct_answer": ["Sudden increase in response time at a specific hop", "Timeout responses from certain routers"],
+    "explanation": "Latency problems are identified by sudden response time increases at specific hops or timeouts, indicating issues at those network points in the path.",
+    "tags": ["network analysis", "performance measurement", "network diagnostics"],
+    "status": "approved"
+  }
+]

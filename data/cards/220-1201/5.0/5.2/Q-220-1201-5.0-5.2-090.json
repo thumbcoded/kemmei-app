@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What advantage does built-in RAID SMART monitoring provide over standalone monitoring?",
+  "answer_options": [
+    "It only works with specific drive manufacturers",
+    "It provides integrated monitoring without requiring separate third-party software",
+    "It can only monitor one drive at a time",
+    "It requires manual configuration for each drive"
+  ],
+  "correct_answer": [
+    "It provides integrated monitoring without requiring separate third-party software"
+  ],
+  "explanation": "RAID arrays often have SMART monitoring functionality built in, which provides integrated drive health monitoring without needing separate third-party software. This can also send automatic alerts and integrate with the RAID management interface.",
+  "tags": [
+    "RAID controller",
+    "third party utilities"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

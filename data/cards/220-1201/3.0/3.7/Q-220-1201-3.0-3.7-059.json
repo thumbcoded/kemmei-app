@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains that their duplex-printed booklet has some pages upside down. What is the most likely setting that needs adjustment?",
+  "answer_options": [
+    "Color profile",
+    "Orientation mode",
+    "Flip on long edge vs. short edge",
+    "Paper type"
+  ],
+  "correct_answer": [
+    "Flip on long edge vs. short edge"
+  ],
+  "explanation": "Duplex printers often let you choose between 'flip on long edge' and 'flip on short edge.' An incorrect setting can cause back pages to print upside down.",
+  "tags": [
+    "duplex printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

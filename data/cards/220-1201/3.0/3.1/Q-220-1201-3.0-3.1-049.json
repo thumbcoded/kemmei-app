@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which aspect ratio would most likely be inappropriate for standard high-definition video playback?",
+  "answer_options": [
+    "16:9",
+    "21:9",
+    "4:3",
+    "16:10"
+  ],
+  "correct_answer": [
+    "4:3"
+  ],
+  "explanation": "Standard HD video is designed for a 16:9 aspect ratio. A 4:3 display would cause black bars or cropping.",
+  "tags": [
+    "aspect ratio"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

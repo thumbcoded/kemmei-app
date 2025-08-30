@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user gets 'limited connectivity' and has IP address 169.254.100.50. What is the most likely cause?",
+  "answer_options": [
+    "The network cable is damaged",
+    "The DHCP server is unavailable",
+    "The default gateway is incorrect",
+    "DNS servers are not responding"
+  ],
+  "correct_answer": [
+    "The DHCP server is unavailable"
+  ],
+  "explanation": "The 169.254.x.x address indicates APIPA activation, which occurs when a device cannot reach a DHCP server to obtain a valid IP configuration.",
+  "tags": [
+    "DHCP assigned address",
+    "IP configuration",
+    "connectivity testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

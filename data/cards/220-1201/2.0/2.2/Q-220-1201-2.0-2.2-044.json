@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.2-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What kind of communication is used by NFC-enabled payment systems like tap-to-pay?",
+  "answer_options": [
+    "One-way communication from reader to phone",
+    "Infrared transmission",
+    "Two-way near field communication",
+    "Bluetooth pairing request"
+  ],
+  "correct_answer": [
+    "Two-way near field communication"
+  ],
+  "explanation": "NFC uses bidirectional data exchange, which allows payment terminals to communicate securely with devices like smartphones.",
+  "tags": [
+    "NFC",
+    "near field communication",
+    "point-of-sale",
+    "device pairing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

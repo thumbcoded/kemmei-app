@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-136",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician notices that one laptop model allows easy component access while another requires removing the entire motherboard for simple repairs. What does this demonstrate?",
+  "answer_options": [
+    "The laptops use different processor architectures",
+    "One laptop is older than the other",
+    "Manufacturer design philosophy significantly affects serviceability",
+    "The laptops are designed for different market segments"
+  ],
+  "correct_answer": [
+    "Manufacturer design philosophy significantly affects serviceability"
+  ],
+  "explanation": "This scenario illustrates how different manufacturers prioritize serviceability differently in their design philosophy, with some favoring easy repair access and others prioritizing compactness or aesthetics.",
+  "tags": [
+    "manufacturer differences",
+    "serviceability",
+    "laptop troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are common laptop battery types? (Select all that apply)",
+  "answer_options": [
+    "Lithium-ion (Li-ion)",
+    "Lead-acid",
+    "Lithium polymer (LiPo)",
+    "Alkaline"
+  ],
+  "correct_answer": [
+    "Lithium-ion (Li-ion)",
+    "Lithium polymer (LiPo)"
+  ],
+  "explanation": "Modern laptops typically use Li-ion and LiPo batteries due to their compact size and efficiency.",
+  "tags": [
+    "lithium ion",
+    "LiPo",
+    "battery form factor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

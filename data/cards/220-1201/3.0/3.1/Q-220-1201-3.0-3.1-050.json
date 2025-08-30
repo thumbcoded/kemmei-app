@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true about display resolution and its effect on visual quality? (Select all that apply)",
+  "answer_options": [
+    "Higher resolution means more pixels on screen",
+    "Higher resolution always means higher pixel density",
+    "Higher resolution improves detail in large displays",
+    "Higher resolution can require more powerful graphics hardware",
+    "Resolution alone determines color accuracy"
+  ],
+  "correct_answer": [
+    "Higher resolution means more pixels on screen",
+    "Higher resolution improves detail in large displays",
+    "Higher resolution can require more powerful graphics hardware"
+  ],
+  "explanation": "While higher resolution adds more pixels and visual detail, pixel density depends on screen size, and color accuracy is a separate metric.",
+  "tags": [
+    "resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

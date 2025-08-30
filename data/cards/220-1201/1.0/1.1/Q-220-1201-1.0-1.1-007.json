@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement best contrasts modular and non-modular laptop battery designs?",
+  "answer_options": [
+    "Non-modular batteries can only be charged via external docks",
+    "Modular batteries are harder to install due to their location inside the chassis",
+    "Modular batteries promote field-serviceability while non-modular batteries require internal access",
+    "Both battery types can be hot-swapped during operation"
+  ],
+  "correct_answer": [
+    "Modular batteries promote field-serviceability while non-modular batteries require internal access"
+  ],
+  "explanation": "Modular batteries allow user-level replacement; non-modular batteries often require full device disassembly.",
+  "tags": [
+    "modular battery",
+    "non-removable battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

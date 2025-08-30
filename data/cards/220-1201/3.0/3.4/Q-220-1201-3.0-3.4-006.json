@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What function does the spindle motor serve in a hard disk drive?",
+  "answer_options": [
+    "Moves the read/write head across platters",
+    "Controls the flow of electrical signals",
+    "Rotates the platters at a constant speed",
+    "Stores frequently accessed data"
+  ],
+  "correct_answer": [
+    "Rotates the platters at a constant speed"
+  ],
+  "explanation": "The spindle motor spins the platters consistently to ensure data can be read or written by the head at the correct track and sector.",
+  "tags": [
+    "spindle"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

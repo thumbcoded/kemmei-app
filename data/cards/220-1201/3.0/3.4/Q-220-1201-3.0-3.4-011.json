@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition is most likely to result from a failing actuator arm in a hard disk drive?",
+  "answer_options": [
+    "The drive spins at an incorrect RPM",
+    "The heads cannot accurately position over tracks",
+    "The disk cache becomes corrupted",
+    "The spindle motor stops spinning"
+  ],
+  "correct_answer": [
+    "The heads cannot accurately position over tracks"
+  ],
+  "explanation": "A faulty actuator arm can cause read/write heads to misalign, leading to sector access errors and failed read/write operations.",
+  "tags": [
+    "actuator arm"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A technician reseats a cable and a drive becomes accessible again. What was likely the issue?",
+  "answer_options": [
+    "BIOS password reset",
+    "Data encryption",
+    "Bad cable connection",
+    "Outdated driver"
+  ],
+  "correct_answer": [
+    "Bad cable connection"
+  ],
+  "explanation": "Improperly seated or loose cables can prevent communication between the motherboard and the drive.",
+  "tags": [
+    "bad cable connection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

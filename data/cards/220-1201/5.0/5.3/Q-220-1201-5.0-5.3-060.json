@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user is using an HDMI-connected monitor with built-in speakers, but the sound continues to come from the laptop. What is the MOST likely fix?",
+  "answer_options": [
+    "Restart the display service",
+    "Set the HDMI output as the default audio device",
+    "Reinstall video drivers",
+    "Disable power-saving mode"
+  ],
+  "correct_answer": [
+    "Set the HDMI output as the default audio device"
+  ],
+  "explanation": "Even if HDMI is connected, audio won't play through the monitor unless it's selected as the default output device in the OS sound settings.",
+  "tags": [
+    "operating system audio"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

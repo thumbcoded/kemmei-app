@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-132",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which printer type may require ribbon advancement if output becomes faint despite an installed ribbon?",
+  "answer_options": [
+    "Laser printer",
+    "Inkjet printer",
+    "Thermal printer",
+    "Dot matrix printer"
+  ],
+  "correct_answer": [
+    "Dot matrix printer"
+  ],
+  "explanation": "Dot matrix ribbons loop continuously. If not advanced or replaced, they can fade due to repeated impacts in the same area.",
+  "tags": [
+    "ribbon"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

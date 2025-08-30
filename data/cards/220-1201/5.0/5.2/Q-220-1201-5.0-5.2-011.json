@@ -1,0 +1,39 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid indicators of a mechanical storage hardware failure? (Select all that apply)",
+  "answer_options": [
+    "Click of death",
+    "Grinding noises",
+    "Cannot read from source disc",
+    "Write failure",
+    "Cascade effect"
+  ],
+  "correct_answer": [
+    "Click of death",
+    "Grinding noises",
+    "Cannot read from source disc",
+    "Write failure",
+    "Cascade effect"
+  ],
+  "explanation": "All listed symptoms are associated with mechanical storage failures — from specific error messages to auditory signals and progressive internal damage.",
+  "tags": [
+    "click of death",
+    "grinding noises",
+    "cannot read from source disc",
+    "write failure",
+    "cascade effect"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

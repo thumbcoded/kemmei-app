@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A VoIP call is choppy with frequent audio dropouts. Network tests show normal bandwidth. What is the most likely issue?",
+  "answer_options": [
+    "Insufficient bandwidth",
+    "High network jitter",
+    "Weak wireless signal",
+    "Incorrect codec settings"
+  ],
+  "correct_answer": [
+    "High network jitter"
+  ],
+  "explanation": "VoIP requires consistent packet timing. High jitter causes audio dropouts even when bandwidth is adequate, as packets arrive irregularly.",
+  "tags": [
+    "network monitoring",
+    "performance measurement",
+    "bandwidth monitoring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

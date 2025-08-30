@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which physical principle is most commonly used in modern laptop touchpads to detect finger movement?",
+  "answer_options": [
+    "Mechanical pressure",
+    "Infrared reflection",
+    "Capacitive changes",
+    "Magnetic field interference"
+  ],
+  "correct_answer": [
+    "Capacitive changes"
+  ],
+  "explanation": "Most modern touchpads use capacitive sensing to detect changes in electrical charge caused by a finger's proximity and movement.",
+  "tags": [
+    "trackpad",
+    "capacitive",
+    "input technology"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

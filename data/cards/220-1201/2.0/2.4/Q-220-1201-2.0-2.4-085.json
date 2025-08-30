@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are commonly used to protect email domains against spoofing? (Select all that apply)",
+  "answer_options": [
+    "SPF",
+    "DMARC",
+    "DKIM",
+    "NAT",
+    "HTTPS"
+  ],
+  "correct_answer": [
+    "SPF",
+    "DMARC",
+    "DKIM"
+  ],
+  "explanation": "SPF, DKIM, and DMARC are all DNS-based methods used to validate and secure email delivery.",
+  "tags": [
+    "SPF",
+    "DKIM",
+    "DMARC",
+    "email security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports that their phone is overheating while charging and running a GPS app. What combination of factors is most likely causing this?",
+  "answer_options": [
+    "Software corruption and malware",
+    "Charging heat and intensive applications",
+    "Poor Wi-Fi reception and weak battery",
+    "Display brightness and ambient light sensor"
+  ],
+  "correct_answer": [
+    "Charging heat and intensive applications"
+  ],
+  "explanation": "Simultaneously charging and running high-resource apps like GPS increases internal heat generation.",
+  "tags": [
+    "charging heat",
+    "intensive applications"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

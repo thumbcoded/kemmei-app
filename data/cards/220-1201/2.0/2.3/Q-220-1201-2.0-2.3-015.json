@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes the purpose of file sharing in a business environment?",
+  "answer_options": [
+    "To assign IP addresses to devices",
+    "To allow users to send emails",
+    "To centrally store and access documents across the network",
+    "To print documents on a network printer"
+  ],
+  "correct_answer": [
+    "To centrally store and access documents across the network"
+  ],
+  "explanation": "File sharing allows users to access documents from a central location, improving collaboration and access control.",
+  "tags": [
+    "file sharing",
+    "centralized storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

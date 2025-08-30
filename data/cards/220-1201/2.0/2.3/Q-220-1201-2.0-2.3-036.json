@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "An organization wants full control over their email data and internal user management. Which deployment model best fits this goal?",
+  "answer_options": [
+    "Cloud email hosted by a third party",
+    "Hybrid DNS configuration",
+    "Local email servers managed in-house",
+    "Webmail-only platform"
+  ],
+  "correct_answer": [
+    "Local email servers managed in-house"
+  ],
+  "explanation": "Local email servers give the organization full control over email data, security, and user policies, but require more maintenance.",
+  "tags": [
+    "local email servers",
+    "email server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

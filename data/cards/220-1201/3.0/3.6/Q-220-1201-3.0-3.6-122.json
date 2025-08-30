@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-122",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "When selecting a power supply for a desktop build, which TWO of the following are important considerations? (Select two)",
+  "answer_options": [
+    "Matching the PSU color to the case",
+    "Checking component wattage requirements",
+    "Verifying the number of required connectors",
+    "Ensuring the PSU includes built-in Wi-Fi",
+    "Matching the refresh rate of the display"
+  ],
+  "correct_answer": [
+    "Checking component wattage requirements",
+    "Verifying the number of required connectors"
+  ],
+  "explanation": "Power supply selection depends on meeting wattage requirements and having the right connectors for CPU, GPU, motherboard, and storage.",
+  "tags": [
+    "power supply selection",
+    "connector compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a PoE deployment, what could occur if a cable run exceeds the standard Ethernet length limit of 100 meters?",
+  "answer_options": [
+    "The device will switch to a lower power class automatically",
+    "The data connection will remain stable, but power delivery will fail",
+    "Both power and data transmission may degrade or fail",
+    "PoE switches compensate automatically beyond 100 meters"
+  ],
+  "correct_answer": [
+    "Both power and data transmission may degrade or fail"
+  ],
+  "explanation": "Exceeding the 100-meter Ethernet limit can introduce voltage drop and signal degradation, affecting both power and data integrity in a PoE setup.",
+  "tags": [
+    "PoE"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

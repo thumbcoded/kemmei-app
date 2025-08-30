@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-114",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is typically included in DHCP configuration parameters?",
+  "answer_options": [
+    "BIOS settings",
+    "Operating system updates",
+    "Default gateway and DNS server",
+    "MAC address filters"
+  ],
+  "correct_answer": [
+    "Default gateway and DNS server"
+  ],
+  "explanation": "DHCP can provide network settings such as the default gateway, DNS servers, and subnet mask to clients.",
+  "tags": [
+    "default gateway",
+    "DNS server",
+    "configuration parameters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

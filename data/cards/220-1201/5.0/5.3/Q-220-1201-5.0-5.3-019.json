@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports that their screen appears unusually blue at night. Which feature is likely enabled?",
+  "answer_options": [
+    "Color calibration",
+    "Night light setting",
+    "Backlight replacement",
+    "Auto-dimming function"
+  ],
+  "correct_answer": [
+    "Night light setting"
+  ],
+  "explanation": "The night light setting adjusts color tones (often adding blue or amber) based on time of day to reduce eye strain.",
+  "tags": [
+    "night light setting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following outputs might you find on a PC power supply? (Select all that apply)",
+  "answer_options": [
+    "+12V",
+    "-12V",
+    "+5VSB",
+    "-48V",
+    "+1.8V"
+  ],
+  "correct_answer": [
+    "+12V",
+    "-12V",
+    "+5VSB"
+  ],
+  "explanation": "Common outputs include +12V (high-power components), -12V (legacy LAN, serial), and +5VSB (standby). -48V and +1.8V are not typical outputs of standard ATX power supplies.",
+  "tags": [
+    "DC voltages",
+    "power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

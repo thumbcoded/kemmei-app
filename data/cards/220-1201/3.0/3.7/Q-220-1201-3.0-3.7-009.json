@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An MFD on a wired network is receiving print jobs but fails to send scans via email. Network tests confirm connectivity. What is the most likely cause?",
+  "answer_options": [
+    "The device is not connected to a power source",
+    "The email server settings on the MFD are misconfigured",
+    "The MFD is out of toner",
+    "A paper jam is blocking outgoing communication"
+  ],
+  "correct_answer": [
+    "The email server settings on the MFD are misconfigured"
+  ],
+  "explanation": "Scans-to-email require proper SMTP settings configured in the MFD. Print jobs use different protocols and are often unaffected.",
+  "tags": [
+    "multi-function device"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two symptoms may indicate a drive controller failure? (Select two.)",
+  "answer_options": [
+    "Inaccessible drives in BIOS",
+    "Unresponsive keyboard",
+    "Drives reporting as 'foreign configuration'",
+    "No sound from onboard audio",
+    "Display set to low resolution"
+  ],
+  "correct_answer": [
+    "Inaccessible drives in BIOS",
+    "Drives reporting as 'foreign configuration'"
+  ],
+  "explanation": "Drive controller issues often result in drives missing or appearing incorrectly in system or controller BIOS.",
+  "tags": [
+    "drive controller failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two features are commonly associated with DisplayPort connectors? (Select two)",
+  "answer_options": [
+    "19-pin connector",
+    "Mini DisplayPort variant",
+    "Locking mechanism",
+    "Exclusive video-only signal",
+    "Support for analog signals"
+  ],
+  "correct_answer": [
+    "Mini DisplayPort variant",
+    "Locking mechanism"
+  ],
+  "explanation": "DisplayPort connectors come in a mini version and typically include a locking tab that prevents accidental disconnection.",
+  "tags": [
+    "mini DisplayPort",
+    "locking mechanism"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

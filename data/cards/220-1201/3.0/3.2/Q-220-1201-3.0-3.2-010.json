@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of the locking mechanism found on DisplayPort connectors?",
+  "answer_options": [
+    "Prevent signal degradation over distance",
+    "Provide waterproofing for industrial environments",
+    "Ensure consistent power delivery",
+    "Prevent accidental disconnection from devices"
+  ],
+  "correct_answer": [
+    "Prevent accidental disconnection from devices"
+  ],
+  "explanation": "The locking latch helps hold the DisplayPort connector firmly in place until the release button is pressed.",
+  "tags": [
+    "locking mechanism"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

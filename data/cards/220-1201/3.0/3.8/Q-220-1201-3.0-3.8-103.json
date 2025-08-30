@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What would MOST likely cause an impact printer to skip lines intermittently on perforated forms?",
+  "answer_options": [
+    "Ribbon misalignment",
+    "Damaged stepper motor",
+    "Incorrect perforation spacing",
+    "Dot matrix head overheating"
+  ],
+  "correct_answer": [
+    "Incorrect perforation spacing"
+  ],
+  "explanation": "If perforation spacing doesn't align with the printer's tractor feed, page feeds may shift and skip lines.",
+  "tags": [
+    "perforated paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

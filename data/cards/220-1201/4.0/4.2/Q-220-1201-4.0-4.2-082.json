@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which model offers the best customer control over cloud platform layers but increases the customer’s security burden?",
+  "answer_options": [
+    "SaaS",
+    "PaaS",
+    "IaaS",
+    "Private cloud"
+  ],
+  "correct_answer": [
+    "IaaS"
+  ],
+  "explanation": "IaaS gives customers control over OS and apps, but they must also secure those components.",
+  "tags": [
+    "physical platform"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

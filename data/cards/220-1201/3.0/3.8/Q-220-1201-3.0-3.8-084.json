@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which mechanism feeds paper using perforated holes on its sides in many impact printers?",
+  "answer_options": [
+    "Roller feed",
+    "Gravity feed",
+    "Tractor feed",
+    "Friction feed"
+  ],
+  "correct_answer": [
+    "Tractor feed"
+  ],
+  "explanation": "Tractor feed mechanisms use sprockets and holes in the paper to reliably advance pages in impact printers.",
+  "tags": [
+    "tractor feed"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

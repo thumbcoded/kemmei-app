@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which environmental factor is MOST likely to cause frequent paper jams?",
+  "answer_options": [
+    "Lack of printer memory",
+    "Low resolution settings",
+    "High humidity",
+    "Short network cables"
+  ],
+  "correct_answer": [
+    "High humidity"
+  ],
+  "explanation": "Humidity can cause paper to curl or stick, increasing the likelihood of paper jams.",
+  "tags": [
+    "environmental considerations",
+    "paper jams"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

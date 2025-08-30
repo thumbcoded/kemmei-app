@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user attempts to install a CPU that physically fits the socket but the system fails to POST. Which of the following is the most likely cause?",
+  "answer_options": [
+    "The CPU has a damaged pin",
+    "The socket is dirty",
+    "The CPU is unsupported by the motherboard chipset",
+    "The CPU alignment was incorrect"
+  ],
+  "correct_answer": [
+    "The CPU is unsupported by the motherboard chipset"
+  ],
+  "explanation": "Some CPUs physically fit but are not compatible with a specific chipset or BIOS version, preventing POST.",
+  "tags": [
+    "CPU socket type"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

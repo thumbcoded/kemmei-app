@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What term describes a storage issue where file saving takes significantly longer than normal?",
+  "answer_options": [
+    "System crash",
+    "Slow performance",
+    "CPU overclocking",
+    "Driver conflict"
+  ],
+  "correct_answer": [
+    "Slow performance"
+  ],
+  "explanation": "Slow performance during read/write operations often points to issues with the storage device or disk capacity limits.",
+  "tags": [
+    "slow performance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

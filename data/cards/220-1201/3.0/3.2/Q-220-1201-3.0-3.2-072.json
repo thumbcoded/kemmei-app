@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "DOCSIS is a standard used primarily in which type of device?",
+  "answer_options": [
+    "DSL modem",
+    "Cable modem",
+    "Fiber optic transceiver",
+    "Ethernet switch"
+  ],
+  "correct_answer": [
+    "Cable modem"
+  ],
+  "explanation": "DOCSIS (Data Over Cable Service Interface Specification) defines how data is transmitted over cable TV systems using cable modems.",
+  "tags": [
+    "DOCSIS",
+    "cable modem"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

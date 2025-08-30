@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common feature of multi-function devices in a modern office?",
+  "answer_options": [
+    "Thermal paper printing",
+    "Support for mobile printing",
+    "Built-in video conferencing",
+    "Bluetooth headsets"
+  ],
+  "correct_answer": [
+    "Support for mobile printing"
+  ],
+  "explanation": "Many modern MFDs support mobile printing, allowing users to send print jobs wirelessly from mobile devices.",
+  "tags": [
+    "mobile printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

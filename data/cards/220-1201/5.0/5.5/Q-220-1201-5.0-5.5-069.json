@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An intermittent connectivity issue occurs only during business hours. Continuous ping shows normal response times most of the time, but occasional packet loss. What is the best approach?",
+  "answer_options": [
+    "Replace all network cables immediately",
+    "Monitor network utilization during peak hours",
+    "Restart all network equipment",
+    "Reconfigure all IP addresses"
+  ],
+  "correct_answer": [
+    "Monitor network utilization during peak hours"
+  ],
+  "explanation": "Intermittent issues during business hours suggest network congestion. Monitoring utilization helps identify if increased traffic during peak times is causing packet loss.",
+  "tags": [
+    "intermittent connectivity",
+    "network monitoring",
+    "bandwidth monitoring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

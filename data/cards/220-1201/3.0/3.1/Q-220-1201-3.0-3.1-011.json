@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-011",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is a pair of polarization filters used in standard LCD construction?",
+  "answer_options": [
+    "To increase light output by doubling brightness",
+    "To allow modulation of light passing through the liquid crystal layer",
+    "To prevent backlight flickering and ghosting",
+    "To convert analog signals to digital form"
+  ],
+  "correct_answer": [
+    "To allow modulation of light passing through the liquid crystal layer"
+  ],
+  "explanation": "Polarizers are positioned before and after the liquid crystals to control light flow; alignment determines whether light passes or is blocked.",
+  "tags": [
+    "polarization filter"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

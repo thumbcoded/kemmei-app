@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key advantage of laptops with modular memory compared to those with soldered RAM?",
+  "answer_options": [
+    "They boot faster",
+    "They offer better wireless performance",
+    "They can be upgraded after purchase",
+    "They are thinner and lighter"
+  ],
+  "correct_answer": [
+    "They can be upgraded after purchase"
+  ],
+  "explanation": "Modular memory can be replaced or expanded, while soldered RAM is fixed and cannot be upgraded later.",
+  "tags": [
+    "modular memory",
+    "RAM upgrade"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

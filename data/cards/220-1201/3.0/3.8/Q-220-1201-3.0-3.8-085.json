@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of forms are impact printers particularly suited for?",
+  "answer_options": [
+    "Photo gloss paper",
+    "Multi-part forms",
+    "Thermal labels",
+    "Transparencies"
+  ],
+  "correct_answer": [
+    "Multi-part forms"
+  ],
+  "explanation": "Impact printers can print on multiple layers simultaneously, making them ideal for multi-part forms.",
+  "tags": [
+    "multi-part forms"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

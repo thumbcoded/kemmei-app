@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-149",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario best illustrates the benefit of liquid cooling over traditional air cooling?",
+  "answer_options": [
+    "Upgrading from HDD to SSD",
+    "Using a low-power embedded CPU",
+    "Running intensive 3D rendering tasks for long durations",
+    "Installing a fanless mini-ITX system"
+  ],
+  "correct_answer": [
+    "Running intensive 3D rendering tasks for long durations"
+  ],
+  "explanation": "Liquid cooling is particularly effective under sustained high-load conditions like gaming or rendering, where it outperforms air cooling in heat dissipation.",
+  "tags": [
+    "liquid cooling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

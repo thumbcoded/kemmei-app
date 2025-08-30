@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to maintain a recent backup of your data?",
+  "answer_options": [
+    "It improves download speed",
+    "It helps you avoid malware",
+    "It protects against data loss from drive failure",
+    "It allows faster boot time"
+  ],
+  "correct_answer": [
+    "It protects against data loss from drive failure"
+  ],
+  "explanation": "Having a recent backup ensures you can recover your files if your drive fails.",
+  "tags": [
+    "recent backup"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which component sits between a laptop keycap and the main keyboard circuit, allowing vertical motion and spring action?",
+  "answer_options": [
+    "Membrane dome",
+    "Rubber gasket",
+    "Plastic hinge mechanism",
+    "Ribbon cable"
+  ],
+  "correct_answer": [
+    "Plastic hinge mechanism"
+  ],
+  "explanation": "The plastic hinge assembly supports the keycap and enables its travel and spring-like behavior.",
+  "tags": [
+    "keycap",
+    "key replacement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

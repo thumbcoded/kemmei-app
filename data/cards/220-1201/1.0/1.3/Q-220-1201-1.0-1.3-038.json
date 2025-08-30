@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is typically required when pairing Bluetooth devices?",
+  "answer_options": [
+    "A Wi-Fi connection",
+    "An authentication certificate",
+    "A personal identification number (PIN)",
+    "A SIM card"
+  ],
+  "correct_answer": [
+    "A personal identification number (PIN)"
+  ],
+  "explanation": "Bluetooth pairing often requires a PIN to confirm the connection between devices for security purposes.",
+  "tags": [
+    "Bluetooth",
+    "PIN",
+    "pairing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

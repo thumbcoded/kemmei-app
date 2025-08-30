@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-113",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician connects a TPM module to the motherboard. What is the primary function of this device?",
+  "answer_options": [
+    "Enable additional USB ports",
+    "Store BIOS passwords and encryption keys securely",
+    "Control RGB lighting on the motherboard",
+    "Enable HDMI output"
+  ],
+  "correct_answer": [
+    "Store BIOS passwords and encryption keys securely"
+  ],
+  "explanation": "A Trusted Platform Module (TPM) stores encryption keys, passwords, and digital certificates securely in hardware.",
+  "tags": [
+    "TPM module"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

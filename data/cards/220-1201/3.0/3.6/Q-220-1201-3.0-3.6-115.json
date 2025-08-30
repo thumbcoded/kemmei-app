@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A user selects a 1200W power supply for a 350W system. Which TWO of the following risks or inefficiencies may occur? (Select two)",
+  "answer_options": [
+    "Excessive heat generation at low load",
+    "Inability to power modern GPUs",
+    "Wasted energy from low efficiency curve",
+    "Overvoltage on PCIe lanes",
+    "Higher idle power draw"
+  ],
+  "correct_answer": [
+    "Wasted energy from low efficiency curve",
+    "Higher idle power draw"
+  ],
+  "explanation": "Large PSUs running at very low load may operate outside their peak efficiency range and may have higher base power draw.",
+  "tags": [
+    "power supply wattage",
+    "energy efficiency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

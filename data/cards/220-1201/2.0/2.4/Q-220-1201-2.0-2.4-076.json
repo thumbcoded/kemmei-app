@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An administrator wants multiple subdomains (chat, ftp, www) to all resolve to the same server. What is the most efficient DNS configuration to allow this while only needing to update one IP address?",
+  "answer_options": [
+    "Create separate A records for each subdomain",
+    "Create CNAME records pointing to a single A record",
+    "Create a single TXT record with multiple names",
+    "Use multiple MX records with equal priority"
+  ],
+  "correct_answer": [
+    "Create CNAME records pointing to a single A record"
+  ],
+  "explanation": "CNAMEs allow multiple domain names to resolve to a single canonical name, which can be backed by one A record.",
+  "tags": [
+    "CNAME",
+    "canonical name",
+    "A record",
+    "address record"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

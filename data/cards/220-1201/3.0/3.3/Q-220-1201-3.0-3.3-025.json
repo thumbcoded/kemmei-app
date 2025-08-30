@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A server requires memory with real-time error detection and correction to prevent crashes. Which memory type should be installed?",
+  "answer_options": [
+    "Standard DIMM",
+    "SO-DIMM",
+    "Parity memory",
+    "ECC memory"
+  ],
+  "correct_answer": [
+    "ECC memory"
+  ],
+  "explanation": "ECC (Error-Correcting Code) memory can both detect and correct memory errors, making it essential for mission-critical systems like servers.",
+  "tags": [
+    "memory module",
+    "ECC memory",
+    "desktop memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

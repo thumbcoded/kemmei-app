@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician observes that a server with redundant power supplies is reporting a fault, but the system remains fully operational. What is the MOST likely cause?",
+  "answer_options": [
+    "Incorrect BIOS configuration",
+    "Single power supply failure with load shifted to remaining unit",
+    "Overloaded CPU voltage rail",
+    "Failed surge protector"
+  ],
+  "correct_answer": [
+    "Single power supply failure with load shifted to remaining unit"
+  ],
+  "explanation": "Redundant supplies are designed to maintain full system operation if one fails. The remaining supply will take over the full load, but an alert will indicate fault status.",
+  "tags": [
+    "redundant power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

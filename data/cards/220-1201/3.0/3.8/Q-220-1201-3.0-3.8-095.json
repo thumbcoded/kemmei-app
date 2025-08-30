@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What kind of output quality is typically produced by impact printers?",
+  "answer_options": [
+    "High-resolution color output",
+    "Photo-realistic images",
+    "Low-resolution output",
+    "Crisp text and lines"
+  ],
+  "correct_answer": [
+    "Low-resolution output"
+  ],
+  "explanation": "Because characters are formed by dot clusters, impact printers typically produce low-resolution output.",
+  "tags": [
+    "low-resolution output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which storage-related resource must be considered when running virtual machines?",
+  "answer_options": [
+    "Bluetooth bandwidth",
+    "GPU driver compatibility",
+    "Drive space",
+    "Mouse polling rate"
+  ],
+  "correct_answer": [
+    "Drive space"
+  ],
+  "explanation": "Each VM needs disk space to store its OS, apps, and data.",
+  "tags": [
+    "drive space"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

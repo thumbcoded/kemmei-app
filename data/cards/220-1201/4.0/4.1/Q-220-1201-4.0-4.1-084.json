@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the role of Docker in a container-based environment?",
+  "answer_options": [
+    "It virtualizes physical hardware",
+    "It acts as the guest operating system for each container",
+    "It provides the container runtime and management platform",
+    "It installs applications into the host OS"
+  ],
+  "correct_answer": [
+    "It provides the container runtime and management platform"
+  ],
+  "explanation": "Docker is containerization software that launches and manages containers on top of the host OS.",
+  "tags": [
+    "Docker"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

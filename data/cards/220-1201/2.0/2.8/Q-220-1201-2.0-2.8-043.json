@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a valid characteristic of a loopback plug?",
+  "answer_options": [
+    "It requires an external power source",
+    "It loops outgoing signals back to the input",
+    "It only works with wireless interfaces",
+    "It requires special software to function"
+  ],
+  "correct_answer": [
+    "It loops outgoing signals back to the input"
+  ],
+  "explanation": "A loopback plug physically redirects the outgoing signal back to the receiving pins of the same interface.",
+  "tags": [
+    "loopback",
+    "transmit",
+    "receive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does IPS stand for in IPS LCD?",
+  "answer_options": [
+    "Image Precision System",
+    "In-Plane Switching",
+    "Integrated Pixel Structure",
+    "Internal Panel Sync"
+  ],
+  "correct_answer": [
+    "In-Plane Switching"
+  ],
+  "explanation": "IPS stands for In-Plane Switching, which refers to the alignment of liquid crystals parallel to the screen.",
+  "tags": [
+    "in-plane switching"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

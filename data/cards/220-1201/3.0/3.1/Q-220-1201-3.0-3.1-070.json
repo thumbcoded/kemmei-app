@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are reasons a graphics editor might prefer a wide-gamut monitor? (Select all that apply)",
+  "answer_options": [
+    "More accurate color matching for print",
+    "Ability to view high bit-depth video files",
+    "Better performance in gaming frame rates",
+    "Improved color grading capability",
+    "Better viewing angles"
+  ],
+  "correct_answer": [
+    "More accurate color matching for print",
+    "Improved color grading capability"
+  ],
+  "explanation": "Wide-gamut displays are crucial for accurate print prep and detailed color grading in media editing.",
+  "tags": [
+    "graphics editing",
+    "color representation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

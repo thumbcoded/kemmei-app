@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following characteristics makes SSDs less vulnerable to shock and vibration compared to HDDs?",
+  "answer_options": [
+    "Buffered read operations",
+    "Use of helium-filled chambers",
+    "Absence of moving mechanical parts",
+    "Lower rotational speed"
+  ],
+  "correct_answer": [
+    "Absence of moving mechanical parts"
+  ],
+  "explanation": "SSDs store data electronically with no moving parts, which makes them highly resistant to physical movement and vibration.",
+  "tags": [
+    "no moving parts",
+    "solid-state drive"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

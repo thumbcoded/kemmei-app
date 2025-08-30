@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which standard is used to deliver high-speed internet over cable networks?",
+  "answer_options": [
+    "ADSL",
+    "RJ11",
+    "DOCSIS",
+    "802.11"
+  ],
+  "correct_answer": [
+    "DOCSIS"
+  ],
+  "explanation": "DOCSIS (Data Over Cable Service Interface Specification) is the standard used for cable broadband internet.",
+  "tags": [
+    "DOCSIS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician attempts to install a CPU but notices resistance when lowering the locking arm. What should be done?",
+  "answer_options": [
+    "Apply more pressure to force it in",
+    "Install a heatsink first",
+    "Double-check CPU alignment",
+    "Update BIOS before locking"
+  ],
+  "correct_answer": [
+    "Double-check CPU alignment"
+  ],
+  "explanation": "If there's resistance during CPU installation, it's likely misaligned. Forcing it can bend pins or damage the socket.",
+  "tags": [
+    "CPU alignment",
+    "CPU locking mechanism"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

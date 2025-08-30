@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which print technology is most likely to suffer from clogged print heads resulting in streaks or missing lines?",
+  "answer_options": [
+    "Laser",
+    "Thermal",
+    "Impact",
+    "Inkjet"
+  ],
+  "correct_answer": [
+    "Inkjet"
+  ],
+  "explanation": "Inkjet printers rely on fine nozzles to spray ink, which can become clogged and cause lines or streaks on the page.",
+  "tags": [
+    "print quality",
+    "inkjet problems",
+    "streaks"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

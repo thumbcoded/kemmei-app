@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid causes of CPU overheating? (Select all that apply)",
+  "answer_options": [
+    "Dust buildup in heat sink",
+    "Unplugged fan header",
+    "Missing thermal paste",
+    "Low system RAM"
+  ],
+  "correct_answer": [
+    "Dust buildup in heat sink",
+    "Unplugged fan header",
+    "Missing thermal paste"
+  ],
+  "explanation": "Cooling failure from poor contact, non-functional fans, or airflow obstruction will cause CPU temperatures to spike dangerously.",
+  "tags": [
+    "CPU overheating",
+    "system protection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

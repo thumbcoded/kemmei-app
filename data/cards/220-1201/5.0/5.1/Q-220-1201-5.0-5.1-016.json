@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the Blue Screen of Death (BSOD) commonly a sign of?",
+  "answer_options": [
+    "A hardware device was safely removed",
+    "A scheduled system update",
+    "An irrecoverable system error has occurred",
+    "The computer is entering sleep mode"
+  ],
+  "correct_answer": [
+    "An irrecoverable system error has occurred"
+  ],
+  "explanation": "The BSOD, or Blue Screen of Death, indicates a critical system error that caused Windows to stop functioning to prevent damage.",
+  "tags": [
+    "blue screen of death"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

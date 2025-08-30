@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports a laptop screen is black, but the laptop seems to boot and respond. What is the best first test to diagnose the issue?",
+  "answer_options": [
+    "Remove and reseat the RAM",
+    "Run a hard drive diagnostic",
+    "Shine a flashlight at an angle to the screen",
+    "Connect the laptop to a wired network"
+  ],
+  "correct_answer": [
+    "Shine a flashlight at an angle to the screen"
+  ],
+  "explanation": "The flashlight test can help determine if the display image is present but the backlight has failed.",
+  "tags": [
+    "flashlight test",
+    "backlight failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

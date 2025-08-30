@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the function of the print spooler in a Windows system?",
+  "answer_options": [
+    "It monitors toner levels in a network printer",
+    "It translates text to images before sending to the printer",
+    "It manages the print queue and forwards jobs to the printer",
+    "It tests the printer for mechanical failures"
+  ],
+  "correct_answer": [
+    "It manages the print queue and forwards jobs to the printer"
+  ],
+  "explanation": "The print spooler acts as a buffer between applications and the printer, managing and sequencing print jobs in the queue.",
+  "tags": [
+    "print spooler",
+    "print queue"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

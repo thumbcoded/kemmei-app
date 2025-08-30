@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-146",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What are capacitor problems on motherboards and how do they manifest in system behavior?",
+  "answer_options": [
+    "Capacitor problems only affect audio quality and sound output functions",
+    "Bulging caps, leaking electrolyte causing instability, random crashes, power regulation issues",
+    "All capacitor issues are cosmetic and don't affect system functionality",
+    "Capacitor problems exclusively impact network connectivity and data transfer"
+  ],
+  "correct_answer": [
+    "Bulging caps, leaking electrolyte causing instability, random crashes, power regulation issues"
+  ],
+  "explanation": "Capacitor problems manifest as: bulging or leaking capacitors (visual inspection), power regulation issues, random system crashes, boot failures, and component instability. Failed capacitors cause voltage irregularities that affect connected components. Look for physical signs: bulging tops, leaked electrolyte residue, or discoloration around capacitors on motherboard.",
+  "tags": [
+    "capacitor problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

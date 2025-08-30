@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What term is sometimes used synonymously with Infrastructure as a Service (IaaS)?",
+  "answer_options": [
+    "Software as a Service",
+    "Hardware as a Service",
+    "Platform as a Service",
+    "Data as a Service"
+  ],
+  "correct_answer": [
+    "Hardware as a Service"
+  ],
+  "explanation": "IaaS is sometimes referred to as Hardware as a Service (HaaS) because the customer rents hardware resources.",
+  "tags": [
+    "hardware as a service",
+    "HaaS",
+    "IaaS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

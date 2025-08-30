@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the role of a database server?",
+  "answer_options": [
+    "To handle incoming print jobs",
+    "To store and organize information in database tables",
+    "To authenticate users on wireless networks",
+    "To assign IP addresses dynamically"
+  ],
+  "correct_answer": [
+    "To store and organize information in database tables"
+  ],
+  "explanation": "A database server stores structured data using tables that can be queried and linked to form a relational database.",
+  "tags": [
+    "database server",
+    "database tables"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

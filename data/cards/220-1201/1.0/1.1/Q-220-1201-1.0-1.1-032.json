@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is most important when replacing a single key on a laptop keyboard?",
+  "answer_options": [
+    "Use thermal paste to reseat the key",
+    "Forcefully pop off all other keys first",
+    "Follow the manufacturer’s repair instructions",
+    "Turn the laptop upside down and shake"
+  ],
+  "correct_answer": [
+    "Follow the manufacturer’s repair instructions"
+  ],
+  "explanation": "Laptop key mechanisms are delicate. Following manufacturer-specific repair procedures helps avoid damage.",
+  "tags": [
+    "keycap",
+    "replace single key"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

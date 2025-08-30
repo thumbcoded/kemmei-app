@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-120",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid reasons a front panel USB port might not function? (Select all that apply)",
+  "answer_options": [
+    "USB header not connected",
+    "Header wired to TPM port",
+    "Bent USB header pins",
+    "LEDs incorrectly polarized"
+  ],
+  "correct_answer": [
+    "USB header not connected",
+    "Header wired to TPM port",
+    "Bent USB header pins"
+  ],
+  "explanation": "USB port issues may arise from improper wiring, physical damage, or misconnection. LED polarity does not affect USB ports.",
+  "tags": [
+    "USB headers",
+    "pin headers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

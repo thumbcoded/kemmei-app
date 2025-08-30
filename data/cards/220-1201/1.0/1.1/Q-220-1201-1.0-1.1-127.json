@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-127",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician is replacing a laptop display panel and is concerned about built-in camera functionality. What two steps are essential to ensure the camera continues to work?",
+  "answer_options": [
+    "Reattaching the antenna cables to the camera housing",
+    "Ensuring the integrated camera module is transferred or reconnected",
+    "Updating the camera’s firmware using the manufacturer’s utility",
+    "Verifying camera connector is properly seated on the system board",
+    "Resetting the camera via BIOS jumper"
+  ],
+  "correct_answer": [
+    "Ensuring the integrated camera module is transferred or reconnected",
+    "Verifying camera connector is properly seated on the system board"
+  ],
+  "explanation": "Replacing the screen assembly may involve moving or reconnecting the built-in camera module, which must be physically and electrically secured.",
+  "tags": [
+    "webcam",
+    "built-in camera",
+    "external camera"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "During network troubleshooting, a technician finds inconsistent signal loss across multiple terminals on a punchdown block. What is the MOST likely cause?",
+  "answer_options": [
+    "The punchdown block lacks surge protection",
+    "The technician used a crimping tool instead of a punchdown tool",
+    "The wiring standard used was for fiber optics",
+    "The block was improperly grounded to a metal frame"
+  ],
+  "correct_answer": [
+    "The technician used a crimping tool instead of a punchdown tool"
+  ],
+  "explanation": "Using the wrong tool (e.g., crimping instead of punching) can lead to poor contact and unreliable terminations.",
+  "tags": [
+    "punchdown tool",
+    "termination"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

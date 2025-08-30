@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid characteristics of the M.2 interface? (Select all that apply)",
+  "answer_options": [
+    "It can use either SATA or PCIe signaling",
+    "It physically supports both SSDs and RAM modules",
+    "It replaces the need for DIMM slots",
+    "It allows NVMe-based storage access",
+    "It can be keyed differently to prevent insertion errors"
+  ],
+  "correct_answer": [
+    "It can use either SATA or PCIe signaling",
+    "It allows NVMe-based storage access",
+    "It can be keyed differently to prevent insertion errors"
+  ],
+  "explanation": "M.2 is a flexible connector that supports both SATA and PCIe storage protocols. It uses physical keying to ensure compatibility and prevent misalignment.",
+  "tags": [
+    "M.2 interface",
+    "NVMe",
+    "B key",
+    "M key"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

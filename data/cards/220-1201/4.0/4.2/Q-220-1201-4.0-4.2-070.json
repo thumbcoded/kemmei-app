@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following tasks are typically handled by the provider in a PaaS model? (Select all that apply)",
+  "answer_options": [
+    "Managing the operating system",
+    "Handling security patches for the platform",
+    "Writing the application business logic",
+    "Providing development tools and APIs"
+  ],
+  "correct_answer": [
+    "Managing the operating system",
+    "Handling security patches for the platform",
+    "Providing development tools and APIs"
+  ],
+  "explanation": "In PaaS, providers supply and maintain the OS, infrastructure, and development environment. Customers build and run the application itself.",
+  "tags": [
+    "platform as a service",
+    "PaaS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

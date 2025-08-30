@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which symptom is most commonly associated with parity errors?",
+  "answer_options": [
+    "Overheating GPU",
+    "Drive not recognized",
+    "Unexpected application or system crashes",
+    "Incorrect BIOS date"
+  ],
+  "correct_answer": [
+    "Unexpected application or system crashes"
+  ],
+  "explanation": "Parity errors are usually related to memory integrity problems and may manifest as random crashes or stop errors.",
+  "tags": [
+    "parity errors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

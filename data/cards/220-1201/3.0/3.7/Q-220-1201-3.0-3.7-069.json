@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which printer configuration options are typically associated with selecting the correct paper tray? (Select all that apply)",
+  "answer_options": [
+    "Paper size",
+    "Media type",
+    "Tray priority",
+    "Spooling delay",
+    "Tray mapping to print job"
+  ],
+  "correct_answer": [
+    "Paper size",
+    "Media type",
+    "Tray priority",
+    "Tray mapping to print job"
+  ],
+  "explanation": "Paper trays can be linked to specific media types and sizes, and the printer may use a priority or mapping scheme to choose the correct tray during job processing.",
+  "tags": [
+    "paper tray",
+    "media selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-128",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is one compatibility advantage SAS controllers have over SATA controllers?",
+  "answer_options": [
+    "SAS controllers cannot use SATA drives",
+    "SAS controllers support both SAS and SATA drives",
+    "SAS controllers require custom operating systems",
+    "SAS controllers are incompatible with SSDs"
+  ],
+  "correct_answer": [
+    "SAS controllers support both SAS and SATA drives"
+  ],
+  "explanation": "SAS controllers are backward-compatible with SATA drives, but SATA controllers cannot use SAS drives.",
+  "tags": [
+    "SAS",
+    "SATA comparison"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

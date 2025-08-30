@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-033",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting increases the size of icons and interface elements without changing screen resolution?",
+  "answer_options": [
+    "Text resolution",
+    "Geometry settings",
+    "Display scaling",
+    "Video driver acceleration"
+  ],
+  "correct_answer": [
+    "Display scaling"
+  ],
+  "explanation": "Display scaling enlarges UI elements while keeping the monitor at native resolution, helping users on high-DPI displays like 4K.",
+  "tags": [
+    "display scaling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

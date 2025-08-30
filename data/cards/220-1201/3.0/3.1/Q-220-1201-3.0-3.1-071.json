@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a wide-gamut Adobe RGB display be inappropriate for casual web browsing or general office use?",
+  "answer_options": [
+    "It produces lower refresh rates",
+    "It consumes significantly more power",
+    "Web content is designed for sRGB, which may appear oversaturated on wide-gamut displays",
+    "Adobe RGB displays do not support standard resolutions"
+  ],
+  "correct_answer": [
+    "Web content is designed for sRGB, which may appear oversaturated on wide-gamut displays"
+  ],
+  "explanation": "Most web and desktop content assumes sRGB color space. A wide-gamut screen can cause colors to appear exaggerated if not managed properly.",
+  "tags": [
+    "sRGB",
+    "Adobe RGB",
+    "color representation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

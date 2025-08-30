@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What network device is most associated with defining a broadcast domain?",
+  "answer_options": [
+    "Switch",
+    "Router",
+    "Firewall",
+    "Access point"
+  ],
+  "correct_answer": [
+    "Switch"
+  ],
+  "explanation": "A switch defines the boundary of a broadcast domain in a LAN.",
+  "tags": [
+    "switch",
+    "broadcast domain"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

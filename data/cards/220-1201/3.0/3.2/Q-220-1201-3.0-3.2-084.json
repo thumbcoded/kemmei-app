@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What benefit does cable management provide when using punchdown blocks?",
+  "answer_options": [
+    "Increases signal speed",
+    "Provides electrical grounding",
+    "Improves organization and maintenance",
+    "Boosts Wi-Fi performance"
+  ],
+  "correct_answer": [
+    "Improves organization and maintenance"
+  ],
+  "explanation": "Good cable management helps with airflow, reduces signal interference, and makes it easier to trace and maintain connections.",
+  "tags": [
+    "cable management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

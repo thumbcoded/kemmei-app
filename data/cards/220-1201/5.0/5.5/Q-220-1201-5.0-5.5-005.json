@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes the purpose of 'baseline testing' in network troubleshooting?",
+  "answer_options": [
+    "To reset network devices to factory settings",
+    "To compare current performance with known good conditions",
+    "To update device firmware",
+    "To block unauthorized devices"
+  ],
+  "correct_answer": [
+    "To compare current performance with known good conditions"
+  ],
+  "explanation": "Baseline testing helps you identify issues by comparing current network behavior to a known working state.",
+  "tags": [
+    "baseline testing",
+    "troubleshooting steps"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

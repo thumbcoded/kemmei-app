@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A graphic design team notices that printed images from a color laser printer appear dull and slightly pixelated, even though the source files are high resolution. Which adjustment is most likely to improve the output?",
+  "answer_options": [
+    "Increase the duplex margin",
+    "Switch to grayscale mode",
+    "Enable high DPI output and use photo-quality paper",
+    "Disable toner save mode and reduce memory buffer"
+  ],
+  "correct_answer": [
+    "Enable high DPI output and use photo-quality paper"
+  ],
+  "explanation": "Dull or pixelated output may be caused by low DPI settings or mismatched media. High DPI and appropriate paper can greatly improve image fidelity.",
+  "tags": [
+    "resolution",
+    "print quality"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

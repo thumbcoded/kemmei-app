@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-057",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common symptom of a drive controller failure?",
+  "answer_options": [
+    "Low display brightness",
+    "Files opening slowly",
+    "Drives not being detected",
+    "System fan running loudly"
+  ],
+  "correct_answer": [
+    "Drives not being detected"
+  ],
+  "explanation": "If the drive controller fails, connected drives may not be detected during POST or by the operating system.",
+  "tags": [
+    "drive controller failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

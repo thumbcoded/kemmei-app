@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports poor cellular reception inside their office building. What is the most effective immediate solution?",
+  "answer_options": [
+    "Move to a location closer to a window or go outside",
+    "Restart the mobile device",
+    "Update the mobile operating system",
+    "Clear the device cache"
+  ],
+  "correct_answer": [
+    "Move to a location closer to a window or go outside"
+  ],
+  "explanation": "Location has a big impact on cellular communication. Moving outside or closer to windows often provides the signal strength needed to communicate with cellular towers.",
+  "tags": [
+    "bad reception area",
+    "signal polling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

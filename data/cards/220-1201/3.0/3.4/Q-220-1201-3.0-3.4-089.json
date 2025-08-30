@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of optical disc provides the largest storage capacity?",
+  "answer_options": [
+    "CD-ROM",
+    "DVD-ROM",
+    "Blu-ray",
+    "Floppy disk"
+  ],
+  "correct_answer": [
+    "Blu-ray"
+  ],
+  "explanation": "Blu-ray discs can store up to 25 GB (single-layer) or 50 GB (dual-layer), far more than CDs or DVDs.",
+  "tags": [
+    "Blu-ray"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

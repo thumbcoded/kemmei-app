@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What BIOS setting should be checked if a drive is not visible in the operating system but is physically connected?",
+  "answer_options": [
+    "Overclocking profile",
+    "CPU fan control",
+    "Drives disabled in BIOS",
+    "Power-on password"
+  ],
+  "correct_answer": [
+    "Drives disabled in BIOS"
+  ],
+  "explanation": "If a drive is disabled in BIOS, it won't appear to the operating system even if it's physically installed.",
+  "tags": [
+    "drives disabled in BIOS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

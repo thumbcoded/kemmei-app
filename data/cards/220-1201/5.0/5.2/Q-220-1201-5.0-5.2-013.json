@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two internal components are most likely to cause scraping or impact damage during a hard drive mechanical failure? (Select two.)",
+  "answer_options": [
+    "System fan",
+    "Drive heads",
+    "Spinning platters",
+    "Thermal sensor",
+    "CMOS battery"
+  ],
+  "correct_answer": [
+    "Drive heads",
+    "Spinning platters"
+  ],
+  "explanation": "Drive heads and spinning platters operate at high speeds with tight tolerances. A misalignment can result in physical scraping and data destruction.",
+  "tags": [
+    "drive heads",
+    "spinning platters"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

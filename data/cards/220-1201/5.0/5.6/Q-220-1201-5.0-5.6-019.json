@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "If a printer is not pulling any paper from the tray, which component is most likely failing?",
+  "answer_options": [
+    "Transfer belt",
+    "Toner cartridge",
+    "Pickup roller",
+    "Fuser assembly"
+  ],
+  "correct_answer": [
+    "Pickup roller"
+  ],
+  "explanation": "Pickup rollers are responsible for grabbing and feeding paper. If they wear out, no paper is picked up.",
+  "tags": [
+    "no paper pickup",
+    "pickup rollers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following factors should be considered when choosing a wireless connection method for a printer? (Select all that apply)",
+  "answer_options": [
+    "Proximity to the client device",
+    "Bandwidth requirements for print jobs",
+    "Support for Ethernet over HDMI",
+    "Presence or absence of an access point",
+    "Signal interference in the environment"
+  ],
+  "correct_answer": [
+    "Proximity to the client device",
+    "Bandwidth requirements for print jobs",
+    "Presence or absence of an access point",
+    "Signal interference in the environment"
+  ],
+  "explanation": "Factors like distance (important for Bluetooth), print size (which impacts bandwidth), whether an access point exists (impacts 802.11 mode), and signal interference all affect wireless performance.",
+  "tags": [
+    "Bluetooth",
+    "802.11 wireless"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

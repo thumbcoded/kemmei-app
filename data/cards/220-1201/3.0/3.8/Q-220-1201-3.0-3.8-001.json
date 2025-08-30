@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What component in a laser printer stores the image before it is transferred to paper?",
+  "answer_options": [
+    "Fuser unit",
+    "Photosensitive drum",
+    "Toner cartridge",
+    "Onboard memory"
+  ],
+  "correct_answer": [
+    "Photosensitive drum"
+  ],
+  "explanation": "The photosensitive drum holds the electrostatic image formed by the laser before toner is applied.",
+  "tags": [
+    "photosensitive drum"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

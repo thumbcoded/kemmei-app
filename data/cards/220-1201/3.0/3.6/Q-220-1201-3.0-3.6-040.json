@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of current flows in a single, constant direction?",
+  "answer_options": [
+    "AC (Alternating Current)",
+    "DC (Direct Current)",
+    "Pulse Current",
+    "Sinusoidal Current"
+  ],
+  "correct_answer": [
+    "DC (Direct Current)"
+  ],
+  "explanation": "DC, or Direct Current, flows continuously in one direction with a constant voltage level.",
+  "tags": [
+    "direct current"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

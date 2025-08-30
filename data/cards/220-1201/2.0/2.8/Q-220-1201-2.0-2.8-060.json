@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool is used to insert wires into a punchdown block?",
+  "answer_options": [
+    "Tone probe",
+    "Cable crimper",
+    "Punchdown tool",
+    "Loopback plug"
+  ],
+  "correct_answer": [
+    "Punchdown tool"
+  ],
+  "explanation": "A punchdown tool is specifically designed to press wires into punchdown block contacts and trim excess wire.",
+  "tags": [
+    "punchdown tool"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

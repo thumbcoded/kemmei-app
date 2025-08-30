@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following components can be replaced during laser printer maintenance? (Select all that apply)",
+  "answer_options": [
+    "Toner cartridge",
+    "Fuser unit",
+    "Photosensitive drum",
+    "Onboard memory",
+    "Charged roller"
+  ],
+  "correct_answer": [
+    "Toner cartridge",
+    "Fuser unit",
+    "Photosensitive drum",
+    "Charged roller"
+  ],
+  "explanation": "Most laser printers allow replacement of consumables and wear components like toner, fuser, drum, and rollers. Onboard memory is rarely user-serviceable.",
+  "tags": [
+    "toner cartridge",
+    "fuser unit",
+    "photosensitive drum",
+    "charged roller"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

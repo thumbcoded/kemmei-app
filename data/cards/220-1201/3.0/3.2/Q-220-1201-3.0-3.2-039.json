@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What technical feature allows USB-C to carry multiple video signal types such as HDMI and DisplayPort?",
+  "answer_options": [
+    "Integrated audio pins in USB 3.0",
+    "Alternate mode protocol support",
+    "Micro-USB power negotiation",
+    "Embedded coaxial shielding in USB-C cables"
+  ],
+  "correct_answer": [
+    "Alternate mode protocol support"
+  ],
+  "explanation": "USB-C supports video transmission via alternate modes, which allow the port to switch to standards like DisplayPort or HDMI over the same connector.",
+  "tags": [
+    "video over USB-C",
+    "DisplayPort",
+    "HDMI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

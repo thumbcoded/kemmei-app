@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which factor differentiates M.2 NVMe drives from traditional SATA SSDs in terms of data handling?",
+  "answer_options": [
+    "SATA SSDs support more simultaneous I/O queues",
+    "M.2 NVMe drives use rotational latency reduction",
+    "NVMe allows multiple queues with thousands of commands",
+    "M.2 NVMe drives have mechanical read/write heads"
+  ],
+  "correct_answer": [
+    "NVMe allows multiple queues with thousands of commands"
+  ],
+  "explanation": "NVMe supports up to 64K queues with 64K commands per queue, making it far superior to SATA's single-queue limitations.",
+  "tags": [
+    "non-volatile storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

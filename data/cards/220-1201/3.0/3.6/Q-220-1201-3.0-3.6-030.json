@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What would be the power consumption of a device that uses 120V and 1A?",
+  "answer_options": [
+    "12 watts",
+    "60 watts",
+    "120 watts",
+    "240 watts"
+  ],
+  "correct_answer": [
+    "120 watts"
+  ],
+  "explanation": "Power = Volts × Amps, so 120V × 1A = 120W.",
+  "tags": [
+    "watts",
+    "power calculation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

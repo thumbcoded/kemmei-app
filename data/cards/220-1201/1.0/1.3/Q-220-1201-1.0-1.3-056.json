@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario best describes BYOD?",
+  "answer_options": [
+    "The company provides a locked phone to the employee",
+    "The employee brings their own device for personal use only",
+    "The employee uses their personal phone for both work and personal use",
+    "The company monitors all employee activity on desktops only"
+  ],
+  "correct_answer": [
+    "The employee uses their personal phone for both work and personal use"
+  ],
+  "explanation": "BYOD (Bring Your Own Device) allows employees to use their personal phones for work-related tasks, often managed by MDM tools.",
+  "tags": [
+    "BYOD",
+    "mobile device management",
+    "personal device"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-107",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What are error codes on screen during POST and how should you interpret them?",
+  "answer_options": [
+    "Software error messages that can be ignored during startup",
+    "Numerical or text messages indicating specific hardware problems - consult manufacturer documentation",
+    "Normal boot messages showing successful component detection",
+    "Network connectivity errors that resolve automatically"
+  ],
+  "correct_answer": [
+    "Numerical or text messages indicating specific hardware problems - consult manufacturer documentation"
+  ],
+  "explanation": "Error codes on screen are numerical or text messages displayed during POST that indicate specific hardware problems. They should be interpreted by: 1) Recording the exact code, 2) Consulting the motherboard/system manufacturer documentation, 3) Cross-referencing with beep codes if present, 4) Identifying the failing component based on the code meaning.",
+  "tags": [
+    "error codes on screen"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

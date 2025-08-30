@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-135",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO actions may be required to boot a system from a USB recovery drive on a UEFI-based system? (Select two)",
+  "answer_options": [
+    "Disable Secure Boot",
+    "Enable TPM 2.0",
+    "Change boot order",
+    "Clear CMOS settings"
+  ],
+  "correct_answer": [
+    "Disable Secure Boot",
+    "Change boot order"
+  ],
+  "explanation": "To boot from a USB drive on a UEFI system, Secure Boot may need to be disabled and the USB device prioritized in boot order.",
+  "tags": [
+    "UEFI",
+    "Secure Boot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

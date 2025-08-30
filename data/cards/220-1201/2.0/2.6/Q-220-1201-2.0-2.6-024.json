@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key difference between IPv4 and IPv6 addressing?",
+  "answer_options": [
+    "IPv6 uses 32-bit addresses; IPv4 uses 128-bit",
+    "IPv6 requires NAT for local devices",
+    "IPv6 does not use subnetting",
+    "IPv6 includes built-in support for address auto-configuration"
+  ],
+  "correct_answer": [
+    "IPv6 includes built-in support for address auto-configuration"
+  ],
+  "explanation": "IPv6 supports stateless address auto-configuration (SLAAC), unlike IPv4 which usually relies on DHCP.",
+  "tags": [
+    "IPv6",
+    "auto-configuration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

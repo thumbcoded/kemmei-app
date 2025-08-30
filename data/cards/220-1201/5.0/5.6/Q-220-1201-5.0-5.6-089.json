@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a key advantage of performing both a printer self test and an OS test page when troubleshooting?",
+  "answer_options": [
+    "To ensure toner level is at maximum",
+    "To verify paper alignment from two trays",
+    "To isolate hardware faults from software or driver issues",
+    "To reset the printer's firmware to default"
+  ],
+  "correct_answer": [
+    "To isolate hardware faults from software or driver issues"
+  ],
+  "explanation": "Self-tests target printer internals, while OS test pages confirm communication and driver settings. Used together, they clarify the layer of failure.",
+  "tags": [
+    "printer self test",
+    "OS test page"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

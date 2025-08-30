@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An enterprise network stores all user documents on a central server. What is the greatest risk if the centralized storage system fails without redundancy?",
+  "answer_options": [
+    "Loss of printer driver configuration",
+    "Inability to assign IP addresses",
+    "Total loss of access to shared documents",
+    "Incorrect routing of email messages"
+  ],
+  "correct_answer": [
+    "Total loss of access to shared documents"
+  ],
+  "explanation": "Centralized storage creates a single point of failure. Without redundancy or backup, all users lose access to shared documents during downtime.",
+  "tags": [
+    "centralized storage",
+    "file sharing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

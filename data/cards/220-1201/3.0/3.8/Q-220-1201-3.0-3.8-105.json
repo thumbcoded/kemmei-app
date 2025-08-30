@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-105",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO process characteristics are most responsible for the loud noise produced during impact printing?",
+  "answer_options": [
+    "Continuous paper feed",
+    "High-speed pin strikes",
+    "Print head travel distance",
+    "Friction from ink buildup",
+    "Physical impact of print head on ribbon"
+  ],
+  "correct_answer": [
+    "High-speed pin strikes",
+    "Physical impact of print head on ribbon"
+  ],
+  "explanation": "Rapid mechanical pin strikes and ribbon impact create the characteristic noise of impact printers.",
+  "tags": [
+    "noisy operation",
+    "dot matrix pattern"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A company using a PaaS environment suffers a data breach due to an insecure API in its app code. According to the shared responsibility model, who is accountable?",
+  "answer_options": [
+    "The cloud provider is fully responsible",
+    "The customer is responsible for application-level security",
+    "Responsibility is shared evenly",
+    "The breach is unpreventable under PaaS"
+  ],
+  "correct_answer": [
+    "The customer is responsible for application-level security"
+  ],
+  "explanation": "Even in PaaS, customers are accountable for their app logic and data-level security choices.",
+  "tags": [
+    "security responsibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

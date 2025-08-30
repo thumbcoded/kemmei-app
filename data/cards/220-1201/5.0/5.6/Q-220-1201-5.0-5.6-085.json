@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two diagnostic tests are best suited for isolating whether a print defect is hardware- or software-related? (Select two)",
+  "answer_options": [
+    "Printer test page",
+    "Print queue reset",
+    "OS test page",
+    "Update printer firmware",
+    "Driver rollback"
+  ],
+  "correct_answer": [
+    "Printer test page",
+    "OS test page"
+  ],
+  "explanation": "These two tests isolate whether the issue lies in the printer itself (printer test page) or in OS communication (OS test page).",
+  "tags": [
+    "printer test page",
+    "OS test page"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

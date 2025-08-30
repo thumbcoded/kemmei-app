@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In which scenario would a `DNS query` fail despite a reachable DNS server?",
+  "answer_options": [
+    "Incorrect gateway IP configured",
+    "DNS cache poisoning occurred",
+    "The domain is a gTLD",
+    "The query was sent over TCP instead of UDP"
+  ],
+  "correct_answer": [
+    "DNS cache poisoning occurred"
+  ],
+  "explanation": "Cache poisoning can corrupt local or upstream resolver data, causing a valid DNS server to return incorrect or null results.",
+  "tags": [
+    "DNS query",
+    "DNS server",
+    "DNS resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

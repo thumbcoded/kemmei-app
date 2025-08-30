@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What could cause a printer to display a 'paper size mismatch' error even though paper is loaded?",
+  "answer_options": [
+    "Toner cartridge error",
+    "Incorrect tray assignment in the driver",
+    "Fuser temperature too low",
+    "Low-quality print mode"
+  ],
+  "correct_answer": [
+    "Incorrect tray assignment in the driver"
+  ],
+  "explanation": "If the driver expects legal size from a specific tray but the tray is loaded with letter paper, a size mismatch error occurs.",
+  "tags": [
+    "paper size mismatch",
+    "tray selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

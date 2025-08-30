@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of electrical current reverses direction periodically?",
+  "answer_options": [
+    "DC (Direct Current)",
+    "AC (Alternating Current)",
+    "Static Current",
+    "Rectified Current"
+  ],
+  "correct_answer": [
+    "AC (Alternating Current)"
+  ],
+  "explanation": "AC, or Alternating Current, changes direction multiple times per second, typically at 50 or 60 hertz depending on the region.",
+  "tags": [
+    "alternating current"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

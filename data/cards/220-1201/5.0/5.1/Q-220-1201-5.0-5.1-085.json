@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A PCIe card works in slot 1 but not slot 2. No bent pins or dust is visible. What’s the best next step?",
+  "answer_options": [
+    "Try a different power supply",
+    "Flash the BIOS",
+    "Assume the expansion slot is faulty",
+    "Reset Windows permissions"
+  ],
+  "correct_answer": [
+    "Assume the expansion slot is faulty"
+  ],
+  "explanation": "If identical cards work in one slot but not another, and the slot is clean, it likely has failed.",
+  "tags": [
+    "expansion slots"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

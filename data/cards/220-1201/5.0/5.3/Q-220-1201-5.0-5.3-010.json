@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector would you expect to use for high-resolution video on a modern projector?",
+  "answer_options": [
+    "VGA input",
+    "DVI input",
+    "DisplayPort input",
+    "S-Video input"
+  ],
+  "correct_answer": [
+    "DisplayPort input"
+  ],
+  "explanation": "DisplayPort is widely used for high-resolution video and supports advanced features like high refresh rates and multi-stream transport.",
+  "tags": [
+    "DisplayPort input"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

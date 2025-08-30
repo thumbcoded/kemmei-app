@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-102",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician reuses modular cables from a different brand of power supply in a new modular unit. What is the MOST likely risk?",
+  "answer_options": [
+    "Fan failure in the power supply",
+    "Connector keying mismatch",
+    "Incorrect pinout causing hardware damage",
+    "Insufficient wattage for high-end GPUs"
+  ],
+  "correct_answer": [
+    "Incorrect pinout causing hardware damage"
+  ],
+  "explanation": "Even if connectors physically fit, different brands may wire modular connectors differently. Using mismatched cables can short components or damage the motherboard.",
+  "tags": [
+    "modular power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-106",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of connector has been used by Apple on many iPhones and iPads prior to the adoption of USB-C?",
+  "answer_options": [
+    "USB standard A",
+    "Lightning connector",
+    "Mini USB",
+    "Micro USB"
+  ],
+  "correct_answer": [
+    "Lightning connector"
+  ],
+  "explanation": "The Lightning connector is Apple’s proprietary port used on many iPhones and iPads before the USB-C transition.",
+  "tags": [
+    "Lightning connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

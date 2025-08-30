@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A print job intended for pre-printed letterhead keeps printing from the tray loaded with plain paper, even though the user selected the correct template. What is the most likely reason?",
+  "answer_options": [
+    "The printer is out of toner",
+    "The selected print orientation conflicts with the tray",
+    "The media type for the letterhead tray is not properly defined",
+    "The print spooler service is disabled"
+  ],
+  "correct_answer": [
+    "The media type for the letterhead tray is not properly defined"
+  ],
+  "explanation": "Printers rely on media type definitions to route jobs to the correct tray. If the letterhead tray isn’t set up with the appropriate media type, the printer may fall back to a default tray.",
+  "tags": [
+    "media selection",
+    "paper tray"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

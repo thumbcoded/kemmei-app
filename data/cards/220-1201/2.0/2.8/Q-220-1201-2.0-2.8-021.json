@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why would a technician choose to alternate between different tone patterns during cable tracing?",
+  "answer_options": [
+    "To force switch ports into spanning-tree mode",
+    "To test digital-to-analog conversion quality",
+    "To differentiate between multiple tone sources on nearby cables",
+    "To increase the signal’s frequency for fiber detection"
+  ],
+  "correct_answer": [
+    "To differentiate between multiple tone sources on nearby cables"
+  ],
+  "explanation": "Many tone generators allow switching between distinct audio patterns so technicians can identify multiple cables independently without confusion.",
+  "tags": [
+    "tone generator",
+    "cable identification"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

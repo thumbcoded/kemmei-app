@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-115",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main difference between a static IP and a dynamic IP?",
+  "answer_options": [
+    "Static IPs change daily; dynamic IPs never change",
+    "Static IPs are assigned manually; dynamic IPs are assigned by DHCP",
+    "Static IPs are used in home networks only",
+    "Dynamic IPs require VLAN tagging"
+  ],
+  "correct_answer": [
+    "Static IPs are assigned manually; dynamic IPs are assigned by DHCP"
+  ],
+  "explanation": "Static IPs are manually configured and fixed; dynamic IPs are automatically assigned by a DHCP server.",
+  "tags": [
+    "static IP",
+    "dynamic IP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

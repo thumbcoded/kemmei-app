@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports slow file downloads from a network share. You suspect a bandwidth issue. What’s the BEST tool to confirm this?",
+  "answer_options": [
+    "Task Scheduler",
+    "Throughput testing utility",
+    "Print spooler settings",
+    "IP configuration tool"
+  ],
+  "correct_answer": [
+    "Throughput testing utility"
+  ],
+  "explanation": "Throughput testing tools help measure the actual data transfer rate between devices and diagnose bandwidth bottlenecks.",
+  "tags": [
+    "throughput testing",
+    "performance measurement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-010",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it dangerous to assume the ground wire in a standard outlet is always safe to touch?",
+  "answer_options": [
+    "It generates static electricity",
+    "It could be wired incorrectly and carry live current",
+    "It creates a feedback loop with capacitors",
+    "It is designed to dissipate high-frequency signals"
+  ],
+  "correct_answer": [
+    "It could be wired incorrectly and carry live current"
+  ],
+  "explanation": "Improperly wired outlets can cause the ground wire to carry voltage, posing a shock risk.",
+  "tags": [
+    "ground wire safety",
+    "building electrical system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

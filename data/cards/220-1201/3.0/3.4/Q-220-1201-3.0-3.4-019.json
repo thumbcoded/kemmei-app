@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following factors most directly affects the latency of a hard drive?",
+  "answer_options": [
+    "The length of the SATA cable",
+    "The capacity of the hard drive",
+    "The rotation speed of the platters",
+    "The type of operating system"
+  ],
+  "correct_answer": [
+    "The rotation speed of the platters"
+  ],
+  "explanation": "Latency refers to the delay in data access, and faster spinning platters reduce that delay by bringing the correct sector under the read/write head sooner.",
+  "tags": [
+    "latency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

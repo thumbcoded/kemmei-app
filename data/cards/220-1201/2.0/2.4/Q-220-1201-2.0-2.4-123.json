@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-123",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the effect of excluding too many addresses from a DHCP scope?",
+  "answer_options": [
+    "The DNS server will reject the scope",
+    "DHCP will assign incorrect subnet masks",
+    "There may not be enough available IPs for clients to lease",
+    "The DHCP process will skip the Acknowledge phase"
+  ],
+  "correct_answer": [
+    "There may not be enough available IPs for clients to lease"
+  ],
+  "explanation": "If exclusions significantly reduce the available IP pool, some clients may fail to obtain addresses.",
+  "tags": [
+    "excluded addresses",
+    "IP pool",
+    "lease duration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

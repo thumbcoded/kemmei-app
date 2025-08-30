@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What type of application is most likely to expose failing GPU hardware?",
+  "answer_options": [
+    "Word processor",
+    "Email client",
+    "Graphics-intensive processes",
+    "Calendar application"
+  ],
+  "correct_answer": [
+    "Graphics-intensive processes"
+  ],
+  "explanation": "GPU failure symptoms such as flickering, black screens, or artifacts often surface under high-load graphical conditions.",
+  "tags": [
+    "graphics intensive processes",
+    "video card problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

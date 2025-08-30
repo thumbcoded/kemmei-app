@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a basic troubleshooting step if your projector shuts down during operation?",
+  "answer_options": [
+    "Change the HDMI input",
+    "Replace the entire projector",
+    "Clean air filters and check for overheating",
+    "Upgrade the projector firmware"
+  ],
+  "correct_answer": [
+    "Clean air filters and check for overheating"
+  ],
+  "explanation": "Projectors can shut down due to high internal temperatures. Cleaning dust and air filters improves airflow and prevents overheating.",
+  "tags": [
+    "projector issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

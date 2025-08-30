@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-142",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the proper procedure for component removal during motherboard troubleshooting?",
+  "answer_options": [
+    "Remove all components simultaneously to save time during troubleshooting",
+    "Power off, unplug, ground yourself, document connections, remove systematically one at a time",
+    "Component removal only requires disconnecting power without other precautions",
+    "Remove components while system is running to test live functionality"
+  ],
+  "correct_answer": [
+    "Power off, unplug, ground yourself, document connections, remove systematically one at a time"
+  ],
+  "explanation": "Proper component removal: 1) Power off completely and unplug system, 2) Ground yourself with anti-static wrist strap, 3) Document connections with photos, 4) Remove components systematically one at a time, 5) Store components safely in anti-static bags, 6) Keep screws organized, 7) Test after each removal to isolate problems.",
+  "tags": [
+    "component removal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

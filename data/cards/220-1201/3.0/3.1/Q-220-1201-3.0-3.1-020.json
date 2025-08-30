@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-020",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why might a professional video editor choose an IPS LCD over a TN LCD?",
+  "answer_options": [
+    "Better motion blur reduction",
+    "Faster refresh rate",
+    "Wider viewing angles and accurate color",
+    "Lower power usage"
+  ],
+  "correct_answer": [
+    "Wider viewing angles and accurate color"
+  ],
+  "explanation": "IPS panels are ideal for content creation due to their accurate color reproduction and stable image quality at different angles.",
+  "tags": [
+    "IPS LCD",
+    "color representation",
+    "viewing angle"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

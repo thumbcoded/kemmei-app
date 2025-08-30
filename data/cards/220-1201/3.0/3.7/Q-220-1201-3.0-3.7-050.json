@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a benefit of using a dedicated print server over a shared printer?",
+  "answer_options": [
+    "It reduces paper usage",
+    "It improves ink cartridge compatibility",
+    "It allows printing even if the host PC is off",
+    "It increases scan resolution"
+  ],
+  "correct_answer": [
+    "It allows printing even if the host PC is off"
+  ],
+  "explanation": "A dedicated print server is independent of any single workstation, so users can print at any time—even if no workstation is powered on.",
+  "tags": [
+    "print server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

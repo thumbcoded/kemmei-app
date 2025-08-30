@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which protocol allows printing across a network and is commonly supported by modern printers?",
+  "answer_options": [
+    "HTTP",
+    "IPSec",
+    "IPP",
+    "SSH"
+  ],
+  "correct_answer": [
+    "IPP"
+  ],
+  "explanation": "IPP (Internet Printing Protocol) enables users to send print jobs to printers over IP-based networks.",
+  "tags": [
+    "IPP",
+    "internet printing protocol"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

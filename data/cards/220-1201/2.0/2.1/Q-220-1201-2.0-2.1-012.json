@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system sends data to a web server at port 443. What type of port does the client device use for this session?",
+  "answer_options": [
+    "A well-known port like 443",
+    "A reserved port like 80",
+    "An ephemeral port dynamically assigned by the OS",
+    "The same port number as the server for bidirectional flow"
+  ],
+  "correct_answer": [
+    "An ephemeral port dynamically assigned by the OS"
+  ],
+  "explanation": "The client uses a temporary (ephemeral) port number, usually above 1023, to initiate communication with the server’s well-known port.",
+  "tags": [
+    "port number",
+    "well-known port"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

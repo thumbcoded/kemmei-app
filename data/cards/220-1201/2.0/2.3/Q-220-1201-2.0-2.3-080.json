@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best explains why IoT devices can introduce security risks to a corporate network?",
+  "answer_options": [
+    "They usually require high power consumption",
+    "They are difficult to physically locate",
+    "They are often developed without strong network security in mind",
+    "They are too expensive to secure properly"
+  ],
+  "correct_answer": [
+    "They are often developed without strong network security in mind"
+  ],
+  "explanation": "Manufacturers of IoT devices may prioritize functionality over secure coding and updates, leading to vulnerabilities.",
+  "tags": [
+    "IoT"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

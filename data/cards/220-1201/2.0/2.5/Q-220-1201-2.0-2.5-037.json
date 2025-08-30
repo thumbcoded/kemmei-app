@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are direct roles of a wireless access point? (Select all that apply)",
+  "answer_options": [
+    "Forwarding frames using MAC addresses",
+    "Extending a wired LAN with wireless connectivity",
+    "Bridging separate network segments",
+    "Routing internet traffic at layer 3",
+    "Assigning IP addresses via DHCP"
+  ],
+  "correct_answer": [
+    "Forwarding frames using MAC addresses",
+    "Extending a wired LAN with wireless connectivity",
+    "Bridging separate network segments"
+  ],
+  "explanation": "APs bridge wired/wireless segments, forward based on MAC addresses, and extend LAN coverage.",
+  "tags": [
+    "access point",
+    "bridging",
+    "MAC address",
+    "wireless to wired"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

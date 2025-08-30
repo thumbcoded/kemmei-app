@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What sound is typically associated with a failing hard drive?",
+  "answer_options": [
+    "Buzzing",
+    "Clicking noise",
+    "Whirring",
+    "Silence"
+  ],
+  "correct_answer": [
+    "Clicking noise"
+  ],
+  "explanation": "Clicking noises often indicate mechanical failure in spinning drives, commonly known as the 'click of death.'",
+  "tags": [
+    "clicking noise"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

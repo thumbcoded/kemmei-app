@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following actions can help isolate print defects to hardware issues? (Select all that apply)",
+  "answer_options": [
+    "Perform a printer test page from the printer itself",
+    "Print from multiple applications",
+    "Use a different USB port",
+    "Run a print quality test",
+    "Perform a printer self test"
+  ],
+  "correct_answer": [
+    "Perform a printer test page from the printer itself",
+    "Run a print quality test",
+    "Perform a printer self test"
+  ],
+  "explanation": "These actions involve tests that rely only on the printer's internal systems and are independent of external software or drivers.",
+  "tags": [
+    "printer test page",
+    "print quality test",
+    "printer self test"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "An inkjet printer is leaving streaks across every print. What is the MOST likely cause?",
+  "answer_options": [
+    "Outdated printer driver",
+    "Clogged print head",
+    "Empty paper tray",
+    "Misaligned CMYK cartridges"
+  ],
+  "correct_answer": [
+    "Clogged print head"
+  ],
+  "explanation": "Clogged nozzles in the print head can prevent even ink distribution, leading to streaks.",
+  "tags": [
+    "print head"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

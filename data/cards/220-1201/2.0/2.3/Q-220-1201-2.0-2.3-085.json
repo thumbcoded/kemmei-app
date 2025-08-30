@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes the risk of relying on legacy systems in a mission-critical environment?",
+  "answer_options": [
+    "They are easy to secure with modern antivirus tools",
+    "They are fully supported by most cloud service providers",
+    "They may introduce vulnerabilities due to lack of updates and vendor support",
+    "They have minimal impact on overall infrastructure security"
+  ],
+  "correct_answer": [
+    "They may introduce vulnerabilities due to lack of updates and vendor support"
+  ],
+  "explanation": "Legacy systems often go unpatched and unsupported, making them vulnerable to exploits and harder to integrate with modern security tools.",
+  "tags": [
+    "legacy systems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

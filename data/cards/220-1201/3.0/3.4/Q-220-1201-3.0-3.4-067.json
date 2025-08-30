@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why does NVMe achieve significantly lower latency than AHCI when used with SSDs?",
+  "answer_options": [
+    "It supports older protocols that use larger command sets",
+    "It directly maps storage to memory over PCIe with multiple queues",
+    "It allows SSDs to access spinning platters more efficiently",
+    "It compresses data blocks automatically before writing"
+  ],
+  "correct_answer": [
+    "It directly maps storage to memory over PCIe with multiple queues"
+  ],
+  "explanation": "NVMe leverages PCIe to support thousands of simultaneous queues with deep command support, eliminating AHCI's legacy single-threaded bottleneck.",
+  "tags": [
+    "NVMe",
+    "AHCI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

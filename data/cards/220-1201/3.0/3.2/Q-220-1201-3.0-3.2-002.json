@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does HDMI stand for?",
+  "answer_options": [
+    "High-Digital Media Interface",
+    "High-Definition Multimedia Interface",
+    "Hybrid Display Monitor Interface",
+    "High-Definition Modem Interface"
+  ],
+  "correct_answer": [
+    "High-Definition Multimedia Interface"
+  ],
+  "explanation": "HDMI stands for High-Definition Multimedia Interface, a common standard for video and audio connections.",
+  "tags": [
+    "High-Definition Multimedia Interface"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

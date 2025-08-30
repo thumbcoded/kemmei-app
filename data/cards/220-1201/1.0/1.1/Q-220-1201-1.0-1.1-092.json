@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Where are antenna wires typically routed in a laptop to improve signal reception?",
+  "answer_options": [
+    "Through the battery compartment",
+    "Around the system fan",
+    "Along the display bezel",
+    "Behind the keyboard only"
+  ],
+  "correct_answer": [
+    "Along the display bezel"
+  ],
+  "explanation": "Antenna wires are routed through the laptop screen bezel so they’re elevated when the lid is open, improving wireless reception.",
+  "tags": [
+    "wrap around display",
+    "antenna wire",
+    "laptop screen antenna"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

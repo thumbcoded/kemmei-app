@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason motherboard failures are often diagnosed by elimination rather than direct testing?",
+  "answer_options": [
+    "Motherboards emit error codes through BIOS",
+    "Motherboard failures always generate event logs",
+    "There are no simple tools to definitively test a motherboard",
+    "Most failures are caused by user error"
+  ],
+  "correct_answer": [
+    "There are no simple tools to definitively test a motherboard"
+  ],
+  "explanation": "Motherboard issues often require ruling out all other components, since motherboards can pass POST even when partially failing.",
+  "tags": [
+    "motherboard failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

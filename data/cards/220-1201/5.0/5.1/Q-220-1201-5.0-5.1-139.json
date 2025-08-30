@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-139",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How do driver issues contribute to motherboard troubleshooting and what is the resolution approach?",
+  "answer_options": [
+    "Driver issues only affect external peripherals and never motherboard functions",
+    "Chipset, BIOS, and component drivers affect stability - update systematically from manufacturer",
+    "All driver problems require complete operating system reinstallation",
+    "Driver issues are always caused by hardware failure and require replacement"
+  ],
+  "correct_answer": [
+    "Chipset, BIOS, and component drivers affect stability - update systematically from manufacturer"
+  ],
+  "explanation": "Driver issues affecting motherboards: chipset drivers, BIOS updates, USB controller drivers, audio drivers, and network drivers. Resolution: 1) Identify motherboard model, 2) Download latest drivers from manufacturer website, 3) Update chipset drivers first, 4) Update BIOS if needed, 5) Update individual component drivers, 6) Test stability after each update.",
+  "tags": [
+    "driver issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

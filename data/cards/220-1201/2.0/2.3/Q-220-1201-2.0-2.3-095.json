@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a scenario where internal DNS servers become unavailable, what fallback mechanism should be configured?",
+  "answer_options": [
+    "Automatically switch to service provider DNS servers",
+    "Use cached DNS entries indefinitely",
+    "Disable all network connectivity",
+    "Rely on IP addresses only"
+  ],
+  "correct_answer": [
+    "Automatically switch to service provider DNS servers"
+  ],
+  "explanation": "Organizations should configure fallback to service provider DNS servers when internal DNS servers fail, ensuring continued internet connectivity and name resolution.",
+  "tags": [
+    "internal DNS servers",
+    "DNS redundancy",
+    "service provider DNS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

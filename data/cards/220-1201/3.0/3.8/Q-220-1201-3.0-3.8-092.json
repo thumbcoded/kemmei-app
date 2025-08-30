@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to regularly inspect and replace an old inked ribbon in an impact printer?",
+  "answer_options": [
+    "To prevent overheating of the print head",
+    "To maintain consistent character visibility",
+    "To avoid static buildup on the ribbon",
+    "To prevent the ribbon from melting onto the paper"
+  ],
+  "correct_answer": [
+    "To maintain consistent character visibility"
+  ],
+  "explanation": "A worn inked ribbon can cause faded output. Regular replacement ensures legible printing.",
+  "tags": [
+    "inked ribbon"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

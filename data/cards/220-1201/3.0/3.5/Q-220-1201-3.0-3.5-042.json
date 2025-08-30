@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following conditions must be met for successful multi-CPU installation on a supported server motherboard? (Select all that apply)",
+  "answer_options": [
+    "Motherboard must support multi-CPU",
+    "Each CPU must have separate RAM slots",
+    "Both CPUs must be the same model",
+    "Thermal paste must be pre-applied"
+  ],
+  "correct_answer": [
+    "Motherboard must support multi-CPU",
+    "Both CPUs must be the same model"
+  ],
+  "explanation": "Multi-CPU systems require identical CPUs and a motherboard designed to support them. RAM slot pairing is common but not universal.",
+  "tags": [
+    "multi-CPU support"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

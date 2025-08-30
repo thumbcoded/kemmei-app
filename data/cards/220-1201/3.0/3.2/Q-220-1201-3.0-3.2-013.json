@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-013",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario most likely indicates a failed locking mechanism in a DisplayPort connection?",
+  "answer_options": [
+    "Video signal intermittently cuts out after slight cable movement",
+    "Resolution drops below 1080p on a 4K monitor",
+    "Audio output fails to pass through to HDMI speakers",
+    "System BIOS fails to detect the monitor on cold boot"
+  ],
+  "correct_answer": [
+    "Video signal intermittently cuts out after slight cable movement"
+  ],
+  "explanation": "A damaged or disengaged DisplayPort locking latch may allow the connector to loosen, causing an unstable connection and signal loss during minor cable movement.",
+  "tags": [
+    "locking mechanism",
+    "DisplayPort"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following would typically be the provider’s responsibility in a public cloud SaaS environment?",
+  "answer_options": [
+    "User password policies",
+    "Data classification rules",
+    "Patching the database software",
+    "Managing user identity groups"
+  ],
+  "correct_answer": [
+    "Patching the database software"
+  ],
+  "explanation": "In SaaS, the provider handles infrastructure, platform, and application updates — including patching databases.",
+  "tags": [
+    "provider responsibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

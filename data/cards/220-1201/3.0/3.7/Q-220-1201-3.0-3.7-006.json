@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "You are configuring a new MFD in an office. Which two connection methods might be required to ensure full functionality? (Select two)",
+  "answer_options": [
+    "Coaxial connection",
+    "Wired Ethernet connection",
+    "Wireless network access",
+    "DisplayPort video cable",
+    "Power over Ethernet (PoE)"
+  ],
+  "correct_answer": [
+    "Wired Ethernet connection",
+    "Wireless network access"
+  ],
+  "explanation": "MFDs commonly use both wired and wireless network connectivity for printing, scanning, and management.",
+  "tags": [
+    "wired network",
+    "wireless network"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

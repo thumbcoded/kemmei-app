@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a key reason SSDs are not recommended for long-term archival storage?",
+  "answer_options": [
+    "They have spinning platters prone to damage",
+    "They require active defragmentation",
+    "Data retention degrades over time without power",
+    "They are incompatible with backup software"
+  ],
+  "correct_answer": [
+    "Data retention degrades over time without power"
+  ],
+  "explanation": "Flash cells in SSDs can lose charge if left unpowered for long periods, making them less reliable for cold storage.",
+  "tags": [
+    "non-volatile memory",
+    "SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

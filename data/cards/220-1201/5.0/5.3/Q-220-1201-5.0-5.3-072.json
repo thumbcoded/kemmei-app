@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "When troubleshooting analog video connections with display quality issues, what should you check regarding the connector pins?",
+  "answer_options": [
+    "Count the total number of pins to verify connector type",
+    "Check that pins are straight, not bent, and making proper contact",
+    "Measure the voltage output of each individual pin",
+    "Clean pins with alcohol regardless of their condition"
+  ],
+  "correct_answer": [
+    "Check that pins are straight, not bent, and making proper contact"
+  ],
+  "explanation": "For analog connections (like VGA), bent or damaged pins can cause poor signal transmission resulting in flickering, color issues, or geometry problems. Inspecting connector pins for damage and ensuring proper insertion is a key troubleshooting step for analog display issues.",
+  "tags": [
+    "display quality problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

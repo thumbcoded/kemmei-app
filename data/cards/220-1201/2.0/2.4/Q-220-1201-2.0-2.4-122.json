@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-122",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a network with two DHCP scopes configured for the same VLAN, what is the likely result if both servers respond to a client Discover?",
+  "answer_options": [
+    "The client will receive duplicate IP addresses",
+    "The client will accept the first valid Offer and ignore the rest",
+    "The client will merge DNS options from both servers",
+    "The client will stop using DHCP and default to APIPA"
+  ],
+  "correct_answer": [
+    "The client will accept the first valid Offer and ignore the rest"
+  ],
+  "explanation": "If multiple DHCP servers respond, the client accepts the first received valid offer and ignores others.",
+  "tags": [
+    "DHCP scope",
+    "DHCP options",
+    "dynamic IP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

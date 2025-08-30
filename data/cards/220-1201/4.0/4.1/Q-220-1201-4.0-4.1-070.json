@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In a virtual desktop infrastructure (VDI), what role does the local client device primarily play?",
+  "answer_options": [
+    "It runs the full desktop operating system locally",
+    "It manages VM creation and deletion",
+    "It displays output and captures input for the remote virtual desktop",
+    "It hosts the virtual machine on behalf of other clients"
+  ],
+  "correct_answer": [
+    "It displays output and captures input for the remote virtual desktop"
+  ],
+  "explanation": "The local thin client in a VDI setup sends input and displays output — the actual desktop runs on a centralized server.",
+  "tags": [
+    "virtual desktop infrastructure",
+    "virtual desktop"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

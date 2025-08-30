@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which RAID level mirrors data to ensure redundancy?",
+  "answer_options": [
+    "RAID 0",
+    "RAID 1",
+    "RAID 5",
+    "RAID 6"
+  ],
+  "correct_answer": [
+    "RAID 1"
+  ],
+  "explanation": "RAID 1 mirrors data across two or more drives, so that if one fails, the data is still available from the other.",
+  "tags": [
+    "RAID 1",
+    "mirroring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

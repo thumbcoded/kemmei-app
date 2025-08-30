@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes a DNS resolution performed using `dig +trace` from a standard `dig` query?",
+  "answer_options": [
+    "`+trace` forces DNS over HTTPS (DoH)",
+    "`+trace` reveals only cached records",
+    "`+trace` performs recursive resolution through each DNS level",
+    "`+trace` limits results to IPv6 addresses only"
+  ],
+  "correct_answer": [
+    "`+trace` performs recursive resolution through each DNS level"
+  ],
+  "explanation": "`dig +trace` provides step-by-step resolution from root to authoritative servers, unlike a standard dig which resolves via local recursive resolvers.",
+  "tags": [
+    "dig",
+    "DNS resolution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

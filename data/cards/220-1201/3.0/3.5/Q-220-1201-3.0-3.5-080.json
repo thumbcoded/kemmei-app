@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are commonly used to power components directly from the PSU? (Select all that apply)",
+  "answer_options": [
+    "6-pin connector",
+    "8-pin connector",
+    "20-pin connector",
+    "24-pin connector"
+  ],
+  "correct_answer": [
+    "6-pin connector",
+    "8-pin connector",
+    "20-pin connector",
+    "24-pin connector"
+  ],
+  "explanation": "All of these are power connectors used in various configurations to supply power from the PSU to the motherboard and expansion cards.",
+  "tags": [
+    "6-pin connector",
+    "8-pin connector",
+    "20-pin connector",
+    "24-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

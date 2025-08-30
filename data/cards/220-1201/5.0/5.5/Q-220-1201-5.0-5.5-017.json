@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What happens when a laptop is too far from its wireless access point?",
+  "answer_options": [
+    "It switches to loopback mode",
+    "Signal strength weakens and performance degrades",
+    "The Ethernet port becomes active",
+    "The DHCP server fails"
+  ],
+  "correct_answer": [
+    "Signal strength weakens and performance degrades"
+  ],
+  "explanation": "Distance from the access point directly impacts signal strength and wireless performance.",
+  "tags": [
+    "signal strength",
+    "closer to access point"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

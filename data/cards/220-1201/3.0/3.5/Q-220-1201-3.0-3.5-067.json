@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which step should always be performed before physically installing a PCIe expansion card?",
+  "answer_options": [
+    "Apply thermal paste to the card",
+    "Install drivers via Windows Device Manager",
+    "Touch the metal case to discharge static electricity",
+    "Enable the card in BIOS"
+  ],
+  "correct_answer": [
+    "Touch the metal case to discharge static electricity"
+  ],
+  "explanation": "Discharging static electricity is critical to avoid damaging sensitive motherboard or expansion card components.",
+  "tags": [
+    "expansion card installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

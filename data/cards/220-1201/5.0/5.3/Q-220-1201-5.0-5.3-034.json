@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which display feature is commonly set to 100%, 200%, or 300%?",
+  "answer_options": [
+    "Brightness levels",
+    "Video refresh rate",
+    "Scaling percentage",
+    "Color gamut"
+  ],
+  "correct_answer": [
+    "Scaling percentage"
+  ],
+  "explanation": "Scaling percentage adjusts how large content appears on screen, especially on high-resolution monitors like 4K.",
+  "tags": [
+    "100% scaling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

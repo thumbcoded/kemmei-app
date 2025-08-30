@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is a significant challenge when integrating consumer IoT devices into enterprise networks?",
+  "answer_options": [
+    "They are designed for high-performance virtualization",
+    "They use outdated protocols like Token Ring",
+    "They are often manufactured without robust network security in mind",
+    "They require full Active Directory integration"
+  ],
+  "correct_answer": [
+    "They are often manufactured without robust network security in mind"
+  ],
+  "explanation": "IoT devices prioritize functionality and may lack proper encryption, authentication, or update mechanisms, creating security gaps.",
+  "tags": [
+    "IoT"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

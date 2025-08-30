@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-137",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What potential issue arises from placing a DHCP reservation inside the dynamic pool without excluding it?",
+  "answer_options": [
+    "The reserved IP will be marked as static",
+    "The DHCP server will ignore the reservation",
+    "An IP conflict could occur if the address is assigned to another client",
+    "The reservation will convert into a static route"
+  ],
+  "correct_answer": [
+    "An IP conflict could occur if the address is assigned to another client"
+  ],
+  "explanation": "If the reservation is not excluded from the dynamic pool, the DHCP server might offer it to another client, leading to an IP conflict.",
+  "tags": [
+    "DHCP reservation",
+    "IP reservation",
+    "reserved IP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

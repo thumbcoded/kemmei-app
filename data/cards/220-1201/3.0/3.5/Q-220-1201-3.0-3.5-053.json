@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO lane sizes are most commonly used for general-purpose PCIe devices? (Select two)",
+  "answer_options": [
+    "x1 slot",
+    "x2 slot",
+    "x4 slot",
+    "x16 slot"
+  ],
+  "correct_answer": [
+    "x1 slot",
+    "x4 slot"
+  ],
+  "explanation": "x1 and x4 lanes are common for non-GPU PCIe devices like USB cards or NVMe adapters. x2 is rare; x16 is typically for GPUs.",
+  "tags": [
+    "x1 slot",
+    "x4 slot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

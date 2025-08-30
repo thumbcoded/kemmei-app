@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes a hosted hypervisor from a bare metal hypervisor?",
+  "answer_options": [
+    "It requires no operating system at all",
+    "It runs directly on the physical hardware",
+    "It runs on top of a traditional operating system",
+    "It manages only cloud-based virtual machines"
+  ],
+  "correct_answer": [
+    "It runs on top of a traditional operating system"
+  ],
+  "explanation": "A hosted hypervisor (Type 2) relies on a host OS to operate, unlike bare metal (Type 1) hypervisors.",
+  "tags": [
+    "hosted hypervisor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

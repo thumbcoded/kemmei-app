@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does DVI stand for?",
+  "answer_options": [
+    "Digital Video Interface",
+    "Display Visual Interface",
+    "Digital Visual Interface",
+    "Direct VGA Integration"
+  ],
+  "correct_answer": [
+    "Digital Visual Interface"
+  ],
+  "explanation": "DVI stands for Digital Visual Interface, a standard for sending video signals to a display.",
+  "tags": [
+    "DVI",
+    "Digital Visual Interface"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

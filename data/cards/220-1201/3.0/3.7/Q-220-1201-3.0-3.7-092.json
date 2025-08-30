@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which scan destination would be used to send a file directly to a Windows network share?",
+  "answer_options": [
+    "Scan to email",
+    "Scan to SMB",
+    "Scan to cloud",
+    "Scan to print"
+  ],
+  "correct_answer": [
+    "Scan to SMB"
+  ],
+  "explanation": "Scan to SMB uses the Server Message Block protocol to deliver scanned documents to a shared folder on a network.",
+  "tags": [
+    "scan to SMB"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes tethering from using a mobile hotspot?",
+  "answer_options": [
+    "Tethering uses Wi-Fi while hotspot uses Bluetooth",
+    "Tethering connects one device while hotspot supports multiple devices",
+    "Tethering requires a cable while hotspot is always wireless",
+    "Tethering is faster than hotspot connections"
+  ],
+  "correct_answer": [
+    "Tethering connects one device while hotspot supports multiple devices"
+  ],
+  "explanation": "Tethering typically refers to connecting a single device to share the phone's internet connection, while a mobile hotspot allows multiple devices to connect simultaneously.",
+  "tags": [
+    "tethering",
+    "hotspot",
+    "internet sharing",
+    "mobile hotspot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

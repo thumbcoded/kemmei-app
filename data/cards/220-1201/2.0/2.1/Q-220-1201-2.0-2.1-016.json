@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a TCP connection?",
+  "answer_options": [
+    "Random and unreliable",
+    "Connectionless and fast",
+    "Connection-oriented and reliable",
+    "Broadcast-based and unordered"
+  ],
+  "correct_answer": [
+    "Connection-oriented and reliable"
+  ],
+  "explanation": "TCP is a connection-oriented protocol, meaning it establishes a connection before transferring data, ensuring reliable delivery.",
+  "tags": [
+    "connection-oriented",
+    "reliable delivery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

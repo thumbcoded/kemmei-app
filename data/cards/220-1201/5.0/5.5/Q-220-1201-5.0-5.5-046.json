@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of device is typically used to provide wireless network access within a building?",
+  "answer_options": [
+    "Firewall",
+    "Switch",
+    "Wireless AP",
+    "Patch panel"
+  ],
+  "correct_answer": [
+    "Wireless AP"
+  ],
+  "explanation": "A wireless access point (AP) is used to provide Wi-Fi access to clients.",
+  "tags": [
+    "wireless AP",
+    "access point signal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

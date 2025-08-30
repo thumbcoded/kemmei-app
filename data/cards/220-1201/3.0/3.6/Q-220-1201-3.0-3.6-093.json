@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are advantages of redundant server power supplies? (Select all that apply)",
+  "answer_options": [
+    "They reduce heat output compared to standard units",
+    "They support hot-swappable maintenance",
+    "They improve system uptime in case of power supply failure",
+    "They automatically share power load under normal conditions",
+    "They eliminate the need for UPS or surge protection"
+  ],
+  "correct_answer": [
+    "They support hot-swappable maintenance",
+    "They improve system uptime in case of power supply failure",
+    "They automatically share power load under normal conditions"
+  ],
+  "explanation": "Redundant supplies offer load balancing, uptime assurance, and hot-swappable design. However, they still benefit from UPS and do not necessarily reduce heat.",
+  "tags": [
+    "redundant power supply",
+    "hot swappable",
+    "power load balancing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

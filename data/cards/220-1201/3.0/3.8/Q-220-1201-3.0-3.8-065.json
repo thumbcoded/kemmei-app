@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO characteristics of thermal printers make them unsuitable for archiving legal documents?",
+  "answer_options": [
+    "Lack of color printing",
+    "No ink or toner used",
+    "Fading over time",
+    "Heat-sensitive output",
+    "Low print speed"
+  ],
+  "correct_answer": [
+    "Fading over time",
+    "Heat-sensitive output"
+  ],
+  "explanation": "Thermal prints can degrade when exposed to heat or light and are not reliable for long-term record retention.",
+  "tags": [
+    "fading over time",
+    "heat-sensitive output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

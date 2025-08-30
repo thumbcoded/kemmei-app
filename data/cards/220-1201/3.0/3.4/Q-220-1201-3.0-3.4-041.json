@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of memory is used in solid-state drives to store data without requiring power?",
+  "answer_options": [
+    "Volatile memory",
+    "Dynamic RAM",
+    "Non-volatile memory",
+    "Optical memory"
+  ],
+  "correct_answer": [
+    "Non-volatile memory"
+  ],
+  "explanation": "SSDs store data using non-volatile memory, which retains data even when powered off.",
+  "tags": [
+    "non-volatile memory",
+    "SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

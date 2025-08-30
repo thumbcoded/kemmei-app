@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of drive imaging method allows restoring to dissimilar hardware or a different laptop model?",
+  "answer_options": [
+    "Sector-by-sector clone",
+    "Full system image with hardware abstraction",
+    "SATA-only differential clone",
+    "Firmware-level mirroring"
+  ],
+  "correct_answer": [
+    "Full system image with hardware abstraction"
+  ],
+  "explanation": "Images created with hardware abstraction layers (HALs) are designed to restore across different hardware setups.",
+  "tags": [
+    "image restore",
+    "backup and restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

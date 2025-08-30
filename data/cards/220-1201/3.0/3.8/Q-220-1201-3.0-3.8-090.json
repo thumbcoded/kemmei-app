@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-090",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An impact printer’s output is missing lines of text across the page. What is the MOST likely cause?",
+  "answer_options": [
+    "Tractor feed misalignment",
+    "Faded thermal paper",
+    "Stuck pins in the print head",
+    "Empty toner cartridge"
+  ],
+  "correct_answer": [
+    "Stuck pins in the print head"
+  ],
+  "explanation": "Stuck or damaged pins in the print head prevent characters from being fully formed, causing missing lines.",
+  "tags": [
+    "print head"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

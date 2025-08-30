@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following most accurately describes a core advantage of SaaS in terms of scalability?",
+  "answer_options": [
+    "Users must manually deploy virtual machines as needed",
+    "Performance scaling requires direct OS access",
+    "The provider handles all application scaling in the background",
+    "Customers use a script to add new physical servers"
+  ],
+  "correct_answer": [
+    "The provider handles all application scaling in the background"
+  ],
+  "explanation": "SaaS abstracts infrastructure complexity, and providers automatically scale the application as demand increases.",
+  "tags": [
+    "SaaS",
+    "software applications"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

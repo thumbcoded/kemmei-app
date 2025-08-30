@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-169",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which CPU feature allows multiple instructions to be processed at the same time?",
+  "answer_options": [
+    "Thermal throttling",
+    "Single-threading",
+    "Multi-core processing",
+    "Clock multiplier"
+  ],
+  "correct_answer": [
+    "Multi-core processing"
+  ],
+  "explanation": "A multi-core processor has multiple processing units, enabling it to run multiple instructions or tasks simultaneously.",
+  "tags": [
+    "multi-core processor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

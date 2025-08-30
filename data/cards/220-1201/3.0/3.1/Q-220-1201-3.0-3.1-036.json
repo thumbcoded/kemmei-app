@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-036",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which tradeoff is often associated with OLED panels compared to LED-backlit LCDs?",
+  "answer_options": [
+    "Inability to display full HD resolutions",
+    "Poor color accuracy in high brightness",
+    "Increased thickness and weight",
+    "Potential for image retention or burn-in"
+  ],
+  "correct_answer": [
+    "Potential for image retention or burn-in"
+  ],
+  "explanation": "OLEDs are susceptible to burn-in when static images remain for long periods, a known limitation despite their display quality.",
+  "tags": [
+    "OLED"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

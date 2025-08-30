@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does NVMe primarily improve compared to older storage interfaces like SATA?",
+  "answer_options": [
+    "Data encryption",
+    "Wireless compatibility",
+    "Power consumption",
+    "Throughput and latency"
+  ],
+  "correct_answer": [
+    "Throughput and latency"
+  ],
+  "explanation": "NVMe offers high-speed, low-latency access by directly connecting SSDs to the PCI Express bus.",
+  "tags": [
+    "NVMe"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

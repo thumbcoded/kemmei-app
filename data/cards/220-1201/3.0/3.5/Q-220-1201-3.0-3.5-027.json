@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which motherboard layout decision most directly impacts both power delivery and cooling efficiency?",
+  "answer_options": [
+    "Number of RAM slots",
+    "Placement of power connectors",
+    "Location of storage interfaces",
+    "Position of chipset heatsinks"
+  ],
+  "correct_answer": [
+    "Placement of power connectors"
+  ],
+  "explanation": "Power connector location affects cable routing, which can block airflow or impede cooler installation.",
+  "tags": [
+    "power connectors",
+    "cooling solutions"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

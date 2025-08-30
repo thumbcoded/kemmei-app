@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the role of the read/write head in a traditional hard drive?",
+  "answer_options": [
+    "It spins the platters at high speed",
+    "It moves data to the cloud",
+    "It performs reading and writing of data on platters",
+    "It filters dust from entering the drive"
+  ],
+  "correct_answer": [
+    "It performs reading and writing of data on platters"
+  ],
+  "explanation": "The read/write head accesses magnetic data on the spinning platters by changing the polarity of magnetic domains.",
+  "tags": [
+    "read/write head"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

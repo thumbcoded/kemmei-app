@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-082",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a major reason legacy systems are still used in production environments?",
+  "answer_options": [
+    "They are compatible with all new security protocols",
+    "They require no power to operate",
+    "They are essential to existing processes and difficult to replace",
+    "They offer superior performance over modern systems"
+  ],
+  "correct_answer": [
+    "They are essential to existing processes and difficult to replace"
+  ],
+  "explanation": "Legacy systems often remain in use due to their deep integration into critical workflows or dependencies.",
+  "tags": [
+    "legacy systems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

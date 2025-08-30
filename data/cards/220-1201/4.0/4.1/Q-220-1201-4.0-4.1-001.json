@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary benefit of using host-based virtualization?",
+  "answer_options": [
+    "It eliminates the need for physical hardware",
+    "It allows you to run multiple operating systems on a single desktop",
+    "It enables faster hardware upgrades",
+    "It requires no operating system on the host"
+  ],
+  "correct_answer": [
+    "It allows you to run multiple operating systems on a single desktop"
+  ],
+  "explanation": "Host-based virtualization allows users to run multiple VMs on a desktop OS like macOS or Windows, making it ideal for testing or cross-platform needs.",
+  "tags": [
+    "host-based virtualization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

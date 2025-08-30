@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which items are considered printer consumables?",
+  "answer_options": [
+    "Power cords and screws",
+    "Firmware updates",
+    "Ink, toner, and paper",
+    "Paper trays and rollers"
+  ],
+  "correct_answer": [
+    "Ink, toner, and paper"
+  ],
+  "explanation": "Consumables are printer items that are used up over time, including ink, toner, and paper.",
+  "tags": [
+    "consumables"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

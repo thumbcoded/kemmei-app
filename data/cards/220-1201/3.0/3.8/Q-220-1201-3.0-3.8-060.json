@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why are thermal printers commonly used for printing shipping labels?",
+  "answer_options": [
+    "They support full-color graphics",
+    "They are quieter than dot matrix printers",
+    "They use waterproof ink",
+    "They require no paper replacement"
+  ],
+  "correct_answer": [
+    "They are quieter than dot matrix printers"
+  ],
+  "explanation": "Thermal printers are quiet, require no ink or toner, and are well-suited for simple black-and-white print jobs like labels.",
+  "tags": [
+    "shipping labels"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

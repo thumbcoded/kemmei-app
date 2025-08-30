@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user complains that their tablet's touch input works on some areas of the screen but not others. What is the most likely issue?",
+  "answer_options": [
+    "Low battery charge",
+    "Software update pending",
+    "Partial touch failure",
+    "Faulty speaker"
+  ],
+  "correct_answer": [
+    "Partial touch failure"
+  ],
+  "explanation": "When only parts of the screen respond to touch, it typically indicates a hardware fault in that area—known as partial touch failure.",
+  "tags": [
+    "partial touch failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

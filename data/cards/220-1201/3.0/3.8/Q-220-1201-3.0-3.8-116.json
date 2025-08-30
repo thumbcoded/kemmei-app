@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-116",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A laser printer frequently jams and leaves toner streaks on the page. Which action is MOST likely to resolve both issues?",
+  "answer_options": [
+    "Refill the toner cartridge",
+    "Update printer firmware",
+    "Replace the maintenance kit",
+    "Adjust calibration settings"
+  ],
+  "correct_answer": [
+    "Replace the maintenance kit"
+  ],
+  "explanation": "A worn roller or fuser in need of replacement is a common cause of frequent jams and toner streaks—both addressed by a maintenance kit.",
+  "tags": [
+    "maintenance kits",
+    "paper jams"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

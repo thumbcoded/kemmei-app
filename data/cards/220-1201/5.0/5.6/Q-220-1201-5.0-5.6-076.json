@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-076",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid troubleshooting steps for a wired network printer that appears offline? (Select all that apply)",
+  "answer_options": [
+    "Ping the printer IP address",
+    "Check for link lights at the printer’s network port",
+    "Verify printer is on the same VLAN/subnet",
+    "Replace toner cartridge",
+    "Confirm that the print server recognizes the IP address"
+  ],
+  "correct_answer": [
+    "Ping the printer IP address",
+    "Check for link lights at the printer’s network port",
+    "Verify printer is on the same VLAN/subnet",
+    "Confirm that the print server recognizes the IP address"
+  ],
+  "explanation": "These are all valid advanced checks for diagnosing a non-responsive wired printer at the network level.",
+  "tags": [
+    "wired printer",
+    "printer IP address",
+    "link lights",
+    "print server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A user sets their display to 3840x2160 on a 4K monitor, but interface elements appear unreadably small. Which combination of settings would preserve sharpness and improve usability?",
+  "answer_options": [
+    "Lower screen resolution to 1920x1080",
+    "Switch to Windows VGA mode",
+    "Keep native resolution and increase display scaling to 200%",
+    "Enable hardware acceleration"
+  ],
+  "correct_answer": [
+    "Keep native resolution and increase display scaling to 200%"
+  ],
+  "explanation": "Retaining the native resolution ensures sharp visuals, while 200% scaling increases UI size for readability without sacrificing clarity.",
+  "tags": [
+    "native resolution",
+    "200% scaling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

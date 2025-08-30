@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You suspect a power supply is working but not delivering the correct voltage. What is the safest next step?",
+  "answer_options": [
+    "Install a new graphics card",
+    "Use an ohmmeter to test resistance",
+    "Use a multimeter to measure voltage rails",
+    "Update the system BIOS"
+  ],
+  "correct_answer": [
+    "Use a multimeter to measure voltage rails"
+  ],
+  "explanation": "A multimeter can safely measure voltage output on different rails to verify correct PSU function.",
+  "tags": [
+    "multimeter testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the 'known good' testing methodology when troubleshooting monitor hardware issues?",
+  "answer_options": [
+    "Test the monitor with factory default settings only",
+    "Use a different monitor that you know works properly, or test the suspect monitor on another computer",
+    "Run built-in diagnostic tests on the monitor",
+    "Check the monitor's warranty status before testing"
+  ],
+  "correct_answer": [
+    "Use a different monitor that you know works properly, or test the suspect monitor on another computer"
+  ],
+  "explanation": "Known good testing involves substituting components you know work properly. For monitor issues: try a known good monitor on the problematic computer, or test the suspect monitor on a different computer. This isolates whether the problem is with the monitor or the computer's video output.",
+  "tags": [
+    "display hardware connection issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

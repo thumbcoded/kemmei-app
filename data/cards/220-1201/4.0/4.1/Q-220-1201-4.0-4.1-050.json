@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario best illustrates a bridge network address risk in VM deployments?",
+  "answer_options": [
+    "A VM fails to receive a DHCP lease",
+    "A VM is isolated from the internet",
+    "A VM is exposed on the LAN without firewall protections",
+    "A VM's NAT rule is misconfigured"
+  ],
+  "correct_answer": [
+    "A VM is exposed on the LAN without firewall protections"
+  ],
+  "explanation": "Bridge mode places the VM on the LAN like any other physical device, inheriting all exposure and vulnerabilities.",
+  "tags": [
+    "bridge network address",
+    "network isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

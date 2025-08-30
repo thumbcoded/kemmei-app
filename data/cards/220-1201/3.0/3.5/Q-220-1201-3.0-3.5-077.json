@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of the 24-pin connector on a motherboard?",
+  "answer_options": [
+    "To connect front panel USB ports",
+    "To supply main power to the motherboard",
+    "To power SATA storage devices",
+    "To connect fans to the CPU"
+  ],
+  "correct_answer": [
+    "To supply main power to the motherboard"
+  ],
+  "explanation": "The 24-pin connector provides power from the power supply unit (PSU) to the motherboard and its core components.",
+  "tags": [
+    "24-pin connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-124",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "How do faulty hard drives contribute to system problems and what are the warning signs?",
+  "answer_options": [
+    "Only affect storage capacity without impacting system performance",
+    "Cause system crashes, data corruption, slow boot times with warning signs like clicking noises and SMART alerts",
+    "Exclusively impact network connectivity without affecting local operations",
+    "Only cause cosmetic issues that don't affect system functionality"
+  ],
+  "correct_answer": [
+    "Cause system crashes, data corruption, slow boot times with warning signs like clicking noises and SMART alerts"
+  ],
+  "explanation": "Faulty hard drives cause: system crashes, data corruption, slow boot times, application errors, and file access problems. Warning signs: clicking/grinding noises, frequent disk errors, slow file operations, SMART warnings, bad sector reports, and intermittent freezing. Early detection through SMART monitoring and regular disk health checks prevents data loss.",
+  "tags": [
+    "faulty hard drives"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

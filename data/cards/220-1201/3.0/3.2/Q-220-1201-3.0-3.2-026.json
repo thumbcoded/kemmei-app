@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which DVI configuration provides the highest potential resolution and bandwidth?",
+  "answer_options": [
+    "DVI-A",
+    "DVI-D single link",
+    "DVI-D dual link",
+    "DVI-I analog mode"
+  ],
+  "correct_answer": [
+    "DVI-D dual link"
+  ],
+  "explanation": "DVI-D dual link uses additional pins and bandwidth to support higher resolutions beyond what single link can provide.",
+  "tags": [
+    "DVI-D",
+    "dual link",
+    "Digital Visual Interface"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

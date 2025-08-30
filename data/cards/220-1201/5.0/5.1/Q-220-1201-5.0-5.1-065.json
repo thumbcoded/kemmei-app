@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system powers on, then turns off within 2 seconds. Fans briefly spin, lights blink. What is the likely cause?",
+  "answer_options": [
+    "Video cable disconnected",
+    "Faulty power switch",
+    "Overloaded or failing power supply",
+    "Outdated USB drivers"
+  ],
+  "correct_answer": [
+    "Overloaded or failing power supply"
+  ],
+  "explanation": "This behavior—brief activation, then shutdown—suggests the PSU can't sustain startup load or has safety shutdown circuitry triggering.",
+  "tags": [
+    "power on then off",
+    "power supply failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

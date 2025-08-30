@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a standard DC voltage output provided by an ATX power supply?",
+  "answer_options": [
+    "+18V",
+    "+3.3V",
+    "-48V",
+    "+24V"
+  ],
+  "correct_answer": [
+    "+3.3V"
+  ],
+  "explanation": "The ATX power supply provides +3.3V, +5V, and +12V outputs to various components inside the computer.",
+  "tags": [
+    "power supply output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

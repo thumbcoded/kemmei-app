@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-062",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A multimeter reading shows 11.1V on a 12V rail from the power supply. What should a technician conclude?",
+  "answer_options": [
+    "This is normal and within tolerance",
+    "The power supply must be replaced immediately",
+    "The voltage is too high and will damage components",
+    "The CPU is overheating"
+  ],
+  "correct_answer": [
+    "This is normal and within tolerance"
+  ],
+  "explanation": "Most systems tolerate ±5% voltage variation, meaning 11.4V to 12.6V is acceptable for a 12V rail.",
+  "tags": [
+    "power supply voltages",
+    "multimeter testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

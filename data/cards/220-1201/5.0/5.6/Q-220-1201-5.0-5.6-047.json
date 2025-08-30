@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does the collating option do when printing multiple copies of a document?",
+  "answer_options": [
+    "Combines pages into a PDF",
+    "Prints all copies of page one, then all of page two",
+    "Prints a complete set of pages per copy",
+    "Reverses the print order"
+  ],
+  "correct_answer": [
+    "Prints a complete set of pages per copy"
+  ],
+  "explanation": "Collating arranges the printed output into individual, ordered sets, which is helpful when printing multiple copies of multi-page documents.",
+  "tags": [
+    "collating"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

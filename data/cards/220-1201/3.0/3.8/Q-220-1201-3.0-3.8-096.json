@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What kind of sound level is typically associated with impact printers?",
+  "answer_options": [
+    "Completely silent",
+    "Nearly silent",
+    "Whirring and faint clicking",
+    "Noisy operation"
+  ],
+  "correct_answer": [
+    "Noisy operation"
+  ],
+  "explanation": "Impact printers generate noise as pins rapidly strike the ribbon and paper.",
+  "tags": [
+    "noisy operation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-108",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is storage device priority in BIOS and why is proper configuration important?",
+  "answer_options": [
+    "Determines which storage device gets power first during startup",
+    "Controls the maximum storage capacity available to the system",
+    "Determines the order BIOS searches storage devices for bootable operating systems",
+    "Sets the data transfer speed for each connected storage device"
+  ],
+  "correct_answer": [
+    "Determines the order BIOS searches storage devices for bootable operating systems"
+  ],
+  "explanation": "Storage device priority determines the order in which the BIOS searches storage devices for bootable operating systems. Proper configuration ensures: the correct OS loads first, prevents booting from unwanted devices (like USB drives), reduces boot time, and maintains consistent system behavior. Set primary OS drive as first priority.",
+  "tags": [
+    "storage device priority"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why should thermal printouts be kept away from heat or sunlight?",
+  "answer_options": [
+    "They are flammable",
+    "They lose gloss",
+    "They are sensitive to moisture",
+    "They are heat-sensitive and may darken unintentionally"
+  ],
+  "correct_answer": [
+    "They are heat-sensitive and may darken unintentionally"
+  ],
+  "explanation": "Thermal output is sensitive to external heat and light, which can cause unintended blackening.",
+  "tags": [
+    "output sensitivity"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

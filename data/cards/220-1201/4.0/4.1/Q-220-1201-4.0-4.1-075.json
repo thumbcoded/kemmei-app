@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main technical requirement that allows a virtual desktop to function smoothly over a network?",
+  "answer_options": [
+    "The client must have GPU acceleration",
+    "The server must share file permissions",
+    "The connection must support fast display updates and user input transmission",
+    "The VM must be stored locally on the thin client"
+  ],
+  "correct_answer": [
+    "The connection must support fast display updates and user input transmission"
+  ],
+  "explanation": "VDI relies on real-time screen updates and responsive input over the network; fast communication is essential.",
+  "tags": [
+    "network communication",
+    "virtual desktop"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

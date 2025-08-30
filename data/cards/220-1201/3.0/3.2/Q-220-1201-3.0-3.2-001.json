@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is most commonly used to send both audio and video to modern televisions and monitors?",
+  "answer_options": [
+    "VGA",
+    "DVI",
+    "HDMI",
+    "RJ45"
+  ],
+  "correct_answer": [
+    "HDMI"
+  ],
+  "explanation": "HDMI (High-Definition Multimedia Interface) is widely used to transmit both audio and video through a single cable.",
+  "tags": [
+    "HDMI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why would a simple DVI-D to VGA adapter fail to display video on a VGA-only monitor?",
+  "answer_options": [
+    "DVI-D does not carry analog signals required for VGA",
+    "VGA requires a locking mechanism not present in DVI",
+    "VGA monitors reject digital signals for licensing reasons",
+    "The adapter requires an additional ground pin not present in DVI-D"
+  ],
+  "correct_answer": [
+    "DVI-D does not carry analog signals required for VGA"
+  ],
+  "explanation": "DVI-D supports only digital output. Converting it to VGA, which is analog-only, requires an active signal converter, not a passive adapter.",
+  "tags": [
+    "signal converter",
+    "DVI-A to VGA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

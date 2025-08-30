@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What should you do *after* physically installing an expansion card but before using it?",
+  "answer_options": [
+    "Restart the system and install drivers",
+    "Flash the card’s firmware",
+    "Disable all other expansion cards",
+    "Update the system BIOS"
+  ],
+  "correct_answer": [
+    "Restart the system and install drivers"
+  ],
+  "explanation": "Most expansion cards require appropriate drivers to function properly, which are installed after physical installation.",
+  "tags": [
+    "driver installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

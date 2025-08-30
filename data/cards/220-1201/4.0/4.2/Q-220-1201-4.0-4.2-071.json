@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of a shared responsibility model in cloud computing?",
+  "answer_options": [
+    "To define the roles of hardware vendors and software developers",
+    "To separate tasks between cloud provider and customer",
+    "To identify the fastest cloud provider",
+    "To ensure that only the provider is responsible for data security"
+  ],
+  "correct_answer": [
+    "To separate tasks between cloud provider and customer"
+  ],
+  "explanation": "The shared responsibility model clarifies who is responsible for which parts of a cloud deployment — the provider or the customer.",
+  "tags": [
+    "responsibility matrix"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

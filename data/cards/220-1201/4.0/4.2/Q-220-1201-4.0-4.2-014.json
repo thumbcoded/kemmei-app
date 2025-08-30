@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a cloud environment, each customer runs an isolated version of a web application that can be independently scaled. What concept does each isolated copy represent?",
+  "answer_options": [
+    "Financial control",
+    "Server hosting",
+    "Application instance",
+    "Cloud computing"
+  ],
+  "correct_answer": [
+    "Application instance"
+  ],
+  "explanation": "Each tenant's isolated app is an application instance — a distinct execution of the software environment, often used in multi-tenant or containerized setups.",
+  "tags": [
+    "application instance"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

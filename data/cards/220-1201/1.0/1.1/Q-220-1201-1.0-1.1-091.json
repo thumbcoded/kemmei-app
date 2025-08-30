@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician needs to replace a laptop's wireless card with a newer dual-band model. Which two considerations are most important?",
+  "answer_options": [
+    "Whether the laptop supports UEFI Secure Boot",
+    "If the antenna connectors match the new card",
+    "If the new card supports the laptop's OS",
+    "The color of the laptop lid",
+    "Whether the card uses mini PCIe or M.2 interface"
+  ],
+  "correct_answer": [
+    "If the antenna connectors match the new card",
+    "Whether the card uses mini PCIe or M.2 interface"
+  ],
+  "explanation": "Wireless card form factor (mini PCIe vs M.2) and compatible antenna connector type must be confirmed before installation.",
+  "tags": [
+    "Wi-Fi card",
+    "Bluetooth",
+    "mini PCIe",
+    "main/aux connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

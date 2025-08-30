@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What should be your first action if you hear a failing hard drive making clicking noises?",
+  "answer_options": [
+    "Open the case and clean the drive",
+    "Run a full format of the drive",
+    "Immediately backup data",
+    "Perform a factory reset"
+  ],
+  "correct_answer": [
+    "Immediately backup data"
+  ],
+  "explanation": "Clicking noises may indicate imminent drive failure. You should immediately back up any critical data.",
+  "tags": [
+    "backup data"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

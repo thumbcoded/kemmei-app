@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary benefit of using Platform as a Service (PaaS)?",
+  "answer_options": [
+    "You don’t need to manage the operating system or hardware",
+    "You don't need to write the application code",
+    "You have full control over the physical servers",
+    "You can only use pre-built applications"
+  ],
+  "correct_answer": [
+    "You don’t need to manage the operating system or hardware"
+  ],
+  "explanation": "PaaS provides the computing platform and infrastructure, allowing users to develop and deploy their own applications without managing the underlying hardware or OS.",
+  "tags": [
+    "PaaS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

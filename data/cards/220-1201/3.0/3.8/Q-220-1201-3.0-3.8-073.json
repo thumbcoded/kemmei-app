@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What causes text and images to appear on thermal paper during the printing process?",
+  "answer_options": [
+    "Laser toner activation",
+    "Pressure rollers",
+    "Application of heat to chemically coated paper",
+    "Static electricity"
+  ],
+  "correct_answer": [
+    "Application of heat to chemically coated paper"
+  ],
+  "explanation": "The heated print head activates specific areas of the thermal paper's chemical coating, turning them black.",
+  "tags": [
+    "heat application",
+    "chemically coated paper"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

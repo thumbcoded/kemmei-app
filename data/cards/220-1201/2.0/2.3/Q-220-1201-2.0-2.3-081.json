@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid examples of embedded systems? (Select all that apply)",
+  "answer_options": [
+    "Time clock terminal",
+    "Smart thermostat",
+    "Windows-based file server",
+    "Fire alarm control panel",
+    "Smartphone with a touchscreen OS"
+  ],
+  "correct_answer": [
+    "Time clock terminal",
+    "Smart thermostat",
+    "Fire alarm control panel"
+  ],
+  "explanation": "Embedded systems are purpose-built and self-contained. Time clocks, smart thermostats, and fire alarms typically qualify.",
+  "tags": [
+    "embedded system"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

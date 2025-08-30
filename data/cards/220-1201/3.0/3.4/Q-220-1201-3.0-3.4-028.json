@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following contribute to overall hard drive performance? (Select all that apply)",
+  "answer_options": [
+    "Spindle rotation speed (RPM)",
+    "Drive cache size",
+    "Seek time",
+    "SATA cable length",
+    "Controller throughput"
+  ],
+  "correct_answer": [
+    "Spindle rotation speed (RPM)",
+    "Drive cache size",
+    "Seek time",
+    "Controller throughput"
+  ],
+  "explanation": "All listed except cable length directly impact speed. Cache size, controller bandwidth, and mechanical access time are key performance factors.",
+  "tags": [
+    "RPM",
+    "data access speed",
+    "latency"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a safety concern when using a touchscreen with broken glass?",
+  "answer_options": [
+    "Data loss",
+    "Battery overheating",
+    "Cut finger",
+    "Wi-Fi signal interference"
+  ],
+  "correct_answer": [
+    "Cut finger"
+  ],
+  "explanation": "Broken glass can be sharp and may cut the user’s finger during use.",
+  "tags": [
+    "cut finger"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two characteristics best describe capacitive touchscreens compared to resistive? (Select two)",
+  "answer_options": [
+    "More responsive to light touches",
+    "Supports pressure-based stylus input natively",
+    "Requires physical pressure to register input",
+    "Typically supports multi-touch gestures",
+    "Cannot detect gloved input without special features"
+  ],
+  "correct_answer": [
+    "More responsive to light touches",
+    "Typically supports multi-touch gestures"
+  ],
+  "explanation": "Capacitive screens are highly sensitive and ideal for gesture-based input, unlike resistive screens that rely on pressure.",
+  "tags": [
+    "capacitive touchscreen"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

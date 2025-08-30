@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a cross-platform environment, which issue might arise if a printer only supports LPD and IPP but not SMB?",
+  "answer_options": [
+    "Mac clients will be unable to detect the printer",
+    "Print jobs will be delivered to the wrong queue",
+    "Windows clients may be unable to send print jobs using native tools",
+    "The printer will not support duplex printing"
+  ],
+  "correct_answer": [
+    "Windows clients may be unable to send print jobs using native tools"
+  ],
+  "explanation": "Without SMB support, native Windows print utilities may not detect or communicate with the printer unless configured manually via alternate protocols like IPP or LPD.",
+  "tags": [
+    "SMB",
+    "IPP",
+    "LPD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

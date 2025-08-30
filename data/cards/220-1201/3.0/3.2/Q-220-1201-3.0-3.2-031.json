@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which high-speed connection technology can use USB-C and supports up to 40 Gbps?",
+  "answer_options": [
+    "Thunderbolt",
+    "VGA",
+    "HDMI",
+    "Ethernet"
+  ],
+  "correct_answer": [
+    "Thunderbolt"
+  ],
+  "explanation": "Thunderbolt 3 and 4 use USB-C connectors and support high-speed data and video up to 40 Gbps.",
+  "tags": [
+    "Thunderbolt"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

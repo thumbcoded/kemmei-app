@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which device component can often be upgraded to improve wireless range on a desktop PC?",
+  "answer_options": [
+    "CPU cooler",
+    "Laptop screen",
+    "External antenna",
+    "Power supply fan"
+  ],
+  "correct_answer": [
+    "External antenna"
+  ],
+  "explanation": "External antennas can be added to improve wireless reception, especially on desktops.",
+  "tags": [
+    "external antenna",
+    "desktop antenna",
+    "stronger signal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

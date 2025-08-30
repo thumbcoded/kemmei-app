@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-088",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two practices improve cable management at a punchdown block? (Select two)",
+  "answer_options": [
+    "Using color-coded cable sleeves",
+    "Leaving extra cable slack to prevent tension",
+    "Cutting all cables to the exact same length before routing",
+    "Labeling cables and following a consistent routing path",
+    "Removing all twist from pairs before termination"
+  ],
+  "correct_answer": [
+    "Leaving extra cable slack to prevent tension",
+    "Labeling cables and following a consistent routing path"
+  ],
+  "explanation": "Good cable management involves slack for movement and labels for easy identification and troubleshooting.",
+  "tags": [
+    "cable management",
+    "punchdown block"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

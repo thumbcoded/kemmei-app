@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two components must be accessed or removed to replace an LED backlight in a modern laptop? (Select two)",
+  "answer_options": [
+    "Battery connector",
+    "Screen bezel",
+    "LCD panel layers",
+    "Wi-Fi antenna cables",
+    "CPU heat sink"
+  ],
+  "correct_answer": [
+    "Screen bezel",
+    "LCD panel layers"
+  ],
+  "explanation": "Accessing LED backlights requires disassembling the screen assembly, starting with the bezel and often peeling back LCD layers.",
+  "tags": [
+    "LED replacement",
+    "screen bezel"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

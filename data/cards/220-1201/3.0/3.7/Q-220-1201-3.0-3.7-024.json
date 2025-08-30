@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user installs a PostScript driver on a PCL-only printer. What is the most likely outcome?",
+  "answer_options": [
+    "The printer will automatically convert the language",
+    "The printer will produce blank pages or errors",
+    "The printer will print at a lower resolution",
+    "The printer will operate in scan-only mode"
+  ],
+  "correct_answer": [
+    "The printer will produce blank pages or errors"
+  ],
+  "explanation": "PostScript and PCL are different PDLs. Using the wrong driver may result in the printer being unable to interpret the commands, producing incorrect or blank output.",
+  "tags": [
+    "PostScript",
+    "PCL"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

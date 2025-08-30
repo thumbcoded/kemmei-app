@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.5-110",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the format of a MAC address?",
+  "answer_options": [
+    "32-bit binary value written as four decimal octets",
+    "64-character hexadecimal string",
+    "6-byte hexadecimal value typically shown as six pairs",
+    "8-bit ASCII string followed by device ID"
+  ],
+  "correct_answer": [
+    "6-byte hexadecimal value typically shown as six pairs"
+  ],
+  "explanation": "MAC addresses are 48-bit (6-byte) hexadecimal values displayed as six pairs separated by colons or hyphens (e.g., 00:1A:2B:3C:4D:5E).",
+  "tags": [
+    "MAC address"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

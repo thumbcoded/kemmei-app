@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A service level agreement (SLA) specifies 99.9% uptime. During troubleshooting, you discover the third-party service was down for 45 minutes last month. How should you proceed?",
+  "answer_options": [
+    "Ignore it since it was brief",
+    "Document the incident for SLA review",
+    "Immediately switch service providers",
+    "Upgrade to a higher service tier"
+  ],
+  "correct_answer": [
+    "Document the incident for SLA review"
+  ],
+  "explanation": "45 minutes of downtime in a month may exceed the SLA commitment. Proper documentation is needed to review compliance and potentially seek remediation from the provider.",
+  "tags": [
+    "network monitoring",
+    "network analysis",
+    "performance measurement"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

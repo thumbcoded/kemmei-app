@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Why is RAM considered a critical factor in determining system performance?",
+  "answer_options": [
+    "It stores data permanently for long-term access.",
+    "It allows the CPU to run without requiring data access.",
+    "It serves as the primary pathway for real-time data access by the CPU.",
+    "It processes video rendering independently."
+  ],
+  "correct_answer": [
+    "It serves as the primary pathway for real-time data access by the CPU."
+  ],
+  "explanation": "RAM acts as high-speed, temporary storage that the CPU accesses continuously to execute applications and manage data processing tasks.",
+  "tags": [
+    "RAM",
+    "data processing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

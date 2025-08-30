@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are reasons to install a printer firmware update? (Select all that apply)",
+  "answer_options": [
+    "To enable new features",
+    "To fix software bugs",
+    "To reset the print queue",
+    "To update the operating system"
+  ],
+  "correct_answer": [
+    "To enable new features",
+    "To fix software bugs"
+  ],
+  "explanation": "Firmware updates often include bug fixes or add new capabilities to the printer. They do not affect the print queue or the operating system.",
+  "tags": [
+    "firmware update",
+    "bug fixes",
+    "new features"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

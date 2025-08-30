@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How does DKIM contribute to non-repudiation in email communications?",
+  "answer_options": [
+    "It encrypts email attachments to ensure confidentiality",
+    "It signs messages with a private key to verify sender authenticity",
+    "It prevents DNS record tampering through DNSSEC",
+    "It logs all sender IP addresses for forensics"
+  ],
+  "correct_answer": [
+    "It signs messages with a private key to verify sender authenticity"
+  ],
+  "explanation": "DKIM provides message integrity and authenticity by using private key signing, which supports non-repudiation.",
+  "tags": [
+    "DKIM",
+    "private key",
+    "digital signature"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

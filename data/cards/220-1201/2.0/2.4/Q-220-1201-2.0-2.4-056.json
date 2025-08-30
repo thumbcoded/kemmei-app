@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What type of information can `nslookup` return about a domain?",
+  "answer_options": [
+    "SSL certificate expiration date",
+    "Mail server configuration",
+    "IP address mappings",
+    "Firewall status"
+  ],
+  "correct_answer": [
+    "IP address mappings"
+  ],
+  "explanation": "`nslookup` is used to retrieve IP addresses associated with a domain name from a DNS server.",
+  "tags": [
+    "nslookup",
+    "DNS resolution",
+    "DNS server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

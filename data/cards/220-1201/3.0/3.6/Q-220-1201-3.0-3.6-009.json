@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two scenarios pose a serious safety risk during PSU disassembly? (Select two)",
+  "answer_options": [
+    "Unplugging the PSU before opening it",
+    "Attempting to service high-voltage capacitors",
+    "Touching components near the power MOSFETs",
+    "Measuring AC input with the power supply plugged in",
+    "Leaving the PSU grounded during testing"
+  ],
+  "correct_answer": [
+    "Attempting to service high-voltage capacitors",
+    "Measuring AC input with the power supply plugged in"
+  ],
+  "explanation": "PSU internals can store lethal charges, and live AC input should never be probed without proper insulation and training.",
+  "tags": [
+    "electrocution risk",
+    "capacitor discharge"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

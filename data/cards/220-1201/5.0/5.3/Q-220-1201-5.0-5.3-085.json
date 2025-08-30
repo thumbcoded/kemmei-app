@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What usually causes a flickering or flashing screen problem?",
+  "answer_options": [
+    "Virus infection affecting display drivers",
+    "Loose or faulty video cable connections",
+    "Incorrect monitor color settings",
+    "Low computer memory (RAM)"
+  ],
+  "correct_answer": [
+    "Loose or faulty video cable connections"
+  ],
+  "explanation": "Flickering screens are most commonly caused by loose connections or faulty cables that intermittently lose signal. This causes the display to flash black and return as the connection is made and lost repeatedly.",
+  "tags": [
+    "flickering display"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

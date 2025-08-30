@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-026",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician finds that a printer pulls multiple pages at once only from tray 1, but not from trays 2 or 3. What is the most likely root cause?",
+  "answer_options": [
+    "Incorrect firmware version",
+    "Driver default is set to economy mode",
+    "Pickup rollers in tray 1 are worn or dirty",
+    "Tray 1 is configured for landscape orientation"
+  ],
+  "correct_answer": [
+    "Pickup rollers in tray 1 are worn or dirty"
+  ],
+  "explanation": "If only tray 1 is causing multiple pages to feed, the pickup rollers for that tray are likely degraded or contaminated.",
+  "tags": [
+    "pickup rollers",
+    "multiple pages",
+    "paper tray"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

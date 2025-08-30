@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What feature prevents users from installing incompatible DDR memory into a motherboard?",
+  "answer_options": [
+    "Software lockout",
+    "Firmware updates",
+    "Key notches on memory modules",
+    "Removable heat spreaders"
+  ],
+  "correct_answer": [
+    "Key notches on memory modules"
+  ],
+  "explanation": "Key notches physically prevent the wrong DDR module from being inserted into an incompatible motherboard.",
+  "tags": [
+    "backward compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

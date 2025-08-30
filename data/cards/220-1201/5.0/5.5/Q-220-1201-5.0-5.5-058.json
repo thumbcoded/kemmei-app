@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is port flapping in network troubleshooting?",
+  "answer_options": [
+    "A port that sends data too quickly",
+    "A network interface that repeatedly goes up and down",
+    "A switch port that forwards broadcast traffic",
+    "A wireless connection that changes frequencies"
+  ],
+  "correct_answer": [
+    "A network interface that repeatedly goes up and down"
+  ],
+  "explanation": "Port flapping occurs when a network interface link status continuously alternates between up and down, often due to cable or physical interface issues.",
+  "tags": [
+    "link light check",
+    "bad cable detection",
+    "network interface testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO steps should you take first when troubleshooting port flapping? (Select two)",
+  "answer_options": [
+    "Replace the network cable",
+    "Update the network driver",
+    "Try a different switch port",
+    "Restart the network service",
+    "Check for loose connections"
+  ],
+  "correct_answer": [
+    "Replace the network cable",
+    "Try a different switch port"
+  ],
+  "explanation": "Port flapping is usually caused by physical layer issues. Testing with a new cable and different switch port helps isolate whether the problem is with the cable or the switch interface.",
+  "tags": [
+    "bad cable detection",
+    "troubleshooting steps",
+    "network interface testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

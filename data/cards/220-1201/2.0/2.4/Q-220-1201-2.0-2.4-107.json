@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-107",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition would cause a DHCP client's lease to expire and require reinitialization of the DORA process?",
+  "answer_options": [
+    "The gateway becomes unreachable",
+    "The DNS server changes",
+    "The lease time runs out without renewal",
+    "The client receives a duplicate IP conflict alert"
+  ],
+  "correct_answer": [
+    "The lease time runs out without renewal"
+  ],
+  "explanation": "When the lease duration expires without renewal, the client must initiate a new DORA cycle to obtain a fresh IP lease.",
+  "tags": [
+    "lease",
+    "IP address lease",
+    "DORA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

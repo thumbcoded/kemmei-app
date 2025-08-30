@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-063",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is one benefit of using a modular power supply when building a PC?",
+  "answer_options": [
+    "Lower voltage output",
+    "Improved cable management",
+    "Higher wattage capacity",
+    "Automatic fan control"
+  ],
+  "correct_answer": [
+    "Improved cable management"
+  ],
+  "explanation": "Modular power supplies allow you to connect only the cables you need, which helps with airflow and cable management.",
+  "tags": [
+    "modular power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

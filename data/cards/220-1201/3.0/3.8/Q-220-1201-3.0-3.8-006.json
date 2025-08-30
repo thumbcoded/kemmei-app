@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-006",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO components are directly involved in charging the photosensitive drum in a laser printer?",
+  "answer_options": [
+    "Corona wire",
+    "Fuser unit",
+    "Charged roller",
+    "Onboard memory",
+    "Toner cartridge"
+  ],
+  "correct_answer": [
+    "Corona wire",
+    "Charged roller"
+  ],
+  "explanation": "Both the corona wire and charged roller are used to apply a uniform negative charge to the drum, depending on printer design.",
+  "tags": [
+    "corona wire",
+    "charged roller"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

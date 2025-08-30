@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-049",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which process ensures CMYK inks are properly positioned on the page?",
+  "answer_options": [
+    "Toner offset",
+    "Print spooling",
+    "Color alignment",
+    "Drum balancing"
+  ],
+  "correct_answer": [
+    "Color alignment"
+  ],
+  "explanation": "Color alignment corrects any deviation in where each color is placed, preventing misaligned or blurry output.",
+  "tags": [
+    "color alignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

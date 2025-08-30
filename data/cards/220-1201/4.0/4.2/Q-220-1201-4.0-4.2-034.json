@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "In an IaaS model, who is typically responsible for operating system maintenance?",
+  "answer_options": [
+    "The cloud provider",
+    "The customer",
+    "Both the customer and provider",
+    "The operating system vendor"
+  ],
+  "correct_answer": [
+    "The customer"
+  ],
+  "explanation": "IaaS requires the customer to handle the installation, updating, and maintenance of operating systems.",
+  "tags": [
+    "IaaS",
+    "operating system maintenance",
+    "customer control"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following technologies uses fiber optics in a fault-tolerant ring topology to maintain WAN reliability?",
+  "answer_options": [
+    "ADSL",
+    "DOCSIS",
+    "SONET",
+    "WISP"
+  ],
+  "correct_answer": [
+    "SONET"
+  ],
+  "explanation": "SONET (Synchronous Optical Networking) is a fiber-based WAN technology that often uses a ring topology to ensure redundancy and fault tolerance.",
+  "tags": [
+    "SONET"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

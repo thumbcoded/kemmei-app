@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following describes a mechanical failure that can trigger other component failures inside a hard drive?",
+  "answer_options": [
+    "Silent corruption",
+    "Cascade effect",
+    "Write amplification",
+    "Parity mismatch"
+  ],
+  "correct_answer": [
+    "Cascade effect"
+  ],
+  "explanation": "A cascade effect in a hard drive refers to one mechanical failure leading to further failures in other internal components.",
+  "tags": [
+    "cascade effect"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

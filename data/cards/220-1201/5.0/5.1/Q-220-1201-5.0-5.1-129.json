@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-129",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of 3.3 volts in modern computer systems and what are the symptoms of 3.3V problems?",
+  "answer_options": [
+    "Powers external USB devices and provides charging capability",
+    "Powers RAM, PCIe slots, CPU circuits - problems cause memory errors, crashes, blue screens",
+    "Dedicated voltage for cooling fans and temperature monitoring sensors",
+    "Backup power for maintaining BIOS settings during power outages"
+  ],
+  "correct_answer": [
+    "Powers RAM, PCIe slots, CPU circuits - problems cause memory errors, crashes, blue screens"
+  ],
+  "explanation": "3.3V powers: RAM, PCIe slots, some CPU circuits, and modern chipsets. It's critical for system operation. 3.3V problems cause: memory errors, PCIe device failures, random crashes, boot failures, or system instability. Symptoms include: blue screens, application crashes, or failure to POST. Always test 3.3V rail when troubleshooting mysterious system instabilities.",
+  "tags": [
+    "3.3 volts"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

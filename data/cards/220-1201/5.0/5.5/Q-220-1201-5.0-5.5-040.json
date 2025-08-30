@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-040",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You’re troubleshooting a report of intermittent wireless connectivity. You suspect inconsistent signal quality. What’s the BEST starting point?",
+  "answer_options": [
+    "Check Event Viewer for disk errors",
+    "Review IP configuration for static assignment",
+    "Run wireless network monitoring over time",
+    "Reset the CMOS battery"
+  ],
+  "correct_answer": [
+    "Run wireless network monitoring over time"
+  ],
+  "explanation": "Wireless monitoring tools allow tracking signal fluctuations, interference, and drops over a period, revealing patterns.",
+  "tags": [
+    "wireless network monitoring",
+    "network diagnostics"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

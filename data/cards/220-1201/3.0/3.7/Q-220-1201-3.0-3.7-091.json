@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What scanning feature sends a scanned document directly to an email address?",
+  "answer_options": [
+    "Scan to SMB",
+    "Scan to folder",
+    "Scan to email",
+    "Scan to cloud"
+  ],
+  "correct_answer": [
+    "Scan to email"
+  ],
+  "explanation": "Scan to email delivers the scanned file as an email attachment to the specified recipient.",
+  "tags": [
+    "scan to email"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

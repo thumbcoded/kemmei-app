@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-004",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is most likely to cause garbled print output?",
+  "answer_options": [
+    "Wrong page description language",
+    "Empty paper tray",
+    "Incorrect tray selected",
+    "Damaged photosensitive drum"
+  ],
+  "correct_answer": [
+    "Wrong page description language"
+  ],
+  "explanation": "Garbled output often results when the printer receives an unsupported page description language like PostScript instead of PCL, or vice versa.",
+  "tags": [
+    "garbled print",
+    "corrupted output",
+    "PCL",
+    "PostScript",
+    "page description language"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

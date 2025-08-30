@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-171",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is one key limitation of a 32-bit CPU?",
+  "answer_options": [
+    "It can't execute any 64-bit applications",
+    "It can't run any modern operating system",
+    "It can't access more than 4GB of RAM",
+    "It lacks a floating-point unit"
+  ],
+  "correct_answer": [
+    "It can't access more than 4GB of RAM"
+  ],
+  "explanation": "A 32-bit CPU is limited to addressing up to 4GB of RAM due to its smaller address space.",
+  "tags": [
+    "32-bit CPU"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

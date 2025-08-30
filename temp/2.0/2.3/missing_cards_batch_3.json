@@ -1,0 +1,195 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What industries commonly use SCADA systems?",
+    "answer_options": [
+      "Retail and hospitality",
+      "Power services, oil and gas, manufacturing",
+      "Banking and finance",
+      "Education and training"
+    ],
+    "correct_answer": ["Power services, oil and gas, manufacturing"],
+    "explanation": "SCADA (Supervisory Control and Data Acquisition) systems are commonly used in industries that control large-scale equipment such as power services, oil and gas, and manufacturing companies.",
+    "tags": ["SCADA", "supervisory control and data acquisition", "ICS"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What are examples of embedded systems in everyday environments?",
+    "answer_options": [
+      "Desktop computers and laptops",
+      "Fire alarm systems and time clock systems",
+      "Network servers and routers",
+      "Smartphones and tablets"
+    ],
+    "correct_answer": ["Fire alarm systems and time clock systems"],
+    "explanation": "Embedded systems are purpose-built devices like fire alarm systems and time clock systems where users interact with the device but don't have direct access to the underlying operating system.",
+    "tags": ["embedded system", "purpose-built device", "smart devices"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is a key characteristic of legacy systems in data centers?",
+    "answer_options": [
+      "They require frequent updates and maintenance",
+      "They continue running for many years with minimal changes",
+      "They use the latest technology standards",
+      "They are easy to replace with modern systems"
+    ],
+    "correct_answer": ["They continue running for many years with minimal changes"],
+    "explanation": "Legacy systems can run for 10, 15, 20 years or longer once set up, and they often remain important to operations, which is why they haven't been replaced.",
+    "tags": ["legacy systems", "embedded system", "purpose-built device"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "How is network access controlled for SCADA systems in secure environments?",
+    "answer_options": [
+      "Through standard internet connections with passwords",
+      "Via completely segmented networks with physical or controlled access",
+      "Using public cloud-based access controls",
+      "Through standard corporate network authentication"
+    ],
+    "correct_answer": ["Via completely segmented networks with physical or controlled access"],
+    "explanation": "Organizations with SCADA systems use completely segmented networks that are only accessible by physically visiting that part of the network or through very controlled systems.",
+    "tags": ["SCADA", "segmented network", "ICS"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "Why do legacy systems often remain in production for decades?",
+    "answer_options": [
+      "They are more secure than modern systems",
+      "They are too expensive to operate",
+      "They continue to be important and functional for operations",
+      "They require no electricity to run"
+    ],
+    "correct_answer": ["They continue to be important and functional for operations"],
+    "explanation": "Legacy systems remain in production because they are still important to operations. Just because something is old doesn't mean it's not important - importance is often why they haven't been replaced.",
+    "tags": ["legacy systems", "ICS", "industrial control system"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "What are characteristics of embedded systems? (Select two)",
+    "answer_options": [
+      "Users have direct access to the operating system",
+      "They are purpose-built for specific functions",
+      "They require frequent manual updates",
+      "Users interact with the device but not the OS directly",
+      "They always need internet connectivity"
+    ],
+    "correct_answer": ["They are purpose-built for specific functions", "Users interact with the device but not the OS directly"],
+    "explanation": "Embedded systems are purpose-built devices where users interact with the device on a daily basis but don't directly interact with the underlying operating system.",
+    "tags": ["embedded system", "purpose-built device", "smart devices"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What is the primary security concern when deploying IoT devices in enterprise networks?",
+    "answer_options": [
+      "High power consumption",
+      "Manufacturers may lack network security expertise",
+      "Expensive licensing costs",
+      "Incompatible network protocols"
+    ],
+    "correct_answer": ["Manufacturers may lack network security expertise"],
+    "explanation": "Companies that make appliances like refrigerators, speakers, or thermostats are good at making those devices but may not be good at connecting to networks and maintaining network security.",
+    "tags": ["IoT", "segmented network", "device isolation"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "What is the primary reason for putting IoT devices on segmented networks?",
+    "answer_options": [
+      "To improve their performance and speed",
+      "To limit potential security breaches if a device is compromised",
+      "To reduce network bandwidth usage",
+      "To make them easier to manage and update"
+    ],
+    "correct_answer": ["To limit potential security breaches if a device is compromised"],
+    "explanation": "Organizations put IoT devices on segmented networks to limit any access that could occur should someone gain access to an IoT device, preventing lateral movement through the main network.",
+    "tags": ["IoT", "segmented network", "device isolation"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "hard",
+    "question_type": "select_all",
+    "question_text": "Which statements about embedded systems are true? (Select all that apply)",
+    "answer_options": [
+      "They require minimal ongoing maintenance",
+      "Manufacturers provide necessary management tools",
+      "Users have direct operating system access",
+      "They are purpose-built for specific functions",
+      "They are self-contained units"
+    ],
+    "correct_answer": ["They require minimal ongoing maintenance", "Manufacturers provide necessary management tools", "They are purpose-built for specific functions", "They are self-contained units"],
+    "explanation": "Embedded systems are purpose-built, self-contained units that require minimal ongoing maintenance, with manufacturers providing the necessary tools for support and management.",
+    "tags": ["embedded system", "purpose-built device", "smart devices"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "2.0",
+    "domain_title": "Networking",
+    "subdomain_id": "2.3",
+    "difficulty": "hard",
+    "question_type": "select_all",
+    "question_text": "Which types of devices are commonly found in IoT deployments? (Select all that apply)",
+    "answer_options": [
+      "Smart refrigerators and coffee makers",
+      "Voice-controlled smart speakers",
+      "Thermostats and heating controls",
+      "Smart doorbells and garage door openers",
+      "Network servers and databases"
+    ],
+    "correct_answer": ["Smart refrigerators and coffee makers", "Voice-controlled smart speakers", "Thermostats and heating controls", "Smart doorbells and garage door openers"],
+    "explanation": "IoT devices include a broad category of smart appliances, voice-controlled devices, climate controls, and access control devices that connect to networks for enhanced functionality.",
+    "tags": ["IoT", "smart devices", "internet of things"],
+    "status": "approved"
+  }
+]

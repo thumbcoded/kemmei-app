@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two advantages of application containers over virtual machines.",
+  "answer_options": [
+    "Lower resource usage due to no guest OS",
+    "Ability to run multiple guest operating systems",
+    "Faster deployment and portability",
+    "Built-in hypervisor encryption"
+  ],
+  "correct_answer": [
+    "Lower resource usage due to no guest OS",
+    "Faster deployment and portability"
+  ],
+  "explanation": "Containers are smaller, faster to deploy, and easier to move between systems than VMs.",
+  "tags": [
+    "application containerization",
+    "container image"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

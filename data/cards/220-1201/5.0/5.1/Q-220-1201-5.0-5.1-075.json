@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-075",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A system boots but the display is scrambled with vertical colored lines. What is the most likely cause?",
+  "answer_options": [
+    "Loose network cable",
+    "Corrupt operating system",
+    "Faulty video card or driver",
+    "Incorrect system time"
+  ],
+  "correct_answer": [
+    "Faulty video card or driver"
+  ],
+  "explanation": "Scrambled visuals and artifacts like vertical lines are common signs of a damaged GPU or corrupted video driver.",
+  "tags": [
+    "artifacts on display",
+    "video drivers"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

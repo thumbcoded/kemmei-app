@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What happens if a shared printer’s host computer is turned off?",
+  "answer_options": [
+    "Other users can still print through the network",
+    "The printer switches to a backup print server",
+    "No one can print to the shared printer",
+    "The printer enters sleep mode"
+  ],
+  "correct_answer": [
+    "No one can print to the shared printer"
+  ],
+  "explanation": "When a shared printer is dependent on a host computer, it becomes unavailable if that computer is shut down.",
+  "tags": [
+    "shared printer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

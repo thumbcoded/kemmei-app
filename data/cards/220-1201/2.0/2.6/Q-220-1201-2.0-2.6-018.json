@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the default subnet size for an IPv6 address?",
+  "answer_options": [
+    "/24",
+    "/48",
+    "/64",
+    "/128"
+  ],
+  "correct_answer": [
+    "/64"
+  ],
+  "explanation": "IPv6 networks typically use a /64 subnet mask, with 64 bits for the network prefix and 64 bits for the host ID.",
+  "tags": [
+    "IPv6",
+    "network prefix",
+    "subnetting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

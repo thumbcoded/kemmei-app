@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "When troubleshooting intermittent network issues, which TWO monitoring techniques are most effective? (Select two)",
+  "answer_options": [
+    "Continuous ping to test connectivity",
+    "Single bandwidth test",
+    "Periodic speed tests over time",
+    "One-time cable test",
+    "Static IP configuration check"
+  ],
+  "correct_answer": [
+    "Continuous ping to test connectivity",
+    "Periodic speed tests over time"
+  ],
+  "explanation": "Intermittent issues require ongoing monitoring. Continuous ping reveals connectivity patterns, while periodic speed tests show performance variations over time.",
+  "tags": [
+    "intermittent connectivity",
+    "network monitoring",
+    "connectivity testing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is one simple reason a wireless device might show a weak signal?",
+  "answer_options": [
+    "Incorrect file sharing permissions",
+    "Device is too far from the access point",
+    "Computer is using a static IP",
+    "The device has no storage space"
+  ],
+  "correct_answer": [
+    "Device is too far from the access point"
+  ],
+  "explanation": "As the distance from the access point increases, signal strength drops, leading to performance issues.",
+  "tags": [
+    "weak signal",
+    "distance issues",
+    "signal quality"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

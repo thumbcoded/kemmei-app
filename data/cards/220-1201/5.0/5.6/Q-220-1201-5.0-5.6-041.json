@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports that print jobs are stuck in the queue and new jobs won't print. The printer is online and responsive. What should the technician check next?",
+  "answer_options": [
+    "Replace the toner cartridge",
+    "Inspect the paper feed sensor",
+    "Restart the print spooler service",
+    "Update the wireless printer firmware"
+  ],
+  "correct_answer": [
+    "Restart the print spooler service"
+  ],
+  "explanation": "If print jobs are stuck and the printer itself is operational, restarting the spooler service is a logical next step.",
+  "tags": [
+    "print spooler",
+    "print queue"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,676 @@
+0:02
+troubleshooting printer issues can be
+0:04
+challenging you never know if the issue
+0:05
+is related to an application a printer
+0:08
+driver the operating system or the
+0:10
+printer itself one of the ways that you
+0:12
+can narrow down this problem is by
+0:14
+printing a test page from your operating
+0:16
+system in Windows there's a built-in
+0:19
+function to create a test page this
+0:21
+means that you aren't using an
+0:23
+application you're simply using the
+0:25
+operating system and the device driver
+0:27
+as it's currently configured you might
+0:29
+also have a way to perform a test print
+0:32
+from the printer itself that will test
+0:34
+from the hardware of the printer and the
+0:36
+operating system and device driver have
+0:39
+no impact on the printer level test
+0:42
+here's an example of a Windows printer
+0:44
+test page this was created by pressing
+0:46
+that print test page button from the
+0:49
+device driver itself we're not only
+0:51
+interested in the quality of the output
+0:53
+but we're also interested in the
+0:54
+information that is contained on the
+0:56
+page we have information about the
+0:57
+printer properties and how they're
+0:59
+configured we also know the print driver
+1:01
+properties and we know exactly what
+1:02
+printer driver files are associated with
+1:05
+this
+1:06
+printer you may find that your printer
+1:08
+test page does not have the quality you
+1:11
+were expecting for example you might
+1:12
+have a single line that goes all the way
+1:15
+down the page if this is an inkjet
+1:17
+printer then you probably have dirty
+1:18
+print heads so simply cleaning those
+1:20
+print heads can probably remove that
+1:22
+line if this is a laser printer it's
+1:25
+probably a scratch that is on the
+1:26
+photosensitive drum that's used inside
+1:28
+of that printer and as the drum is
+1:30
+rotating around that scratch is simply
+1:33
+leaving a black mark all the way down
+1:35
+the page if the output is faded or it's
+1:38
+difficult to read what's on the page
+1:40
+then you're probably running out of
+1:41
+toner or you're very low on ink and if
+1:44
+you're seeing double images on the page
+1:46
+or there's speckling on the page then
+1:49
+the laser printer optical drum is
+1:51
+probably not cleaning properly and
+1:52
+you're seeing a ghost or shadow from the
+1:55
+previous rotation of that drum here's
+1:58
+what a scratch on that photosensitive
+2:00
+drum would look like it's just a single
+2:02
+black line that goes all the way down
+2:04
+the page and if the cleaning process is
+2:06
+not working properly then you're
+2:08
+probably seeing a normal part of the
+2:10
+page and then a copy of that that's a
+2:13
+little bit lighter later on down the
+2:15
+page this ghosting will continue until
+2:17
+you're able to correct the cleaning
+2:19
+problem inside of your laser printer
+2:22
+here's a page of output you definitely
+2:24
+don't want to see coming out of your
+2:25
+printer this garbled print might be
+2:27
+caused by a number of different issues
+2:29
+one of them might be a bad printer
+2:31
+driver or you've specified the wrong
+2:33
+model of printer in your Windows
+2:35
+configuration in those cases you might
+2:37
+be sending the wrong page description
+2:39
+language to the printer the printer
+2:41
+might be expecting PCL and you might be
+2:43
+sending Postcript or vice versa of
+2:46
+course we don't know if this is related
+2:48
+to the print driver or the operating
+2:50
+system or if we have a physical problem
+2:52
+with the printer so if you have a way to
+2:54
+print a test print on the printer you'll
+2:57
+be able to see if you're able to get
+2:58
+good output or if the printer also
+3:00
+provides this garbled output if your
+3:03
+printer test works properly and your
+3:05
+Windows driver test works properly then
+3:08
+it could be that the application is
+3:10
+sending bad information to the printer
+3:12
+you may want to try a different
+3:13
+application or try upgrading the
+3:15
+application you currently have to see if
+3:17
+you can improve the output
+3:20
+occasionally you'll find that the paper
+3:22
+will jam inside the printer what you
+3:24
+don't want to do is pull that paper so
+3:26
+that you're ripping it and leaving part
+3:28
+of that paper inside the printer
+3:30
+mechanism some printers will release
+3:33
+their printer mechanisms when you open
+3:34
+the top of the printer and that might
+3:36
+make it a lot easier to be able to
+3:38
+remove that paper if no paper is being
+3:41
+pulled from your printer tray or you're
+3:42
+getting multiple pages pulled at the
+3:45
+same time to go through the printer then
+3:47
+you might have a problem with either the
+3:48
+paper tray or with the pickup rollers
+3:51
+these pickup rollers need to be clean
+3:53
+and they do wear over time if you're
+3:55
+performing a printer maintenance using
+3:57
+an official maintenance kit from the
+3:58
+printer manufacturer they very often
+4:01
+will include additional pickup rollers
+4:03
+to avoid this kind of problem and
+4:05
+sometimes you'll notice that the output
+4:07
+from your printer especially with a
+4:08
+laser printer will have creases in the
+4:11
+paper itself that may be because of a
+4:13
+problem in the paper path as it's moving
+4:15
+through the printer or it may be that
+4:17
+you're using a paper that is a different
+4:19
+weight than what is recommended by the
+4:21
+printer manufacturer make sure you check
+4:23
+your printer documentation so you know
+4:24
+exactly what the recommended weight of
+4:26
+paper would be for that specific printer
+4:29
+here's a closer view of these pickup
+4:31
+rollers and the rollers inside of your
+4:34
+printer you can see that these are
+4:35
+relatively new they don't seem to have
+4:37
+any creases on them and you can see
+4:39
+there's not much wear on the rollers
+4:41
+that are currently
+4:42
+installed if your printer is not
+4:44
+printing but you look at the printer
+4:46
+queue and there's a lot of jobs that are
+4:48
+queued up waiting to be printed then
+4:50
+your problem might be with the printer
+4:52
+spooler itself the printer spooler is a
+4:55
+middle point between the application and
+4:58
+the printer the application sends a
+5:00
+print job to the spooler and the spooler
+5:02
+is responsible for then sending that
+5:03
+print job to the printer if one of those
+5:06
+print jobs is corrupted it may cause
+5:08
+this spooler to either crash or freeze
+5:11
+some print spoolers will restart
+5:12
+automatically for example this one in
+5:14
+Windows on the first failure will
+5:17
+restart this service the second failure
+5:19
+will restart again but if there is a
+5:21
+subsequent failure it will completely
+5:23
+stop and require your intervention you
+5:26
+may be able to go to your Windows event
+5:28
+viewer specifically the Windows print
+5:30
+service as part of that event viewer and
+5:33
+see if any of these corruptions or any
+5:35
+other problems with the print spooler
+5:36
+are occurring it may just be that one
+5:39
+print job is causing the issue for
+5:41
+everyone else but once that print
+5:42
+spooler fails nothing else in the queue
+5:45
+is going to be printed you as the
+5:46
+administrator are able to delete that
+5:49
+print job or move it to the bottom of
+5:50
+the list let everything else print and
+5:53
+then you can troubleshoot that specific
+5:55
+print
+5:56
+job our printers commonly make noises
+5:59
+but they're not usually a grinding noise
+6:02
+we don't really have to grind anything
+6:03
+up inside the printer to get it to print
+6:05
+properly instead this may indicate that
+6:08
+some other type of problem is occurring
+6:10
+maybe it's a paper jam inside the
+6:12
+printer or maybe an ink cartridge has
+6:14
+come loose or needs to be seated down so
+6:16
+that it doesn't rub against any other
+6:18
+parts of the printer each printer
+6:21
+operates in a different way and has a
+6:22
+different number of steps for
+6:24
+troubleshooting so make sure you check
+6:25
+the manual for your printer to see what
+6:27
+you should do if you happen to hear any
+6:29
+grinding noises or it may be a bad part
+6:32
+that requires a specialist to be able to
+6:34
+take the printer to their office or to
+6:36
+visit on site take the printer
+6:38
+completely apart find that bad part
+6:41
+replace it and then put everything back
+6:43
+together this could certainly cause some
+6:45
+noise inside the printer if you don't
+6:47
+properly seat those ink cartridges it
+6:50
+will certainly cause some noise when you
+6:52
+finally send a print job and that
+6:54
+carriage tries to go back and forth
+6:55
+inside of the printer our printers do
+6:59
+more than simply print information on a
+7:01
+page very often they are also providing
+7:04
+finishing services that finishing would
+7:06
+be collating binding stapling and
+7:09
+performing an additional task once the
+7:11
+output has been created some larger
+7:13
+printers will collate multiple copies
+7:15
+together and then staple each copy as
+7:18
+it's created occasionally you'll have a
+7:20
+staple jam and you'll need to remove
+7:22
+that staple to continue the process
+7:24
+every printer is a little bit
+7:26
+differently on how you remove those
+7:27
+staple jams so make sure you check with
+7:29
+your printer documentation and some
+7:31
+printers can perform hole punches that
+7:33
+hole punch is determined by the
+7:35
+application and the driver that you're
+7:37
+using so if the holes are not lining up
+7:39
+exactly where you would expect make sure
+7:41
+you check with the application that
+7:43
+you're using and make sure you're using
+7:45
+the latest print
+7:46
+driver on most printers we can choose to
+7:49
+print a portrait mode or a landscape
+7:51
+mode if you're printing a page in
+7:53
+portrait and you get the output in
+7:56
+landscape then there has definitely been
+7:58
+a mismatch somewhere along the line
+8:01
+normally this setting is handled in the
+8:02
+print driver of your operating system so
+8:05
+make sure you check the defaults for the
+8:06
+print driver and then also check the
+8:09
+settings that you're sending out when
+8:10
+you choose to print from your
+8:12
+application you may find that this is a
+8:14
+problem with the print driver and simply
+8:16
+upgrading the print driver will solve
+8:18
+the problem if the print driver is not
+8:20
+telling the printer the proper
+8:21
+orientation you may be able to control
+8:24
+this at the printer itself printers
+8:26
+usually have a default setting on
+8:28
+whether they will print in a portrait
+8:29
+mode or landscape mode and adjusting
+8:31
+that at the printer may affect all of
+8:33
+the subsequent output from that
+8:36
+device the printers that we use in our
+8:38
+offices tend to have multiple paper
+8:40
+trays you can see that on the printer
+8:42
+that we have here that on the bottom is
+8:44
+one two three four different paper trays
+8:47
+that you could select paper from when
+8:49
+you perform that output from your
+8:50
+application you would normally tell the
+8:52
+printer when you're sending the print
+8:54
+job that you would like all of the
+8:55
+output to come from the paper that is in
+8:58
+paper tray number one one of the things
+9:00
+you have to make sure is that the paper
+9:02
+tray that you're choosing matches the
+9:04
+size of the paper associated with the
+9:06
+output for example you don't want to
+9:08
+send output that was designed for a
+9:10
+14-in legal size page to a paper tray
+9:13
+that only has 11in letter size paper
+9:16
+you'll normally see the list of paper
+9:18
+trays in the print driver when you're
+9:20
+ready to print so you'll be able to
+9:22
+choose the proper tray from that list it
+9:25
+might be a good idea as the network
+9:26
+administrator to confirm that the list
+9:29
+of trays that you see in the print
+9:30
+driver matches the trays that are
+9:32
+physically installed on the printer if
+9:34
+there is a mismatch between the size of
+9:36
+the paper that you wanted to print and
+9:38
+the size of the paper that's in that
+9:40
+print tray you may see messages on the
+9:42
+screen of your printer that tell you
+9:44
+that this paper is mismatched and you'll
+9:46
+need to load the appropriate page for
+9:49
+this particular
+9:50
+output here's a view from the output
+9:53
+where I'm choosing to print to my laser
+9:55
+printer this says that the paper source
+9:57
+is the main tray and the media is
+10:00
+automatically selected but you might
+10:02
+want to configure your printer driver
+10:04
+with the specifics of what type of paper
+10:06
+are contained within that main tray so
+10:09
+here are the properties for this printer
+10:11
+driver and you can see that I have the
+10:13
+option to decide what a manual feed size
+10:15
+paper would be in this case on my
+10:17
+printer it's a letter size paper and
+10:19
+then you can specify what size of paper
+10:21
+is contained within the main tray and
+10:24
+you can see there are a number of
+10:25
+options available that you can configure
+10:27
+for that main tray of the
+10:29
+printer when you're troubleshooting
+10:31
+these corporate printers you also have
+10:34
+to be very good at troubleshooting
+10:35
+networks that's because these printers
+10:37
+tend to be connected to our wired and
+10:40
+our wireless networks we would want to
+10:42
+perform the same type of network
+10:43
+troubleshooting as we do for any other
+10:45
+device on the network you would first
+10:48
+need to confirm whether this is a
+10:49
+printer that's connected to the wired
+10:51
+network or the wireless network that way
+10:53
+you'll know whether you're
+10:54
+troubleshooting a problem with the cable
+10:55
+or whether you're troubleshooting a
+10:57
+problem with interference on the
+10:58
+wireless network you would then want to
+11:00
+confirm that the IP address settings of
+11:02
+the printer are configured properly for
+11:04
+that device so you want to check the IP
+11:07
+address the subnet mask the default
+11:08
+gateway any DNS settings and any other
+11:12
+important network configuration settings
+11:14
+and you may want to check to see if the
+11:16
+print server inside of this printer is
+11:18
+working properly most printers have
+11:20
+their own print server and there's
+11:22
+usually a management front end where you
+11:24
+can look at the print server stop it
+11:26
+restart it and perform any management of
+11:28
+the pending print jobs and because this
+11:31
+is a network device you can also look
+11:33
+for link lights for example on this
+11:35
+printer it has a connection on the back
+11:37
+of the printer and you can see if it's
+11:39
+connected to the network if it has an
+11:40
+active link and if it is sending and
+11:42
+receiving data

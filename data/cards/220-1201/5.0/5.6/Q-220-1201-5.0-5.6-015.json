@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-015",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which laser printer component is directly responsible for preventing ghosting by removing residual toner from the drum surface?",
+  "answer_options": [
+    "Transfer roller",
+    "Fuser assembly",
+    "Cleaning blade",
+    "Pickup roller"
+  ],
+  "correct_answer": [
+    "Cleaning blade"
+  ],
+  "explanation": "The cleaning blade scrapes residual toner from the drum after each rotation, preventing previously imaged data from reappearing as ghosting on the next page.",
+  "tags": [
+    "ghosting",
+    "photosensitive drum",
+    "laser printer issues"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

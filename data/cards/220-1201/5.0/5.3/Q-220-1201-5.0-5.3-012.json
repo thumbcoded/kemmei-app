@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A ceiling-mounted projector regularly overheats despite a recent bulb replacement. What should a technician check first?",
+  "answer_options": [
+    "Enable DisplayPort input in firmware",
+    "Use a lower display resolution",
+    "Clean or replace the air filters",
+    "Check if the metal halide bulb is 1000°C rated"
+  ],
+  "correct_answer": [
+    "Clean or replace the air filters"
+  ],
+  "explanation": "Dust buildup restricts airflow, causing heat retention even with a new bulb. Air filters should be cleaned or replaced as part of maintenance.",
+  "tags": [
+    "air filter cleaning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

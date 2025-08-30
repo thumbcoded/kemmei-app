@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why is it important to avoid routing cables tightly or using zip ties too firmly on bundles near punchdown blocks?",
+  "answer_options": [
+    "It causes IP conflicts",
+    "It disrupts Wi-Fi channels",
+    "It increases cable capacitance",
+    "It can damage cable insulation or alter signal transmission"
+  ],
+  "correct_answer": [
+    "It can damage cable insulation or alter signal transmission"
+  ],
+  "explanation": "Over-tightening cables or zip ties can deform the cable sheath, alter impedance, and impact data transmission performance.",
+  "tags": [
+    "punchdown block",
+    "organization",
+    "cable damage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

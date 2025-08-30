@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.3-023",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.3",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two common methods for tethering a computer to a phone for internet access.",
+  "answer_options": [
+    "Bluetooth tethering",
+    "802.11ac-to-Ethernet conversion",
+    "USB cable connection",
+    "Infrared link"
+  ],
+  "correct_answer": [
+    "Bluetooth tethering",
+    "USB cable connection"
+  ],
+  "explanation": "Bluetooth and USB are standard tethering options. Infrared is obsolete, and 802.11ac-to-Ethernet is not a tethering mechanism.",
+  "tags": [
+    "tethering",
+    "USB",
+    "Bluetooth",
+    "hotspot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does 'metered pricing' mean in cloud computing?",
+  "answer_options": [
+    "A fixed monthly charge for unlimited usage",
+    "Billing based on how many users access the system",
+    "Payment based on how much of a resource is used",
+    "A one-time fee for permanent access"
+  ],
+  "correct_answer": [
+    "Payment based on how much of a resource is used"
+  ],
+  "explanation": "Metered pricing means you are charged according to actual usage, such as bandwidth or storage consumption.",
+  "tags": [
+    "metered utilization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

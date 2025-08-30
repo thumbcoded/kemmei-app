@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following values is a typical IOPS measurement for a traditional hard drive?",
+  "answer_options": [
+    "1 million",
+    "200",
+    "10,000",
+    "50"
+  ],
+  "correct_answer": [
+    "200"
+  ],
+  "explanation": "Traditional spinning hard drives typically reach around 200 IOPS.",
+  "tags": [
+    "hard drive 200 IOPS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

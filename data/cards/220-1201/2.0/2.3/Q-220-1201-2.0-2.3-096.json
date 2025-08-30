@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "How do HTML files get from a web server to display in a user's browser?",
+  "answer_options": [
+    "Files are automatically downloaded to the user's computer permanently",
+    "The browser accesses files on the web server, interprets HTML, and presents the display",
+    "Files are sent via email to the user",
+    "The web server converts HTML to images before transmission"
+  ],
+  "correct_answer": [
+    "The browser accesses files on the web server, interprets HTML, and presents the display"
+  ],
+  "explanation": "The browser connects to the web server, accesses the HTML files stored there, interprets the HTML markup language, and presents the graphical display to the user.",
+  "tags": [
+    "HTML",
+    "web server",
+    "browser requests"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What term describes the process of printing long sequences of pages without user intervention?",
+  "answer_options": [
+    "Stacked printing",
+    "Sequential form feed",
+    "Batch output",
+    "Continuous printing"
+  ],
+  "correct_answer": [
+    "Continuous printing"
+  ],
+  "explanation": "Continuous printing allows uninterrupted page output using long rolls or folded stacks of paper.",
+  "tags": [
+    "continuous printing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

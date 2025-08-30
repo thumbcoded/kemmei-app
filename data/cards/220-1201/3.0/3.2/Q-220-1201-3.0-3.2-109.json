@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is Apple’s more recent connector standard that replaces Lightning on newer devices?",
+  "answer_options": [
+    "Micro USB",
+    "Mini DisplayPort",
+    "USB standard B",
+    "USB-C"
+  ],
+  "correct_answer": [
+    "USB-C"
+  ],
+  "explanation": "Apple has begun transitioning from Lightning to the USB-C standard in its latest iPhones and iPads.",
+  "tags": [
+    "USB-C transition"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

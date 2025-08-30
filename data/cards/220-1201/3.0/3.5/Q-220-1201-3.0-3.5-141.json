@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-141",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "select_all",
+  "question_text": "Which of the following are common PC cooling methods? (Select all that apply)",
+  "answer_options": [
+    "Liquid cooling",
+    "Passive cooling",
+    "Thermal paste",
+    "Fan cooling"
+  ],
+  "correct_answer": [
+    "Liquid cooling",
+    "Passive cooling",
+    "Fan cooling"
+  ],
+  "explanation": "All three are cooling strategies. Thermal paste improves heat transfer but isn’t a cooling system by itself.",
+  "tags": [
+    "liquid cooling",
+    "passive cooling"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

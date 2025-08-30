@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "When using a DVI-to-VGA adapter, which DVI type must be present on the video card to allow analog output?",
+  "answer_options": [
+    "DVI-D",
+    "DVI-A",
+    "DVI-I",
+    "DVI-DL"
+  ],
+  "correct_answer": [
+    "DVI-I"
+  ],
+  "explanation": "DVI-I supports both analog and digital signals, allowing the use of a DVI-to-VGA adapter.",
+  "tags": [
+    "DVI-I",
+    "analog signals",
+    "VGA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

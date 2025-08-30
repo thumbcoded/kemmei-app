@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-097",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is often used on printers and larger peripherals?",
+  "answer_options": [
+    "USB mini B",
+    "USB standard A",
+    "USB standard B",
+    "USB-C"
+  ],
+  "correct_answer": [
+    "USB standard B"
+  ],
+  "explanation": "USB standard B is typically used to connect larger devices like printers and external hard drives to computers.",
+  "tags": [
+    "standard B"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

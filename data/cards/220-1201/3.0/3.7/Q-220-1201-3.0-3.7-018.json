@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "An office has a mixed environment of Windows and Linux machines. A new MFD is added to the network, but some systems fail to access scanning and duplex features. What is the most likely issue?",
+  "answer_options": [
+    "Incorrect IP configuration on the print server",
+    "Mismatch between driver and page description language support",
+    "Insufficient toner in the printer",
+    "Improper power supply wattage"
+  ],
+  "correct_answer": [
+    "Mismatch between driver and page description language support"
+  ],
+  "explanation": "Some drivers may not support specific page description languages (PCL or PostScript), leading to missing features like scanning or duplexing on certain OS platforms.",
+  "tags": [
+    "printer driver"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

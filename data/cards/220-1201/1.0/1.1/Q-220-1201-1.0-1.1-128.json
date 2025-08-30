@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-128",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason laptop troubleshooting requires more precision than desktop computer troubleshooting?",
+  "answer_options": [
+    "Laptops use different operating systems",
+    "Laptops are built to very precise specifications with small components",
+    "Laptops require special diagnostic software",
+    "Laptops have fewer components than desktops"
+  ],
+  "correct_answer": [
+    "Laptops are built to very precise specifications with small components"
+  ],
+  "explanation": "Laptops are built to very precise specifications and contain very small components packed into a compact form factor, requiring more precise troubleshooting approaches than desktop systems.",
+  "tags": [
+    "laptop troubleshooting",
+    "precise specifications",
+    "small components"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

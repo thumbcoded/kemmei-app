@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A customer brings in a phone with a visibly distorted case and the screen slightly lifted. What is the most likely cause?",
+  "answer_options": [
+    "Malware infection",
+    "Swollen battery due to gas buildup",
+    "Dust inside the phone",
+    "Improper charging voltage"
+  ],
+  "correct_answer": [
+    "Swollen battery due to gas buildup"
+  ],
+  "explanation": "Gas buildup in a failing battery can cause it to swell, which may deform the case or dislodge the screen.",
+  "tags": [
+    "gas buildup"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

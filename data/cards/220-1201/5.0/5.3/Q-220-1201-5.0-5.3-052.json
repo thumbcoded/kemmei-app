@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician replaces a monitor due to screen flickering and colored blocks. The new display shows the same symptoms. What should they check NEXT?",
+  "answer_options": [
+    "Update the BIOS firmware",
+    "Replace the graphics driver and cable",
+    "Lower the refresh rate",
+    "Clean the monitor's bezel"
+  ],
+  "correct_answer": [
+    "Replace the graphics driver and cable"
+  ],
+  "explanation": "If the problem persists after replacing the monitor, it likely lies with the video cable or the display driver. Both should be tested before assuming a deeper hardware failure.",
+  "tags": [
+    "video driver issues",
+    "video cable connection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

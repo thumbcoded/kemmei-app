@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-077",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A DNS misconfiguration causes external email to be rejected. The MX record points to mail.example.com, which resolves properly. What is the most likely additional record that needs to be corrected to support proper delivery?",
+  "answer_options": [
+    "A second A record for the root domain",
+    "The canonical name record for ftp.example.com",
+    "A missing or incorrect TXT record containing SPF info",
+    "An AAAA record for the web server"
+  ],
+  "correct_answer": [
+    "A missing or incorrect TXT record containing SPF info"
+  ],
+  "explanation": "SPF info is stored in TXT records. If missing or incorrect, mail servers may reject incoming messages due to failed authentication.",
+  "tags": [
+    "TXT record",
+    "text record",
+    "MX record",
+    "mail exchanger"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

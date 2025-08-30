@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which color standard covers a wider color range than sRGB, especially in greens and cyans?",
+  "answer_options": [
+    "Adobe RGB",
+    "DCI-P3",
+    "CIE1931",
+    "Rec. 709"
+  ],
+  "correct_answer": [
+    "Adobe RGB"
+  ],
+  "explanation": "Adobe RGB expands on sRGB’s gamut with enhanced green and cyan reproduction, useful in photography and print.",
+  "tags": [
+    "Adobe RGB",
+    "color representation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

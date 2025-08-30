@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which printing method involves pins striking a ribbon to form characters?",
+  "answer_options": [
+    "Laser printing",
+    "Thermal printing",
+    "Impact printing",
+    "Inkjet printing"
+  ],
+  "correct_answer": [
+    "Impact printing"
+  ],
+  "explanation": "Impact printers strike an inked ribbon using pins to produce characters on the page.",
+  "tags": [
+    "dot matrix pattern"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

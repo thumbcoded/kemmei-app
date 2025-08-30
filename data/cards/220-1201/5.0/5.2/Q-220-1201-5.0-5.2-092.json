@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main benefit of using third-party SMART analysis tools over reading raw data?",
+  "answer_options": [
+    "They work faster than built-in SMART monitoring",
+    "They analyze raw data and provide easy-to-understand health assessments",
+    "They can repair failing drives automatically",
+    "They only work with enterprise-grade storage devices"
+  ],
+  "correct_answer": [
+    "They analyze raw data and provide easy-to-understand health assessments"
+  ],
+  "explanation": "Third-party SMART analysis tools take the complex raw SMART data and analyze it to provide user-friendly assessments of drive health. They can track trends over time and give clear warnings about potential drive failures.",
+  "tags": [
+    "third party utilities",
+    "drive performance analysis"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

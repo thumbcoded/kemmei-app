@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-060",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You're investigating a DNS issue and want to query a specific DNS server directly for authoritative information about a domain. Which `dig` command option would you use?",
+  "answer_options": [
+    "dig @domain.com",
+    "dig -a",
+    "dig +trace",
+    "dig +noall +answer"
+  ],
+  "correct_answer": [
+    "dig +trace"
+  ],
+  "explanation": "`+trace` in `dig` walks the full DNS hierarchy from root servers down to the authoritative server, helpful for diagnosing resolution path issues.",
+  "tags": [
+    "dig",
+    "DNS query",
+    "command line tools"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

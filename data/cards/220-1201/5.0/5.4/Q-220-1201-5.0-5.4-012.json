@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A user complains their battery health has dropped sharply over the last week. Which three diagnostic indicators from battery settings would best support analysis? (Select three)",
+  "answer_options": [
+    "Battery last charged",
+    "Applications using battery",
+    "Screen resolution setting",
+    "Battery health",
+    "Volume level",
+    "Bluetooth version"
+  ],
+  "correct_answer": [
+    "Battery last charged",
+    "Applications using battery",
+    "Battery health"
+  ],
+  "explanation": "Battery settings in iOS/Android show the time since last charge, app usage, and overall battery health — all critical for diagnosing rapid health decline.",
+  "tags": [
+    "battery last charged",
+    "applications using battery",
+    "battery health"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 3,
+  "__v": 0
+}

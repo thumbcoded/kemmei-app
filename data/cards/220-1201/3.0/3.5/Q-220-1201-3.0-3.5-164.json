@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-164",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following BIOS/UEFI options must typically be enabled for a hypervisor like Hyper-V to function correctly? (Select all that apply)",
+  "answer_options": [
+    "VT-x or AMD-V",
+    "Hardware-assisted virtualization",
+    "Secure Boot",
+    "IOMMU/VT-d"
+  ],
+  "correct_answer": [
+    "VT-x or AMD-V",
+    "Hardware-assisted virtualization",
+    "IOMMU/VT-d"
+  ],
+  "explanation": "Hypervisors require CPU-level virtualization and may use IOMMU/VT-d for direct hardware access. Secure Boot is unrelated to virtualization support.",
+  "tags": [
+    "Intel VT-x",
+    "AMD-V"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

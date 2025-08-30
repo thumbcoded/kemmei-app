@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-039",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following challenges can arise during individual key repair on a laptop? (Select all that apply)",
+  "answer_options": [
+    "Plastic hinge damage during removal",
+    "Incorrect keycap size replacement",
+    "Irreversible damage to the ribbon cable",
+    "Loss of tactile response due to misalignment",
+    "Keyboard driver corruption"
+  ],
+  "correct_answer": [
+    "Plastic hinge damage during removal",
+    "Incorrect keycap size replacement",
+    "Loss of tactile response due to misalignment"
+  ],
+  "explanation": "Individual key repair is prone to mechanical issues like hinge breakage, fitment problems, and misaligned parts. Ribbon cable or driver issues are not typically involved.",
+  "tags": [
+    "damaged key",
+    "keycap",
+    "replace single key"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

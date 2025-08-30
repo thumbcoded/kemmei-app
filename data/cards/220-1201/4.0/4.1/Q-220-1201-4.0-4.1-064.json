@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which is the most reliable method to ensure the safety of a virtual machine before deployment?",
+  "answer_options": [
+    "Use default hypervisor settings for isolation",
+    "Build the VM from a trusted source or from scratch",
+    "Scan it with the host’s antivirus only",
+    "Run the VM in offline mode permanently"
+  ],
+  "correct_answer": [
+    "Build the VM from a trusted source or from scratch"
+  ],
+  "explanation": "Building the VM yourself or verifying a trusted source ensures you know exactly what is installed and active.",
+  "tags": [
+    "malware in VMs",
+    "malware authors"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-037",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does the term 'drive retry' imply during storage operations?",
+  "answer_options": [
+    "The drive is reformatting sectors",
+    "The system is rebooting the storage controller",
+    "The drive is attempting repeated reads or writes on a sector",
+    "The user has reinserted the drive"
+  ],
+  "correct_answer": [
+    "The drive is attempting repeated reads or writes on a sector"
+  ],
+  "explanation": "A drive retry refers to multiple attempts to read from or write to a particular sector, often due to marginal or failing media.",
+  "tags": [
+    "drive retry"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

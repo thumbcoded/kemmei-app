@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following might suggest an intermittent power supply issue?",
+  "answer_options": [
+    "The system powers on and then off unexpectedly",
+    "Monitor color distortion",
+    "Frequent network disconnects",
+    "Stuck keyboard keys"
+  ],
+  "correct_answer": [
+    "The system powers on and then off unexpectedly"
+  ],
+  "explanation": "Intermittent power problems can cause the system to start and shut down unpredictably, often due to inconsistent voltage.",
+  "tags": [
+    "intermittent problems",
+    "power on then off"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

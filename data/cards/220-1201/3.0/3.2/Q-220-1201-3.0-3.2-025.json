@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Why would a passive DVI-to-VGA adapter fail to produce an image when used with a DVI-D port?",
+  "answer_options": [
+    "DVI-D does not supply power for VGA adapters",
+    "DVI-D transmits only digital signals and cannot output analog",
+    "VGA cables require a dual-link signal for compatibility",
+    "DVI-D is incompatible with any resolution above 800x600"
+  ],
+  "correct_answer": [
+    "DVI-D transmits only digital signals and cannot output analog"
+  ],
+  "explanation": "DVI-D lacks the analog signal pins necessary to output a VGA-compatible signal, so passive adapters won’t function.",
+  "tags": [
+    "DVI-D",
+    "analog signals",
+    "VGA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

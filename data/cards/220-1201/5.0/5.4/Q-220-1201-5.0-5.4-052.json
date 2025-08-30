@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the first step to force restart an unresponsive iOS device?",
+  "answer_options": [
+    "Hold the power button and volume button for 10 seconds",
+    "Connect to a computer and use iTunes",
+    "Remove the battery if possible",
+    "Wait for the battery to drain completely"
+  ],
+  "correct_answer": [
+    "Hold the power button and volume button for 10 seconds"
+  ],
+  "explanation": "Most iOS devices require holding the power button and another button (home or volume) for 10 seconds to force a reset when the device is unresponsive.",
+  "tags": [
+    "restart device",
+    "factory reset"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

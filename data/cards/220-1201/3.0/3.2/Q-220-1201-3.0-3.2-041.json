@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two factors are most likely to affect video output quality or compatibility over USB-C? (Select two)",
+  "answer_options": [
+    "Whether the cable supports Thunderbolt 4",
+    "Whether the device supports MHL or DisplayPort alt mode",
+    "Whether the USB-C port has shielding against ESD",
+    "Whether the port supports USB 3.1 Gen 1 data transfer",
+    "Whether the cable length exceeds 3 meters"
+  ],
+  "correct_answer": [
+    "Whether the device supports MHL or DisplayPort alt mode",
+    "Whether the cable supports Thunderbolt 4"
+  ],
+  "explanation": "Video over USB-C depends on alternate mode support (like DisplayPort or MHL) and bandwidth capacity — especially at higher resolutions. Some cables lack the requirements for Thunderbolt or full video signaling.",
+  "tags": [
+    "MHL",
+    "DisplayPort",
+    "video over USB-C",
+    "Thunderbolt"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

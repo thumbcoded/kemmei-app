@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-003",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a safe practice when working near a building’s electrical system?",
+  "answer_options": [
+    "Use the ground wire to protect yourself",
+    "Connect a wrist strap to the building ground",
+    "Avoid connecting yourself to any part of the building's electrical system",
+    "Discharge yourself on a live outlet"
+  ],
+  "correct_answer": [
+    "Avoid connecting yourself to any part of the building's electrical system"
+  ],
+  "explanation": "Even the ground wire can be energized; never connect yourself to any part of the building's electrical system.",
+  "tags": [
+    "building electrical system",
+    "ground wire safety"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

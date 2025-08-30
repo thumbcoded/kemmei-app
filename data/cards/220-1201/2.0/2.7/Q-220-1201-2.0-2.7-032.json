@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What advantage does frequency multiplexing provide in cable internet?",
+  "answer_options": [
+    "Reduces need for modems",
+    "Eliminates need for ISPs",
+    "Allows multiple services over one cable",
+    "Requires fewer IP addresses"
+  ],
+  "correct_answer": [
+    "Allows multiple services over one cable"
+  ],
+  "explanation": "Frequency multiplexing allows simultaneous transmission of internet, TV, and voice over a single coaxial line.",
+  "tags": [
+    "frequency multiplexing"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

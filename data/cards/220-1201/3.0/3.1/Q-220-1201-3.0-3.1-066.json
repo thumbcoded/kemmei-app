@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which display standard is commonly used in digital cinema for vibrant colors?",
+  "answer_options": [
+    "sRGB",
+    "VGA",
+    "DCI-P3",
+    "NTSC"
+  ],
+  "correct_answer": [
+    "DCI-P3"
+  ],
+  "explanation": "DCI-P3 is used in film and digital cinema for richer color representation.",
+  "tags": [
+    "DCI-P3"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

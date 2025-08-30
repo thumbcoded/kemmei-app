@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-051",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What does a user typically manage in a SaaS deployment?",
+  "answer_options": [
+    "Operating system updates",
+    "Software applications and hosting infrastructure",
+    "Only application data and login credentials",
+    "Hypervisors and network routers"
+  ],
+  "correct_answer": [
+    "Only application data and login credentials"
+  ],
+  "explanation": "In SaaS, users are responsible only for account access and using the app — everything else is managed by the provider.",
+  "tags": [
+    "SaaS",
+    "application management"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

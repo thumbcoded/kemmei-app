@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In devices with a digitizer layer, what is the function of the digitizer?",
+  "answer_options": [
+    "Displays high-resolution graphics",
+    "Converts analog sound to digital signals",
+    "Tracks stylus or finger movement for screen interaction",
+    "Boosts display brightness"
+  ],
+  "correct_answer": [
+    "Tracks stylus or finger movement for screen interaction"
+  ],
+  "explanation": "The digitizer is responsible for detecting touch input and relaying coordinate data to the operating system.",
+  "tags": [
+    "digitizer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

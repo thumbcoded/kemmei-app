@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-093",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does USB stand for?",
+  "answer_options": [
+    "Universal Standard Bus",
+    "Unified System Bus",
+    "Universal Serial Bus",
+    "Unlimited Speed Bus"
+  ],
+  "correct_answer": [
+    "Universal Serial Bus"
+  ],
+  "explanation": "USB stands for Universal Serial Bus, a standard for connecting peripherals to computers and other devices.",
+  "tags": [
+    "USB",
+    "Universal Serial Bus"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

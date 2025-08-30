@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "After switching from HDMI to DisplayPort, a user reports video is working but there’s no audio. The monitor supports speakers. What’s the BEST explanation?",
+  "answer_options": [
+    "DisplayPort does not support video",
+    "The monitor volume is too low",
+    "The cable is DisplayPort passive and does not carry audio",
+    "Refresh rate is incompatible"
+  ],
+  "correct_answer": [
+    "The cable is DisplayPort passive and does not carry audio"
+  ],
+  "explanation": "Passive DisplayPort adapters may not carry audio. Unlike HDMI, not all DP cables or adapters support audio output by default.",
+  "tags": [
+    "audio output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

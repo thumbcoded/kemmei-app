@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-074",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which model offers customers the most control and responsibility?",
+  "answer_options": [
+    "Software as a Service (SaaS)",
+    "Platform as a Service (PaaS)",
+    "Infrastructure as a Service (IaaS)",
+    "Community Cloud"
+  ],
+  "correct_answer": [
+    "Infrastructure as a Service (IaaS)"
+  ],
+  "explanation": "IaaS gives customers control over the OS, apps, and data — but also the responsibility for maintaining them.",
+  "tags": [
+    "customer responsibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-096",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician connects a TRRS headset to a device, but the microphone is not working while audio playback functions normally. What is the most likely cause?",
+  "answer_options": [
+    "The headset is defective",
+    "The device only has a TRS (3-conductor) audio jack",
+    "The audio drivers are corrupted",
+    "The headset requires Bluetooth pairing"
+  ],
+  "correct_answer": [
+    "The device only has a TRS (3-conductor) audio jack"
+  ],
+  "explanation": "If audio works but the microphone doesn't, the device likely has a TRS (Tip Ring Sleeve) jack instead of TRRS, meaning it only supports audio output, not microphone input.",
+  "tags": [
+    "TRRS",
+    "audio jack",
+    "microphone",
+    "compatibility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

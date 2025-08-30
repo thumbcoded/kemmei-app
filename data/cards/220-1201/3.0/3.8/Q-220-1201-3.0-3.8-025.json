@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-025",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A technician observes repeated streaks on every printed page, even after replacing the toner. Which TWO steps in the laser printing process should be examined to isolate the issue?",
+  "answer_options": [
+    "Charging",
+    "Writing",
+    "Transferring",
+    "Fusing",
+    "Cleaning"
+  ],
+  "correct_answer": [
+    "Transferring",
+    "Cleaning"
+  ],
+  "explanation": "Streaks may result from residual toner that wasn't properly cleaned or from poor transfer to paper. Faulty cleaning or transfer rollers are common culprits.",
+  "tags": [
+    "transferring",
+    "cleaning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

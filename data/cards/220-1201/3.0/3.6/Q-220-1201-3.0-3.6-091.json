@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-091",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A data center technician is planning maintenance on a server’s power system. Which TWO steps are essential when servicing redundant hot-swappable power supplies? (Select two)",
+  "answer_options": [
+    "Remove both supplies simultaneously to avoid imbalance",
+    "Ensure remaining supply is functioning before removal",
+    "Shut down the server to avoid electrical hazards",
+    "Replace one power unit at a time",
+    "Disable BIOS security settings temporarily"
+  ],
+  "correct_answer": [
+    "Ensure remaining supply is functioning before removal",
+    "Replace one power unit at a time"
+  ],
+  "explanation": "Redundant systems must maintain full power during maintenance. Confirm the active unit is operational before replacing the other. Replacing both at once risks system shutdown.",
+  "tags": [
+    "hot swappable",
+    "redundant power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

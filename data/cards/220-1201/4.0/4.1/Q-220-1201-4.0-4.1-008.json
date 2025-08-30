@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two use cases for cross-platform virtualization.",
+  "answer_options": [
+    "Running Windows-specific apps on a Mac system",
+    "Sharing CPU load across physical servers",
+    "Maintaining security baselines in mobile devices",
+    "Running Linux tools on a Windows host"
+  ],
+  "correct_answer": [
+    "Running Windows-specific apps on a Mac system",
+    "Running Linux tools on a Windows host"
+  ],
+  "explanation": "Cross-platform virtualization allows different OSes to run on the same host, enabling app compatibility across platforms.",
+  "tags": [
+    "cross-platform virtualization"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

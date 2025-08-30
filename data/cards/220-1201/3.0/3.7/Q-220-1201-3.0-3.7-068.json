@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "An office printer is set up with multiple trays for different purposes. Which two configurations are most appropriate for optimizing workflow? (Select two)",
+  "answer_options": [
+    "Tray 1: plain paper, Tray 2: envelopes",
+    "Tray 2: photo paper, Tray 3: firmware updates",
+    "Tray 1: color ink, Tray 2: black toner",
+    "Tray 3: legal-size paper, Tray 4: letterhead",
+    "Tray 4: print driver storage"
+  ],
+  "correct_answer": [
+    "Tray 1: plain paper, Tray 2: envelopes",
+    "Tray 3: legal-size paper, Tray 4: letterhead"
+  ],
+  "explanation": "Using separate trays for specific paper types like envelopes, legal, and letterhead improves efficiency and reduces manual reloading.",
+  "tags": [
+    "paper tray",
+    "media selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

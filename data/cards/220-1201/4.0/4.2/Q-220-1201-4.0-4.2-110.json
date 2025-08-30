@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-110",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two key advantages of geographic distribution in cloud computing.",
+  "answer_options": [
+    "Reduces egress charges",
+    "Improves performance for global users",
+    "Minimizes physical data center usage",
+    "Enables faster disaster recovery",
+    "Eliminates multi-tenancy requirements"
+  ],
+  "correct_answer": [
+    "Improves performance for global users",
+    "Enables faster disaster recovery"
+  ],
+  "explanation": "Geographic distribution places services closer to users and offers redundancy for recovery in case of failure.",
+  "tags": [
+    "geographic distribution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

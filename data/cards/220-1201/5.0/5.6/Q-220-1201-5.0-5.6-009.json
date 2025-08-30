@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-009",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a possible cause of speckling on laser-printed documents?",
+  "answer_options": [
+    "Incorrect page orientation",
+    "Worn transfer roller",
+    "Incompatible paper type",
+    "Residual toner on the drum"
+  ],
+  "correct_answer": [
+    "Residual toner on the drum"
+  ],
+  "explanation": "Speckling can result from residual toner that wasn't cleaned off the optical drum during the cleaning cycle.",
+  "tags": [
+    "print quality",
+    "laser printer issues",
+    "toner problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

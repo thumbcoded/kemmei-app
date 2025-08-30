@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are typically provider responsibilities in a public cloud model? (Select all that apply)",
+  "answer_options": [
+    "Physical security of the data center",
+    "Hypervisor patching",
+    "Managing user permissions",
+    "Maintaining the virtualization platform"
+  ],
+  "correct_answer": [
+    "Physical security of the data center",
+    "Hypervisor patching",
+    "Maintaining the virtualization platform"
+  ],
+  "explanation": "The provider manages the entire physical and virtual platform stack — including hypervisor updates and site security.",
+  "tags": [
+    "provider responsibility",
+    "responsibility matrix"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

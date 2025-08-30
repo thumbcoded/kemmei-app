@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which tool is safest for removing lint from a mobile device’s charging port?",
+  "answer_options": [
+    "Metal screwdriver",
+    "Compressed air",
+    "Steel pick",
+    "Paper clip"
+  ],
+  "correct_answer": [
+    "Compressed air"
+  ],
+  "explanation": "Compressed air is a safe and non-invasive way to clear debris without damaging the port.",
+  "tags": [
+    "compressed air cleaning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

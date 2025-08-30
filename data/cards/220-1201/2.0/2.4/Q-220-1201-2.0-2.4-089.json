@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-089",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "In a properly configured DMARC policy, what action does 'quarantine' instruct receiving mail servers to take?",
+  "answer_options": [
+    "Reject the message completely",
+    "Allow it through and remove the DKIM header",
+    "Mark the message as spam or suspicious",
+    "Ignore all SPF and DKIM checks"
+  ],
+  "correct_answer": [
+    "Mark the message as spam or suspicious"
+  ],
+  "explanation": "The 'quarantine' option in DMARC advises receiving systems to treat failed emails as spam or suspicious, not outright reject them.",
+  "tags": [
+    "DMARC",
+    "spam policy",
+    "quarantine"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

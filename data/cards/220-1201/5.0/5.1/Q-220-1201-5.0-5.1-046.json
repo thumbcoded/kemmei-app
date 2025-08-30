@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a likely cause if a computer shows less usable RAM than is physically installed?",
+  "answer_options": [
+    "The CPU is unseated",
+    "The system is in Safe Mode",
+    "One memory module is faulty or not properly seated",
+    "The BIOS is out of date"
+  ],
+  "correct_answer": [
+    "One memory module is faulty or not properly seated"
+  ],
+  "explanation": "A mismatch between installed and usable RAM usually points to a bad module or an installation issue in the memory slots.",
+  "tags": [
+    "bad memory",
+    "RAM problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

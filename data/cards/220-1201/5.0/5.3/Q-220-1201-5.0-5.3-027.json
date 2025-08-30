@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following symptoms suggest a failing backlight system? (Select all that apply)",
+  "answer_options": [
+    "Dim display despite high brightness settings",
+    "Flickering display",
+    "Color tint shift",
+    "Partial brightness on screen",
+    "Visible dead pixels"
+  ],
+  "correct_answer": [
+    "Dim display despite high brightness settings",
+    "Flickering display",
+    "Partial brightness on screen"
+  ],
+  "explanation": "Backlight issues commonly manifest as flickering, extremely low brightness, or uneven lighting — especially partial failure across the screen.",
+  "tags": [
+    "backlight failure",
+    "partial backlight failure",
+    "dim display"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

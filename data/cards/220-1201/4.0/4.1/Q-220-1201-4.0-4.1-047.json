@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Select two key characteristics of a private address configuration in virtual networking.",
+  "answer_options": [
+    "Restricts VM from communicating with external networks",
+    "Uses NAT to bridge into the LAN",
+    "Supports communication only with selected internal devices",
+    "Automatically receives a public IP from the router"
+  ],
+  "correct_answer": [
+    "Restricts VM from communicating with external networks",
+    "Supports communication only with selected internal devices"
+  ],
+  "explanation": "Private network modes isolate the VM, allowing only tightly scoped or internal communications.",
+  "tags": [
+    "private address",
+    "network isolation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

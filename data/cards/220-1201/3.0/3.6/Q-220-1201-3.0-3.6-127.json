@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-127",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A workstation has random shutdowns during high GPU load. Logs show no thermal issues or driver faults. What is the MOST likely cause?",
+  "answer_options": [
+    "VRAM overclocking",
+    "Power supply is underpowered",
+    "GPU BIOS mismatch",
+    "Static discharge during assembly"
+  ],
+  "correct_answer": [
+    "Power supply is underpowered"
+  ],
+  "explanation": "Random shutdowns under load often point to power supply limitations. Insufficient wattage can cause voltage drops when current spikes.",
+  "tags": [
+    "wattage calculation",
+    "power supply selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are design considerations or risks associated with battery swelling in mobile devices? (Select all that apply)",
+  "answer_options": [
+    "Battery container prevents gas from escaping",
+    "Device distortion may occur",
+    "Swelling improves device airflow",
+    "Fire risk increases if battery is pierced",
+    "Battery should be used until fully discharged"
+  ],
+  "correct_answer": [
+    "Battery container prevents gas from escaping",
+    "Device distortion may occur",
+    "Fire risk increases if battery is pierced"
+  ],
+  "explanation": "Swollen batteries are designed to contain gas, but can distort the device and pose fire hazards if punctured. Continued use is unsafe.",
+  "tags": [
+    "battery container",
+    "device distortion",
+    "fire risk"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

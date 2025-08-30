@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a secure configuration for a virtual machine?",
+  "answer_options": [
+    "Minimal OS with no network services enabled",
+    "Mirrored copy of another VM’s settings",
+    "Same security approach as for a standalone workstation",
+    "Default settings from the virtual machine manager"
+  ],
+  "correct_answer": [
+    "Same security approach as for a standalone workstation"
+  ],
+  "explanation": "VMs must be protected using firewalls, anti-malware, and OS hardening — just like physical systems.",
+  "tags": [
+    "standalone workstation security",
+    "virtual machine security"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

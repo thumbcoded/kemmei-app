@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A technician wants to use a legacy Molex connector on a drive designed for SATA power. What issue might occur?",
+  "answer_options": [
+    "Molex provides only 3.3V, which SATA drives require",
+    "The Molex connector has a different pin shape and voltage profile",
+    "SATA drives use analog signaling that Molex doesn’t support",
+    "Molex cannot provide enough bandwidth for modern drives"
+  ],
+  "correct_answer": [
+    "The Molex connector has a different pin shape and voltage profile"
+  ],
+  "explanation": "Molex and SATA power connectors deliver different voltages and pinouts. Adapters are required and may not support all features like hot-swap or 3.3V.",
+  "tags": [
+    "Molex connector",
+    "15-pin power connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

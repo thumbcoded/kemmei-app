@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which interface is designed for connecting external storage devices?",
+  "answer_options": [
+    "SATA",
+    "NVMe",
+    "eSATA",
+    "PCIe"
+  ],
+  "correct_answer": [
+    "eSATA"
+  ],
+  "explanation": "eSATA (external SATA) is specifically designed for connecting SATA storage devices externally.",
+  "tags": [
+    "eSATA"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

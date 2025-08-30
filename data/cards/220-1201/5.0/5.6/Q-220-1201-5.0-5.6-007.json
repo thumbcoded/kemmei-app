@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What should a technician check first when receiving complaints about garbled output from only one application, but other print jobs are fine?",
+  "answer_options": [
+    "Print driver mismatch",
+    "Low ink or toner",
+    "Photosensitive drum damage",
+    "Faulty USB cable"
+  ],
+  "correct_answer": [
+    "Print driver mismatch"
+  ],
+  "explanation": "If only one application produces garbled output, the issue may be related to the page description language used by that app and how the driver interprets it.",
+  "tags": [
+    "garbled print",
+    "page description language",
+    "print driver problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

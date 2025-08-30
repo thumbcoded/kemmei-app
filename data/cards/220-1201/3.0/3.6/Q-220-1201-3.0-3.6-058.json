@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario requires a power supply with active PFC (Power Factor Correction)?",
+  "answer_options": [
+    "When using modular connectors",
+    "When connected to international 230V mains without a manual voltage switch",
+    "When powering a system with multiple GPUs",
+    "When using an uninterruptible power supply (UPS)"
+  ],
+  "correct_answer": [
+    "When connected to international 230V mains without a manual voltage switch"
+  ],
+  "explanation": "Active PFC allows the PSU to automatically adapt to varying AC voltages without needing a manual switch, making it suitable for worldwide use.",
+  "tags": [
+    "power supply input"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-107",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which term describes a cloud provider's ability to copy data to data centers around the world?",
+  "answer_options": [
+    "Multi-tenancy",
+    "Elasticity",
+    "Geographic distribution",
+    "Service orchestration"
+  ],
+  "correct_answer": [
+    "Geographic distribution"
+  ],
+  "explanation": "Geographic distribution allows services to operate near users by syncing data to multiple global locations.",
+  "tags": [
+    "geographic distribution"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-069",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of a configuration utility provided by a RAID controller?",
+  "answer_options": [
+    "It formats USB drives",
+    "It manages file sharing permissions",
+    "It allows setup and troubleshooting of RAID arrays",
+    "It encrypts the operating system"
+  ],
+  "correct_answer": [
+    "It allows setup and troubleshooting of RAID arrays"
+  ],
+  "explanation": "RAID configuration utilities allow technicians to build arrays, monitor drive status, and troubleshoot RAID issues directly.",
+  "tags": [
+    "configuration utility"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

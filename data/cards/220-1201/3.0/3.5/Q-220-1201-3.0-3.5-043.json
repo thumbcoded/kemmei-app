@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What could happen if the CPU locking mechanism is not fully engaged after installation?",
+  "answer_options": [
+    "The CPU will overclock automatically",
+    "The BIOS will bypass CPU initialization",
+    "The system may fail to POST or crash intermittently",
+    "The CPU fan will spin faster than normal"
+  ],
+  "correct_answer": [
+    "The system may fail to POST or crash intermittently"
+  ],
+  "explanation": "A loosely seated CPU can cause system instability or prevent startup.",
+  "tags": [
+    "CPU locking mechanism"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

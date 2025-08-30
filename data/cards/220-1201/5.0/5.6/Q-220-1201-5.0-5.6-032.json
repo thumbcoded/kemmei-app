@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-032",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician hears a grinding noise after sending a print job. What should they check first?",
+  "answer_options": [
+    "Fuser temperature",
+    "Pickup roller alignment",
+    "Ink cartridge seating and internal obstructions",
+    "Printer’s IP configuration"
+  ],
+  "correct_answer": [
+    "Ink cartridge seating and internal obstructions"
+  ],
+  "explanation": "Improperly seated ink cartridges or physical obstructions can cause the print carriage to grind against internal components.",
+  "tags": [
+    "grinding noise",
+    "ink cartridge seating",
+    "mechanical problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

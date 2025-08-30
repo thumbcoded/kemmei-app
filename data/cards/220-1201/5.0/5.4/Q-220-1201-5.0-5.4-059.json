@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-059",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the most common cause when a stylus stops working on a tablet?",
+  "answer_options": [
+    "The stylus battery needs to be recharged",
+    "The tablet screen is cracked",
+    "The Wi-Fi connection is poor",
+    "The tablet needs a software update"
+  ],
+  "correct_answer": [
+    "The stylus battery needs to be recharged"
+  ],
+  "explanation": "Many modern styluses are active devices that require power to interact with tablets. If a stylus isn't working, the first thing to check is whether its internal battery needs recharging.",
+  "tags": [
+    "cursor drift",
+    "touch calibration"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

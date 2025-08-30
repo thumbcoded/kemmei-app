@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which Windows utility helps identify the cause of a system crash after it reboots?",
+  "answer_options": [
+    "Event Viewer",
+    "Task Manager",
+    "Disk Cleanup",
+    "Device Manager"
+  ],
+  "correct_answer": [
+    "Event Viewer"
+  ],
+  "explanation": "The Event Viewer logs detailed system information and can help diagnose why a system crash or stop error occurred.",
+  "tags": [
+    "event viewer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-085",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What design feature distinguishes an active stylus from a passive one?",
+  "answer_options": [
+    "It uses pressure-sensitive plastic tips",
+    "It communicates with the digitizer using signals for pressure, tilt, and buttons",
+    "It requires no batteries or charging",
+    "It is limited to capacitive screens only"
+  ],
+  "correct_answer": [
+    "It communicates with the digitizer using signals for pressure, tilt, and buttons"
+  ],
+  "explanation": "Active styluses communicate with compatible digitizers to support advanced input like pressure sensitivity and tilt recognition.",
+  "tags": [
+    "digitizer",
+    "stylus"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

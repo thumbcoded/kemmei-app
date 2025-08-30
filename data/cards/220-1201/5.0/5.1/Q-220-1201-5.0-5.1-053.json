@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-053",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What does it indicate if a memory test shows errors only after the system has been running for several hours?",
+  "answer_options": [
+    "A software misconfiguration",
+    "Thermal instability in one memory module",
+    "BIOS settings mismatch",
+    "Improper SATA cable routing"
+  ],
+  "correct_answer": [
+    "Thermal instability in one memory module"
+  ],
+  "explanation": "Memory modules can fail under heat load even if they initially pass testing. This suggests a thermal sensitivity issue in the affected module.",
+  "tags": [
+    "memory failure",
+    "bad memory"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

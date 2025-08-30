@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "An office is setting up a multi-function device for digital document workflows. Which of the following would improve speed and automation for high-volume scanning? (Select all that apply)",
+  "answer_options": [
+    "Automatic document feeder",
+    "Flatbed scanner",
+    "Scan to SMB",
+    "Scan to email",
+    "Scan to GPU"
+  ],
+  "correct_answer": [
+    "Automatic document feeder",
+    "Scan to SMB",
+    "Scan to email"
+  ],
+  "explanation": "An automatic document feeder speeds up batch scanning. Scan to SMB and scan to email automate file delivery. Flatbeds are slower, and GPUs aren't involved.",
+  "tags": [
+    "automatic document feeder",
+    "scan to SMB",
+    "scan to email"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

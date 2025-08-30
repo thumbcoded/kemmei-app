@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does PCI stand for in the context of expansion slots?",
+  "answer_options": [
+    "Peripheral Card Interface",
+    "Peripheral Component Interconnect",
+    "Primary Communication Interface",
+    "Personal Computer Interlink"
+  ],
+  "correct_answer": [
+    "Peripheral Component Interconnect"
+  ],
+  "explanation": "PCI stands for Peripheral Component Interconnect, a standard used for connecting expansion cards to the motherboard.",
+  "tags": [
+    "PCI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

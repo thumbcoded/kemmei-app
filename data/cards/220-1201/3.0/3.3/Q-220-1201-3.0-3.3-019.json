@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a key difference between desktop and laptop memory modules?",
+  "answer_options": [
+    "Laptop modules are soldered directly to the CPU.",
+    "Laptop modules have more pins than desktop modules.",
+    "Laptop modules are smaller and often installed horizontally.",
+    "Desktop modules are thinner than laptop modules."
+  ],
+  "correct_answer": [
+    "Laptop modules are smaller and often installed horizontally."
+  ],
+  "explanation": "Laptop memory modules (SO-DIMMs) are more compact and typically installed flat due to space constraints.",
+  "tags": [
+    "laptop memory",
+    "desktop memory",
+    "memory slot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

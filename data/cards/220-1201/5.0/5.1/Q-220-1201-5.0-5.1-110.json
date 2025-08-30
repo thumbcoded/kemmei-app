@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-110",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How do you configure flash drive boot and what are common troubleshooting steps?",
+  "answer_options": [
+    "Flash drives cannot be used as boot devices in modern computers",
+    "Create bootable USB, enable USB boot in BIOS, set USB as first boot priority",
+    "Flash drives automatically boot without any BIOS configuration needed",
+    "Only external hard drives can be used for booting, not flash drives"
+  ],
+  "correct_answer": [
+    "Create bootable USB, enable USB boot in BIOS, set USB as first boot priority"
+  ],
+  "explanation": "Configuration: 1) Create bootable USB drive, 2) Enable USB boot in BIOS, 3) Set USB device as first boot priority, 4) Save and restart. Troubleshooting: verify USB drive is bootable, try different USB ports, disable secure boot if needed, confirm UEFI vs Legacy boot mode matches USB creation method, and check for USB drive recognition in BIOS.",
+  "tags": [
+    "flash drive boot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

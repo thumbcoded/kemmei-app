@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which symptom may suggest a problem with a hard drive's physical mechanism?",
+  "answer_options": [
+    "Slow video playback",
+    "Beeping from the motherboard",
+    "Clicking noises from the drive",
+    "No display on the monitor"
+  ],
+  "correct_answer": [
+    "Clicking noises from the drive"
+  ],
+  "explanation": "Clicking noises can indicate mechanical failure inside a traditional spinning hard drive, often called the 'click of death'.",
+  "tags": [
+    "clicking noises"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

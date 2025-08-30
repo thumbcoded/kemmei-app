@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-043",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Compared to traditional hard drives, SSDs offer better performance in which of the following areas?",
+  "answer_options": [
+    "Sequential seek time",
+    "Rotational stability",
+    "Read and write speed",
+    "Disk fragmentation recovery"
+  ],
+  "correct_answer": [
+    "Read and write speed"
+  ],
+  "explanation": "SSDs outperform hard drives in data access speed because they use memory modules with no mechanical delays.",
+  "tags": [
+    "high-speed storage",
+    "SSD"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

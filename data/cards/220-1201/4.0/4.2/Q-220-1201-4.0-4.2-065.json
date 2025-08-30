@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which two of the following are true about Platform as a Service (PaaS)? (Select two)",
+  "answer_options": [
+    "The provider manages the underlying hardware and OS",
+    "The customer is responsible for application deployment",
+    "The customer manages physical servers and cooling",
+    "The customer must install and configure the OS"
+  ],
+  "correct_answer": [
+    "The provider manages the underlying hardware and OS",
+    "The customer is responsible for application deployment"
+  ],
+  "explanation": "PaaS removes infrastructure responsibilities and gives customers a ready environment to deploy applications.",
+  "tags": [
+    "PaaS",
+    "application building"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What are the advantages and considerations when configuring SSD boot in BIOS?",
+  "answer_options": [
+    "SSDs only work with older BIOS systems and require IDE mode",
+    "Faster boot times, improved responsiveness - ensure AHCI mode and TRIM support",
+    "SSDs consume more power than traditional drives and need special cooling",
+    "SSDs are less reliable than hard drives and should not be used for boot drives"
+  ],
+  "correct_answer": [
+    "Faster boot times, improved responsiveness - ensure AHCI mode and TRIM support"
+  ],
+  "explanation": "SSD boot advantages: significantly faster boot times, improved system responsiveness, lower power consumption, no moving parts (more reliable). Considerations: ensure SATA mode is set to AHCI (not IDE), enable TRIM support, verify boot order prioritizes SSD, and confirm UEFI compatibility for modern SSDs with GPT partitions.",
+  "tags": [
+    "SSD boot"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

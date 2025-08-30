@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement correctly distinguishes Type 1 and Type 2 hypervisors?",
+  "answer_options": [
+    "Type 2 hypervisors run without an OS; Type 1 hypervisors require Windows or Linux",
+    "Type 1 hypervisors install only in cloud environments",
+    "Type 2 hypervisors run on an existing OS; Type 1 runs directly on hardware",
+    "Type 1 hypervisors are less secure than Type 2"
+  ],
+  "correct_answer": [
+    "Type 2 hypervisors run on an existing OS; Type 1 runs directly on hardware"
+  ],
+  "explanation": "Type 1 (bare metal) hypervisors operate directly on physical hardware, while Type 2 hypervisors run atop a host OS.",
+  "tags": [
+    "Type 1 hypervisor",
+    "Type 2 hypervisor"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

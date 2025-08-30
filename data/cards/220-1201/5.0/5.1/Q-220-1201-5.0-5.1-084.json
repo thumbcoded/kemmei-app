@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-084",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What should a technician check first if no devices work in one USB header but function elsewhere?",
+  "answer_options": [
+    "Video driver version",
+    "Connector pins and solder joints",
+    "RAM slot spacing",
+    "Network gateway settings"
+  ],
+  "correct_answer": [
+    "Connector pins and solder joints"
+  ],
+  "explanation": "USB headers are directly tied to motherboard traces. If one fails, checking the physical connection is critical.",
+  "tags": [
+    "connectors not operational"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

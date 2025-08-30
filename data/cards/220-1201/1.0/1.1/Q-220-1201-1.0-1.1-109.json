@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-109",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A company wants to roll out fingerprint authentication across its fleet of laptops. What two requirements must be met for successful deployment?",
+  "answer_options": [
+    "All systems must include biometric-compatible hardware",
+    "Each user must have a unique fingerprint scanner",
+    "Group Policy must allow biometric sign-in",
+    "BitLocker must be disabled",
+    "Each user must install third-party fingerprint software"
+  ],
+  "correct_answer": [
+    "All systems must include biometric-compatible hardware",
+    "Group Policy must allow biometric sign-in"
+  ],
+  "explanation": "Biometric login requires supported hardware and appropriate OS-level permissions. BitLocker and third-party software are unrelated to core functionality.",
+  "tags": [
+    "fingerprint reader",
+    "Windows Hello",
+    "biometric hardware"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

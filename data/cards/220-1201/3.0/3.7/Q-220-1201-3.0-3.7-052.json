@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "medium",
+  "question_type": "select_all",
+  "question_text": "Which of the following are functions of a print server? (Select all that apply)",
+  "answer_options": [
+    "Queue print jobs from multiple users",
+    "Restrict print access by user or group",
+    "Configure CPU overclocking",
+    "Allow monitoring of pending print jobs",
+    "Automatically clean printer heads"
+  ],
+  "correct_answer": [
+    "Queue print jobs from multiple users",
+    "Restrict print access by user or group",
+    "Allow monitoring of pending print jobs"
+  ],
+  "explanation": "Print servers handle job queuing, permissions, and monitoring—hardware functions like cleaning printer heads are done by the printer itself.",
+  "tags": [
+    "print server"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

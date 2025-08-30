@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-133",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician needs to set up a DHCP reservation. What information must they gather from the device?",
+  "answer_options": [
+    "Subnet mask",
+    "Hostname",
+    "MAC address",
+    "Device uptime"
+  ],
+  "correct_answer": [
+    "MAC address"
+  ],
+  "explanation": "The DHCP server uses the client’s MAC address to match it with the reserved IP.",
+  "tags": [
+    "MAC address",
+    "DHCP reservation",
+    "MAC-based assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What distinguishes an internal cloud from an external cloud?",
+  "answer_options": [
+    "An internal cloud uses metered pricing while external does not",
+    "An external cloud is always hosted on-site",
+    "An internal cloud is owned and operated by the customer organization",
+    "External clouds can only be accessed on a local network"
+  ],
+  "correct_answer": [
+    "An internal cloud is owned and operated by the customer organization"
+  ],
+  "explanation": "Internal clouds are maintained within an organization and give full control over infrastructure and policies.",
+  "tags": [
+    "internal cloud",
+    "external cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

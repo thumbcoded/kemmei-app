@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following could cause authentication failures when accessing network resources? (Select all that apply)",
+  "answer_options": [
+    "Expired user password",
+    "Account lockout due to failed attempts",
+    "Incorrect domain name",
+    "Network cable disconnected",
+    "Time synchronization issues",
+    "Disabled user account"
+  ],
+  "correct_answer": [
+    "Expired user password",
+    "Account lockout due to failed attempts",
+    "Incorrect domain name",
+    "Time synchronization issues",
+    "Disabled user account"
+  ],
+  "explanation": "Authentication can fail due to credential issues (expired/wrong password), account status (locked/disabled), domain problems, or time sync issues affecting authentication protocols.",
+  "tags": [
+    "connectivity testing",
+    "network diagnostics",
+    "troubleshooting steps"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

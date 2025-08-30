@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-008",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which condition may still present an electrocution risk **even when the PC is unplugged**?",
+  "answer_options": [
+    "The CMOS battery is left connected",
+    "The ground wire is disconnected",
+    "The power switch on the PSU is left ON",
+    "High-voltage capacitors inside the PSU are charged"
+  ],
+  "correct_answer": [
+    "High-voltage capacitors inside the PSU are charged"
+  ],
+  "explanation": "Charged capacitors store energy that can discharge through human contact, even if the PC is unplugged.",
+  "tags": [
+    "electrocution risk"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component is responsible for managing multiple storage drives in a RAID array?",
+  "answer_options": [
+    "Video driver",
+    "External enclosure",
+    "RAID controller",
+    "BIOS clock"
+  ],
+  "correct_answer": [
+    "RAID controller"
+  ],
+  "explanation": "A RAID controller manages the communication between the system and the multiple drives in a RAID array.",
+  "tags": [
+    "RAID controller"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

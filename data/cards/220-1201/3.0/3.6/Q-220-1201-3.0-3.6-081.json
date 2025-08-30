@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary purpose of a redundant power supply in a server?",
+  "answer_options": [
+    "To increase the server's clock speed",
+    "To enable faster boot times",
+    "To maintain system power if one power supply fails",
+    "To reduce power consumption"
+  ],
+  "correct_answer": [
+    "To maintain system power if one power supply fails"
+  ],
+  "explanation": "Redundant power supplies allow a server to continue operating even if one power supply fails or is removed.",
+  "tags": [
+    "redundant power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

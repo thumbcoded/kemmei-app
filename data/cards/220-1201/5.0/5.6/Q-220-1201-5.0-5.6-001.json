@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a likely cause of a single vertical line running down every page from an inkjet printer?",
+  "answer_options": [
+    "Low toner",
+    "Dirty print heads",
+    "Incorrect page orientation",
+    "Paper jam"
+  ],
+  "correct_answer": [
+    "Dirty print heads"
+  ],
+  "explanation": "A single vertical line on inkjet prints is often caused by dirty or clogged print heads.",
+  "tags": [
+    "print quality",
+    "lines on page",
+    "inkjet problems"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

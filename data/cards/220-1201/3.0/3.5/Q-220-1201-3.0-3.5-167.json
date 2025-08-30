@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-167",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a 64-bit CPU?",
+  "answer_options": [
+    "It can only run 64-bit applications",
+    "It is limited to accessing 4GB of RAM",
+    "It supports a larger address space than a 32-bit CPU",
+    "It uses only one processing core"
+  ],
+  "correct_answer": [
+    "It supports a larger address space than a 32-bit CPU"
+  ],
+  "explanation": "A 64-bit CPU can address more memory than a 32-bit CPU, allowing it to support modern operating systems and applications that require more than 4GB of RAM.",
+  "tags": [
+    "64-bit CPU"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

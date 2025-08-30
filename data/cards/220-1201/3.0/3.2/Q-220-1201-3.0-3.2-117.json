@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-117",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two statements accurately describe differences between Lightning and USB-C? (Select two)",
+  "answer_options": [
+    "Lightning supports alternate modes like DisplayPort natively",
+    "USB-C offers broader compatibility with non-Apple devices",
+    "Lightning is standardized by the USB-IF consortium",
+    "USB-C supports faster charging and data rates than Lightning",
+    "Lightning ports are required on all devices sold in the EU"
+  ],
+  "correct_answer": [
+    "USB-C offers broader compatibility with non-Apple devices",
+    "USB-C supports faster charging and data rates than Lightning"
+  ],
+  "explanation": "USB-C is industry-standard, supporting faster speeds and more device types. Lightning is Apple-specific and lacks some modern features.",
+  "tags": [
+    "USB-C transition",
+    "Lightning connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

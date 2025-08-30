@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-106",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Cloud and Virtualization",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a primary benefit of high availability in cloud environments?",
+  "answer_options": [
+    "Lower monthly cost",
+    "Increased customization of infrastructure",
+    "Systems remain accessible even during hardware failures",
+    "Faster operating system updates"
+  ],
+  "correct_answer": [
+    "Systems remain accessible even during hardware failures"
+  ],
+  "explanation": "High availability ensures services stay online by using redundant systems across multiple data centers.",
+  "tags": [
+    "high availability"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

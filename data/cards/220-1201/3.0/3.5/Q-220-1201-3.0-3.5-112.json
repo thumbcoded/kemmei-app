@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-112",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "You are installing a new PC case. Which header is most likely to be used for connecting the power switch?",
+  "answer_options": [
+    "TPM module header",
+    "24-pin power connector",
+    "Front panel header",
+    "USB header"
+  ],
+  "correct_answer": [
+    "Front panel header"
+  ],
+  "explanation": "The power switch, reset switch, and LEDs are connected to the motherboard via the front panel header.",
+  "tags": [
+    "front panel connectors",
+    "case buttons"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

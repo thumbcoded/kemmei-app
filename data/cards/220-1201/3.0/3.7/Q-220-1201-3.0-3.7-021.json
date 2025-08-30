@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-021",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the purpose of a page description language (PDL)?",
+  "answer_options": [
+    "It manages printer ink levels",
+    "It handles print queue prioritization",
+    "It tells the printer how to render text and images on a page",
+    "It establishes network settings for the printer"
+  ],
+  "correct_answer": [
+    "It tells the printer how to render text and images on a page"
+  ],
+  "explanation": "PDLs are used to describe the layout and contents of a printed page so the printer knows how to properly render it.",
+  "tags": [
+    "page rendering"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

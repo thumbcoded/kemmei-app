@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-061",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a large-scale deployment, what challenge does a SIEM face without proper log consolidation?",
+  "answer_options": [
+    "It cannot detect duplicate MAC addresses",
+    "It lacks access to file-sharing services",
+    "It cannot perform meaningful cross-system analysis",
+    "It disables packet sniffing features"
+  ],
+  "correct_answer": [
+    "It cannot perform meaningful cross-system analysis"
+  ],
+  "explanation": "Without centralized logs, a SIEM cannot correlate or analyze patterns across different systems, limiting its effectiveness.",
+  "tags": [
+    "SIEM",
+    "log consolidation",
+    "correlation",
+    "security information and event manager"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

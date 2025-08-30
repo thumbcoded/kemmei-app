@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-135",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "easy",
+  "question_type": "select_multiple",
+  "question_text": "Which characteristics require more careful handling during laptop troubleshooting? (Select all that apply)",
+  "answer_options": [
+    "Precise specifications",
+    "Small component size",
+    "Fragile connections",
+    "High processing speeds",
+    "Complex software configurations"
+  ],
+  "correct_answer": [
+    "Precise specifications",
+    "Small component size",
+    "Fragile connections"
+  ],
+  "explanation": "Laptop troubleshooting requires careful handling due to precise engineering specifications, miniaturized components, and delicate connections that can be easily damaged.",
+  "tags": [
+    "precise specifications",
+    "small components",
+    "laptop troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

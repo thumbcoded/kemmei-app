@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the function of the 15-pin SATA power connector?",
+  "answer_options": [
+    "To transfer analog video signals",
+    "To connect multiple monitors",
+    "To deliver power to the drive",
+    "To transfer data between motherboard and drive"
+  ],
+  "correct_answer": [
+    "To deliver power to the drive"
+  ],
+  "explanation": "The 15-pin SATA power connector provides power to internal hard drives and SSDs.",
+  "tags": [
+    "15-pin power connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-002",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which protocol is used to automatically assign IP addresses and other network settings to devices?",
+  "answer_options": [
+    "DNS",
+    "SMTP",
+    "DHCP",
+    "FTP"
+  ],
+  "correct_answer": [
+    "DHCP"
+  ],
+  "explanation": "DHCP (Dynamic Host Configuration Protocol) is used to automatically assign IP addresses and configuration settings such as subnet mask and default gateway.",
+  "tags": [
+    "DHCP",
+    "dynamic host configuration protocol",
+    "automatic IP assignment"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

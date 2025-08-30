@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which virtualization-specific CPU feature allows faster context switching and guest OS management?",
+  "answer_options": [
+    "Secure Boot",
+    "VT or AMD-V",
+    "ECC memory",
+    "Hyperthreading"
+  ],
+  "correct_answer": [
+    "VT or AMD-V"
+  ],
+  "explanation": "Virtualization extensions (Intel VT or AMD-V) improve performance by assisting context switching and hardware mapping.",
+  "tags": [
+    "virtualization technology",
+    "AMD-V"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

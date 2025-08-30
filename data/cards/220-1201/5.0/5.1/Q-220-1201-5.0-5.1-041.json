@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-041",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A laptop experiences unpredictable save errors that disappear after rebooting. Which issue is most likely?",
+  "answer_options": [
+    "Write failure due to storage device issues",
+    "Faulty display backlight",
+    "Inactive antivirus protection",
+    "Disconnected CPU fan"
+  ],
+  "correct_answer": [
+    "Write failure due to storage device issues"
+  ],
+  "explanation": "Unpredictable write issues that temporarily resolve are often due to early-stage write failure or controller instability on the drive.",
+  "tags": [
+    "write failure"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

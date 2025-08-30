@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What feature on a memory module prevents incorrect installation?",
+  "answer_options": [
+    "Gold-plated contacts",
+    "Cooling fins",
+    "Keyed notches",
+    "Colored labels"
+  ],
+  "correct_answer": [
+    "Keyed notches"
+  ],
+  "explanation": "Memory modules are keyed with notches that align with slots on the motherboard, preventing installation in the wrong orientation or into incompatible systems.",
+  "tags": [
+    "memory slot keys",
+    "memory installation"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

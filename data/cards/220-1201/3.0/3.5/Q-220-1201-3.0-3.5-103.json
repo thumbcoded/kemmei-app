@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-103",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which configuration provides the highest throughput for an internal SSD?",
+  "answer_options": [
+    "SATA III SSD on a 6 Gbps port",
+    "eSATA external SSD",
+    "M.2 SATA SSD",
+    "M.2 NVMe SSD using 4 PCIe lanes"
+  ],
+  "correct_answer": [
+    "M.2 NVMe SSD using 4 PCIe lanes"
+  ],
+  "explanation": "NVMe drives using PCIe x4 can achieve far higher throughput than SATA-based solutions, including M.2 SATA.",
+  "tags": [
+    "M.2 connector",
+    "NVMe SSD",
+    "PCIe"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

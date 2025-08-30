@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-031",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component in some inkjet printers is responsible for releasing ink onto the page?",
+  "answer_options": [
+    "Print head",
+    "Fuser",
+    "Drum",
+    "Platen"
+  ],
+  "correct_answer": [
+    "Print head"
+  ],
+  "explanation": "The print head sprays tiny droplets of ink onto the paper and may be built into the cartridge or installed separately.",
+  "tags": [
+    "print head"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

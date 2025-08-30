@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-044",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which action can improve signal quality for a wireless connection?",
+  "answer_options": [
+    "Switching to HDMI output",
+    "Using a USB 3.0 drive",
+    "Repositioning the antenna",
+    "Installing more RAM"
+  ],
+  "correct_answer": [
+    "Repositioning the antenna"
+  ],
+  "explanation": "Antenna positioning plays a critical role in wireless signal propagation and strength.",
+  "tags": [
+    "antenna positioning",
+    "signal propagation",
+    "signal quality"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

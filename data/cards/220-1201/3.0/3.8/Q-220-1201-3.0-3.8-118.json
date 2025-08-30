@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-118",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO conditions should be monitored in a printer’s physical environment to avoid long-term reliability issues?",
+  "answer_options": [
+    "Toner color calibration",
+    "Ambient humidity levels",
+    "Power supply wattage",
+    "Dust accumulation near intake vents",
+    "Driver compatibility"
+  ],
+  "correct_answer": [
+    "Ambient humidity levels",
+    "Dust accumulation near intake vents"
+  ],
+  "explanation": "Both high humidity and dust buildup can lead to paper handling issues and internal component degradation.",
+  "tags": [
+    "environmental considerations"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

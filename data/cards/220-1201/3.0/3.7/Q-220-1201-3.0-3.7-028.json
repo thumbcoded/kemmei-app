@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-028",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are true statements about the differences between PCL and PostScript? (Select all that apply)",
+  "answer_options": [
+    "PCL is generally faster for simple text documents",
+    "PostScript is better for cross-platform output consistency",
+    "PCL and PostScript use the same printer memory model",
+    "PostScript jobs are usually larger and more resource-intensive",
+    "PCL was developed by Adobe"
+  ],
+  "correct_answer": [
+    "PCL is generally faster for simple text documents",
+    "PostScript is better for cross-platform output consistency",
+    "PostScript jobs are usually larger and more resource-intensive"
+  ],
+  "explanation": "PCL is fast and efficient for basic documents. PostScript provides better graphical consistency but typically uses more resources.",
+  "tags": [
+    "PCL",
+    "PostScript"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

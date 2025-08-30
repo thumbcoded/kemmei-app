@@ -1,0 +1,1402 @@
+0:02
+as you're most likely aware when you
+0:03
+turn on your computer there are a series
+0:05
+of tests that take place known as the
+0:07
+post this stands for power on self test
+0:11
+this is a self test to determine if the
+0:13
+core components of your system are
+0:15
+installed and if they're operational
+0:17
+this checks to see if your CPU is
+0:19
+installed and operational and if it's
+0:21
+able to communicate to your BIOS
+0:23
+hardware this might also check to see if
+0:25
+your video subsystem is working properly
+0:27
+and if memory is also installed in your
+0:30
+computer if there are any problems with
+0:32
+any of these components you'll get an
+0:35
+error message on the screen if possible
+0:37
+and a series of beeps that come from the
+0:39
+motherboard that beeps and the messages
+0:42
+that you might see on the screen might
+0:44
+be similar between manufacturers but
+0:46
+very often there are differences between
+0:48
+one manufacturer's BIOS and another this
+0:51
+means that a series of beeps on one
+0:53
+motherboard might mean something
+0:55
+completely different on another
+0:57
+motherboard for that reason you
+0:59
+shouldn't bother memorizing specific
+1:01
+beep codes for an individual
+1:03
+manufacturer because when this happens
+1:05
+you'll probably be referencing the
+1:06
+documentation anyway and since all of
+1:09
+these different manufacturers are using
+1:11
+different beep codes on different
+1:12
+motherboards it's probably a good idea
+1:14
+to check with the documentation anyway
+1:17
+the real key is understanding what that
+1:19
+beep code means and what you should do
+1:21
+next and if you are getting beep codes
+1:24
+there should be messages on the screen
+1:25
+if there's no problems with your video
+1:27
+display and certainly there will be a
+1:29
+series of codes probably long and short
+1:32
+codes that you'll need to reference
+1:34
+you'll need to look at the error codes
+1:35
+on your screen and reference how many
+1:37
+beeps you're hearing in this beep code
+1:40
+against the manufacturer's documentation
+1:42
+that's going to tell you what part of
+1:44
+this BIOS failed and hopefully point you
+1:46
+in a direction for resolving this
+1:48
+hardware
+1:49
+problem if you turn on your computer and
+1:52
+start hearing beeping noises but you see
+1:54
+nothing on the screen then your problem
+1:57
+is probably related to bad video on the
+1:59
+motherboard although it could be related
+2:01
+to bad memory or a bad CPU if any of
+2:04
+those components aren't working then you
+2:06
+probably have no way to present any data
+2:09
+on your screen and therefore the screen
+2:11
+remains black this could also be a
+2:13
+misconfiguration with the video
+2:15
+subsystem inside your BIOS so you'll
+2:17
+want to look at the BIOS configuration
+2:19
+and confirm that everything in the BIOS
+2:21
+looks to be in order if you're powering
+2:23
+up and you get a message that the BIOS
+2:25
+time and date is incorrect then it's
+2:28
+very possible your problem is with the
+2:30
+battery that's on the motherboard one of
+2:32
+the few reasons we still have a battery
+2:34
+on the motherboard is to maintain the
+2:36
+date and time especially if there's no
+2:38
+power source to the computer this means
+2:40
+we could move the computer plug it back
+2:42
+into a power source and the computer
+2:44
+already knows the date and time based on
+2:47
+that clock that's keeping that updated
+2:49
+when you're not connected to power if
+2:51
+your battery is failed you'll be
+2:52
+prompted to input the date and the time
+2:55
+each time you plug in that computer and
+2:57
+start it back up again simply replacing
+3:00
+the battery on the motherboard will
+3:01
+resolve this problem you can put in the
+3:04
+correct date and time and you'll no
+3:05
+longer be prompted each time you turn on
+3:07
+your computer and you may find when you
+3:10
+start your computer that it tries to
+3:12
+start an operating system from a USB key
+3:15
+that you installed into the computer
+3:17
+this may not be the boot process you
+3:19
+would like to have in place when the
+3:21
+computer starts so you might want to
+3:23
+look at your BIOS and see what the boot
+3:25
+order happens to be for example you may
+3:27
+be able to set the USB connection at a
+3:30
+lower priority than your internal SSD to
+3:33
+ensure that that SSD drive is always
+3:35
+referenced first during the boot process
+3:38
+you'll obviously need a valid operating
+3:39
+system on whatever device you decide to
+3:41
+boot from so if it's an SSD or a flash
+3:44
+drive you'll need an operating system so
+3:46
+that you can start from those individual
+3:48
+storage devices and your BIOS might give
+3:51
+you the option to check that there is
+3:53
+actually media plugged into that
+3:54
+particular startup device if there's
+3:56
+nothing physically connected to those
+3:58
+USB interfaces then your BIOS will
+4:00
+decide to go to the next device on its
+4:03
+list of boot
+4:04
+devices when you're working on your
+4:06
+computer it's important to know what to
+4:08
+do next when you run into a problem
+4:10
+because your issues might be bigger than
+4:13
+you were expecting whenever you see an
+4:15
+error like this you know that the entire
+4:17
+system has come to a stop it might tell
+4:19
+you that your device ran into a problem
+4:21
+and now needs to restart it also says
+4:24
+it's collecting some error info and then
+4:26
+the system in many cases will
+4:28
+automatically restart for you this
+4:30
+message is referred to as a Windows stop
+4:33
+error and it's the kind of message you
+4:34
+see when the operating system is not
+4:37
+able to recover from some type of issue
+4:40
+sometimes you'll see people refer to
+4:41
+this as the blue screen of death because
+4:43
+if you see this message you will need to
+4:46
+restart your computer and if you haven't
+4:48
+saved any of your work you may lose
+4:50
+everything that you've been working on
+4:52
+this message is telling you there's been
+4:54
+an irrecoverable error in the operating
+4:56
+system and the system had to be stopped
+4:59
+before something really bad happened
+5:01
+this is Windows attempting to maintain
+5:03
+the integrity of your operating system
+5:05
+and all of the data that's on it if you
+5:08
+start seeing these messages then there's
+5:09
+something that's going very wrong on
+5:11
+your system and you may want to continue
+5:13
+troubleshooting what could be causing
+5:15
+these stop errors to occur let's dive a
+5:18
+little deeper into some specific
+5:20
+hardware issues and see what the
+5:22
+symptoms are for each one if you're
+5:24
+having problems with your hard drive or
+5:26
+SSD then you might see messages like
+5:29
+cannot read from the source disc or you
+5:31
+might see very slow performance when
+5:33
+reading or writing to that drive with
+5:35
+hard drives you may even hear loud
+5:37
+clicking noises that indicate the disk
+5:39
+is constantly trying to retry reads or
+5:42
+writes to that storage device if you're
+5:44
+having memory problems you may see
+5:46
+application crashes blue screens of
+5:48
+death or parity errors being displayed
+5:51
+on your screen CPU problems might show
+5:54
+themselves as lock ups during intensive
+5:56
+processing or if your CPU is overheating
+5:59
+you may see spontaneous reboots or blue
+6:02
+screens as the system tries to protect
+6:04
+itself from damage power problems can
+6:07
+show up as intermittent problems where
+6:09
+the system might power on and then
+6:11
+immediately power off or you may find
+6:13
+that your system powers on but nothing
+6:15
+happens no fans are spinning no lights
+6:18
+are coming on and obviously no video is
+6:20
+appearing on the screen if there are
+6:22
+hardware problems with your video card
+6:24
+you may see blue screens artifact a on
+6:26
+your display or your entire system might
+6:29
+lock up when you're performing any
+6:31
+graphics intensive processes like
+6:33
+playing games or watching video motherboard
+6:36
+problems can show up as a lot of
+6:38
+different symptoms the motherboard is
+6:40
+the one thing that connects all of the
+6:42
+other components together so any
+6:44
+problems with the motherboard can show
+6:46
+up as problems with any of the other
+6:47
+components that are connected to it you
+6:50
+may see intermittent operation where
+6:52
+sometimes things work and sometimes they
+6:54
+don't or you may find that certain
+6:56
+expansion slots or certain connectors on
+6:58
+your motherboard are simply not
+7:00
+operational at all
+7:02
+let's look at a specific troubleshooting
+7:04
+process for when you turn on a computer
+7:06
+and nothing appears on your screen and
+7:08
+you don't hear any beeps this is a
+7:10
+common issue and usually tells us that
+7:12
+we either have a bad power supply or a
+7:15
+bad motherboard but it could be related
+7:17
+to any number of different problems our
+7:19
+first step when we see this is to check
+7:21
+if the computer is plugged in and see if
+7:23
+the power switch is actually turned on
+7:25
+this may sound very basic but it's
+7:27
+amazing how often somebody has forgotten
+7:30
+to plug in their computer or they
+7:31
+plugged it into a power strip that is
+7:33
+currently turned off sometimes there are
+7:36
+two power switches you may have a power
+7:38
+switch on the back of the computer near
+7:40
+the power supply and then there's the
+7:42
+normal power switch on the front if that
+7:44
+back power switch is in the off position
+7:46
+then the front power switch will not
+7:48
+work once you confirm the power is
+7:50
+working the next thing to check is if
+7:52
+there are any lights on the power supply
+7:54
+or on the motherboard most power
+7:56
+supplies have an LED that is on whenever
+7:59
+the power supply has power even if the
+8:01
+computer is turned off so if that LED
+8:03
+light is on you know that the power
+8:05
+supply is getting at least some power if
+8:08
+there's no LED on the power supply you
+8:10
+might want to check the motherboard to
+8:12
+see if there are any LED lights there if
+8:14
+you don't see any lights at all on the
+8:16
+system it's very likely that the power
+8:18
+supply has failed or perhaps the
+8:20
+motherboard is not receiving any power
+8:22
+from the power supply if you do see
+8:24
+lights when the system is powered on but
+8:26
+you're not hearing any fans or there's
+8:28
+no video on the display then you might
+8:30
+want to make sure that all of the
+8:31
+internal power cables are connected
+8:33
+properly check that the motherboard
+8:35
+power is connected check that the CPU
+8:37
+power is connected and make sure all of
+8:39
+the device power is connected as well if
+8:42
+you still don't see any video on the
+8:44
+screen it's time to start removing
+8:46
+components and try to narrow down which
+8:48
+part of the system may be causing the
+8:50
+problem start by removing all of the
+8:52
+expansion cards and peripherals that you
+8:54
+can remember you want to boot the system
+8:56
+with the minimum number of components
+8:58
+required start with just your motherboard
+9:00
+CPU one stick of memory and see if the
+9:04
+system will at least try to boot if it
+9:06
+does then you can add one component at a
+9:08
+time to see which one is causing the
+9:10
+problem if the system still doesn't boot
+9:13
+with the minimum number of components
+9:15
+then you may have a bad CPU bad memory
+9:18
+or a bad motherboard try putting a
+9:20
+different memory stick in to see if that
+9:22
+resolves the issue if you have a way to
+9:24
+try a different CPU then certainly do
+9:26
+that as well and of course if the
+9:28
+motherboard is the problem you'll need
+9:29
+to replace the entire motherboard which
+9:31
+unfortunately means removing many of the
+9:33
+other components and reinstalling them
+9:35
+into the new motherboard
+9:37
+CPU problems can be particularly
+9:40
+challenging because our modern CPUs
+9:42
+operate at very high speeds and
+9:44
+therefore they get very hot to cool
+9:46
+these CPUs down we commonly have a
+9:48
+cooling fan and a heat sink that are
+9:50
+connected directly to the top of the CPU
+9:53
+if for any reason that cooling process
+9:55
+is not working then the CPU will get
+9:57
+very hot very quickly the CPU is
+10:00
+designed with thermal protections and if
+10:02
+the CPU gets too hot it will either
+10:04
+throttle down the clock speed so it's
+10:06
+running much more slowly or if it
+10:08
+continues to get hotter the entire
+10:10
+system will suddenly power off this is
+10:12
+the CPU protecting itself from permanent
+10:15
+damage due to heat if your CPU is
+10:17
+overheating and shutting down the system
+10:19
+you want to confirm that the cooling fan
+10:21
+is working properly and that there's
+10:23
+good air flow through your computer case
+10:25
+check to see that the heat sink is
+10:27
+properly connected to the CPU that there
+10:30
+is thermal paste between the CPU and the
+10:32
+heat sink and that the heat sink is not
+10:34
+blocked with dust or other debris you
+10:37
+should also check the temperature
+10:39
+monitoring software to see what
+10:40
+temperatures you're getting for that CPU
+10:42
+under normal load you may also find that
+10:45
+the CPU is not properly seated in the
+10:47
+motherboard socket this might show up as
+10:49
+the system powering on but then getting
+10:51
+a blue screen of death or having the
+10:53
+system lock up randomly during
+10:55
+operation once you removed the CPU you
+10:58
+can visually check both the CPU and the
+11:00
+motherboard socket to confirm that all
+11:02
+of the connectors are straight and there
+11:04
+are no bent pins with modern Intel
+11:06
+processors the pins are in the
+11:08
+motherboard socket with AMD processors
+11:11
+the pins are on the CPU itself in either
+11:14
+case if any of those pins are bent it
+11:16
+can cause intermittent problems or the
+11:18
+CPU to not work at all there are
+11:21
+techniques to straighten bent pins but
+11:23
+this is a delicate process and very
+11:25
+often if the pins are bent the safest
+11:27
+option is to simply replace that CPU or
+11:30
+the motherboard if the pins happen to be
+11:32
+on the motherboard socket
+11:34
+one of the most important components in
+11:36
+our computers is the memory because
+11:38
+that's where all of our applications and
+11:40
+our data is temporarily stored and if
+11:42
+there are problems with the memory you
+11:44
+might see very random issues when you're
+11:46
+using your computer you might find that
+11:48
+applications crash randomly that there
+11:50
+might be blue screens of death that
+11:52
+occur at seemingly random times or you
+11:55
+might see parity errors on your screen
+11:57
+another symptom of bad memory is that
+12:00
+your system memory is not adding up to
+12:02
+the amount of memory that you have
+12:04
+installed for example if you have
+12:06
+installed 16 gigabytes of RAM but your
+12:08
+system is only showing 12 gigabytes then
+12:11
+you either have a piece of memory that's
+12:13
+not working or not installed properly or
+12:15
+there might be a problem with the memory
+12:17
+slot that's on your motherboard
+12:19
+fortunately there are memory diagnostic
+12:21
+utilities that can check your memory
+12:23
+extensively and they can tell you if any
+12:25
+of the memory that's in your system has
+12:27
+any problems one is the Windows memory
+12:30
+diagnostic that's built into Windows if
+12:32
+you have problems with your memory this
+12:33
+diagnostic will restart your computer
+12:35
+and run a series of memory tests if
+12:38
+there are problems found with your
+12:39
+memory it will give you a message after
+12:41
+the computer reboots if your Windows
+12:43
+memory diagnostic doesn't find any
+12:45
+problems but you're still having
+12:47
+intermittent memory issues you may want
+12:49
+to try a third-party memory testing
+12:51
+utility mem test 86 is one that is very
+12:54
+popular for this the nice thing about
+12:56
+mem test 86 is that it runs independent
+12:59
+of any operating system which means it
+13:01
+can test 100% of the memory that's in
+13:03
+your system this application runs from a
+13:06
+bootable USB drive or a bootable optical
+13:09
+disc and it will spend as much time as
+13:11
+you would like testing every aspect of
+13:13
+the memory to make sure that the memory
+13:15
+is working properly if you run the
+13:17
+memory test and you do find that you
+13:19
+have a memory issue you'll need to
+13:20
+determine which piece of memory is
+13:22
+having the problem if you have multiple
+13:24
+memory modules try removing one module
+13:26
+at a time and running the memory test
+13:28
+again once you've isolated which module
+13:30
+is having the problem you can replace
+13:32
+that individual memory module and the
+13:34
+rest of the memory in your system should
+13:36
+continue to work normally you should
+13:38
+also check the motherboard documentation
+13:40
+to see if there are any specific memory
+13:42
+configurations that are recommended for
+13:44
+your particular motherboard for example
+13:46
+some motherboards might require that you
+13:48
+populate memory slots in a particular
+13:50
+order or you may only be able to use
+13:52
+certain types of memory modules that are
+13:54
+specifically designed for your system
+13:57
+your computer's power supply must
+13:59
+provide the right voltage to all of the
+14:01
+components that are in your computer
+14:03
+although our power supplies are
+14:05
+generally very reliable there can be
+14:06
+situations where certain voltages may
+14:09
+not be correct and that might cause
+14:11
+problems with the components that are
+14:12
+using those voltages if you're having
+14:15
+problems with your power supply you
+14:16
+might see the system not powering on at
+14:19
+all it might power on and then
+14:21
+immediately power back off or you might
+14:23
+have intermittent problems where the
+14:25
+system randomly powers off and then
+14:27
+powers back on you might also have
+14:29
+messages from the motherboard or from
+14:30
+software that tells you that the power
+14:32
+supply voltages are not within normal
+14:35
+tolerances some systems will
+14:37
+automatically shut down if the power
+14:39
+supply voltages are outside of those
+14:41
+normal tolerances to prevent any damage
+14:43
+to the system components one way to
+14:45
+check the power supply is to see if the
+14:47
+power supply fan is working this is
+14:49
+commonly visible from the back of the
+14:51
+computer if that fan is not spinning you
+14:53
+may have a power supply that is not
+14:55
+working you might also check to see if
+14:57
+there is an LED on the power supply or
+14:59
+the motherboard that would indicate the
+15:01
+power supply is providing at least some
+15:03
+electricity to the system if you have a
+15:05
+multimeter you can also check the
+15:07
+voltages that are being provided by the
+15:08
+power supply this obviously requires
+15:11
+that you're comfortable working inside
+15:12
+the computer and you understand how to
+15:14
+safely use a multimeter around these
+15:16
+voltages the motherboard power
+15:18
+connection usually carries a number of
+15:20
+different voltages and you can measure
+15:22
+those voltages to see if they're within
+15:23
+normal tolerances most motherboards
+15:26
+expect to see 12 volts 5 volts and 3.3
+15:30
+volts from the power supply it's also
+15:33
+very common to have separate power
+15:34
+connections for the CPU and those
+15:36
+usually run at 12 volts as well if any
+15:39
+of these voltages are significantly
+15:41
+outside of normal ranges it could cause
+15:43
+stability problems in your system
+15:46
+our modern motherboards are very
+15:48
+complicated with many different
+15:50
+components and subsystems all working
+15:52
+together unfortunately if any part of
+15:54
+the motherboard has a problem it can
+15:56
+affect the rest of the system this means
+15:58
+that motherboard problems can show up as
+16:00
+many different types of issues you might
+16:03
+have expansion slots that don't work you
+16:05
+might have USB ports or other connectors
+16:07
+that are not operational or you might
+16:09
+see very intermittent problems where
+16:11
+things work sometimes and they don't
+16:13
+work other times this is why
+16:15
+troubleshooting motherboard problems can
+16:17
+be so challenging sometimes the only way
+16:20
+to know if the motherboard is the
+16:21
+problem is through a process of
+16:23
+elimination we would swap out the CPU
+16:25
+try different memory replace the power
+16:28
+supply and ultimately if none of those
+16:30
+things resolve the issue then it's
+16:32
+probably the motherboard that's causing
+16:33
+the problem the other challenge with
+16:36
+motherboard problems is that replacing
+16:38
+the motherboard is a significant
+16:39
+undertaking you effectively need to
+16:42
+remove every component from the
+16:43
+motherboard and then reinstall all of
+16:45
+those components into a brand new
+16:47
+motherboard if you have a warranty on
+16:49
+your computer then it would probably be
+16:51
+worthwhile to have the manufacturer
+16:53
+replace that motherboard instead of
+16:54
+doing it yourself 
+16:56
+if you've ever worked with a computer
+16:58
+that had video problems you know that
+17:00
+the symptoms can be quite dramatic you
+17:02
+might see artifacts on your screen
+17:04
+incorrect colors or your screen might be
+17:07
+flickering or distorted you might also
+17:09
+have your system lock up completely when
+17:11
+you're trying to perform graphics
+17:13
+intensive tasks like gaming or watching
+17:15
+high-definition video another common
+17:17
+symptom of video problems is to see a
+17:20
+blue screen of death especially when
+17:22
+you're in the middle of using a graphics
+17:24
+intensive application if you're having
+17:26
+any of these video problems the first
+17:28
+thing you should do is make sure that
+17:29
+your video drivers are up to date video
+17:32
+drivers are updated very frequently and
+17:34
+it's very common to have video problems
+17:36
+that are resolved simply by upgrading to
+17:38
+the latest version of your video driver
+17:40
+if updating your video drivers doesn't
+17:42
+resolve the problem then you might want
+17:44
+to check the temperature of your video
+17:45
+card modern graphics cards can get very
+17:48
+hot especially if you're doing graphics
+17:50
+intensive work you want to make sure
+17:52
+that the cooling fan on the graphics
+17:54
+card is working and that the heat sink
+17:55
+is not blocked with dust or other debris
+17:58
+if the graphics card continues to
+18:00
+overheat it will either throttle down
+18:02
+the graphics performance or the entire
+18:04
+system may blue screen and restart to
+18:06
+protect the graphics card from permanent
+18:08
+damage if the graphics problems persist
+18:11
+you may want to try moving the graphics
+18:13
+card to a different expansion slot on
+18:15
+your motherboard to see if the problem
+18:17
+is with the slot itself or with the
+18:19
+graphics card alternatively you could
+18:21
+try a known good graphics card in that
+18:23
+same slot to determine if the problem is
+18:25
+with the slot or the card
+18:27
+sometimes you'll power on your system
+18:29
+and nothing will appear on the screen
+18:31
+even though you can hear the fans
+18:32
+running and it seems like the computer
+18:34
+has power this could be a display
+18:36
+problem a graphics card problem or a
+18:39
+motherboard problem and the process for
+18:41
+troubleshooting this is very similar to
+18:43
+our other troubleshooting processes the
+18:45
+first thing to check is that all of the
+18:47
+cables are connected properly check the
+18:49
+power cable for the monitor and check
+18:51
+the video cable connection between your
+18:53
+computer and the monitor it's also
+18:55
+important to check if your monitor has
+18:57
+multiple input types if it has HDMI VGA
+19:00
+DVI and DisplayPort inputs you want to
+19:03
+make sure that you have the input
+19:04
+selector on the monitor set to match the
+19:07
+type of cable that you're using if all
+19:09
+of the cables are connected and the
+19:11
+monitor input is set correctly and
+19:13
+you're still not seeing any video you
+19:15
+may want to try the computer with a
+19:17
+different monitor or try moving your
+19:19
+monitor to a different computer to see
+19:21
+if the problem is with the monitor or
+19:23
+with the computer itself if the problem
+19:25
+is with the computer then you'll want to
+19:27
+continue troubleshooting the graphics
+19:28
+card the motherboard and other
+19:30
+components using our normal hardware
+19:32
+troubleshooting process
+19:34
+I mentioned earlier that one very
+19:36
+specific problem you might have with
+19:38
+computers is running out of storage
+19:40
+space and this is a problem that can
+19:42
+affect the performance of your entire
+19:44
+computer when your storage space is very
+19:46
+low the operating system doesn't have
+19:48
+room to store temporary files or expand
+19:51
+memory if it needs to you might see
+19:53
+messages telling you that the disk is
+19:55
+full or you might see very slow
+19:57
+performance especially when you're
+19:59
+trying to save files or load large
+20:01
+applications the obvious solution to
+20:03
+this problem is to free up some disk
+20:05
+space and there are a number of ways to
+20:07
+do this you could delete files that you
+20:09
+no longer need you could uninstall
+20:11
+applications that you're not using or
+20:13
+you could move files to external storage
+20:15
+or to cloud storage Windows includes a
+20:18
+disk cleanup utility that can help you
+20:20
+identify temporary files that can be
+20:22
+safely deleted and there are also
+20:24
+third-party utilities that can help you
+20:26
+identify large files that might be
+20:27
+taking up unnecessary space on your
+20:29
+system if freeing up disk space doesn't
+20:32
+solve your performance problems then you
+20:34
+might want to consider upgrading to a
+20:36
+larger storage device this could be a
+20:38
+larger hard drive or SSD and modern
+20:41
+storage devices have much more capacity
+20:43
+than older devices so you should be able
+20:45
+to find something that will meet your
+20:47
+storage needs for the foreseeable future
+20:50
+another hardware problem we commonly see
+20:52
+is when the computer becomes
+20:54
+unresponsive and it appears to lock up
+20:56
+completely you can't move the mouse
+20:58
+cursor the keyboard doesn't respond and
+21:00
+nothing seems to work this is often
+21:02
+called a system freeze or a system hang
+21:05
+and it can be caused by many different
+21:07
+issues if this happens very rarely then
+21:10
+it might just be a temporary software
+21:12
+problem and you can simply restart the
+21:14
+computer to resolve the issue but if
+21:16
+it's happening frequently then there's
+21:18
+probably a hardware problem that needs
+21:20
+to be resolved common causes of system
+21:22
+freezes include CPU overheating bad
+21:25
+memory faulty hard drives or power
+21:28
+supply problems to troubleshoot a system
+21:30
+freeze you'll want to use the same
+21:32
+process that we've been discussing check
+21:34
+the temperatures make sure the cooling
+21:36
+is working properly run memory tests and
+21:39
+check the power supply voltages you
+21:41
+might also want to check the event
+21:42
+viewer in Windows to see if there are
+21:44
+any error messages that might give you a
+21:46
+clue about what's causing the system to
+21:48
+freeze if you can't identify a specific
+21:50
+hardware component that's causing the
+21:52
+problem you might want to boot the
+21:53
+computer from external media like a USB
+21:56
+drive or optical disc to see if the
+21:58
+problem persists if the computer works
+22:00
+normally when booting from external
+22:02
+media then the problem is probably with
+22:04
+your internal storage device or the
+22:06
+operating system itself
+22:08
+one issue that can be particularly
+22:10
+frustrating is when the computer is very
+22:12
+slow to respond this might show up as
+22:15
+applications taking a very long time to
+22:17
+load the operating system taking a long
+22:19
+time to start up or just general
+22:21
+sluggish performance when you're using
+22:23
+the computer there are many potential
+22:25
+causes for this issue and it can be
+22:27
+hardware related or software related if
+22:30
+you're having performance issues the
+22:32
+first thing to check is if the computer
+22:34
+is running out of memory you can use the
+22:36
+task manager in Windows to see how much
+22:38
+memory is being used and how much is
+22:40
+available if you're using most or all of
+22:42
+your available memory then adding more
+22:44
+memory might improve the performance
+22:46
+significantly you should also check the
+22:48
+hard drive space as we discussed earlier
+22:50
+if the hard drive is nearly full it can
+22:52
+significantly slow down the system
+22:54
+another thing to check is the CPU
+22:56
+utilization again you can use the task
+22:58
+manager to see which processes are using
+23:00
+the most CPU resources if you see that
+23:03
+the CPU is consistently running at high
+23:05
+utilization there might be a process
+23:07
+that's not working properly or you might
+23:09
+need a faster CPU for the work that
+23:11
+you're doing you should also check for
+23:13
+any malware or viruses on the system
+23:15
+malware can significantly slow down a
+23:17
+computer and it's not always obvious
+23:19
+that malware is present run a full
+23:21
+system scan with your antivirus software
+23:23
+and consider using additional malware
+23:25
+scanning tools to make sure your system
+23:27
+is clean finally you might want to check
+23:30
+if there are any driver issues or
+23:31
+software conflicts that could be causing
+23:33
+performance problems outdated drivers or
+23:36
+incompatible software can cause
+23:37
+significant performance issues and
+23:39
+updating drivers or uninstalling
+23:41
+problematic software might resolve the
+23:43
+performance issues that you're seeing
+23:46
+sometimes the solutions to our hardware
+23:48
+problems require that we replace the
+23:50
+hardware we talked earlier about
+23:52
+starting your computer and having it
+23:53
+prompt for a date and time that's
+23:56
+because the battery that's on your
+23:57
+motherboard has failed and you'll need
+23:59
+to replace that battery so your system
+24:01
+can properly maintain the date and the
+24:03
+time these are usually button style
+24:05
+batteries they have a very low profile
+24:07
+on your motherboard so they don't take
+24:09
+up a lot of room they are usually very
+24:11
+easy to remove and replace and you can
+24:13
+generally find these at most stores if
+24:16
+you have an older computer you may find
+24:18
+that removing this battery completely
+24:21
+resets your BIOS configuration on most
+24:24
+modern computers however removing this
+24:26
+battery will not change any of the
+24:28
+configurations of your BIOS including
+24:30
+any passwords that have been set in the
+24:32
+BIOS if you need to remove or completely
+24:35
+reset your BIOS settings then you'll
+24:37
+probably need to use a jumper to be able
+24:39
+to do that rather than removing this
+24:42
+battery

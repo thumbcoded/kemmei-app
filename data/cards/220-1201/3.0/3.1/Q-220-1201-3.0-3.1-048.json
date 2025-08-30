@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.1-048",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two components must support high refresh rates to take advantage of a 144 Hz 4K display? (Select two)",
+  "answer_options": [
+    "The monitor’s backlight",
+    "The operating system",
+    "The video card (GPU)",
+    "The connection interface (e.g., HDMI/DisplayPort)",
+    "The cooling system"
+  ],
+  "correct_answer": [
+    "The video card (GPU)",
+    "The connection interface (e.g., HDMI/DisplayPort)"
+  ],
+  "explanation": "To run 4K at 144 Hz, the GPU must output at high frame rates and the interface must support enough bandwidth (e.g., HDMI 2.1 or DisplayPort 2.1).",
+  "tags": [
+    "refresh rate",
+    "4K"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

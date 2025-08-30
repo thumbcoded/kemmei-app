@@ -1,0 +1,38 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-110",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following accurately describe the DHCP DORA process? (Select all that apply)",
+  "answer_options": [
+    "A client sends a Discover broadcast to locate a server",
+    "The server responds with an Offer including IP and configuration",
+    "The client replies with a Request to accept the offered lease",
+    "The server confirms assignment with an Acknowledge message",
+    "The Acknowledge contains DNS settings and encryption keys"
+  ],
+  "correct_answer": [
+    "A client sends a Discover broadcast to locate a server",
+    "The server responds with an Offer including IP and configuration",
+    "The client replies with a Request to accept the offered lease",
+    "The server confirms assignment with an Acknowledge message"
+  ],
+  "explanation": "DORA consists of Discover, Offer, Request, and Acknowledge — a 4-step process used for dynamic IP assignment.",
+  "tags": [
+    "DORA",
+    "discover",
+    "offer",
+    "request",
+    "acknowledge"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

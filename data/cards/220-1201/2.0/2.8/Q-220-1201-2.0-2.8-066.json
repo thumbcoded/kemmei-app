@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.8-066",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.8",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following practices are critical when terminating cables at a punchdown block? (Select all that apply)",
+  "answer_options": [
+    "Minimize pair untwist to preserve signal integrity",
+    "Use labeling for cable identification",
+    "Route cables tightly to reduce slack",
+    "Follow the correct wiring standard consistently",
+    "Bend cables at 90° angles for compactness"
+  ],
+  "correct_answer": [
+    "Minimize pair untwist to preserve signal integrity",
+    "Use labeling for cable identification",
+    "Follow the correct wiring standard consistently"
+  ],
+  "explanation": "Best practices include preserving pair twist near the termination point, labeling cables for management, and consistently following standards like TIA/EIA-568A/B. Sharp bends should be avoided.",
+  "tags": [
+    "punchdown block",
+    "organization",
+    "labeling",
+    "568A"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

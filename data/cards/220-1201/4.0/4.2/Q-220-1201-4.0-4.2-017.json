@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.2-017",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a public cloud?",
+  "answer_options": [
+    "A cloud infrastructure accessible to anyone over the internet, such as Amazon or Microsoft cloud services",
+    "A cloud service limited to government agencies only",
+    "A private data center located inside an organization",
+    "An internal network segment used for secure file storage"
+  ],
+  "correct_answer": [
+    "A cloud infrastructure accessible to anyone over the internet, such as Amazon or Microsoft cloud services"
+  ],
+  "explanation": "A public cloud is provided by vendors like Amazon or Microsoft and is accessible via the internet by any customer.",
+  "tags": [
+    "public cloud"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

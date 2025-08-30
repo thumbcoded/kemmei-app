@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-130",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "In a mixed SAS/SATA environment, what limitation applies to SATA drives when connected to a SAS controller?",
+  "answer_options": [
+    "SATA drives cannot use full-duplex connections",
+    "SATA drives require proprietary cables",
+    "SATA drives must be formatted in RAID 0",
+    "SATA drives are not visible to the operating system"
+  ],
+  "correct_answer": [
+    "SATA drives cannot use full-duplex connections"
+  ],
+  "explanation": "While SAS controllers can interface with SATA drives, they inherit SATA’s single-lane half-duplex limitations, unlike full-duplex SAS.",
+  "tags": [
+    "SAS",
+    "SATA comparison"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

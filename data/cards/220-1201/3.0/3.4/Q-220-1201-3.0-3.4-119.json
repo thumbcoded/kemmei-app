@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-119",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which TWO statements are true about RAID 0? (Select two)",
+  "answer_options": [
+    "RAID 0 provides the highest data redundancy",
+    "RAID 0 uses disk striping to improve performance",
+    "RAID 0 requires at least three drives",
+    "If one drive in RAID 0 fails, all data is lost",
+    "RAID 0 is commonly used for mission-critical backups"
+  ],
+  "correct_answer": [
+    "RAID 0 uses disk striping to improve performance",
+    "If one drive in RAID 0 fails, all data is lost"
+  ],
+  "explanation": "RAID 0 improves speed by striping but provides zero redundancy — one disk failure results in total data loss.",
+  "tags": [
+    "RAID 0"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

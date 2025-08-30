@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.5-030",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What does a 'connection status' indicator typically tell you?",
+  "answer_options": [
+    "CPU temperature",
+    "Device boot time",
+    "Network signal or connectivity level",
+    "Disk usage stats"
+  ],
+  "correct_answer": [
+    "Network signal or connectivity level"
+  ],
+  "explanation": "Connection status indicators show if a device is connected, limited, or disconnected from a network.",
+  "tags": [
+    "connection status"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

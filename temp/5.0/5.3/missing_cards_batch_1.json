@@ -1,0 +1,193 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "When experiencing OS display compatibility issues after Windows loads, what key should you press during boot to access VGA mode?",
+    "answer_options": [
+      "F2 to enter BIOS setup",
+      "F8 to access Windows VGA mode",
+      "F12 to open boot menu",
+      "Delete to enter system setup"
+    ],
+    "correct_answer": ["F8 to access Windows VGA mode"],
+    "explanation": "F8 during Windows boot provides access to advanced boot options including VGA mode, which is a generic display mode compatible with practically any monitor. This is useful when OS display settings are incompatible with the connected monitor.",
+    "tags": ["operating system compatibility", "Windows VGA mode"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "What is the approximate operating temperature of the metal halide bulb inside LCD projectors?",
+    "answer_options": [
+      "Around 500°C",
+      "Around 750°C",
+      "Around 1,000°C",
+      "Around 1,250°C"
+    ],
+    "correct_answer": ["Around 1,000°C"],
+    "explanation": "Metal halide bulbs in LCD projectors operate at approximately 1,000°C to produce the bright light needed for projection. This extreme heat is why projectors have cooling fans and temperature sensors, and why the fan continues running after shutdown to cool the bulb safely.",
+    "tags": ["metal halide bulb", "projector bulb"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is native resolution and why is it important for display quality?",
+    "answer_options": [
+      "The maximum refresh rate supported by the monitor",
+      "The exact number of horizontal and vertical pixels that never change on the display",
+      "The color depth capability of the monitor",
+      "The power consumption rating of the display"
+    ],
+    "correct_answer": ["The exact number of horizontal and vertical pixels that never change on the display"],
+    "explanation": "Native resolution is the fixed number of physical pixels (horizontal × vertical) on an LCD display. Matching this resolution in your OS provides the crispest, clearest image. Using different resolutions causes scaling artifacts that make text and graphics appear less sharp.",
+    "tags": ["native resolution"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What is the difference between burn-in on CRT monitors versus image sticking on LCD monitors?",
+    "answer_options": [
+      "CRT burn-in is permanent phosphor damage; LCD image sticking may be temporary and removable",
+      "LCD burn-in is worse than CRT burn-in and cannot be fixed",
+      "CRT and LCD burn-in are identical problems with the same solutions",
+      "Only CRT monitors experience burn-in; LCD monitors never have this issue"
+    ],
+    "correct_answer": ["CRT burn-in is permanent phosphor damage; LCD image sticking may be temporary and removable"],
+    "explanation": "CRT burn-in was permanent damage to phosphor coatings from static images. LCD 'image sticking' is similar ghosting but may be temporary - displaying different content (like a white screen overnight) can sometimes remove the stuck image from LCD panels.",
+    "tags": ["burn-in", "image sticking"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "When using HDMI for video but your monitor has separate analog audio inputs, how should you configure the audio?",
+    "answer_options": [
+      "HDMI automatically includes audio, no configuration needed",
+      "Configure monitor to accept video on HDMI and audio on analog audio input",
+      "You cannot mix HDMI video with analog audio inputs",
+      "Switch both video and audio to analog connections"
+    ],
+    "correct_answer": ["Configure monitor to accept video on HDMI and audio on analog audio input"],
+    "explanation": "Some monitors support mixed input configurations where video comes from one source (HDMI) while audio comes from another (analog input). You must configure the monitor's input settings to specify which input source to use for video and which to use for audio.",
+    "tags": ["monitor audio troubleshooting"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "When troubleshooting analog video connections with display quality issues, what should you check regarding the connector pins?",
+    "answer_options": [
+      "Count the total number of pins to verify connector type",
+      "Check that pins are straight, not bent, and making proper contact",
+      "Measure the voltage output of each individual pin",
+      "Clean pins with alcohol regardless of their condition"
+    ],
+    "correct_answer": ["Check that pins are straight, not bent, and making proper contact"],
+    "explanation": "For analog connections (like VGA), bent or damaged pins can cause poor signal transmission resulting in flickering, color issues, or geometry problems. Inspecting connector pins for damage and ensuring proper insertion is a key troubleshooting step for analog display issues.",
+    "tags": ["display quality problems"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is the 'known good' testing methodology when troubleshooting monitor hardware issues?",
+    "answer_options": [
+      "Test the monitor with factory default settings only",
+      "Use a different monitor that you know works properly, or test the suspect monitor on another computer",
+      "Run built-in diagnostic tests on the monitor",
+      "Check the monitor's warranty status before testing"
+    ],
+    "correct_answer": ["Use a different monitor that you know works properly, or test the suspect monitor on another computer"],
+    "explanation": "Known good testing involves substituting components you know work properly. For monitor issues: try a known good monitor on the problematic computer, or test the suspect monitor on a different computer. This isolates whether the problem is with the monitor or the computer's video output.",
+    "tags": ["display hardware connection issues"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "How do you distinguish between a dead pixel and dirt on the monitor screen?",
+    "answer_options": [
+      "Dead pixels are always white; dirt spots are always black",
+      "Clean the screen thoroughly - if the spot remains, it's likely a dead pixel",
+      "Dead pixels only appear in the center of the screen",
+      "Dirt can be removed with software calibration tools"
+    ],
+    "correct_answer": ["Clean the screen thoroughly - if the spot remains, it's likely a dead pixel"],
+    "explanation": "Before assuming you have a dead pixel (which requires monitor replacement), clean the screen thoroughly. Dirt or debris on the screen surface can mimic dead pixels. If the spot persists after cleaning, it's likely a failed pixel that cannot be repaired.",
+    "tags": ["dead pixels"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "Which troubleshooting steps should you perform when experiencing a flashing or flickering screen? (Select all that apply)",
+    "answer_options": [
+      "Check video cable connections are tight and secure",
+      "Try swapping the video cable for a known good one",
+      "Test with a known good monitor",
+      "Verify OS display settings match monitor specifications",
+      "Immediately replace the graphics card"
+    ],
+    "correct_answer": ["Check video cable connections are tight and secure", "Try swapping the video cable for a known good one", "Test with a known good monitor", "Verify OS display settings match monitor specifications"],
+    "explanation": "Flashing screens require systematic troubleshooting: check cable connections, swap cables, test with known good hardware, and verify OS settings compatibility. Graphics card replacement should only be considered after other steps are exhausted.",
+    "tags": ["flickering display"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.3",
+    "difficulty": "hard",
+    "question_type": "multiple_choice",
+    "question_text": "What is pixel shift technology and why do monitors implement it?",
+    "answer_options": [
+      "A feature that increases monitor resolution by interpolating additional pixels",
+      "A slight automatic movement of the image to prevent burn-in by distributing wear across pixels",
+      "A manual adjustment that allows users to align the image on their screen",
+      "A power-saving feature that dims unused pixels to extend monitor life"
+    ],
+    "correct_answer": ["A slight automatic movement of the image to prevent burn-in by distributing wear across pixels"],
+    "explanation": "Pixel shift automatically moves the displayed image by a few pixels periodically when the monitor detects static content. This prevents burn-in/image sticking by ensuring no single pixel displays the same information continuously. The movement is subtle enough to be unnoticed by users.",
+    "tags": ["burn-in", "image sticking"],
+    "status": "approved"
+  }
+]

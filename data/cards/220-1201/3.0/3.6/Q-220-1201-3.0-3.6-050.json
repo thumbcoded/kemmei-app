@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following voltages is commonly supplied by a desktop power supply?",
+  "answer_options": [
+    "7 volts",
+    "3.3 volts",
+    "15 volts",
+    "110 volts DC"
+  ],
+  "correct_answer": [
+    "3.3 volts"
+  ],
+  "explanation": "Standard output voltages from a PC power supply include 3.3V, 5V, and 12V DC.",
+  "tags": [
+    "power supply output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

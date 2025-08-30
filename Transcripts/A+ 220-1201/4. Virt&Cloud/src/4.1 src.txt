@@ -1,0 +1,883 @@
+0:02
+with virtualization you can have one
+0:04
+physical device and run multiple
+0:06
+operating systems on that same computer
+0:09
+for example you might have a computer
+0:11
+like I do that runs Mac OS and you can
+0:14
+run Windows 11 and Linux all at the same
+0:17
+time on that same system this means that
+0:20
+you have a separate operating system a
+0:22
+separate CPU dedicated memory and a
+0:25
+separate network connection for each of
+0:27
+these virtualized operating systems if
+0:29
+all of these different operating systems
+0:31
+are virtualized on your desktop then we
+0:34
+refer to this as a hostbased
+0:35
+virtualization this means you're running
+0:38
+something like Mac OS as the primary
+0:40
+operating system and then virtualizing
+0:42
+other operating systems on top of that
+0:45
+in an enterprise environment we tend to
+0:47
+use a single computer that has multiple
+0:49
+operating systems running on it in a
+0:51
+virtualized form there is no desktop to
+0:54
+choose from instead you have a single
+0:56
+device that has multiple VMs running on
+0:59
+that single computer and although
+1:01
+virtualization has become very popular
+1:03
+on our computers and our servers this is
+1:05
+a technology that we've been running
+1:07
+since 1967 when it was first introduced
+1:10
+on IBM mainframes we're using that same
+1:13
+concept that we used back then to
+1:15
+virtualize our modern operating systems
+1:18
+on modern hardware
+1:20
+there are a lot of things you can do
+1:22
+with a virtualized operating system or
+1:24
+what we commonly refer to as a virtual
+1:26
+machine or VM for example if you're
+1:29
+building your own applications you might
+1:31
+want to create a virtual machine that
+1:33
+handles sandboxing sandboxing is an
+1:36
+isolated environment that you can use
+1:38
+during the development process to try
+1:40
+out different aspects of code or to run
+1:43
+things in a different OS to see what the
+1:45
+effect might be the benefit here of
+1:47
+course is that you're running this in a
+1:49
+virtualized environment that is designed
+1:51
+for testing so if something doesn't work
+1:53
+properly or it even creates a problem
+1:55
+with the operating system the only thing
+1:57
+that's affected is that single virtual
+2:00
+machine and because most of these
+2:02
+virtualized systems have ways to take
+2:04
+snapshots of the configuration at any
+2:07
+point in time you can create a snapshot
+2:09
+make some changes to that virtual
+2:11
+machine and if those changes cause a
+2:13
+problem you can revert back to the
+2:15
+previous snapshot in a matter of moments
+2:18
+this also means we can create multiple
+2:20
+virtual machines running multiple
+2:22
+operating systems and be able to run
+2:24
+that code in each one of those VMs to
+2:26
+see what the effect might be
+2:29
+this means developers can write their
+2:31
+own code put them into a virtual machine
+2:33
+in a protected and secure environment
+2:35
+that won't affect anything if something
+2:37
+happens to go wrong and once the entire
+2:40
+application has been written they can
+2:42
+put that code onto a test virtual
+2:45
+machine that mirrors an actual
+2:47
+configuration that runs in production
+2:50
+this means the developer can now run
+2:52
+their test code in an environment that
+2:54
+is very similar to what the endusers
+2:56
+will be using
+2:58
+sometimes virtualization is not about
+3:00
+application development but instead
+3:02
+being able to support operating systems
+3:04
+that we don't normally use for example
+3:07
+you may be running Windows 11 on your
+3:09
+desktop but you might have some
+3:10
+applications that only run in Windows 10
+3:13
+one way that you can run both your
+3:15
+Windows 11 desktop and the Windows 10
+3:17
+apps at the same time is through the use
+3:19
+of
+3:20
+virtualization that's exactly what we've
+3:22
+done here i have a Windows 11 system
+3:25
+that I'm running in one window and a
+3:27
+Windows 10 system that I'm running in
+3:29
+another this allows me to switch back
+3:31
+and forth between operating systems and
+3:34
+run applications that may only run in
+3:36
+one particular OS this means I can
+3:39
+switch back and forth between different
+3:40
+operating systems and run the
+3:42
+application that works best in that
+3:44
+particular version of the OS here's a
+3:47
+better view of this you can see that we
+3:49
+are running simultaneously on this
+3:51
+computer a Windows 11 Pro system and a
+3:54
+Windows 10 Pro system both at the same
+3:57
+time and I can switch back and forth
+3:59
+between either of these at any time
+4:01
+without having to reboot my
+4:03
+system and of course this doesn't have
+4:06
+to be all the same type of operating
+4:08
+system we could have cross-platform
+4:10
+virtualization like the one you see here
+4:12
+so you might run Mac OS on your desktop
+4:15
+run a Windows VM run a Linux VM and run
+4:18
+other types of operating systems all on
+4:21
+that same platform you can also do this
+4:23
+on demand so if you need to run one
+4:25
+particular application in the afternoon
+4:27
+that only runs in Windows 11 you can
+4:30
+start your Windows 11 virtual machine
+4:32
+run your application and then shut it
+4:34
+down you have complete control over
+4:36
+which application you're running in
+4:38
+which operating system and you don't
+4:39
+have to reboot just to be able to change
+4:42
+the OS that you're using this is
+4:44
+obviously saving time because we don't
+4:46
+have to reboot or find another system
+4:48
+just to run the application we need and
+4:50
+we're also saving resources because
+4:53
+we're able to run all of these different
+4:54
+operating systems on one physical
+4:57
+computer here's a better view of this
+4:59
+multi-platform use of virtualization i'm
+5:02
+running this on my Mac OS desktop and
+5:04
+I'm running a native version of the Mac
+5:07
+OS browser on the left side on the right
+5:10
+side I'm running a Windows instance and
+5:12
+Windows applications inside of that
+5:14
+window and here in the middle is a
+5:16
+window that's running Linux and I'm
+5:18
+running Linux applications in that
+5:20
+window i'm able to move back and forth
+5:22
+between any of these at any time i'm
+5:25
+able to start and stop different
+5:27
+operating systems and use whatever
+5:29
+application I happen to need at that
+5:31
+time regardless of what operating system
+5:33
+it uses
+
+0:02
+to be able to take advantage of
+0:03
+virtualization you need something that
+0:05
+is going to manage the process of
+0:07
+keeping all of these different systems
+0:09
+running this is the virtual machine
+0:11
+manager often referred to as the
+0:14
+hypervisor the hypervisor is the
+0:16
+software that manages this entire
+0:18
+interaction between the virtual world
+0:20
+and the physical system it's running on
+0:23
+hypervisors can run on almost any system
+0:26
+but many modern hypervisors can take
+0:28
+advantage of CPUs that have specifically
+0:31
+been built with virtualization in mind
+0:33
+and once this hypervisor is running it
+0:35
+can allocate CPU cycles memory
+0:38
+networking information and keep all of
+0:40
+that separated between all of the
+0:42
+different virtual machines
+0:45
+to understand more about how all of
+0:46
+these different operating systems
+0:48
+interact with the hypervisor I've
+0:50
+created this block diagram that starts
+0:52
+at the very bottom with the hardware
+0:54
+this is the physical system that the
+0:56
+hypervisor is running on on top of that
+0:58
+hardware is the hypervisor and above the
+1:01
+hypervisor are all of the different
+1:03
+virtual machines you'll notice that each
+1:05
+virtual machine has its own guest
+1:07
+operating system and applications
+1:09
+running within that OS since each one of
+1:12
+these virtual machines has its own guest
+1:15
+operating system installed and running
+1:17
+there is a significant amount of
+1:19
+overhead that takes place every time you
+1:21
+start a new VM this means you'll need
+1:23
+enough CPU cycles enough memory enough
+1:26
+drive space for all of these VMs to
+1:28
+operate simultaneously on the same
+1:31
+physical piece of hardware this type of
+1:33
+hypervisor that sits right on top of the
+1:36
+hardware is known as a type one
+1:38
+hypervisor you might also hear this
+1:40
+referred to as a bare metal hypervisor
+1:43
+that's because there's no operating
+1:44
+system down at the lowest level the
+1:47
+hypervisor effectively is the primary
+1:49
+operating system that is running on top
+1:51
+of this hardware examples of a type one
+1:54
+hypervisor would be VMware's ESXi or
+1:58
+Microsoft's HyperV if you're running a
+2:01
+hypervisor on your own desktop then
+2:03
+you're running a type 2 hypervisor or a
+2:06
+hosted hypervisor this means you would
+2:08
+have the hardware that you're currently
+2:10
+using for your computer you have the
+2:12
+normal operating system that you're
+2:14
+using you might be running Windows as
+2:16
+the primary operating system on your
+2:17
+computer i'm running Mac OS 10 on my
+2:20
+computer and that operating system is
+2:22
+where you would use all of your native
+2:24
+applications on top of that operating
+2:26
+system we would then run some hypervisor
+2:29
+software on your system you might be
+2:31
+running VMware Workstation Oracle
+2:33
+Virtual Box or Parallels Desktop to be
+2:36
+able to provide that hypervisor running
+2:38
+on top of your current operating system
+2:40
+at that point the type 1 hypervisor VMs
+2:43
+and the type two hypervisor VMs are
+2:46
+exactly the same the only difference is
+2:48
+how you're running those VMs with type
+2:50
+one it's running on bare metal and on
+2:52
+type two it's running on a hosted
+2:54
+operating system
+2:56
+we mentioned earlier that some CPUs have
+2:59
+been specifically constructed to work in
+3:01
+a virtualized environment if you're
+3:03
+running an Intel processor with this
+3:05
+support they refer to this as
+3:07
+virtualization technology or VT if
+3:10
+you're running an AMD processor the same
+3:13
+type of functionality is called
+3:15
+AMDV the hypervisor is allocating memory
+3:19
+to each of these virtual machines and
+3:21
+it's using parts of your physical memory
+3:24
+inside of your system so you have to
+3:26
+make sure that you have enough RAM in
+3:28
+your computer to be able to support all
+3:30
+of these different virtual machines
+3:31
+running simultaneously and of course
+3:34
+each of those virtual machines contains
+3:36
+a complete installed operating system
+3:39
+the applications that run in that
+3:40
+operating system and the data that you
+3:42
+store in those applications that means
+3:45
+you'll need enough drive space to be
+3:47
+able to support a fully built operating
+3:49
+system and all of the necessary
+3:51
+applications in each one of those VMs
+3:54
+and from the networking perspective you
+3:56
+have complete control over how that
+3:58
+virtual machine is able to interact with
+4:00
+other devices in the outside world most
+4:04
+of the hypervisors that you run on your
+4:06
+local computer the clientside virtual
+4:09
+machine managers have their own virtual
+4:12
+networks that are configured internally
+4:14
+to your system this means the hypervisor
+4:16
+will be in control of determining
+4:18
+whether that VM can only communicate to
+4:21
+itself or if it can communicate outside
+4:23
+of that VM to other devices some
+4:27
+hypervisors will configure a shared
+4:29
+network address this means that the
+4:30
+hypervisor has its own IP subnet that's
+4:33
+different than any other network that
+4:35
+you're currently using and when devices
+4:37
+on that network need to communicate out
+4:39
+to the physical network it performs a
+4:41
+network address translation to be able
+4:43
+to communicate outside the scope of that
+4:45
+hypervisor you can also configure a
+4:48
+virtual machine to look and act as if
+4:50
+it's any other device that's on your
+4:52
+local network we refer to this as a
+4:54
+bridge network address there's no
+4:56
+network address translation and all of
+4:58
+your virtual machines have the same IP
+5:01
+subnet and act as if they are on your
+5:03
+same local network and if this is a
+5:06
+highly secure virtual machine that
+5:07
+should not be communicating to any other
+5:09
+devices you can configure your
+5:11
+hypervisor with a private address so
+5:14
+that virtual machine can only
+5:16
+communicate with itself and any other
+5:18
+devices that you
+5:20
+decide security is always a concern when
+5:23
+you're running so many different
+5:24
+operating systems on one physical device
+5:27
+fortunately there have not been any
+5:29
+significant security breaches relating
+5:32
+to hypervisors but this is something
+5:34
+that hypervisor manufacturers and
+5:36
+developers are always aware of one type
+5:39
+of security vulnerability that is top of
+5:41
+mind for these hypervisor developers is
+5:44
+a VM escape this is when malware might
+5:47
+find itself onto one virtual machine and
+5:50
+use a flaw in the hypervisor to be able
+5:52
+to communicate to other virtual machines
+5:54
+that are supported by that same
+5:57
+hypervisor this would obviously be a
+5:59
+significant issue if someone was able to
+6:02
+do this this would allow malware that
+6:04
+would normally be isolated on one single
+6:07
+virtual machine to be able to reach out
+6:10
+and control or access data that might be
+6:12
+on a different virtual machine this
+6:15
+would obviously be a significant
+6:17
+security concern and thankfully we've
+6:19
+not seen any significant breaches that
+6:22
+are related to a VM escape of course
+6:25
+each of these virtual machines is its
+6:27
+own self-contained operating system and
+6:29
+we have to be sure that we configure the
+6:31
+security for that virtual machine as if
+6:34
+it was a standalone workstation or
+6:36
+standalone server this means we would
+6:38
+use traditional security controls on
+6:40
+those devices we would configure a
+6:42
+firewall we would install the
+6:43
+appropriate anti-malware software and
+6:46
+configure the operating system to be
+6:47
+hardened just like any other OS one
+6:51
+technique that some attackers like to
+6:52
+use is to publish a virtual machine on
+6:55
+the internet for anyone to be able to
+6:56
+download and use but of course these
+6:59
+malware authors are embedding their
+7:00
+malware inside of that VM and when you
+7:03
+start running that virtual machine on
+7:05
+your own environment you're running an
+7:07
+operating system that is already
+7:08
+infected with the malware this is why
+7:11
+it's always a good idea to build your
+7:12
+own virtual machine so you know exactly
+7:15
+what software is running in those
+7:16
+devices and if you are downloading a
+7:18
+virtual machine from the internet make
+7:20
+sure that you are completely aware of
+7:22
+the information that is contained on
+7:24
+that VM and that you're taking the
+7:26
+appropriate security mechanisms to keep
+7:28
+that VM and all of your data safe well
+7:32
+if we can run a separate operating
+7:34
+system in a window on our desktop why
+7:37
+can't we virtualize the entire desktop
+7:40
+that is a technology known as virtual
+7:43
+desktop infrastructure or VDI this means
+7:46
+that your desktop would run as a virtual
+7:49
+machine on a separate device commonly
+7:51
+across the network or in the cloud and
+7:54
+the only thing that you would really
+7:55
+need on your desk is a keyboard a mouse
+7:58
+and some type of display sometimes you
+8:00
+may hear this referred to as desktop as
+8:03
+a service or
+8:04
+DAS this means you don't need a
+8:07
+significant CPU a lot of memory or even
+8:10
+a lot of storage on your local computer
+8:13
+all of the work is done on the
+8:15
+virtualized client that's running on
+8:17
+that virtual system obviously we are
+8:19
+sending information to update the screen
+8:22
+that is running on our local device so
+8:24
+we obviously need some type of network
+8:26
+communication but these days we tend to
+8:28
+have significant bandwidths available to
+8:31
+us which allow us to run technologies
+8:33
+such as virtual desktop
+8:35
+infrastructure once you're running the
+8:37
+virtual desktop it looks acts and
+8:39
+interacts with you exactly like a normal
+8:42
+OS from the user's perspective they're
+8:45
+running an operating system that's
+8:47
+running on their local device even
+8:49
+though they're really running this OS as
+8:51
+a virtualized system across the cloud
+8:54
+we mentioned earlier that virtual
+8:56
+machines need their own operating system
+8:58
+installed on each individual VM and that
+9:01
+adds some significant overhead to the
+9:04
+entire virtualization process but what
+9:06
+if you could remove that operating
+9:08
+system component and only virtualize the
+9:11
+applications that's the idea behind
+9:14
+application containerization where you
+9:16
+have separate containers that are built
+9:18
+for every application that you'd like to
+9:20
+run on that operating system just like a
+9:23
+virtual machine each one of these apps
+9:25
+is self-contained it has no idea that
+9:28
+other application containers happen to
+9:30
+be running on that same physical system
+9:32
+and none of those containers are able to
+9:34
+interact with each other unless you
+9:36
+configure that in the containerization
+9:38
+software and since there is no operating
+9:41
+system the entire container image is
+9:44
+much smaller than the traditional
+9:46
+virtual machine this makes this very
+9:48
+lightweight you're able to transfer them
+9:50
+very quickly from one place to the other
+9:52
+and they're very portable which means
+9:54
+you can move them from one physical
+9:55
+device to another without making any
+9:57
+changes to the application container so
+10:01
+here's a sidebyside view of a
+10:03
+traditional virtualized application
+10:05
+configuration and a containerized
+10:07
+application configuration you can see in
+10:10
+the virtualized applications that each
+10:12
+one of the VMs has their own guest
+10:14
+operating system but the containerized
+10:17
+applications have a single host
+10:19
+operating system this certainly
+10:20
+simplifies the process of managing the
+10:23
+operating system since there's only one
+10:25
+OS that you'll need to patch update and
+10:27
+maintain on top of the host operating
+10:30
+system you would run containerization
+10:32
+software one of the most popular is
+10:34
+Docker and then on top of Docker you
+10:36
+would have the individual Docker
+10:38
+containerized applications one
+10:40
+significant difference in containerized
+10:42
+applications is they're relying on that
+10:44
+host operating system which generally
+10:47
+means that each one of these
+10:48
+applications must be configured to run
+10:50
+on that host OS you generally would not
+10:53
+be able to run a Windows container a
+10:56
+Linux container and a Mac OS container
+10:58
+all on the same version of Docker of
+11:01
+course if you were running VMs you could
+11:03
+have different guest operating systems
+11:05
+on each of those but of course your
+11:07
+trade-off is the overhead that you have
+11:09
+with a virtualized application

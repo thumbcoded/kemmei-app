@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-098",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why do SIEM systems require significant log storage space?",
+  "answer_options": [
+    "To store backup copies of all network devices",
+    "To keep logs for a very long time across many different systems",
+    "To cache frequently accessed web pages",
+    "To store user email messages"
+  ],
+  "correct_answer": [
+    "To keep logs for a very long time across many different systems"
+  ],
+  "explanation": "SIEM systems consolidate log information from many devices to one central point and need substantial storage space because they keep logs for extended periods across diverse systems.",
+  "tags": [
+    "SIEM",
+    "log files",
+    "central database"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

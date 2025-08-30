@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-2.0-2.1-080",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.1",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two applications benefit most from TCP’s reliability? (Select two)",
+  "answer_options": [
+    "Video streaming",
+    "Email transmission",
+    "File downloads",
+    "Online gaming",
+    "VoIP calls"
+  ],
+  "correct_answer": [
+    "Email transmission",
+    "File downloads"
+  ],
+  "explanation": "Applications like email and file downloads need complete and accurate delivery, which TCP provides.",
+  "tags": [
+    "email",
+    "file transfer",
+    "reliable delivery",
+    "application behavior"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": 2,
+  "__v": 0
+}

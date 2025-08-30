@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which components are typically needed for a thin client to use a virtual desktop?",
+  "answer_options": [
+    "High-end GPU and large local storage",
+    "Firewall rules for outbound FTP traffic",
+    "Keyboard and mouse, display, and network communication",
+    "Container engine like Docker"
+  ],
+  "correct_answer": [
+    "Keyboard and mouse, display, and network communication"
+  ],
+  "explanation": "Basic peripherals and network access are all that's required to use a thin client with VDI.",
+  "tags": [
+    "keyboard and mouse",
+    "display",
+    "network communication"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

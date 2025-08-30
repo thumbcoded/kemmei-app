@@ -1,0 +1,83 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "A user reports that their phone is overheating while charging and running a GPS app. What combination of factors is most likely causing this?",
+    "answer_options": [
+      "Software corruption and malware",
+      "Charging heat and intensive applications",
+      "Poor Wi-Fi reception and weak battery",
+      "Display brightness and ambient light sensor"
+    ],
+    "correct_answer": ["Charging heat and intensive applications"],
+    "explanation": "Simultaneously charging and running high-resource apps like GPS increases internal heat generation.",
+    "tags": ["charging heat", "intensive applications"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "Which condition might trigger a mobile device’s thermal shutdown feature?",
+    "answer_options": [
+      "Inactivity timeout",
+      "Firmware update pending",
+      "Exposure to direct sunlight while running apps",
+      "Too many push notifications"
+    ],
+    "correct_answer": ["Exposure to direct sunlight while running apps"],
+    "explanation": "High ambient temperature combined with CPU activity can exceed safe thermal limits, causing a protective shutdown.",
+    "tags": ["thermal shutdown"],
+    "status": "approved"
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "Which two actions are most likely to resolve system lag caused by too many background processes? (Select two)",
+    "answer_options": [
+      "Factory reset",
+      "Close background apps",
+      "Switch to airplane mode",
+      "Free up storage space",
+      "Lower screen brightness"
+    ],
+    "correct_answer": [
+      "Close background apps",
+      "Free up storage space"
+    ],
+    "explanation": "Background apps and limited storage both contribute to sluggish performance. Managing these resources improves responsiveness.",
+    "tags": ["background apps", "storage full"],
+    "status": "approved",
+    "requiredCount": 2
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "A user complains of repeated app crashes and slowdowns on their mobile device. Which first step is recommended before hardware diagnostics?",
+    "answer_options": [
+      "Upgrade to a newer phone",
+      "Check for software and app updates",
+      "Disable cellular data",
+      "Replace the screen protector"
+    ],
+    "correct_answer": ["Check for software and app updates"],
+    "explanation": "Software bugs are a common cause of crashes. Updates often contain performance and stability fixes.",
+    "tags": ["app crashes"],
+    "status": "approved"
+  }
+]

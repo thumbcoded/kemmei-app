@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which process restores a RAID array after replacing a failed drive?",
+  "answer_options": [
+    "Drive formatting",
+    "Disk encryption",
+    "RAID rebuild",
+    "Backup verification"
+  ],
+  "correct_answer": [
+    "RAID rebuild"
+  ],
+  "explanation": "After a failed drive is replaced, the RAID rebuild process restores the array using remaining data or parity.",
+  "tags": [
+    "RAID rebuild"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

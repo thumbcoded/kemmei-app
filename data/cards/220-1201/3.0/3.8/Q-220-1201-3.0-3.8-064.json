@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-064",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What issue might occur if you accidentally apply clear packing tape over thermal printer output?",
+  "answer_options": [
+    "It causes static interference",
+    "It may darken or distort the printed area",
+    "It makes the label waterproof",
+    "It causes the paper to stick to the roller"
+  ],
+  "correct_answer": [
+    "It may darken or distort the printed area"
+  ],
+  "explanation": "Certain chemicals in tape adhesives can react with thermal paper, darkening or obscuring the output.",
+  "tags": [
+    "heat-sensitive output"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-073",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary function of connector keying in ATX power supplies?",
+  "answer_options": [
+    "To allow hot-plugging of components",
+    "To indicate the voltage rating of the cable",
+    "To ensure connectors are inserted correctly and safely",
+    "To control fan speed based on load"
+  ],
+  "correct_answer": [
+    "To ensure connectors are inserted correctly and safely"
+  ],
+  "explanation": "Connector keying ensures that power connectors can only be inserted in the correct orientation, preventing electrical damage.",
+  "tags": [
+    "connector keying"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

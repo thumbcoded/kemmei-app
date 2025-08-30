@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-067",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "Which two situations most likely require active signal conversion instead of passive adaptation? (Select two)",
+  "answer_options": [
+    "Connecting DVI-D output to VGA monitor",
+    "Using DVI-A to connect to an older CRT display",
+    "Sending HDMI to a VGA projector",
+    "Connecting USB-C to USB-A mouse",
+    "Attaching a USB hub to a USB-A port"
+  ],
+  "correct_answer": [
+    "Connecting DVI-D output to VGA monitor",
+    "Sending HDMI to a VGA projector"
+  ],
+  "explanation": "Both DVI-D and HDMI are digital, while VGA is analog. These conversions require signal converters to bridge the signal type gap.",
+  "tags": [
+    "signal converter",
+    "DVI to HDMI"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

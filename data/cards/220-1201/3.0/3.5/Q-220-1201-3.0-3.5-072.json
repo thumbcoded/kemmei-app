@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-072",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "After installing a new expansion card, the system powers on but no video signal is received. The card is seated correctly. What is the MOST likely cause?",
+  "answer_options": [
+    "BIOS does not support PCIe devices",
+    "A secondary graphics card is conflicting with the onboard video",
+    "The capture card driver was not installed",
+    "The expansion slot is not compatible with the card's width"
+  ],
+  "correct_answer": [
+    "A secondary graphics card is conflicting with the onboard video"
+  ],
+  "explanation": "Some systems default to onboard video unless explicitly switched in BIOS or UEFI settings after installing a GPU.",
+  "tags": [
+    "graphics card"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

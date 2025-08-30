@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-092",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following BEST describes the failover process in a load-balanced dual power supply configuration?",
+  "answer_options": [
+    "Power is completely shut off and restarted from backup",
+    "The remaining power supply continues operation with full load",
+    "A UPS takes over for both supplies during failover",
+    "One supply draws power from the other before resuming load"
+  ],
+  "correct_answer": [
+    "The remaining power supply continues operation with full load"
+  ],
+  "explanation": "In load-balanced redundancy, both supplies handle 50% load. If one fails, the other seamlessly takes on 100% of the system’s power demand.",
+  "tags": [
+    "dual power supplies"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

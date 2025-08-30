@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-038",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which best describes a 'gTLD' in the DNS structure?",
+  "answer_options": [
+    "A geographic zone within an ISP",
+    "A domain reserved for government organizations",
+    "A type of top level domain not tied to a specific country",
+    "A temporary DNS record for testing"
+  ],
+  "correct_answer": [
+    "A type of top level domain not tied to a specific country"
+  ],
+  "explanation": "gTLDs are generic top-level domains like .com, .org, and .net, not associated with any country.",
+  "tags": [
+    "gTLD",
+    "top level domain"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

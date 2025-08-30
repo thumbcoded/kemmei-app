@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What can a technician do if an automated cleaning cycle fails to resolve print quality issues?",
+  "answer_options": [
+    "Reset the printer firmware",
+    "Switch to thermal printing mode",
+    "Perform manual cleaning",
+    "Replace the paper feed motor"
+  ],
+  "correct_answer": [
+    "Perform manual cleaning"
+  ],
+  "explanation": "When automated cleaning doesn't help, manual cleaning may be necessary to unclog the print head nozzles.",
+  "tags": [
+    "manual cleaning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

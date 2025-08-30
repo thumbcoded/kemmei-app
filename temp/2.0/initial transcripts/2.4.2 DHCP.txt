@@ -1,0 +1,508 @@
+0:01
+we've become very accustomed to turning
+0:03
+on our desktop computers our laptops or
+0:05
+our mobile devices and automatically
+0:08
+getting an IP address but it wasn't
+0:10
+always this way there was a time where
+0:12
+you'd have to manually configure all of
+0:14
+these configuration settings in your
+0:16
+device so you would manually have to put
+0:18
+in your IP address your subnet mask your
+0:21
+default gateway your DNS servers and any
+0:24
+other IP configuration parameters if you
+0:27
+had a small number of devices then you
+0:29
+probably could configure these devices
+0:31
+manually with the static IP addresses
+0:34
+that never changed but today we have
+0:36
+thousands of devices on one single
+0:39
+network and it would be very difficult
+0:41
+for an administrator to manually
+0:43
+configure every single one of those
+0:45
+devices that's why we created DHCP or
+0:48
+the dynamic host configuration protocol
+0:51
+this is a protocol created in 1997 to
+0:54
+allow us the system administrator to
+0:56
+automatically assign this information
+0:58
+across all of the systems in our
+1:00
+infrastructure so the next time you go
+1:02
+to a coffee shop you open your laptop
+1:04
+and immediately start accessing the
+1:06
+internet you can thank
+1:09
+DHCP although we don't often see this
+1:11
+process that occurs behind the scenes to
+1:13
+be able to assign these IP addresses it
+1:16
+is important as a system administrator
+1:18
+that you know what's really going on we
+1:20
+often refer to this automated process as
+1:23
+DORA d O R A dora stands for discover
+1:28
+offer request and acknowledge this
+1:31
+process occurs every time someone
+1:33
+connects to the network for the first
+1:34
+time and needs to get an IP address from
+1:37
+a DHCP server let's take a scenario
+1:40
+where we have Sam on the network who
+1:43
+currently has just turned on her
+1:44
+computer and does not yet have an IP
+1:46
+address we also have Jack on this
+1:48
+network who's also just turned on his
+1:50
+laptop and Jack also does not have an IP
+1:53
+address let's start with Sam's laptop
+1:56
+and the default configuration for
+1:57
+practically every operating system these
+1:59
+days is to look for a new IP address
+2:02
+using DHCP so the first thing that Sam's
+2:05
+computer will do is to perform step one
+2:08
+or the discover step this means that her
+2:10
+laptop will go out to the network and
+2:13
+try to discover where all of the
+2:14
+different DHCP servers might be and what
+2:17
+IP addresses might be available for her
+2:19
+workstation if you were to capture
+2:21
+packets on this network you would see a
+2:23
+DHCP discover message sent from Sam's
+2:26
+computer and currently since Sam does
+2:28
+not have an IP address it is sent from
+2:30
+IP address
+2:32
+0.0.0.0 over UDP port 68 and it's sent
+2:36
+across the network as a broadcast so
+2:38
+that every device on the network will
+2:40
+see this communication so this broadcast
+2:42
+will go from Sam's computer when it
+2:44
+reaches the switch because it's a
+2:46
+broadcast it is sent to all of the
+2:48
+devices on this local subnet one of the
+2:51
+devices that received that discover
+2:53
+message is the DHCP server that's on
+2:56
+this network and you can see this DHCP
+2:58
+server has an IP address of 1010.99
+3:02
+this server now sends a DHCP offer to
+3:05
+Sam's workstation using a broadcast
+3:08
+because obviously Sam does not yet have
+3:10
+an IP address so this step two offer is
+3:14
+being sent from the DHCP server to an
+3:16
+all1's broadcast or
+3:21
+255.255.255.255 here's the offer from
+3:23
+the DHCP server and as a broadcast it's
+3:26
+sent to all of the devices on this local
+3:28
+subnet obviously Sam has also received
+3:32
+this broadcast which contains an offer
+3:34
+from the DHCP server of an IP address
+3:37
+that could be configured for Sam's
+3:39
+machine obviously if there were more
+3:41
+DHCP servers on this network Sam would
+3:44
+receive multiple offers to choose from
+3:47
+and in step three or the request part of
+3:50
+this communication Sam is going to
+3:52
+choose one of the offers that's been
+3:54
+received and send a request for that IP
+3:56
+address back to the DHCP server the
+4:00
+actual packet is a request sent from
+4:02
+Sam's computer using
+4:04
+0.0.0.0 because again Sam does not yet
+4:07
+have an IP address it is sent from UDP
+4:09
+port 68 to 255.255.255.255
+4:13
+255 over UDP port 67 this is obviously
+4:17
+sent from Sam's computer and since it is
+4:20
+a broadcast all of the devices on this
+4:22
+local subnet will receive this request
+4:24
+including the DHCP server the last step
+4:28
+is an important one because it locks in
+4:30
+that IP address on Sam's device this is
+4:33
+sent as an acknowledgement from the DHCP
+4:35
+server acknowledging that that IP
+4:37
+address has now been assigned to Sam's
+4:40
+machine and that IP address won't be
+4:42
+assigned to anyone else for the duration
+4:44
+of that lease this is sent directly from
+4:46
+the DHCP server in this case
+4:49
+1010.99 and again it's sent as a
+4:52
+broadcast to everyone on this network to
+4:57
+255.255.255.255 over UDP port 68 and now
+5:01
+that Sam has received that
+5:02
+acknowledgement the IP address can
+5:04
+finally be updated on Sam's computer and
+5:07
+Sam has now been assigned
+5:10
+1010.42 this is the process that occurs
+5:12
+for anyone connecting to the network so
+5:14
+when Jack turns on his computer he will
+5:16
+also go through that same four-step
+5:20
+process how did the DHCP server know
+5:23
+what IP address to assign to Sam's
+5:25
+workstation was able to do that because
+5:28
+a predefined list of IP addresses was
+5:30
+already configured on that DHCP server
+5:33
+we refer to that predefined list of IP
+5:36
+addresses and all of the other
+5:38
+configuration settings for that device
+5:40
+as a DHCP scope this might include all
+5:43
+of the IP addresses available for
+5:45
+devices on this network as well as
+5:47
+excluded addresses that might be used
+5:49
+for other devices on the network that
+5:51
+should not be given out as an IP address
+5:54
+for example you might have switches or
+5:55
+routers on this network that have static
+5:57
+IP addresses we don't want to assign
+5:59
+those IP addresses to another device
+6:02
+creating a conflict on the network we
+6:05
+also configure the subnet mask as part
+6:07
+of this DHCP scope lease durations that
+6:10
+we might use and any other options that
+6:12
+are important for the IP configuration
+6:15
+of these devices things like a DNS
+6:17
+server a default gateway voiceover IP
+6:20
+server IP addresses and other details
+6:23
+inside of that DHCP scope are pools of
+6:26
+IP addresses that the DHCP server will
+6:29
+choose from to be able to automatically
+6:32
+assign IP addresses to other devices
+6:34
+these will usually be large groups of IP
+6:37
+addresses for example you might have
+6:41
+192.168.1.0/24
+6:43
+2.0/24
+6:45
+3.0/24 and so on if anyone connects to
+6:48
+the network from any of those subnets
+6:50
+the DHCP server will pull from the
+6:52
+appropriate pool and provide that
+6:54
+available IP address to the end device
+6:57
+although this is often a single large
+6:59
+contiguous pool of IP addresses it
+7:02
+doesn't have to be we could certainly
+7:04
+configure different sections of IP
+7:06
+addresses to assign which means you
+7:08
+might put exclusions in the middle of
+7:10
+the pool so that certain addresses will
+7:13
+always be assigned to a particular
+7:14
+device and you can use all of the other
+7:16
+addresses as any available dynamic
+7:19
+address for any other device on the
+7:21
+network let's look at how the scope is
+7:24
+configured on a DHCP server this is the
+7:27
+DHCP service that's running on Windows
+7:29
+Server and in server manager is the IP
+7:32
+version 4 DHCP server and this one
+7:35
+happens to have a scope that's titled
+7:39
+165.245.44.0 this assigns IP addresses
+7:42
+in that range for this particular subnet
+7:45
+so on this DHCP server we would add all
+7:48
+of the available addresses for this
+7:50
+subnet into this address pool we could
+7:52
+also view any leases that have already
+7:55
+been assigned from this DHCP server we
+7:58
+might also have devices that always
+8:00
+receive the same IP address every time
+8:03
+they're turned on we refer to those as a
+8:05
+DHCP reservation and then if there are
+8:08
+additional options that you need to add
+8:10
+as part of the scope the DHCP server
+8:12
+will also give you an area of the
+8:14
+configuration to put all of those
+8:16
+settings as well
+8:18
+we often think of DHCP as randomly
+8:21
+assigning any available IP address to
+8:23
+any device that connects to the network
+8:26
+but sometimes you do need an IP address
+8:28
+to stay with a particular device maybe
+8:31
+it's a file server or a web server or
+8:33
+maybe you always want your router to
+8:35
+have the same IP address every time it's
+8:38
+turned on now of course you could go to
+8:40
+all of those servers and routers and
+8:42
+switches and manually configure a static
+8:45
+address on those devices but if you
+8:48
+happen to change anything with your IP
+8:50
+addressing scheme that means you would
+8:51
+have to revisit all of those devices to
+8:54
+manually update any configuration
+8:56
+changes if you're using a DHCP address
+8:59
+reservation you can make all of those
+9:01
+changes in the DHCP server itself and
+9:04
+not have to manually update all of those
+9:07
+individual devices the way that we're
+9:09
+able to associate a device with a
+9:12
+particular IP address is we configure
+9:14
+the MAC address of that device in the
+9:16
+DHCP server itself we would specify that
+9:20
+this MAC address always receives this
+9:22
+particular IP address sometimes you
+9:25
+might see this referred to as a static
+9:27
+DHCP assignment a static DHCP or simply
+9:31
+an IP reservation here's the DHCP
+9:34
+configuration in one of my routers i
+9:36
+have a range or pool of addresses that
+9:39
+is used this one uses
+9:43
+192.168.1.2 through
+9:46
+192.168.1.254 so anytime you turn on
+9:48
+your computer it will receive an IP
+9:50
+address that is somewhere in that range
+9:53
+however there are two reservations
+9:55
+included as part of that pool that would
+9:58
+not be automatically assigned that's
+10:00
+because we have two devices one called
+10:02
+Prometheus and the other called Odyssey
+10:05
+and you can see the MAC addresses of
+10:06
+both of those devices if we turn on
+10:09
+Prometheus it will always receive an IP
+10:11
+address of
+10:13
+192.168.1.6 and Odyssey will always
+10:16
+receive
+10:18
+192.168.1.9 this means that we know that
+10:20
+those two devices will always receive
+10:23
+the exact same IP address every time we
+10:26
+turn on that device and anyone else on
+10:28
+our network that happens to connect will
+10:30
+receive any other available IP address
+10:33
+from the available pool

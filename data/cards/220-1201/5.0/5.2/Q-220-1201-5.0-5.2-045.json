@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-045",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "In which RAID configuration can the array continue functioning normally even if one drive fails?",
+  "answer_options": [
+    "RAID 0 striping",
+    "RAID 1 mirroring",
+    "RAID failure",
+    "RAID 10 striping and mirroring"
+  ],
+  "correct_answer": [
+    "RAID 1 mirroring"
+  ],
+  "explanation": "RAID 1 uses mirroring; if one drive fails, the other keeps the array operational.",
+  "tags": [
+    "RAID 1 mirroring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

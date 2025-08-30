@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-055",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What type of printer uses heat to produce output on chemically treated paper?",
+  "answer_options": [
+    "Inkjet printer",
+    "Laser printer",
+    "Thermal printer",
+    "Dot matrix printer"
+  ],
+  "correct_answer": [
+    "Thermal printer"
+  ],
+  "explanation": "Thermal printers use heat to activate specific areas of thermal paper to produce text or images.",
+  "tags": [
+    "thermal printer"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

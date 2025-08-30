@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-027",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports some keys on their laptop are unresponsive. You plug in an external USB keyboard and all keys work. What does this suggest?",
+  "answer_options": [
+    "The user needs updated keyboard drivers",
+    "The laptop’s primary keyboard hardware is faulty",
+    "The USB port on the laptop is malfunctioning",
+    "The laptop needs a BIOS reset"
+  ],
+  "correct_answer": [
+    "The laptop’s primary keyboard hardware is faulty"
+  ],
+  "explanation": "If an external keyboard works but the built-in one does not, the issue is likely with the internal keyboard hardware.",
+  "tags": [
+    "external USB keyboard",
+    "keyboard swap"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

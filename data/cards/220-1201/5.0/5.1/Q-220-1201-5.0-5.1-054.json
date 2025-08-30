@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-054",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What symptom is most commonly associated with a power supply failure?",
+  "answer_options": [
+    "Unrecognized USB devices",
+    "No fans spinning or lights on the system",
+    "Hard drive clicking noises",
+    "Distorted video output"
+  ],
+  "correct_answer": [
+    "No fans spinning or lights on the system"
+  ],
+  "explanation": "If no lights or fans activate when powered on, the power supply may not be delivering electricity to the system.",
+  "tags": [
+    "power supply failure",
+    "no fans spinning",
+    "no lights"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

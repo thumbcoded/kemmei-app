@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.8-024",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.8",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "If toner is smearing or not adhering to the paper, which step in the laser printing process likely failed?",
+  "answer_options": [
+    "Charging",
+    "Developing",
+    "Fusing",
+    "Cleaning"
+  ],
+  "correct_answer": [
+    "Fusing"
+  ],
+  "explanation": "Improper fusing can cause toner to flake off or smear due to insufficient heat or pressure.",
+  "tags": [
+    "fusing",
+    "toner bonding"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

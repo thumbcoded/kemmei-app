@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.6-022",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which setting should a technician check if a user selects the correct tray in software but the printer pulls from a different tray?",
+  "answer_options": [
+    "Printer firmware version",
+    "Printer paper source setting",
+    "Ink saturation level",
+    "Duplex printing setting"
+  ],
+  "correct_answer": [
+    "Printer paper source setting"
+  ],
+  "explanation": "Mismatch between software and hardware tray configuration often stems from paper source settings not aligning between driver and printer.",
+  "tags": [
+    "paper source",
+    "tray selection"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

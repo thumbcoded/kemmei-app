@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-019",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which power supply output is commonly used to power M.2 storage slots and RAM?",
+  "answer_options": [
+    "+5V",
+    "+12V",
+    "+3.3V",
+    "-12V"
+  ],
+  "correct_answer": [
+    "+3.3V"
+  ],
+  "explanation": "Modern motherboards use 3.3V DC for integrated components like RAM, M.2 SSDs, and chipset features.",
+  "tags": [
+    "3.3 volts",
+    "DC voltages"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,36 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-138",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following are valid characteristics of DHCP reservations? (Select all that apply)",
+  "answer_options": [
+    "They are based on the device’s MAC address",
+    "They require configuration on the DHCP server",
+    "They prevent the need for static configuration on client devices",
+    "They require disabling DHCP on the client",
+    "They function across subnets by default"
+  ],
+  "correct_answer": [
+    "They are based on the device’s MAC address",
+    "They require configuration on the DHCP server",
+    "They prevent the need for static configuration on client devices"
+  ],
+  "explanation": "Reservations use the MAC address to assign a consistent IP and are configured server-side, eliminating the need for static setup on clients.",
+  "tags": [
+    "DHCP reservation",
+    "MAC-based assignment",
+    "static assignment",
+    "consistent IP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

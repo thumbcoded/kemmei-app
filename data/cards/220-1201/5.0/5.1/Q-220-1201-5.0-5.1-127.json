@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-127",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is the significance of 12 volts in computer power supplies and what components use this voltage?",
+  "answer_options": [
+    "Secondary voltage used only for LED lighting and decorative elements",
+    "Primary power rail providing power to CPU, graphics cards, hard drives, and case fans",
+    "Emergency backup voltage that activates during power outages",
+    "Network communication voltage for data transmission between components"
+  ],
+  "correct_answer": [
+    "Primary power rail providing power to CPU, graphics cards, hard drives, and case fans"
+  ],
+  "explanation": "12V is the primary power rail in modern PCs, providing power to: CPU (through VRM conversion), graphics cards, hard drives, optical drives, and case fans. It carries the highest current loads and is critical for system stability. 12V problems cause: component failures, instability, or complete system shutdown. Always verify 12V rail stability during PSU troubleshooting.",
+  "tags": [
+    "12 volts"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

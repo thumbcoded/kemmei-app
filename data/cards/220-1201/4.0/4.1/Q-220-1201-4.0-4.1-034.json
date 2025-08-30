@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-034",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What is a direct consequence of running many VMs on limited hardware?",
+  "answer_options": [
+    "Improved application compatibility",
+    "Reduced network latency",
+    "Overhead increases and performance may suffer",
+    "Reduced need for system cooling"
+  ],
+  "correct_answer": [
+    "Overhead increases and performance may suffer"
+  ],
+  "explanation": "Running multiple VMs creates system overhead — taxing CPU, memory, and storage — potentially degrading performance.",
+  "tags": [
+    "overhead",
+    "performance impact"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

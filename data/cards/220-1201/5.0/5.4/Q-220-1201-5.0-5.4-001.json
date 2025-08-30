@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is a common cause of rapid battery drain in a mobile device located in an area with poor reception?",
+  "answer_options": [
+    "The battery is nearing the end of its life",
+    "The device is constantly polling for a signal",
+    "The battery is swollen",
+    "The device is in airplane mode"
+  ],
+  "correct_answer": [
+    "The device is constantly polling for a signal"
+  ],
+  "explanation": "In areas with bad reception, devices consume more power by repeatedly trying to connect to a signal, leading to rapid battery drain.",
+  "tags": [
+    "battery loses charge rapidly"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

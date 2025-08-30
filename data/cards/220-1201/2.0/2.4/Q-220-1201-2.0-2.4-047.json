@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-047",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following DNS entries represents the deepest level of hierarchy?",
+  "answer_options": [
+    "www.example.com",
+    "example.com",
+    "mail.example.org",
+    "ftp.office.mail.example.com"
+  ],
+  "correct_answer": [
+    "ftp.office.mail.example.com"
+  ],
+  "explanation": "Each label to the left of the TLD adds a subdomain layer, making ftp.office.mail.example.com the most deeply nested.",
+  "tags": [
+    "hierarchy",
+    "subdomain",
+    "FQDN"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

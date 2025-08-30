@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-007",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A technician receives a PC that fails to retain the correct date and time when powered off. What should be replaced to resolve the issue?",
+  "answer_options": [
+    "Hard drive",
+    "System fan",
+    "CMOS battery",
+    "Power supply"
+  ],
+  "correct_answer": [
+    "CMOS battery"
+  ],
+  "explanation": "A failing CMOS battery cannot maintain BIOS settings such as date and time after shutdown. Replacing it restores persistent settings.",
+  "tags": [
+    "CMOS battery"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

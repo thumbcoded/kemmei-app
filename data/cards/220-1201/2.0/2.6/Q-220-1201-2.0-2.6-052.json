@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.6-052",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens when a DHCP lease expires and the client is still active on the network?",
+  "answer_options": [
+    "The device is shut down automatically",
+    "The DHCP server assigns a different MAC address",
+    "The client attempts to renew the lease",
+    "The IP address becomes permanently assigned"
+  ],
+  "correct_answer": [
+    "The client attempts to renew the lease"
+  ],
+  "explanation": "Before lease expiration, the client will attempt renewal. If the server responds, the same IP is typically retained.",
+  "tags": [
+    "DHCP",
+    "lease renewal"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

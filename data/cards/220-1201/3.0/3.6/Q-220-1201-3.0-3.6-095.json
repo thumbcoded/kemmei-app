@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-095",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which type of power supply includes both permanently attached and removable cables?",
+  "answer_options": [
+    "Fixed power supply",
+    "Modular power supply",
+    "Hybrid power supply",
+    "Dual-rail power supply"
+  ],
+  "correct_answer": [
+    "Hybrid power supply"
+  ],
+  "explanation": "Hybrid power supplies include some fixed cables and some modular connectors for flexibility.",
+  "tags": [
+    "hybrid power supply"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

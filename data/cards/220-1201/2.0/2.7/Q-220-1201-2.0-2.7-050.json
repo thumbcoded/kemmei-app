@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.7-050",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the primary reason for using a WISP in remote locations?",
+  "answer_options": [
+    "It is faster than fiber",
+    "It doesn’t require power",
+    "Wired connections are unavailable",
+    "It requires no antennas"
+  ],
+  "correct_answer": [
+    "Wired connections are unavailable"
+  ],
+  "explanation": "WISPs are often used in rural or remote areas where it’s difficult or expensive to install traditional cable or DSL infrastructure.",
+  "tags": [
+    "WISP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

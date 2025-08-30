@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.5-156",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.5",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which component provides cryptographic key management and may be installed on a server motherboard?",
+  "answer_options": [
+    "CMOS battery",
+    "Hardware Security Module (HSM)",
+    "Heat sink",
+    "System clock"
+  ],
+  "correct_answer": [
+    "Hardware Security Module (HSM)"
+  ],
+  "explanation": "An HSM stores and manages digital keys and accelerates cryptographic operations, often used in enterprise environments.",
+  "tags": [
+    "Hardware Security Module"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

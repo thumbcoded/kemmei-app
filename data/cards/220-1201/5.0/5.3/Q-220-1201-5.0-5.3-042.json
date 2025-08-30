@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-042",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which scenario would justify disabling hardware acceleration in video driver settings?",
+  "answer_options": [
+    "The screen is dim and hard to read",
+    "Text appears too small on a high-res display",
+    "Display flickers or shows artifacts during animation or playback",
+    "The screen does not fill the monitor area completely"
+  ],
+  "correct_answer": [
+    "Display flickers or shows artifacts during animation or playback"
+  ],
+  "explanation": "Hardware acceleration improves performance but can cause stability issues with some drivers or displays, resulting in flickering or artifacting. Disabling it can help diagnose or resolve these symptoms.",
+  "tags": [
+    "hardware acceleration",
+    "video driver settings"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

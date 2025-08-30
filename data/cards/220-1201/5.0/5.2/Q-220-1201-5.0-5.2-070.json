@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-070",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A storage system using an external SAS controller fails to detect connected drives. Which component is most likely the issue?",
+  "answer_options": [
+    "BIOS boot order",
+    "Audio driver",
+    "External drive controller",
+    "CPU fan header"
+  ],
+  "correct_answer": [
+    "External drive controller"
+  ],
+  "explanation": "If the drives are externally connected and not detected, the external drive controller is a primary point of failure.",
+  "tags": [
+    "external drive controller"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

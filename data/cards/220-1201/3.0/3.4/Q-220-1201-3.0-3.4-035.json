@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-035",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following describes a primary reason 3.5-inch drives are not typically used in laptops?",
+  "answer_options": [
+    "They use flash storage instead of magnetic storage",
+    "They generate excessive electromagnetic interference",
+    "They are physically too large to fit in standard laptop bays",
+    "They do not support modern file systems like NTFS"
+  ],
+  "correct_answer": [
+    "They are physically too large to fit in standard laptop bays"
+  ],
+  "explanation": "The 3.5-inch form factor is too large for most laptop enclosures, which is why 2.5-inch drives are standard in portable systems.",
+  "tags": [
+    "3.5-inch drive",
+    "laptop storage"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

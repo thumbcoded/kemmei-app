@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-1.0-1.2-094",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.2",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "Which of the following are common use cases for NFC technology? (Select all that apply)",
+  "answer_options": [
+    "Point-of-sale payments",
+    "Access control systems",
+    "Video streaming",
+    "Data transfer between devices",
+    "Long-distance communication"
+  ],
+  "correct_answer": [
+    "Point-of-sale payments",
+    "Access control systems",
+    "Data transfer between devices"
+  ],
+  "explanation": "NFC is designed for short-range communication and is commonly used for contactless payments, door access systems, and transferring small amounts of data between nearby devices.",
+  "tags": [
+    "NFC",
+    "near field communication",
+    "wireless"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

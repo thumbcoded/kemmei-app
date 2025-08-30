@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-014",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "A display repeatedly shows severe flickering and horizontal bars. Replacing the cable and monitor had no effect. What’s the most appropriate next step?",
+  "answer_options": [
+    "Replace the power supply",
+    "Install a firmware update for the BIOS",
+    "Disable hardware acceleration in the OS",
+    "Use VGA mode to reset the screen size"
+  ],
+  "correct_answer": [
+    "Disable hardware acceleration in the OS"
+  ],
+  "explanation": "Some graphics cards experience compatibility issues with hardware acceleration. Disabling it can resolve severe flickering artifacts.",
+  "tags": [
+    "display troubleshooting"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

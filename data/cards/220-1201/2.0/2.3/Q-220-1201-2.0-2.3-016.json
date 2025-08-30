@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-016",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is the main function of a print service in a networked environment?",
+  "answer_options": [
+    "To assign MAC addresses to devices",
+    "To monitor wireless signals",
+    "To manage print jobs and send them to the correct printer",
+    "To transfer files between different operating systems"
+  ],
+  "correct_answer": [
+    "To manage print jobs and send them to the correct printer"
+  ],
+  "explanation": "Print services manage the queue of print jobs and ensure proper delivery to network printers.",
+  "tags": [
+    "print service",
+    "print jobs"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

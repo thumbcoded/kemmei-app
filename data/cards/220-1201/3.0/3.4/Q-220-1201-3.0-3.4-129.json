@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.4-129",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Storage Devices",
+  "subdomain_id": "3.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which statement accurately describes how SAS supports fault-tolerant enterprise storage setups?",
+  "answer_options": [
+    "SAS supports built-in data encryption for all drives",
+    "SAS connectors require unique host bus adapters for each drive",
+    "SAS allows for dual-ported drives, enabling redundant data paths",
+    "SAS mirrors each drive automatically without software"
+  ],
+  "correct_answer": [
+    "SAS allows for dual-ported drives, enabling redundant data paths"
+  ],
+  "explanation": "SAS drives often feature dual ports to connect to multiple controllers, enabling failover and redundancy in critical systems.",
+  "tags": [
+    "SAS"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

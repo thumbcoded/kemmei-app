@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-005",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes the DNS cache?",
+  "answer_options": [
+    "A server that blocks unwanted DNS requests",
+    "A local file storing unauthorized domain names",
+    "A temporary storage of previously resolved domain names",
+    "A database used for email spam filtering"
+  ],
+  "correct_answer": [
+    "A temporary storage of previously resolved domain names"
+  ],
+  "explanation": "The DNS cache stores resolved domain names to speed up future requests for the same names.",
+  "tags": [
+    "DNS cache"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

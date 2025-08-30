@@ -1,0 +1,35 @@
+{
+  "_id": "Q-220-1201-3.0-3.3-012",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.3",
+  "difficulty": "hard",
+  "question_type": "select_all",
+  "question_text": "Which of the following techniques are used to increase memory throughput in modern systems? (Select all that apply)",
+  "answer_options": [
+    "Using synchronous dynamic RAM (SDRAM)",
+    "Implementing multi-channel memory configurations",
+    "Running memory modules at low voltage",
+    "Utilizing double data rate (DDR) memory",
+    "Deploying parity memory modules"
+  ],
+  "correct_answer": [
+    "Using synchronous dynamic RAM (SDRAM)",
+    "Implementing multi-channel memory configurations",
+    "Utilizing double data rate (DDR) memory"
+  ],
+  "explanation": "SDRAM synchronizes memory access with a common clock. DDR memory transfers data on both rising and falling clock edges. Multi-channel configurations allow concurrent transfers across modules.",
+  "tags": [
+    "high-speed storage",
+    "application execution",
+    "RAM"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

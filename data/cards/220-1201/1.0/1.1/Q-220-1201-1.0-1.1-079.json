@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-079",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "After successfully cloning a drive, the laptop fails to boot from the new SSD. What is the most likely cause?",
+  "answer_options": [
+    "The cloning software didn’t copy the user’s documents",
+    "The new drive is larger than the original",
+    "The system boot order still points to the old drive",
+    "The system is unable to detect SATA devices"
+  ],
+  "correct_answer": [
+    "The system boot order still points to the old drive"
+  ],
+  "explanation": "Even after cloning, the BIOS/UEFI must be configured to boot from the new drive, especially in single-bay systems.",
+  "tags": [
+    "drive migration",
+    "backup and restore"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

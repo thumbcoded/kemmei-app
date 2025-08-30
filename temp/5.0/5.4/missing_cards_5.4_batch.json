@@ -1,0 +1,235 @@
+[
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "A user reports poor cellular reception inside their office building. What is the most effective immediate solution?",
+    "answer_options": [
+      "Move to a location closer to a window or go outside",
+      "Restart the mobile device",
+      "Update the mobile operating system",
+      "Clear the device cache"
+    ],
+    "correct_answer": ["Move to a location closer to a window or go outside"],
+    "explanation": "Location has a big impact on cellular communication. Moving outside or closer to windows often provides the signal strength needed to communicate with cellular towers.",
+    "tags": ["bad repooption area", "signal pooping"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "In a congested Wi-Fi environment with multiple access points, what troubleshooting step can improve mobile device connectivity?",
+    "answer_options": [
+      "Increase the device's transmission power",
+      "Change the access point to a different channel or frequency",
+      "Disable mobile data completely",
+      "Reset the device's network settings"
+    ],
+    "correct_answer": ["Change the access point to a different channel or frequency"],
+    "explanation": "In areas with many access points causing interference, changing to a different channel or frequency can significantly improve communication between the mobile device and access point.",
+    "tags": ["intensive applications", "system lag"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is the first step to force restart an unresponsive iOS device?",
+    "answer_options": [
+      "Hold the power button and volume button for 10 seconds",
+      "Connect to a computer and use iTunes",
+      "Remove the battery if possible",
+      "Wait for the battery to drain completely"
+    ],
+    "correct_answer": ["Hold the power button and volume button for 10 seconds"],
+    "explanation": "Most iOS devices require holding the power button and another button (home or volume) for 10 seconds to force a reset when the device is unresponsive.",
+    "tags": ["restart device", "factory reset"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "Which methods can be used to reset an unresponsive Android device? (Select all that apply)",
+    "answer_options": [
+      "Remove and reinsert the battery",
+      "Hold power and volume buttons simultaneously",
+      "Use manufacturer-specific button combinations",
+      "Shake the device vigorously",
+      "Check device documentation for reset procedures"
+    ],
+    "correct_answer": ["Remove and reinsert the battery", "Hold power and volume buttons simultaneously", "Use manufacturer-specific button combinations", "Check device documentation for reset procedures"],
+    "explanation": "Android devices have various reset methods depending on the manufacturer, including battery removal, button combinations, and manufacturer-specific procedures documented in device manuals.",
+    "tags": ["restart device", "factory reset", "remove battery"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What is a common sign that a mobile device may be infected with malware?",
+    "answer_options": [
+      "Device runs cooler than normal",
+      "Battery life improves significantly",
+      "Unusual applications appear or excessive data transfers occur",
+      "Screen brightness automatically decreases"
+    ],
+    "correct_answer": ["Unusual applications appear or excessive data transfers occur"],
+    "explanation": "Malware often manifests as unusual applications, large amounts of data transfers, or applications using more CPU than normal as the malware uses the device for malicious purposes.",
+    "tags": ["overheating device", "sluggish performance", "unwanted ads"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "What should be done if a mobile device shows signs of malware infection?",
+    "answer_options": [
+      "Ignore it as mobile devices cannot get malware",
+      "Only restart the device",
+      "Run anti-malware or antivirus software designed for mobile devices",
+      "Immediately dispose of the device"
+    ],
+    "correct_answer": ["Run anti-malware or antivirus software designed for mobile devices"],
+    "explanation": "There are many types of anti-malware and antivirus software available for mobile devices that should be used to detect and remove malicious software.",
+    "tags": ["anti-malware protection", "mobile security", "virus removal"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "easy",
+    "question_type": "multiple_choice",
+    "question_text": "What are Liquid Contact Indicators (LCI) used for in mobile devices?",
+    "answer_options": [
+      "To measure battery temperature",
+      "To detect when the device has been exposed to liquid",
+      "To monitor screen brightness levels",
+      "To track data usage"
+    ],
+    "correct_answer": ["To detect when the device has been exposed to liquid"],
+    "explanation": "Liquid Contact Indicators (LCI) are small indicators that change color when exposed to liquid. They are often located in charging ports or SIM ports and are checked during repairs to determine liquid damage.",
+    "tags": ["liquid damage", "corrosion"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "Why is using desiccants more effective than rice for drying a liquid-damaged mobile device?",
+    "answer_options": [
+      "Rice can damage the internal components",
+      "Desiccants absorb moisture much more effectively than rice",
+      "Rice attracts insects that can damage the device",
+      "Desiccants provide better insulation"
+    ],
+    "correct_answer": ["Desiccants absorb moisture much more effectively than rice"],
+    "explanation": "While rice is commonly suggested, it doesn't absorb water very well. Desiccants (like silica gel packets) are much more effective at absorbing moisture from electronic devices.",
+    "tags": ["drying methods", "desiccant effectiveness", "rice method limitations"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "hard",
+    "question_type": "select_multiple",
+    "question_text": "A mobile device's charging port is not working reliably. Which troubleshooting steps should be performed? (Select all that apply)",
+    "answer_options": [
+      "Use a multimeter to test the power adapter output",
+      "Check for debris inside the charging port",
+      "Clean the port using a wooden toothpick or plastic tool",
+      "Use compressed air to clear obstructions",
+      "Use metal tools to scrape out debris",
+      "Test with a known good charging cable"
+    ],
+    "correct_answer": ["Use a multimeter to test the power adapter output", "Check for debris inside the charging port", "Clean the port using a wooden toothpick or plastic tool", "Use compressed air to clear obstructions", "Test with a known good charging cable"],
+    "explanation": "Comprehensive charging port troubleshooting includes testing the power adapter, checking for debris, cleaning with safe tools (avoiding metal), using compressed air, and testing with known good cables.",
+    "tags": ["charging issues", "defective charging components"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "easy",
+    "question_text": "What is the most common cause when a stylus stops working on a tablet?",
+    "question_type": "multiple_choice",
+    "answer_options": [
+      "The stylus battery needs to be recharged",
+      "The tablet screen is cracked",
+      "The Wi-Fi connection is poor",
+      "The tablet needs a software update"
+    ],
+    "correct_answer": ["The stylus battery needs to be recharged"],
+    "explanation": "Many modern styluses are active devices that require power to interact with tablets. If a stylus isn't working, the first thing to check is whether its internal battery needs recharging.",
+    "tags": ["cursor drift/touch calibration"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "medium",
+    "question_type": "select_multiple",
+    "question_text": "A stylus is not responding on a tablet even after charging. What additional troubleshooting steps should be taken? (Select all that apply)",
+    "answer_options": [
+      "Check Bluetooth pairing between stylus and tablet",
+      "Inspect the stylus tip for physical damage",
+      "Replace the stylus tip if damaged",
+      "Reset both the stylus and tablet",
+      "Increase screen brightness",
+      "Clean the tablet screen surface"
+    ],
+    "correct_answer": ["Check Bluetooth pairing between stylus and tablet", "Inspect the stylus tip for physical damage", "Replace the stylus tip if damaged", "Reset both the stylus and tablet"],
+    "explanation": "Beyond battery issues, stylus problems can be caused by Bluetooth connectivity issues, physical damage to the tip (which can often be replaced), or software glitches requiring device resets.",
+    "tags": ["cursor drift/touch calibration"]
+  },
+  {
+    "cert_id": ["220-1201"],
+    "domain_id": "5.0",
+    "domain_title": "Hardware and Network Troubleshooting",
+    "subdomain_id": "5.4",
+    "subdomain_title": "Given a scenario, troubleshoot common mobile device issues",
+    "difficulty": "medium",
+    "question_type": "multiple_choice",
+    "question_text": "An app fails to install on a mobile device despite having sufficient storage space. What is the most likely cause?",
+    "answer_options": [
+      "The device's CPU is too slow",
+      "The app requires authentication credentials that haven't been provided",
+      "The device's screen resolution is incompatible",
+      "The device needs to be restarted"
+    ],
+    "correct_answer": ["The app requires authentication credentials that haven't been provided"],
+    "explanation": "Many app stores require authentication (username, password, and other credentials) before allowing downloads, even for free apps. This is often overlooked when troubleshooting installation failures.",
+    "tags": ["app uninstall/install"]
+  }
+]

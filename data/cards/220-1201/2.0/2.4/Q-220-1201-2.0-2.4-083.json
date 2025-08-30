@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-083",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which system allows a domain owner to define what to do with unauthenticated or failed emails?",
+  "answer_options": [
+    "TLS",
+    "SPF",
+    "DMARC",
+    "SSL"
+  ],
+  "correct_answer": [
+    "DMARC"
+  ],
+  "explanation": "DMARC (Domain-based Message Authentication, Reporting and Conformance) lets domain owners define policies for handling failed emails.",
+  "tags": [
+    "DMARC",
+    "Domain-based Message Authentication",
+    "spam policy"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

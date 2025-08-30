@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-134",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which connector type is sometimes referred to as a 'clip connector' and is known for its small form factor?",
+  "answer_options": [
+    "RJ45",
+    "ST connector",
+    "LC connector",
+    "BNC connector"
+  ],
+  "correct_answer": [
+    "LC connector"
+  ],
+  "explanation": "LC (Lucent Connector) is compact, uses a clip-style latch, and is widely used in modern fiber networks.",
+  "tags": [
+    "LC connector",
+    "Lucent connector",
+    "clip connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

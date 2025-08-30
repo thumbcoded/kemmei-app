@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-081",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Why are container images typically smaller than virtual machines?",
+  "answer_options": [
+    "They compress the guest operating system",
+    "They don't include the application itself",
+    "They don't require a full operating system inside the container",
+    "They only support cloud-based execution"
+  ],
+  "correct_answer": [
+    "They don't require a full operating system inside the container"
+  ],
+  "explanation": "Containers share the host OS and only package what the app needs, making them much smaller than VMs.",
+  "tags": [
+    "container image"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

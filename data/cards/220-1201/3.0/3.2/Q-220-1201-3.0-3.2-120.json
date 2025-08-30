@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.2-120",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Display Devices",
+  "subdomain_id": "3.2",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following is a common use for a DB9 connector today?",
+  "answer_options": [
+    "Charging mobile phones",
+    "Connecting to a router’s console port",
+    "Transmitting HDMI video",
+    "Wired Ethernet networking"
+  ],
+  "correct_answer": [
+    "Connecting to a router’s console port"
+  ],
+  "explanation": "DB9 connectors are still used to access console ports on legacy networking equipment like routers and switches.",
+  "tags": [
+    "console port",
+    "DB9"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

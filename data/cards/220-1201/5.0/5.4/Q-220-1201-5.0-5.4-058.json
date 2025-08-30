@@ -1,0 +1,37 @@
+{
+  "_id": "Q-220-1201-5.0-5.4-058",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.4",
+  "difficulty": "hard",
+  "question_type": "select_multiple",
+  "question_text": "A mobile device's charging port is not working reliably. Which troubleshooting steps should be performed? (Select all that apply)",
+  "answer_options": [
+    "Use a multimeter to test the power adapter output",
+    "Check for debris inside the charging port",
+    "Clean the port using a wooden toothpick or plastic tool",
+    "Use compressed air to clear obstructions",
+    "Use metal tools to scrape out debris",
+    "Test with a known good charging cable"
+  ],
+  "correct_answer": [
+    "Use a multimeter to test the power adapter output",
+    "Check for debris inside the charging port",
+    "Clean the port using a wooden toothpick or plastic tool",
+    "Use compressed air to clear obstructions",
+    "Test with a known good charging cable"
+  ],
+  "explanation": "Comprehensive charging port troubleshooting includes testing the power adapter, checking for debris, cleaning with safe tools (avoiding metal), using compressed air, and testing with known good cables.",
+  "tags": [
+    "charging port damage",
+    "port cleaning"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

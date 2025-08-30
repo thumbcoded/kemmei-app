@@ -1,0 +1,32 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-065",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which DNS record type is used to map a domain name to an IPv4 address?",
+  "answer_options": [
+    "MX record",
+    "CNAME record",
+    "A record",
+    "TXT record"
+  ],
+  "correct_answer": [
+    "A record"
+  ],
+  "explanation": "A records store IPv4 address mappings for domain names.",
+  "tags": [
+    "A record",
+    "IPv4 address",
+    "address record"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

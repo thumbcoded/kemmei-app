@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-078",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "You observe that a record update for www.example.com is not reflected on some user systems, even after it was changed an hour ago. Which of the following is the most likely explanation?",
+  "answer_options": [
+    "The CNAME record was deleted accidentally",
+    "The MX record was not refreshed",
+    "The record had a long TTL that hasn't expired yet",
+    "A resource record was changed to AAAA"
+  ],
+  "correct_answer": [
+    "The record had a long TTL that hasn't expired yet"
+  ],
+  "explanation": "TTL determines how long DNS entries are cached. If TTL is high, changes may not propagate until the cache expires.",
+  "tags": [
+    "TTL",
+    "time to live",
+    "A record",
+    "resource record"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

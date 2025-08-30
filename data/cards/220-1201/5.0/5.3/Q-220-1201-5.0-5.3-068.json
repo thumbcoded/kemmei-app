@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-5.0-5.3-068",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.3",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "What is the approximate operating temperature of the metal halide bulb inside LCD projectors?",
+  "answer_options": [
+    "Around 500°C",
+    "Around 750°C",
+    "Around 1,000°C",
+    "Around 1,250°C"
+  ],
+  "correct_answer": [
+    "Around 1,000°C"
+  ],
+  "explanation": "Metal halide bulbs in LCD projectors operate at approximately 1,000°C to produce the bright light needed for projection. This extreme heat is why projectors have cooling fans and temperature sensors, and why the fan continues running after shutdown to cool the bulb safely.",
+  "tags": [
+    "metal halide bulb",
+    "projector bulb"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

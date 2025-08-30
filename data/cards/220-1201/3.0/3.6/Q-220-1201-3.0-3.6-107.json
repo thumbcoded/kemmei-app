@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-107",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which rating indicates the MOST energy-efficient power supply?",
+  "answer_options": [
+    "80 Plus Bronze",
+    "80 Plus Gold",
+    "80 Plus Platinum",
+    "80 Plus Titanium"
+  ],
+  "correct_answer": [
+    "80 Plus Titanium"
+  ],
+  "explanation": "The 80 Plus Titanium rating is the highest standard of energy efficiency among power supplies.",
+  "tags": [
+    "titanium rating"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

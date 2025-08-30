@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-3.0-3.6-110",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.6",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "You’re building a PC that will draw a maximum of 350 watts. Which of the following power supplies provides the BEST balance of future growth and efficiency?",
+  "answer_options": [
+    "400W 80 Plus",
+    "450W 80 Plus Bronze",
+    "700W 80 Plus Titanium",
+    "1200W unbranded unit"
+  ],
+  "correct_answer": [
+    "700W 80 Plus Titanium"
+  ],
+  "explanation": "A 700W Titanium-rated PSU offers excellent efficiency and ample room for future upgrades without significantly overshooting the system's needs.",
+  "tags": [
+    "power supply wattage",
+    "titanium rating"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

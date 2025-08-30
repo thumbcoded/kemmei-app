@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.2-056",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.2",
+  "difficulty": "hard",
+  "question_type": "multiple_choice",
+  "question_text": "Which RAID configuration can survive two drive failures if they occur in separate mirrored pairs?",
+  "answer_options": [
+    "RAID 5 striping with parity",
+    "RAID 1 mirroring",
+    "RAID 0 striping",
+    "RAID 10 striping and mirroring"
+  ],
+  "correct_answer": [
+    "RAID 10 striping and mirroring"
+  ],
+  "explanation": "In RAID 10, multiple mirrored pairs exist. One drive from each pair can fail without compromising the full array.",
+  "tags": [
+    "RAID 10 striping and mirroring"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

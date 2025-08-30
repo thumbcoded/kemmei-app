@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-3.0-3.7-001",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "3.0",
+  "domain_title": "Hardware",
+  "subdomain_id": "3.7",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "Which of the following best describes a multi-function device (MFD)?",
+  "answer_options": [
+    "A device that only prints documents",
+    "A standalone fax machine",
+    "A single unit that can print, scan, and fax",
+    "A smartphone used for document scanning"
+  ],
+  "correct_answer": [
+    "A single unit that can print, scan, and fax"
+  ],
+  "explanation": "Multi-function devices combine multiple functions such as printing, scanning, and faxing into a single unit.",
+  "tags": [
+    "multi-function device"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "Q-220-1201-5.0-5.1-071",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "5.0",
+  "domain_title": "Hardware and Network Troubleshooting",
+  "subdomain_id": "5.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "A user reports red or green specks on their screen when using Photoshop. What is the likely cause?",
+  "answer_options": [
+    "Video cable not fully inserted",
+    "Artifacts caused by overheating or faulty video RAM",
+    "Expired product license",
+    "Stuck keyboard key"
+  ],
+  "correct_answer": [
+    "Artifacts caused by overheating or faulty video RAM"
+  ],
+  "explanation": "Color specks or pixel distortions are common signs of GPU-related artifacts, especially under high-load or high-resolution tasks.",
+  "tags": [
+    "artifacts on display"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

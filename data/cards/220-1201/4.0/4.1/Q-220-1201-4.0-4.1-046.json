@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-4.0-4.1-046",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "4.0",
+  "domain_title": "Virtualization and Cloud Computing",
+  "subdomain_id": "4.1",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "How does a bridge network address differ from a shared network configuration?",
+  "answer_options": [
+    "It creates a separate IP subnet for each VM",
+    "It uses NAT instead of DHCP",
+    "It places VMs on the same IP subnet as the host",
+    "It prevents the VM from accessing any outside networks"
+  ],
+  "correct_answer": [
+    "It places VMs on the same IP subnet as the host"
+  ],
+  "explanation": "Bridge mode allows VMs to act like physical devices on the local LAN, sharing the same IP subnet.",
+  "tags": [
+    "bridge network address",
+    "IP subnet"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

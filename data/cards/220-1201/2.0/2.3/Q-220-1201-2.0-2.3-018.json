@@ -1,0 +1,31 @@
+{
+  "_id": "Q-220-1201-2.0-2.3-018",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.3",
+  "difficulty": "easy",
+  "question_type": "multiple_choice",
+  "question_text": "What is AFP primarily used for?",
+  "answer_options": [
+    "To scan networks for vulnerabilities",
+    "To block unwanted emails",
+    "To share files in Apple-based environments",
+    "To queue print jobs on Windows printers"
+  ],
+  "correct_answer": [
+    "To share files in Apple-based environments"
+  ],
+  "explanation": "AFP (Apple Filing Protocol) is used for file sharing in macOS environments.",
+  "tags": [
+    "Apple filing protocol",
+    "AFP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

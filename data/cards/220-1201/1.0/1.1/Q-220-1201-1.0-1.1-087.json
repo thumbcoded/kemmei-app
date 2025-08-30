@@ -1,0 +1,34 @@
+{
+  "_id": "Q-220-1201-1.0-1.1-087",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "1.0",
+  "domain_title": "Mobile Devices",
+  "subdomain_id": "1.1",
+  "difficulty": "medium",
+  "question_type": "select_multiple",
+  "question_text": "When replacing a mini PCIe wireless card, which two of the following are critical steps?",
+  "answer_options": [
+    "Connect the antenna wires correctly",
+    "Enable airplane mode before installation",
+    "Align and insert into the slot at an angle",
+    "Apply thermal paste to the card",
+    "Install driver updates before physical connection"
+  ],
+  "correct_answer": [
+    "Connect the antenna wires correctly",
+    "Align and insert into the slot at an angle"
+  ],
+  "explanation": "Mini PCIe cards are inserted at an angle and require secure antenna connections for proper wireless function.",
+  "tags": [
+    "mini PCIe",
+    "wireless antenna",
+    "main/aux connector"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}

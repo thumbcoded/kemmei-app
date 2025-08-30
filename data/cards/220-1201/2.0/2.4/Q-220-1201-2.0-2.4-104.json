@@ -1,0 +1,33 @@
+{
+  "_id": "Q-220-1201-2.0-2.4-104",
+  "cert_id": [
+    "220-1201"
+  ],
+  "domain_id": "2.0",
+  "domain_title": "Networking",
+  "subdomain_id": "2.4",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "question_text": "What happens if a DHCP client receives multiple DHCP Offers?",
+  "answer_options": [
+    "It accepts the offer from the server with the highest IP address",
+    "It sends a Request to the first server that responded",
+    "It responds to all servers with a DHCP Request",
+    "It randomly picks one and ignores the rest"
+  ],
+  "correct_answer": [
+    "It sends a Request to the first server that responded"
+  ],
+  "explanation": "When multiple DHCP Offers are received, the client selects one (usually the first) and responds with a Request message to that server.",
+  "tags": [
+    "DORA",
+    "offer",
+    "request",
+    "DHCP"
+  ],
+  "status": "approved",
+  "image": null,
+  "media": null,
+  "requiredCount": null,
+  "__v": 0
+}
