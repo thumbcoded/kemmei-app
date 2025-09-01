@@ -1,6 +1,6 @@
 async function loadTitleTree() {
   try {
-    const res = await fetch("http://localhost:3000/api/domainmap")
+  const res = await fetch("/api/domainmap")
     const data = await res.json();
 
     renderTitleTree(data.certNames, data.domainMaps, data.subdomainMaps);
@@ -118,7 +118,7 @@ deleteBtn.addEventListener("click", () => {
 
 exportBtn.addEventListener("click", async () => {
   try {
-    const res = await fetch(`http://localhost:3000/api/cards?cert_id=${encodeURIComponent(certId)}`);
+  const res = await fetch(`/api/cards?cert_id=${encodeURIComponent(certId)}`);
     const cards = await res.json();
 
     if (!cards || !cards.length) {
@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const exportAllBtn = document.getElementById("exportAllBtn");
   exportAllBtn?.addEventListener("click", async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/cards");
+  const res = await fetch("/api/cards");
       const cards = await res.json();
 
       const userCerts = Object.keys(cards.reduce((acc, c) => {
@@ -505,7 +505,7 @@ input.addEventListener("keydown", (e) => {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/domainmap", {
+  const res = await fetch("/api/domainmap", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -572,7 +572,7 @@ function startInlineDelete({ label, type, certId, domainId, subId, onSuccess }) 
     };
 
     try {
-      const res = await fetch("http://localhost:3000/api/domainmap", {
+  const res = await fetch("/api/domainmap", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),

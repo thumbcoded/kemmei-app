@@ -222,7 +222,7 @@ function resetDropdownToDefault(selectElement) {
   
       // Send to backend
       try {
-        const res = await fetch("http://localhost:3000/api/add-domain", {
+  const res = await fetch("/api/add-domain", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -278,7 +278,7 @@ showGlobalMessage("✅ Domain saved.", "success");
       if (!subTitle) return alert("Please enter a subdomain title.");
   
       try {
-        const res = await fetch("http://localhost:3000/api/add-subdomain", {
+  const res = await fetch("/api/add-subdomain", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

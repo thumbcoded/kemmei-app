@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Load and render progress
   try {
     const [progressRes, domainRes, unlocksRes, testCompletionsRes] = await Promise.all([
-      fetch(`http://localhost:3000/api/user-progress/${userId}`),
+      fetch(`/api/user-progress/${userId}`),
       fetch("/data/domainmap.json"),
-      fetch(`http://localhost:3000/api/user-unlocks/${userId}`),
-      fetch(`http://localhost:3000/api/test-completions/${userId}`)
+      fetch(`/api/user-unlocks/${userId}`),
+      fetch(`/api/test-completions/${userId}`)
     ]);
 
     const progress = await progressRes.json();
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       confirmModal.classList.add("hidden");
 
       try {
-        const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+  const res = await fetch(`/api/user-progress/${userId}`, {
           method: "DELETE",
         });
 
@@ -89,7 +89,7 @@ async function toggleUnlock(certId, domainId, level) {
   saveExpandedState();
 
   try {
-    const res = await fetch(`http://localhost:3000/api/user-unlocks/${userId}`, {
+  const res = await fetch(`/api/user-unlocks/${userId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -149,7 +149,7 @@ function restoreExpandedState() {
   expanded.certs?.forEach(certId => {
     document.querySelectorAll('.title-block').forEach(block => {
       const h3 = block.querySelector('h3');
-      if (h3 && h3.textContent.startsWith(certId)) {
+      if (h3 && h3.textContent && h3.textContent.startsWith(certId)) {
         const domainList = block.querySelector('.domain-list');
         if (domainList) domainList.classList.remove('hidden');
       }
@@ -177,10 +177,14 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
   const { certNames, domainMaps, subdomainMaps } = domainMap;
 
   const progressTree = {};
-
   // Build a lookup structure for user progress
-  for (const [key, data] of Object.entries(userProgress)) {
-    const [cert, domain, sub, difficulty] = key.split(":");
+  for (const [key, data] of Object.entries(userProgress || {})) {
+    const parts = key.split(":");
+    // expected format: cert:domain:sub:difficulty  (some keys may be shorter)
+    const cert = parts[0] || 'unknown';
+    const domain = parts[1] || 'all';
+    const sub = parts[2] || 'all';
+    const difficulty = parts[3] || 'easy';
     if (!progressTree[cert]) progressTree[cert] = {};
     if (!progressTree[cert][domain]) progressTree[cert][domain] = {};
     if (!progressTree[cert][domain][sub]) progressTree[cert][domain][sub] = {};

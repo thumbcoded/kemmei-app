@@ -17,7 +17,7 @@ async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false
   if (!userId) return;
 
   try {
-    await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+  await fetch(`/api/user-progress/${userId}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ key, correct, viewedOnly })
@@ -29,7 +29,7 @@ async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false
 
 async function loadDomainMap() {
   try {
-    const res = await fetch("http://localhost:3000/api/domainmap");
+  const res = await fetch("/api/domainmap");
     const data = await res.json();
     domainMaps = data.domainMaps || {};
     subdomainMaps = data.subdomainMaps || {};
@@ -59,7 +59,7 @@ function populateDeckDropdown(certNames, selectedId = null) {
 
 (async () => {
   await loadDomainMap();
-  const res = await fetch("http://localhost:3000/api/domainmap");
+  const res = await fetch("/api/domainmap");
   const data = await res.json();
 
   const savedDeck = localStorage.getItem("lastDeck");
@@ -198,15 +198,15 @@ async function getUnlockedDifficulties() {
   }
 
   try {
-    const res = await fetch(`http://localhost:3000/api/user-progress/${userId}`);
+  const res = await fetch(`/api/user-progress/${userId}`);
     const userData = await res.json();
     
     // Get test completions to determine unlocked difficulties
-    const testRes = await fetch(`http://localhost:3000/api/test-completions/${userId}`);
+  const testRes = await fetch(`/api/test-completions/${userId}`);
     const testCompletions = testRes.ok ? await testRes.json() : {};
     
     // Get unlock preferences from the new unlock system
-    const unlocksRes = await fetch(`http://localhost:3000/api/user-unlocks/${userId}`);
+  const unlocksRes = await fetch(`/api/user-unlocks/${userId}`);
     const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
     
     // Determine what's unlocked based on mode and current selection
@@ -367,7 +367,7 @@ async function fetchCards(unlockedDifficulties = null) {
     const query = new URLSearchParams(baseQuery);
     query.append("difficulty", difficulty.toLowerCase());
     
-    const url = `http://localhost:3000/api/cards?${query.toString()}`;
+  const url = `/api/cards?${query.toString()}`;
     const res = await fetch(url);
     const data = await res.json();
     allCards = data;
@@ -380,7 +380,7 @@ async function fetchCards(unlockedDifficulties = null) {
       const query = new URLSearchParams(baseQuery);
       query.append("difficulty", diff);
       
-      const url = `http://localhost:3000/api/cards?${query.toString()}`;
+  const url = `/api/cards?${query.toString()}`;
       const res = await fetch(url);
       return await res.json();
     });
@@ -394,7 +394,7 @@ async function fetchCards(unlockedDifficulties = null) {
     allCards = uniqueCards;
   } else {
     // No difficulty specified - fetch all cards (shouldn't happen in normal flow)
-    const url = `http://localhost:3000/api/cards?${baseQuery.toString()}`;
+  const url = `/api/cards?${baseQuery.toString()}`;
     const res = await fetch(url);
     allCards = await res.json();
   }
@@ -941,7 +941,7 @@ function loadCard() {
           
           console.log("🔍 Sending test completion data:", testCompletionData);
           
-          const testResponse = await fetch(`http://localhost:3000/api/test-completion/${userId}`, {
+          const testResponse = await fetch(`/api/test-completion/${userId}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(testCompletionData)
@@ -964,7 +964,7 @@ function loadCard() {
             
             console.log("🔍 Sending progress data:", progressData);
             
-            const progressResponse = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+            const progressResponse = await fetch(`/api/user-progress/${userId}`, {
               method: "PATCH",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(progressData)
@@ -985,7 +985,7 @@ function loadCard() {
             
             console.log("🔍 Sending domain-wide progress data:", progressData);
             
-            const progressResponse = await fetch(`http://localhost:3000/api/user-progress/${userId}`, {
+            const progressResponse = await fetch(`/api/user-progress/${userId}`, {
               method: "PATCH", 
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(progressData)

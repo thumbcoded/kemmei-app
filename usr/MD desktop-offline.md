@@ -30,77 +30,46 @@
 **Recommendation:** SQLite (`better-sqlite3`) for production-quality persistence; use `lowdb` for a quick prototype.
 
 ## Concrete migration steps (developer-focused)
-1. Add Electron skeleton
-	- Add devDependencies: `electron`, `electron-builder`, `concurrently`, `electron-reload` (optional)
-	- Add `electron/main.js` for Electron main process that loads `index.html` and creates IPC endpoints
-2. Refactor `backend` into a local module
-	- Convert `backend/server.js` to export functions instead of starting an Express server (e.g., init(storePath), getCards(filter), saveCard(card), getUser(id), createUser(user))
-	- Keep an Express shim only if a lot of UI code uses fetch; otherwise replace fetch with IPC calls from renderer
-3. Migrate models
-	- Replace mongoose models in `backend/models` with a DAO layer backed by SQLite or lowdb. Keep same method names where possible to minimize UI changes.
-4. Seed and data import
-	- Create `scripts/seed-local.js` that reads `data/cards/*` and `API/api_cards_test.json` and writes to the embedded DB on first run (store a marker in app data dir)
-5. Replace HTTP calls in renderer
-	- Identify fetch/ajax in `js/*.js` and modify to call IPC methods (`window.api.invoke('getCards', {...})`) or use a preload exposing a `backend` API
-6. Local auth/session
-	- Implement local user store with salted+hashed passwords (use `bcryptjs` or `argon2`) stored in DB; session = in-memory currentUser in main process; optionally persist a small token if "remember me"
-7. Packaging
-	- Add `build` config in `package.json` for `electron-builder`; include UI files and `data/` folder
-	- Test builds locally (Windows .exe first)
-
-## Contract (small)
-- Inputs: local UI events requesting data operations (cards, users, progress)
-- Outputs: JS responses or IPC results; persistent storage in a single file in OS app-data folder
-- Error modes: DB corruption (provide migration/repair), two-instance race (file locks/WAL), missing seed data
-
-## Edge cases and mitigations
-- Large dataset: prefer SQLite and implement pagination or virtualized lists
-- Concurrency/multiple processes: avoid multiple instances; use file locking or SQLite WAL
-- Data migration from Mongo: export JSON from Mongo and import via seed script; provide CLI `import-mongo-export.js`
-- Sensitive data: encrypt DB or use OS-level protections; do not store plaintext passwords
-
-## Quality gates and verification
-- Build: run `npm run build:electron` (set up script) — PASS/FAIL
-- Lint/typecheck: run project's linter if present; add ESLint if missing — PASS/FAIL
-- Unit smoke test: tests for DAO layer (save/get card, user creation) using `jest` or `uvu` — PASS/FAIL
-- Manual smoke: run packaged app and confirm UI loads, CRUD works, offline behavior correct
-
-## Minimal next steps (practical immediate edits)
-1. Add `package.json` scripts and install chosen DB binding + electron packages
-2. Create `electron/main.js` and `electron/preload.js` with IPC stubs
-3. Refactor `backend/server.js` into `backend/localApi.js` exporting functions
-4. Implement seed script and first-run flow
-
-## Notes and follow-ups
-- Quick prototype path: use `lowdb` and expose APIs via IPC — fastest with minimal code changes.
-- Production path: implement SQLite-backed DAOs, write a migration/import tool for existing data, add tests.
-- Next: tell me which DB you prefer (SQLite or lowdb). I can then scaffold the Electron main/preload files and refactor `backend/server.js` into a local API in this repo.
-
 --
-Generated on: 2025-08-30
-
-
+Generated on: 2025-09-01
 
 What I changed
 
-Updated c:\Dox\SD\Kemmei-desktop\usr\MD desktop-offline.md with:
-Goals, checklist, high-level plan
-DB options and recommendation (SQLite/better-sqlite3 vs lowdb)
-Concrete migration steps and minimal next actions
-Contract, edge cases, quality gates, and follow-ups
-What's next (pick one)
-
-If you want a quick prototype: say "lowdb prototype" and I'll scaffold Electron main.js, preload.js, and a backend/localApi.js using lowdb, then wire renderer IPC and a seed script.
-If you want production-ready persistence: say "SQLite" and I'll scaffold with better-sqlite3 DAOs, Electron bridge, and seed/import tooling.
-Progress update: plan written and saved. Tell me which datastore you prefer (SQLite or lowdb) and I will begin scaffolding the Electron app and refactoring the backend in this repo.
+Updated c:\Dox\SD\Kemmei-desktop\usr\MD desktop-offline.md with: brief status and next steps reflecting recent implementation work (Electron IPC shim, local SQLite API, progress/unlock persistence, renderer URL updates).
 
 ## Work completed so far (delta)
 
 - Created root `package.json` with Electron/dev scripts and seed/build tasks — DONE
 - Scaffolded `electron/main.js` and `electron/preload.js` with a fetch-to-IPC shim so existing renderer fetch('/api/...') calls route to the local API — DONE
-- Implemented a SQLite-backed local API at `backend/localApi-sqlite.js` using `sqlite3` + `sqlite` async wrapper; exposes init/getCards/getCard/saveCard/getUsers — DONE
-- Added `scripts/seed-local.js`, fixed async recursion and normalized legacy JSON fields so repository `data/cards/*` import into SQLite — DONE
-- Ran seed and successfully imported 2811 cards into `C:\Users\<you>\.kemmei\kemmei-data.sqlite` — DONE
+- Implemented a SQLite-backed local API at `backend/localApi-sqlite.js` (using `sqlite3` + `sqlite` wrapper) exposing init/getCards/getCard/saveCard/getUsers and added persistent tables for `progress`, `test_completions`, and `unlocks` — DONE
+- Implemented persistence functions: `getUserProgress`, `saveProgress`, `getTestCompletions`, `saveTestCompletion`, `getUserUnlocks`, `saveUserUnlock`, and `clearUserProgress` — DONE
+- Added IPC handlers in `electron/main.js` (explicit handlers and expanded generic RPC router) for progress/test-completions/user-unlocks read/write/delete — DONE
+- Replaced renderer hardcoded backend URLs with relative `/api/...` so the preload fetch shim forwards calls to the local API (updated `js/flashcards.js`, `js/progress.js`, `js/titmgr.js`, `js/dropdowns.js`, `js/concur.js`, `js/register.js`, `js/admin.js`, etc.) — DONE
+- Fixed `js/progress.js` syntax/logical errors introduced earlier and rebuilt progress rendering logic to use the persisted progress/test-completion/unlock data — DONE
+- Added seed/import scripts and utilities: `scripts/seed-local.js` (imports `data/cards/*` into SQLite) — seed reported 2811 cards imported earlier — DONE
+- Added small utility scripts used during development: `scripts/check-db.js`, `scripts/test-user.js`, `scripts/clear-current-user.js` — DONE
+- Removed admin UI links/assets from the main app flow and updated references — DONE
+
+## New feature tasks (WIP)
+
+These remaining items need UI wiring/testing and are next:
+
+1) First-page / username flow — mostly implemented (index/dashboard wiring present), verify end-to-end and tidy persistence: WIP (needs final UI polish and automated tests)
+2) Deck completion wiring — ensure renderer writes progress and test-completion records via `/api/test-completions/:userId/:key` and `/api/user-progress/:userId` (some client code already calls these endpoints; verify all paths) — WIP
+3) Full Progress page verification — exercise save/clear flows and confirm persistence after restart (manual smoke test + optional automated script) — WIP
+
+## Quick notes
+- DB location: app data folder (e.g., `C:\Users\<you>\.kemmei\kemmei-data.sqlite`) — seed created the DB and imported cards.
+- No remaining hardcoded http://localhost:3000/api URLs in the repo; renderer now uses `/api/...` to route through the preload shim.
+
+If you want, I can now:
+- Add a small smoke-test script that programmatically saves/reads/clears progress and prints results — quick verification.
+- Wire any missing client-side writes (test completions/unlocks) where the UI doesn't yet POST to the new endpoints.
+
+Commit message suggestion (concise):
+"desktop-offline: wire renderer to local IPC API; add SQLite progress/test-completion/unlock persistence and IPC handlers"
+
+If you'd like a shorter message, use: "desktop-offline: add local API + progress persistence"
 - Added `scripts/check-db.js` to quickly verify DB path, total cards, and sample records — DONE
 - Started Electron locally (dev mode) and verified the DB via `check-db.js` (Electron may exit in headless CI; run on desktop to interact) — PARTIAL (Electron start attempted; GUI should open on your desktop)
 

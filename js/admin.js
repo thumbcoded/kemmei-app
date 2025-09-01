@@ -32,7 +32,7 @@ window.dropdowns = dropdowns;
 async function loadDomainMap() {
   console.log("🔍 loadDomainMap called");
   try {
-    const res = await fetch("http://localhost:3000/api/domainmap");
+  const res = await fetch("/api/domainmap");
     console.log("🧪 Raw fetch response:", res);
 
     const data = await res.json();
@@ -263,7 +263,7 @@ function wireSaveButton(inputId) {
     if (inputId === "certIdInput") {
       const certId = newValue;
 
-      fetch("http://localhost:3000/api/add-title", {
+  fetch("/api/add-title", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ _id: certId, title: newValue })
@@ -394,7 +394,7 @@ bulkSubmitBtn.addEventListener("click", async () => {
   }
 
   try {
-    const res = await fetch("http://localhost:3000/api/cards/bulk", {
+  const res = await fetch("/api/cards/bulk", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cards)
@@ -426,7 +426,7 @@ bulkSubmitBtn.addEventListener("click", async () => {
   
       for (const card of cards) {
         try {
-          const res = await fetch("http://localhost:3000/api/cards", {
+          const res = await fetch("/api/cards", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
@@ -496,8 +496,8 @@ cardCount.textContent = "Cards created: 0";
 async function fetchAllCards(showDeleted = false) {
   try {
     const url = showDeleted
-      ? "http://localhost:3000/api/cards?include_deleted=true"
-      : "http://localhost:3000/api/cards";
+  ? "/api/cards?include_deleted=true"
+  : "/api/cards";
 
     const res = await fetch(url);
     const data = await res.json();
@@ -559,7 +559,7 @@ saveCertBtn.addEventListener("click", async () => {
   }
 
   try {
-    const res = await fetch("http://localhost:3000/api/add-title", {
+  const res = await fetch("/api/add-title", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ _id: certId, title: certTitle })
@@ -939,7 +939,7 @@ bulkDeleteBtn.addEventListener("click", async () => {
 
     try {
       for (const card of backup) {
-        const endpoint = `http://localhost:3000/api/cards/${card._id}`;
+  const endpoint = `/api/cards/${card._id}`;
         if (isTrashMode) {
           await fetch(endpoint, {
             method: "PUT",
@@ -964,7 +964,7 @@ bulkDeleteBtn.addEventListener("click", async () => {
         document.getElementById("undoDeleteBtn").addEventListener("click", async () => {
           clearTimeout(undoTimer);
           for (const card of backup) {
-            await fetch("http://localhost:3000/api/cards", {
+            await fetch("/api/cards", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(card)
@@ -1051,7 +1051,7 @@ function renderCard(card) {
   confirmBtn.addEventListener("click", async () => {
     const cardId = cardDiv.dataset.id;
     try {
-      const res = await fetch(`http://localhost:3000/api/cards/${cardId}`, {
+  const res = await fetch(`/api/cards/${cardId}`, {
         method: "DELETE",
       });
       if (res.ok) {
@@ -1145,7 +1145,7 @@ saveChangesBtn.addEventListener("click", async () => {
   const updatedCard = collectFormData();
   
   try {
-    const res = await fetch(`http://localhost:3000/api/cards/${editingCardId}`, {
+  const res = await fetch(`/api/cards/${editingCardId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -1324,7 +1324,7 @@ function renderCardGrid(cards, isDeletedMode = false) {
         // ♻️ Restore
         div.querySelector(".restore-card").addEventListener("click", async () => {
           try {
-            await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+            await fetch(`/api/cards/${card._id}`, {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({ status: "approved" })
@@ -1342,7 +1342,7 @@ function renderCardGrid(cards, isDeletedMode = false) {
           if (!confirm("⚠️ This will permanently delete the card. Are you sure?")) return;
 
           try {
-            const res = await fetch(`http://localhost:3000/api/cards/${card._id}/permanent`, {
+            const res = await fetch(`/api/cards/${card._id}/permanent`, {
               method: "DELETE"
             });
             if (res.ok) {
@@ -1374,7 +1374,7 @@ function renderCardGrid(cards, isDeletedMode = false) {
 
         confirmCancelDiv.querySelector(".confirm-btn").addEventListener("click", async () => {
           try {
-            const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+            const res = await fetch(`/api/cards/${card._id}`, {
               method: "DELETE"
             });
             if (res.ok) {
@@ -1425,7 +1425,7 @@ function renderCardGrid(cards, isDeletedMode = false) {
 
   async function fetchNextCardIds(count) {
     try {
-      const res = await fetch(`http://localhost:3000/api/cards/next-ids/${count}`);
+  const res = await fetch(`/api/cards/next-ids/${count}`);
       const ids = await res.json();
       return ids;
     } catch (err) {

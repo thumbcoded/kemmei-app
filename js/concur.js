@@ -28,7 +28,7 @@ function calculateCoverage(cards, target, report) {
 async function preloadAllCoverage(certNames, domainMaps, subdomainMaps) {
   window.kemmeiSubCoverage = {}; // reset
   const covmap = await fetch("/data/covmap.json").then(res => res.json());
-  const targetMap = await fetch("http://localhost:3000/api/targetmap").then(res => res.json());
+  const targetMap = await fetch("/api/targetmap").then(res => res.json());
 
   const allKeys = [];
   for (const certId of Object.keys(certNames)) {
@@ -42,7 +42,7 @@ async function preloadAllCoverage(certNames, domainMaps, subdomainMaps) {
   }
 
   for (const { certId, domainId, subId } of allKeys) {
-    const res = await fetch(`http://localhost:3000/api/cards?cert_id=${certId}&domain_id=${domainId}&subdomain_id=${subId}`);
+  const res = await fetch(`/api/cards?cert_id=${certId}&domain_id=${domainId}&subdomain_id=${subId}`);
     const cards = await res.json();
     const map = covmap[certId]?.[domainId]?.[subId];
     const key = `${certId}:${domainId}:${subId}`;
@@ -62,7 +62,7 @@ async function preloadAllCoverage(certNames, domainMaps, subdomainMaps) {
 async function loadConcurTree() {
   try {
     // Fetch the tree structure once
-    const res = await fetch("http://localhost:3000/api/domainmap");
+  const res = await fetch("/api/domainmap");
     const data = await res.json();
     
     // Store the tree data globally
@@ -356,7 +356,7 @@ function sanitize(text) {
 // Keep all the existing renderSubdomainSummary function as-is...
 async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
   try {
-    const res = await fetch(`http://localhost:3000/api/cards?cert_id=${certId}&domain_id=${domainId}&subdomain_id=${subId}`);
+  const res = await fetch(`/api/cards?cert_id=${certId}&domain_id=${domainId}&subdomain_id=${subId}`);
     const cards = await res.json();
 
     const panel = document.getElementById("concurDetails");
@@ -374,7 +374,7 @@ async function renderSubdomainSummary(certId, domainId, subId, subTitle) {
   </div>
 `;
 
-const targetRes = await fetch("http://localhost:3000/api/targetmap");
+const targetRes = await fetch("/api/targetmap");
 
 const targetMap = await targetRes.json();
 
@@ -763,7 +763,7 @@ saveBtn.addEventListener("click", async () => {
   const key = `${certId}:${domainId}:${subId}`;
   
   try {
-    const res = await fetch("http://localhost:3000/api/targetmap", {
+  const res = await fetch("/api/targetmap", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ key, update })
@@ -968,7 +968,7 @@ report.unmatchedCards.forEach((cardId) => {
     };
 
     try {
-  const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+  const res = await fetch(`/api/cards/${card._id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updated)
@@ -1006,7 +1006,7 @@ report.unmatchedCards.forEach((cardId) => {
 
     confirmBtn.addEventListener("click", async () => {
       try {
-        const res = await fetch(`http://localhost:3000/api/cards/${card._id}`, {
+  const res = await fetch(`/api/cards/${card._id}`, {
           method: "DELETE"
         });
 
