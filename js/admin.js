@@ -17,8 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "dashboard.html";
     return;
   }
-
   console.log(`✅ Admin access granted for user: ${userId}`);
+
+  // Admin features disabled in offline build. If ADMIN_ENABLED is false, stop further execution.
+  if (!window.ADMIN_ENABLED) {
+    console.log('Admin disabled by shared-ui flag; halting admin.js execution.');
+    return;
+  }
 });
 
 let certNames = {}, domainMaps = {}, subdomainMaps = {};

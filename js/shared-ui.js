@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Global flag to disable admin features in offline build
+  window.ADMIN_ENABLED = false;
   // Dark Mode Toggle Logic
   const darkModeToggle = document.getElementById("darkModeToggle");
   const savedDarkMode = localStorage.getItem("darkMode") === "true";

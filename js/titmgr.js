@@ -600,14 +600,18 @@ function startInlineDelete({ label, type, certId, domainId, subId, onSuccess }) 
 window.refreshAllPanels = async function () {
   await window.loadDomainMap?.();
 
-  window.dropdowns.populateAdminFormDropdownsFromMaps(
-    window.certNames,
-    window.domainMaps,
-    window.subdomainMaps
-  );
+  // Admin features are disabled in the offline build. Guard admin population.
+  if (window.ADMIN_ENABLED) {
+    window.dropdowns.populateAdminFormDropdownsFromMaps(
+      window.certNames,
+      window.domainMaps,
+      window.subdomainMaps
+    );
 
-  window.refreshTitleManager?.();
+    window.refreshTitleManager?.();
+  }
 };
 
-window.dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
+// Admin disabled: skip populateAdminFormDropdownsFromMaps
+if (window.ADMIN_ENABLED) window.dropdowns.populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps);
 

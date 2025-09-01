@@ -52,6 +52,10 @@ function setupCreateNewSwitch({ selectId, inputId, saveBtnId, cancelBtnId }) {
 }
 
 function populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps) {
+    if (!window.ADMIN_ENABLED) {
+      console.log('Admin disabled: skipping populateAdminFormDropdownsFromMaps');
+      return;
+    }
 
     console.log("💡 Populating form dropdowns from domainmap.json");
     console.log("certNames:", certNames);

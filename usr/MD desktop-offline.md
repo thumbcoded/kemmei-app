@@ -37,6 +37,17 @@ What I changed
 
 Updated c:\Dox\SD\Kemmei-desktop\usr\MD desktop-offline.md with: brief status and next steps reflecting recent implementation work (Electron IPC shim, local SQLite API, progress/unlock persistence, renderer URL updates).
 
+Recent changes (delta)
+
+- Disabled admin UI by default using a single global flag `window.ADMIN_ENABLED = false` (set in `js/shared-ui.js`). Admin JS now early-returns when disabled.
+- Guarded admin helper calls in `js/titmgr.js` and made `js/dropdowns.js`'s `populateAdminFormDropdownsFromMaps` a no-op when admin is disabled. This keeps admin files present but inert.
+- Added persistent progress/test-completion/unlock storage in `backend/localApi-sqlite.js` (tables: `progress`, `test_completions`, `unlocks`) and functions `saveProgress`, `saveTestCompletion`, `saveUserUnlock`, `getUserProgress`, `getTestCompletions`, `getUserUnlocks`, and `clearUserProgress`.
+- Expanded `electron/main.js` to expose IPC handlers for saving/reading progress, test-completions and unlocks and extended the generic RPC router to accept GET/POST/PUT/DELETE for those endpoints.
+- Rewrote many renderer fetch URLs to use relative `/api/...` so the preload fetch-to-IPC shim routes requests to the local API (files updated include `js/flashcards.js`, `js/progress.js`, `js/titmgr.js`, `js/dropdowns.js`, `js/concur.js`, `js/register.js`, etc.).
+- Fixed and cleaned `js/progress.js` (syntax and logic issues), rebuilt progress-tree rendering to consume persisted progress/test-completion/unlock data from the local API.
+- Seed/import tooling: `scripts/seed-local.js` imports `data/cards/*` into SQLite; seed previously reported 2811 cards imported.
+
+
 ## Work completed so far (delta)
 
 - Created root `package.json` with Electron/dev scripts and seed/build tasks — DONE
