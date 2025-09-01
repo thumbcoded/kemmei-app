@@ -145,3 +145,25 @@ body.dark-theme textarea::placeholder {
   color: #b0b8c9 !important;
   opacity: 1;
 }
+
+/* Lightweight tooltip for elements marked with has-tooltip and a title attribute */
+.has-tooltip[title] {
+  position: relative;
+  cursor: help;
+}
+.has-tooltip[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 8px);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 2000;
+  pointer-events: none;
+  opacity: 1;
+}

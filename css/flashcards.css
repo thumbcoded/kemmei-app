@@ -6,6 +6,12 @@ body.flashcards-page {
   padding: 2rem;
 }
 
+/* Defensive: prevent tiny horizontal scrollbars caused by fixed-position
+   elements or sub-pixel rounding when the toggle is hidden. */
+body.flashcards-page {
+  overflow-x: hidden;
+}
+
 .flashcards-layout {
   max-width: 1000px;
   margin: 0 auto;
@@ -400,6 +406,30 @@ body.flashcards-page {
   right: 1rem;
   z-index: 1000;
 }
+
+/* Fade out and hide when overlap detected */
+.floating-dark-toggle {
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.floating-dark-toggle.hidden-by-overlap {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(0.98);
+  pointer-events: none;
+}
+
+/* Defensive: when JS sets display:none after the transition, ensure there
+   is no CSS that reintroduces spacing when the class is present. */
+.floating-dark-toggle[style*="display: none"] {
+  display: none !important;
+}
+
+/* When toggle is hidden, allow the main layout to use the full width
+   so no empty gutter remains. This only changes layout when the toggle
+   is visually hidden by overlap. */
+/* Removed layout-shrinking rules for dark-toggle-hidden; toggle hiding
+  should not change the page's layout width to avoid scrollbars. */
 
 .dark-mode-toggle {
   display: flex;

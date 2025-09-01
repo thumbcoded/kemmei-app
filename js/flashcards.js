@@ -1,23 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
 let domainMaps = {};
 let subdomainMaps = {};
-
-let currentMode = 'casual'; // Track current mode
-let isTestMode = false; // Flag for test mode
-let testStartData = null; // Store test parameters for completion tracking
+let certNames = {};
 
 async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false) {
   // In test mode, don't update progress during the session - only at the end
   if (isTestMode && !viewedOnly) {
     return;
   }
-  
+
   const key = `${cert}:${domain}:${sub}`.replace(/\./g, "~");
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
   try {
-  await fetch(`/api/user-progress/${userId}`, {
+    await fetch(`/api/user-progress/${userId}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ key, correct, viewedOnly })
@@ -27,14 +24,109 @@ async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false
   }
 }
 
+// Hide floating toggle when it would overlap header controls.
+function setupToggleOverlapWatcher() {
+  const toggle = document.querySelector('.floating-dark-toggle');
+  const header = document.querySelector('.flashcards-header');
+  if (!toggle || !header) return;
+
+  function checkOverlap() {
+    const t = toggle.getBoundingClientRect();
+    const h = header.getBoundingClientRect();
+
+    // Hide only when the header's right edge is within the toggle width + buffer
+    // of the viewport right edge. This prevents accidental hiding at wide sizes.
+    const toggleWidth = Math.max(t.width || 56, 56);
+    const buffer = 12; // pixels of breathing room
+    const shouldHide = (h.right > (window.innerWidth - (toggleWidth + buffer)));
+
+    // Animate fade then remove from layout (display:none) to guarantee no
+    // residual reserved space can cause horizontal scrollbars.
+    if (shouldHide) {
+      if (!toggle.classList.contains('hidden-by-overlap')) {
+        // start fade
+        toggle.classList.add('hidden-by-overlap');
+
+        // after transition, remove from layout to avoid any subtle reserved space
+        const cleanup = () => {
+          try { toggle.style.display = 'none'; } catch (e) {}
+          toggle.removeEventListener('transitionend', cleanup);
+        };
+        toggle.addEventListener('transitionend', cleanup);
+
+        // fallback in case transitionend doesn't fire
+        setTimeout(() => { if (toggle.style.display !== 'none') toggle.style.display = 'none'; }, 350);
+      }
+    } else {
+      // ensure it's part of layout before removing the hidden class so the
+      // reveal transition runs. If it was display:none, reset it first.
+      if (toggle.style.display === 'none') {
+        toggle.style.display = '';
+        // force a reflow so the transition will run when we remove the class
+        // (read a layout property)
+        // eslint-disable-next-line no-unused-expressions
+        toggle.offsetWidth;
+      }
+      toggle.classList.remove('hidden-by-overlap');
+    }
+  }
+
+  // Run on resize and on DOM mutations that may change layout
+  window.addEventListener('resize', checkOverlap);
+  const ro = new MutationObserver(checkOverlap);
+  ro.observe(header, { attributes: true, childList: true, subtree: true });
+
+  // initial check
+  setTimeout(checkOverlap, 120);
+}
+
+// initialize overlap watcher now that we're inside the main DOMContentLoaded handler
+setTimeout(setupToggleOverlapWatcher, 300);
+
 async function loadDomainMap() {
+  // Try the IPC-backed API first (Electron). If that fails (running in browser/file mode)
+  // fall back to the local JSON file under data/domainmap.json so the UI still works.
+  // Prefer IPC when available (running under Electron) to avoid file:// fetch errors
+  if (window.api && typeof window.api.rpc === 'function') {
+    try {
+      const resp = await window.api.rpc('domainmap', 'GET')
+      if (resp && resp.body) {
+        const data = resp.body
+        domainMaps = data.domainMaps || {}
+        subdomainMaps = data.subdomainMaps || {}
+        certNames = data.certNames || {}
+        return data
+      }
+    } catch (e) {
+      console.warn('ipc domainmap failed, falling back to network', e && e.message)
+    }
+  }
+
   try {
-  const res = await fetch("/api/domainmap");
-    const data = await res.json();
-    domainMaps = data.domainMaps || {};
-    subdomainMaps = data.subdomainMaps || {};
+    const res = await fetch("/api/domainmap");
+    if (res && res.ok) {
+      const data = await res.json();
+      domainMaps = data.domainMaps || {};
+      subdomainMaps = data.subdomainMaps || {};
+      certNames = data.certNames || {};
+      return data;
+    }
+    throw new Error('api domainmap not ok')
   } catch (err) {
-    console.error("❌ Failed to load domainmap.json:", err);
+    console.warn('api domainmap failed, trying local data/domainmap.json', err && err.message);
+    try {
+      const res2 = await fetch('data/domainmap.json');
+      if (res2 && res2.ok) {
+        const data = await res2.json();
+        domainMaps = data.domainMaps || {};
+        subdomainMaps = data.subdomainMaps || {};
+        certNames = data.certNames || {};
+        return data;
+      }
+    } catch (err2) {
+      console.error('failed to load bundled domainmap.json', err2 && err2.message);
+    }
+    return { certNames: {}, domainMaps: {}, subdomainMaps: {} };
   }
 }
 
@@ -58,9 +150,9 @@ function populateDeckDropdown(certNames, selectedId = null) {
 }
 
 (async () => {
-  await loadDomainMap();
-  const res = await fetch("/api/domainmap");
-  const data = await res.json();
+  const data = await loadDomainMap();
+
+  // Debug overlay removed (no-op in production)
 
   const savedDeck = localStorage.getItem("lastDeck");
   const savedDomain = localStorage.getItem("lastDomain");
@@ -69,7 +161,17 @@ function populateDeckDropdown(certNames, selectedId = null) {
   const savedMode = localStorage.getItem("lastMode");
 
   // ✅ Populate deck dropdown without triggering events
-  populateDeckDropdown(data.certNames, savedDeck);
+  // Use the certNames exposed by loadDomainMap; if empty, show a friendly placeholder
+  if (data && Object.keys(data.certNames || {}).length) {
+    populateDeckDropdown(data.certNames, savedDeck);
+  } else {
+    // Ensure the UI shows an obvious placeholder instead of being empty
+    const deckSelect = document.getElementById("deck-select");
+    deckSelect.innerHTML = "";
+    const opt = new Option("No titles available", "");
+    deckSelect.appendChild(opt);
+    deckSelect.disabled = true;
+  }
 
   // Initialize mode state
   currentMode = savedMode || 'casual';
@@ -198,16 +300,46 @@ async function getUnlockedDifficulties() {
   }
 
   try {
-  const res = await fetch(`/api/user-progress/${userId}`);
-    const userData = await res.json();
-    
+    // Try network fetch first (this will use the fetch shim in Electron). If it fails,
+    // fall back to ipc-exposed helpers on window.api.
+    let userData = {};
+    try {
+      const res = await fetch(`/api/user-progress/${userId}`);
+      if (res && res.ok) userData = await res.json();
+      else console.warn('user-progress fetch returned non-ok', res && res.status);
+    } catch (e) {
+      if (window.api && typeof window.api.getUserProgress === 'function') {
+        try { userData = await window.api.getUserProgress(userId); } catch (ee) { console.warn('ipc getUserProgress failed', ee); }
+      } else {
+        console.warn('fetch failed for user-progress and no ipc fallback available', e && e.message);
+      }
+    }
+
     // Get test completions to determine unlocked difficulties
-  const testRes = await fetch(`/api/test-completions/${userId}`);
-    const testCompletions = testRes.ok ? await testRes.json() : {};
-    
+    let testCompletions = {};
+    try {
+      const testRes = await fetch(`/api/test-completions/${userId}`);
+      if (testRes && testRes.ok) testCompletions = await testRes.json();
+    } catch (e) {
+      if (window.api && typeof window.api.getTestCompletions === 'function') {
+        try { testCompletions = await window.api.getTestCompletions(userId); } catch (ee) { console.warn('ipc getTestCompletions failed', ee); }
+      } else {
+        console.warn('fetch failed for test-completions and no ipc fallback available', e && e.message);
+      }
+    }
+
     // Get unlock preferences from the new unlock system
-  const unlocksRes = await fetch(`/api/user-unlocks/${userId}`);
-    const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
+    let unlocks = {};
+    try {
+      const unlocksRes = await fetch(`/api/user-unlocks/${userId}`);
+      if (unlocksRes && unlocksRes.ok) unlocks = await unlocksRes.json();
+    } catch (e) {
+      if (window.api && typeof window.api.getUserUnlocks === 'function') {
+        try { unlocks = await window.api.getUserUnlocks(userId); } catch (ee) { console.warn('ipc getUserUnlocks failed', ee); }
+      } else {
+        console.warn('fetch failed for user-unlocks and no ipc fallback available', e && e.message);
+      }
+    }
     
     // Determine what's unlocked based on mode and current selection
     const cert = document.getElementById("deck-select").value.trim();
@@ -367,9 +499,26 @@ async function fetchCards(unlockedDifficulties = null) {
     const query = new URLSearchParams(baseQuery);
     query.append("difficulty", difficulty.toLowerCase());
     
-  const url = `/api/cards?${query.toString()}`;
-    const res = await fetch(url);
-    const data = await res.json();
+    const url = `/api/cards?${query.toString()}`;
+    // Prefer IPC getCards when available (Electron) to avoid file:// errors
+    let data = [];
+    if (window.api && typeof window.api.getCards === 'function') {
+      try {
+        const params = Object.fromEntries(query.entries());
+        data = await window.api.getCards(params);
+      } catch (e) {
+        console.warn('ipc getCards failed, falling back to fetch', e && e.message);
+      }
+    }
+    if ((!data || !data.length) && typeof fetch === 'function') {
+      try {
+        const r = await fetch(url);
+        if (r && r.ok) data = await r.json();
+        else console.warn('fetch returned non-ok for', url, r && r.status);
+      } catch (err) {
+        console.warn('fetch failed for', url, err && err.message);
+      }
+    }
     allCards = data;
   } else if (difficulty === "All") {
     // Multiple difficulties - use pre-fetched unlock data if available
@@ -379,17 +528,32 @@ async function fetchCards(unlockedDifficulties = null) {
     const promises = unlocked.map(async (diff) => {
       const query = new URLSearchParams(baseQuery);
       query.append("difficulty", diff);
-      
-  const url = `/api/cards?${query.toString()}`;
-      const res = await fetch(url);
-      return await res.json();
+      // Prefer ipc.getCards
+      if (window.api && typeof window.api.getCards === 'function') {
+        try {
+          const params = Object.fromEntries(query.entries());
+          return await window.api.getCards(params);
+        } catch (e) {
+          console.warn('ipc getCards failed for diff', diff, e && e.message);
+        }
+      }
+      // fallback to network
+      const url = `/api/cards?${query.toString()}`;
+      try {
+        const r = await fetch(url);
+        if (r && r.ok) return await r.json();
+        console.warn('fetch returned non-ok for', url, r && r.status);
+      } catch (err) {
+        console.warn('fetch failed for', url, err && err.message);
+      }
+      return [];
     });
     
     const results = await Promise.all(promises);
     // Combine all results into a single array and remove duplicates
     const combinedCards = results.flat();
     const uniqueCards = combinedCards.filter((card, index, self) => 
-      index === self.findIndex(c => c._id === card._id)
+      index === self.findIndex(c => (c._id || c.id) === (card._id || card.id))
     );
     allCards = uniqueCards;
   } else {
@@ -426,6 +590,28 @@ document.getElementById("deck-select").addEventListener("change", () => {
 
   domainSelect.innerHTML = `<option>All</option>`;
   subSelect.innerHTML = `<option>All</option>`;
+
+  // If we don't have domainMaps yet (fallback case), attempt to reload
+  if (!domainMaps || Object.keys(domainMaps).length === 0) {
+    loadDomainMap().then(d => {
+      // enable deck select in case it was disabled earlier
+      const deckSel = document.getElementById('deck-select');
+      if (deckSel) deckSel.disabled = false;
+      if (certId && domainMaps[certId]) {
+        Object.entries(domainMaps[certId]).forEach(([domainId, domainTitle]) => {
+          const opt = new Option(`${domainId} ${domainTitle}`, `${domainId} ${domainTitle}`);
+          domainSelect.appendChild(opt);
+        });
+      }
+      domainSelect.disabled = false;
+      subSelect.disabled = !(
+        certId && domainMaps[certId] && Object.keys(subdomainMaps[certId] || {}).length
+      );
+      saveLastSelection();
+      fetchCardsAndUpdateCount();
+    }).catch(() => { /* ignore */ });
+    return;
+  }
 
   if (certId && domainMaps[certId]) {
     Object.entries(domainMaps[certId]).forEach(([domainId, domainTitle]) => {
@@ -482,6 +668,12 @@ document.getElementById("domain-select").addEventListener("change", () => {
       
       await fetchCards(unlockedDifficulties);
       updateCardCount();
+
+        // Update debug overlay with cards count
+        try {
+          const dbg = document.getElementById('fc-debug-overlay');
+          if (dbg) dbg.textContent = `domainmap: ${Object.keys(certNames||{}).length} titles · cards: ${questions.length}`;
+        } catch (e) { /* no-op */ }
       
       // Update difficulty dropdown based on unlock status, passing the already-fetched data
       await updateDifficultyDropdown(unlockedDifficulties);
@@ -501,19 +693,27 @@ document.getElementById("domain-select").addEventListener("change", () => {
     const difficultySelect = document.getElementById("difficulty-select");
     
     if (!userId) {
-      // Show only Easy difficulty when no user is logged in
-      const currentDifficulty = difficultySelect.value; // Store current selection before clearing
+      // Show Easy + locked Medium/Hard when no user is logged in so the UI matches expectations
       difficultySelect.innerHTML = "";
-      
       const easyOption = document.createElement("option");
       easyOption.value = "Easy";
       easyOption.textContent = "Easy";
       difficultySelect.appendChild(easyOption);
-      
-      // No user logged in, only Easy is available
+
+      const mediumOption = document.createElement("option");
+      mediumOption.value = "Medium";
+      mediumOption.textContent = "🔒 Medium";
+      mediumOption.disabled = true;
+      difficultySelect.appendChild(mediumOption);
+
+      const hardOption = document.createElement("option");
+      hardOption.value = "Hard";
+      hardOption.textContent = "🔒 Hard";
+      hardOption.disabled = true;
+      difficultySelect.appendChild(hardOption);
+
       difficultySelect.value = "Easy";
-      
-      // Reset flag
+
       isRebuildingDifficulty = false;
       return;
     }
@@ -601,6 +801,22 @@ document.getElementById("domain-select").addEventListener("change", () => {
     } finally {
       // Always reset the flag, even if there was an error
       isRebuildingDifficulty = false;
+        // Ensure tooltip attributes are present on the difficulty control
+        try {
+          const modeSelect = document.getElementById('mode-select');
+          if (modeSelect) {
+            modeSelect.setAttribute('title', 'Mode: Casual shows learning decks; Test runs a scored test to unlock next levels');
+            modeSelect.classList.add('has-tooltip');
+          }
+
+          const diffSelect = document.getElementById('difficulty-select');
+          if (diffSelect) {
+            diffSelect.setAttribute('title', 'Difficulty: choose the level to study; locked levels show a 🔒 and are disabled');
+            diffSelect.classList.add('has-tooltip');
+          }
+        } catch (e) {
+          // no-op if DOM not ready
+        }
     }
   }
 
@@ -1090,6 +1306,84 @@ exitBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme", isDark);
     localStorage.setItem("darkMode", isDark);
   });
+  
+  // Small helper: attach a hover tooltip to a select element by creating an overlay div.
+  function attachSelectTooltip(selectEl, text) {
+    if (!selectEl) return;
+    // Create wrapper so we can position tooltip relative to the select
+    const wrapper = document.createElement('div');
+    wrapper.style.display = 'inline-block';
+    wrapper.style.position = 'relative';
+    wrapper.className = 'select-tooltip-wrapper';
+    selectEl.parentNode.insertBefore(wrapper, selectEl);
+    wrapper.appendChild(selectEl);
+
+    // Create tooltip element but attach to document.body to avoid parent clipping
+    const tip = document.createElement('div');
+    tip.className = 'select-tooltip';
+    tip.textContent = text;
+    tip.style.position = 'fixed';
+    tip.style.background = 'rgba(0,0,0,0.9)';
+    tip.style.color = '#fff';
+    tip.style.padding = '8px 10px';
+    tip.style.borderRadius = '6px';
+    tip.style.boxSizing = 'border-box';
+    tip.style.whiteSpace = 'normal';
+    tip.style.fontSize = '12px';
+    tip.style.maxWidth = 'min(90vw, 640px)';
+    tip.style.overflowWrap = 'break-word';
+    tip.style.wordBreak = 'break-word';
+    tip.style.zIndex = 99999;
+    tip.style.pointerEvents = 'auto';
+    tip.style.opacity = 0;
+    tip.style.transition = 'opacity 120ms ease, transform 120ms ease';
+    tip.style.maxHeight = '70vh';
+    tip.style.overflowY = 'auto';
+    document.body.appendChild(tip);
+
+    // On hover, show tooltip and compute a fixed position so it never gets clipped
+    wrapper.addEventListener('mouseenter', () => {
+      // Make visible to measure
+      tip.style.opacity = 1;
+      tip.style.transform = 'translateY(0)';
+
+      requestAnimationFrame(() => {
+        const wrapRect = wrapper.getBoundingClientRect();
+        const tipRect = tip.getBoundingClientRect();
+        const PAD = 8;
+
+        // Prefer placing above the control unless there's not enough space
+        const spaceAbove = wrapRect.top;
+        const spaceBelow = window.innerHeight - wrapRect.bottom;
+        let top;
+        if (spaceAbove > tipRect.height + 12 || spaceAbove > spaceBelow) {
+          // place above
+          top = wrapRect.top - tipRect.height - 8;
+        } else {
+          // place below
+          top = wrapRect.bottom + 8;
+        }
+
+        // Compute left so tooltip is centered on the control
+        let left = Math.round(wrapRect.left + (wrapRect.width - tipRect.width) / 2);
+
+        // Clamp to viewport with padding
+        left = Math.max(PAD, Math.min(left, window.innerWidth - PAD - tipRect.width));
+
+        // Apply final coordinates
+        tip.style.left = `${left}px`;
+        tip.style.top = `${Math.max(PAD, top)}px`;
+      });
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      tip.style.opacity = 0;
+    });
+  }
+
+  // Attach hover tooltips to Mode and Difficulty selects (user-requested wording)
+  attachSelectTooltip(document.getElementById('mode-select'), 'Run through selected filters freely at any time. Scores are not recorded.');
+  attachSelectTooltip(document.getElementById('difficulty-select'), 'Title/domain/subdomain testing with 90% passing requirement to unlock next difficulty.');
 document.getElementById("mode-select").addEventListener("change", async (event) => {
   // Prevent event bubbling that might trigger other dropdowns
   event.stopPropagation();
