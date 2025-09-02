@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+// Toggle this to true to enable developer debug logs in the flashcards UI
+const DEBUG = false;
+function dbg(...args) { if (DEBUG) console.log(...args); }
+
 let domainMaps = {};
 let subdomainMaps = {};
 let certNames = {};
@@ -480,7 +484,7 @@ async function fetchCards(unlockedDifficulties = null) {
   const baseQuery = new URLSearchParams();
   const subdomain = document.getElementById("subdomain-select")?.value.trim();
   if (subdomain && subdomain !== "All") {
-    baseQuery.append("subdomain_id", subdomain);
+    baseQuery.append("subdomain", subdomain);
   }
   if (deck) {
     baseQuery.append("cert_id", deck);
@@ -519,7 +523,7 @@ async function fetchCards(unlockedDifficulties = null) {
         console.warn('fetch failed for', url, err && err.message);
       }
     }
-    allCards = data;
+    allCards = data || [];
   } else if (difficulty === "All") {
     // Multiple difficulties - use pre-fetched unlock data if available
     const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
@@ -555,28 +559,108 @@ async function fetchCards(unlockedDifficulties = null) {
     const uniqueCards = combinedCards.filter((card, index, self) => 
       index === self.findIndex(c => (c._id || c.id) === (card._id || card.id))
     );
-    allCards = uniqueCards;
+    allCards = uniqueCards || [];
   } else {
     // No difficulty specified - fetch all cards (shouldn't happen in normal flow)
   const url = `/api/cards?${baseQuery.toString()}`;
     const res = await fetch(url);
     allCards = await res.json();
   }
+  // Fallback: if no cards were returned from API/ipc (e.g., running from file://),
+  // attempt to load cards directly from the bundled data/ directory using the
+  // known domain/subdomain maps. This probes predictable filenames like
+  // data/cards/<cert>/<domain>/<sub>/Q-<cert>-<domain>-<sub>-NNN.json
+  if ((!allCards || allCards.length === 0) && document.location.protocol !== 'http:' ) {
+    try {
+      const cert = document.getElementById("deck-select").value.trim();
+      const domainVal = document.getElementById("domain-select").value.trim();
+      const domainId = domainVal && domainVal !== 'All' ? domainVal.split(' ')[0] : null;
+      const subVal = document.getElementById("subdomain-select")?.value.trim();
+      let foldersToProbe = [];
+
+      if (subVal && subVal !== 'All' && domainId) {
+        foldersToProbe.push({ domain: domainId, sub: subVal });
+      } else if (domainId) {
+        // probe every subdomain under this domain for the cert using loaded maps
+        const subs = subdomainMaps[cert]?.[domainId] ? Object.keys(subdomainMaps[cert][domainId]) : [];
+        subs.forEach(s => foldersToProbe.push({ domain: domainId, sub: s }));
+      } else if (cert) {
+        // probe every domain/subdomain for this cert
+        const domains = domainMaps[cert] ? Object.keys(domainMaps[cert]) : [];
+        domains.forEach(d => {
+          const subs = subdomainMaps[cert]?.[d] ? Object.keys(subdomainMaps[cert][d]) : [];
+          subs.forEach(s => foldersToProbe.push({ domain: d, sub: s }));
+        });
+      }
+
+      const localCards = [];
+
+      // Helper to probe a folder for sequentially numbered files
+      async function probeFolder(certId, domainId, subId) {
+        const consecutiveMissLimit = 8; // stop after several misses
+        let misses = 0;
+        // Try up to 500 file numbers as an upper bound
+        for (let i = 1; i <= 500; i++) {
+          const num = String(i).padStart(3, '0');
+          const path = `data/cards/${certId}/${domainId}/${subId}/Q-${certId}-${domainId}-${subId}-${num}.json`;
+          try {
+            const r = await fetch(path);
+            if (r && r.ok) {
+              const c = await r.json();
+              localCards.push(c);
+              misses = 0; // reset misses on success
+            } else {
+              misses++;
+            }
+          } catch (e) {
+            misses++;
+          }
+          if (misses >= consecutiveMissLimit) break;
+        }
+      }
+
+      // Run probes sequentially to avoid too many concurrent fetches from file://
+      for (const f of foldersToProbe) {
+        // respect selected difficulty filter
+        await probeFolder(cert, f.domain, f.sub);
+      }
+
+      // If we found local cards, filter by difficulty (if specified)
+      if (localCards.length) {
+        const desired = difficulty && difficulty !== 'All' ? difficulty.toLowerCase() : null;
+        allCards = desired ? localCards.filter(c => (c.difficulty || '').toLowerCase() === desired) : localCards;
+      }
+    } catch (e) {
+      // ignore fallback errors
+      console.warn('local data/cards fallback failed', e && e.message);
+    }
+  }
 
   questions = allCards.map(card => {
+    // Support multiple possible backend shapes. The local SQLite API stores
+    // the main text in `content` and the original fields under `metadata`.
+    const meta = card.metadata || {};
+    const questionText = (card.question || card.question_text || card.questionText || card.content || meta.question_text || meta.question || meta.questionText || '').toString();
+    const optionsSource = meta.answer_options || meta.options || meta.answerOptions || card.answer_options || card.options || [];
+    const correctSource = meta.correct_answer || meta.correct || card.correct_answer || card.correct || [];
+    const qType = meta.question_type || meta.questionType || card.question_type || card.questionType || 'multiple_choice';
+    const explanation = meta.explanation || card.explanation || meta.explain || '';
+
+    const correctArr = Array.isArray(correctSource) ? correctSource : (correctSource ? [correctSource] : []);
+    const requiredCount = correctArr.length > 0 ? correctArr.length : (meta.requiredCount || meta.requiredCount === 0 ? meta.requiredCount : (card.required || 1));
+
     return {
-      question: card.question_text,
-      options: shuffleAnswerOptions(card.answer_options || card.options || []),
-      correct: Array.isArray(card.correct_answer)
-        ? card.correct_answer
-        : [card.correct_answer],
-      required: Array.isArray(card.correct_answer)
-        ? card.correct_answer.length
-        : 1,
-      type: card.question_type,
-      explanation: card.explanation || ""
+      question: questionText,
+      options: shuffleAnswerOptions(optionsSource || []),
+      correct: correctArr,
+      required: requiredCount || 1,
+      type: qType,
+      explanation: explanation || ""
     };
   });
+
+  // Debug: log a sample card so Electron runs can show what's being mapped
+  // debug log removed
 
   return questions; // Return the questions array for potential shuffling
 }
@@ -867,9 +951,9 @@ subdomainSelect.addEventListener("change", (event) => {
 // Removed duplicate event listeners - using individual ones above instead
 
   async function startSession() {
-    console.log("🔍 startSession() called");
-    console.log("🔍 isTestMode at start:", isTestMode);
-    console.log("🔍 currentMode at start:", currentMode);
+  dbg("🔍 startSession() called");
+  dbg("🔍 isTestMode at start:", isTestMode);
+  dbg("🔍 currentMode at start:", currentMode);
     
     if (questions.length === 0) {
       alert("No cards found for this deck/domain/difficulty.");
@@ -887,9 +971,9 @@ subdomainSelect.addEventListener("change", (event) => {
         totalQuestions: questions.length,
         startTime: new Date()
       };
-      console.log("🔍 Test start data set:", testStartData);
+  dbg("🔍 Test start data set:", testStartData);
     } else {
-      console.log("🔍 Not in test mode, testStartData not set");
+  dbg("🔍 Not in test mode, testStartData not set");
     }
 
     // Check if cards should be shuffled
@@ -928,6 +1012,7 @@ subdomainSelect.addEventListener("change", (event) => {
 
 function loadCard() {
   const q = questions[currentIndex];
+  // debug log removed
   cardContainer.textContent = q.question;
   answerForm.innerHTML = "";
 
@@ -1099,10 +1184,10 @@ function loadCard() {
   }
 
   async function showEnd() {
-    console.log("🔍 showEnd() called");
-    console.log("🔍 isTestMode:", isTestMode);
-    console.log("🔍 testStartData:", testStartData);
-    console.log("🔍 currentMode:", currentMode);
+  dbg("🔍 showEnd() called");
+  dbg("🔍 isTestMode:", isTestMode);
+  dbg("🔍 testStartData:", testStartData);
+  dbg("🔍 currentMode:", currentMode);
     
     abortBtn.classList.add("hidden");
     exitBtn.classList.remove("hidden");
@@ -1117,7 +1202,7 @@ function loadCard() {
     const percent = Math.round((correctCount / questions.length) * 100);
     let finalMessage = `Correct: ${correctCount} / ${questions.length} (${percent}%)`;
     
-    console.log("🔍 About to check test mode completion, isTestMode && testStartData:", isTestMode && testStartData);
+  dbg("🔍 About to check test mode completion, isTestMode && testStartData:", isTestMode && testStartData);
     
     // Handle test mode completion
     if (isTestMode && testStartData) {
@@ -1132,7 +1217,7 @@ function loadCard() {
       // Record test completion and progress
       try {
         const userId = localStorage.getItem("userId");
-        console.log("🔍 Current userId from localStorage:", userId);
+  dbg("🔍 Current userId from localStorage:", userId);
         
         if (!userId) {
           console.warn("⚠️ No userId found - test results will not be recorded");
@@ -1140,8 +1225,8 @@ function loadCard() {
         }
         
         if (userId) {
-          console.log("🔍 Recording test completion for:", testStartData);
-          console.log("🔍 Score:", percent, "Correct:", correctCount, "Total:", questions.length);
+          dbg("🔍 Recording test completion for:", testStartData);
+          dbg("🔍 Score:", percent, "Correct:", correctCount, "Total:", questions.length);
           
           // 1. Record test completion for unlock tracking
           const testCompletionData = {
@@ -1155,7 +1240,7 @@ function loadCard() {
             completedAt: new Date()
           };
           
-          console.log("🔍 Sending test completion data:", testCompletionData);
+          dbg("🔍 Sending test completion data:", testCompletionData);
           
           const testResponse = await fetch(`/api/test-completion/${userId}`, {
             method: "POST",
@@ -1164,7 +1249,7 @@ function loadCard() {
           });
           
           const testResult = await testResponse.text();
-          console.log("🔍 Test completion response:", testResponse.status, testResult);
+          dbg("🔍 Test completion response:", testResponse.status, testResult);
           
           // 2. Record progress for each subdomain tested (so scores appear on progress page)
           if (testStartData.subdomain) {
@@ -1178,7 +1263,7 @@ function loadCard() {
               isTestResult: true // Flag to indicate this is from a test
             };
             
-            console.log("🔍 Sending progress data:", progressData);
+            dbg("🔍 Sending progress data:", progressData);
             
             const progressResponse = await fetch(`/api/user-progress/${userId}`, {
               method: "PATCH",
@@ -1187,7 +1272,7 @@ function loadCard() {
             });
             
             const progressResult = await progressResponse.text();
-            console.log("🔍 Progress response:", progressResponse.status, progressResult);
+            dbg("🔍 Progress response:", progressResponse.status, progressResult);
           } else {
             // Domain-wide test - record progress proportionally across all subdomains in that domain
             // This is more complex and might need backend logic to distribute the score
@@ -1199,7 +1284,7 @@ function loadCard() {
               isTestResult: true // Flag to indicate this is from a test
             };
             
-            console.log("🔍 Sending domain-wide progress data:", progressData);
+            dbg("🔍 Sending domain-wide progress data:", progressData);
             
             const progressResponse = await fetch(`/api/user-progress/${userId}`, {
               method: "PATCH", 
@@ -1208,7 +1293,7 @@ function loadCard() {
             });
             
             const progressResult = await progressResponse.text();
-            console.log("🔍 Domain-wide progress response:", progressResponse.status, progressResult);
+            dbg("🔍 Domain-wide progress response:", progressResponse.status, progressResult);
           }
         }
       } catch (err) {
@@ -1399,7 +1484,7 @@ document.getElementById("mode-select").addEventListener("change", async (event) 
     currentMode = document.getElementById("mode-select").value;
     isTestMode = currentMode === 'test';
     
-    console.log("🔍 Mode changed to:", currentMode, "isTestMode:", isTestMode);
+  dbg("🔍 Mode changed to:", currentMode, "isTestMode:", isTestMode);
     
     // Update visual indicators for current mode immediately
     updateModeIndicators();

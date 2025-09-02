@@ -61,6 +61,21 @@ Recent changes (delta)
 - Added small utility scripts used during development: `scripts/check-db.js`, `scripts/test-user.js`, `scripts/clear-current-user.js` — DONE
 - Removed admin UI links/assets from the main app flow and updated references — DONE
 
+## Recent UI fixes (toggle overlap / scrollbar)
+
+- Problem: the floating dark-mode toggle could overlap the Mode/Difficulty controls at narrow widths; hiding it previously left a tiny reserved area that caused a horizontal scrollbar at the narrow limit.
+- Fix implemented: `js/flashcards.js` overlap watcher was updated to (1) conservatively detect overlap, (2) add the existing fade class (`.hidden-by-overlap`) and then set `display: none` after the hide transition so the toggle no longer reserves layout space. On reveal the code restores `display` before removing the hidden class so the reveal animates correctly.
+- Defensive CSS: `css/flashcards.css` now includes a defensive selector to ensure `display:none` is respected and `body.flashcards-page { overflow-x: hidden; }` was added to prevent platform-specific sub-pixel rounding producing a tiny scrollbar.
+- Files changed (UI fix delta):
+	- `js/flashcards.js` — added display:none cleanup after transition and ensured reveal restores display before animating.
+	- `css/flashcards.css` — defensive `display:none` rule and `overflow-x: hidden` for `.flashcards-page`.
+
+- Verification: manual interactive verification performed by shrinking the window to the previously failing breakpoint — toggle hides, no horizontal scrollbar appears, and normal layouts at wider widths are unchanged (confirmed locally).
+
+- Notes / next steps:
+	- If you prefer a purely CSS solution or a different UX (smaller inline icon, move toggle into header), I can implement that instead; current approach is conservative and preserves the animation.
+	- If any platform shows a subtle scrollbar, we can tune the overlap buffer (in `js/flashcards.js`) or replace the page-level overflow guard with a more targeted layout tweak.
+
 ## New feature tasks (WIP)
 
 These remaining items need UI wiring/testing and are next:
