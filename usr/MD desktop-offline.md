@@ -143,3 +143,42 @@ These are new, requested app-level behaviors to implement. Mark items as WIP now
 - Manual verification: open app, log in as sample user, complete a deck, confirm Progress page updates and saved state after restart.
 
 If you'd like, I can implement (1) first-page username flow now (UI + localApi changes + preload methods), then follow with (2) the progress endpoints and UI wiring. Tell me which to implement first and I'll start making the changes and run the app to verify.
+
+## Recent interactive fixes (progress & flashcards)
+
+- Prefer IPC over network when running under file://: renderer pages now use the preload API (`window.api.*`) where available and only fall back to network fetch on http(s). This eliminated file:///api/... errors when running the packaged/electron build.
+- Normalized card payload handling in `js/flashcards.js` so cards returned from the local SQLite API (which contain `content` + `metadata`) render correctly in the UI.
+- Fixed Casual/Test-mode ReferenceError by declaring `testStartData` at module scope and guarded test-only logic.
+- Implemented save helpers used by the renderer (`saveProgress`, `saveTestCompletion`, `saveUserUnlock`) and added an event dispatch (`CustomEvent('kemmei:testSaved')`) after a save so other pages (Progress) refresh in response.
+- Reworked `js/progress.js` percent-indicator logic to avoid incorrect parent-level propagation:
+	- Replaced permissive substring matching with strict token-based matching of stored keys (cert:domain:sub:difficulty).
+	- Ensured flashcard-derived percents only apply when the stored entry's difficulty token matches the requested difficulty (so an Easy result doesn't show up on Medium/Hard indicators).
+	- Fixed a refactor-induced ReferenceError (`normalizeKeyPart`) and removed remaining dangling references.
+
+These changes were tested interactively: running a subdomain Test (2.2) now only updates the intended subdomain/difficulty indicator and does not overwrite parent-level percents.
+
+## Unlocking policy (decision needed)
+
+We still need to decide the unlocking rule for progressing domain -> next difficulty. Options and recommendation:
+
+- Option A — Domain Test Only: require an explicit domain-level Test-mode result (key: `cert:domain:all:difficulty`) with score >= 90%.
+	- Pros: ensures integrated mastery; simple and strict.
+	- Cons: burdensome for large domains (many cards) and may discourage learners.
+
+- Option B — Aggregated Subdomain Mastery: allow unlocking if the weighted average of subdomain-level results (by card-count) meets the threshold (e.g., >= 90%), plus safeguards: at least X% coverage (suggest 80% by card-count) and no subdomain below a minimum (suggest 70%).
+	- Pros: practical; supports chunked learning and incremental progress.
+	- Cons: requires additional bookkeeping (card counts) and careful thresholds to avoid gaming.
+
+- Recommendation (practical hybrid): support both — unlock when either:
+	1) A domain-level Test (cert:domain:all:difficulty) >= 90% is recorded; OR
+	2) Aggregated subdomain mastery meets thresholds (weighted average >= 90%, coverage >= 80%, per-subdomain minimum >= 70%).
+
+This hybrid balances pedagogy with usability: learners who want to prove integrated knowledge can take the domain test; learners who study subdomains can earn the unlock by demonstrating mastery across the parts.
+
+Implementation notes:
+- Use `testCompletions` (cert:domain:sub:difficulty) as authoritative when available; fall back to `userProgress` flashcard-derived percents when needed.
+- Compute weights from card counts in `data/cards/*` or maintain card-count metadata in `domainmap`.
+- Persist unlocks using the existing `saveUserUnlock(userId, key, payload)` API.
+- Add telemetry when an unlock is granted indicating which rule was used (domain-test vs aggregated) so thresholds can be tuned.
+
+If you want, I can implement the hybrid decision logic now and wire it into the unlock-button handlers and an admin toggle to pick strict vs hybrid behavior.

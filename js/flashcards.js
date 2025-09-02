@@ -6,6 +6,7 @@ function dbg(...args) { if (DEBUG) console.log(...args); }
 let domainMaps = {};
 let subdomainMaps = {};
 let certNames = {};
+let testStartData = null;
 
 async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false) {
   // In test mode, don't update progress during the session - only at the end
@@ -18,11 +19,22 @@ async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false
   if (!userId) return;
 
   try {
-    await fetch(`/api/user-progress/${userId}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ key, correct, viewedOnly })
-    });
+    // Prefer IPC save helper when available to avoid network calls under file://
+    const payload = { key, correct, viewedOnly };
+    if (window.api && typeof window.api.saveProgress === 'function') {
+      await window.api.saveProgress(userId, key, payload);
+    } else if (window.api && typeof window.api.rpc === 'function') {
+      await window.api.rpc(`user-progress/${userId}`, 'PATCH', payload);
+    } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+      await fetch(`/api/user-progress/${userId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+    } else {
+      // Running under file:// with no IPC bridge — skip network update
+      console.warn('Skipping user-progress network patch: running under file:// with no IPC bridge');
+    }
   } catch (err) {
     console.error("❌ Failed to update user progress:", err);
   }
@@ -107,15 +119,20 @@ async function loadDomainMap() {
   }
 
   try {
-    const res = await fetch("/api/domainmap");
-    if (res && res.ok) {
-      const data = await res.json();
-      domainMaps = data.domainMaps || {};
-      subdomainMaps = data.subdomainMaps || {};
-      certNames = data.certNames || {};
-      return data;
+    // Only attempt network fetch if not running from file:// to avoid file:///api/... errors
+    if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+      const res = await fetch("/api/domainmap");
+      if (res && res.ok) {
+        const data = await res.json();
+        domainMaps = data.domainMaps || {};
+        subdomainMaps = data.subdomainMaps || {};
+        certNames = data.certNames || {};
+        return data;
+      }
+      throw new Error('api domainmap not ok')
+    } else {
+      throw new Error('skip network domainmap fetch under file://');
     }
-    throw new Error('api domainmap not ok')
   } catch (err) {
     console.warn('api domainmap failed, trying local data/domainmap.json', err && err.message);
     try {
@@ -302,46 +319,76 @@ async function getUnlockedDifficulties() {
   if (!userId) {
     return ["easy"]; // Only Easy is available when no user is logged in
   }
-
   try {
-    // Try network fetch first (this will use the fetch shim in Electron). If it fails,
-    // fall back to ipc-exposed helpers on window.api.
+    // Prefer IPC helpers (Electron preload) to avoid making `/api/...` network
+    // calls which become `file:///.../api/...` when running from file://.
     let userData = {};
-    try {
-      const res = await fetch(`/api/user-progress/${userId}`);
-      if (res && res.ok) userData = await res.json();
-      else console.warn('user-progress fetch returned non-ok', res && res.status);
-    } catch (e) {
-      if (window.api && typeof window.api.getUserProgress === 'function') {
-        try { userData = await window.api.getUserProgress(userId); } catch (ee) { console.warn('ipc getUserProgress failed', ee); }
-      } else {
-        console.warn('fetch failed for user-progress and no ipc fallback available', e && e.message);
-      }
-    }
-
-    // Get test completions to determine unlocked difficulties
     let testCompletions = {};
-    try {
-      const testRes = await fetch(`/api/test-completions/${userId}`);
-      if (testRes && testRes.ok) testCompletions = await testRes.json();
-    } catch (e) {
-      if (window.api && typeof window.api.getTestCompletions === 'function') {
-        try { testCompletions = await window.api.getTestCompletions(userId); } catch (ee) { console.warn('ipc getTestCompletions failed', ee); }
-      } else {
-        console.warn('fetch failed for test-completions and no ipc fallback available', e && e.message);
+    let unlocks = {};
+
+    if (window.api) {
+      // Try IPC-first
+      try {
+        if (typeof window.api.getUserProgress === 'function') {
+          userData = await window.api.getUserProgress(userId) || {};
+        }
+      } catch (e) {
+        console.warn('ipc getUserProgress failed', e && e.message);
+      }
+
+      try {
+        if (typeof window.api.getTestCompletions === 'function') {
+          testCompletions = await window.api.getTestCompletions(userId) || {};
+        }
+      } catch (e) {
+        console.warn('ipc getTestCompletions failed', e && e.message);
+      }
+
+      try {
+        if (typeof window.api.getUserUnlocks === 'function') {
+          unlocks = await window.api.getUserUnlocks(userId) || {};
+        }
+      } catch (e) {
+        console.warn('ipc getUserUnlocks failed', e && e.message);
       }
     }
 
-    // Get unlock preferences from the new unlock system
-    let unlocks = {};
-    try {
-      const unlocksRes = await fetch(`/api/user-unlocks/${userId}`);
-      if (unlocksRes && unlocksRes.ok) unlocks = await unlocksRes.json();
-    } catch (e) {
-      if (window.api && typeof window.api.getUserUnlocks === 'function') {
-        try { unlocks = await window.api.getUserUnlocks(userId); } catch (ee) { console.warn('ipc getUserUnlocks failed', ee); }
-      } else {
-        console.warn('fetch failed for user-unlocks and no ipc fallback available', e && e.message);
+    // If IPC didn't provide data and we're running under a proper http(s) origin,
+    // fall back to network fetch as a last resort. Avoid network fetch when
+    // running under file:// (it will produce file:///api/... errors).
+    const canNetwork = document.location.protocol !== 'file:' && typeof fetch === 'function';
+    if (canNetwork) {
+      try {
+        if (!userData || Object.keys(userData).length === 0) {
+          const res = await fetch(`/api/user-progress/${userId}`);
+          if (res && res.ok) userData = await res.json();
+        }
+      } catch (e) {
+        console.warn('network fetch failed for user-progress', e && e.message);
+      }
+
+      try {
+        if (!testCompletions || Object.keys(testCompletions).length === 0) {
+          const r = await fetch(`/api/test-completions/${userId}`);
+          if (r && r.ok) testCompletions = await r.json();
+        }
+      } catch (e) {
+        console.warn('network fetch failed for test-completions', e && e.message);
+      }
+
+      try {
+        if (!unlocks || Object.keys(unlocks).length === 0) {
+          const ur = await fetch(`/api/user-unlocks/${userId}`);
+          if (ur && ur.ok) unlocks = await ur.json();
+        }
+      } catch (e) {
+        console.warn('network fetch failed for user-unlocks', e && e.message);
+      }
+    } else {
+      // Running from file:// and no IPC available — avoid attempting /api fetches
+      if (!window.api) {
+        console.warn('Running under file:// with no IPC bridge; skipping /api fetch and defaulting to Easy only');
+        return ["easy"];
       }
     }
     
@@ -514,13 +561,18 @@ async function fetchCards(unlockedDifficulties = null) {
         console.warn('ipc getCards failed, falling back to fetch', e && e.message);
       }
     }
-    if ((!data || !data.length) && typeof fetch === 'function') {
-      try {
-        const r = await fetch(url);
-        if (r && r.ok) data = await r.json();
-        else console.warn('fetch returned non-ok for', url, r && r.status);
-      } catch (err) {
-        console.warn('fetch failed for', url, err && err.message);
+    if ((!data || !data.length)) {
+      // Only attempt a network fetch if not running under file:// to avoid file:///api/... errors
+      if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+        try {
+          const r = await fetch(url);
+          if (r && r.ok) data = await r.json();
+          else console.warn('fetch returned non-ok for', url, r && r.status);
+        } catch (err) {
+          console.warn('fetch failed for', url, err && err.message);
+        }
+      } else {
+        console.warn('Skipping network fetch for cards under file://; no IPC available');
       }
     }
     allCards = data || [];
@@ -543,12 +595,16 @@ async function fetchCards(unlockedDifficulties = null) {
       }
       // fallback to network
       const url = `/api/cards?${query.toString()}`;
-      try {
-        const r = await fetch(url);
-        if (r && r.ok) return await r.json();
-        console.warn('fetch returned non-ok for', url, r && r.status);
-      } catch (err) {
-        console.warn('fetch failed for', url, err && err.message);
+      if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+        try {
+          const r = await fetch(url);
+          if (r && r.ok) return await r.json();
+          console.warn('fetch returned non-ok for', url, r && r.status);
+        } catch (err) {
+          console.warn('fetch failed for', url, err && err.message);
+        }
+      } else {
+        console.warn('Skipping network fetch for cards under file://; no IPC available');
       }
       return [];
     });
@@ -563,8 +619,16 @@ async function fetchCards(unlockedDifficulties = null) {
   } else {
     // No difficulty specified - fetch all cards (shouldn't happen in normal flow)
   const url = `/api/cards?${baseQuery.toString()}`;
-    const res = await fetch(url);
-    allCards = await res.json();
+    if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+      try {
+        const res = await fetch(url);
+        if (res && res.ok) allCards = await res.json();
+      } catch (e) {
+        console.warn('fetch failed for all-cards', e && e.message);
+      }
+    } else {
+      console.warn('Skipping network fetch for all cards under file://');
+    }
   }
   // Fallback: if no cards were returned from API/ipc (e.g., running from file://),
   // attempt to load cards directly from the bundled data/ directory using the
@@ -1009,6 +1073,10 @@ subdomainSelect.addEventListener("change", (event) => {
     correctCount = 0;
     loadCard();
   }
+            // Notify other windows/pages that a test save occurred so they can refresh
+            try {
+              window.dispatchEvent(new CustomEvent('kemmei:testSaved', { detail: { userId, cert: testStartData.cert, domain: testStartData.domain, subdomain: testStartData.subdomain, difficulty: testStartData.difficulty, score: percent } }));
+            } catch (e) { /* ignore */ }
 
 function loadCard() {
   const q = questions[currentIndex];
@@ -1224,76 +1292,71 @@ function loadCard() {
           return;
         }
         
+        // Resolve user id from localStorage, falling back to preload's current user
+        if (!userId && window.userApi && typeof window.userApi.getCurrentUserId === 'function') {
+          try { const cur = await window.userApi.getCurrentUserId(); if (cur) userId = cur; } catch (e) { }
+        }
+
         if (userId) {
           dbg("🔍 Recording test completion for:", testStartData);
           dbg("🔍 Score:", percent, "Correct:", correctCount, "Total:", questions.length);
-          
-          // 1. Record test completion for unlock tracking
+
           const testCompletionData = {
             cert: testStartData.cert,
             domain: testStartData.domain === "All" ? null : testStartData.domain.split(" ")[0],
-            subdomain: testStartData.subdomain, // Include subdomain for flexible testing
+            subdomain: testStartData.subdomain,
             difficulty: testStartData.difficulty.toLowerCase(),
             score: percent,
             totalQuestions: testStartData.totalQuestions,
             correctAnswers: correctCount,
             completedAt: new Date()
           };
-          
-          dbg("🔍 Sending test completion data:", testCompletionData);
-          
-          const testResponse = await fetch(`/api/test-completion/${userId}`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(testCompletionData)
-          });
-          
-          const testResult = await testResponse.text();
-          dbg("🔍 Test completion response:", testResponse.status, testResult);
-          
-          // 2. Record progress for each subdomain tested (so scores appear on progress page)
-          if (testStartData.subdomain) {
-            // Specific subdomain test - record progress for that subdomain
-            // Use the cert value (ID) not the full display name to match progress page expectations
-            const progressKey = `${testStartData.cert}:${testStartData.domain.split(" ")[0]}:${testStartData.subdomain}:${testStartData.difficulty.toLowerCase()}`;
-            const progressData = { 
-              key: progressKey.replace(/\./g, "~"), 
-              correct: correctCount,
-              total: questions.length,
-              isTestResult: true // Flag to indicate this is from a test
-            };
-            
-            dbg("🔍 Sending progress data:", progressData);
-            
-            const progressResponse = await fetch(`/api/user-progress/${userId}`, {
-              method: "PATCH",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(progressData)
-            });
-            
-            const progressResult = await progressResponse.text();
-            dbg("🔍 Progress response:", progressResponse.status, progressResult);
-          } else {
-            // Domain-wide test - record progress proportionally across all subdomains in that domain
-            // This is more complex and might need backend logic to distribute the score
-            const progressKey = `${testStartData.cert}:${testStartData.domain.split(" ")[0]}:all:${testStartData.difficulty.toLowerCase()}`;
-            const progressData = { 
-              key: progressKey.replace(/\./g, "~"), 
-              correct: correctCount,
-              total: questions.length,
-              isTestResult: true // Flag to indicate this is from a test
-            };
-            
-            dbg("🔍 Sending domain-wide progress data:", progressData);
-            
-            const progressResponse = await fetch(`/api/user-progress/${userId}`, {
-              method: "PATCH", 
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(progressData)
-            });
-            
-            const progressResult = await progressResponse.text();
-            dbg("🔍 Domain-wide progress response:", progressResponse.status, progressResult);
+
+          // Use preload save helper when available for reliable IPC
+          try {
+            if (window.api && typeof window.api.saveTestCompletion === 'function') {
+              await window.api.saveTestCompletion(userId, `${testStartData.cert}:${testStartData.domain}:${testStartData.subdomain || 'all'}:${testStartData.difficulty}`, testCompletionData);
+            } else if (window.api && typeof window.api.rpc === 'function') {
+              await window.api.rpc(`test-completions/${userId}`, 'POST', testCompletionData);
+            } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+              await fetch(`/api/test-completion/${userId}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(testCompletionData) });
+            } else {
+              console.warn('Skipping network test-completion POST: running under file:// with no IPC bridge');
+            }
+          } catch (e) {
+            console.warn('Failed to save test completion', e && e.message);
+          }
+
+          // Record progress (patch) - prefer preload saveProgress helper
+          try {
+            const difficulty = testStartData.difficulty.toLowerCase();
+            if (testStartData.subdomain) {
+              const progressKey = `${testStartData.cert}:${testStartData.domain.split(' ')[0]}:${testStartData.subdomain}:${difficulty}`;
+              const progressData = { key: progressKey.replace(/\./g, '~'), correct: correctCount, total: questions.length, isTestResult: true };
+              if (window.api && typeof window.api.saveProgress === 'function') {
+                await window.api.saveProgress(userId, progressData.key, progressData);
+              } else if (window.api && typeof window.api.rpc === 'function') {
+                await window.api.rpc(`user-progress/${userId}`, 'PATCH', progressData);
+              } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+                await fetch(`/api/user-progress/${userId}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(progressData) });
+              } else {
+                console.warn('Skipping network user-progress PATCH: running under file:// with no IPC bridge');
+              }
+            } else {
+              const progressKey = `${testStartData.cert}:${testStartData.domain.split(' ')[0]}:all:${difficulty}`;
+              const progressData = { key: progressKey.replace(/\./g, '~'), correct: correctCount, total: questions.length, isTestResult: true };
+              if (window.api && typeof window.api.saveProgress === 'function') {
+                await window.api.saveProgress(userId, progressData.key, progressData);
+              } else if (window.api && typeof window.api.rpc === 'function') {
+                await window.api.rpc(`user-progress/${userId}`, 'PATCH', progressData);
+              } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+                await fetch(`/api/user-progress/${userId}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(progressData) });
+              } else {
+                console.warn('Skipping network user-progress PATCH: running under file:// with no IPC bridge');
+              }
+            }
+          } catch (e) {
+            console.warn('Failed to save progress', e && e.message);
           }
         }
       } catch (err) {

@@ -1,27 +1,128 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
   const statsDiv = document.getElementById("progressStats");
   const resetBtn = document.getElementById("resetProgress");
-  const userId = localStorage.getItem("userId");
-  if (!userId) return;
 
-  // Load and render progress
-  try {
-    const [progressRes, domainRes, unlocksRes, testCompletionsRes] = await Promise.all([
-      fetch(`/api/user-progress/${userId}`),
-      fetch("/data/domainmap.json"),
-      fetch(`/api/user-unlocks/${userId}`),
-      fetch(`/api/test-completions/${userId}`)
-    ]);
+  // Listen for test saves from other pages (flashcards) and refresh
+  window.addEventListener('kemmei:testSaved', (ev) => {
+    console.log('Received kemmei:testSaved event, refreshing progress view');
+    refreshProgress();
+  });
 
-    const progress = await progressRes.json();
-    const domainMap = await domainRes.json();
-    const unlocks = unlocksRes.ok ? await unlocksRes.json() : {};
-    const testCompletions = testCompletionsRes.ok ? await testCompletionsRes.json() : {};
+  // Kick off initial load
+  refreshProgress();
+  // refreshProgress is defined below and performs the operations including user resolution
+  async function refreshProgress() {
+    // Resolve userId: localStorage -> preload helper getCurrentUserId -> getCurrentUser()
+    let userIdLocal = localStorage.getItem("userId");
+    if (!userIdLocal && window.userApi) {
+      try {
+        if (typeof window.userApi.getCurrentUserId === 'function') {
+          const cur = await window.userApi.getCurrentUserId();
+          if (cur) userIdLocal = cur;
+        }
+        if (!userIdLocal && typeof window.userApi.getCurrentUser === 'function') {
+          const cu = await window.userApi.getCurrentUser();
+          if (cu && cu.id) userIdLocal = cu.id;
+        }
+      } catch (e) {
+        console.warn('Could not resolve current user via preload API', e && e.message);
+      }
+    }
 
-    renderProgressTree(progress, domainMap, unlocks, testCompletions);
-  } catch (err) {
-    console.error("❌ Failed to load user progress:", err);
-    if (statsDiv) statsDiv.textContent = "Error loading progress.";
+    // Load and render progress; always fetch domainMap so we can render all titles
+    try {
+      let domainMap = { certNames: {}, domainMaps: {}, subdomainMaps: {} };
+      let domainErrMsg = null;
+      try {
+        if (window.api && typeof window.api.rpc === 'function') {
+          const rpcRes = await window.api.rpc('domainmap', 'GET');
+          if (rpcRes && rpcRes.status >= 200 && rpcRes.status < 300) domainMap = rpcRes.body;
+          else {
+            domainErrMsg = `RPC ${rpcRes && rpcRes.status}`;
+            console.warn('domainmap rpc returned non-ok', rpcRes && rpcRes.status);
+          }
+        } else if (window.api && typeof window.api.getDomainMap === 'function') {
+          const dm = await window.api.getDomainMap();
+          domainMap = dm || domainMap;
+        } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+          const domainRes = await fetch('/api/domainmap');
+          if (domainRes && domainRes.ok) domainMap = await domainRes.json();
+          else {
+            console.warn('domainmap fetch returned non-ok', domainRes && domainRes.status);
+            domainErrMsg = `HTTP ${domainRes && domainRes.status}`;
+          }
+        } else {
+          // last resort: attempt bundled file (works under file://)
+          try {
+            const res2 = await fetch('data/domainmap.json');
+            if (res2 && res2.ok) domainMap = await res2.json();
+          } catch (e) {
+            console.warn('bundled domainmap failed', e && e.message);
+          }
+        }
+      } catch (e) {
+        domainErrMsg = e && e.message ? e.message : String(e);
+        console.warn('domainmap fetch failed', domainErrMsg);
+      }
+
+      let progress = {};
+      let unlocks = {};
+      let testCompletions = {};
+
+      if (userIdLocal) {
+        try {
+          if (window.api && typeof window.api.getUserProgress === 'function') {
+            const res = await window.api.getUserProgress(userIdLocal);
+            if (res && res.status >= 200 && res.status < 300) progress = res.body;
+            else if (res && res.body && typeof res.body === 'object') progress = res.body;
+            else console.warn('user-progress rpc returned non-ok', res && res.status);
+          } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+            const progressRes = await fetch(`/api/user-progress/${userIdLocal}`);
+            if (progressRes && progressRes.ok) progress = await progressRes.json();
+          }
+        } catch (e) {
+          console.warn('user-progress fetch failed', e && e.message);
+        }
+
+        try {
+          if (window.api && typeof window.api.getUserUnlocks === 'function') {
+            const res = await window.api.getUserUnlocks(userIdLocal);
+            if (res && res.status >= 200 && res.status < 300) unlocks = res.body;
+            else if (res && res.body && typeof res.body === 'object') unlocks = res.body;
+            else console.warn('user-unlocks rpc returned non-ok', res && res.status);
+          } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+            const unlocksRes = await fetch(`/api/user-unlocks/${userIdLocal}`);
+            if (unlocksRes && unlocksRes.ok) unlocks = await unlocksRes.json();
+          }
+        } catch (e) {
+          console.warn('user-unlocks fetch failed', e && e.message);
+        }
+
+        try {
+          if (window.api && typeof window.api.getTestCompletions === 'function') {
+            const res = await window.api.getTestCompletions(userIdLocal);
+            if (res && res.status >= 200 && res.status < 300) testCompletions = res.body;
+            else if (res && res.body && typeof res.body === 'object') testCompletions = res.body;
+            else console.warn('test-completions rpc returned non-ok', res && res.status);
+          } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+            const tcRes = await fetch(`/api/test-completions/${userIdLocal}`);
+            if (tcRes && tcRes.ok) testCompletions = await tcRes.json();
+          }
+        } catch (e) {
+          console.warn('test-completions fetch failed', e && e.message);
+        }
+      }
+
+      try {
+        renderProgressTree(progress, domainMap, unlocks, testCompletions, domainErrMsg);
+      } catch (e) {
+        console.error('Failed rendering progress tree', e && e.message);
+        if (statsDiv) statsDiv.textContent = 'Error rendering progress: ' + (e && e.message ? e.message : 'unknown');
+      }
+    } catch (err) {
+      console.error("❌ Failed to load user progress:", err);
+      if (statsDiv) statsDiv.textContent = "Error loading progress: " + (err && err.message ? err.message : 'unknown');
+    }
   }
 
   // Modal and reset logic
@@ -44,11 +145,17 @@ document.addEventListener("DOMContentLoaded", async () => {
       confirmModal.classList.add("hidden");
 
       try {
-  const res = await fetch(`/api/user-progress/${userId}`, {
-          method: "DELETE",
-        });
+  // Prefer IPC helper, otherwise only network-delete when not running under file://
+  let res = null;
+  if (window.api && typeof window.api.rpc === 'function') {
+    try { res = await window.api.rpc(`user-progress/${userId}`, 'DELETE'); } catch (e) { console.warn('rpc delete user-progress failed', e && e.message); }
+  } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+    try { res = await fetch(`/api/user-progress/${userId}`, { method: 'DELETE' }); } catch (e) { console.warn('network delete user-progress failed', e && e.message); }
+  } else {
+    console.warn('Skipping user-progress DELETE: running under file:// with no IPC bridge');
+  }
 
-        if (res.ok) {
+        if (res && (res.ok || (res.status && res.status >= 200 && res.status < 300))) {
           showToast("✔️ Your progress has been cleared successfully.", 'success');
           setTimeout(() => {
             location.reload();
@@ -89,17 +196,17 @@ async function toggleUnlock(certId, domainId, level) {
   saveExpandedState();
 
   try {
-  const res = await fetch(`/api/user-unlocks/${userId}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        certId,
-        domainId,
-        level
-      }),
-    });
+  let res = null;
+  const payload = { certId, domainId, level };
+  if (window.api && typeof window.api.saveUserUnlock === 'function') {
+    try { res = await window.api.saveUserUnlock(userId, `${certId}:${domainId}:${level}`, payload); } catch (e) { console.warn('ipc saveUserUnlock failed', e && e.message); }
+  } else if (window.api && typeof window.api.rpc === 'function') {
+    try { res = await window.api.rpc(`user-unlocks/${userId}`, 'POST', payload); } catch (e) { console.warn('rpc user-unlocks failed', e && e.message); }
+  } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+    try { res = await fetch(`/api/user-unlocks/${userId}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); } catch (e) { console.warn('network user-unlocks POST failed', e && e.message); }
+  } else {
+    console.warn('Skipping user-unlocks POST: running under file:// with no IPC bridge');
+  }
 
     if (res.ok) {
       const result = await res.json();
@@ -170,11 +277,26 @@ function restoreExpandedState() {
 }
 
 // Call restore after rendering tree
-function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
+function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, domainErrMsg) {
   const container = document.getElementById("progressStats");
+  if (!container) {
+    console.warn('progressStats container not found');
+    return;
+  }
   container.innerHTML = "";
 
-  const { certNames, domainMaps, subdomainMaps } = domainMap;
+  const certNames = (domainMap && domainMap.certNames) ? domainMap.certNames : {};
+  const domainMaps = (domainMap && domainMap.domainMaps) ? domainMap.domainMaps : {};
+  const subdomainMaps = (domainMap && domainMap.subdomainMaps) ? domainMap.subdomainMaps : {};
+
+  // If domainMap is effectively empty, show a small hint rather than throwing
+  if (Object.keys(certNames).length === 0) {
+    const hint = document.createElement('div');
+    hint.className = 'progress-hint';
+    hint.textContent = 'No certification mapping found (domainmap). If this is unexpected, check your installation.' + (domainErrMsg ? (' Error: ' + domainErrMsg) : '');
+    container.appendChild(hint);
+    return;
+  }
 
   const progressTree = {};
   // Build a lookup structure for user progress
@@ -196,43 +318,140 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions) {
     const difficulties = ["easy", "medium", "hard"];
     const colors = { easy: "🟢", medium: "🟡", hard: "🔴" };
     let indicators = "";
-    // Replace dots with underscores to match database key format
-    const safeCertId = certId.replace(/\./g, '_');
-    const safeDomainId = domainId ? domainId.replace(/\./g, '_') : null;
-    let easyKey = safeDomainId ? `${safeCertId}:${safeDomainId}:easy` : `${safeCertId}:all:easy`;
-    let easyEntry = testCompletions && testCompletions[easyKey];
-    let easyPercent = easyEntry && typeof easyEntry.score === "number" ? (easyEntry.score > 90 ? 100 : easyEntry.score) : 0;
-    
-    // If no test completion data, fall back to flashcard progress
-    if (easyPercent === 0 && userProgress) {
-      // Look for flashcard progress data
-      let flashcardKey = domainId ? `${certId}:${domainId.replace('.', '-')}:${domainId}:easy` : `${certId}:all:easy`;
-      let flashcardEntry = userProgress[flashcardKey];
-      if (flashcardEntry && flashcardEntry.total > 0) {
-        easyPercent = Math.round((flashcardEntry.correct / flashcardEntry.total) * 100);
-      }
+
+    // Helper: normalize a token (cert/domain/sub) for comparison.
+    function normalizeToken(t) {
+      if (!t && t !== 0) return '';
+      return String(t).replace(/~/g, '.').replace(/_/g, '.').trim();
     }
-    
-    // If easy is 0, pale out medium/hard
-    let paleClass = easyPercent === 0 ? "pale" : "";
-    for (const diff of difficulties) {
-      let key = safeDomainId ? `${safeCertId}:${safeDomainId}:${diff}` : `${safeCertId}:all:${diff}`;
-      let entry = testCompletions && testCompletions[key];
-      let percent = entry && typeof entry.score === "number" ? (entry.score > 90 ? 100 : entry.score) : 0;
-      
-      // If no test completion data, fall back to flashcard progress
-      if (percent === 0 && userProgress) {
-        let flashcardKey = domainId ? `${certId}:${domainId.replace('.', '-')}:${domainId}:${diff}` : `${certId}:all:${diff}`;
-        let flashcardEntry = userProgress[flashcardKey];
-        if (flashcardEntry && flashcardEntry.total > 0) {
-          percent = Math.round((flashcardEntry.correct / flashcardEntry.total) * 100);
+
+    // Parse a stored key into tokens [cert, domain, sub, difficulty]
+    function parseStoredKey(key) {
+      const raw = String(key || '');
+      const parts = raw.split(':').map(p => p.trim());
+      return parts; // may be shorter/longer
+    }
+
+    // Strict matching for test completions: prefer exact token matches where possible.
+    // certOnly: when domainPart==null -> only consider keys where domain token is 'all' (title-level)
+    // domainOnly: when domain provided without sub -> consider keys where sub token === 'all'
+    // subdomain: when both domain and sub provided -> match exact cert:domain:sub:diff
+    function findTestScoreStrict(cert, domainPart, subPart, difficulty) {
+      if (!testCompletions) return null;
+      const wantedCert = normalizeToken(cert);
+      const wantedDomain = domainPart ? normalizeToken(domainPart).split(' ')[0] : null; // compare numeric id (e.g., '2.0') if present
+      const wantedSub = subPart ? normalizeToken(subPart).split(' ')[0] : null;
+
+      for (const [k, v] of Object.entries(testCompletions)) {
+        const parts = parseStoredKey(k);
+        if (parts.length < 4) continue; // expecting cert:domain:sub:difficulty
+        const [kc, kd, ks, kdifficulty] = parts;
+        const kcNorm = normalizeToken(kc);
+        const kdNorm = normalizeToken(kd).split(' ')[0];
+        const ksNorm = normalizeToken(ks).split(' ')[0];
+        const kdiffNorm = normalizeToken(kdifficulty).toLowerCase();
+
+        if (kdiffNorm !== difficulty) continue;
+        if (kcNorm !== normalizeToken(wantedCert)) continue;
+
+        // Subdomain-level request: require exact domain & sub match
+        if (wantedDomain && wantedSub) {
+          if (kdNorm === wantedDomain && ksNorm === wantedSub) {
+            const score = v && (v.score || v.score === 0) ? Number(v.score) : (v && v.data && v.data.score ? Number(v.data.score) : null);
+            if (typeof score === 'number' && !isNaN(score)) return Math.min(Math.round(score), 100);
+          }
+          continue;
+        }
+
+        // Domain-level request (no sub): accept keys where sub token is 'all' for domain-level completions
+        if (wantedDomain && !wantedSub) {
+          if (kdNorm === wantedDomain && (ksNorm === 'all' || ksNorm === '' || ksNorm === 'all')) {
+            const score = v && (v.score || v.score === 0) ? Number(v.score) : (v && v.data && v.data.score ? Number(v.data.score) : null);
+            if (typeof score === 'number' && !isNaN(score)) return Math.min(Math.round(score), 100);
+          }
+          continue;
+        }
+
+        // Cert-level request (no domain): accept keys where domain token is 'all' and sub is 'all'
+        if (!wantedDomain) {
+          if ((kdNorm === 'all' || kdNorm === '') && (ksNorm === 'all' || ksNorm === '')) {
+            const score = v && (v.score || v.score === 0) ? Number(v.score) : (v && v.data && v.data.score ? Number(v.data.score) : null);
+            if (typeof score === 'number' && !isNaN(score)) return Math.min(Math.round(score), 100);
+          }
         }
       }
-      
+      return null;
+    }
+
+    // Search userProgress for flashcard-derived percent
+    function findFlashcardPercent(cert, domain, sub, difficulty) {
+      if (!userProgress) return null;
+      // Strict token matching: compare cert/domain/sub tokens by position.
+      const wantedCert = normalizeToken(cert);
+      const wantedDomain = domain ? normalizeToken(domain).split(' ')[0] : null;
+      const wantedSub = sub ? normalizeToken(sub).split(' ')[0] : null;
+
+      for (const [k, v] of Object.entries(userProgress)) {
+        const rawParts = String(k || '').split(':').map(p => normalizeToken(p));
+        const kc = rawParts[0] || '';
+        const kd = rawParts[1] || 'all';
+        const ks = rawParts[2] || 'all';
+        const kdiff = (rawParts[3] || 'easy').toLowerCase();
+
+        // difficulty must match stored entry
+        if (String(difficulty || 'easy').toLowerCase() !== kdiff) continue;
+
+        if (kc !== wantedCert) continue;
+
+        // Cert-level request: only accept entries where domain and sub are 'all'
+        if (!wantedDomain) {
+          if (!(kd === 'all' || kd === '')) continue;
+        } else {
+          // Domain-level or subdomain-level request
+          if (kd !== wantedDomain) continue;
+        }
+
+        if (wantedSub) {
+          if (ks !== wantedSub) continue;
+        } else {
+          // For domain-level requests, only accept entries with sub='all'
+          if (!(ks === 'all' || ks === '')) continue;
+        }
+
+        const entry = v && v[0] ? v[0] : v; // handle possible array wrapping
+        if (entry && typeof entry.total === 'number' && entry.total > 0) {
+          return Math.round((entry.correct || 0) / entry.total * 100);
+        }
+      }
+      return null;
+    }
+
+    // Parse domainId param to separate domain and sub if provided
+    let domainPart = null;
+    let subPart = null;
+    if (domainId && domainId.includes(':')) {
+      const parts = String(domainId).split(':').map(s => s.trim());
+      domainPart = parts[0] || null;
+      subPart = parts[1] || null;
+    } else if (domainId) {
+      domainPart = domainId;
+    }
+
+    // Determine easy percent first (prefer strict testCompletions, then flashcard progress)
+    let easyPercent = findTestScoreStrict(certId, domainPart, subPart, 'easy');
+    if (easyPercent === null) easyPercent = findFlashcardPercent(certId, domainPart, subPart, 'easy') || 0;
+
+    const paleClass = easyPercent === 0 ? 'pale' : '';
+
+    for (const diff of difficulties) {
+  let percent = findTestScoreStrict(certId, domainPart, subPart, diff);
+  if (percent === null) percent = findFlashcardPercent(certId, domainPart, subPart, diff) || 0;
+
       let show = true;
-      if (diff !== "easy" && easyPercent === 0) show = false;
+      if (diff !== 'easy' && easyPercent === 0) show = false;
       indicators += `<span class='percent-indicator ${diff} ${show ? '' : paleClass}'>${colors[diff]} ${show ? percent + '%' : ''}</span> `;
     }
+
     return indicators.trim();
   }
 

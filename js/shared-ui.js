@@ -1,4 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Ensure a current user exists for all app pages (except the login/index page).
+  // This enforces the single-username-first flow for the offline app and keeps
+  // localStorage.userId in sync for legacy code paths.
+  (async () => {
+    try {
+      if (window.userApi && typeof window.userApi.getCurrentUser === 'function') {
+        const current = await window.userApi.getCurrentUser();
+        // If on index.html leave the page alone so user can log in.
+        const onIndex = location.pathname && location.pathname.endsWith('index.html');
+        if (!current) {
+          // No current user: if not on index, redirect to index for login
+          if (!onIndex) {
+            window.location.href = 'index.html';
+            return;
+          }
+        } else {
+          // Ensure legacy localStorage key is available for pages that still read it
+          try { if (current && current.id) localStorage.setItem('userId', current.id); } catch (e) {}
+        }
+      }
+    } catch (e) {
+      // On any error, be conservative and redirect to index unless we're already there
+      const onIndex = location.pathname && location.pathname.endsWith('index.html');
+      if (!onIndex) window.location.href = 'index.html';
+      return;
+    }
+  })();
   // Global flag to disable admin features in offline build
   window.ADMIN_ENABLED = false;
   // Dark Mode Toggle Logic
