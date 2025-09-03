@@ -147,23 +147,25 @@ body.dark-theme textarea::placeholder {
 }
 
 /* Lightweight tooltip for elements marked with has-tooltip and a title attribute */
-.has-tooltip[title] {
-  position: relative;
+/* Tooltip activation class: elements with .has-tooltip should provide the text
+   via data-tooltip (not title) so we can control rendering and avoid duplicate
+   native browser tooltips. The floating tooltip manager appends a single
+   .progress-tooltip element to the body and positions it to avoid clipping. */
+.has-tooltip {
   cursor: help;
 }
-.has-tooltip[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(100% + 8px);
-  background: rgba(0,0,0,0.8);
+
+/* Floating tooltip element used by progress page JS */
+.progress-tooltip {
+  position: fixed;
+  z-index: 3000;
+  background: rgba(0,0,0,0.88);
   color: #fff;
-  padding: 6px 8px;
+  padding: 8px 12px;
   border-radius: 6px;
-  white-space: nowrap;
-  font-size: 12px;
-  z-index: 2000;
-  pointer-events: none;
-  opacity: 1;
+  font-size: 13px;
+  max-width: min(75vw, 640px);
+  white-space: normal;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: opacity 160ms ease;
 }

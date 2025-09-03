@@ -1177,6 +1177,20 @@ function loadCard() {
   function updateMeta() {
     progressCounter.textContent = `Card ${currentIndex + 1} of ${questions.length}`;
     correctCounter.textContent = `Correct answers: ${correctCount} / ${questions.length}`;
+
+    // If this is the last card in the active deck, change the Next button label
+    // to "Finish" so users know they're at the end of the deck.
+    try {
+      if (nextBtn) {
+        const isLast = (questions && questions.length > 0 && currentIndex === questions.length - 1);
+        nextBtn.textContent = isLast ? 'Finish' : 'Next';
+        // Toggle a class so CSS can recolor the button when it's the final action
+        nextBtn.classList.toggle('finish', isLast);
+      }
+    } catch (e) {
+      // Defensive: don't let UI label update errors break the flow
+      console.warn('Failed to update next button label', e && e.message);
+    }
   }
 
   function checkAnswer() {

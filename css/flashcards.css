@@ -145,6 +145,13 @@ body.flashcards-page {
   color: #004085;
 }
 
+/* Finish button: use the same green used for correct answers for a festive finish */
+.btn.finish {
+  background-color: #4caf50;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.25);
+}
+
 .btn.abort {
   background-color: #f8d7da;
   color: #721c24;
@@ -533,6 +540,12 @@ body.dark-theme .btn {
 body.dark-theme .btn.primary {
   background-color: #3182ce;
   color: white;
+}
+
+body.dark-theme .btn.finish {
+  background-color: #10b981; /* slightly brighter for dark backgrounds */
+  color: #042a16;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.18);
 }
 
 body.dark-theme .btn.abort {

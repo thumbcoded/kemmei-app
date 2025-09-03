@@ -46,6 +46,14 @@ Recent changes (delta)
 - Rewrote many renderer fetch URLs to use relative `/api/...` so the preload fetch-to-IPC shim routes requests to the local API (files updated include `js/flashcards.js`, `js/progress.js`, `js/titmgr.js`, `js/dropdowns.js`, `js/concur.js`, `js/register.js`, etc.).
 - Fixed and cleaned `js/progress.js` (syntax and logic issues), rebuilt progress-tree rendering to consume persisted progress/test-completion/unlock data from the local API.
 - Seed/import tooling: `scripts/seed-local.js` imports `data/cards/*` into SQLite; seed previously reported 2811 cards imported.
+ - UI: changed flashcards navigation so the right-side 'Next' button shows "Finish" on the final card and is recolored green for emphasis (files: `js/flashcards.js`, `css/flashcards.css`).
+ - Progress UI: replaced native/title tooltips on progress indicators with a single floating tooltip manager to avoid duplicate tooltips and clipping; removed tooltips on subdomains until unlock schema is settled (files: `js/progress.js`, `css/shared-ui.css`).
+
+Recent UI tweaks
+
+- Flashcards "Next" button: when the current card is the last card in the active deck the button label now reads "Finish" and uses a green `.btn.finish` style so users clearly see they're at the end of the deck. This is implemented in `js/flashcards.js` and styled in `css/flashcards.css`.
+
+- Progress tooltips: progress indicators and unlock buttons no longer use native `title` tooltips (which caused duplicate native browser tooltips and layout clipping). Instead, `data-tooltip` + `.has-tooltip` are used with a floating tooltip manager that appends a single `.progress-tooltip` element to `document.body` and positions it to avoid clipping. Subdomain tooltips were removed for now until we finalize the unlock schema. Files: `js/progress.js`, `css/shared-ui.css`.
 
 
 ## Work completed so far (delta)

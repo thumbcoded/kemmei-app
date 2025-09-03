@@ -480,8 +480,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
     const mediumBtn = document.createElement("button");
     mediumBtn.className = `unlock-btn ${mediumUnlocked ? 'unlocked' : 'locked'}`;
     mediumBtn.innerHTML = `${mediumUnlocked ? '🔓' : '🔒'} Medium`;
-    mediumBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
-    mediumBtn.classList.add('has-tooltip');
+  mediumBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  mediumBtn.classList.add('has-tooltip');
     mediumBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleUnlock(certKey, null, "medium");
@@ -490,8 +490,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
     const hardBtn = document.createElement("button");
     hardBtn.className = `unlock-btn ${hardUnlocked ? 'unlocked' : 'locked'}`;
     hardBtn.innerHTML = `${hardUnlocked ? '🔓' : '🔒'} Hard`;
-    hardBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
-    hardBtn.classList.add('has-tooltip');
+  hardBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  hardBtn.classList.add('has-tooltip');
     hardBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleUnlock(certKey, null, "hard");
@@ -542,8 +542,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
       const domainMediumBtn = document.createElement("button");
       domainMediumBtn.className = `unlock-btn ${domainMediumUnlocked ? 'unlocked' : 'locked'}`;
       domainMediumBtn.innerHTML = `${domainMediumUnlocked ? '🔓' : '🔒'} Medium`;
-      domainMediumBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
-      domainMediumBtn.classList.add('has-tooltip');
+  domainMediumBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  domainMediumBtn.classList.add('has-tooltip');
       domainMediumBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleUnlock(certKey, domainKey, "medium");
@@ -552,8 +552,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
       const domainHardBtn = document.createElement("button");
       domainHardBtn.className = `unlock-btn ${domainHardUnlocked ? 'unlocked' : 'locked'}`;
       domainHardBtn.innerHTML = `${domainHardUnlocked ? '🔓' : '🔒'} Hard`;
-      domainHardBtn.setAttribute('title', 'This button unlocks the relevant level cards for this title and all sections it includes');
-      domainHardBtn.classList.add('has-tooltip');
+  domainHardBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  domainHardBtn.classList.add('has-tooltip');
       domainHardBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         toggleUnlock(certKey, domainKey, "hard");
@@ -597,14 +597,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
         subBlock.appendChild(subHeader);
         subdomainWrapper.appendChild(subBlock);
 
-        // After rendering subIndicators, add tooltips to green/yellow circles in subdomain
-        setTimeout(() => {
-          const subPercentSpans = subTitleElement.querySelectorAll('.percent-indicator.easy, .percent-indicator.medium');
-          subPercentSpans.forEach(span => {
-            span.setAttribute('title', 'Completing decks in Test mode will unlock next level for this section');
-            span.classList.add('has-tooltip');
-          });
-        }, 0);
+  // After rendering subIndicators — tooltips for subdomains are temporarily disabled
+  // per design decision (unlock schema not finalized). Leave spans without tooltips.
       }
 
       domainBlock.appendChild(subdomainWrapper);
@@ -614,11 +608,11 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
     certBlock.appendChild(domainList);
     container.appendChild(certBlock);
 
-    // After rendering certIndicators, add tooltips to green/yellow circles
+    // After rendering certIndicators, add data-tooltip to green/yellow circles
     setTimeout(() => {
       const certPercentSpans = titleText.querySelectorAll('.percent-indicator.easy, .percent-indicator.medium');
       certPercentSpans.forEach(span => {
-        span.setAttribute('title', 'Completing decks in Test mode will unlock next level for this section');
+        span.dataset.tooltip = 'Completing decks in Test mode will unlock next level for this section';
         span.classList.add('has-tooltip');
       });
     }, 0);
@@ -628,13 +622,90 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
   setTimeout(() => {
     const domainPercentSpans = document.querySelectorAll('.domain-header .percent-indicator.easy, .domain-header .percent-indicator.medium');
     domainPercentSpans.forEach(span => {
-      span.setAttribute('title', 'Completing decks in Test mode will unlock next level for this section');
-      span.classList.add('has-tooltip');
+    span.dataset.tooltip = 'Completing decks in Test mode will unlock next level for this section';
+    span.classList.add('has-tooltip');
     });
   }, 0);
 
   restoreExpandedState();
 }
+
+// Floating tooltip manager for progress page
+function initFloatingTooltips() {
+  let activeTip = null;
+  let showTimeout = null;
+
+  function createTip(text) {
+    const tip = document.createElement('div');
+    tip.className = 'progress-tooltip';
+    tip.textContent = text;
+    document.body.appendChild(tip);
+    return tip;
+  }
+
+  function positionTip(tip, target) {
+    const rect = target.getBoundingClientRect();
+    const tipRect = tip.getBoundingClientRect();
+    const PAD = 8;
+
+    // Prefer placing above the element unless there isn't space
+    let top = rect.top - tipRect.height - PAD;
+    let left = rect.left + (rect.width - tipRect.width) / 2;
+
+    if (top < PAD) {
+      // place below
+      top = rect.bottom + PAD;
+    }
+
+    // Clamp horizontally
+    left = Math.max(PAD, Math.min(left, window.innerWidth - PAD - tipRect.width));
+
+    tip.style.position = 'fixed';
+    tip.style.top = Math.round(top) + 'px';
+    tip.style.left = Math.round(left) + 'px';
+  }
+
+  document.addEventListener('mouseover', (ev) => {
+    const el = ev.target.closest && ev.target.closest('.has-tooltip');
+    if (!el) return;
+    const text = el.dataset && (el.dataset.tooltip || el.getAttribute('data-tooltip'));
+    if (!text) return;
+
+    // Delay slightly so accidental hovers don't show tooltip
+    showTimeout = setTimeout(() => {
+      activeTip = createTip(text);
+      // Initially hide to measure without flicker
+      activeTip.style.opacity = '0';
+      activeTip.style.pointerEvents = 'none';
+      // Allow browser to layout
+      requestAnimationFrame(() => {
+        positionTip(activeTip, el);
+        activeTip.style.opacity = '1';
+      });
+    }, 160);
+  });
+
+  document.addEventListener('mouseout', (ev) => {
+    const el = ev.target.closest && ev.target.closest('.has-tooltip');
+    if (showTimeout) {
+      clearTimeout(showTimeout);
+      showTimeout = null;
+    }
+    if (activeTip) {
+      activeTip.remove();
+      activeTip = null;
+    }
+  });
+
+  // Also close on scroll/resize to avoid orphaned tips
+  ['scroll', 'resize'].forEach(evt => window.addEventListener(evt, () => {
+    if (showTimeout) { clearTimeout(showTimeout); showTimeout = null; }
+    if (activeTip) { activeTip.remove(); activeTip = null; }
+  }, true));
+}
+
+// Initialize tooltip manager for the progress page
+setTimeout(initFloatingTooltips, 50);
 
 // Tooltip fade logic (CSS required for fade effect)
 // Add this to your CSS:
