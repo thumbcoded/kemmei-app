@@ -29,10 +29,24 @@ Transcripts/
 *.sqlite
 
 # -------------------------
-# 🚫 Experimental or local-only code
+# Experimental or local-only code (track source, ignore builds)
 # -------------------------
-backend/localApi-sqlite.js
-electron/
+# Track the local backend API source (it is app code)
+!backend/localApi-sqlite.js
+
+# Keep electron source tracked but ignore packaged outputs below
+!electron/main.js
+!electron/preload.js
+!electron/package.json
+!electron/*.js
+
+# Ignore packaged electron build artifacts (binaries)
+electron/dist/
+electron/release/
+electron/*.exe
+electron/*.AppImage
+electron/*.dmg
+electron/*.AppImage.blockmap
 
 # -------------------------
 # 🧪 Loose test/debug files
