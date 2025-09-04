@@ -190,3 +190,27 @@ Implementation notes:
 - Add telemetry when an unlock is granted indicating which rule was used (domain-test vs aggregated) so thresholds can be tuned.
 
 If you want, I can implement the hybrid decision logic now and wire it into the unlock-button handlers and an admin toggle to pick strict vs hybrid behavior.
+
+## Update: 2025-09-04 — recent edits and next steps
+
+Recent edits (what we did)
+- Instrumented flashcards to record per-card session data (seen + correct) and include `cardIds` / `correctCardIds` plus `touchedAt`/`completedAt` when the renderer saves progress. File: `js/flashcards.js`.
+- Fixed the Progress page "Clear All Progress" confirm handler so it resolves the current userId before calling the local API. File: `js/progress.js`.
+- Simplified the Dashboard: removed the "Your stats" header and all deck/card aggregation and counts from the dashboard UI and code. Dashboard now shows only streak + longest-streak. Files: `dashboard.html`, `js/dashboard.js`.
+- Server PATCH handler updated to merge incoming `cardIds`/`correctCardIds`/timestamps into stored progress records so server-mode saves preserve arrays. File: `backend/server.js`.
+- Cleaned temporary test/debug scripts used during investigation (replaced `scripts/dump-progress.js` and `scripts/test-clear-progress.js` contents with placeholders).
+
+What remains intact (important)
+- Test-mode results and the best-result recording logic were not removed — Test completions are still saved (and merged) in the same `test_completions` flow and remain authoritative for formal Test-mode mastery reports.
+- Casual/session progress is still written by the renderer; the data is preserved but currently not surfaced on the simplified dashboard.
+
+Why the dashboard sometimes showed nothing
+- In one run I confirmed the local SQLite `progress` table had no rows for the inspected user (so the dashboard had nothing to aggregate). This means the app may be writing to a different persistence in your environment (server-mode) or the user simply had no local progress. To validate quickly you can either run an Electron session and finish a deck (writes to local DB) or I can insert a sample progress row into the local SQLite DB for testing.
+
+Next things to come back to (deferred)
+- Re-enable or redesign detailed card/deck statistics UI (per-subdomain/domain/title counts and unique-card metrics) and decide exactly which metrics to store and surface.
+- Decide final unlock rules and implement the hybrid aggregation logic (domain-level test OR aggregated subdomain mastery) and persist unlocks via `saveUserUnlock`.
+- Optionally remove or keep the temporary global DevTools helpers exposed by `js/flashcards.js` (they're useful for debugging but can be removed before release).
+- Add a small automated smoke-test that exercises save/read/clear progress flows end-to-end against the local SQLite DB.
+
+If you'd like, I can now create a tiny smoke-test that saves a sample progress row and then reads it back (so you can commit and run the test before packaging). Otherwise the file is ready and you can commit.

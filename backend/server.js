@@ -183,7 +183,25 @@ app.patch("/api/user-progress/:userId", async (req, res) => {
       if (correct) entry.correct++;
     }
 
-    entry.lastSession = new Date();
+    // merge incoming card id arrays and timestamps when provided
+    try {
+      if (Array.isArray(req.body.cardIds) && req.body.cardIds.length) {
+        const existing = Array.isArray(entry.cardIds) ? entry.cardIds : [];
+        const combined = new Set([...(existing || []), ...req.body.cardIds]);
+        entry.cardIds = Array.from(combined);
+      }
+      if (Array.isArray(req.body.correctCardIds) && req.body.correctCardIds.length) {
+        const existingC = Array.isArray(entry.correctCardIds) ? entry.correctCardIds : [];
+        const combinedC = new Set([...(existingC || []), ...req.body.correctCardIds]);
+        entry.correctCardIds = Array.from(combinedC);
+      }
+      if (req.body.touchedAt) entry.touchedAt = req.body.touchedAt;
+      if (req.body.completedAt) entry.completedAt = req.body.completedAt;
+    } catch (e) {
+      console.warn('Failed to merge card id arrays into progress entry', e && e.message);
+    }
+
+    entry.lastSession = req.body.touchedAt ? new Date(req.body.touchedAt) : new Date();
     user.progress.set(key, entry);
     await user.save();
 

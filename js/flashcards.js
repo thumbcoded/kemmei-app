@@ -7,6 +7,20 @@ let domainMaps = {};
 let subdomainMaps = {};
 let certNames = {};
 let testStartData = null;
+// Session-level card tracking for stats
+let sessionSeenCardIds = new Set();
+let sessionCorrectCardIds = new Set();
+
+// Expose debugging helpers on window so DevTools can inspect session state
+try {
+  // attach lazily inside DOMContentLoaded handler below; if window exists now, attach placeholders
+  if (typeof window !== 'undefined') {
+    window._kemmei_sessionSeenCardIds = sessionSeenCardIds;
+    window._kemmei_sessionCorrectCardIds = sessionCorrectCardIds;
+    window._kemmei_clearSessionSets = () => { sessionSeenCardIds.clear(); sessionCorrectCardIds.clear(); };
+    window._kemmei_showSessionSets = () => ({ seen: Array.from(sessionSeenCardIds), correct: Array.from(sessionCorrectCardIds) });
+  }
+} catch (e) {}
 
 async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false) {
   // In test mode, don't update progress during the session - only at the end
@@ -20,7 +34,14 @@ async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false
 
   try {
     // Prefer IPC save helper when available to avoid network calls under file://
-    const payload = { key, correct, viewedOnly };
+  // Include a timestamp so we can compute study streaks and last-played info
+    // include card tracking info when available
+    const payload = { key, correct, viewedOnly, touchedAt: new Date().toISOString() };
+    try {
+      // payload.cardIds holds unique seen cards for this session/key
+      if (sessionSeenCardIds && sessionSeenCardIds.size) payload.cardIds = Array.from(sessionSeenCardIds);
+      if (sessionCorrectCardIds && sessionCorrectCardIds.size) payload.correctCardIds = Array.from(sessionCorrectCardIds);
+    } catch (e) {}
     if (window.api && typeof window.api.saveProgress === 'function') {
       await window.api.saveProgress(userId, key, payload);
     } else if (window.api && typeof window.api.rpc === 'function') {
@@ -714,6 +735,8 @@ async function fetchCards(unlockedDifficulties = null) {
     const requiredCount = correctArr.length > 0 ? correctArr.length : (meta.requiredCount || meta.requiredCount === 0 ? meta.requiredCount : (card.required || 1));
 
     return {
+    // preserve original card id so we can track viewed/correct per-card
+    id: card._id || card.id || (meta && (meta.id || meta._id)) || null,
       question: questionText,
       options: shuffleAnswerOptions(optionsSource || []),
       correct: correctArr,
@@ -1080,6 +1103,8 @@ subdomainSelect.addEventListener("change", (event) => {
 
 function loadCard() {
   const q = questions[currentIndex];
+  // mark this card as seen for session-level stats (if id exists)
+  try { const cid = q && (q.id || q._id); if (cid) sessionSeenCardIds.add(cid); } catch (e) {}
   // debug log removed
   cardContainer.textContent = q.question;
   answerForm.innerHTML = "";
@@ -1223,7 +1248,10 @@ function loadCard() {
     });
 
     const isCorrect = q.correct.every(ans => selected.includes(ans)) && selected.length === q.correct.length;
-    if (isCorrect) correctCount++;
+    if (isCorrect) {
+      correctCount++;
+      try { const cid = q && (q.id || q._id); if (cid) sessionCorrectCardIds.add(cid); } catch (e) {}
+    }
 
     // Show explanation inline below answer options
     if (q.explanation && q.explanation.trim()) {
@@ -1347,6 +1375,11 @@ function loadCard() {
             if (testStartData.subdomain) {
               const progressKey = `${testStartData.cert}:${testStartData.domain.split(' ')[0]}:${testStartData.subdomain}:${difficulty}`;
               const progressData = { key: progressKey.replace(/\./g, '~'), correct: correctCount, total: questions.length, isTestResult: true };
+              try {
+                if (sessionSeenCardIds && sessionSeenCardIds.size) progressData.cardIds = Array.from(sessionSeenCardIds);
+                if (sessionCorrectCardIds && sessionCorrectCardIds.size) progressData.correctCardIds = Array.from(sessionCorrectCardIds);
+                progressData.completedAt = new Date().toISOString();
+              } catch (e) {}
               if (window.api && typeof window.api.saveProgress === 'function') {
                 await window.api.saveProgress(userId, progressData.key, progressData);
               } else if (window.api && typeof window.api.rpc === 'function') {
@@ -1359,6 +1392,11 @@ function loadCard() {
             } else {
               const progressKey = `${testStartData.cert}:${testStartData.domain.split(' ')[0]}:all:${difficulty}`;
               const progressData = { key: progressKey.replace(/\./g, '~'), correct: correctCount, total: questions.length, isTestResult: true };
+              try {
+                if (sessionSeenCardIds && sessionSeenCardIds.size) progressData.cardIds = Array.from(sessionSeenCardIds);
+                if (sessionCorrectCardIds && sessionCorrectCardIds.size) progressData.correctCardIds = Array.from(sessionCorrectCardIds);
+                progressData.completedAt = new Date().toISOString();
+              } catch (e) {}
               if (window.api && typeof window.api.saveProgress === 'function') {
                 await window.api.saveProgress(userId, progressData.key, progressData);
               } else if (window.api && typeof window.api.rpc === 'function') {
@@ -1621,4 +1659,63 @@ function updateModeIndicators() {
     }
   }
 }
+
+  // For non-test (Casual) sessions, determine a robust "finished" state
+  try {
+    if (!isTestMode) {
+      const cert = document.getElementById("deck-select").value.trim();
+      const domain = document.getElementById("domain-select").value.trim().split(" ")[0];
+      const sub = document.getElementById("subdomain-select")?.value.trim();
+
+      const deckCount = Array.isArray(questions) ? questions.length : 0;
+      const seenCount = sessionSeenCardIds ? sessionSeenCardIds.size : 0;
+      const correctCountLocal = sessionCorrectCardIds ? sessionCorrectCardIds.size : 0;
+
+      // Require a minimum fraction of the deck to have been seen to avoid false-positives
+      const minSeenThreshold = Math.max(Math.ceil(deckCount * 0.5), 3);
+
+      let finished = false;
+      let finishedSource = null;
+
+      if (deckCount > 0) {
+        // Mark finished if user actually viewed every card, OR
+        // if they saw a reasonable portion and achieved high accuracy
+        if (seenCount >= deckCount) {
+          finished = true;
+          finishedSource = 'all-seen';
+        } else {
+          const correctRatio = correctCountLocal / deckCount;
+          if (seenCount >= minSeenThreshold && correctRatio >= 0.8) {
+            finished = true;
+            finishedSource = 'accuracy';
+          }
+        }
+      }
+
+      if (finished) {
+        const progressKey = `${cert}:${domain}:${sub}`.replace(/\./g, '~');
+        const progressData = { key: progressKey, finished: true, finishedAt: new Date().toISOString(), finishedSource, total: deckCount, correct: correctCountLocal };
+        try {
+          if (sessionSeenCardIds && sessionSeenCardIds.size) progressData.cardIds = Array.from(sessionSeenCardIds);
+          if (sessionCorrectCardIds && sessionCorrectCardIds.size) progressData.correctCardIds = Array.from(sessionCorrectCardIds);
+        } catch (e) {}
+
+        // Persist the finished flag using available APIs
+        try {
+          const userId = localStorage.getItem('userId');
+          if (window.api && typeof window.api.saveProgress === 'function') {
+            window.api.saveProgress(userId, progressData.key, progressData).catch(e => console.warn('Failed to persist finished state', e && e.message));
+          } else if (window.api && typeof window.api.rpc === 'function') {
+            window.api.rpc(`user-progress/${userId}`, 'PATCH', progressData).catch(e => console.warn('Failed to persist finished state', e && e.message));
+          } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+            fetch(`/api/user-progress/${userId}`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(progressData) }).catch(e => console.warn('Failed to persist finished state', e && e.message));
+          }
+        } catch (e) {
+          console.warn('Failed to persist finished state', e && e.message);
+        }
+
+        try { window.dispatchEvent(new CustomEvent('kemmei:progressSaved', { detail: { key: progressData.key, finished: true } })); } catch(e){}
+      }
+    }
+  } catch (e) {}
 });

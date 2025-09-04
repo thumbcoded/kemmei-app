@@ -29,7 +29,8 @@
       "!**/test/**"
     ],
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "assets",
+      "output": "build"
     }
   }
 }

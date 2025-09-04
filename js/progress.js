@@ -145,6 +145,28 @@ document.addEventListener("DOMContentLoaded", () => {
       confirmModal.classList.add("hidden");
 
       try {
+  // Resolve current user id (same strategy as refreshProgress)
+  let userId = localStorage.getItem("userId");
+  if (!userId && window.userApi) {
+    try {
+      if (typeof window.userApi.getCurrentUserId === 'function') {
+        const cur = await window.userApi.getCurrentUserId();
+        if (cur) userId = cur;
+      }
+      if (!userId && typeof window.userApi.getCurrentUser === 'function') {
+        const cu = await window.userApi.getCurrentUser();
+        if (cu && cu.id) userId = cu.id;
+      }
+    } catch (e) {
+      console.warn('Could not resolve current user via userApi in reset handler', e && e.message);
+    }
+  }
+
+  if (!userId) {
+    alert('No current user found; cannot clear progress.');
+    return;
+  }
+
   // Prefer IPC helper, otherwise only network-delete when not running under file://
   let res = null;
   if (window.api && typeof window.api.rpc === 'function') {
