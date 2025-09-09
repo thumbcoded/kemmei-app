@@ -12,8 +12,7 @@
   "author": "You",
   "license": "MIT",
   "dependencies": {
-  "sqlite3": "^5.1.6",
-  "sqlite": "^4.1.2",
+  "sql.js": "^1.8.0",
   "electron-store": "^8.1.0"
   },
   "devDependencies": {
@@ -27,6 +26,9 @@
       "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
       "!**/node_modules/.bin",
       "!**/test/**"
+    ],
+    "asarUnpack": [
+      "node_modules/sql.js/dist/sql-wasm.wasm"
     ],
     "directories": {
       "buildResources": "assets",

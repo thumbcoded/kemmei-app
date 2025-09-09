@@ -1,6 +1,27 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const path = require('path')
 const os = require('os')
+
+// Minimal menu template for production (keeps only basic File/Help actions).
+const minimalMenuTemplate = [
+  {
+    label: 'File',
+    submenu: [
+      { role: 'quit' }
+    ]
+  },
+  {
+    label: 'Help',
+    submenu: [
+      {
+        label: 'About',
+        click: () => {
+          // No-op for now; renderer may show an About dialog if needed.
+        }
+      }
+    ]
+  }
+]
 
 function createWindow () {
   const win = new BrowserWindow({
@@ -50,6 +71,16 @@ function createWindow () {
 app.whenReady().then(() => {
   createWindow()
 
+  // Production: set a minimal menu so end-users don't see dev items.
+  // Development: keep the default menu so DevTools and reload remain available.
+  try {
+    if (app.isPackaged) {
+      Menu.setApplicationMenu(Menu.buildFromTemplate(minimalMenuTemplate))
+    }
+  } catch (e) {
+    // ignore menu errors
+  }
+
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
@@ -59,8 +90,14 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
 
-// Basic IPC: forward to backend/localApi
-const localApi = require(path.join(__dirname, '..', 'backend', 'localApi-sqlite.js'))
+// Basic IPC: forward to backend/localApi (use sql.js-based implementation in packaged app)
+let localApi
+try {
+  localApi = require(path.join(__dirname, '..', 'backend', 'localApi-sqljs.js'))
+} catch (e) {
+  // Fallback to sqlite implementation if available (developer machine)
+  localApi = require(path.join(__dirname, '..', 'backend', 'localApi-sqlite.js'))
+}
 
 ipcMain.handle('api:init', async (event, arg) => {
   return localApi.init()

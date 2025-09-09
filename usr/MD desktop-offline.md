@@ -33,9 +33,47 @@
 --
 Generated on: 2025-09-01
 
-What I changed
+What I changed (packaging & recent work)
 
-Updated c:\Dox\SD\Kemmei-desktop\usr\MD desktop-offline.md with: brief status and next steps reflecting recent implementation work (Electron IPC shim, local SQLite API, progress/unlock persistence, renderer URL updates).
+This file was updated to reflect packaging and build work completed while converting the app into a single distributable Electron binary.
+
+- Removed the hard native `sqlite3` packaging failure path by switching to a pure-wasm SQLite runtime for the packaged app (`sql.js`). This avoids compiling native addons during `electron-builder`.
+- Added a `backend/localApi-sqljs.js` implementation that mirrors the `localApi-sqlite.js` API but uses `sql.js` (WASM) and persists the DB file to the user app-data folder.
+- Updated `electron/main.js` to prefer the `localApi-sqljs.js` implementation when present (fallback to the sqlite native module during development).
+- Updated `package.json` build config to include an `asarUnpack` entry for `node_modules/sql.js/dist/sql-wasm.wasm` so the WASM binary is accessible at runtime inside the packaged app.
+- Added a minimal production menu (only File/Help/Quit) in `electron/main.js` when `app.isPackaged` is true so end-users don't see developer menus; dev runs still keep the full menu.
+- Built the app with `electron-builder` and produced:
+	- `build/kemmei-electron Setup 0.1.0.exe` (NSIS installer)
+	- `build/win-unpacked/kemmei-electron.exe` (unpacked app you can run directly)
+- Cleared user data during testing by deleting the app data folder (e.g., `%USERPROFILE%\.kemmei`) so the packaged app starts with a clean DB.
+- Updated `.gitignore` to exclude `build/` and large binary artifacts; do not commit installers or unpacked builds to git (GitHub limits >100MB).
+
+Why this matters
+
+- The `sql.js` approach keeps the app fully self-contained without requiring native module compilation on the build machine or end-user machine.
+- Unpacked binary (`win-unpacked`) is useful for manual testing; the installer provides one-time installation behavior (but note NSIS options control oneClick/perMachine).
+
+How to run the packaged app locally
+
+- Run unpacked binary (fast iteration):
+	- `build\win-unpacked\kemmei-electron.exe`
+- Or run the installer once, then launch from Start Menu / desktop shortcut.
+
+How to rebuild (quick)
+
+1) Ensure dev dependencies are installed:
+	 - `npm install`
+2) Rebuild the installer and unpacked app:
+	 - `npm run build`
+3) If a previous `build/win-unpacked` is in use by a running process, stop the app and remove `build/win-unpacked` before rebuilding (Access Denied locks common).
+
+Notes on committing/build artifacts
+
+- Keep `build/` in `.gitignore` (we added that). Do not commit installers or unpacked apps to the repo. Use GitHub Releases or an artifact store for distributed binaries.
+- If `build/` was already checked in, stop tracking with:
+	- `git rm -r --cached build`
+	- `git commit -m "remove build artifacts from repo"`
+	- `git push`
 
 Recent changes (delta)
 
