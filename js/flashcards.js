@@ -1267,6 +1267,34 @@ subdomainSelect.addEventListener("change", (event) => {
     headerBar.classList.add("dimmed");
     document.getElementById("filterWrapper").classList.add("disabled");
 
+    // 🆕 Collapse the header to a compact bar so the flashcard area gets more vertical space
+    const collapsedBar = document.getElementById('collapsedBar');
+    const collapsedText = document.getElementById('collapsedHeaderText');
+    if (collapsedBar && headerBar) {
+      // Build compact header string: TitleShort | DomainNum | SubNum | Mode | Difficulty
+      try {
+  // Use the full deck value (e.g. '220-1201') for compact header rather than truncating
+  const deckVal = document.getElementById('deck-select').value || '';
+  const titleShort = (deckVal || '').toString().trim();
+        const domainVal = (document.getElementById('domain-select').value || '').split(' ')[0] || '';
+        const subVal = (document.getElementById('subdomain-select').value || '').split(' ')[0] || '';
+        const modeVal = (document.getElementById('mode-select').value || 'casual');
+        const diffVal = (document.getElementById('difficulty-select').value || 'Easy');
+        const compact = `${titleShort} | ${domainVal} | ${subVal} | ${capitalize(modeVal)} | ${capitalize(diffVal)}`;
+        if (collapsedText) collapsedText.textContent = compact;
+      } catch (e) {}
+
+        headerBar.classList.add('collapsed');
+        collapsedBar.style.display = '';
+        collapsedBar.setAttribute('aria-hidden', 'false');
+        // Move abort button into collapsedBar so it appears on the second line
+        const collapsedAbortWrap = collapsedBar.querySelector('.collapsed-abort');
+        if (collapsedAbortWrap) {
+          collapsedAbortWrap.appendChild(abortBtn);
+          abortBtn.classList.remove('hidden');
+        }
+    }
+
     // Hide Shuffle toggle
     randomToggle.parentElement.style.display = "none";
 
@@ -1650,6 +1678,17 @@ function shuffleAnswerOptions(arr) {
   
   document.getElementById("filterWrapper").classList.remove("disabled");
   randomToggle.parentElement.style.display = "";
+  // Restore header layout
+  const collapsedBar = document.getElementById('collapsedBar');
+  const headerBar = document.querySelector('.flashcards-header');
+  if (collapsedBar) {
+    // move abort button back into session controls container so the original layout is preserved
+    const sessionRight = document.querySelector('.session-right');
+    if (sessionRight) sessionRight.appendChild(abortBtn);
+    collapsedBar.style.display = 'none';
+    collapsedBar.setAttribute('aria-hidden', 'true');
+  }
+  if (headerBar) headerBar.classList.remove('collapsed');
   
   // Small delay to ensure clean transition
   setTimeout(() => {
@@ -1659,8 +1698,45 @@ function shuffleAnswerOptions(arr) {
 exitBtn.addEventListener("click", () => {
   // Show Shuffle toggle again
   randomToggle.parentElement.style.display = "";
+  // Restore header layout
+  const collapsedBar = document.getElementById('collapsedBar');
+  const headerBar = document.querySelector('.flashcards-header');
+  if (collapsedBar) {
+    const sessionRight = document.querySelector('.session-right');
+    if (sessionRight) sessionRight.appendChild(abortBtn);
+    collapsedBar.style.display = 'none';
+    collapsedBar.setAttribute('aria-hidden', 'true');
+  }
+  if (headerBar) headerBar.classList.remove('collapsed');
   window.location.href = "flashcards.html";
 });
+
+// Also restore header when the end message (completion) is shown or when restarting
+function restoreHeaderCompact() {
+  const collapsedBar = document.getElementById('collapsedBar');
+  const headerBar = document.querySelector('.flashcards-header');
+  const sessionRight = document.querySelector('.session-right');
+  if (collapsedBar) {
+    if (sessionRight) sessionRight.appendChild(abortBtn);
+    collapsedBar.style.display = 'none';
+    collapsedBar.setAttribute('aria-hidden', 'true');
+  }
+  if (headerBar) headerBar.classList.remove('collapsed');
+}
+
+// Hook into endMessage and restart flows if they exist in the file's logic
+try {
+  // When showing the end message, ensure header is restored
+  const observer = new MutationObserver(() => {
+    if (endMessage && !endMessage.classList.contains('hidden')) {
+      restoreHeaderCompact();
+    }
+  });
+  if (document.body) observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+} catch (e) {}
+
+// Utility: capitalize first char for display
+function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.slice(1); }
 
   checkBtn.addEventListener("click", checkAnswer);
   nextBtn.addEventListener("click", nextCard);

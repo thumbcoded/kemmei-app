@@ -1,13 +1,8 @@
-POWERSHELL COMMAND TO MERGE CARDS IN CURRENT FOLDER
+RUN w/o build:
+npx electron .
 
-$all = Get-ChildItem -Filter *.json | ForEach-Object { Get-Content $_ -Raw }
-$combined = "[`r`n" + ($all -join ",`r`n") + "`r`n]"
-Set-Content -Path merged_cards.json -Value $combined
-
-MONGO LIST USERS
-db.users.find().pretty()
-DELETE USERS
-db.users.deleteMany({})
+BUILD:
+npm run build
 
 VS CODE
 Comment out: Ctrl+/
@@ -69,3 +64,40 @@ git commit -m "Describe change" path/to/file.js – Commit directly (less common
 git log path/to/file.js – View commit history for the file
 git blame path/to/file.js – View line-by-line change history
 git stash push -m "Note" path/to/file.js – Temporarily stash changes for one file
+
+TEST BUILD
+Recommended sequence (PowerShell, run from project root):
+
+- Close any running Kemmei instances.
+- Install deps (use npm ci for a clean install in CI / reproducible dev; use npm install locally if you’ve changed package.json):
+````powershell
+cd C:\Dev\Kemmei-desktop
+npm ci
+````
+
+- (Optional) Regenerate icons if you changed the source PNG:
+````powershell
+npm run generate-icons
+````
+
+- Build the packaged app:
+````powershell
+npm run build
+````
+
+Notes:
+- For a quick development run instead of a full package build use:
+````powershell
+npm start
+````
+
+POWERSHELL COMMAND TO MERGE CARDS IN CURRENT FOLDER
+
+$all = Get-ChildItem -Filter *.json | ForEach-Object { Get-Content $_ -Raw }
+$combined = "[`r`n" + ($all -join ",`r`n") + "`r`n]"
+Set-Content -Path merged_cards.json -Value $combined
+
+MONGO LIST USERS
+db.users.find().pretty()
+DELETE USERS
+db.users.deleteMany({})

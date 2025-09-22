@@ -47,7 +47,7 @@ body.flashcards-page {
 }
 
 /* 🆕 Style abort button when inside header */
-.flashcards-header #abortBtn {
+.flashcards-header:not(.collapsed) #abortBtn {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -929,4 +929,87 @@ body.dark-theme .inline-explanation {
 
 body.dark-theme .explanation-content {
   color: #e5e7eb;
+}
+
+/* -------- Collapsed top module for active sessions -------- */
+.collapsed-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent; /* inherit header background by layout */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.collapsed-text {
+  color: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hide the full filter controls when header is collapsed so only the compact bar remains */
+.flashcards-header.collapsed .filter-panel,
+.flashcards-header.collapsed .filter-row,
+.flashcards-header.collapsed .left-group,
+.flashcards-header.collapsed .right-group {
+  display: none !important;
+}
+
+/* Make the collapsed bar visually centered and overlay the header bottom */
+.collapsed-bar {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.collapsed-bar .collapsed-text {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.flashcards-header.collapsed {
+  padding-bottom: 8px; /* reduce large space used originally */
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+/* When the header is collapsed we want the abort button to be inline in the collapsed bar
+   (not absolutely positioned). Override the header-absolute rule for collapsed state. */
+.collapsed-bar .btn.abort {
+  position: relative !important;
+  transform: none !important;
+  bottom: auto !important;
+  left: auto !important;
+  margin: 0.15rem 0 0.3rem 0;
+  min-width: 80px;
+}
+
+/* when header is collapsed, reduce header real estate and ensure flashcard area uses remaining viewport height */
+.flashcards-header.collapsed {
+  padding-bottom: 8px; /* remove large bottom padding */
+  margin-bottom: 0.75rem;
+}
+
+/* Make flashcard box take remaining viewport height so internal scrolling is contained */
+.flashcards-header.collapsed ~ .flashcard-box {
+  /* Reserve ~160-200px for header/session controls/margins; this keeps outer window size steady
+     while allowing the flashcard area to scroll internally when its content exceeds the available space. */
+  max-height: calc(100vh - 180px);
+  overflow: auto;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .flashcards-header,
+  .flashcards-header.collapsed,
+  .collapsed-bar {
+    transition: none !important;
+  }
 }

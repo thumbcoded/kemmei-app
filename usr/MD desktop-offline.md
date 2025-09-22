@@ -288,3 +288,108 @@ Next steps and options
 - I can also re-introduce debug instrumentation behind a `DEBUG` flag if you want lightweight diagnostics during development (hidden in production builds).
 
 Please review this summary and tell me if anything I did is unclear or if I missed anything from our recent chats that you'd like included. If it looks good I will commit this change and can add the smoke-test script next if you want.
+
+---
+
+## Release & packaging recommendations (summary)
+
+These are short actionable recommendations for packaging and releasing the Windows build, along with example configuration snippets and post-build cleanup suggestions.
+
+1) What to publish to end users
+
+- Primary: the NSIS installer `Kemmei Setup x.y.z.exe` — this is the recommended user flow (download → install → run). The installer handles shortcuts and uninstallation and is compatible with `electron-updater` auto-updates when you publish `latest.yml` and the blockmap.
+- Optional (for testers): a single-file portable EXE (`portable` target) — convenient but less ideal for end users (temp extraction, no shortcuts).
+- Auto-update artifacts (if you use `electron-updater`): `latest.yml` and `Kemmei Setup x.y.z.exe.blockmap` — keep those in your release artifacts.
+
+Files you can safely omit from public releases (dev-only)
+
+- `win-unpacked/` (unpacked app used during build/testing)
+- `builder-debug.yml`, `builder-effective-config.yaml` (build metadata)
+
+2) Example `package.json` build snippet (produce NSIS installer and optional portable EXE)
+
+Add or update the `build` block in your `package.json` like this (merge into your existing build config):
+
+```json
+"build": {
+  "directories": { "output": "dist" },
+  "win": {
+    "target": ["nsis", "portable"]
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true
+  },
+  "portable": {
+    "requestExecutionLevel": "user"
+  },
+  "asarUnpack": ["node_modules/sql.js/dist/sql-wasm.wasm"]
+}
+```
+
+3) Recommended build commands (PowerShell)
+
+Build the installer only (recommended):
+
+```powershell
+npx electron-builder --win nsis
+```
+
+Build the portable single-file EXE only:
+
+```powershell
+npx electron-builder --win portable
+```
+
+Build both targets (nsis + portable):
+
+```powershell
+npx electron-builder --win
+```
+
+4) Post-build cleanup (optional) — PowerShell
+
+If you don't want to keep the unpacked folder and debug metadata in `dist`, run this after the build:
+
+```powershell
+# remove dev-only files
+Remove-Item .\dist\builder-debug.yml, .\dist\builder-effective-config.yaml -Force -ErrorAction SilentlyContinue
+# remove unpacked app folder
+Remove-Item -LiteralPath .\dist\win-unpacked -Recurse -Force -ErrorAction SilentlyContinue
+```
+
+5) CI / Release workflow suggestion
+
+- Build on CI (GitHub Actions recommended) and upload only the installer (`.exe`) and the `.blockmap`/`latest.yml` to GitHub Releases. This avoids storing large unpacked artifacts and makes release management simple.
+- Optionally keep portable builds as separate release assets for testers.
+
+6) Signing & AV guidance
+
+- Code-sign your installer and EXE before publishing (recommended). Unsigned executables may be flagged by some antivirus engines and will show an "unknown publisher" prompt to users.
+
+7) Next steps I can implement for you
+
+- Add a `postbuild` script to `package.json` that removes `dist/win-unpacked` automatically using `rimraf` (I can add `rimraf` to `devDependencies` and the script for you).
+- Add a small GitHub Actions workflow that builds the NSIS installer on Windows and uploads only the installer + blockmap/latest.yml to Releases.
+- Create a smoke-test Node script that verifies DB read/write/clear flows prior to packaging.
+
+---
+
+End of release notes and packaging recommendations.
+
+## UI note: collapse upper module when a deck starts (2025-09-22)
+
+- Summary: To avoid the application showing a vertical scrollbar when a flashcard deck is started, the top filter/header module is now half-collapsed while a session is active. The compact view shows a centered two-line bar: (1) concise header text `Title | Domain | Subdomain | Mode | Difficulty`, (2) the `Abort` button on the next line.
+- Files changed: `flashcards.html`, `css/flashcards.css`, `js/flashcards.js`.
+- Key behaviors:
+	- The collapsed header uses the full deck identifier (e.g. `220-1201`).
+	- The flashcard content area uses the freed vertical space and will scroll internally when the answers list is long, preventing the outer window scrollbar in typical cases.
+	- The collapse respects `prefers-reduced-motion` and restores the original header state when the session is aborted, exited, or completed.
+- How to verify locally (quick):
+	1. Open the app (Electron or browser) and navigate to `flashcards.html`.
+ 2. Start a session (`Start`). Confirm the header collapses to a centered compact line with the abort button on a separate line beneath it.
+ 3. Verify the flashcard box below uses the extra vertical space and that long answer lists scroll inside the box rather than forcing the window scrollbar.
+ 4. Click `Abort` and confirm the full header/filter controls are restored and the abort button returns to its original location.
+
+- Suggested commit message: `desktop-offline: collapse header on flashcards start to avoid vertical overflow`
