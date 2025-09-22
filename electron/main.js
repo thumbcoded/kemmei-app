@@ -24,6 +24,10 @@ const minimalMenuTemplate = [
 ]
 
 function createWindow () {
+  // Choose a platform-appropriate icon. macOS uses app bundle icons, so only
+  // set the BrowserWindow icon for Windows/Linux.
+  const platformIcon = (process.platform === 'darwin') ? undefined : path.join(__dirname, '..', 'assets', 'K_blue_2.ico')
+
   const win = new BrowserWindow({
   width: 1200,
   height: 800,
@@ -31,6 +35,7 @@ function createWindow () {
     minWidth: 1000,
     minHeight: 700,
     resizable: true,
+    icon: platformIcon,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true
@@ -69,6 +74,18 @@ function createWindow () {
 }
 
 app.whenReady().then(() => {
+  // If running as a packaged app, run the one-time fresh-start check so new installs
+  // start without saved users/selections. This will not affect developer runs.
+  (async () => {
+    try {
+      if (app.isPackaged && localApi && typeof localApi.ensureFreshStart === 'function') {
+        await localApi.ensureFreshStart({ packaged: true })
+      }
+    } catch (e) {
+      // ignore
+    }
+  })()
+
   createWindow()
 
   // Production: set a minimal menu so end-users don't see dev items.
@@ -137,6 +154,11 @@ ipcMain.handle('api:getCurrentUserId', async (event) => {
 
 ipcMain.handle('api:getCurrentUser', async (event) => {
   return localApi.getCurrentUser()
+})
+
+ipcMain.handle('api:ensureFreshStart', async (event) => {
+  if (localApi && typeof localApi.ensureFreshStart === 'function') return localApi.ensureFreshStart()
+  return { cleared: false }
 })
 
 ipcMain.handle('api:saveProgress', async (event, userId, key, data) => {

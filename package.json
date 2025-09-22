@@ -5,9 +5,10 @@
   "main": "electron/main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electron .",
-    "build": "electron-builder",
-    "seed": "node scripts/seed-local.js"
+  "dev": "electron .",
+  "build": "electron-builder",
+    "seed": "node scripts/seed-local.js",
+    "generate-icons": "node scripts/generate-icons.js"
   },
   "author": "You",
   "license": "MIT",
@@ -17,10 +18,14 @@
   },
   "devDependencies": {
     "electron": "^26.0.0",
-    "electron-builder": "^24.0.0"
+    "electron-builder": "^24.0.0",
+    "png2icons": "^1.0.0",
+    "sharp": "^0.32.0"
   },
   "build": {
-    "appId": "com.example.kemmei",
+  "productName": "Kemmei",
+  "icon": "assets/K_blue_2.ico",
+  "appId": "com.example.kemmei",
     "files": [
       "**/*",
       "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
@@ -33,6 +38,22 @@
     "directories": {
       "buildResources": "assets",
       "output": "build"
+    }
+    ,
+    "mac": {
+      "icon": "assets/K_blue_2.icns"
+    }
+    ,
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "runAfterFinish": false
+    }
+    ,
+    "win": {
+      "target": ["nsis"],
+      "artifactName": "Kemmei Setup ${version}.exe"
     }
   }
 }

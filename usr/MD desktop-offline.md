@@ -252,3 +252,39 @@ Next things to come back to (deferred)
 - Add a small automated smoke-test that exercises save/read/clear progress flows end-to-end against the local SQLite DB.
 
 If you'd like, I can now create a tiny smoke-test that saves a sample progress row and then reads it back (so you can commit and run the test before packaging). Otherwise the file is ready and you can commit.
+
+## Update: 2025-09-22 — recent fixes and diagnostics cleanup
+
+Summary of targeted fixes and cleanup performed on 2025-09-22:
+
+- Flashcards initial-selection and defaults
+	- Fixed a race/format issue where backend defaults (domain id like `1.0`) didn't match the renderer `<select>` option values (which are `"<id> <title>"`). The code now maps backend defaults into the option format before restoring selections so fresh installs show the intended defaults.
+	- For fresh users (no per-user progress) the renderer clears global `last*` keys so canonical defaults are used on first-run.
+
+- Card fetching and probe fallback
+	- The local file-probe fallback (used when running under `file://` or when the IPC bridge is unavailable) was returning cards of all difficulties when the UI asked for `All`. This produced inflated raw counts (probe found many files) while the intended session should only include unlocked difficulties (fresh users: `Easy`).
+	- The probe now filters by the unlocked difficulty set (queried from the same unlock logic used by the renderer). In practice this means `All` means "all unlocked levels" not "all difficulties found on disk".
+	- The probe is only executed in appropriate contexts (when running under `file://` or when `window.api` is not present) to avoid accidental file-scanning in other environments.
+
+- Difficulty handling and fetch normalization
+	- Normalized difficulty handling so an empty difficulty or `All` never triggers an unrestricted "fetch everything" API path. `All` is interpreted as the set of unlocked difficulties; an empty difficulty falls back to `Easy` to avoid accidental wide queries.
+	- Ensured the `difficulty-select` has at least an `Easy` option before the initial fetch so the early initialization cannot accidentally call the "fetch all" branch.
+
+- Diagnostics and debug cleanup
+	- Added temporary on-page debug instrumentation during investigation to show raw probe counts vs filtered counts and the effective query path. After confirming behavior, the on-page debug overlay and verbose `console.debug('FC DEBUG: ...')` logs were removed so production renderer no longer includes the diagnostic UI.
+	- Kept useful runtime defaults (`window._fc_initialMappedDomain` and `window._fc_initialDefaults`) so startup mapping remains robust.
+
+- Misc
+	- Verified dedup/merge logic for combined difficulty fetches and ensured the UI displays the filtered (used) card count consistently.
+
+DB location and clean build guidance (reminder)
+
+- The app persists its main DB to the current user's home directory under the `.kemmei` folder (e.g., `C:\Users\vkuzm\.kemmei\kemmei-data.sqlite`). Both `localApi-sqljs.js` (WASM) and `localApi-sqlite.js` write to the same path, so deleting that single file clears the backend DB.
+- Renderer storage (localStorage / IndexedDB / leveldb) is separate and lives in the Electron userData folders (e.g., `%APPDATA%\Kemmei` and/or `%LOCALAPPDATA%\Kemmei`). For a fully clean state remove those folders or run Electron with `--user-data-dir` pointing to a disposable directory for test runs.
+
+Next steps and options
+
+- If you'd like I can add a small smoke-test script (Node) that programmatically saves/reads/clears progress against the local DB so builds can run a quick verification step.
+- I can also re-introduce debug instrumentation behind a `DEBUG` flag if you want lightweight diagnostics during development (hidden in production builds).
+
+Please review this summary and tell me if anything I did is unclear or if I missed anything from our recent chats that you'd like included. If it looks good I will commit this change and can add the smoke-test script next if you want.

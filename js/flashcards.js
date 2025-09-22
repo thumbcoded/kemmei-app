@@ -21,6 +21,7 @@ try {
     window._kemmei_showSessionSets = () => ({ seen: Array.from(sessionSeenCardIds), correct: Array.from(sessionCorrectCardIds) });
   }
 } catch (e) {}
+  // debug overlay removed in final cleanup
 
 async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false) {
   // In test mode, don't update progress during the session - only at the end
@@ -192,7 +193,103 @@ function populateDeckDropdown(certNames, selectedId = null) {
 }
 
 (async () => {
+  // Resolve current user id: prefer renderer-local value, then IPC helper.
+  let currentUserId = null;
+  try { currentUserId = localStorage.getItem('userId'); } catch (e) {}
+  try {
+    if (!currentUserId && window.userApi && typeof window.userApi.getCurrentUserId === 'function') {
+      const cur = await window.userApi.getCurrentUserId();
+      if (cur) currentUserId = cur;
+    }
+  } catch (e) { /* ignore */ }
+
+  // Diagnostic logging: temporary - helps trace why stale last* values are used
+  // debug logs removed
+
+  // If we have a user id, check whether they have any saved progress. If
+  // they have no progress, treat this as a fresh user and clear any global
+  // renderer-local 'last*' keys (these are not per-user and can leak from
+  // previous installs). This enforces canonical defaults for fresh users.
+  if (currentUserId) {
+    try {
+      let progress = {};
+      if (window.api && typeof window.api.getUserProgress === 'function') {
+        progress = await window.api.getUserProgress(currentUserId) || {};
+      } else if (window.api && typeof window.api.rpc === 'function') {
+        const resp = await window.api.rpc(`user-progress/${currentUserId}`, 'GET');
+        progress = (resp && resp.body) ? resp.body : {};
+      }
+      if (!progress || Object.keys(progress).length === 0) {
+        try {
+          localStorage.removeItem('lastDeck');
+          localStorage.removeItem('lastDomain');
+          localStorage.removeItem('lastSub');
+          localStorage.removeItem('lastDifficulty');
+          localStorage.removeItem('lastMode');
+        } catch (e) {}
+      } else {
+        // user has progress; leave last* keys intact
+      }
+    } catch (e) {
+      // If progress check fails, do not clear storage to avoid overriding
+      // legitimate values; fail-safe is to preserve existing behavior.
+    }
+  }
+
   const data = await loadDomainMap();
+
+  // One-time fresh-start: if backend reports a fresh start was performed,
+  // clear any renderer-local saved selections and apply the requested defaults.
+  if (window.api && typeof window.api.ensureFreshStart === 'function') {
+    try {
+      const res = await window.api.ensureFreshStart()
+      if (res && res.cleared) {
+        // Clear saved users and selections in renderer storage
+        try {
+          localStorage.removeItem('userId')
+          localStorage.removeItem('lastDeck')
+          localStorage.removeItem('lastDomain')
+          localStorage.removeItem('lastSub')
+          localStorage.removeItem('lastDifficulty')
+          localStorage.removeItem('lastMode')
+        } catch (e) {}
+
+        // Apply defaults coming from backend or fallbacks
+        try {
+          const defs = res.defaults || { deck: null, domain: '1.0', sub: '1.1', mode: 'casual', difficulty: 'easy' }
+          // Persist defaults to localStorage so normal restore flow can use them
+          if (defs.deck) localStorage.setItem('lastDeck', defs.deck)
+
+          // Map domain id -> full display string where possible and persist.
+          try {
+            if (defs.domain) {
+              let domainFull = defs.domain;
+              if (defs.deck && domainMaps && domainMaps[defs.deck] && domainMaps[defs.deck][defs.domain]) {
+                domainFull = `${defs.domain} ${domainMaps[defs.deck][defs.domain]}`;
+              }
+              localStorage.setItem('lastDomain', domainFull);
+              // Keep a runtime copy of the computed defaults in case the
+              // later restore code runs before storage is visible or when
+              // timing/order causes localStorage reads to miss the values.
+              try { window._fc_initialMappedDomain = domainFull } catch (e) {}
+            }
+          } catch (e) {
+            if (defs.domain) localStorage.setItem('lastDomain', defs.domain);
+          }
+
+          if (defs.sub) localStorage.setItem('lastSub', defs.sub)
+          if (defs.mode) localStorage.setItem('lastMode', defs.mode)
+          if (defs.difficulty) localStorage.setItem('lastDifficulty', defs.difficulty)
+
+          // Store original defaults object so later code can fall back to
+          // these values if localStorage doesn't yet reflect them.
+          try { window._fc_initialDefaults = defs } catch (e) {}
+        } catch (e) {}
+      }
+    } catch (e) {
+      // ignore fresh-start failures
+    }
+  }
 
   // Debug overlay removed (no-op in production)
 
@@ -204,10 +301,10 @@ function populateDeckDropdown(certNames, selectedId = null) {
 
   // ✅ Populate deck dropdown without triggering events
   // Use the certNames exposed by loadDomainMap; if empty, show a friendly placeholder
-  if (data && Object.keys(data.certNames || {}).length) {
+  const hasTitles = data && Object.keys(data.certNames || {}).length;
+  if (hasTitles) {
     populateDeckDropdown(data.certNames, savedDeck);
   } else {
-    // Ensure the UI shows an obvious placeholder instead of being empty
     const deckSelect = document.getElementById("deck-select");
     deckSelect.innerHTML = "";
     const opt = new Option("No titles available", "");
@@ -215,61 +312,99 @@ function populateDeckDropdown(certNames, selectedId = null) {
     deckSelect.disabled = true;
   }
 
-  // Initialize mode state
-  currentMode = savedMode || 'casual';
+  // Decide the effective deck (saved or first available)
+  const deckSelect = document.getElementById("deck-select");
+  const effectiveDeck = deckSelect && deckSelect.value ? deckSelect.value : (hasTitles ? Object.keys(data.certNames)[0] : null);
+
+  // Populate and select domains based on effectiveDeck. Domain option values are "<id> <title>".
+  const domainSelect = document.getElementById("domain-select");
+  const subSelect = document.getElementById("subdomain-select");
+
+  domainSelect.innerHTML = `<option>All</option>`;
+  subSelect.innerHTML = `<option>All</option>`;
+
+  if (effectiveDeck && domainMaps[effectiveDeck]) {
+    const entries = Object.entries(domainMaps[effectiveDeck]);
+    entries.forEach(([domainId, domainTitle]) => {
+      const full = `${domainId} ${domainTitle}`;
+      const opt = new Option(full, full);
+      domainSelect.appendChild(opt);
+    });
+  }
+
+  // diagnostic logs removed
+
+  // Determine which domain to select: prefer savedDomain if it matches either the
+  // full value or the id; otherwise pick the first available domain option
+  let chosenDomainVal = null;
+  if (savedDomain) {
+    // If savedDomain equals domain id (like '1.0') try to find matching full value
+    const byId = Array.from(domainSelect.options).find(o => o.value.split(' ')[0] === savedDomain || o.value === savedDomain);
+    if (byId) chosenDomainVal = byId.value;
+    else {
+      // Maybe savedDomain already holds full value
+      const byFull = Array.from(domainSelect.options).find(o => o.value === savedDomain);
+      if (byFull) chosenDomainVal = byFull.value;
+    }
+  }
+  if (!chosenDomainVal && domainSelect.options.length > 1) {
+    // pick first real domain option (skip 'All' option at index 0)
+    chosenDomainVal = domainSelect.options[1].value;
+  }
+  if (chosenDomainVal) domainSelect.value = chosenDomainVal;
+
+  // Populate subdomain list for the selected domain
+  const selectedDomainId = domainSelect.value ? domainSelect.value.split(' ')[0] : null;
+  subSelect.innerHTML = `<option>All</option>`;
+  if (effectiveDeck && selectedDomainId && subdomainMaps[effectiveDeck] && subdomainMaps[effectiveDeck][selectedDomainId]) {
+    const subMap = subdomainMaps[effectiveDeck][selectedDomainId];
+    Object.entries(subMap).forEach(([subId, subTitle]) => {
+      const opt = new Option(`${subId} ${subTitle}`, subId);
+      subSelect.appendChild(opt);
+    });
+  }
+
+  // Choose subdomain: prefer savedSub if matches id, otherwise pick first real
+  let chosenSub = null;
+  if (savedSub) {
+    const bySub = Array.from(subSelect.options).find(o => o.value === savedSub || o.value.split(' ')[0] === savedSub);
+    if (bySub) chosenSub = bySub.value;
+  }
+  if (!chosenSub && subSelect.options.length > 1) chosenSub = subSelect.options[1].value;
+  if (chosenSub) subSelect.value = chosenSub;
+
+  // Mode and difficulty: default to saved values if present, otherwise defaults
+  const modeSelect = document.getElementById('mode-select');
+  modeSelect.value = savedMode || 'casual';
+  currentMode = modeSelect.value;
   isTestMode = currentMode === 'test';
 
-  // Restore ALL selections first without triggering events
+  // Ensure difficulty select has at least a default option before the
+  // initial fetch. If the control hasn't been populated yet, reading its
+  // value returns an empty string which triggers the "fetch all cards"
+  // fallback path in `fetchCards`. To avoid that, create a minimal
+  // Easy-only option now; `updateDifficultyDropdown` will rebuild this
+  // later once unlock info is available.
+  try {
+    const difficultySelect = document.getElementById('difficulty-select');
+    if (difficultySelect && difficultySelect.options.length === 0) {
+      difficultySelect.innerHTML = '';
+      const easyOption = document.createElement('option');
+      easyOption.value = 'Easy';
+      easyOption.textContent = 'Easy';
+      difficultySelect.appendChild(easyOption);
+      difficultySelect.value = savedDifficulty || 'Easy';
+    }
+  } catch (e) {}
+
+  // Now fetch cards; updateDifficultyDropdown will run later in the
+  // fetchCardsAndUpdateCount flow to rebuild actual difficulty options.
+  fetchCardsAndUpdateCount();
+
+  // Set initial mode indicators after everything is loaded
   setTimeout(() => {
-    // Restore deck domain/subdomain options
-    const certId = savedDeck;
-    const domainSelect = document.getElementById("domain-select");
-    const subSelect = document.getElementById("subdomain-select");
-
-    domainSelect.innerHTML = `<option>All</option>`;
-    subSelect.innerHTML = `<option>All</option>`;
-
-    if (certId && domainMaps[certId]) {
-      Object.entries(domainMaps[certId]).forEach(([domainId, domainTitle]) => {
-        const opt = new Option(`${domainId} ${domainTitle}`, `${domainId} ${domainTitle}`);
-        domainSelect.appendChild(opt);
-      });
-    }
-
-    // Restore all selections
-    if (savedDomain) document.getElementById("domain-select").value = savedDomain;
-    if (savedSub) document.getElementById("subdomain-select").value = savedSub;
-    if (savedDifficulty) document.getElementById("difficulty-select").value = savedDifficulty;
-    if (savedMode) document.getElementById("mode-select").value = savedMode;
-
-    // Update subdomain options based on domain
-    if (savedDomain) {
-      const domainId = savedDomain.split(" ")[0];
-      subSelect.innerHTML = `<option>All</option>`;
-      
-      if (certId && domainId && subdomainMaps[certId]?.[domainId]) {
-        const subMap = subdomainMaps[certId][domainId];
-        Object.entries(subMap).forEach(([subId, subTitle]) => {
-          // Full text display with CSS handling the wrapping
-          const opt = new Option(`${subId} ${subTitle}`, subId);
-          subSelect.appendChild(opt);
-        });
-      }
-      
-      if (savedSub) document.getElementById("subdomain-select").value = savedSub;
-    }
-
-    // Apply mode restrictions - removed subdomain restriction in test mode for flexible testing
-    // Test mode now allows both domain-wide and subdomain-specific testing
-
-    // NOW fetch cards once with all selections restored
-    fetchCardsAndUpdateCount();
-    
-    // Set initial mode indicators after everything is loaded
-    setTimeout(() => {
-      updateModeIndicators();
-    }, 200);
-  }, 150);
+    updateModeIndicators();
+  }, 200);
 })();
 
 
@@ -313,10 +448,13 @@ function saveLastSelection() {
 }
 
 function restoreLastSelection() {
-  const deck = localStorage.getItem("lastDeck");
-  const domain = localStorage.getItem("lastDomain");
-  const sub = localStorage.getItem("lastSub");
-  const difficulty = localStorage.getItem("lastDifficulty");
+  // Prefer localStorage, but fall back to any initial defaults computed
+  // during ensureFreshStart (stored on window by earlier code) so the
+  // UI shows the intended initial selection even if timing differs.
+  const deck = localStorage.getItem("lastDeck") || (window._fc_initialDefaults && window._fc_initialDefaults.deck) || null;
+  const domain = localStorage.getItem("lastDomain") || window._fc_initialMappedDomain || (window._fc_initialDefaults && window._fc_initialDefaults.domain) || null;
+  const sub = localStorage.getItem("lastSub") || (window._fc_initialDefaults && window._fc_initialDefaults.sub) || null;
+  const difficulty = localStorage.getItem("lastDifficulty") || (window._fc_initialDefaults && window._fc_initialDefaults.difficulty) || null;
 
   if (deck) document.getElementById("deck-select").value = deck;
   document.getElementById("deck-select").dispatchEvent(new Event("change"));
@@ -564,12 +702,30 @@ async function fetchCards(unlockedDifficulties = null) {
   }
   
   let allCards = [];
-  
-  // Handle difficulty filtering based on unlock status
-  if (difficulty && difficulty !== "All") {
+  let fetchDebug = { source: null, query: {}, counts: {}, samples: {} };
+
+  // Normalize difficulty handling so we never send or treat a raw 'All'
+  // difficulty as an unrestricted "fetch everything" signal. When the UI
+  // requests 'All', we interpret that as "fetch all unlocked difficulties"
+  // (for fresh users this will be only ['easy']). Also ensure an empty
+  // difficulty string falls back to 'Easy' to avoid the problematic
+  // "fetch all cards" branch.
+  let requestedDifficulty = (difficulty || '').trim();
+  let useUnlockedSet = false;
+  let computedUnlocked = unlockedDifficulties || null;
+  if (!requestedDifficulty) {
+    requestedDifficulty = 'Easy';
+  }
+  if (requestedDifficulty === 'All') {
+    useUnlockedSet = true;
+    computedUnlocked = computedUnlocked || await getUnlockedDifficulties();
+  }
+
+  // Handle difficulty filtering based on normalized decision
+  if (!useUnlockedSet && requestedDifficulty && requestedDifficulty !== 'All') {
     // Single difficulty - make one API call
     const query = new URLSearchParams(baseQuery);
-    query.append("difficulty", difficulty.toLowerCase());
+    query.append("difficulty", requestedDifficulty.toLowerCase());
     
     const url = `/api/cards?${query.toString()}`;
     // Prefer IPC getCards when available (Electron) to avoid file:// errors
@@ -578,6 +734,8 @@ async function fetchCards(unlockedDifficulties = null) {
       try {
         const params = Object.fromEntries(query.entries());
         data = await window.api.getCards(params);
+        fetchDebug.source = 'ipc';
+        fetchDebug.query = params;
       } catch (e) {
         console.warn('ipc getCards failed, falling back to fetch', e && e.message);
       }
@@ -597,9 +755,10 @@ async function fetchCards(unlockedDifficulties = null) {
       }
     }
     allCards = data || [];
-  } else if (difficulty === "All") {
-    // Multiple difficulties - use pre-fetched unlock data if available
-    const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
+    fetchDebug.counts.single = allCards.length;
+  } else if (useUnlockedSet) {
+    // Multiple difficulties - use the computedUnlocked set (unlocked difficulties)
+    const unlocked = computedUnlocked || await getUnlockedDifficulties();
     
     // Make parallel API calls for each unlocked difficulty
     const promises = unlocked.map(async (diff) => {
@@ -637,25 +796,30 @@ async function fetchCards(unlockedDifficulties = null) {
       index === self.findIndex(c => (c._id || c.id) === (card._id || card.id))
     );
     allCards = uniqueCards || [];
+    fetchDebug.source = fetchDebug.source || 'multi';
+    try { fetchDebug.query = { cert: deck, domain: domain && domain.split(' ')[0] || null, sub: subdomain, unlocked: unlocked }; } catch (e) {}
+    fetchDebug.counts.multi = results.map(r => (r && r.length) || 0);
   } else {
-    // No difficulty specified - fetch all cards (shouldn't happen in normal flow)
-  const url = `/api/cards?${baseQuery.toString()}`;
+    // Fallback: treat as Easy (should not reach here due to normalization)
+    const query = new URLSearchParams(baseQuery);
+    query.append('difficulty', 'easy');
+    const url = `/api/cards?${query.toString()}`;
     if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
       try {
         const res = await fetch(url);
         if (res && res.ok) allCards = await res.json();
       } catch (e) {
-        console.warn('fetch failed for all-cards', e && e.message);
+        console.warn('fetch failed for all-cards fallback', e && e.message);
       }
     } else {
-      console.warn('Skipping network fetch for all cards under file://');
+      console.warn('Skipping network fetch for all cards under file:// (fallback)');
     }
   }
-  // Fallback: if no cards were returned from API/ipc (e.g., running from file://),
-  // attempt to load cards directly from the bundled data/ directory using the
-  // known domain/subdomain maps. This probes predictable filenames like
-  // data/cards/<cert>/<domain>/<sub>/Q-<cert>-<domain>-<sub>-NNN.json
-  if ((!allCards || allCards.length === 0) && document.location.protocol !== 'http:' ) {
+  // Fallback: only probe the local data directory when running under file://
+  // or when no IPC bridge is present. Previously this condition used
+  // `protocol !== 'http:'` which incorrectly triggered in https and other
+  // contexts. Limit probing to file:// or when `window.api` is missing.
+  if ((!allCards || allCards.length === 0) && (document.location.protocol === 'file:' || !window.api)) {
     try {
       const cert = document.getElementById("deck-select").value.trim();
       const domainVal = document.getElementById("domain-select").value.trim();
@@ -710,16 +874,39 @@ async function fetchCards(unlockedDifficulties = null) {
         await probeFolder(cert, f.domain, f.sub);
       }
 
-      // If we found local cards, filter by difficulty (if specified)
+      // If we found local cards, filter by difficulty (if specified).
+      // Important: when `difficulty === 'All'` we should still restrict to
+      // only the unlocked difficulties for the current user (fresh users
+      // should only have Easy unlocked). Previously this branch treated
+      // 'All' as "no filter" and returned cards of all difficulties.
       if (localCards.length) {
-        const desired = difficulty && difficulty !== 'All' ? difficulty.toLowerCase() : null;
-        allCards = desired ? localCards.filter(c => (c.difficulty || '').toLowerCase() === desired) : localCards;
+        let desiredLevels = null;
+        if (difficulty && difficulty !== 'All') {
+          desiredLevels = [difficulty.toLowerCase()];
+        } else {
+          // respect unlocked difficulties if provided, otherwise query for them
+          const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
+          desiredLevels = (unlocked || ['easy']).map(d => d.toLowerCase());
+        }
+
+        if (desiredLevels && desiredLevels.length) {
+          allCards = localCards.filter(c => desiredLevels.includes(((c.difficulty || '')).toLowerCase()));
+        } else {
+          allCards = localCards;
+        }
+
+        fetchDebug.source = 'probe';
+        fetchDebug.counts.probeRaw = localCards.length;
+        fetchDebug.counts.probeFiltered = (allCards || []).length;
+        fetchDebug.query = { cert, domain: domainId, sub: subVal, difficultyLevels: desiredLevels };
       }
     } catch (e) {
       // ignore fallback errors
       console.warn('local data/cards fallback failed', e && e.message);
     }
   }
+
+  // debug samples removed
 
   questions = allCards.map(card => {
     // Support multiple possible backend shapes. The local SQLite API stores
@@ -748,6 +935,8 @@ async function fetchCards(unlockedDifficulties = null) {
 
   // Debug: log a sample card so Electron runs can show what's being mapped
   // debug log removed
+
+  // debug overlay and console.debug output removed
 
   return questions; // Return the questions array for potential shuffling
 }
@@ -840,11 +1029,7 @@ document.getElementById("domain-select").addEventListener("change", () => {
       await fetchCards(unlockedDifficulties);
       updateCardCount();
 
-        // Update debug overlay with cards count
-        try {
-          const dbg = document.getElementById('fc-debug-overlay');
-          if (dbg) dbg.textContent = `domainmap: ${Object.keys(certNames||{}).length} titles · cards: ${questions.length}`;
-        } catch (e) { /* no-op */ }
+        // debug overlay update removed
       
       // Update difficulty dropdown based on unlock status, passing the already-fetched data
       await updateDifficultyDropdown(unlockedDifficulties);

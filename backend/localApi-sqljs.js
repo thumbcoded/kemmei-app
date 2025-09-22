@@ -276,4 +276,51 @@ async function clearUserProgress(userId) {
   return { ok: true }
 }
 
+// One-time fresh start: clear persisted users, current user id and all per-user progress/unlocks
+// then mark settings.initialResetDone so this only runs once per installed app.
+async function ensureFreshStart (opts = {}) {
+  await loadDb()
+  // check sentinel
+  const sentinel = (db.exec("SELECT value FROM settings WHERE key = 'initialResetDone'")[0] || { values: [] }).values
+  const alreadyDone = sentinel && sentinel[0] && sentinel[0][0]
+  // if already done and not forcing, skip
+  if (alreadyDone && !opts.force) return { cleared: false }
+
+  // Clear users and per-user tables so app starts with no saved users or progress
+  try {
+    db.run('DELETE FROM users')
+    db.run('DELETE FROM progress')
+    db.run('DELETE FROM test_completions')
+    db.run('DELETE FROM unlocks')
+    // clear currentUserId setting
+    const stmt = db.prepare('INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)')
+    stmt.run(['currentUserId', ''])
+    stmt.free()
+    // set sentinel so this doesn't run again
+    const sstmt = db.prepare('INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)')
+    sstmt.run(['initialResetDone', '1'])
+    sstmt.free()
+    // also mark that this was a packaged-install clear if requested
+    if (opts.packaged) {
+      const pstmt = db.prepare('INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)')
+      pstmt.run(['packagedFreshStart', '1'])
+      pstmt.free()
+    }
+    persistDb()
+  } catch (e) {
+    // ignore errors but report cleared=false
+    return { cleared: false, error: e && e.message }
+  }
+
+  // Determine sensible defaults by reading domainmap.json
+  let defaults = { deck: null, domain: '1.0', sub: '1.1', mode: 'casual', difficulty: 'easy' }
+  try {
+    const dm = await getDomainMap()
+    const certKeys = Object.keys(dm.certNames || {})
+    if (certKeys && certKeys.length) defaults.deck = certKeys[0]
+  } catch (e) {}
+
+  return { cleared: true, defaults }
+}
+
 module.exports = { init, getCards, getCard, saveCard, getUsers, saveUser, getUserByUsername, setCurrentUserId, getCurrentUserId, getCurrentUser, getUserById, getDomainMap, getUserProgress, getTestCompletions, getUserUnlocks, saveProgress, saveTestCompletion, saveUserUnlock, clearUserProgress, ensureInit: init }

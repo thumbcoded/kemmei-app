@@ -40,6 +40,7 @@ global.fetch = async function (input, init = {}) {
 
 contextBridge.exposeInMainWorld('api', {
   init: () => ipcRenderer.invoke('api:init'),
+  ensureFreshStart: () => ipcRenderer.invoke('api:ensureFreshStart'),
   getCards: (filter) => ipcRenderer.invoke('api:getCards', filter),
   getCard: (id) => ipcRenderer.invoke('api:getCard', id),
   saveCard: (card) => ipcRenderer.invoke('api:saveCard', card),
