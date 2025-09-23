@@ -58,7 +58,7 @@
     ,
     "win": {
       "target": ["portable", "nsis"],
-      "artifactName": "Kemmei Setup ${version}.exe"
+      "artifactName": "Kemmei-${version}.exe"
     },
     "linux": {
       "target": ["AppImage"]

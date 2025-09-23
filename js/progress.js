@@ -268,12 +268,25 @@ function saveExpandedState() {
       if (domainId) expanded.domains.push(domainId);
     }
   });
-  localStorage.setItem('progressExpanded', JSON.stringify(expanded));
+  try {
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+      localStorage.setItem(`user:${userId}:progressExpanded`, JSON.stringify(expanded));
+    } else {
+      // no user: do not store a global progressExpanded for clean-start behavior
+    }
+  } catch (e) {
+    // ignore storage errors
+  }
 }
 
 function restoreExpandedState() {
-  const expanded = JSON.parse(localStorage.getItem('progressExpanded') || '{}');
-  if (!expanded) return;
+  try {
+    const userId = localStorage.getItem('userId');
+    if (!userId) return; // no user -> nothing to restore
+    const raw = localStorage.getItem(`user:${userId}:progressExpanded`);
+    const expanded = raw ? JSON.parse(raw) : null;
+    if (!expanded) return;
   // Expand certs
   expanded.certs?.forEach(certId => {
     document.querySelectorAll('.title-block').forEach(block => {
@@ -295,7 +308,10 @@ function restoreExpandedState() {
     });
   });
   // Clear after restoring
-  localStorage.removeItem('progressExpanded');
+  localStorage.removeItem(`user:${userId}:progressExpanded`);
+  } catch (e) {
+    // ignore JSON parse/storage errors
+  }
 }
 
 // Call restore after rendering tree

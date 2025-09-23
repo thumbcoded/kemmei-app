@@ -209,7 +209,8 @@ function populateDeckDropdown(certNames, selectedId = null) {
   // If we have a user id, check whether they have any saved progress. If
   // they have no progress, treat this as a fresh user and clear any global
   // renderer-local 'last*' keys (these are not per-user and can leak from
-  // previous installs). This enforces canonical defaults for fresh users.
+  // previous installs). Also clear any per-user last* keys for this user to
+  // ensure a clean start.
   if (currentUserId) {
     try {
       let progress = {};
@@ -221,11 +222,18 @@ function populateDeckDropdown(certNames, selectedId = null) {
       }
       if (!progress || Object.keys(progress).length === 0) {
         try {
+          // Remove legacy global keys which may have leaked between installs
           localStorage.removeItem('lastDeck');
           localStorage.removeItem('lastDomain');
           localStorage.removeItem('lastSub');
           localStorage.removeItem('lastDifficulty');
           localStorage.removeItem('lastMode');
+          // Also remove any per-user keys for this user to ensure a fresh start
+          localStorage.removeItem(`user:${currentUserId}:lastDeck`);
+          localStorage.removeItem(`user:${currentUserId}:lastDomain`);
+          localStorage.removeItem(`user:${currentUserId}:lastSub`);
+          localStorage.removeItem(`user:${currentUserId}:lastDifficulty`);
+          localStorage.removeItem(`user:${currentUserId}:lastMode`);
         } catch (e) {}
       } else {
         // user has progress; leave last* keys intact
@@ -239,19 +247,29 @@ function populateDeckDropdown(certNames, selectedId = null) {
   const data = await loadDomainMap();
 
   // One-time fresh-start: if backend reports a fresh start was performed,
-  // clear any renderer-local saved selections and apply the requested defaults.
+  // clear any renderer-local saved selections (both legacy global and per-user)
+  // and apply the requested defaults.
   if (window.api && typeof window.api.ensureFreshStart === 'function') {
     try {
       const res = await window.api.ensureFreshStart()
       if (res && res.cleared) {
         // Clear saved users and selections in renderer storage
         try {
+          // remove global legacy keys
           localStorage.removeItem('userId')
           localStorage.removeItem('lastDeck')
           localStorage.removeItem('lastDomain')
           localStorage.removeItem('lastSub')
           localStorage.removeItem('lastDifficulty')
           localStorage.removeItem('lastMode')
+          // remove any per-user last* keys for the current user if available
+          if (currentUserId) {
+            localStorage.removeItem(`user:${currentUserId}:lastDeck`);
+            localStorage.removeItem(`user:${currentUserId}:lastDomain`);
+            localStorage.removeItem(`user:${currentUserId}:lastSub`);
+            localStorage.removeItem(`user:${currentUserId}:lastDifficulty`);
+            localStorage.removeItem(`user:${currentUserId}:lastMode`);
+          }
         } catch (e) {}
 
         // Apply defaults coming from backend or fallbacks
@@ -263,11 +281,13 @@ function populateDeckDropdown(certNames, selectedId = null) {
           // Map domain id -> full display string where possible and persist.
           try {
             if (defs.domain) {
-              let domainFull = defs.domain;
-              if (defs.deck && domainMaps && domainMaps[defs.deck] && domainMaps[defs.deck][defs.domain]) {
-                domainFull = `${defs.domain} ${domainMaps[defs.deck][defs.domain]}`;
-              }
-              localStorage.setItem('lastDomain', domainFull);
+                let domainFull = defs.domain;
+                if (defs.deck && domainMaps && domainMaps[defs.deck] && domainMaps[defs.deck][defs.domain]) {
+                  domainFull = `${defs.domain} ${domainMaps[defs.deck][defs.domain]}`;
+                }
+                // Persist defaults using per-user key if we have a known user, otherwise fallback to legacy
+                if (currentUserId) localStorage.setItem(`user:${currentUserId}:lastDomain`, domainFull);
+                else localStorage.setItem('lastDomain', domainFull);
               // Keep a runtime copy of the computed defaults in case the
               // later restore code runs before storage is visible or when
               // timing/order causes localStorage reads to miss the values.
@@ -277,9 +297,18 @@ function populateDeckDropdown(certNames, selectedId = null) {
             if (defs.domain) localStorage.setItem('lastDomain', defs.domain);
           }
 
-          if (defs.sub) localStorage.setItem('lastSub', defs.sub)
-          if (defs.mode) localStorage.setItem('lastMode', defs.mode)
-          if (defs.difficulty) localStorage.setItem('lastDifficulty', defs.difficulty)
+          if (defs.sub) {
+            if (currentUserId) localStorage.setItem(`user:${currentUserId}:lastSub`, defs.sub);
+            else localStorage.setItem('lastSub', defs.sub);
+          }
+          if (defs.mode) {
+            if (currentUserId) localStorage.setItem(`user:${currentUserId}:lastMode`, defs.mode);
+            else localStorage.setItem('lastMode', defs.mode);
+          }
+          if (defs.difficulty) {
+            if (currentUserId) localStorage.setItem(`user:${currentUserId}:lastDifficulty`, defs.difficulty);
+            else localStorage.setItem('lastDifficulty', defs.difficulty);
+          }
 
           // Store original defaults object so later code can fall back to
           // these values if localStorage doesn't yet reflect them.
@@ -293,11 +322,14 @@ function populateDeckDropdown(certNames, selectedId = null) {
 
   // Debug overlay removed (no-op in production)
 
-  const savedDeck = localStorage.getItem("lastDeck");
-  const savedDomain = localStorage.getItem("lastDomain");
-  const savedSub = localStorage.getItem("lastSub");
-  const savedDifficulty = localStorage.getItem("lastDifficulty");
-  const savedMode = localStorage.getItem("lastMode");
+  // Prefer per-user saved selections when a user exists. Do NOT fall back
+  // to legacy global keys when a user is present — that prevents a newly-
+  // created user from inheriting stale selections.
+  const savedDeck = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastDeck`) || null) : null;
+  const savedDomain = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastDomain`) || null) : null;
+  const savedSub = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastSub`) || null) : null;
+  const savedDifficulty = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastDifficulty`) || null) : null;
+  const savedMode = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastMode`) || null) : null;
 
   // ✅ Populate deck dropdown without triggering events
   // Use the certNames exposed by loadDomainMap; if empty, show a friendly placeholder
@@ -312,9 +344,34 @@ function populateDeckDropdown(certNames, selectedId = null) {
     deckSelect.disabled = true;
   }
 
-  // Decide the effective deck (saved or first available)
+  // Decide the effective deck (saved or first available that appears to
+  // have content). When no user is present we want to start from defaults
+  // rather than any previously saved legacy key.
   const deckSelect = document.getElementById("deck-select");
-  const effectiveDeck = deckSelect && deckSelect.value ? deckSelect.value : (hasTitles ? Object.keys(data.certNames)[0] : null);
+  function findFirstDeckWithContent(certNamesObj, domainMapsObj, subdomainMapsObj) {
+    if (!certNamesObj) return null;
+    for (const id of Object.keys(certNamesObj)) {
+      // Prefer decks that have domains and subdomains available in the
+      // mapping data — a reasonable proxy for having cards.
+      if (domainMapsObj && domainMapsObj[id]) {
+        const domains = Object.keys(domainMapsObj[id] || {});
+        if (domains.length > 0) {
+          const firstDomain = domains[0];
+          if (subdomainMapsObj && subdomainMapsObj[id] && subdomainMapsObj[id][firstDomain]) {
+            const subs = Object.keys(subdomainMapsObj[id][firstDomain] || {});
+            if (subs.length > 0) return id;
+          } else {
+            // If no subdomain map present, still accept the deck if domains exist
+            return id;
+          }
+        }
+      }
+    }
+    // Fallback to first certName key
+    return Object.keys(certNamesObj)[0] || null;
+  }
+
+  const effectiveDeck = deckSelect && deckSelect.value ? deckSelect.value : (hasTitles ? findFirstDeckWithContent(data.certNames, domainMaps, subdomainMaps) : null);
 
   // Populate and select domains based on effectiveDeck. Domain option values are "<id> <title>".
   const domainSelect = document.getElementById("domain-select");
@@ -335,7 +392,8 @@ function populateDeckDropdown(certNames, selectedId = null) {
   // diagnostic logs removed
 
   // Determine which domain to select: prefer savedDomain if it matches either the
-  // full value or the id; otherwise pick the first available domain option
+  // full value or the id; otherwise prefer domain '1.0' when present, else pick the
+  // first available domain option.
   let chosenDomainVal = null;
   if (savedDomain) {
     // If savedDomain equals domain id (like '1.0') try to find matching full value
@@ -348,8 +406,10 @@ function populateDeckDropdown(certNames, selectedId = null) {
     }
   }
   if (!chosenDomainVal && domainSelect.options.length > 1) {
-    // pick first real domain option (skip 'All' option at index 0)
-    chosenDomainVal = domainSelect.options[1].value;
+    // prefer '1.0' when present
+    const prefer = Array.from(domainSelect.options).find(o => o.value.split(' ')[0] === '1.0');
+    if (prefer) chosenDomainVal = prefer.value;
+    else chosenDomainVal = domainSelect.options[1].value;
   }
   if (chosenDomainVal) domainSelect.value = chosenDomainVal;
 
@@ -364,13 +424,18 @@ function populateDeckDropdown(certNames, selectedId = null) {
     });
   }
 
-  // Choose subdomain: prefer savedSub if matches id, otherwise pick first real
+  // Choose subdomain: prefer savedSub if matches id, otherwise prefer '1.1' then
+  // first real option.
   let chosenSub = null;
   if (savedSub) {
     const bySub = Array.from(subSelect.options).find(o => o.value === savedSub || o.value.split(' ')[0] === savedSub);
     if (bySub) chosenSub = bySub.value;
   }
-  if (!chosenSub && subSelect.options.length > 1) chosenSub = subSelect.options[1].value;
+  if (!chosenSub && subSelect.options.length > 1) {
+    const preferSub = Array.from(subSelect.options).find(o => o.value.split(' ')[0] === '1.1');
+    if (preferSub) chosenSub = preferSub.value;
+    else chosenSub = subSelect.options[1].value;
+  }
   if (chosenSub) subSelect.value = chosenSub;
 
   // Mode and difficulty: default to saved values if present, otherwise defaults
@@ -378,6 +443,28 @@ function populateDeckDropdown(certNames, selectedId = null) {
   modeSelect.value = savedMode || 'casual';
   currentMode = modeSelect.value;
   isTestMode = currentMode === 'test';
+
+  // Ensure shuffle is enabled by default for a clean/start experience. If a
+  // per-user preference exists, honor it; otherwise default to enabled.
+  try {
+    if (randomToggle) {
+      if (currentUserId) {
+        const savedShuffle = localStorage.getItem(`user:${currentUserId}:shuffle`);
+        if (savedShuffle !== null) randomToggle.checked = savedShuffle === 'true';
+        else randomToggle.checked = true;
+      } else {
+        randomToggle.checked = true;
+      }
+      // Save changes to per-user preference when toggled so the user's choice persists
+      randomToggle.addEventListener('change', () => {
+        try {
+          const uid = localStorage.getItem('userId');
+          if (uid) localStorage.setItem(`user:${uid}:shuffle`, randomToggle.checked);
+          else localStorage.setItem('lastShuffle', randomToggle.checked);
+        } catch (e) {}
+      });
+    }
+  } catch (e) {}
 
   // Ensure difficulty select has at least a default option before the
   // initial fetch. If the control hasn't been populated yet, reading its
@@ -440,21 +527,48 @@ let isUpdatingCards = false; // Flag to prevent overlapping card updates
 let isRebuildingDifficulty = false; // Flag to prevent difficulty change events during dropdown rebuild
 
 function saveLastSelection() {
-  localStorage.setItem("lastDeck", document.getElementById("deck-select").value);
-  localStorage.setItem("lastDomain", document.getElementById("domain-select").value);
-  localStorage.setItem("lastSub", document.getElementById("subdomain-select").value);
-  localStorage.setItem("lastDifficulty", document.getElementById("difficulty-select").value);
-  localStorage.setItem("lastMode", document.getElementById("mode-select").value);
+  // Save per-user when possible to avoid leaking selections across users.
+  let userId = null;
+  try { userId = localStorage.getItem('userId'); } catch (e) {}
+  if (!userId && window.userApi && typeof window.userApi.getCurrentUserId === 'function') {
+    try { userId = window.userApi.getCurrentUserId(); } catch (e) {}
+  }
+
+  const deckVal = document.getElementById("deck-select").value;
+  const domainVal = document.getElementById("domain-select").value;
+  const subVal = document.getElementById("subdomain-select").value;
+  const diffVal = document.getElementById("difficulty-select").value;
+  const modeVal = document.getElementById("mode-select").value;
+
+  try {
+    if (userId) {
+      localStorage.setItem(`user:${userId}:lastDeck`, deckVal);
+      localStorage.setItem(`user:${userId}:lastDomain`, domainVal);
+      localStorage.setItem(`user:${userId}:lastSub`, subVal);
+      localStorage.setItem(`user:${userId}:lastDifficulty`, diffVal);
+      localStorage.setItem(`user:${userId}:lastMode`, modeVal);
+    } else {
+      // Fallback for legacy behavior when no user is available
+      localStorage.setItem("lastDeck", deckVal);
+      localStorage.setItem("lastDomain", domainVal);
+      localStorage.setItem("lastSub", subVal);
+      localStorage.setItem("lastDifficulty", diffVal);
+      localStorage.setItem("lastMode", modeVal);
+    }
+  } catch (e) {
+    // Ignore storage errors
+  }
 }
 
 function restoreLastSelection() {
-  // Prefer localStorage, but fall back to any initial defaults computed
-  // during ensureFreshStart (stored on window by earlier code) so the
-  // UI shows the intended initial selection even if timing differs.
-  const deck = localStorage.getItem("lastDeck") || (window._fc_initialDefaults && window._fc_initialDefaults.deck) || null;
-  const domain = localStorage.getItem("lastDomain") || window._fc_initialMappedDomain || (window._fc_initialDefaults && window._fc_initialDefaults.domain) || null;
-  const sub = localStorage.getItem("lastSub") || (window._fc_initialDefaults && window._fc_initialDefaults.sub) || null;
-  const difficulty = localStorage.getItem("lastDifficulty") || (window._fc_initialDefaults && window._fc_initialDefaults.difficulty) || null;
+  // Prefer per-user keys in localStorage, fall back to legacy global keys
+  let userId = null;
+  try { userId = localStorage.getItem('userId'); } catch (e) {}
+
+  const deck = (userId && localStorage.getItem(`user:${userId}:lastDeck`)) || localStorage.getItem("lastDeck") || (window._fc_initialDefaults && window._fc_initialDefaults.deck) || null;
+  const domain = (userId && localStorage.getItem(`user:${userId}:lastDomain`)) || localStorage.getItem("lastDomain") || window._fc_initialMappedDomain || (window._fc_initialDefaults && window._fc_initialDefaults.domain) || null;
+  const sub = (userId && localStorage.getItem(`user:${userId}:lastSub`)) || localStorage.getItem("lastSub") || (window._fc_initialDefaults && window._fc_initialDefaults.sub) || null;
+  const difficulty = (userId && localStorage.getItem(`user:${userId}:lastDifficulty`)) || localStorage.getItem("lastDifficulty") || (window._fc_initialDefaults && window._fc_initialDefaults.difficulty) || null;
 
   if (deck) document.getElementById("deck-select").value = deck;
   document.getElementById("deck-select").dispatchEvent(new Event("change"));
