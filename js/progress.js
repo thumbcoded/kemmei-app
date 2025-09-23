@@ -98,6 +98,16 @@ document.addEventListener("DOMContentLoaded", () => {
           console.warn('user-unlocks fetch failed', e && e.message);
         }
 
+        // Merge any localStorage mirror entries so UI reflects user's recent
+        // force-unlocks without waiting for backend/IPC round-trip.
+        try {
+          const mirrorRaw = localStorage.getItem(`user:${userIdLocal}:unlocks`);
+          if (mirrorRaw) {
+            const mirrorObj = JSON.parse(mirrorRaw || '{}');
+            unlocks = Object.assign({}, unlocks || {}, mirrorObj || {});
+          }
+        } catch (e) {}
+
         try {
           if (window.api && typeof window.api.getTestCompletions === 'function') {
             const res = await window.api.getTestCompletions(userIdLocal);
@@ -193,24 +203,111 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function showToast(message, type = 'success') {
-  const toast = document.getElementById("toast");
-  if (toast) {
-    toast.textContent = message;
-    toast.classList.remove("hidden", "error", "success");
-    toast.classList.add("show", type);
+function showToast(message, type = 'success', duration = 3000) {
+  // Multi-toast stack: create container on first use
+  try {
+    let container = document.getElementById('toast-stack');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'toast-stack';
+      // Inline styles so we don't need to modify CSS files
+      container.style.position = 'fixed';
+      container.style.right = '24px';
+      container.style.bottom = '24px';
+      container.style.display = 'flex';
+      container.style.flexDirection = 'column-reverse';
+      container.style.gap = '10px';
+      container.style.zIndex = '9999';
+      container.style.pointerEvents = 'none';
+      document.body.appendChild(container);
+    }
 
+    // Create toast element
+    const t = document.createElement('div');
+    t.className = 'toast-item';
+    t.style.pointerEvents = 'auto';
+    t.style.minWidth = '220px';
+    t.style.maxWidth = '420px';
+    t.style.padding = '14px 18px';
+    t.style.borderRadius = '8px';
+    t.style.color = '#fff';
+    t.style.boxShadow = '0 6px 18px rgba(0,0,0,0.2)';
+    t.style.opacity = '0';
+    t.style.transition = 'opacity 220ms ease, transform 220ms ease';
+    t.style.transform = 'translateY(8px)';
+
+    // color by type
+    if (type === 'error') t.style.background = '#e24b4b';
+    else if (type === 'warning') t.style.background = '#d6a21f';
+    else t.style.background = '#22bdb0'; // success/neutral
+
+    // content
+    const icon = document.createElement('span');
+    icon.style.marginRight = '8px';
+    icon.textContent = type === 'error' ? '❌' : (type === 'warning' ? '⚠️' : '🔒');
+    const text = document.createElement('span');
+    text.textContent = message;
+    t.appendChild(icon);
+    t.appendChild(text);
+
+    // add to container
+    container.appendChild(t);
+
+    // enforce max toasts (keep most recent up to 5)
+    while (container.children.length > 5) {
+      const oldest = container.children[0];
+      if (oldest) container.removeChild(oldest);
+    }
+
+    // show animation
+    requestAnimationFrame(() => {
+      t.style.opacity = '1';
+      t.style.transform = 'translateY(0)';
+    });
+
+    // removal after duration
     setTimeout(() => {
-      toast.classList.remove("show");
+      t.style.opacity = '0';
+      t.style.transform = 'translateY(8px)';
+      setTimeout(() => { try { if (t.parentNode) t.parentNode.removeChild(t); } catch (e) {} }, 240);
+    }, typeof duration === 'number' ? duration : 3000);
+  } catch (e) {
+    // fallback to single toast element if something goes wrong
+    const toast = document.getElementById("toast");
+    if (toast) {
+      toast.textContent = message;
+      toast.classList.remove("hidden", "error", "success");
+      toast.classList.add("show", type);
+      const d = typeof duration === 'number' ? duration : 3000;
       setTimeout(() => {
-        toast.classList.add("hidden");
-        toast.classList.remove("error", "success");
-      }, 400);
-    }, 3000);
+        toast.classList.remove("show");
+        setTimeout(() => {
+          toast.classList.add("hidden");
+          toast.classList.remove("error", "success");
+        }, 400);
+      }, d);
+    }
   }
 }
 
-async function toggleUnlock(certId, domainId, level) {
+// Mirror individual unlocks into a per-user localStorage cache so other
+// renderer pages that read from storage (or the runtime cache) can reflect
+// force-unlocks immediately without waiting for a backend round-trip.
+function mirrorUnlockToLocal(userId, key, unlocked) {
+  try {
+    if (!userId || !key) return;
+    const storageKey = `user:${userId}:unlocks`;
+    let raw = localStorage.getItem(storageKey);
+    let obj = {};
+    try { obj = raw ? JSON.parse(raw) : {}; } catch (e) { obj = {}; }
+    obj[key] = (typeof unlocked === 'object') ? unlocked : { unlocked: !!unlocked };
+    localStorage.setItem(storageKey, JSON.stringify(obj));
+    // Keep runtime mirror too
+    try { window._currentProgressUnlocks = window._currentProgressUnlocks || {}; window._currentProgressUnlocks[key] = obj[key]; } catch (e) {}
+  } catch (e) { /* ignore */ }
+}
+
+async function toggleUnlock(certId, domainId, level, btn) {
   const userId = localStorage.getItem("userId");
   if (!userId) return;
 
@@ -218,29 +315,396 @@ async function toggleUnlock(certId, domainId, level) {
   saveExpandedState();
 
   try {
-  let res = null;
-  const payload = { certId, domainId, level };
-  if (window.api && typeof window.api.saveUserUnlock === 'function') {
-    try { res = await window.api.saveUserUnlock(userId, `${certId}:${domainId}:${level}`, payload); } catch (e) { console.warn('ipc saveUserUnlock failed', e && e.message); }
-  } else if (window.api && typeof window.api.rpc === 'function') {
-    try { res = await window.api.rpc(`user-unlocks/${userId}`, 'POST', payload); } catch (e) { console.warn('rpc user-unlocks failed', e && e.message); }
-  } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
-    try { res = await fetch(`/api/user-unlocks/${userId}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); } catch (e) { console.warn('network user-unlocks POST failed', e && e.message); }
-  } else {
-    console.warn('Skipping user-unlocks POST: running under file:// with no IPC bridge');
-  }
+    let res = null;
+  // Build storage key: omit domain part when domainId is null/undefined so
+  // stored keys match the shape used elsewhere (e.g. `certKey:medium` or `certKey:domainKey:medium`).
+  const key = (domainId === null || typeof domainId === 'undefined') ? `${certId}:${level}` : `${certId}:${domainId}:${level}`;
 
-    if (res.ok) {
-      const result = await res.json();
-      const action = result.unlocked ? "unlocked" : "locked";
-      const prettyMessage = getPrettyUnlockMessage(certId, domainId, level, action);
-      showToast(prettyMessage);
-      setTimeout(() => {
-        location.reload();
-      }, 1000);
-    } else {
-      showToast("❌ Failed to update unlock status.", 'error');
+    // Fetch current unlocks to determine toggle intention (unlock <-> lock)
+    let currentUnlocks = {};
+    try {
+      if (window.api && typeof window.api.getUserUnlocks === 'function') {
+        const r = await window.api.getUserUnlocks(userId);
+        if (r && r.status >= 200 && r.status < 300) currentUnlocks = r.body || {};
+        else if (r && typeof r === 'object') currentUnlocks = r;
+      } else if (window.api && typeof window.api.rpc === 'function') {
+        const r = await window.api.rpc(`user-unlocks/${userId}`, 'GET');
+        if (r && r.status >= 200 && r.status < 300) currentUnlocks = r.body || {};
+      } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+        try {
+          const r = await fetch(`/api/user-unlocks/${userId}`);
+          if (r && r.ok) currentUnlocks = await r.json();
+        } catch (e) { /* ignore */ }
+      }
+    } catch (e) {
+      console.warn('Failed to read current unlocks before toggling', e && e.message);
     }
+
+    // If a button element was passed, use it to provide an optimistic UI update.
+    let prevBtnState = null;
+    if (btn && btn instanceof Element) {
+      try {
+        prevBtnState = { className: btn.className, innerHTML: btn.innerHTML };
+        // Toggle UI immediately
+        const isUnlockedNow = btn.classList.contains('unlocked');
+        const willUnlock = !isUnlockedNow;
+        btn.classList.toggle('unlocked', willUnlock);
+        btn.classList.toggle('locked', !willUnlock);
+        // Update icon text (keep label word: Medium/Hard)
+        const label = (level && level[0].toUpperCase() + level.slice(1)) || '';
+        btn.innerHTML = `${willUnlock ? '🔓' : '🔒'} ${label}`;
+      } catch (e) { prevBtnState = null; }
+    }
+
+    // Stored unlock value may be boolean or object { unlocked: true }
+    let currentlyUnlocked = false;
+    if (currentUnlocks && Object.prototype.hasOwnProperty.call(currentUnlocks, key)) {
+      const val = currentUnlocks[key];
+      if (typeof val === 'boolean') currentlyUnlocked = !!val;
+      else if (val && typeof val === 'object' && typeof val.unlocked !== 'undefined') currentlyUnlocked = !!val.unlocked;
+      else currentlyUnlocked = !!val;
+    }
+    const desiredUnlocked = !currentlyUnlocked;
+    const payload = { certId, domainId, level, unlocked: desiredUnlocked };
+
+    // Helper to find the corresponding button element in the rendered tree
+    function findButton(certIdLocal, domainIdLocal, levelLocal) {
+      try {
+        // Title-level
+        const titleBlocks = document.querySelectorAll('.title-block');
+        for (const block of titleBlocks) {
+          const h3 = block.querySelector('h3');
+          if (h3 && h3.textContent && h3.textContent.startsWith(certIdLocal)) {
+            if (!domainIdLocal) {
+              const btns = block.querySelectorAll('.unlock-buttons button');
+              for (const b of btns) {
+                if (b.textContent && b.textContent.toLowerCase().includes(levelLocal.toLowerCase())) return b;
+              }
+            } else {
+              // find domain block
+              const domains = block.querySelectorAll('.domain-block');
+              for (const d of domains) {
+                const h4 = d.querySelector('h4');
+                if (h4 && h4.textContent && h4.textContent.includes(domainIdLocal)) {
+                  const btns = d.querySelectorAll('.unlock-buttons button');
+                  for (const b of btns) {
+                    if (b.textContent && b.textContent.toLowerCase().includes(levelLocal.toLowerCase())) return b;
+                  }
+                }
+              }
+            }
+          }
+        }
+      } catch (e) {}
+      return null;
+    }
+
+    // Helper to find all child buttons (domains and subdomains) for a given cert/domain
+    function findChildButtons(certIdLocal, domainIdLocal, levelLocal) {
+      const out = [];
+      try {
+        const titleBlocks = document.querySelectorAll('.title-block');
+        for (const block of titleBlocks) {
+          const h3 = block.querySelector('h3');
+          if (!h3 || !h3.textContent || !h3.textContent.startsWith(certIdLocal)) continue;
+          // If domainIdLocal is null, collect all domain and subdomain matching buttons
+          if (!domainIdLocal) {
+            const domainBlocks = block.querySelectorAll('.domain-block');
+            for (const db of domainBlocks) {
+              const btns = db.querySelectorAll('.unlock-buttons button');
+              btns.forEach(b => { if (b && b.textContent && b.textContent.toLowerCase().includes(levelLocal.toLowerCase())) out.push({ btn: b, domainBlock: db }); });
+            }
+            // Also include title-level children? skip title-level (caller already has title button)
+          } else {
+            // find matching domain block
+            const domainBlocks = block.querySelectorAll('.domain-block');
+            for (const db of domainBlocks) {
+              const h4 = db.querySelector('h4');
+              if (h4 && h4.textContent && h4.textContent.includes(domainIdLocal)) {
+                const btns = db.querySelectorAll('.unlock-buttons button');
+                btns.forEach(b => { if (b && b.textContent && b.textContent.toLowerCase().includes(levelLocal.toLowerCase())) out.push({ btn: b, domainBlock: db }); });
+                // subdomains under this domain
+                const subBtns = db.querySelectorAll('.subdomain-block .unlock-buttons button');
+                subBtns.forEach(b => { if (b && b.textContent && b.textContent.toLowerCase().includes(levelLocal.toLowerCase())) out.push({ btn: b, domainBlock: db }); });
+                break;
+              }
+            }
+          }
+        }
+      } catch (e) {}
+      return out;
+    }
+
+    // Helper to perform a save+mirror for a given key/payload and update UI element
+    async function saveAndMirror(userIdLocal, keyLocal, payloadLocal, btnLocal) {
+      try {
+        // persist via available bridges
+        if (window.api && typeof window.api.saveUserUnlock === 'function') {
+          try { await window.api.saveUserUnlock(userIdLocal, keyLocal, payloadLocal); } catch (e) {}
+        } else if (window.api && typeof window.api.rpc === 'function') {
+          try { await window.api.rpc(`user-unlocks/${userIdLocal}/${encodeURIComponent(keyLocal)}`, 'POST', payloadLocal); } catch (e) {}
+        } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+          try { await fetch(`/api/user-unlocks/${userIdLocal}/${encodeURIComponent(keyLocal)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payloadLocal) }); } catch (e) {}
+        }
+        // mirror locally and runtime cache
+        try { mirrorUnlockToLocal(userIdLocal, keyLocal, payloadLocal); window._currentProgressUnlocks = window._currentProgressUnlocks || {}; window._currentProgressUnlocks[keyLocal] = { unlocked: !!payloadLocal.unlocked }; } catch (e) {}
+        // update UI
+        try { if (btnLocal && btnLocal instanceof Element) { btnLocal.classList.toggle('unlocked', !!payloadLocal.unlocked); btnLocal.classList.toggle('locked', !payloadLocal.unlocked); const lbl = (btnLocal.textContent || '').trim(); const labelWord = lbl.split(' ').slice(1).join(' ') || (payloadLocal.level && payloadLocal.level[0].toUpperCase() + payloadLocal.level.slice(1)); btnLocal.innerHTML = `${payloadLocal.unlocked ? '🔓' : '🔒'} ${labelWord}`; } } catch (e) {}
+      } catch (e) {}
+    }
+
+    // Save via IPC helper if available (direct saveUserUnlock returns plain object)
+    // Helper to ensure the key was actually persisted; if not, attempt alternate save paths.
+    async function ensureSaved(userIdLocal, keyLocal, payloadLocal) {
+      try {
+        // Try to read back unlocks
+        let current = {};
+        if (window.api && typeof window.api.getUserUnlocks === 'function') {
+          try { const r = await window.api.getUserUnlocks(userIdLocal); current = (r && r.body) ? r.body : (r || {}); } catch (e) { current = {}; }
+        } else if (window.api && typeof window.api.rpc === 'function') {
+          try { const r = await window.api.rpc(`user-unlocks/${userIdLocal}`, 'GET'); current = (r && r.body) ? r.body : {}; } catch (e) { current = {}; }
+        } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+          try { const r = await fetch(`/api/user-unlocks/${userIdLocal}`); if (r && r.ok) current = await r.json(); } catch (e) { current = {}; }
+        }
+
+        if (current && Object.prototype.hasOwnProperty.call(current, keyLocal)) return true;
+
+        // Missing: try alternate save paths
+        if (window.api && typeof window.api.saveUserUnlock === 'function') {
+          try { const s = await window.api.saveUserUnlock(userIdLocal, keyLocal, payloadLocal); if (s && (s.ok || s === true)) return true; } catch (e) {}
+        }
+        if (window.api && typeof window.api.rpc === 'function') {
+          try { const s = await window.api.rpc(`user-unlocks/${userIdLocal}/${encodeURIComponent(keyLocal)}`, 'POST', payloadLocal); if (s && s.status >= 200 && s.status < 300) return true; } catch (e) {}
+        }
+        if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+          try { const s = await fetch(`/api/user-unlocks/${userIdLocal}/${encodeURIComponent(keyLocal)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payloadLocal) }); if (s && s.ok) return true; } catch (e) {}
+        }
+      } catch (e) {}
+      return false;
+    }
+
+    if (window.api && typeof window.api.saveUserUnlock === 'function') {
+      try {
+        res = await window.api.saveUserUnlock(userId, key, payload);
+      } catch (e) { console.warn('ipc saveUserUnlock failed', e && e.message); }
+      // res is likely a plain object like { ok: true }
+      if (res && (res.ok || res === true)) {
+        const action = desiredUnlocked ? 'unlocked' : 'locked';
+        showToast(getPrettyUnlockMessage(certId, domainId, level, action), 'success', 3000);
+        // If unlocking hard, also ensure medium is unlocked visually and persisted
+        if (desiredUnlocked && String(level).toLowerCase() === 'hard') {
+          const mediumKey = (domainId === null || typeof domainId === 'undefined') ? `${certId}:medium` : `${certId}:${domainId}:medium`;
+          const mediumPayload = { certId, domainId, level: 'medium', unlocked: true };
+          try {
+            // Persist medium unlock too via IPC/rpc
+            if (window.api && typeof window.api.saveUserUnlock === 'function') {
+              await window.api.saveUserUnlock(userId, mediumKey, mediumPayload);
+            } else if (window.api && typeof window.api.rpc === 'function') {
+              await window.api.rpc(`user-unlocks/${userId}/${encodeURIComponent(mediumKey)}`, 'POST', mediumPayload);
+            } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+              await fetch(`/api/user-unlocks/${userId}/${encodeURIComponent(mediumKey)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(mediumPayload) });
+            }
+
+            // Verify persistence and retry via alternates if necessary
+            try {
+              const ok = await ensureSaved(userId, mediumKey, mediumPayload);
+              if (!ok) console.warn('Medium unlock may not have persisted for', mediumKey);
+            } catch (e) {}
+          } catch (e) { /* ignore medium save errors */ }
+            try { mirrorUnlockToLocal(userId, mediumKey, { unlocked: true }); } catch (e) {}
+        }
+
+  // Update runtime cache and dispatch event for other pages
+        try {
+          window._currentProgressUnlocks = window._currentProgressUnlocks || {}; window._currentProgressUnlocks[key] = { unlocked: !!desiredUnlocked };
+          mirrorUnlockToLocal(userId, key, { unlocked: !!desiredUnlocked });
+          window.dispatchEvent(new CustomEvent('kemmei:unlockToggled', { detail: { userId, key, unlocked: desiredUnlocked, certId, domainId, level } }));
+        } catch (e) {}
+
+        // Ensure button visuals persist: keep optimistic state and update related child buttons if needed
+        try {
+          if (btn && btn instanceof Element) {
+            btn.classList.toggle('unlocked', desiredUnlocked);
+            btn.classList.toggle('locked', !desiredUnlocked);
+            const label = (level && level[0].toUpperCase() + level.slice(1)) || '';
+            btn.innerHTML = `${desiredUnlocked ? '🔓' : '🔒'} ${label}`;
+          }
+          // If toggling at title/domain level, propagate to child domain/subdomain buttons
+          if (domainId === null || typeof domainId === 'undefined') {
+            // title-level toggle -> propagate to all domain and subdomain child buttons
+            const children = findChildButtons(certId, null, level);
+            for (const c of children) {
+              try { saveAndMirror(userId, `${certId}:${(c.domainBlock ? (c.domainBlock.querySelector('h4')?.textContent || '').split(' ')[0] : '')}:${level}`, { certId, domainId: null, level, unlocked: desiredUnlocked }, c.btn); } catch (e) {}
+            }
+          } else {
+            // domain-level toggle -> propagate to subdomains under this domain
+            const children = findChildButtons(certId, domainId, level);
+            for (const c of children) {
+              try {
+                const domainText = c.domainBlock?.querySelector('h4')?.textContent || '';
+                const domainKey = domainText.split(' ')[0] || domainId;
+                const payloadChild = { certId, domainId, level, unlocked: desiredUnlocked };
+                const childKey = `${certId}:${domainKey}:${level}`;
+                saveAndMirror(userId, childKey, payloadChild, c.btn);
+              } catch (e) {}
+            }
+          }
+        } catch (e) {}
+
+        try {
+          const persisted = await ensureSaved(userId, key, payload);
+          if (!persisted) {
+            // revert optimistic UI if present
+            if (prevBtnState && btn && btn instanceof Element) {
+              try { btn.className = prevBtnState.className; btn.innerHTML = prevBtnState.innerHTML; } catch (e) {}
+            }
+            showToast('❌ Failed to verify unlock persistence.', 'error', 3000);
+            return;
+          }
+        } catch (e) {}
+        return;
+      } else {
+        // revert optimistic UI if present
+        if (prevBtnState && btn && btn instanceof Element) {
+          try { btn.className = prevBtnState.className; btn.innerHTML = prevBtnState.innerHTML; } catch (e) {}
+        }
+        showToast('❌ Failed to update unlock status.', 'error', 3000);
+        return;
+      }
+    }
+
+    // Fallback to generic RPC which returns { status, body }
+    if (window.api && typeof window.api.rpc === 'function') {
+      try {
+        // rpc handler expects POST to user-unlocks/:userId/:key
+        res = await window.api.rpc(`user-unlocks/${userId}/${encodeURIComponent(key)}`, 'POST', payload);
+      } catch (e) { console.warn('rpc user-unlocks failed', e && e.message); }
+  if (res && res.status >= 200 && res.status < 300) {
+        const result = res.body || {};
+        const action = result.unlocked === undefined ? (desiredUnlocked ? 'unlocked' : 'locked') : (result.unlocked ? 'unlocked' : 'locked');
+        showToast(getPrettyUnlockMessage(certId, domainId, level, action), 'success', 3000);
+        try {
+          window._currentProgressUnlocks = window._currentProgressUnlocks || {}; window._currentProgressUnlocks[key] = { unlocked: !!desiredUnlocked };
+          mirrorUnlockToLocal(userId, key, { unlocked: !!desiredUnlocked });
+          window.dispatchEvent(new CustomEvent('kemmei:unlockToggled', { detail: { userId, key, unlocked: desiredUnlocked, certId, domainId, level } }));
+        } catch (e) {}
+        // keep optimistic UI and update medium if unlocking hard
+        try {
+          if (btn && btn instanceof Element) {
+            btn.classList.toggle('unlocked', desiredUnlocked);
+            btn.classList.toggle('locked', !desiredUnlocked);
+            const label = (level && level[0].toUpperCase() + level.slice(1)) || '';
+            btn.innerHTML = `${desiredUnlocked ? '🔓' : '🔒'} ${label}`;
+          }
+          if (desiredUnlocked && String(level).toLowerCase() === 'hard') {
+            const mediumBtn = findButton(certId, domainId, 'medium');
+            if (mediumBtn) { mediumBtn.classList.add('unlocked'); mediumBtn.classList.remove('locked'); mediumBtn.innerHTML = `🔓 Medium`; }
+            // persist medium unlock as well
+            try {
+              const mediumKey = (domainId === null || typeof domainId === 'undefined') ? `${certId}:medium` : `${certId}:${domainId}:medium`;
+              const mediumPayload = { certId, domainId, level: 'medium', unlocked: true };
+              if (window.api && typeof window.api.rpc === 'function') {
+                await window.api.rpc(`user-unlocks/${userId}/${encodeURIComponent(mediumKey)}`, 'POST', mediumPayload);
+              } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+                await fetch(`/api/user-unlocks/${userId}/${encodeURIComponent(mediumKey)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(mediumPayload) });
+              }
+              try { await ensureSaved(userId, mediumKey, mediumPayload); } catch (e) {}
+              try { mirrorUnlockToLocal(userId, mediumKey, { unlocked: true }); } catch (e) {}
+            } catch (e) {}
+          }
+          // propagate to children similar to IPC path
+          try {
+            if (domainId === null || typeof domainId === 'undefined') {
+              const children = findChildButtons(certId, null, level);
+              for (const c of children) {
+                try { saveAndMirror(userId, `${certId}:${(c.domainBlock ? (c.domainBlock.querySelector('h4')?.textContent || '').split(' ')[0] : '')}:${level}`, { certId, domainId: null, level, unlocked: desiredUnlocked }, c.btn); } catch (e) {}
+              }
+            } else {
+              const children = findChildButtons(certId, domainId, level);
+              for (const c of children) {
+                try {
+                  const domainText = c.domainBlock?.querySelector('h4')?.textContent || '';
+                  const domainKey = domainText.split(' ')[0] || domainId;
+                  const payloadChild = { certId, domainId, level, unlocked: desiredUnlocked };
+                  const childKey = `${certId}:${domainKey}:${level}`;
+                  saveAndMirror(userId, childKey, payloadChild, c.btn);
+                } catch (e) {}
+              }
+            }
+          } catch (e) {}
+        } catch (e) {}
+        try {
+          const persisted = await ensureSaved(userId, key, payload);
+          if (!persisted) {
+            if (prevBtnState && btn && btn instanceof Element) {
+              try { btn.className = prevBtnState.className; btn.innerHTML = prevBtnState.innerHTML; } catch (e) {}
+            }
+            showToast('❌ Failed to verify unlock persistence.', 'error', 3000);
+            return;
+          }
+        } catch (e) {}
+        return;
+      } else {
+        if (prevBtnState && btn && btn instanceof Element) {
+          try { btn.className = prevBtnState.className; btn.innerHTML = prevBtnState.innerHTML; } catch (e) {}
+        }
+        showToast('❌ Failed to update unlock status.', 'error', 3000);
+        return;
+      }
+    }
+
+    // Final fallback: network POST when running in server mode
+    if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+      try {
+        res = await fetch(`/api/user-unlocks/${userId}/${encodeURIComponent(key)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        if (res && res.ok) {
+          let result = {};
+          try { result = await res.json(); } catch (e) { result = {}; }
+          const action = result.unlocked === undefined ? (desiredUnlocked ? 'unlocked' : 'locked') : (result.unlocked ? 'unlocked' : 'locked');
+          showToast(getPrettyUnlockMessage(certId, domainId, level, action), 'success', 3000);
+          try {
+            window._currentProgressUnlocks = window._currentProgressUnlocks || {}; window._currentProgressUnlocks[key] = { unlocked: !!desiredUnlocked };
+            mirrorUnlockToLocal(userId, key, { unlocked: !!desiredUnlocked });
+            window.dispatchEvent(new CustomEvent('kemmei:unlockToggled', { detail: { userId, key, unlocked: desiredUnlocked, certId, domainId, level } }));
+          } catch (e) {}
+          try {
+            if (btn && btn instanceof Element) {
+              btn.classList.toggle('unlocked', desiredUnlocked);
+              btn.classList.toggle('locked', !desiredUnlocked);
+              const label = (level && level[0].toUpperCase() + level.slice(1)) || '';
+              btn.innerHTML = `${desiredUnlocked ? '🔓' : '🔒'} ${label}`;
+            }
+            if (desiredUnlocked && String(level).toLowerCase() === 'hard') {
+              const mediumBtn = findButton(certId, domainId, 'medium');
+              if (mediumBtn) { mediumBtn.classList.add('unlocked'); mediumBtn.classList.remove('locked'); mediumBtn.innerHTML = `🔓 Medium`; }
+              try {
+                const mediumKey = (domainId === null || typeof domainId === 'undefined') ? `${certId}:medium` : `${certId}:${domainId}:medium`;
+                const mediumPayload = { certId, domainId, level: 'medium', unlocked: true };
+                if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+                  await fetch(`/api/user-unlocks/${userId}/${encodeURIComponent(mediumKey)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(mediumPayload) });
+                }
+                try { await ensureSaved(userId, mediumKey, mediumPayload); } catch (e) {}
+                try { mirrorUnlockToLocal(userId, mediumKey, { unlocked: true }); } catch (e) {}
+              } catch (e) {}
+            }
+          } catch (e) {}
+          try {
+            const persisted = await ensureSaved(userId, key, payload);
+            if (!persisted) {
+              if (prevBtnState && btn && btn instanceof Element) {
+                try { btn.className = prevBtnState.className; btn.innerHTML = prevBtnState.innerHTML; } catch (e) {}
+              }
+              showToast('❌ Failed to verify unlock persistence.', 'error', 3000);
+              return;
+            }
+          } catch (e) {}
+          return;
+        }
+      } catch (e) { console.warn('network user-unlocks POST failed', e && e.message); }
+    }
+
+    console.warn('Skipping user-unlocks POST: no supported bridge available');
+    showToast('❌ Failed to update unlock status.', 'error');
   } catch (err) {
     console.error("❌ Toggle unlock error:", err);
     showToast("❌ Network error.", 'error');
@@ -312,6 +776,16 @@ function restoreExpandedState() {
   } catch (e) {
     // ignore JSON parse/storage errors
   }
+}
+
+// Normalize stored unlock representation: value may be boolean or object { unlocked: bool }
+function unlockValue(unlocks, key) {
+  if (!unlocks) return false;
+  if (!Object.prototype.hasOwnProperty.call(unlocks, key)) return false;
+  const v = unlocks[key];
+  if (typeof v === 'boolean') return !!v;
+  if (v && typeof v === 'object' && typeof v.unlocked !== 'undefined') return !!v.unlocked;
+  return !!v;
 }
 
 // Call restore after rendering tree
@@ -512,8 +986,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
     
     // Title level unlock buttons (replace dots with underscores for MongoDB compatibility)
     const certKey = certId.replace(/\./g, '_');
-    const mediumUnlocked = unlocks[`${certKey}:medium`] || false;
-    const hardUnlocked = unlocks[`${certKey}:hard`] || false;
+  const mediumUnlocked = unlockValue(unlocks, `${certKey}:medium`);
+  const hardUnlocked = unlockValue(unlocks, `${certKey}:hard`);
     
     const mediumBtn = document.createElement("button");
     mediumBtn.className = `unlock-btn ${mediumUnlocked ? 'unlocked' : 'locked'}`;
@@ -522,7 +996,7 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
   mediumBtn.classList.add('has-tooltip');
     mediumBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      toggleUnlock(certKey, null, "medium");
+      toggleUnlock(certKey, null, "medium", mediumBtn);
     });
     
     const hardBtn = document.createElement("button");
@@ -532,7 +1006,7 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
   hardBtn.classList.add('has-tooltip');
     hardBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      toggleUnlock(certKey, null, "hard");
+      toggleUnlock(certKey, null, "hard", hardBtn);
     });
     
     titleUnlocks.appendChild(mediumBtn);
@@ -574,8 +1048,8 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
       
       // Domain level unlock buttons (replace dots with underscores for MongoDB compatibility)
       const domainKey = domainId.replace(/\./g, '_');
-      const domainMediumUnlocked = unlocks[`${certKey}:${domainKey}:medium`] || false;
-      const domainHardUnlocked = unlocks[`${certKey}:${domainKey}:hard`] || false;
+  const domainMediumUnlocked = unlockValue(unlocks, `${certKey}:${domainKey}:medium`);
+  const domainHardUnlocked = unlockValue(unlocks, `${certKey}:${domainKey}:hard`);
       
       const domainMediumBtn = document.createElement("button");
       domainMediumBtn.className = `unlock-btn ${domainMediumUnlocked ? 'unlocked' : 'locked'}`;
@@ -584,7 +1058,7 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
   domainMediumBtn.classList.add('has-tooltip');
       domainMediumBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        toggleUnlock(certKey, domainKey, "medium");
+        toggleUnlock(certKey, domainKey, "medium", domainMediumBtn);
       });
       
       const domainHardBtn = document.createElement("button");
@@ -594,7 +1068,7 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
   domainHardBtn.classList.add('has-tooltip');
       domainHardBtn.addEventListener("click", (e) => {
         e.stopPropagation();
-        toggleUnlock(certKey, domainKey, "hard");
+        toggleUnlock(certKey, domainKey, "hard", domainHardBtn);
       });
       
       domainUnlocks.appendChild(domainMediumBtn);

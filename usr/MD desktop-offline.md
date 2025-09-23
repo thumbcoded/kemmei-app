@@ -393,3 +393,20 @@ End of release notes and packaging recommendations.
  4. Click `Abort` and confirm the full header/filter controls are restored and the abort button returns to its original location.
 
 - Suggested commit message: `desktop-offline: collapse header on flashcards start to avoid vertical overflow`
+
+## 2025-09-23 — Today’s edits
+
+- Finalized parent -> child propagation for force-unlocks in the Progress UI (`js/progress.js`): title-level and domain-level toggles now iterate child domain/subdomain buttons, persist each child unlock (IPC / RPC / network fallback), mirror to `localStorage`, and update child button UI optimistically.
+- Ensured RPC and network POST branches also persist `medium` when `hard` is unlocked (behavior parity with the IPC helper path).
+- Kept optimistic UI semantics and `ensureSaved` verification; top-level toggles revert on persistence failure; child saves are best-effort and mirrored locally for fast cross-page reflection.
+- Continued to use the runtime mirror (`window._currentProgressUnlocks`) plus per-user localStorage mirror (`user:{userId}:unlocks`) so the Flashcards page immediately reflects recent force-unlocks; Flashcards already listens for `kemmei:unlockToggled` to invalidate cached unlocked difficulties.
+- Documented that stacked toasts, local mirror, and `kemmei:unlockToggled` event-based sync are in use; ran a smoke-start (`npm start`) locally to surface runtime issues.
+
+Notes / next steps
+
+- Recommended: run a quick in-app verification in your Electron dev environment:
+  - Toggle a title-level Medium/Hard and verify child buttons update and persist after restart.
+  - Confirm Flashcards updates available difficulties immediately after a toggle.
+- Optional follow-ups: aggregate child-save verification, batch saves for large title trees, or stronger error reporting for child persistence failures.
+
+(Logged and committed changes.)

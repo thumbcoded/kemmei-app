@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // When unlocks change elsewhere (Progress page), refresh cached unlocked difficulties
+  window.addEventListener('kemmei:unlockToggled', (ev) => {
+    try {
+      // Invalidate any cached unlocked difficulties
+      if (typeof computedUnlocked !== 'undefined') computedUnlocked = null;
+    } catch (e) {}
+    // Optionally update difficulty select so user sees new options immediately
+    try {
+      const difficultySelect = document.getElementById('difficulty-select');
+      if (difficultySelect) {
+        // Recompute unlocked difficulties and adjust selection options
+        getUnlockedDifficulties().then(diffs => {
+          // If current selected difficulty is no longer allowed, set to first allowed
+          const current = difficultySelect.value;
+          if (!diffs.includes(current)) {
+            difficultySelect.value = diffs[0] || 'easy';
+            difficultySelect.dispatchEvent(new Event('change'));
+          }
+        }).catch(() => {});
+      }
+
+      // Network fallback if necessary
+    } catch (e) {}
+  });
 // Toggle this to true to enable developer debug logs in the flashcards UI
 const DEBUG = false;
 function dbg(...args) { if (DEBUG) console.log(...args); }
@@ -60,6 +84,16 @@ async function updateUserProgress(cert, domain, sub, correct, viewedOnly = false
   } catch (err) {
     console.error("❌ Failed to update user progress:", err);
   }
+}
+
+// Normalize stored unlock representation: value may be boolean or object { unlocked: bool }
+function unlockValue(unlocks, key) {
+  if (!unlocks) return false;
+  if (!Object.prototype.hasOwnProperty.call(unlocks, key)) return false;
+  const v = unlocks[key];
+  if (typeof v === 'boolean') return !!v;
+  if (v && typeof v === 'object' && typeof v.unlocked !== 'undefined') return !!v.unlocked;
+  return !!v;
 }
 
 // Hide floating toggle when it would overlap header controls.
@@ -603,7 +637,9 @@ async function getUnlockedDifficulties() {
       // Try IPC-first
       try {
         if (typeof window.api.getUserProgress === 'function') {
-          userData = await window.api.getUserProgress(userId) || {};
+          const r = await window.api.getUserProgress(userId);
+          if (r && r.status >= 200 && r.status < 300) userData = r.body || {};
+          else if (r && typeof r === 'object' && Object.keys(r).length) userData = r;
         }
       } catch (e) {
         console.warn('ipc getUserProgress failed', e && e.message);
@@ -611,7 +647,9 @@ async function getUnlockedDifficulties() {
 
       try {
         if (typeof window.api.getTestCompletions === 'function') {
-          testCompletions = await window.api.getTestCompletions(userId) || {};
+          const r = await window.api.getTestCompletions(userId);
+          if (r && r.status >= 200 && r.status < 300) testCompletions = r.body || {};
+          else if (r && typeof r === 'object' && Object.keys(r).length) testCompletions = r;
         }
       } catch (e) {
         console.warn('ipc getTestCompletions failed', e && e.message);
@@ -619,7 +657,16 @@ async function getUnlockedDifficulties() {
 
       try {
         if (typeof window.api.getUserUnlocks === 'function') {
-          unlocks = await window.api.getUserUnlocks(userId) || {};
+          const r = await window.api.getUserUnlocks(userId);
+          if (r && r.status >= 200 && r.status < 300) unlocks = r.body || {};
+          else if (r && typeof r === 'object' && Object.keys(r).length) unlocks = r;
+        }
+        // If we still have no unlocks and a generic rpc exists, try that form
+        if ((!unlocks || Object.keys(unlocks).length === 0) && window.api && typeof window.api.rpc === 'function') {
+          try {
+            const r2 = await window.api.rpc(`user-unlocks/${userId}`, 'GET');
+            if (r2 && r2.status >= 200 && r2.status < 300) unlocks = r2.body || {};
+          } catch (e) { /* ignore */ }
         }
       } catch (e) {
         console.warn('ipc getUserUnlocks failed', e && e.message);
@@ -664,6 +711,15 @@ async function getUnlockedDifficulties() {
         return ["easy"];
       }
     }
+    // Merge any localStorage mirror entries so UI reflects user's recent
+    // force-unlocks without waiting for backend/IPC round-trip.
+    try {
+      const mirrorRaw = localStorage.getItem(`user:${userId}:unlocks`);
+      if (mirrorRaw) {
+        const mirrorObj = JSON.parse(mirrorRaw || '{}');
+        unlocks = Object.assign({}, unlocks || {}, mirrorObj || {});
+      }
+    } catch (e) {}
     
     // Determine what's unlocked based on mode and current selection
     const cert = document.getElementById("deck-select").value.trim();
@@ -678,8 +734,8 @@ async function getUnlockedDifficulties() {
       const mediumKey = `${cert}:${domainKey}:medium`;
       const hardKey = `${cert}:${domainKey}:hard`;
       
-      mediumUnlocked = testCompletions[mediumKey]?.unlocked || false;
-      hardUnlocked = testCompletions[hardKey]?.unlocked || false;
+  mediumUnlocked = (testCompletions[mediumKey] && (typeof testCompletions[mediumKey].unlocked !== 'undefined' ? !!testCompletions[mediumKey].unlocked : !!testCompletions[mediumKey])) || false;
+  hardUnlocked = (testCompletions[hardKey] && (typeof testCompletions[hardKey].unlocked !== 'undefined' ? !!testCompletions[hardKey].unlocked : !!testCompletions[hardKey])) || false;
     } else {
       // Casual mode: use the new unlock preference system
       const certKey = cert.replace(/\./g, '_');
@@ -688,15 +744,15 @@ async function getUnlockedDifficulties() {
       if (currentDomain) {
         // Check domain-specific unlocks first
         const domainKey = currentDomain.replace(/\./g, '_');
-        mediumUnlocked = unlocks[`${certKey}:${domainKey}:medium`] || false;
-        hardUnlocked = unlocks[`${certKey}:${domainKey}:hard`] || false;
+  mediumUnlocked = unlockValue(unlocks, `${certKey}:${domainKey}:medium`);
+  hardUnlocked = unlockValue(unlocks, `${certKey}:${domainKey}:hard`);
         
         // If domain-specific unlocks aren't set, fall back to title-level unlocks
         if (!mediumUnlocked) {
-          mediumUnlocked = unlocks[`${certKey}:medium`] || false;
+          mediumUnlocked = unlockValue(unlocks, `${certKey}:medium`);
         }
         if (!hardUnlocked) {
-          hardUnlocked = unlocks[`${certKey}:hard`] || false;
+          hardUnlocked = unlockValue(unlocks, `${certKey}:hard`);
         }
       } else {
         // "All" domains selected - use title-level unlocks
