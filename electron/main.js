@@ -9,7 +9,29 @@ if (process.argv.includes('--smoke')) {
     try {
       // require a minimal app lifecycle so sqlite paths resolve correctly
       await app.whenReady()
-      const smoke = require(path.join(__dirname, '..', 'scripts', 'smoke-utils.js'))
+
+      // Try multiple locations for the smoke helper so packaged ASAR and
+      // development layouts are both supported. Prefer an electron-packaged
+      // copy (electron/smoke-utils.js) which we include in the app.asar.
+      let smoke = null
+      const tryPaths = [
+        path.join(__dirname, 'smoke-utils.js'), // electron/smoke-utils.js (packaged)
+        path.join(__dirname, '..', 'electron', 'smoke-utils.js'),
+        path.join(__dirname, '..', 'scripts', 'smoke-utils.js'),
+        path.join(__dirname, '..', 'scripts', 'smoke-utils.cjs')
+      ]
+      for (const p of tryPaths) {
+        try {
+          smoke = require(p)
+          break
+        } catch (e) {
+          // ignore and try next
+        }
+      }
+      if (!smoke) {
+        throw new Error('smoke-utils module not found in packaged locations')
+      }
+
       await smoke.initLocalApi()
       await smoke.runSmokeChecks()
       console.log('SMOKE_OK')
@@ -19,7 +41,8 @@ if (process.argv.includes('--smoke')) {
       process.exit(2)
     }
   })()
-  // Avoid continuing to normal app startup
+  // Avoid continuing to normal app startup; smoke path exits the process above.
+  return
 }
 
 // Minimal menu template for production (keeps only basic File/Help actions).
