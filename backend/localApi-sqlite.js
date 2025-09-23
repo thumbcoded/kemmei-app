@@ -2,8 +2,24 @@
 const path = require('path')
 const os = require('os')
 const fs = require('fs')
-const sqlite3 = require('sqlite3')
-const { open } = require('sqlite')
+
+// Try to load native sqlite3; if it's not available (packaged app without native
+// bindings), gracefully fall back to the sql.js (WASM) implementation so the
+// runtime still works.
+let sqlite3, open
+try {
+  sqlite3 = require('sqlite3')
+  open = require('sqlite').open
+} catch (e) {
+  // Fallback: export the WASM-backed implementation if present
+  try {
+    module.exports = require(path.join(__dirname, 'localApi-sqljs.js'))
+    return
+  } catch (e2) {
+    // Re-throw the original error to surface missing dependency for dev environments
+    throw e
+  }
+}
 
 const DB_NAME = 'kemmei-data.sqlite'
 let db

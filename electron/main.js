@@ -2,6 +2,26 @@ const { app, BrowserWindow, ipcMain, Menu } = require('electron')
 const path = require('path')
 const os = require('os')
 
+// Support a headless smoke mode: when the packaged EXE is invoked with
+// `--smoke`, perform quick DB checks and exit with 0 on success or non-zero on failure.
+if (process.argv.includes('--smoke')) {
+  (async () => {
+    try {
+      // require a minimal app lifecycle so sqlite paths resolve correctly
+      await app.whenReady()
+      const smoke = require(path.join(__dirname, '..', 'scripts', 'smoke-utils.js'))
+      await smoke.initLocalApi()
+      await smoke.runSmokeChecks()
+      console.log('SMOKE_OK')
+      process.exit(0)
+    } catch (err) {
+      console.error('SMOKE_FAIL', err && err.stack ? err.stack : err)
+      process.exit(2)
+    }
+  })()
+  // Avoid continuing to normal app startup
+}
+
 // Minimal menu template for production (keeps only basic File/Help actions).
 const minimalMenuTemplate = [
   {

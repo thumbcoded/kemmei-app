@@ -1,3 +1,13 @@
+1. Fix 'last-saved somewhere' title/domain/etc. selector setting in a freshly installed app
+2. Fill out 'About' contents
+3. Check why build also includes win-unpacked, launchable app
+
+
+
+
+
+BELOW ARE TEPORARILY SUSPENDED/POSTPONED/OUTDATED TODOS - IGNORE FOR NOW
+
 Conceptual topics:
 1. Should we refactor Kemmei into something like NodeJS?
 2. Should we make it an executable/standalone app vs web app?

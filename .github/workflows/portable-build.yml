@@ -1,0 +1,68 @@
+name: Portable builds
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ desktop-offline ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm ci
+      - name: Build portable Windows
+        run: npm run build:portable:win
+      - name: List build output
+        run: dir build\win-unpacked
+      - name: Run smoke test (packaged EXE)
+        run: |
+          $exe = Get-ChildItem -Path build\win-unpacked -Filter *.exe | Select-Object -First 1 | Select-Object -ExpandProperty FullName
+          Write-Host "Running smoke exe: $exe"
+          & $exe --smoke
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kemmei-windows-portable
+          path: build/*.exe
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm ci
+      - name: Build AppImage
+        run: npm run build:portable:linux
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kemmei-linux-appimage
+          path: build/*.AppImage
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm ci
+      - name: Build dmg
+        run: npm run build:portable:mac
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kemmei-macos-dmg
+          path: build/*.dmg

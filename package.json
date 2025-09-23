@@ -5,10 +5,14 @@
   "main": "electron/main.js",
   "scripts": {
     "start": "electron .",
-  "dev": "electron .",
-  "build": "electron-builder",
+    "dev": "electron .",
+    "build": "electron-builder",
     "seed": "node scripts/seed-local.js",
-    "generate-icons": "node scripts/generate-icons.js"
+    "generate-icons": "node scripts/generate-icons.js",
+    "build:portable:win": "electron-builder --win portable --publish never",
+    "build:portable:linux": "electron-builder --linux AppImage --publish never",
+    "build:portable:mac": "electron-builder --mac dmg --publish never",
+    "build:portable": "npm run build:portable:win && npm run build:portable:linux && npm run build:portable:mac"
   },
   "author": "You",
   "license": "MIT",
@@ -41,9 +45,10 @@
     }
     ,
     "mac": {
-      "icon": "assets/K_blue_2.icns"
-    }
-    ,
+      "icon": "assets/K_blue_2.icns",
+      "target": ["dmg"]
+    },
+
     "nsis": {
       "oneClick": false,
       "perMachine": false,
@@ -52,8 +57,11 @@
     }
     ,
     "win": {
-      "target": ["nsis"],
+      "target": ["portable", "nsis"],
       "artifactName": "Kemmei Setup ${version}.exe"
+    },
+    "linux": {
+      "target": ["AppImage"]
     }
   }
 }
