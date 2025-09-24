@@ -397,6 +397,61 @@ End of release notes and packaging recommendations.
 ## 2025-09-23 — Today’s edits
 
 - Finalized parent -> child propagation for force-unlocks in the Progress UI (`js/progress.js`): title-level and domain-level toggles now iterate child domain/subdomain buttons, persist each child unlock (IPC / RPC / network fallback), mirror to `localStorage`, and update child button UI optimistically.
+
+## 2025-09-24 — Archive & runtime cleanup (today)
+
+- Archived developer/admin pages and helper JS into `usr/archived-dev-pages/` and removed the runtime originals from the top-level runtime and `js/` folder.
+	- Added archived copies under `usr/archived-dev-pages/`:
+		- `usr/archived-dev-pages/admin.html`, `usr/archived-dev-pages/concur.html`, `usr/archived-dev-pages/register.html`
+		- `usr/archived-dev-pages/css/admin.css`, `usr/archived-dev-pages/css/concur.css`
+		- `usr/archived-dev-pages/js/admin.js`, `usr/archived-dev-pages/js/concur.js`, `usr/archived-dev-pages/js/register.js`
+		- `usr/archived-dev-pages/js/cardTemplate.js`, `usr/archived-dev-pages/js/dropdowns.js`, `usr/archived-dev-pages/js/titmgr.js` (archived copies)
+	- Deleted the runtime originals (left the app entry and runtime pages intact):
+		- Removed `admin.html`, `concur.html`, `register.html` from project root
+		- Removed `css/admin.css`, `css/concur.css` from `css/`
+		- Removed `js/admin.js`, `js/concur.js`, `js/register.js`, and helper JS `js/cardTemplate.js`, `js/dropdowns.js`, `js/titmgr.js` from `js/`
+
+- Notes:
+	- All archives are plain reference copies (converted to non-module forms where necessary to avoid workspace lint conflicts).
+	- I performed only file operations on disk; I did NOT stage, commit, or push any changes. `git status --porcelain` will show these deletions as unstaged.
+
+Suggested commit message (concise):
+
+"archive + ui: move admin/dev assets to usr/archived-dev-pages; widen progress module; disable empty decks & add Start loading state in flashcards"
+
+PowerShell-ready commands to stage & commit (if you want to do this locally):
+
+```powershell
+git add -A ;
+git commit -m "archive + ui: move admin/dev assets to usr/archived-dev-pages; widen progress module; disable empty decks & add Start loading state in flashcards" ;
+git push origin desktop-offline
+```
+
+### Progress & Flashcards tweaks (2025-09-24)
+
+- Progress page UI tweaks:
+	- Increased main progress module width and reduced paddings to reduce line-wrapping (CSS changes in `css/progress.css` — max-width raised to ~900px, tighter horizontal padding and smaller vertical gaps).
+	- Added visible expand/collapse carets and an `.expanded` state so title/domain blocks show a clear rotate/chevron affordance when opened/closed.
+	- Added a `.no-cards` visual state: titles/domains with no cards are greyed-out but remain expandable. The progress renderer (`js/progress.js`) was made more defensive/async and now probes for card presence (IPC → fetch → local-file probe fallback) and marks tree nodes accordingly.
+	- Minor accessibility and spacing fixes to make the progress tree more compact and reduce vertical clipping on narrow windows.
+
+- Flashcards page changes:
+	- Deck selector now disables and visually greys out titles/domains that have no cards (prevents starting a session on empty decks). This is implemented in `js/flashcards.js` via async presence checks and disabled `<option>` handling.
+	- `Start` button now waits until final card counts are computed: it shows a loading/disabled state (spinner + `.loading-cards` CSS) while async count/probe work completes, preventing racey starts and incorrect session sizes. Styles live in `css/flashcards-loading.css` and behavior in `js/flashcards.js`.
+	- The deck population flow (`populateDeckDropdown`) and card-count probing were made async and defensive (probe local files only when necessary) to avoid UI stalls under `file://` or when the IPC bridge is unavailable.
+	- Small UX polish: the header collapse on session start (to avoid vertical overflow) and improved overlap handling for the dark-mode toggle were preserved/tidied.
+
+Files primarily changed today for these tweaks:
+- `css/progress.css`
+- `js/progress.js`
+- `css/flashcards-loading.css` (new)
+- `js/flashcards.js`
+
+Do I need to purge the remote repo?
+
+- No, not in this case: deleting these files and committing the deletions will remove them from the remote branch on push. A forced history rewrite (git filter-repo / BFG) is only necessary if you need to remove the files from the repository history (for example, they were large binaries or contained secrets and you need to shrink the repo). The files we archived and removed are small textual assets, so a normal commit+push is sufficient.
+
+If you want me to revert or restore any archived file back into the runtime before you commit, say which file(s) and I'll move them back (no git ops). Otherwise you're all set to commit and push when ready.
 - Ensured RPC and network POST branches also persist `medium` when `hard` is unlocked (behavior parity with the IPC helper path).
 - Kept optimistic UI semantics and `ensureSaved` verification; top-level toggles revert on persistence failure; child saves are best-effort and mirrored locally for fast cross-page reflection.
 - Continued to use the runtime mirror (`window._currentProgressUnlocks`) plus per-user localStorage mirror (`user:{userId}:unlocks`) so the Flashcards page immediately reflects recent force-unlocks; Flashcards already listens for `kemmei:unlockToggled` to invalidate cached unlocked difficulties.

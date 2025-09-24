@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        renderProgressTree(progress, domainMap, unlocks, testCompletions, domainErrMsg);
+            await renderProgressTree(progress, domainMap, unlocks, testCompletions, domainErrMsg);
       } catch (e) {
         console.error('Failed rendering progress tree', e && e.message);
         if (statsDiv) statsDiv.textContent = 'Error rendering progress: ' + (e && e.message ? e.message : 'unknown');
@@ -789,7 +789,72 @@ function unlockValue(unlocks, key) {
 }
 
 // Call restore after rendering tree
-function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, domainErrMsg) {
+// Helper: probe local data/cards folders under file:// to determine if any
+// cards exist for a given cert/domain/sub. This is a lightweight probe used
+// only when no IPC/network bridge is available.
+async function probeLocalForCards(certId, domainMapsLocal, subdomainMapsLocal) {
+  try {
+    const domains = domainMapsLocal[certId] ? Object.keys(domainMapsLocal[certId]) : [];
+    for (const d of domains) {
+      const subs = subdomainMapsLocal?.[certId]?.[d] ? Object.keys(subdomainMapsLocal[certId][d]) : [null];
+      for (const s of subs) {
+        // Try a few likely file names for existence
+        const trialSub = s;
+        const numTrials = 6;
+        for (let i = 1; i <= numTrials; i++) {
+          const num = String(i).padStart(3, '0');
+          const path = trialSub ? `data/cards/${certId}/${d}/${trialSub}/Q-${certId}-${d}-${trialSub}-${num}.json` : `data/cards/${certId}/${d}/Q-${certId}-${d}-${num}.json`;
+          try {
+            const r = await fetch(path);
+            if (r && r.ok) return true;
+          } catch (e) { /* ignore */ }
+        }
+      }
+    }
+  } catch (e) { /* ignore */ }
+  return false;
+}
+
+// Check presence of cards per cert by preferring IPC/rpc/get endpoints and
+// falling back to local probes when necessary. Returns an object map certId->bool.
+async function fetchCardPresenceForCerts(certIds, domainMapsLocal, subdomainMapsLocal) {
+  const out = {};
+  // Parallelize with small concurrency (fire all - typically small set)
+  await Promise.all(certIds.map(async (cid) => {
+    try {
+      let data = null;
+      if (window.api && typeof window.api.getCards === 'function') {
+        try {
+          data = await window.api.getCards({ cert_id: cid });
+        } catch (e) { data = null; }
+      }
+      if ((!data || !data.length) && window.api && typeof window.api.rpc === 'function') {
+        try {
+          const r = await window.api.rpc(`cards?cert_id=${encodeURIComponent(cid)}`, 'GET');
+          if (r && r.body) data = r.body;
+        } catch (e) { /* ignore */ }
+      }
+      if ((!data || !data.length) && document.location.protocol !== 'file:' && typeof fetch === 'function') {
+        try {
+          const res = await fetch(`/api/cards?cert_id=${encodeURIComponent(cid)}`);
+          if (res && res.ok) data = await res.json();
+        } catch (e) { /* ignore */ }
+      }
+      if ((!data || !data.length) && (document.location.protocol === 'file:' || !window.api)) {
+        // Local probe fallback
+        const probe = await probeLocalForCards(cid, domainMapsLocal, subdomainMapsLocal);
+        out[cid] = probe;
+        return;
+      }
+      out[cid] = !!(data && data.length);
+    } catch (e) {
+      out[cid] = false;
+    }
+  }));
+  return out;
+}
+
+async function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, domainErrMsg) {
   const container = document.getElementById("progressStats");
   if (!container) {
     console.warn('progressStats container not found');
@@ -800,6 +865,15 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
   const certNames = (domainMap && domainMap.certNames) ? domainMap.certNames : {};
   const domainMaps = (domainMap && domainMap.domainMaps) ? domainMap.domainMaps : {};
   const subdomainMaps = (domainMap && domainMap.subdomainMaps) ? domainMap.subdomainMaps : {};
+
+  // Determine which certs actually have cards available so we can grey out
+  // titles that have no content. This uses the same API paths as flashcards
+  // to remain consistent across modes (IPC/rpc/fetch/file).
+  const certIds = Object.keys(certNames || {});
+  let certHasCards = {};
+  try {
+    certHasCards = await fetchCardPresenceForCerts(certIds, domainMaps, subdomainMaps);
+  } catch (e) { certHasCards = {}; }
 
   // If domainMap is effectively empty, show a small hint rather than throwing
   if (Object.keys(certNames).length === 0) {
@@ -975,10 +1049,14 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
     const titleHeader = document.createElement("div");
     titleHeader.className = "title-header";
     
-    const titleText = document.createElement("h3");
+  const titleText = document.createElement("h3");
     // Add percentage indicators for cert level (all domains)
     const certIndicators = getPercentIndicators(certId);
     titleText.innerHTML = `📘 ${certId}: ${certNames[certId]} <span class='percent-indicators'>${certIndicators}</span>`;
+    // If we detected no cards for this cert, mark it so CSS can grey it out
+    if (certHasCards && certHasCards[certId] === false) {
+      titleText.classList.add('no-cards');
+    }
     titleText.style.cursor = "pointer";
     
     const titleUnlocks = document.createElement("div");
@@ -1022,8 +1100,14 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
       const currentlyOpen = document.querySelector(".domain-list:not(.hidden)");
       if (currentlyOpen && currentlyOpen !== domainList) {
         currentlyOpen.classList.add("hidden");
+        // remove expanded class on previously open title-header
+        const prevHeader = currentlyOpen.closest('.title-block')?.querySelector('.title-header');
+        if (prevHeader) prevHeader.classList.remove('expanded');
       }
       domainList.classList.toggle("hidden");
+      // toggle expanded class on this title header for caret rotation
+      const thisHeader = titleHeader;
+      if (domainList.classList.contains('hidden')) thisHeader.classList.remove('expanded'); else thisHeader.classList.add('expanded');
     });
 
     certBlock.appendChild(titleHeader);
@@ -1037,10 +1121,15 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
       const domainHeader = document.createElement("div");
       domainHeader.className = "domain-header";
       
-      const domainText = document.createElement("h4");
+  const domainText = document.createElement("h4");
       // Add percentage indicators for domain level
       const domainIndicators = getPercentIndicators(certId, domainId);
       domainText.innerHTML = `📂 ${domainId} ${domainTitle} <span class='percent-indicators'>${domainIndicators}</span>`;
+      // If cert has no cards at all, mark domain as no-cards. Otherwise we could
+      // optionally probe domain-level presence in future iterations.
+      if (certHasCards && certHasCards[certId] === false) {
+        domainText.classList.add('no-cards');
+      }
       domainText.style.cursor = "pointer";
       
       const domainUnlocks = document.createElement("div");
@@ -1085,8 +1174,14 @@ function renderProgressTree(userProgress, domainMap, unlocks, testCompletions, d
         const openDomains = domainList.querySelectorAll(".subdomain-list:not(.hidden)");
         openDomains.forEach(el => {
           if (el !== subdomainWrapper) el.classList.add("hidden");
+          // remove expanded state from other domain headers
+          const otherHeader = el.closest('.domain-block')?.querySelector('.domain-header');
+          if (otherHeader) otherHeader.classList.remove('expanded');
         });
         subdomainWrapper.classList.toggle("hidden");
+        // toggle expanded class on this domain header for caret rotation
+        const dHeader = domainHeader;
+        if (subdomainWrapper.classList.contains('hidden')) dHeader.classList.remove('expanded'); else dHeader.classList.add('expanded');
       });
 
       const subMap = subdomainMaps[certId]?.[domainId] || {};

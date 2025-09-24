@@ -1,5 +1,34 @@
-// cardTemplate.js
-// Reference template for frontend (editor tools, previewers, generators)
+// Archived from js/cardTemplate.js — reference frontend template for cards
+// Original location: js/cardTemplate.js
+// Archived on: 2025-09-24
+
+// archived_cardTemplate: kept for reference only (not exported to app runtime)
+const archived_cardTemplate = {
+  _id: "",
+  cert_id: [],
+  domain_id: "",
+  domain_title: "",
+  subdomain_id: "",
+  difficulty: "easy",
+  question_type: "multiple_choice",
+  question_text: "",
+  image: null,
+  media: null,
+  answer_options: ["Option A", "Option B", "Option C"],
+  correct_answer: ["Option B"],
+  requiredCount: null,
+  explanation: "",
+  tags: [],
+  status: "approved",
+  flags: {
+    isBookmarked: false,
+    isReported: false,
+    isPracticeOnly: false,
+    wasAnsweredCorrectly: false
+  }
+};
+// Archived copy of js/cardTemplate.js
+// Purpose: reference template for frontend (editor tools, previewers, generators)
 
 export const cardTemplate = {
   _id: "",                       // string — e.g., "Q001"
@@ -39,3 +68,5 @@ export const cardTemplate = {
     wasAnsweredCorrectly: false
   }
 };
+
+// To restore to runtime copy: move this file to `js/cardTemplate.js` at project root

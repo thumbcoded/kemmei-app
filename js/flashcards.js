@@ -208,23 +208,111 @@ async function loadDomainMap() {
 }
 
 function populateDeckDropdown(certNames, selectedId = null) {
-  const deckSelect = document.getElementById("deck-select");
-  deckSelect.innerHTML = ""; // Clear old static options
+  // Make this async-friendly in case we need to probe card presence
+  return (async () => {
+    const deckSelect = document.getElementById("deck-select");
+    deckSelect.innerHTML = ""; // Clear old static options
 
-  Object.entries(certNames).forEach(([id, title]) => {
-    const opt = new Option(title, id);
-    deckSelect.appendChild(opt);
-  });
+    // Helper: check card presence per cert using IPC/rpc/fetch or local probe
+    async function probeLocalForCards(certId) {
+      try {
+        // Try a few likely file locations for a quick probe
+        const domains = domainMaps[certId] ? Object.keys(domainMaps[certId]) : [];
+        for (const d of domains) {
+          const subs = subdomainMaps?.[certId]?.[d] ? Object.keys(subdomainMaps[certId][d]) : [null];
+          for (const s of subs) {
+            for (let i = 1; i <= 6; i++) {
+              const num = String(i).padStart(3, '0');
+              const path = s ? `data/cards/${certId}/${d}/${s}/Q-${certId}-${d}-${s}-${num}.json` : `data/cards/${certId}/${d}/Q-${certId}-${d}-${num}.json`;
+              try {
+                const r = await fetch(path);
+                if (r && r.ok) return true;
+              } catch (e) { /* ignore */ }
+            }
+          }
+        }
+      } catch (e) {}
+      return false;
+    }
 
-  // If we have a stored deck, use that — otherwise pick first
-  if (selectedId && certNames[selectedId]) {
-    deckSelect.value = selectedId;
-  } else {
-    deckSelect.selectedIndex = 0;
-  }
+    async function fetchCardPresence(certId) {
+      try {
+        if (window.api && typeof window.api.getCards === 'function') {
+          try {
+            const d = await window.api.getCards({ cert_id: certId });
+            if (d && d.length) return true;
+          } catch (e) {}
+        }
+        if (window.api && typeof window.api.rpc === 'function') {
+          try {
+            const r = await window.api.rpc(`cards?cert_id=${encodeURIComponent(certId)}`, 'GET');
+            if (r && r.body && r.body.length) return true;
+          } catch (e) {}
+        }
+        if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+          try {
+            const r2 = await fetch(`/api/cards?cert_id=${encodeURIComponent(certId)}`);
+            if (r2 && r2.ok) {
+              const body = await r2.json();
+              if (body && body.length) return true;
+            }
+          } catch (e) {}
+        }
+        // Fallback to local probe under file://
+        if (document.location.protocol === 'file:' || !window.api) {
+          return await probeLocalForCards(certId);
+        }
+      } catch (e) {}
+      return false;
+    }
 
-  // Don't trigger change event here - let initialization handle it
+    // Render options but mark those with no cards as disabled and greyed
+    for (const [id, title] of Object.entries(certNames)) {
+      const opt = new Option(title, id);
+      // optimistic append; we'll disable if probe says no cards
+      deckSelect.appendChild(opt);
+    }
+
+    // Do presence probing in parallel but avoid blocking UI too long
+    const probes = Object.keys(certNames).map(id => fetchCardPresence(id).then(has => ({ id, has })));
+    const results = await Promise.all(probes);
+    results.forEach(r => {
+      const opt = Array.from(deckSelect.options).find(o => o.value === r.id);
+      if (opt && !r.has) {
+        opt.disabled = true;
+        // visually indicate disabled but keep visible
+        opt.className = 'no-cards-option';
+      }
+    });
+
+    // If we have a stored deck, use that — otherwise pick first enabled
+    if (selectedId && certNames[selectedId]) {
+      try { deckSelect.value = selectedId; } catch (e) {}
+    }
+    if (!deckSelect.value || deckSelect.options[deckSelect.selectedIndex]?.disabled) {
+      // pick first non-disabled option
+      for (let i = 0; i < deckSelect.options.length; i++) {
+        if (!deckSelect.options[i].disabled) { deckSelect.selectedIndex = i; break; }
+      }
+    }
+
+    return deckSelect;
+  })();
 }
+
+// Watch deck-select and toggle a class when the selected option is disabled (no cards)
+function updateDeckSelectNoCardsState() {
+  try {
+    const deckSelect = document.getElementById('deck-select');
+    if (!deckSelect) return;
+    const opt = deckSelect.options[deckSelect.selectedIndex];
+    if (opt && opt.disabled) deckSelect.classList.add('selected-no-cards'); else deckSelect.classList.remove('selected-no-cards');
+  } catch (e) {}
+}
+
+document.getElementById('deck-select').addEventListener('change', () => {
+  updateDeckSelectNoCardsState();
+});
 
 (async () => {
   // Resolve current user id: prefer renderer-local value, then IPC helper.
@@ -369,7 +457,9 @@ function populateDeckDropdown(certNames, selectedId = null) {
   // Use the certNames exposed by loadDomainMap; if empty, show a friendly placeholder
   const hasTitles = data && Object.keys(data.certNames || {}).length;
   if (hasTitles) {
-    populateDeckDropdown(data.certNames, savedDeck);
+    await populateDeckDropdown(data.certNames, savedDeck);
+    // Update visual state if selected deck has no cards
+    try { updateDeckSelectNoCardsState(); } catch (e) {}
   } else {
     const deckSelect = document.getElementById("deck-select");
     deckSelect.innerHTML = "";
@@ -1191,6 +1281,8 @@ document.getElementById("domain-select").addEventListener("change", () => {
     }
     
     isUpdatingCards = true;
+    // indicate loading to the UI and disable Start to avoid premature click
+    try { startBtn.disabled = true; startBtn.classList.add('loading-cards'); } catch (e) {}
     
     try {
       // Get unlocked difficulties once and pass to both functions
@@ -1207,6 +1299,7 @@ document.getElementById("domain-select").addEventListener("change", () => {
       console.error("Error in fetchCardsAndUpdateCount:", err);
     } finally {
       isUpdatingCards = false;
+      try { startBtn.classList.remove('loading-cards'); } catch (e) {}
     }
   }
 
@@ -1350,15 +1443,15 @@ document.getElementById("domain-select").addEventListener("change", () => {
     cardCountDisplay.textContent = `Cards: ${questions.length}`;
   
     if (questions.length === 0) {
-      startBtn.disabled = true;
+        startBtn.disabled = true;
       randomToggle.disabled = true;
       randomToggle.checked = false; // uncheck shuffle when disabled
     } else if (questions.length === 1) {
-      startBtn.disabled = false;
+        startBtn.disabled = false && !isUpdatingCards;
       randomToggle.disabled = true;
       randomToggle.checked = false;
     } else {
-      startBtn.disabled = false;
+        startBtn.disabled = false && !isUpdatingCards;
       randomToggle.disabled = false;
     }
     

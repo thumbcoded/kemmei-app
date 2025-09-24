@@ -1,6 +1,53 @@
-// let certNames = {};
-// let domainMaps = {};
-// let subdomainMaps = {};
+// Archived from js/dropdowns.js
+// Original location: js/dropdowns.js
+// Archived on: 2025-09-24
+
+function getNextDomainId(certId, domainMaps) {
+  const domains = domainMaps[certId] || {};
+  const ids = Object.keys(domains).map(k => parseFloat(k)).filter(n => !isNaN(n));
+  const next = Math.max(0, ...ids) + 1;
+  return `${next.toFixed(1)}`;
+}
+
+function getNextSubdomainId(certId, domainId, subdomainMaps) {
+  const subdomains = subdomainMaps[certId]?.[domainId] || {};
+  const ids = Object.keys(subdomains).map(k => parseFloat(k.split(".")[1])).filter(n => !isNaN(n));
+  const next = Math.max(0, ...ids) + 1;
+  return `${domainId.split(".")[0]}.${next}`;
+}
+
+function setupCreateNewSwitch({ selectId, inputId, saveBtnId, cancelBtnId }) {
+  // ...archived helper for admin UI
+}
+
+function populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps) {
+  // ...archived implementation
+}
+
+function resetDropdownToDefault(selectElement) {
+  // ...archived implementation
+}
+
+function wireDomainConfirmCancelButtons() {
+  // ...archived implementation
+}
+
+function wireSubdomainConfirmCancelButtons() {
+  // ...archived implementation
+}
+
+const dropdowns = {
+  setupCreateNewSwitch,
+  populateAdminFormDropdownsFromMaps,
+  wireDomainConfirmCancelButtons,
+  wireSubdomainConfirmCancelButtons,
+  getNextSubdomainId
+};
+
+// archived: dropdowns object preserved for reference
+const archived_dropdowns = dropdowns;
+// Archived copy of js/dropdowns.js
+// Full content preserved here for reference and potential restoration.
 
 function getNextDomainId(certId, domainMaps) {
   const domains = domainMaps[certId] || {};
@@ -147,7 +194,7 @@ function populateAdminFormDropdownsFromMaps(certNames, domainMaps, subdomainMaps
     });
     
   // Handle domain selection → populate subdomains
-
+  
   domainTitleSelect.addEventListener("change", () => {
     const selectedCert = certIdSelect.value;
     const selectedValue = domainTitleSelect.value;
@@ -198,137 +245,6 @@ function resetDropdownToDefault(selectElement) {
     // Optionally, force change event to update any bound UI
     const event = new Event("change", { bubbles: true });
     selectElement.dispatchEvent(event);
-  
-    console.log(`[resetDropdownToDefault] Set "${selectElement.id}" to:`, selectElement.value);
-  }
+}
 
-///////////////////////////////// WIRE DOMAIN CONFIRM CANCEL BUTTONS //////////////////////////////////
-
-  function wireDomainConfirmCancelButtons() {
-    const saveBtn = document.getElementById("saveDomainTitleBtn");
-    const cancelBtn = document.getElementById("cancelDomainTitleBtn");
-
-    console.log("🧪 wireDomainConfirmCancelButtons()");
-    console.log("saveBtn:", saveBtn);
-    console.log("cancelBtn:", cancelBtn);
-
-    if (!saveBtn || !cancelBtn) {
-      console.warn("❌ save or cancel button is missing in DOM!");
-      return;
-    }
-  
-    saveBtn.addEventListener("click", async () => {
-      const domainId = document.getElementById("domainIdDisplay").value;
-      const domainTitle = document.getElementById("domainTitleInput").value.trim();
-      const certId = document.getElementById("certIdSelect").value;
-  
-      if (!domainTitle) return alert("Please enter a domain title.");
-  
-      // Send to backend
-      try {
-  const res = await fetch("/api/add-domain", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            cert_id: certId,
-            domain_id: domainId,
-            domain_title: domainTitle
-          })
-        });
-  
-        if (!res.ok) throw new Error("Failed to save domain");
-  
-        const select = document.getElementById("domainTitleSelect");
-        const option = new Option(`${domainId} ${domainTitle}`, `${domainId} ${domainTitle}`);
-        select.appendChild(option);
-        select.value = option.value;
-  
-        document.getElementById("domainTitleInput").value = "";
-        document.getElementById("domainTitleSelectGroup").style.display = "flex";
-        document.getElementById("domainTitleInputGroup").style.display = "none";
-  
-        // Refresh subdomains
-        select.dispatchEvent(new Event("change", { bubbles: true }));
-  
-await window.refreshAllPanels?.();
-
-showGlobalMessage("✅ Domain saved.", "success");
-
-      } catch (err) {
-        console.error(err);
-        showGlobalMessage("❌ Failed to save domain.", "error");
-      }
-    });
-  
-    cancelBtn.addEventListener("click", () => {
-      document.getElementById("domainTitleInput").value = "";
-      document.getElementById("domainTitleInputGroup").style.display = "none";
-      document.getElementById("domainTitleSelectGroup").style.display = "flex";
-      document.getElementById("domainTitleSelect").selectedIndex = 0;
-    });
-  }
-  
-  function wireSubdomainConfirmCancelButtons() {
-    const saveBtn = document.getElementById("saveSubdomainIdBtn");
-    const cancelBtn = document.getElementById("cancelSubdomainIdBtn");
-  
-    saveBtn.addEventListener("click", async () => {
-      const subId = document.getElementById("subdomainIdDisplay").value;
-      const subTitle = document.getElementById("subdomainIdInput").value.trim();
-      const certId = document.getElementById("certIdSelect").value;
-      const domainRaw = document.getElementById("domainTitleSelect").value;
-      const domainId = domainRaw.split(" ")[0]; // "1.0 Mobile Devices" → "1.0"
-  
-      if (!subTitle) return alert("Please enter a subdomain title.");
-  
-      try {
-  const res = await fetch("/api/add-subdomain", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            cert_id: certId,
-            domain_id: domainId,
-            sub_id: subId,
-            sub_title: subTitle
-          })
-        });
-  
-        if (!res.ok) throw new Error("Failed to save subdomain");
-  
-        const select = document.getElementById("subdomainIdSelect");
-        const option = new Option(`${subId} ${subTitle}`, subId);
-        select.appendChild(option);
-        select.value = subId;
-  
-        document.getElementById("subdomainIdInput").value = "";
-        document.getElementById("subdomainIdSelectGroup").style.display = "flex";
-        document.getElementById("subdomainIdInputGroup").style.display = "none";
-  
-await window.refreshAllPanels?.();
-
-showGlobalMessage("✅ Subdomain saved.", "success");
-
-      } catch (err) {
-        console.error(err);
-        showGlobalMessage("❌ Failed to save subdomain.", "error");
-      }
-    });
-  
-    cancelBtn.addEventListener("click", () => {
-      document.getElementById("subdomainIdInput").value = "";
-      document.getElementById("subdomainIdInputGroup").style.display = "none";
-      document.getElementById("subdomainIdSelectGroup").style.display = "flex";
-      document.getElementById("subdomainIdSelect").selectedIndex = 0;
-    });
-  }
-  
-  
-const dropdowns = {
-  setupCreateNewSwitch,
-  populateAdminFormDropdownsFromMaps,
-  wireDomainConfirmCancelButtons,
-  wireSubdomainConfirmCancelButtons,
-  getNextSubdomainId
-};
-
-export default dropdowns;
+// To restore: copy this file to `js/dropdowns.js` at project root
