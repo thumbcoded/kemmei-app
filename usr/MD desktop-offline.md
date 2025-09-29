@@ -519,3 +519,12 @@ Notes / next steps
 - Optional follow-ups: aggregate child-save verification, batch saves for large title trees, or stronger error reporting for child persistence failures.
 
 (Logged and committed changes.)
+
+## 2025-09-29 — Post-Finish fix follow-ups (brief)
+
+- Hardened `restoreHeaderCompact()` (idempotent + observer disconnect) to prevent the MutationObserver re-entrancy that caused the renderer freeze on Finish.
+- Replaced renderer numeric/file probing with the main-process `api:listCards` enumerator so the renderer no longer issues mass file:// requests; this centralizes recursive JSON enumeration and difficulty filtering.
+- Fixed Clear Progress end-to-end: DELETE handlers for `user-progress`, `user-unlocks`, and `test-completions` were wired and `clearUserUnlocks` / `clearUserTestCompletions` added to both DB backends; localStorage mirrors are cleared and `kemmei:progressCleared` is dispatched for immediate UI reset.
+- Progress page expansion state now saves only the last-opened cert/domain (per-user) and restores by collapsing all others first, preventing multiple leftover expansions from earlier visits.
+
+These changes remove noisy probes, ensure Clear Progress truly resets backend and UI state, and make the Progress page deterministic after navigation.

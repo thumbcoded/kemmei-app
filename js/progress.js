@@ -10,6 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Kick off initial load
   refreshProgress();
+  // Persist expanded state when the user navigates away so Back/Return restores it
+  try {
+    // Save on normal unload/navigation
+    window.addEventListener('beforeunload', saveExpandedState);
+    // Also save when page becomes hidden (covers some programmatic navigations)
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveExpandedState(); });
+    // Capture clicks on links that will navigate away and save state before navigation
+    document.addEventListener('click', (ev) => {
+      try {
+        const a = ev.target && ev.target.closest ? ev.target.closest('a') : null;
+        if (!a) return;
+        const href = a.getAttribute && a.getAttribute('href');
+        if (!href) return;
+        // ignore same-page anchors and javascript pseudo-links
+        if (href.startsWith('#') || href.startsWith('javascript:')) return;
+        // ignore links that open in new tab/window
+        if (a.target && a.target === '_blank') return;
+        saveExpandedState();
+      } catch (e) { /* ignore */ }
+    }, true);
+  } catch (e) { /* ignore attach errors */ }
   // refreshProgress is defined below and performs the operations including user resolution
   async function refreshProgress() {
     // Resolve userId: localStorage -> preload helper getCurrentUserId -> getCurrentUser()
@@ -150,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
       confirmModal.classList.add("hidden");
     });
   }
-  if (confirmYes && confirmModal) {
+    if (confirmYes && confirmModal) {
     confirmYes.addEventListener("click", async () => {
       confirmModal.classList.add("hidden");
 
@@ -177,24 +198,62 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Prefer IPC helper, otherwise only network-delete when not running under file://
-  let res = null;
-  if (window.api && typeof window.api.rpc === 'function') {
-    try { res = await window.api.rpc(`user-progress/${userId}`, 'DELETE'); } catch (e) { console.warn('rpc delete user-progress failed', e && e.message); }
-  } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
-    try { res = await fetch(`/api/user-progress/${userId}`, { method: 'DELETE' }); } catch (e) { console.warn('network delete user-progress failed', e && e.message); }
-  } else {
-    console.warn('Skipping user-progress DELETE: running under file:// with no IPC bridge');
+  // Helper: best-effort delete helper using RPC first, then fetch; returns boolean
+  async function tryDelete(path) {
+    try {
+      if (window.api && typeof window.api.rpc === 'function') {
+        try {
+          const r = await window.api.rpc(path, 'DELETE');
+          if (r && (r.ok || (r.status && r.status >= 200 && r.status < 300))) return true;
+        } catch (e) { /* fallthrough to fetch */ }
+      }
+      if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+        try {
+          const r2 = await fetch(`/api/${path}`, { method: 'DELETE' });
+          if (r2 && r2.ok) return true;
+        } catch (e) { /* ignore */ }
+      }
+    } catch (e) { /* ignore */ }
+    return false;
   }
 
-        if (res && (res.ok || (res.status && res.status >= 200 && res.status < 300))) {
-          showToast("✔️ Your progress has been cleared successfully.", 'success');
-          setTimeout(() => {
-            location.reload();
-          }, 2000);
-        } else {
-          alert("❌ Failed to clear progress.");
-        }
+  // Attempt deletes for progress, unlocks, and test-completions.
+  const deleteTargets = [
+    `user-progress/${userId}`,
+    `user-unlocks/${userId}`,
+    `test-completions/${userId}`
+  ];
+
+  const results = {};
+  for (const p of deleteTargets) {
+    try { results[p] = await tryDelete(p); } catch (e) { results[p] = false; }
+  }
+
+  // Always clear local mirror keys so UI reflects cleared state even when
+  // IPC/network deletes aren't available (file:// mode). This ensures unlock
+  // buttons reset and flashcards default behavior will be Easy on reload.
+  try {
+    localStorage.removeItem(`user:${userId}:unlocks`);
+    localStorage.removeItem(`user:${userId}:progressExpanded`);
+    // any other per-user mirrors we may have used
+    localStorage.removeItem(`user:${userId}:testCompletions`);
+    // runtime caches
+    try { window._currentProgressUnlocks = {}; } catch (e) {}
+  } catch (e) {}
+
+  // If any server-side deletion succeeded, treat as success; otherwise best-effort local clear
+  const anyDeleted = Object.values(results).some(v => !!v);
+  if (anyDeleted) {
+    showToast("✔️ Your progress, unlocks, and test completions have been cleared.", 'success');
+    // notify other pages then reload so UI reflects cleared state
+    try { window.dispatchEvent(new CustomEvent('kemmei:progressCleared', { detail: { userId } })); } catch (e) {}
+    setTimeout(() => { location.reload(); }, 1200);
+  } else {
+    // No bridge available (file://) or deletes failed; still clear local mirrors
+    showToast("⚠️ Local progress/unlocks cleared. Remote DB may still contain data.", 'warning', 4000);
+    try { window.dispatchEvent(new CustomEvent('kemmei:progressCleared', { detail: { userId } })); } catch (e) {}
+    setTimeout(() => { location.reload(); }, 1200);
+  }
       } catch (err) {
         console.error("❌ Reset error:", err);
         alert("❌ Network error.");
@@ -712,32 +771,26 @@ async function toggleUnlock(certId, domainId, level, btn) {
 }
 
 function saveExpandedState() {
-  // Save expanded certs/domains/subdomains
-  const expanded = {
-    certs: [],
-    domains: [],
-    subdomains: []
-  };
-  document.querySelectorAll('.domain-list:not(.hidden)').forEach(el => {
-    const certBlock = el.closest('.title-block');
-    if (certBlock) {
-      const certId = certBlock.querySelector('h3')?.textContent?.split(':')[0]?.trim();
-      if (certId) expanded.certs.push(certId);
-    }
-  });
-  document.querySelectorAll('.subdomain-list:not(.hidden)').forEach(el => {
-    const domainBlock = el.closest('.domain-block');
-    if (domainBlock) {
-      const domainId = domainBlock.querySelector('h4')?.textContent?.split(' ')[1]?.trim();
-      if (domainId) expanded.domains.push(domainId);
-    }
-  });
+  // Persist only the single most-recently-expanded cert and domain so we
+  // don't restore multiple leftovers from older sessions.
   try {
+    const openDomain = document.querySelector('.domain-list:not(.hidden)');
+    let certId = null;
+    let domainId = null;
+    if (openDomain) {
+      const certBlock = openDomain.closest('.title-block');
+      certId = certBlock?.querySelector('h3')?.textContent?.split(':')[0]?.trim() || null;
+      // find any open subdomain within this domain list
+      const openSub = openDomain.querySelector('.subdomain-list:not(.hidden)');
+      if (openSub) {
+        const domainBlock = openSub.closest('.domain-block');
+        domainId = domainBlock?.querySelector('h4')?.textContent?.split(' ')[1]?.trim() || null;
+      }
+    }
+    const payload = { cert: certId, domain: domainId };
     const userId = localStorage.getItem('userId');
-    if (userId) {
-      localStorage.setItem(`user:${userId}:progressExpanded`, JSON.stringify(expanded));
-    } else {
-      // no user: do not store a global progressExpanded for clean-start behavior
+    if (userId && certId) {
+      localStorage.setItem(`user:${userId}:progressExpanded`, JSON.stringify(payload));
     }
   } catch (e) {
     // ignore storage errors
@@ -751,28 +804,50 @@ function restoreExpandedState() {
     const raw = localStorage.getItem(`user:${userId}:progressExpanded`);
     const expanded = raw ? JSON.parse(raw) : null;
     if (!expanded) return;
-  // Expand certs
-  expanded.certs?.forEach(certId => {
-    document.querySelectorAll('.title-block').forEach(block => {
-      const h3 = block.querySelector('h3');
-      if (h3 && h3.textContent && h3.textContent.startsWith(certId)) {
-        const domainList = block.querySelector('.domain-list');
-        if (domainList) domainList.classList.remove('hidden');
-      }
-    });
-  });
-  // Expand domains
-  expanded.domains?.forEach(domainId => {
-    document.querySelectorAll('.domain-block').forEach(block => {
-      const h4 = block.querySelector('h4');
-      if (h4 && h4.textContent.includes(domainId)) {
-        const subList = block.querySelector('.subdomain-list');
-        if (subList) subList.classList.remove('hidden');
-      }
-    });
-  });
-  // Clear after restoring
-  localStorage.removeItem(`user:${userId}:progressExpanded`);
+
+    // Normalize legacy shapes: { certs: [], domains: [] } -> pick the last entries
+    let certToOpen = null;
+    let domainToOpen = null;
+    if (typeof expanded === 'object') {
+      if (expanded.cert) certToOpen = expanded.cert;
+      else if (Array.isArray(expanded.certs) && expanded.certs.length) certToOpen = expanded.certs[expanded.certs.length - 1];
+      if (expanded.domain) domainToOpen = expanded.domain;
+      else if (Array.isArray(expanded.domains) && expanded.domains.length) domainToOpen = expanded.domains[expanded.domains.length - 1];
+    }
+
+    // Collapse all existing lists first to ensure only the saved one is open
+    try {
+      document.querySelectorAll('.domain-list').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.title-header').forEach(h => h.classList.remove('expanded'));
+      document.querySelectorAll('.subdomain-list').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.domain-header').forEach(h => h.classList.remove('expanded'));
+    } catch (e) {}
+
+    // Expand the saved cert and domain (if any)
+    if (certToOpen) {
+      document.querySelectorAll('.title-block').forEach(block => {
+        const h3 = block.querySelector('h3');
+        if (h3 && h3.textContent && h3.textContent.startsWith(certToOpen)) {
+          const domainList = block.querySelector('.domain-list');
+          if (domainList) domainList.classList.remove('hidden');
+          // set expanded class on header
+          const header = block.querySelector('.title-header'); if (header) header.classList.add('expanded');
+        }
+      });
+    }
+    if (certToOpen && domainToOpen) {
+      document.querySelectorAll('.domain-block').forEach(block => {
+        const h4 = block.querySelector('h4');
+        if (h4 && h4.textContent && h4.textContent.includes(domainToOpen)) {
+          const subList = block.querySelector('.subdomain-list');
+          if (subList) subList.classList.remove('hidden');
+          const dHeader = block.querySelector('.domain-header'); if (dHeader) dHeader.classList.add('expanded');
+        }
+      });
+    }
+
+    // Clear after restoring so stale arrays from older versions don't persist
+    localStorage.removeItem(`user:${userId}:progressExpanded`);
   } catch (e) {
     // ignore JSON parse/storage errors
   }
@@ -794,26 +869,47 @@ function unlockValue(unlocks, key) {
 // only when no IPC/network bridge is available.
 async function probeLocalForCards(certId, domainMapsLocal, subdomainMapsLocal) {
   try {
-    const domains = domainMapsLocal[certId] ? Object.keys(domainMapsLocal[certId]) : [];
-    for (const d of domains) {
-      const subs = subdomainMapsLocal?.[certId]?.[d] ? Object.keys(subdomainMapsLocal[certId][d]) : [null];
-      for (const s of subs) {
-        // Try a few likely file names for existence
-        const trialSub = s;
-        const numTrials = 6;
-        for (let i = 1; i <= numTrials; i++) {
-          const num = String(i).padStart(3, '0');
-          const path = trialSub ? `data/cards/${certId}/${d}/${trialSub}/Q-${certId}-${d}-${trialSub}-${num}.json` : `data/cards/${certId}/${d}/Q-${certId}-${d}-${num}.json`;
-          try {
-            const r = await fetch(path);
-            if (r && r.ok) return true;
-          } catch (e) { /* ignore */ }
-        }
-      }
+    // Simplify probe: ask the main process once for any cards under this cert.
+    // This avoids enumerating many folders and eliminates noisy "folder not
+    // found" logs from the main process when probing hypothetical paths.
+    if (window.api && typeof window.api.listLocalCards === 'function') {
+      try {
+        const listed = await window.api.listLocalCards({ cert: certId });
+        return !!(listed && listed.length);
+      } catch (e) { /* ignore */ }
     }
-  } catch (e) { /* ignore */ }
+    if (window.api && typeof window.api.rpc === 'function') {
+      try {
+        const r = await window.api.rpc(`cards?cert_id=${encodeURIComponent(certId)}`, 'GET');
+        if (r && r.body && r.body.length) return true;
+      } catch (e) {}
+    }
+  } catch (e) {}
   return false;
 }
+
+// When clear progress occurs, reset unlock button visuals immediately so
+// the UI doesn't show stale green buttons while the page reloads.
+window.addEventListener('kemmei:progressCleared', (ev) => {
+  try {
+    // Remove per-user mirror so restore logic reads a clean state
+    const uid = (ev && ev.detail && ev.detail.userId) ? ev.detail.userId : localStorage.getItem('userId');
+    if (uid) {
+      try { localStorage.removeItem(`user:${uid}:unlocks`); } catch (e) {}
+    }
+    // Find all unlock buttons and force them to locked state
+    document.querySelectorAll('.unlock-btn').forEach(b => {
+      try {
+        b.classList.remove('unlocked');
+        b.classList.add('locked');
+        const text = (b.textContent || '').trim();
+        const words = text.split(' ');
+        const label = words.slice(1).join(' ') || 'Medium';
+        b.innerHTML = `🔒 ${label}`;
+      } catch (e) {}
+    });
+  } catch (e) {}
+});
 
 // Check presence of cards per cert by preferring IPC/rpc/get endpoints and
 // falling back to local probes when necessary. Returns an object map certId->bool.

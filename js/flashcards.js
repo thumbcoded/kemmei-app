@@ -1267,17 +1267,37 @@ document.getElementById("domain-select").addEventListener("change", () => {
         difficultySelect.appendChild(allOption);
       }
 
-      // Restore the previously selected difficulty if it's still available and unlocked
-      if (currentDifficulty) {
-        const optionExists = Array.from(difficultySelect.options).some(opt => opt.value === currentDifficulty && !opt.disabled);
-        if (optionExists) {
-          difficultySelect.value = currentDifficulty;
-        } else {
-          // If the previously selected difficulty is no longer available, default to Easy
-          difficultySelect.value = "Easy";
+      // Restore previous selection with this priority:
+      // 1) per-user saved lastDifficulty (preferred),
+      // 2) current in-DOM selection if still valid,
+      // 3) default to Easy.
+      let restored = false;
+      try {
+        const storageKey = `user:${userId}:lastDifficulty`;
+        const savedDiff = localStorage.getItem(storageKey) || localStorage.getItem('lastDifficulty') || null;
+        if (savedDiff) {
+          const savedOpt = Array.from(difficultySelect.options).some(opt => opt.value === savedDiff && !opt.disabled);
+          if (savedOpt) {
+            difficultySelect.value = savedDiff;
+            restored = true;
+          }
         }
-      } else {
-        // If no previous selection, default to Easy
+      } catch (e) { /* ignore storage errors */ }
+
+      if (!restored && currentDifficulty) {
+        // Do not honor a transient 'All' selection as the default after unlocks
+        // unless it was the user's explicitly saved preference (handled above).
+        if (currentDifficulty !== 'All') {
+          const optionExists = Array.from(difficultySelect.options).some(opt => opt.value === currentDifficulty && !opt.disabled);
+          if (optionExists) {
+            difficultySelect.value = currentDifficulty;
+            restored = true;
+          }
+        }
+      }
+
+      if (!restored) {
+        // Default to Easy unless a valid last selection was restored
         difficultySelect.value = "Easy";
       }
       

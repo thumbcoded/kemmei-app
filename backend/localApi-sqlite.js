@@ -194,6 +194,20 @@ async function clearUserProgress(userId) {
   return { ok: true }
 }
 
+async function clearUserUnlocks(userId) {
+  await ensureInit()
+  if (!userId) return { ok: false, error: 'missing' }
+  await db.run('DELETE FROM unlocks WHERE user_id = ?', userId)
+  return { ok: true }
+}
+
+async function clearUserTestCompletions(userId) {
+  await ensureInit()
+  if (!userId) return { ok: false, error: 'missing' }
+  await db.run('DELETE FROM test_completions WHERE user_id = ?', userId)
+  return { ok: true }
+}
+
 async function getCard (id) {
   await ensureInit()
   const r = await db.get('SELECT id, title, content, metadata FROM cards WHERE id = ?', id)
@@ -254,4 +268,4 @@ async function getUserById (id) {
   return { id: r.id, username: r.username, metadata: JSON.parse(r.metadata || '{}') }
 }
 
-module.exports = { init, getCards, getCard, saveCard, getUsers, saveUser, getUserByUsername, setCurrentUserId, getCurrentUserId, getCurrentUser, getUserById, getDomainMap, getUserProgress, getTestCompletions, getUserUnlocks, saveProgress, saveTestCompletion, saveUserUnlock, clearUserProgress, ensureInit }
+module.exports = { init, getCards, getCard, saveCard, getUsers, saveUser, getUserByUsername, setCurrentUserId, getCurrentUserId, getCurrentUser, getUserById, getDomainMap, getUserProgress, getTestCompletions, getUserUnlocks, saveProgress, saveTestCompletion, saveUserUnlock, clearUserProgress, clearUserUnlocks, clearUserTestCompletions, ensureInit }

@@ -276,6 +276,22 @@ async function clearUserProgress(userId) {
   return { ok: true }
 }
 
+async function clearUserUnlocks(userId) {
+  await loadDb()
+  if (!userId) return { ok: false, error: 'missing' }
+  db.run('DELETE FROM unlocks WHERE user_id = "' + userId + '"')
+  persistDb()
+  return { ok: true }
+}
+
+async function clearUserTestCompletions(userId) {
+  await loadDb()
+  if (!userId) return { ok: false, error: 'missing' }
+  db.run('DELETE FROM test_completions WHERE user_id = "' + userId + '"')
+  persistDb()
+  return { ok: true }
+}
+
 // One-time fresh start: clear persisted users, current user id and all per-user progress/unlocks
 // then mark settings.initialResetDone so this only runs once per installed app.
 async function ensureFreshStart (opts = {}) {
@@ -323,4 +339,4 @@ async function ensureFreshStart (opts = {}) {
   return { cleared: true, defaults }
 }
 
-module.exports = { init, getCards, getCard, saveCard, getUsers, saveUser, getUserByUsername, setCurrentUserId, getCurrentUserId, getCurrentUser, getUserById, getDomainMap, getUserProgress, getTestCompletions, getUserUnlocks, saveProgress, saveTestCompletion, saveUserUnlock, clearUserProgress, ensureInit: init }
+module.exports = { init, getCards, getCard, saveCard, getUsers, saveUser, getUserByUsername, setCurrentUserId, getCurrentUserId, getCurrentUser, getUserById, getDomainMap, getUserProgress, getTestCompletions, getUserUnlocks, saveProgress, saveTestCompletion, saveUserUnlock, clearUserProgress, clearUserUnlocks, clearUserTestCompletions, ensureInit: init }

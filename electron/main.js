@@ -246,6 +246,7 @@ ipcMain.handle('api:rpc', async (event, { path, method, body }) => {
       if (method === 'DELETE' && parts.length === 2) {
         // clear all progress for user
         await localApi.clearUserProgress(parts[1])
+        try { console.info('api:rpc DELETE user-progress for', parts[1]) } catch (e) {}
         return { status: 200, body: { ok: true } }
       }
     }
@@ -255,11 +256,21 @@ ipcMain.handle('api:rpc', async (event, { path, method, body }) => {
         await localApi.saveTestCompletion(parts[1], parts[2], body)
         return { status: 200, body: { ok: true } }
       }
+      if (method === 'DELETE' && parts.length === 2) {
+        await localApi.clearUserTestCompletions(parts[1])
+        try { console.info('api:rpc DELETE test-completions for', parts[1]) } catch (e) {}
+        return { status: 200, body: { ok: true } }
+      }
     }
     if (parts[0] === 'user-unlocks') {
       if (method === 'GET' && parts.length === 2) return { status: 200, body: await localApi.getUserUnlocks(parts[1]) }
       if ((method === 'POST' || method === 'PUT') && parts.length === 3) {
         await localApi.saveUserUnlock(parts[1], parts[2], body)
+        return { status: 200, body: { ok: true } }
+      }
+      if (method === 'DELETE' && parts.length === 2) {
+        await localApi.clearUserUnlocks(parts[1])
+        try { console.info('api:rpc DELETE user-unlocks for', parts[1]) } catch (e) {}
         return { status: 200, body: { ok: true } }
       }
     }
@@ -319,18 +330,22 @@ ipcMain.handle('api:listCards', async (event, filter) => {
     }
 
     const jsonPaths = collectFiles(startFolder)
-  // raw JSON files found under folder (silent by default)
+    // raw JSON files found under folder
+    try { console.info('api:listCards: raw json files found:', jsonPaths.length) } catch (e) {}
 
     const cards = []
+    let parsedCount = 0
     for (const p of jsonPaths) {
       try {
         const content = fs.readFileSync(p, 'utf8')
         const parsed = JSON.parse(content)
         cards.push(parsed)
+        parsedCount++
       } catch (e) {
         // ignore malformed
       }
     }
+    try { console.info('api:listCards: parsed JSON files:', parsedCount) } catch (e) {}
 
     // Detect difficulty from card object using common field names
     const normalize = (s) => (s || '').toString().trim().toLowerCase()
