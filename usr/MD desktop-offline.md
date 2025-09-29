@@ -398,6 +398,13 @@ End of release notes and packaging recommendations.
 
 - Finalized parent -> child propagation for force-unlocks in the Progress UI (`js/progress.js`): title-level and domain-level toggles now iterate child domain/subdomain buttons, persist each child unlock (IPC / RPC / network fallback), mirror to `localStorage`, and update child button UI optimistically.
 
+## 2025-09-29 — Finish button freeze fix
+
+- Issue: In certain runs clicking the final "Finish" (Next on last card) caused the renderer to become unresponsive — clicks, DevTools console, and reloads would not respond. This occurred in both Casual and Test modes.
+- Root cause: a body-level `MutationObserver` watched for the `endMessage` becoming visible and called `restoreHeaderCompact()`. The prior implementation performed unconditional DOM moves and style changes and did not disconnect the observer, which could trigger repeated DOM mutations and re-enter the observer callback. That created a synchronous mutation loop that monopolized the renderer's single JS thread and made the UI appear frozen.
+- Fix applied: made `restoreHeaderCompact()` idempotent and defensive (no-op when nothing to change, only move nodes when needed, wrap ops in try/catch) and updated the MutationObserver callback to `disconnect()` itself after running the restore. This breaks the mutation cycle while preserving the intended restore behavior.
+- Result: The end-screen now appears and the header is restored without freezing the page. This patch is low-risk and limited to DOM/observer restore logic in `js/flashcards.js`.
+
 ## 2025-09-24 — Archive & runtime cleanup (today)
 
 - Archived developer/admin pages and helper JS into `usr/archived-dev-pages/` and removed the runtime originals from the top-level runtime and `js/` folder.

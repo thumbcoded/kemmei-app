@@ -1870,20 +1870,37 @@ function restoreHeaderCompact() {
   const collapsedBar = document.getElementById('collapsedBar');
   const headerBar = document.querySelector('.flashcards-header');
   const sessionRight = document.querySelector('.session-right');
-  if (collapsedBar) {
-    if (sessionRight) sessionRight.appendChild(abortBtn);
-    collapsedBar.style.display = 'none';
-    collapsedBar.setAttribute('aria-hidden', 'true');
+  try {
+    // No-op if there's nothing to restore (makes this idempotent).
+    const alreadyHidden = collapsedBar && (collapsedBar.style.display === 'none' || collapsedBar.getAttribute('aria-hidden') === 'true');
+    const headerNotCollapsed = headerBar && !headerBar.classList.contains('collapsed');
+    // If collapsedBar is already hidden AND header isn't collapsed, nothing to do.
+    if (alreadyHidden && headerNotCollapsed) return;
+
+    if (collapsedBar) {
+      // Only append the abortBtn back if it's not already a child of sessionRight
+      if (sessionRight && abortBtn && abortBtn.parentNode !== sessionRight) sessionRight.appendChild(abortBtn);
+      collapsedBar.style.display = 'none';
+      collapsedBar.setAttribute('aria-hidden', 'true');
+    }
+    if (headerBar) headerBar.classList.remove('collapsed');
+  } catch (e) {
+    // Defensive: don't throw from DOM restore helper
   }
-  if (headerBar) headerBar.classList.remove('collapsed');
 }
 
 // Hook into endMessage and restart flows if they exist in the file's logic
 try {
   // When showing the end message, ensure header is restored
   const observer = new MutationObserver(() => {
-    if (endMessage && !endMessage.classList.contains('hidden')) {
-      restoreHeaderCompact();
+    try {
+      if (endMessage && !endMessage.classList.contains('hidden')) {
+        restoreHeaderCompact();
+        // We've done the restore; no need to keep observing the whole body.
+        try { observer.disconnect(); } catch (e) {}
+      }
+    } catch (e) {
+      // swallow errors from observer callback to avoid bubbling
     }
   });
   if (document.body) observer.observe(document.body, { attributes: true, childList: true, subtree: true });
