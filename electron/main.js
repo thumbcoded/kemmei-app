@@ -1,4 +1,5 @@
 const { app, BrowserWindow, ipcMain, Menu } = require('electron')
+const fs = require('fs')
 const path = require('path')
 const os = require('os')
 
@@ -265,5 +266,122 @@ ipcMain.handle('api:rpc', async (event, { path, method, body }) => {
     return { status: 404, body: { error: 'not found' } }
   } catch (err) {
     return { status: 500, body: { error: err.message } }
+  }
+})
+
+// List local card files directly from the packaged data/cards directory.
+// This is a fast helper used when the renderer needs to load cards but
+// there is no remote API; it avoids the need for the renderer to probe
+// filenames itself and generating many 404s.
+ipcMain.handle('api:listCards', async (event, filter) => {
+  try {
+    const repoRoot = path.join(__dirname, '..')
+    const base = path.join(repoRoot, 'data', 'cards')
+    const cert = filter && (filter.cert_id || filter.cert)
+    const domain = filter && (filter.domain_id || filter.domain)
+    const sub = filter && (filter.subdomain || filter.subdomain_id || filter.sub)
+    const difficultyFilter = filter && (filter.difficulty || filter.diff || filter.level)
+
+    if (!cert) return []
+
+    // Build the starting folder path: cert is required, domain/sub are optional
+    let startFolder = path.join(base, cert)
+    if (domain) startFolder = path.join(startFolder, domain)
+    if (sub) startFolder = path.join(startFolder, sub)
+
+  // Info log: requested start folder and optional difficulty
+  try { console.info('api:listCards:', startFolder, 'difficulty:', difficultyFilter || '(none)') } catch (e) {}
+
+    if (!fs.existsSync(startFolder)) {
+      try { console.log('api:listCards folder not found:', startFolder) } catch (e) {}
+      return []
+    }
+
+    // Recursively collect .json files under startFolder so Domain="All" or Subdomain="All" works
+    const collectFiles = (dir) => {
+      let out = []
+      try {
+        const entries = fs.readdirSync(dir)
+        for (const e of entries) {
+          const full = path.join(dir, e)
+          let stat
+          try { stat = fs.statSync(full) } catch (err) { continue }
+          if (stat.isDirectory()) {
+            out = out.concat(collectFiles(full))
+          } else if (stat.isFile() && e.toLowerCase().endsWith('.json')) {
+            out.push(full)
+          }
+        }
+      } catch (err) {
+        // ignore
+      }
+      return out
+    }
+
+    const jsonPaths = collectFiles(startFolder)
+  // raw JSON files found under folder (silent by default)
+
+    const cards = []
+    for (const p of jsonPaths) {
+      try {
+        const content = fs.readFileSync(p, 'utf8')
+        const parsed = JSON.parse(content)
+        cards.push(parsed)
+      } catch (e) {
+        // ignore malformed
+      }
+    }
+
+    // Detect difficulty from card object using common field names
+    const normalize = (s) => (s || '').toString().trim().toLowerCase()
+    const detectDifficulty = (card) => {
+      try {
+        const meta = card.metadata || {}
+        return normalize(card.difficulty || card.level || card.difficulty_level || card.level_text || meta.difficulty || meta.level || meta.difficulty_level || meta.difficultyLevel || meta.Level)
+      } catch (e) { return '' }
+    }
+
+    // If difficulty was explicitly requested, honor it. Otherwise consult
+    // current user's unlocks/progress to decide which difficulties to return.
+    let allowedDifficulties = []
+    if (difficultyFilter) {
+      allowedDifficulties = [normalize(difficultyFilter)]
+    } else {
+      // Default: at minimum Easy
+      allowedDifficulties = ['easy']
+      try {
+        const userId = await localApi.getCurrentUserId()
+        if (userId) {
+          // Collect potential unlocked difficulties from multiple sources
+          const unlocks = await localApi.getUserUnlocks(userId).catch(() => ({})) || {}
+          const testComps = await localApi.getTestCompletions(userId).catch(() => ({})) || {}
+          const progress = await localApi.getUserProgress(userId).catch(() => ({})) || {}
+
+          const addIfFound = (s) => {
+            const v = (s || '').toString().toLowerCase()
+            if (v.indexOf('medium') !== -1 && allowedDifficulties.indexOf('medium') === -1) allowedDifficulties.push('medium')
+            if (v.indexOf('hard') !== -1 && allowedDifficulties.indexOf('hard') === -1) allowedDifficulties.push('hard')
+          }
+
+          // Scan unlock keys and values
+          Object.keys(unlocks || {}).forEach(k => { addIfFound(k); try { addIfFound(JSON.stringify(unlocks[k])) } catch (e) {} })
+          // Scan test completions keys
+          Object.keys(testComps || {}).forEach(k => addIfFound(k))
+          // Scan progress keys and values
+          Object.keys(progress || {}).forEach(k => { addIfFound(k); try { addIfFound(JSON.stringify(progress[k])) } catch (e) {} })
+        }
+      } catch (e) {
+        // ignore and keep default ['easy']
+      }
+    }
+
+    const final = cards.filter(c => {
+      const d = detectDifficulty(c) || 'easy'
+      return allowedDifficulties.indexOf(d) !== -1
+    })
+    try { console.info('api:listCards: returning', final.length, 'cards for', startFolder) } catch (e) {}
+    return final
+  } catch (err) {
+    return []
   }
 })

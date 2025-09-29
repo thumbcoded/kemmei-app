@@ -216,20 +216,15 @@ function populateDeckDropdown(certNames, selectedId = null) {
     // Helper: check card presence per cert using IPC/rpc/fetch or local probe
     async function probeLocalForCards(certId) {
       try {
-        // Try a few likely file locations for a quick probe
+        // For this build prefer a metadata-based presence check: if the
+        // domainMaps/subdomainMaps contain entries for this cert then we
+        // assume packaged data exists. Avoid hitting the filesystem here to
+        // prevent noisy file:// requests.
         const domains = domainMaps[certId] ? Object.keys(domainMaps[certId]) : [];
+        if (domains.length === 0) return false;
         for (const d of domains) {
-          const subs = subdomainMaps?.[certId]?.[d] ? Object.keys(subdomainMaps[certId][d]) : [null];
-          for (const s of subs) {
-            for (let i = 1; i <= 6; i++) {
-              const num = String(i).padStart(3, '0');
-              const path = s ? `data/cards/${certId}/${d}/${s}/Q-${certId}-${d}-${s}-${num}.json` : `data/cards/${certId}/${d}/Q-${certId}-${d}-${num}.json`;
-              try {
-                const r = await fetch(path);
-                if (r && r.ok) return true;
-              } catch (e) { /* ignore */ }
-            }
-          }
+          const subs = subdomainMaps?.[certId]?.[d] ? Object.keys(subdomainMaps[certId][d]) : [];
+          if (subs.length > 0) return true;
         }
       } catch (e) {}
       return false;
@@ -237,31 +232,9 @@ function populateDeckDropdown(certNames, selectedId = null) {
 
     async function fetchCardPresence(certId) {
       try {
-        if (window.api && typeof window.api.getCards === 'function') {
-          try {
-            const d = await window.api.getCards({ cert_id: certId });
-            if (d && d.length) return true;
-          } catch (e) {}
-        }
-        if (window.api && typeof window.api.rpc === 'function') {
-          try {
-            const r = await window.api.rpc(`cards?cert_id=${encodeURIComponent(certId)}`, 'GET');
-            if (r && r.body && r.body.length) return true;
-          } catch (e) {}
-        }
-        if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
-          try {
-            const r2 = await fetch(`/api/cards?cert_id=${encodeURIComponent(certId)}`);
-            if (r2 && r2.ok) {
-              const body = await r2.json();
-              if (body && body.length) return true;
-            }
-          } catch (e) {}
-        }
-        // Fallback to local probe under file://
-        if (document.location.protocol === 'file:' || !window.api) {
-          return await probeLocalForCards(certId);
-        }
+        // This build uses only the packaged local `data/cards` directory.
+        // Do not attempt IPC or network here; simply probe the local files.
+        return await probeLocalForCards(certId);
       } catch (e) {}
       return false;
     }
@@ -273,17 +246,19 @@ function populateDeckDropdown(certNames, selectedId = null) {
       deckSelect.appendChild(opt);
     }
 
-    // Do presence probing in parallel but avoid blocking UI too long
-    const probes = Object.keys(certNames).map(id => fetchCardPresence(id).then(has => ({ id, has })));
-    const results = await Promise.all(probes);
-    results.forEach(r => {
-      const opt = Array.from(deckSelect.options).find(o => o.value === r.id);
-      if (opt && !r.has) {
+    // Instead of probing the filesystem for every certificate (which creates
+    // many file:// requests), use the loaded `domainMaps` as a lightweight
+    // proxy: if a cert has no domains listed, mark it as having no cards.
+    // This avoids noisy fetch attempts under file:// while still keeping the
+    // UI informative.
+    for (const opt of Array.from(deckSelect.options)) {
+      const id = opt.value;
+      const hasDomains = domainMaps && domainMaps[id] && Object.keys(domainMaps[id] || {}).length > 0;
+      if (!hasDomains) {
         opt.disabled = true;
-        // visually indicate disabled but keep visible
         opt.className = 'no-cards-option';
       }
-    });
+    }
 
     // If we have a stored deck, use that — otherwise pick first enabled
     if (selectedId && certNames[selectedId]) {
@@ -981,193 +956,108 @@ async function fetchCards(unlockedDifficulties = null) {
     computedUnlocked = computedUnlocked || await getUnlockedDifficulties();
   }
 
-  // Handle difficulty filtering based on normalized decision
-  if (!useUnlockedSet && requestedDifficulty && requestedDifficulty !== 'All') {
-    // Single difficulty - make one API call
-    const query = new URLSearchParams(baseQuery);
-    query.append("difficulty", requestedDifficulty.toLowerCase());
-    
-    const url = `/api/cards?${query.toString()}`;
-    // Prefer IPC getCards when available (Electron) to avoid file:// errors
-    let data = [];
-    if (window.api && typeof window.api.getCards === 'function') {
-      try {
-        const params = Object.fromEntries(query.entries());
-        data = await window.api.getCards(params);
-        fetchDebug.source = 'ipc';
-        fetchDebug.query = params;
-      } catch (e) {
-        console.warn('ipc getCards failed, falling back to fetch', e && e.message);
-      }
-    }
-    if ((!data || !data.length)) {
-      // Only attempt a network fetch if not running under file:// to avoid file:///api/... errors
-      if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
-        try {
-          const r = await fetch(url);
-          if (r && r.ok) data = await r.json();
-          else console.warn('fetch returned non-ok for', url, r && r.status);
-        } catch (err) {
-          console.warn('fetch failed for', url, err && err.message);
-        }
-      } else {
-        console.warn('Skipping network fetch for cards under file://; no IPC available');
-      }
-    }
-    allCards = data || [];
-    fetchDebug.counts.single = allCards.length;
-  } else if (useUnlockedSet) {
-    // Multiple difficulties - use the computedUnlocked set (unlocked difficulties)
-    const unlocked = computedUnlocked || await getUnlockedDifficulties();
-    
-    // Make parallel API calls for each unlocked difficulty
-    const promises = unlocked.map(async (diff) => {
-      const query = new URLSearchParams(baseQuery);
-      query.append("difficulty", diff);
-      // Prefer ipc.getCards
-      if (window.api && typeof window.api.getCards === 'function') {
-        try {
-          const params = Object.fromEntries(query.entries());
-          return await window.api.getCards(params);
-        } catch (e) {
-          console.warn('ipc getCards failed for diff', diff, e && e.message);
-        }
-      }
-      // fallback to network
-      const url = `/api/cards?${query.toString()}`;
-      if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
-        try {
-          const r = await fetch(url);
-          if (r && r.ok) return await r.json();
-          console.warn('fetch returned non-ok for', url, r && r.status);
-        } catch (err) {
-          console.warn('fetch failed for', url, err && err.message);
-        }
-      } else {
-        console.warn('Skipping network fetch for cards under file://; no IPC available');
-      }
-      return [];
-    });
-    
-    const results = await Promise.all(promises);
-    // Combine all results into a single array and remove duplicates
-    const combinedCards = results.flat();
-    const uniqueCards = combinedCards.filter((card, index, self) => 
-      index === self.findIndex(c => (c._id || c.id) === (card._id || card.id))
-    );
-    allCards = uniqueCards || [];
-    fetchDebug.source = fetchDebug.source || 'multi';
-    try { fetchDebug.query = { cert: deck, domain: domain && domain.split(' ')[0] || null, sub: subdomain, unlocked: unlocked }; } catch (e) {}
-    fetchDebug.counts.multi = results.map(r => (r && r.length) || 0);
-  } else {
-    // Fallback: treat as Easy (should not reach here due to normalization)
-    const query = new URLSearchParams(baseQuery);
-    query.append('difficulty', 'easy');
-    const url = `/api/cards?${query.toString()}`;
-    if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
-      try {
-        const res = await fetch(url);
-        if (res && res.ok) allCards = await res.json();
-      } catch (e) {
-        console.warn('fetch failed for all-cards fallback', e && e.message);
-      }
-    } else {
-      console.warn('Skipping network fetch for all cards under file:// (fallback)');
-    }
-  }
-  // Fallback: only probe the local data directory when running under file://
-  // or when no IPC bridge is present. Previously this condition used
-  // `protocol !== 'http:'` which incorrectly triggered in https and other
-  // contexts. Limit probing to file:// or when `window.api` is missing.
-  if ((!allCards || allCards.length === 0) && (document.location.protocol === 'file:' || !window.api)) {
-    try {
-      const cert = document.getElementById("deck-select").value.trim();
-      const domainVal = document.getElementById("domain-select").value.trim();
-      const domainId = domainVal && domainVal !== 'All' ? domainVal.split(' ')[0] : null;
-      const subVal = document.getElementById("subdomain-select")?.value.trim();
-      let foldersToProbe = [];
+  // For this build we only load from the packaged local `data/cards` directory.
+  // Skip any IPC/network branches and perform a constrained probe for the
+  // currently selected cert/domain/sub only.
+  // Determine selected cert/domain/sub (normalize values to ids)
+  const cert = document.getElementById("deck-select").value.trim();
+  const domainSelectEl = document.getElementById('domain-select');
+  const subSelectEl = document.getElementById('subdomain-select');
+  const domainVal = domainSelectEl ? domainSelectEl.value : '';
+  const domainId = domainVal && domainVal !== 'All' ? domainVal.split(' ')[0] : null;
+  const subValRaw = subSelectEl ? subSelectEl.value : '';
+  const subVal = subValRaw && subValRaw !== 'All' ? subValRaw.split(' ')[0] : null;
 
-      if (subVal && subVal !== 'All' && domainId) {
-        foldersToProbe.push({ domain: domainId, sub: subVal });
-      } else if (domainId) {
-        // probe every subdomain under this domain for the cert using loaded maps
-        const subs = subdomainMaps[cert]?.[domainId] ? Object.keys(subdomainMaps[cert][domainId]) : [];
-        subs.forEach(s => foldersToProbe.push({ domain: domainId, sub: s }));
-      } else if (cert) {
-        // probe every domain/subdomain for this cert
-        const domains = domainMaps[cert] ? Object.keys(domainMaps[cert]) : [];
-        domains.forEach(d => {
-          const subs = subdomainMaps[cert]?.[d] ? Object.keys(subdomainMaps[cert][d]) : [];
-          subs.forEach(s => foldersToProbe.push({ domain: d, sub: s }));
+  const localCards = [];
+
+  // Prefer IPC-local API when available (Electron) to get exact cards for
+  // the current selection. This avoids any filename probing or 404 noise.
+  try {
+    if (window.api && typeof window.api.getCards === 'function') {
+      const params = {};
+      if (cert) params.cert_id = cert;
+      if (domainId) params.domain_id = domainId;
+      if (subVal) params.subdomain = subVal;
+      // If the UI requested a single difficulty, pass it through. If 'All',
+      // omit difficulty so the API returns all levels and we'll filter below.
+      if (requestedDifficulty && requestedDifficulty !== 'All') params.difficulty = requestedDifficulty.toLowerCase();
+      try {
+  const ipcCards = await window.api.getCards(params);
+        if (ipcCards && ipcCards.length) {
+          allCards = ipcCards;
+          fetchDebug.source = 'ipc-local';
+          fetchDebug.query = params;
+        }
+      } catch (e) {
+        // ipc getCards failed; we'll fall back to local probing below
+      }
+    }
+  } catch (e) {}
+  // If IPC didn't provide card objects, ask main process to list the local
+  // card JSON files in the selected folder. This avoids probing numeric
+  // filenames from the renderer.
+  try {
+    if ((!allCards || allCards.length === 0) && window.api && typeof window.api.listLocalCards === 'function') {
+      try {
+  const listParams = { cert: cert };
+  if (domainId) listParams.domain = domainId;
+  if (subVal) listParams.sub = subVal;
+  if (requestedDifficulty && requestedDifficulty !== 'All') listParams.difficulty = requestedDifficulty.toLowerCase();
+  const listed = await window.api.listLocalCards(listParams);
+        if (listed && listed.length) {
+          allCards = listed;
+          fetchDebug.source = 'ipc-listLocal';
+          fetchDebug.query = listParams;
+        }
+      } catch (e) {
+        // ignore and fall back to conservative probing
+      }
+    }
+  } catch (e) {}
+
+  // Sequential numeric probing has been disabled in this build. We rely on
+  // IPC helpers (`getCards` and `listLocalCards`) to return actual available
+  // card JSON objects for the current selection. If neither helper returns
+  // results, `allCards` will remain empty and the UI will indicate zero cards.
+  
+
+  // Sequential numeric probing has been disabled in this build. We rely on
+  // IPC helpers (`getCards` and `listLocalCards`) to return actual available
+  // card JSON objects for the current selection. If neither helper returns
+  // results, `allCards` will remain empty and the UI will indicate zero cards.
+
+  // Normalize and enforce difficulty selection. If the UI requested a single
+  // difficulty (Easy/Medium/Hard) filter the returned cards accordingly. If
+  // the UI requested 'All' interpret that as the unlocked set (computedUnlocked)
+  // and include cards whose difficulty matches any of those levels.
+  const normalize = (s) => (s || '').toString().trim().toLowerCase();
+  const detectCardDifficulty = (card) => {
+    try {
+      const meta = card.metadata || {};
+      return normalize(card.difficulty || card.level || meta.difficulty || meta.level || meta.difficulty_level || meta.difficultyLevel || meta.Level);
+    } catch (e) { return '' }
+  };
+
+  if (allCards && allCards.length) {
+    if (requestedDifficulty === 'All') {
+      // include only cards whose difficulty is in computedUnlocked
+      const allowed = (computedUnlocked || []).map(d => d.toString().toLowerCase());
+      if (allowed.length) {
+        allCards = allCards.filter(c => {
+          const d = detectCardDifficulty(c) || 'easy';
+          return allowed.indexOf(d) !== -1;
         });
       }
-
-      const localCards = [];
-
-      // Helper to probe a folder for sequentially numbered files
-      async function probeFolder(certId, domainId, subId) {
-        const consecutiveMissLimit = 8; // stop after several misses
-        let misses = 0;
-        // Try up to 500 file numbers as an upper bound
-        for (let i = 1; i <= 500; i++) {
-          const num = String(i).padStart(3, '0');
-          const path = `data/cards/${certId}/${domainId}/${subId}/Q-${certId}-${domainId}-${subId}-${num}.json`;
-          try {
-            const r = await fetch(path);
-            if (r && r.ok) {
-              const c = await r.json();
-              localCards.push(c);
-              misses = 0; // reset misses on success
-            } else {
-              misses++;
-            }
-          } catch (e) {
-            misses++;
-          }
-          if (misses >= consecutiveMissLimit) break;
-        }
-      }
-
-      // Run probes sequentially to avoid too many concurrent fetches from file://
-      for (const f of foldersToProbe) {
-        // respect selected difficulty filter
-        await probeFolder(cert, f.domain, f.sub);
-      }
-
-      // If we found local cards, filter by difficulty (if specified).
-      // Important: when `difficulty === 'All'` we should still restrict to
-      // only the unlocked difficulties for the current user (fresh users
-      // should only have Easy unlocked). Previously this branch treated
-      // 'All' as "no filter" and returned cards of all difficulties.
-      if (localCards.length) {
-        let desiredLevels = null;
-        if (difficulty && difficulty !== 'All') {
-          desiredLevels = [difficulty.toLowerCase()];
-        } else {
-          // respect unlocked difficulties if provided, otherwise query for them
-          const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
-          desiredLevels = (unlocked || ['easy']).map(d => d.toLowerCase());
-        }
-
-        if (desiredLevels && desiredLevels.length) {
-          allCards = localCards.filter(c => desiredLevels.includes(((c.difficulty || '')).toLowerCase()));
-        } else {
-          allCards = localCards;
-        }
-
-        fetchDebug.source = 'probe';
-        fetchDebug.counts.probeRaw = localCards.length;
-        fetchDebug.counts.probeFiltered = (allCards || []).length;
-        fetchDebug.query = { cert, domain: domainId, sub: subVal, difficultyLevels: desiredLevels };
-      }
-    } catch (e) {
-      // ignore fallback errors
-      console.warn('local data/cards fallback failed', e && e.message);
+    } else if (requestedDifficulty) {
+      const want = normalize(requestedDifficulty);
+      allCards = allCards.filter(c => {
+        const d = detectCardDifficulty(c) || 'easy';
+        return d === want;
+      });
     }
   }
 
   // debug samples removed
-
   questions = allCards.map(card => {
     // Support multiple possible backend shapes. The local SQLite API stores
     // the main text in `content` and the original fields under `metadata`.
@@ -1300,6 +1190,7 @@ document.getElementById("domain-select").addEventListener("change", () => {
     } finally {
       isUpdatingCards = false;
       try { startBtn.classList.remove('loading-cards'); } catch (e) {}
+      try { startBtn.disabled = !(questions && questions.length > 0); } catch (e) {}
     }
   }
 

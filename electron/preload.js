@@ -52,6 +52,10 @@ contextBridge.exposeInMainWorld('api', {
   getTestCompletions: (userId) => ipcRenderer.invoke('api:rpc', { path: `test-completions/${userId}`, method: 'GET' }),
   getUserUnlocks: (userId) => ipcRenderer.invoke('api:rpc', { path: `user-unlocks/${userId}`, method: 'GET' })
   ,
+  // List local card files and return parsed JSON objects for a given folder
+  listLocalCards: async (filter) => {
+    return ipcRenderer.invoke('api:listCards', filter)
+  },
   // Save helpers - call dedicated ipc handlers exposed in main
   saveProgress: (userId, key, data) => ipcRenderer.invoke('api:saveProgress', userId, key, data),
   saveTestCompletion: (userId, key, data) => ipcRenderer.invoke('api:saveTestCompletion', userId, key, data),

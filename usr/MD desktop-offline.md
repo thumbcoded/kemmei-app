@@ -447,6 +447,53 @@ Files primarily changed today for these tweaks:
 - `css/flashcards-loading.css` (new)
 - `js/flashcards.js`
 
+## 2025-09-29 — Card fetch determinism, main-side difficulty defaults, spinner & debug cleanup
+
+What I changed today
+
+- Main-side card listing: rewrote the `api:listCards` IPC handler in `electron/main.js` to:
+	- accept legacy and multiple param name variants (cert / cert_id, domain / domain_id, sub / subdomain / subdomain_id).
+	- recursively collect JSON files under `data/cards/<cert>[/<domain>[/<sub>]]` so Domain="All" and Subdomain="All" return aggregated results.
+	- detect card difficulty by inspecting common fields (card.difficulty, card.level, and metadata.*) and filter returned cards accordingly.
+	- when difficulty is omitted, default to `Easy` but expand allowed difficulties by consulting the current user's unlocks / test completions / progress (via `localApi.getUserUnlocks`, `getTestCompletions`, `getUserProgress`) so Medium/Hard are included when the user has unlocked them.
+
+- Renderer-side changes (`js/flashcards.js`):
+	- always include the selected/default difficulty when asking `listLocalCards` where possible.
+	- perform a final defensive filter on received card objects by difficulty (robust to multiple JSON field names), so the session contains only the intended difficulty set.
+	- added a loading/disabled UI state for the Start button while card counts are computed; Start shows a spinner (via `.loading-cards`) and stays disabled until counts are resolved.
+
+- Preload & logging cleanup:
+	- removed the verbose `console.debug` logs used during investigation from the renderer and the preload wrapper.
+	- reduced main-process logs to concise info lines for `api:listCards` (start folder + difficulty and final returned count) to keep the terminal usable while preserving minimal observability.
+
+Files changed (today)
+- electron/main.js — rewritten `api:listCards` (recursive collector + difficulty detection + user-unlocks expansion + concise logging)
+- electron/preload.js — removed verbose preload console logs
+- js/flashcards.js — always pass difficulty when available, final filtering, Start button loading state and spinner handling, removed debug logs
+- css/flashcards-loading.css — spinner CSS (already linked from `flashcards.html`)
+
+Why this was done
+
+- Determinism: previously the renderer sometimes probed and returned a raw (unfiltered) count then filtered locally, causing noisy raw->final counts and racey behavior. Main-side defaults and filtering ensure the IPC returns the correct deck size for the selection and the UI reflects the correct startability immediately.
+- UX: the Start button now clearly shows when the app is preparing the deck and prevents premature starts that would produce incorrect session sizes.
+- Performance and cleanliness: recursive collection avoids repeated renderer filesystem probes; debug noise is removed so console output is readable.
+
+How to verify (quick)
+
+1. Run the app (dev): `npm start` and open the Flashcards window.
+2. Open DevTools Console and the terminal running `npm start` (main process).
+3. Try selections: Title=220-1201, Domain=2.0, Subdomain=All, Difficulty=Easy; then Subdomain=2.7. Observe:
+	 - Renderer calls `listLocalCards` (no noisy debug lines).
+	 - Terminal shows an `api:listCards:` info line with the start folder and final returned count. The returned count should match the UI badge `Cards: N`.
+	 - The Start button shows a spinner while counts are being computed and is enabled only when `Cards: N` is > 0.
+
+Notes / follow-ups
+
+- If you prefer main to be silent, I can remove the concise `api:listCards` info log entirely — I kept it intentionally for low-noise observability.
+- If any card JSON uses an unusual field for difficulty, paste a representative `Q-...json` and I'll extend the detection heuristic.
+
+If any detail above is unclear or you'd like a small change (e.g., make main return only counts instead of full objects, or move filtering entirely to main or renderer), tell me which behavior you prefer and I'll implement it.
+
 Do I need to purge the remote repo?
 
 - No, not in this case: deleting these files and committing the deletions will remove them from the remote branch on push. A forced history rewrite (git filter-repo / BFG) is only necessary if you need to remove the files from the repository history (for example, they were large binaries or contained secrets and you need to shrink the repo). The files we archived and removed are small textual assets, so a normal commit+push is sufficient.
