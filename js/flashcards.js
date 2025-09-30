@@ -155,7 +155,148 @@ function setupToggleOverlapWatcher() {
 // initialize overlap watcher now that we're inside the main DOMContentLoaded handler
 setTimeout(setupToggleOverlapWatcher, 300);
 
-async function loadDomainMap() {
+// Cache helpers: store and retrieve domainmap and cert presence info in localStorage
+function getCachedDomainMap() {
+  try {
+    const raw = localStorage.getItem('kemmei:domainmap');
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch (e) { return null; }
+}
+
+function setCachedDomainMap(obj) {
+  try {
+    localStorage.setItem('kemmei:domainmap', JSON.stringify(obj));
+  } catch (e) {}
+}
+
+function getCachedCertPresence() {
+  try {
+    const raw = localStorage.getItem('kemmei:certPresence');
+    if (!raw) return {};
+    return JSON.parse(raw);
+  } catch (e) { return {}; }
+}
+
+function setCachedCertPresence(map) {
+  try { localStorage.setItem('kemmei:certPresence', JSON.stringify(map)); } catch (e) {}
+}
+
+// Quick fingerprint for objects using djb2 over JSON string (fast and stable)
+function computeFingerprint(obj) {
+  try {
+    const s = JSON.stringify(obj || {});
+    let h = 5381;
+    for (let i = 0; i < s.length; i++) h = ((h << 5) + h) + s.charCodeAt(i);
+    return (h >>> 0).toString(16);
+  } catch (e) { return null; }
+}
+
+function getCachedDomainMapFingerprint() {
+  try { return localStorage.getItem('kemmei:domainmap:fingerprint'); } catch (e) { return null; }
+}
+
+function setCachedDomainMapFingerprint(v) {
+  try { localStorage.setItem('kemmei:domainmap:fingerprint', v); } catch (e) {}
+}
+
+function getCachedDomainMapEtag() { try { return localStorage.getItem('kemmei:domainmap:etag'); } catch (e) { return null; } }
+function setCachedDomainMapEtag(et) { try { if (et) localStorage.setItem('kemmei:domainmap:etag', et); } catch (e) {} }
+function setCachedDomainMapLastModified(lm) { try { if (lm) localStorage.setItem('kemmei:domainmap:lastmod', lm); } catch (e) {} }
+
+// Background check to detect if domainmap changed without downloading/parsing
+// the full content on every launch. Uses HEAD/If-None-Match when available,
+// otherwise falls back to IPC GET when present. If a change is detected, the
+// cached domainmap is updated and a `kemmei:refreshData` event is dispatched.
+async function checkForDomainMapUpdate() {
+  try {
+    const cachedFingerprint = getCachedDomainMapFingerprint();
+    const cachedEtag = getCachedDomainMapEtag();
+
+    // Prefer lightweight HTTP HEAD to check ETag/Last-Modified
+    if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+      try {
+        const headResp = await fetch('/api/domainmap', { method: 'HEAD' });
+        if (headResp && headResp.ok) {
+          const et = headResp.headers.get('etag');
+          const lm = headResp.headers.get('last-modified');
+          if (et && cachedEtag && et === cachedEtag) {
+            // unchanged
+            return false;
+          }
+          // If ETag differs or not present, attempt conditional GET
+          const getHeaders = {};
+          if (cachedEtag) getHeaders['If-None-Match'] = cachedEtag;
+          const getResp = await fetch('/api/domainmap', { method: 'GET', headers: getHeaders });
+          if (getResp.status === 304) return false; // not modified
+          if (getResp && getResp.ok) {
+            const data = await getResp.json();
+            const fp = computeFingerprint(data);
+            if (fp !== cachedFingerprint) {
+              // update caches
+              setCachedDomainMap(data);
+              setCachedDomainMapFingerprint(fp);
+              setCachedDomainMapEtag(et);
+              setCachedDomainMapLastModified(lm);
+              window.dispatchEvent(new CustomEvent('kemmei:refreshData'));
+              return true;
+            }
+          }
+        }
+      } catch (e) {
+        // HEAD might not be supported; try conditional GET directly
+        try {
+          const getResp2 = await fetch('/api/domainmap');
+          if (getResp2 && getResp2.ok) {
+            const data = await getResp2.json();
+            const fp = computeFingerprint(data);
+            if (fp !== cachedFingerprint) {
+              setCachedDomainMap(data);
+              setCachedDomainMapFingerprint(fp);
+              try { setCachedDomainMapEtag(getResp2.headers.get('etag')); } catch (e) {}
+              try { setCachedDomainMapLastModified(getResp2.headers.get('last-modified')); } catch (e) {}
+              window.dispatchEvent(new CustomEvent('kemmei:refreshData'));
+              return true;
+            }
+          }
+        } catch (e2) { /* ignore */ }
+      }
+    }
+
+    // If running under Electron, ask the backend for a fresh domainmap
+    if (window.api && typeof window.api.rpc === 'function') {
+      try {
+        const resp = await window.api.rpc('domainmap', 'GET');
+        if (resp && resp.body) {
+          const data = resp.body;
+          const fp = computeFingerprint(data);
+          if (fp !== cachedFingerprint) {
+            setCachedDomainMap(data);
+            setCachedDomainMapFingerprint(fp);
+            window.dispatchEvent(new CustomEvent('kemmei:refreshData'));
+            return true;
+          }
+        }
+      } catch (e) {}
+    }
+  } catch (e) {
+    // Silently ignore background check errors - we fall back to cached data
+  }
+  return false;
+}
+
+async function loadDomainMap(forceReload = false) {
+  // If we have a cached copy and the caller didn't request a refresh,
+  // prefer it and avoid heavy parsing/network calls.
+  if (!forceReload) {
+      const cached = getCachedDomainMap();
+      if (cached && cached.domainMaps) {
+        domainMaps = cached.domainMaps || {};
+        subdomainMaps = cached.subdomainMaps || {};
+        certNames = cached.certNames || {};
+        return { domainMaps, subdomainMaps, certNames };
+      }
+    }
   // Try the IPC-backed API first (Electron). If that fails (running in browser/file mode)
   // fall back to the local JSON file under data/domainmap.json so the UI still works.
   // Prefer IPC when available (running under Electron) to avoid file:// fetch errors
@@ -167,6 +308,7 @@ async function loadDomainMap() {
         domainMaps = data.domainMaps || {}
         subdomainMaps = data.subdomainMaps || {}
         certNames = data.certNames || {}
+        try { setCachedDomainMap(data); } catch (e) {}
         return data
       }
     } catch (e) {
@@ -183,6 +325,7 @@ async function loadDomainMap() {
         domainMaps = data.domainMaps || {};
         subdomainMaps = data.subdomainMaps || {};
         certNames = data.certNames || {};
+        try { setCachedDomainMap(data); } catch (e) {}
         return data;
       }
       throw new Error('api domainmap not ok')
@@ -191,13 +334,14 @@ async function loadDomainMap() {
     }
   } catch (err) {
     console.warn('api domainmap failed, trying local data/domainmap.json', err && err.message);
-    try {
+      try {
       const res2 = await fetch('data/domainmap.json');
       if (res2 && res2.ok) {
         const data = await res2.json();
         domainMaps = data.domainMaps || {};
         subdomainMaps = data.subdomainMaps || {};
         certNames = data.certNames || {};
+        try { setCachedDomainMap(data); } catch (e) {}
         return data;
       }
     } catch (err2) {
@@ -260,6 +404,48 @@ function populateDeckDropdown(certNames, selectedId = null) {
       }
     }
 
+    // Use cached cert presence to avoid repeated expensive checks.
+    const certPresence = getCachedCertPresence();
+    const unknownCerts = [];
+    for (const opt of Array.from(deckSelect.options)) {
+      const id = opt.value;
+      if (Object.prototype.hasOwnProperty.call(certPresence, id)) {
+        if (!certPresence[id]) {
+          opt.disabled = true;
+          opt.className = 'no-cards-option';
+        }
+      } else {
+        // Unknown presence; we'll check via IPC in batch below when available
+        if (!opt.disabled) unknownCerts.push(id);
+      }
+    }
+
+    // When running under Electron (IPC available), batch-check unknown certs
+    // using the main process helper `listLocalCards` to confirm presence.
+    try {
+      if (unknownCerts.length && window.api && typeof window.api.listLocalCards === 'function') {
+        // Map unknown certs to presence checks in parallel
+        const checks = unknownCerts.map(id => {
+          return window.api.listLocalCards({ cert: id, limit: 1 })
+            .then(listed => ({ id, has: !!(listed && listed.length) }))
+            .catch(() => ({ id, has: false }));
+        });
+        const results = await Promise.all(checks);
+        // Apply results and update cache
+        for (const r of results) {
+          certPresence[r.id] = !!r.has;
+          const opt = deckSelect.querySelector(`option[value="${r.id}"]`);
+          if (opt && !r.has) {
+            opt.disabled = true;
+            opt.className = 'no-cards-option';
+          }
+        }
+        try { setCachedCertPresence(certPresence); } catch (e) {}
+      }
+    } catch (e) {
+      // ignore - fallback behavior already applied
+    }
+
     // If we have a stored deck, use that — otherwise pick first enabled
     if (selectedId && certNames[selectedId]) {
       try { deckSelect.value = selectedId; } catch (e) {}
@@ -270,6 +456,14 @@ function populateDeckDropdown(certNames, selectedId = null) {
         if (!deckSelect.options[i].disabled) { deckSelect.selectedIndex = i; break; }
       }
     }
+
+    // Remember the currently-selected enabled deck so future attempts to
+    // select a disabled option can be reverted to this value.
+    try {
+      if (deckSelect && deckSelect.options[deckSelect.selectedIndex] && !deckSelect.options[deckSelect.selectedIndex].disabled) {
+        lastValidDeck = deckSelect.value;
+      }
+    } catch (e) {}
 
     return deckSelect;
   })();
@@ -342,6 +536,42 @@ document.getElementById('deck-select').addEventListener('change', () => {
   }
 
   const data = await loadDomainMap();
+
+  // Listen for a forced refresh signal (for example when a new batch of cards
+  // has been added). This lets the app keep using cached maps until an
+  // explicit refresh is requested.
+  try {
+    window.addEventListener('kemmei:refreshData', async (ev) => {
+      try {
+        const d = await loadDomainMap(true);
+        await populateDeckDropdown(d.certNames || {});
+        updateDeckSelectNoCardsState();
+        // ensure cards are re-fetched for the current selection
+        await fetchCardsAndUpdateCount();
+      } catch (e) { console.warn('refreshData handler failed', e && e.message); }
+    });
+  } catch (e) {}
+
+  // Menu-driven check: listen for a forwarded IPC event from preload
+  try {
+    window.addEventListener('kemmei:menuCheckForUpdates', async () => {
+      try {
+        // Run the background check explicitly and then force reload if it reports new data
+        const changed = await checkForDomainMapUpdate();
+        if (changed) {
+          // The background check already dispatched kemmei:refreshData when it updated cache
+          // but call the explicit handler to ensure UI is fully refreshed.
+          const d = await loadDomainMap(true);
+          await populateDeckDropdown(d.certNames || {});
+          updateDeckSelectNoCardsState();
+          await fetchCardsAndUpdateCount();
+        } else {
+          // No change detected — still show a brief console/info message
+          try { console.info('No updates found for domainmap'); } catch (e) {}
+        }
+      } catch (e) { console.warn('menu-driven check failed', e && e.message); }
+    });
+  } catch (e) {}
 
   // One-time fresh-start: if backend reports a fresh start was performed,
   // clear any renderer-local saved selections (both legacy global and per-user)
@@ -591,6 +821,12 @@ document.getElementById('deck-select').addEventListener('change', () => {
   setTimeout(() => {
     updateModeIndicators();
   }, 200);
+
+  // Run a lightweight background check to see if the domainmap has
+  // changed since the last cached copy. If so, the cache will be updated
+  // and `kemmei:refreshData` will fire which repopulates the UI. This
+  // avoids heavy parsing/network activity on every cold launch.
+  try { checkForDomainMapUpdate().catch(() => {}); } catch (e) {}
 })();
 
 
@@ -624,6 +860,9 @@ let correctCount = 0;
 let isUpdatingMode = false; // Flag to prevent overlapping mode updates
 let isUpdatingCards = false; // Flag to prevent overlapping card updates
 let isRebuildingDifficulty = false; // Flag to prevent difficulty change events during dropdown rebuild
+// Track the last known valid (enabled) deck so we can revert when user
+// or code attempts to select a disabled title that has no cards.
+let lastValidDeck = null;
 
 function saveLastSelection() {
   // Save per-user when possible to avoid leaking selections across users.
@@ -1092,8 +1331,36 @@ async function fetchCards(unlockedDifficulties = null) {
 }
 
 document.getElementById("deck-select").addEventListener("change", () => {
-  const certLabel = document.getElementById("deck-select").value;
-  const certId = certLabel;
+  const deckSel = document.getElementById('deck-select');
+  let certLabel = deckSel.value;
+  let certId = certLabel;
+
+  // If the newly-selected option is disabled (no cards), revert to the
+  // last known valid deck or the first enabled option. This prevents
+  // the UI from entering a state where a title with zero cards is the
+  // active selection.
+  try {
+    const selOpt = deckSel.options[deckSel.selectedIndex];
+    if (selOpt && selOpt.disabled) {
+      // Revert selection
+      if (lastValidDeck && deckSel.querySelector(`option[value="${lastValidDeck}"]`)) {
+        deckSel.value = lastValidDeck;
+      } else {
+        // pick first non-disabled option
+        for (let i = 0; i < deckSel.options.length; i++) {
+          if (!deckSel.options[i].disabled) { deckSel.selectedIndex = i; break; }
+        }
+      }
+      updateDeckSelectNoCardsState();
+      // update certId to reflect the reverted value so the rest of the
+      // handler continues to populate domains/fetch cards for a valid
+      // deck rather than aborting silently.
+  try { certLabel = deckSel.value; certId = certLabel; } catch (e) {}
+      // continue on
+    }
+    // Remember this as the last valid deck
+    if (selOpt && !selOpt.disabled) lastValidDeck = deckSel.value;
+  } catch (e) {}
 
   const domainSelect = document.getElementById("domain-select");
   const subSelect = document.getElementById("subdomain-select");

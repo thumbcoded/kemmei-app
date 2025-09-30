@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, Menu } = require('electron')
+const { app, BrowserWindow, ipcMain, Menu, dialog } = require('electron')
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
@@ -51,6 +51,11 @@ const minimalMenuTemplate = [
   {
     label: 'File',
     submenu: [
+      { label: 'Check for updates', click: () => {
+          try { BrowserWindow.getAllWindows().forEach(w => { w.webContents.send('app:checkForUpdates') }) } catch (e) {}
+        }
+      },
+      { type: 'separator' },
       { role: 'quit' }
     ]
   },
@@ -60,12 +65,30 @@ const minimalMenuTemplate = [
       {
         label: 'About',
         click: () => {
-          // No-op for now; renderer may show an About dialog if needed.
+          try {
+            const info = `Kemmei desktop\n\nPlaceholder About text.\nVersion: ${app.getVersion()}\n\nThis is a placeholder About dialog.`;
+            const win = BrowserWindow.getAllWindows()[0];
+            dialog.showMessageBox(win, { type: 'info', title: 'About Kemmei', message: info });
+          } catch (e) {}
         }
       }
     ]
   }
 ]
+
+// Developer extras for non-packaged runs — added to the menu when running in dev mode
+function extendWithDevMenu(template) {
+  const devMenu = {
+    label: 'Developer',
+    submenu: [
+      { label: 'Reload', click: () => { BrowserWindow.getAllWindows().forEach(w => w.reload()) } },
+      { label: 'Force Reload', click: () => { BrowserWindow.getAllWindows().forEach(w => w.webContents.reloadIgnoringCache()) } },
+      { label: 'Toggle DevTools', click: () => { BrowserWindow.getAllWindows().forEach(w => w.webContents.toggleDevTools()) } }
+    ]
+  };
+  template.push(devMenu);
+  return template;
+}
 
 function createWindow () {
   // Choose a platform-appropriate icon. macOS uses app bundle icons, so only
@@ -135,9 +158,12 @@ app.whenReady().then(() => {
   // Production: set a minimal menu so end-users don't see dev items.
   // Development: keep the default menu so DevTools and reload remain available.
   try {
-    if (app.isPackaged) {
-      Menu.setApplicationMenu(Menu.buildFromTemplate(minimalMenuTemplate))
-    }
+  // In development, include developer helpers (Reload/DevTools) so the
+  // menu remains useful for debugging. In packaged builds keep the
+  // minimal menu.
+  let menuTemplate = minimalMenuTemplate.slice();
+  if (!app.isPackaged) menuTemplate = extendWithDevMenu(menuTemplate);
+  Menu.setApplicationMenu(Menu.buildFromTemplate(menuTemplate))
   } catch (e) {
     // ignore menu errors
   }

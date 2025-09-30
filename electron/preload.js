@@ -69,3 +69,8 @@ contextBridge.exposeInMainWorld('userApi', {
   setCurrentUserId: (id) => ipcRenderer.invoke('api:setCurrentUserId', id),
   getCurrentUserId: () => ipcRenderer.invoke('api:getCurrentUserId')
 })
+
+// Listen for menu-triggered update check and forward to renderer as a window event
+ipcRenderer.on('app:checkForUpdates', () => {
+  try { window.dispatchEvent(new CustomEvent('kemmei:menuCheckForUpdates')); } catch (e) {}
+});
