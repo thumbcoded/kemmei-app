@@ -219,6 +219,23 @@ body.flashcards-page {
   border-radius: 10px;
 }
 
+/* Constrain the Restart button so it's not full-width; center it visually.
+   Use a sensible min/max and fall back to full width on small screens. */
+.end-message #restartBtn {
+  width: 25%;
+  max-width: 360px;
+  min-width: 140px;
+  margin: 1rem auto 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .end-message #restartBtn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
 /* -------- Meta Info -------- */
 .card-meta {
   display: flex;
