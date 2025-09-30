@@ -96,11 +96,11 @@ function createWindow () {
   const platformIcon = (process.platform === 'darwin') ? undefined : path.join(__dirname, '..', 'assets', 'K_blue_2.ico')
 
   const win = new BrowserWindow({
-  width: 1200,
-  height: 800,
+  width: 1280,
+  height: 900,
     // Prevent the user from shrinking the window so small the UI breaks
-    minWidth: 1000,
-    minHeight: 700,
+    minWidth: 1100,
+    minHeight: 760,
     resizable: true,
     icon: platformIcon,
     webPreferences: {
@@ -110,8 +110,8 @@ function createWindow () {
   })
 
   // Extra guard: prevent resize events that would go below the minimum
-  const SAFE_MIN_W = 1000;
-  const SAFE_MIN_H = 700;
+  const SAFE_MIN_W = 1100;
+  const SAFE_MIN_H = 760;
   // Also set the BrowserWindow minimum size and guard on resize to handle
   // platform/DPI peculiarities where the will-resize/preventDefault may not stop
   // the final size change.

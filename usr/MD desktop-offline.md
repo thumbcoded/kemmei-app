@@ -528,3 +528,10 @@ Notes / next steps
 - Progress page expansion state now saves only the last-opened cert/domain (per-user) and restores by collapsing all others first, preventing multiple leftover expansions from earlier visits.
 
 These changes remove noisy probes, ensure Clear Progress truly resets backend and UI state, and make the Progress page deterministic after navigation.
+
+## 2025-09-30 — What we did today (brief)
+
+- Resized the deck completion Restart button: limited its width to ~25%, centered it, and added responsive fallback so it remains usable on small screens (`css/flashcards.css`).
+- Reduced several vertical paddings and tightened gaps on the flashcards page, and made the flashcard area scroll internally (via `max-height` + `overflow:auto`) so long answer lists or explanations do not force the outer window scrollbar (`css/flashcards.css`).
+- Increased the Electron default window size and minimums to give more vertical room (default 1280×900, min 1100×760) so common layouts fit without scrolling (`electron/main.js`).
+- Made the Progress page lighter on startup by caching per-cert card presence in `localStorage['kemmei:certPresence']`, probing only uncached certs, and clearing the cache on `kemmei:refreshData`; this mirrors the "work with what it has" behavior used on the flashcards page (`js/progress.js`).

@@ -3,7 +3,7 @@ body.flashcards-page {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #f0f2f5;
-  padding: 2rem;
+  padding: 1.25rem; /* reduced to save vertical space */
 }
 
 /* Defensive: prevent tiny horizontal scrollbars caused by fixed-position
@@ -84,9 +84,14 @@ body.flashcards-page {
   display: flex;
   background: #fff;
   border-radius: 12px;
-  padding: 2rem 2rem 1.5rem 2rem;
+  padding: 1.25rem 1.25rem 1rem 1.25rem; /* reduced padding */
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-  gap: 2rem;
+  gap: 1.5rem;
+  /* Keep overflow contained to the card area so the outer page doesn't gain
+     an ugly scrollbar when explanations or many answers are present. The
+     calc value reserves space for header + controls; adjust if needed. */
+  max-height: calc(100vh - 220px);
+  overflow: auto;
 }
 
 .card-content {
@@ -105,11 +110,11 @@ body.flashcards-page {
 .card-buttons {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  min-width: 140px;
+  gap: 1rem; /* slightly tighter */
+  min-width: 120px; /* smaller so buttons don't force layout taller */
   align-self: flex-start;
   position: sticky;
-  top: 2rem;
+  top: 1.5rem;
   height: fit-content;
 }
 
@@ -797,7 +802,7 @@ body.dark-theme .mode-tooltip {
 }
 
 .card-answers .option {
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.95rem; /* slightly smaller vertical padding */
   border: 1px solid #ddd;
   border-radius: 8px;
   cursor: pointer;
@@ -1029,4 +1034,10 @@ body.dark-theme .explanation-content {
   .collapsed-bar {
     transition: none !important;
   }
+}
+
+/* If the viewport height is small, allow the flashcard area to shrink a bit more
+   so content remains usable without the outer scrollbar. Tweak if needed. */
+@media (max-height: 760px) {
+  .flashcard-box { max-height: calc(100vh - 160px); }
 }

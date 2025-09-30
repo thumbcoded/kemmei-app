@@ -2,6 +2,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const statsDiv = document.getElementById("progressStats");
   const resetBtn = document.getElementById("resetProgress");
 
+  // Cache helpers for progress page: persist per-cert presence so we don't
+  // probe the filesystem or backend on every visit. Keys mirror flashcards page.
+  function getCachedCertPresence() {
+    try {
+      const raw = localStorage.getItem('kemmei:certPresence');
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+
+  function setCachedCertPresence(map) {
+    try { localStorage.setItem('kemmei:certPresence', JSON.stringify(map || {})); } catch (e) {}
+  }
+
+  // When other parts of the app notify that domainmap/data changed, clear
+  // the cached presence and refresh progress so we re-probe only once.
+  window.addEventListener('kemmei:refreshData', () => {
+    try { localStorage.removeItem('kemmei:certPresence'); } catch (e) {}
+    // Refresh view to pick up new data
+    try { refreshProgress(); } catch (e) {}
+  });
+
   // Listen for test saves from other pages (flashcards) and refresh
   window.addEventListener('kemmei:testSaved', (ev) => {
     console.log('Received kemmei:testSaved event, refreshing progress view');
@@ -915,14 +936,27 @@ window.addEventListener('kemmei:progressCleared', (ev) => {
 // falling back to local probes when necessary. Returns an object map certId->bool.
 async function fetchCardPresenceForCerts(certIds, domainMapsLocal, subdomainMapsLocal) {
   const out = {};
-  // Parallelize with small concurrency (fire all - typically small set)
-  await Promise.all(certIds.map(async (cid) => {
+  // First consult cache to avoid redundant probes
+  const cached = getCachedCertPresence();
+  const toProbe = [];
+  for (const cid of certIds) {
+    if (Object.prototype.hasOwnProperty.call(cached, cid)) {
+      out[cid] = !!cached[cid];
+    } else {
+      toProbe.push(cid);
+    }
+  }
+
+  if (toProbe.length === 0) {
+    return out;
+  }
+
+  // Probe only the missing cert ids
+  await Promise.all(toProbe.map(async (cid) => {
     try {
       let data = null;
       if (window.api && typeof window.api.getCards === 'function') {
-        try {
-          data = await window.api.getCards({ cert_id: cid });
-        } catch (e) { data = null; }
+        try { data = await window.api.getCards({ cert_id: cid }); } catch (e) { data = null; }
       }
       if ((!data || !data.length) && window.api && typeof window.api.rpc === 'function') {
         try {
@@ -940,13 +974,20 @@ async function fetchCardPresenceForCerts(certIds, domainMapsLocal, subdomainMaps
         // Local probe fallback
         const probe = await probeLocalForCards(cid, domainMapsLocal, subdomainMapsLocal);
         out[cid] = probe;
-        return;
+      } else {
+        out[cid] = !!(data && data.length);
       }
-      out[cid] = !!(data && data.length);
     } catch (e) {
       out[cid] = false;
     }
   }));
+
+  // Merge probe results into cache for future visits
+  try {
+    const merged = Object.assign({}, cached || {}, out || {});
+    setCachedCertPresence(merged);
+  } catch (e) {}
+
   return out;
 }
 
