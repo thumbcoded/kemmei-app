@@ -30,6 +30,13 @@ function dbg(...args) { if (DEBUG) console.log(...args); }
 let domainMaps = {};
 let subdomainMaps = {};
 let certNames = {};
+// Track which unlock keys we've already persisted in this session to avoid
+// save/dispatch loops when getUnlockedDifficulties runs repeatedly.
+let persistedUnlocks = new Set();
+// Expose for debugging in DevTools only when DEBUG is enabled
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  try { window._kemmei_persistedUnlocks = persistedUnlocks; } catch (e) {}
+}
 let testStartData = null;
 // Session-level card tracking for stats
 let sessionSeenCardIds = new Set();
@@ -875,7 +882,17 @@ function saveLastSelection() {
   const deckVal = document.getElementById("deck-select").value;
   const domainVal = document.getElementById("domain-select").value;
   const subVal = document.getElementById("subdomain-select").value;
-  const diffVal = document.getElementById("difficulty-select").value;
+  // Validate difficulty before saving: sometimes during transient rebuilds the
+  // control has no options or an empty value; avoid persisting that because
+  // it overwrites the user's explicit saved difficulty.
+  let diffVal = '';
+  try {
+    const diffEl = document.getElementById("difficulty-select");
+    if (diffEl && typeof diffEl.selectedIndex === 'number') {
+      const opt = diffEl.options[diffEl.selectedIndex];
+      if (opt && opt.value && !opt.disabled) diffVal = opt.value;
+    }
+  } catch (e) { diffVal = ''; }
   const modeVal = document.getElementById("mode-select").value;
 
   try {
@@ -883,15 +900,26 @@ function saveLastSelection() {
       localStorage.setItem(`user:${userId}:lastDeck`, deckVal);
       localStorage.setItem(`user:${userId}:lastDomain`, domainVal);
       localStorage.setItem(`user:${userId}:lastSub`, subVal);
-      localStorage.setItem(`user:${userId}:lastDifficulty`, diffVal);
+      // Only persist difficulty if it's a valid non-empty enabled option
+      if (diffVal) {
+        localStorage.setItem(`user:${userId}:lastDifficulty`, diffVal);
+      } else {
+        try { console.info('saveLastSelection: skipping invalid/empty difficulty save', { userId, diffVal }); } catch (e) {}
+      }
       localStorage.setItem(`user:${userId}:lastMode`, modeVal);
+      try { console.info('saveLastSelection (per-user)', { userId, deckVal, domainVal, subVal, diffVal, modeVal }); } catch (e) {}
     } else {
       // Fallback for legacy behavior when no user is available
       localStorage.setItem("lastDeck", deckVal);
       localStorage.setItem("lastDomain", domainVal);
       localStorage.setItem("lastSub", subVal);
-      localStorage.setItem("lastDifficulty", diffVal);
+      if (diffVal) {
+        localStorage.setItem("lastDifficulty", diffVal);
+      } else {
+        try { console.info('saveLastSelection (legacy): skipping invalid/empty difficulty save', { diffVal }); } catch (e) {}
+      }
       localStorage.setItem("lastMode", modeVal);
+      try { console.info('saveLastSelection (legacy)', { deckVal, domainVal, subVal, diffVal, modeVal }); } catch (e) {}
     }
   } catch (e) {
     // Ignore storage errors
@@ -909,21 +937,42 @@ function restoreLastSelection() {
   const difficulty = (userId && localStorage.getItem(`user:${userId}:lastDifficulty`)) || localStorage.getItem("lastDifficulty") || (window._fc_initialDefaults && window._fc_initialDefaults.difficulty) || null;
 
   if (deck) document.getElementById("deck-select").value = deck;
+  try { console.info('restoreLastSelection initial', { userId, deck, domain, sub, difficulty }); } catch (e) {}
   document.getElementById("deck-select").dispatchEvent(new Event("change"));
 
   setTimeout(() => {
     if (domain) document.getElementById("domain-select").value = domain;
     document.getElementById("domain-select").dispatchEvent(new Event("change"));
+    try { console.info('restoreLastSelection after deck/domain dispatch', { domain }); } catch (e) {}
 
     setTimeout(() => {
       if (sub) document.getElementById("subdomain-select").value = sub;
       document.getElementById("subdomain-select").dispatchEvent(new Event("change"));
+      try { console.info('restoreLastSelection after sub dispatch', { sub }); } catch (e) {}
 
       if (difficulty) document.getElementById("difficulty-select").value = difficulty;
       document.getElementById("difficulty-select").dispatchEvent(new Event("change"));
+      try { console.info('restoreLastSelection applied difficulty dispatch', { difficulty }); } catch (e) {}
     }, 150);
   }, 150);
 }
+
+// Log visibility/unload so we can trace navigation between Dashboard and Flashcards
+try {
+  window.addEventListener('beforeunload', (ev) => {
+    try { console.info('flashcards beforeunload', { userId: localStorage.getItem('userId') }); } catch (e) {}
+    try { saveLastSelection(); } catch (e) {}
+  });
+} catch (e) {}
+
+try {
+  document.addEventListener('visibilitychange', () => {
+    try { console.info('flashcards visibilitychange', { visibilityState: document.visibilityState, userId: localStorage.getItem('userId') }); } catch (e) {}
+    if (document.visibilityState === 'hidden') {
+      try { saveLastSelection(); } catch (e) {}
+    }
+  });
+} catch (e) {}
 
 async function getUnlockedDifficulties() {
   const userId = localStorage.getItem("userId");
@@ -1037,9 +1086,149 @@ async function getUnlockedDifficulties() {
       const domainKey = domain === "All" ? "all" : domain.split(" ")[0];
       const mediumKey = `${cert}:${domainKey}:medium`;
       const hardKey = `${cert}:${domainKey}:hard`;
-      
-  mediumUnlocked = (testCompletions[mediumKey] && (typeof testCompletions[mediumKey].unlocked !== 'undefined' ? !!testCompletions[mediumKey].unlocked : !!testCompletions[mediumKey])) || false;
-  hardUnlocked = (testCompletions[hardKey] && (typeof testCompletions[hardKey].unlocked !== 'undefined' ? !!testCompletions[hardKey].unlocked : !!testCompletions[hardKey])) || false;
+
+      mediumUnlocked = (testCompletions[mediumKey] && (typeof testCompletions[mediumKey].unlocked !== 'undefined' ? !!testCompletions[mediumKey].unlocked : !!testCompletions[mediumKey])) || false;
+      hardUnlocked = (testCompletions[hardKey] && (typeof testCompletions[hardKey].unlocked !== 'undefined' ? !!testCompletions[hardKey].unlocked : !!testCompletions[hardKey])) || false;
+
+      // Aggregated-subdomain fallback: allow subdomain Test results to contribute
+      // to a domain-level unlock. We compute a weighted average of subdomain
+      // test scores (weights = totalQuestions when available, otherwise 1)
+      // and require both weighted-average >= SCORE_THRESH and coverage >= COVERAGE_THRESH.
+      const SCORE_THRESH = 90;
+      const COVERAGE_THRESH = 0.75; // require tests for at least 75% of subdomains
+
+      try {
+        // Strict rule: require every subdomain to have a test score >= 90%.
+        // Only attempt this when an explicit domain-level unlock wasn't found.
+        if (!mediumUnlocked) {
+          const subMap = (subdomainMaps && subdomainMaps[cert] && subdomainMaps[cert][domainKey]) ? Object.keys(subdomainMaps[cert][domainKey]) : [];
+          const totalSubs = subMap.length;
+          if (totalSubs > 0) {
+            let allPassed = true;
+            for (const subId of subMap) {
+              let thisSubPassed = false;
+              for (const [k, v] of Object.entries(testCompletions || {})) {
+                try {
+                  const parts = String(k || '').split(':').map(p => p.trim());
+                  if (parts.length < 4) continue;
+                  const [kCert, kDomainRaw, kSub, kDiff] = parts;
+                  if (kCert !== cert) continue;
+                  const kDomain = (kDomainRaw || '').split(' ')[0];
+                  if (kDomain !== domainKey) continue;
+                  if (kSub !== subId) continue;
+                  if ((kDiff || '').toLowerCase() !== 'easy') continue;
+                  const score = (v && typeof v.score === 'number') ? Number(v.score) : (v && v.data && typeof v.data.score === 'number' ? Number(v.data.score) : null);
+                  if (score !== null && score >= 90) { thisSubPassed = true; break; }
+                } catch (e) { /* ignore parse errors */ }
+              }
+              if (!thisSubPassed) { allPassed = false; break; }
+            }
+            if (allPassed) mediumUnlocked = true;
+            if (allPassed) {
+              // Persist domain-level unlock so other pages (Progress, list) see it
+              try {
+                const certKeySafe = cert.replace(/\./g, '_');
+                const domainKeySafe = domainKey.replace(/\./g, '_');
+                const mediumKey = `${certKeySafe}:${domainKeySafe}:medium`;
+                const payload = { unlocked: true, source: 'aggregated-subdomain', when: new Date().toISOString() };
+                if (persistedUnlocks.has(mediumKey)) {
+                  try { if (DEBUG) console.info(`Skipping persist unlock (already persisted this session): ${mediumKey}`); } catch (e) {}
+                } else {
+                try { if (DEBUG) console.info(`Persisting aggregated unlock: ${mediumKey}`); } catch (e) {}
+                // IPC helper preferred
+                if (window.api && typeof window.api.saveUserUnlock === 'function') {
+                  try { await window.api.saveUserUnlock(userId, mediumKey, payload); } catch (e) { /* ignore */ }
+                }
+                // Generic RPC fallback
+                if (window.api && typeof window.api.rpc === 'function') {
+                  try { await window.api.rpc(`user-unlocks/${userId}/${encodeURIComponent(mediumKey)}`, 'POST', payload); } catch (e) { /* ignore */ }
+                }
+                // HTTP fallback
+                if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+                  try { await fetch(`/api/user-unlocks/${userId}/${encodeURIComponent(mediumKey)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); } catch (e) { /* ignore */ }
+                }
+                // Mirror to localStorage so UI reflects change immediately
+                try {
+                  const mirrorKey = `user:${userId}:unlocks`;
+                  const raw = localStorage.getItem(mirrorKey);
+                  const obj = raw ? JSON.parse(raw) : {};
+                  obj[mediumKey] = payload;
+                  localStorage.setItem(mirrorKey, JSON.stringify(obj));
+                  // mark persisted in this session
+                  persistedUnlocks.add(mediumKey);
+                  try { if (DEBUG) console.info(`Persisted aggregated unlock (session mark added): ${mediumKey}`); } catch (e) {}
+                } catch (e) { /* ignore */ }
+                // Notify other pages
+                try { window.dispatchEvent(new CustomEvent('kemmei:unlockToggled', { detail: { key: mediumKey, payload } })); } catch (e) {}
+                }
+              } catch (e) { /* non-fatal */ }
+            }
+          }
+        }
+
+        // Hard unlock: require every subdomain to have a Medium test >= 90%
+        if (!hardUnlocked) {
+          const subMap2 = (subdomainMaps && subdomainMaps[cert] && subdomainMaps[cert][domainKey]) ? Object.keys(subdomainMaps[cert][domainKey]) : [];
+          const totalSubs2 = subMap2.length;
+          if (totalSubs2 > 0) {
+            let allPassed2 = true;
+            for (const subId of subMap2) {
+              let thisSubPassed2 = false;
+              for (const [k, v] of Object.entries(testCompletions || {})) {
+                try {
+                  const parts = String(k || '').split(':').map(p => p.trim());
+                  if (parts.length < 4) continue;
+                  const [kCert, kDomainRaw, kSub, kDiff] = parts;
+                  if (kCert !== cert) continue;
+                  const kDomain = (kDomainRaw || '').split(' ')[0];
+                  if (kDomain !== domainKey) continue;
+                  if (kSub !== subId) continue;
+                  if ((kDiff || '').toLowerCase() !== 'medium') continue;
+                  const score = (v && typeof v.score === 'number') ? Number(v.score) : (v && v.data && typeof v.data.score === 'number' ? Number(v.data.score) : null);
+                  if (score !== null && score >= 90) { thisSubPassed2 = true; break; }
+                } catch (e) { /* ignore parse errors */ }
+              }
+              if (!thisSubPassed2) { allPassed2 = false; break; }
+            }
+            if (allPassed2) hardUnlocked = true;
+              if (allPassed2) {
+                // Persist hard unlock similarly
+                try {
+                  const certKeySafe = cert.replace(/\./g, '_');
+                  const domainKeySafe = domainKey.replace(/\./g, '_');
+                  const hardKey = `${certKeySafe}:${domainKeySafe}:hard`;
+                  const payload = { unlocked: true, source: 'aggregated-subdomain', when: new Date().toISOString() };
+                  if (persistedUnlocks.has(hardKey)) {
+                    try { if (DEBUG) console.info(`Skipping persist unlock (already persisted this session): ${hardKey}`); } catch (e) {}
+                  } else {
+                    try { if (DEBUG) console.info(`Persisting aggregated unlock: ${hardKey}`); } catch (e) {}
+                    if (window.api && typeof window.api.saveUserUnlock === 'function') {
+                      try { await window.api.saveUserUnlock(userId, hardKey, payload); } catch (e) { /* ignore */ }
+                    }
+                    if (window.api && typeof window.api.rpc === 'function') {
+                      try { await window.api.rpc(`user-unlocks/${userId}/${encodeURIComponent(hardKey)}`, 'POST', payload); } catch (e) { /* ignore */ }
+                    }
+                    if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+                      try { await fetch(`/api/user-unlocks/${userId}/${encodeURIComponent(hardKey)}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) }); } catch (e) { /* ignore */ }
+                    }
+                    try {
+                      const mirrorKey = `user:${userId}:unlocks`;
+                      const raw = localStorage.getItem(mirrorKey);
+                      const obj = raw ? JSON.parse(raw) : {};
+                      obj[hardKey] = payload;
+                      localStorage.setItem(mirrorKey, JSON.stringify(obj));
+                      persistedUnlocks.add(hardKey);
+                      try { if (DEBUG) console.info(`Persisted aggregated unlock (session mark added): ${hardKey}`); } catch (e) {}
+                    } catch (e) { /* ignore */ }
+                    try { window.dispatchEvent(new CustomEvent('kemmei:unlockToggled', { detail: { key: hardKey, payload } })); } catch (e) {}
+                  }
+                } catch (e) { /* non-fatal */ }
+              }
+          }
+        }
+      } catch (e) {
+        // defensive: if aggregation code fails, fall back to explicit domain-level flags
+      }
     } else {
       // Casual mode: use the new unlock preference system
       const certKey = cert.replace(/\./g, '_');
@@ -1332,6 +1521,7 @@ async function fetchCards(unlockedDifficulties = null) {
 
 document.getElementById("deck-select").addEventListener("change", () => {
   const deckSel = document.getElementById('deck-select');
+  try { console.info('deck-select change', { userId: localStorage.getItem('userId'), value: deckSel.value }); } catch (e) {}
   let certLabel = deckSel.value;
   let certId = certLabel;
 
@@ -1498,6 +1688,12 @@ document.getElementById("domain-select").addEventListener("change", () => {
     try {
       // Use pre-fetched data if available, otherwise fetch it
       const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
+      // Debug: show context for restore decisions
+      try {
+        const storageKey = `user:${localStorage.getItem('userId')}:lastDifficulty`;
+        const savedDiffRaw = (localStorage.getItem(storageKey) || localStorage.getItem('lastDifficulty') || null);
+        console.info('updateDifficultyDropdown', { userId: localStorage.getItem('userId'), savedDiff: savedDiffRaw, unlocked });
+      } catch (e) { console.info('updateDifficultyDropdown: unable to read savedDiff', e && e.message); }
       
       const currentDifficulty = difficultySelect.value; // Store current selection before clearing
       difficultySelect.innerHTML = ""; // Clear existing options
@@ -1534,6 +1730,42 @@ document.getElementById("domain-select").addEventListener("change", () => {
         difficultySelect.appendChild(allOption);
       }
 
+      // Fallback: if a saved difficulty exists but was marked disabled by the
+      // computed unlocks, check the localStorage mirror for a persisted
+      // domain-level unlock and enable it if present. This handles timing
+      // windows where the backend unlocks are mirrored locally but the
+      // computed 'unlocked' array didn't include them yet.
+      try {
+        const storageKey = `user:${userId}:lastDifficulty`;
+        const savedDiffRaw = localStorage.getItem(storageKey) || localStorage.getItem('lastDifficulty') || null;
+        if (savedDiffRaw) {
+          const savedDiff = (savedDiffRaw || '').toString().trim();
+          const savedLower = savedDiff.toLowerCase();
+          if ((savedLower === 'medium' || savedLower === 'hard')) {
+            // If the option exists but is disabled, check local mirror for domain unlock key
+            const opt = Array.from(difficultySelect.options).find(o => (o.value || '').toString().toLowerCase() === savedLower);
+            if (opt && opt.disabled) {
+              try {
+                const mirrorRaw = localStorage.getItem(`user:${userId}:unlocks`);
+                const mirrorObj = mirrorRaw ? JSON.parse(mirrorRaw) : {};
+                const cert = document.getElementById('deck-select').value.trim();
+                const domainVal = document.getElementById('domain-select').value.trim();
+                const domainKey = domainVal && domainVal !== 'All' ? domainVal.split(' ')[0] : 'all';
+                const certKeySafe = (cert || '').replace(/\./g, '_');
+                const domainKeySafe = (domainKey || '').replace(/\./g, '_');
+                const unlockKey = `${certKeySafe}:${domainKeySafe}:${savedLower}`;
+                if (mirrorObj && Object.prototype.hasOwnProperty.call(mirrorObj, unlockKey)) {
+                  // enable the option and update its label
+                  opt.disabled = false;
+                  opt.textContent = savedDiff;
+                  // Also update mediumUnlocked/hardUnlocked local flags for later logic
+                }
+              } catch (e) { /* ignore JSON parse errors */ }
+            }
+          }
+        }
+      } catch (e) {}
+
       // Restore previous selection with this priority:
       // 1) per-user saved lastDifficulty (preferred),
       // 2) current in-DOM selection if still valid,
@@ -1543,22 +1775,37 @@ document.getElementById("domain-select").addEventListener("change", () => {
         const storageKey = `user:${userId}:lastDifficulty`;
         const savedDiff = localStorage.getItem(storageKey) || localStorage.getItem('lastDifficulty') || null;
         if (savedDiff) {
-          const savedOpt = Array.from(difficultySelect.options).some(opt => opt.value === savedDiff && !opt.disabled);
-          if (savedOpt) {
-            difficultySelect.value = savedDiff;
+          // Match case-insensitively to handle legacy saved values like 'medium'
+          // Prefer an exact case-insensitive match even if the option is currently disabled
+          const match = Array.from(difficultySelect.options).find(opt => (opt.value || '').toString().toLowerCase() === (savedDiff || '').toString().toLowerCase());
+          if (match) {
+            // Use the actual option value to restore (preserves capitalization)
+            difficultySelect.value = match.value;
             restored = true;
+            if (!match.disabled) {
+              // Only persist when the restored option is enabled
+              try { saveLastSelection(); } catch (e) {}
+              console.info('updateDifficultyDropdown: restored from savedDiff and persisted', { savedDiff, restoredValue: match.value });
+            } else {
+              console.info('updateDifficultyDropdown: restored from savedDiff but option currently disabled (will not persist)', { savedDiff, restoredValue: match.value });
+            }
+          } else {
+            console.info('updateDifficultyDropdown: savedDiff exists but no matching option found', { savedDiff });
           }
         }
-      } catch (e) { /* ignore storage errors */ }
+      } catch (e) { console.info('updateDifficultyDropdown: error reading savedDiff', e && e.message); }
 
       if (!restored && currentDifficulty) {
         // Do not honor a transient 'All' selection as the default after unlocks
         // unless it was the user's explicitly saved preference (handled above).
         if (currentDifficulty !== 'All') {
-          const optionExists = Array.from(difficultySelect.options).some(opt => opt.value === currentDifficulty && !opt.disabled);
-          if (optionExists) {
-            difficultySelect.value = currentDifficulty;
+          const match = Array.from(difficultySelect.options).find(opt => (opt.value || '').toString().toLowerCase() === (currentDifficulty || '').toString().toLowerCase() && !opt.disabled);
+          if (match) {
+            difficultySelect.value = match.value;
             restored = true;
+            console.info('updateDifficultyDropdown: restored from current DOM selection', { currentDifficulty, restoredValue: match.value });
+          } else {
+            console.info('updateDifficultyDropdown: currentDifficulty present but not a valid enabled option', { currentDifficulty });
           }
         }
       }
@@ -1566,7 +1813,22 @@ document.getElementById("domain-select").addEventListener("change", () => {
       if (!restored) {
         // Default to Easy unless a valid last selection was restored
         difficultySelect.value = "Easy";
+        console.info('updateDifficultyDropdown: defaulting to Easy');
       }
+
+      // Persist the restored selection so future visits use this value.
+      // Avoid persisting when we fell back to the default Easy during a
+      // transient rebuild (for example when toggling Mode) because that can
+      // overwrite the user's explicit saved choice. Only persist when we
+      // actually restored a non-default selection (restored === true).
+      try {
+        if (restored) {
+          saveLastSelection();
+          console.info('updateDifficultyDropdown: persisted restored selection');
+        } else {
+          console.info('updateDifficultyDropdown: no restored selection, skipping persist');
+        }
+      } catch (e) {}
       
     } catch (err) {
       console.error("❌ Failed to fetch user progress:", err);
@@ -1646,6 +1908,7 @@ document.getElementById("difficulty-select").addEventListener("change", () => {
     return;
   }
   
+  try { console.info('difficulty-select change', { userId: localStorage.getItem('userId'), value: document.getElementById('difficulty-select').value }); } catch (e) {}
   saveLastSelection();
   
   // Use the protected version to prevent overlapping calls
@@ -2114,6 +2377,7 @@ function shuffleAnswerOptions(arr) {
   return shuffled;
 }
  abortBtn.addEventListener("click", () => {
+  console.info('abortBtn clicked', { userId: localStorage.getItem('userId') });
   // 🆕 Hide button immediately, then redirect
   abortBtn.classList.add("hidden");
   
@@ -2133,6 +2397,7 @@ function shuffleAnswerOptions(arr) {
   
   // Small delay to ensure clean transition
   setTimeout(() => {
+    console.info('abortBtn redirect to flashcards.html');
     window.location.href = "flashcards.html";
   }, 50);
 });
@@ -2149,6 +2414,7 @@ exitBtn.addEventListener("click", () => {
     collapsedBar.setAttribute('aria-hidden', 'true');
   }
   if (headerBar) headerBar.classList.remove('collapsed');
+  try { console.info('exitBtn clicked -> navigating to flashcards.html', { userId: localStorage.getItem('userId') }); } catch (e) {}
   window.location.href = "flashcards.html";
 });
 
@@ -2302,7 +2568,7 @@ function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.
 
   // Attach hover tooltips to Mode and Difficulty selects (user-requested wording)
   attachSelectTooltip(document.getElementById('mode-select'), 'Run through selected filters freely at any time. Scores are not recorded.');
-  attachSelectTooltip(document.getElementById('difficulty-select'), 'Title/domain/subdomain testing with 90% passing requirement to unlock next difficulty.');
+  attachSelectTooltip(document.getElementById('difficulty-select'), 'Test mode: a domain-level Test (>=90%) unlocks the next difficulty for that domain. Subdomain tests are recorded but do not unlock the whole domain.');
 document.getElementById("mode-select").addEventListener("change", async (event) => {
   // Prevent event bubbling that might trigger other dropdowns
   event.stopPropagation();

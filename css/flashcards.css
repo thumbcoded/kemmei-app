@@ -61,6 +61,28 @@ body.flashcards-page {
   margin-bottom: 1rem; /* Reduced from 2rem */
 }
 
+/* Collapsed header bar shown during a session; keep it on top so Abort is clickable */
+.collapsed-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  background: #2b3942;
+  border-radius: 8px;
+}
+
+.collapsed-bar .collapsed-abort {
+  pointer-events: auto;
+}
+
+.collapsed-bar .btn.abort {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
 /* -------- Session Controls -------- */
 .session-controls {
   display: flex;
@@ -987,8 +1009,9 @@ body.dark-theme .explanation-content {
 /* Make the collapsed bar visually centered and overlay the header bottom */
 .collapsed-bar {
   width: 100%;
-  position: relative;
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  z-index: 2000; /* ensure collapsed header sits above flashcard area */
 }
 
 .collapsed-bar .collapsed-text {
@@ -1011,12 +1034,15 @@ body.dark-theme .explanation-content {
   left: auto !important;
   margin: 0.15rem 0 0.3rem 0;
   min-width: 80px;
+  pointer-events: auto; /* ensure button accepts clicks */
+  cursor: pointer; /* explicit pointer cursor */
 }
 
 /* when header is collapsed, reduce header real estate and ensure flashcard area uses remaining viewport height */
 .flashcards-header.collapsed {
   padding-bottom: 8px; /* remove large bottom padding */
   margin-bottom: 0.75rem;
+  z-index: 2000; /* keep header above content when collapsed */
 }
 
 /* Make flashcard box take remaining viewport height so internal scrolling is contained */

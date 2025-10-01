@@ -397,6 +397,7 @@ End of release notes and packaging recommendations.
 ## 2025-09-23 — Today’s edits
 
 - Finalized parent -> child propagation for force-unlocks in the Progress UI (`js/progress.js`): title-level and domain-level toggles now iterate child domain/subdomain buttons, persist each child unlock (IPC / RPC / network fallback), mirror to `localStorage`, and update child button UI optimistically.
+ 
 
 ## 2025-09-29 — Finish button freeze fix
 
@@ -454,69 +455,7 @@ Files primarily changed today for these tweaks:
 - `css/flashcards-loading.css` (new)
 - `js/flashcards.js`
 
-## 2025-09-29 — Card fetch determinism, main-side difficulty defaults, spinner & debug cleanup
 
-What I changed today
-
-- Main-side card listing: rewrote the `api:listCards` IPC handler in `electron/main.js` to:
-	- accept legacy and multiple param name variants (cert / cert_id, domain / domain_id, sub / subdomain / subdomain_id).
-	- recursively collect JSON files under `data/cards/<cert>[/<domain>[/<sub>]]` so Domain="All" and Subdomain="All" return aggregated results.
-	- detect card difficulty by inspecting common fields (card.difficulty, card.level, and metadata.*) and filter returned cards accordingly.
-	- when difficulty is omitted, default to `Easy` but expand allowed difficulties by consulting the current user's unlocks / test completions / progress (via `localApi.getUserUnlocks`, `getTestCompletions`, `getUserProgress`) so Medium/Hard are included when the user has unlocked them.
-
-- Renderer-side changes (`js/flashcards.js`):
-	- always include the selected/default difficulty when asking `listLocalCards` where possible.
-	- perform a final defensive filter on received card objects by difficulty (robust to multiple JSON field names), so the session contains only the intended difficulty set.
-	- added a loading/disabled UI state for the Start button while card counts are computed; Start shows a spinner (via `.loading-cards`) and stays disabled until counts are resolved.
-
-- Preload & logging cleanup:
-	- removed the verbose `console.debug` logs used during investigation from the renderer and the preload wrapper.
-	- reduced main-process logs to concise info lines for `api:listCards` (start folder + difficulty and final returned count) to keep the terminal usable while preserving minimal observability.
-
-Files changed (today)
-- electron/main.js — rewritten `api:listCards` (recursive collector + difficulty detection + user-unlocks expansion + concise logging)
-- electron/preload.js — removed verbose preload console logs
-- js/flashcards.js — always pass difficulty when available, final filtering, Start button loading state and spinner handling, removed debug logs
-- css/flashcards-loading.css — spinner CSS (already linked from `flashcards.html`)
-
-Why this was done
-
-- Determinism: previously the renderer sometimes probed and returned a raw (unfiltered) count then filtered locally, causing noisy raw->final counts and racey behavior. Main-side defaults and filtering ensure the IPC returns the correct deck size for the selection and the UI reflects the correct startability immediately.
-- UX: the Start button now clearly shows when the app is preparing the deck and prevents premature starts that would produce incorrect session sizes.
-- Performance and cleanliness: recursive collection avoids repeated renderer filesystem probes; debug noise is removed so console output is readable.
-
-How to verify (quick)
-
-1. Run the app (dev): `npm start` and open the Flashcards window.
-2. Open DevTools Console and the terminal running `npm start` (main process).
-3. Try selections: Title=220-1201, Domain=2.0, Subdomain=All, Difficulty=Easy; then Subdomain=2.7. Observe:
-	 - Renderer calls `listLocalCards` (no noisy debug lines).
-	 - Terminal shows an `api:listCards:` info line with the start folder and final returned count. The returned count should match the UI badge `Cards: N`.
-	 - The Start button shows a spinner while counts are being computed and is enabled only when `Cards: N` is > 0.
-
-Notes / follow-ups
-
-- If you prefer main to be silent, I can remove the concise `api:listCards` info log entirely — I kept it intentionally for low-noise observability.
-- If any card JSON uses an unusual field for difficulty, paste a representative `Q-...json` and I'll extend the detection heuristic.
-
-If any detail above is unclear or you'd like a small change (e.g., make main return only counts instead of full objects, or move filtering entirely to main or renderer), tell me which behavior you prefer and I'll implement it.
-
-Do I need to purge the remote repo?
-
-- No, not in this case: deleting these files and committing the deletions will remove them from the remote branch on push. A forced history rewrite (git filter-repo / BFG) is only necessary if you need to remove the files from the repository history (for example, they were large binaries or contained secrets and you need to shrink the repo). The files we archived and removed are small textual assets, so a normal commit+push is sufficient.
-
-If you want me to revert or restore any archived file back into the runtime before you commit, say which file(s) and I'll move them back (no git ops). Otherwise you're all set to commit and push when ready.
-- Ensured RPC and network POST branches also persist `medium` when `hard` is unlocked (behavior parity with the IPC helper path).
-- Kept optimistic UI semantics and `ensureSaved` verification; top-level toggles revert on persistence failure; child saves are best-effort and mirrored locally for fast cross-page reflection.
-- Continued to use the runtime mirror (`window._currentProgressUnlocks`) plus per-user localStorage mirror (`user:{userId}:unlocks`) so the Flashcards page immediately reflects recent force-unlocks; Flashcards already listens for `kemmei:unlockToggled` to invalidate cached unlocked difficulties.
-- Documented that stacked toasts, local mirror, and `kemmei:unlockToggled` event-based sync are in use; ran a smoke-start (`npm start`) locally to surface runtime issues.
-
-Notes / next steps
-
-- Recommended: run a quick in-app verification in your Electron dev environment:
-  - Toggle a title-level Medium/Hard and verify child buttons update and persist after restart.
-  - Confirm Flashcards updates available difficulties immediately after a toggle.
-- Optional follow-ups: aggregate child-save verification, batch saves for large title trees, or stronger error reporting for child persistence failures.
 
 (Logged and committed changes.)
 
@@ -535,3 +474,44 @@ These changes remove noisy probes, ensure Clear Progress truly resets backend an
 - Reduced several vertical paddings and tightened gaps on the flashcards page, and made the flashcard area scroll internally (via `max-height` + `overflow:auto`) so long answer lists or explanations do not force the outer window scrollbar (`css/flashcards.css`).
 - Increased the Electron default window size and minimums to give more vertical room (default 1280×900, min 1100×760) so common layouts fit without scrolling (`electron/main.js`).
 - Made the Progress page lighter on startup by caching per-cert card presence in `localStorage['kemmei:certPresence']`, probing only uncached certs, and clearing the cache on `kemmei:refreshData`; this mirrors the "work with what it has" behavior used on the flashcards page (`js/progress.js`).
+
+## 2025-10-01 — Today's edits
+
+- Instrumented `js/flashcards.js` with targeted runtime logging to trace the repro flow: selecting difficulty, saving last-selection, visibilitychange/unload when navigating away (Dashboard), and the subsequent `updateDifficultyDropdown` restore path when returning. The logs include explicit reason text (restored from saved / used current / defaulted) to make the sequence obvious in DevTools.
+- Hardened persistence logic:
+	- `saveLastSelection()` now validates the difficulty before writing (skips empty/disabled/transient values) so a programmatic dropdown rebuild can't accidentally overwrite a user's saved Medium with a transient Easy.
+	- `updateDifficultyDropdown()` will restore a saved difficulty even if the option is temporarily disabled (so the user's choice isn't lost), but it only persists that restored value when the option is enabled.
+	- Added guards around programmatic rebuilds (`isRebuildingDifficulty`) so change events from code updates don't trigger unintended saves.
+- Added visibility/unload handlers to try to persist the last selection when the page hides or unloads so navigation to Dashboard records the user's explicit choice reliably.
+- UI fix: CSS tweaks to `css/flashcards.css` to make the collapsed-header Abort button clickable (sticky position, higher z-index, pointer-events enabled) so users can reliably abort an active session.
+
+Additional notes from today's debugging session
+- Expanded runtime logging beyond difficulty events: added console.info traces on deck/domain/sub selections, mode changes, and the abort/goBack navigation paths so the exact user-navigation sequence is visible in DevTools.
+- Added a session mirror guard (`persistedUnlocks` / runtime mirror) and listeners:
+	- Flashcards now respects the renderer's unlock mirror and listens for `kemmei:unlockToggled` to invalidate cached unlocked difficulties and re-apply saved difficulty when appropriate.
+	- A `persistedUnlocks` Set guards duplicate persistence calls and reduces noisy mirror writes during bulk unlock updates.
+- Change-event protection: implemented `isRebuildingDifficulty` guards so programmatic dropdown rebuilds do not trigger saves.
+- Navigation-safe saves: `saveLastSelection()` is called on `visibilitychange` / `beforeunload` where possible to capture the user's explicit choice when navigating to Dashboard.
+- Minor renderer edits: `flashcards.html` goBack/navigation handlers now emit a small console.info trace to make the user flow obvious when reproducing the issue.
+- Validation: ran a Node syntax/parse check on the modified `js/flashcards.js` to ensure no syntax errors were introduced; no parse errors were observed.
+
+Progress page edits (today)
+- Reworked percent-indicator logic to use strict token-based matching (cert:domain:sub:difficulty) so parent-level percents are not incorrectly overwritten by child results; this prevents an Easy result from appearing on Medium/Hard indicators (see `js/progress.js`).
+- Progress view now listens for `kemmei:testSaved` (dispatched by flashcards on Test completion) and refreshes relevant parts of the tree so newly-saved completions appear without a full reload.
+- Cached per-cert card presence (`localStorage['kemmei:certPresence']`) reduces startup probes; the cache is updated lazily and cleared on `kemmei:refreshData` so the Progress page remains light and responsive.
+- Clear Progress end-to-end: wired DELETE handlers (`user-progress`, `user-unlocks`, `test-completions`) and added `clearUserUnlocks` / `clearUserTestCompletions` to DB backends so the UI's Clear flow truly resets both backend and local mirrors.
+- Minor UX: domain/title expand state now saves only the last-opened cert/domain per-user and restores by collapsing others first to avoid multiple leftover expansions.
+
+What I validated locally
+- The updated JS passes a Node syntax check and the new console traces appear in runs where DevTools is open. The defensive checks prevented several accidental overwrites in manual tests, and the Abort clickability issue is resolved by the CSS change.
+
+Remaining suspected race and next step
+- A small timing window can remain when the renderer rebuilds the difficulty dropdown before the mirrored/unlock data is available. If you still see the Medium -> Easy revert after these edits, I'll implement a lightweight startup sync: an idempotent read (GET `user-unlocks/{userId}`) before the first `updateDifficultyDropdown()` so the unlock mirror is primed and the dropdown can correctly honor saved difficulty. Alternatively I can add a short retry that re-applies the saved difficulty once unlocks arrive.
+
+If you can reproduce the issue, please run this exact sequence with DevTools Console open (clear console first) and paste the resulting console block here:
+1) Open Flashcards.
+2) Select Medium (observe "difficulty-select change" and "saveLastSelection").
+3) Click Dashboard (observe `visibilitychange: hidden` and `saveLastSelection`).
+4) Return to Flashcards and paste the console output covering the initial selection, the visibility/unload logs, and the `updateDifficultyDropdown` / restore logs shown when Flashcards reload.
+
+I can then either land the startup unlock-read fix or add a small retry based on what the traces show.

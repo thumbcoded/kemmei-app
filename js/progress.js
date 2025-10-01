@@ -937,7 +937,11 @@ window.addEventListener('kemmei:progressCleared', (ev) => {
 async function fetchCardPresenceForCerts(certIds, domainMapsLocal, subdomainMapsLocal) {
   const out = {};
   // First consult cache to avoid redundant probes
-  const cached = getCachedCertPresence();
+  let cached = {};
+  try {
+    const rawCache = localStorage.getItem('kemmei:certPresence');
+    cached = rawCache ? JSON.parse(rawCache) : {};
+  } catch (e) { cached = {}; }
   const toProbe = [];
   for (const cid of certIds) {
     if (Object.prototype.hasOwnProperty.call(cached, cid)) {
@@ -1003,14 +1007,35 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
   const domainMaps = (domainMap && domainMap.domainMaps) ? domainMap.domainMaps : {};
   const subdomainMaps = (domainMap && domainMap.subdomainMaps) ? domainMap.subdomainMaps : {};
 
-  // Determine which certs actually have cards available so we can grey out
-  // titles that have no content. This uses the same API paths as flashcards
-  // to remain consistent across modes (IPC/rpc/fetch/file).
+  // Prefer cached cert presence so we only probe on first run. If cached data
+  // isn't available, fetch presence once and persist it.
   const certIds = Object.keys(certNames || {});
   let certHasCards = {};
   try {
-    certHasCards = await fetchCardPresenceForCerts(certIds, domainMaps, subdomainMaps);
+    const raw = localStorage.getItem('kemmei:certPresence');
+    certHasCards = raw ? JSON.parse(raw) : {};
   } catch (e) { certHasCards = {}; }
+  try {
+    // If cache is empty, probe once and persist
+    if (!certHasCards || Object.keys(certHasCards).length === 0) {
+      certHasCards = await fetchCardPresenceForCerts(certIds, domainMaps, subdomainMaps);
+      try { setCachedCertPresence(certHasCards); } catch (e) { /* ignore */ }
+    }
+  } catch (e) {
+    certHasCards = certHasCards || {};
+  }
+
+  // When the user triggers 'Check for updates' via menu, clear the cached
+  // presence and re-run the probe so updated app data will be reflected.
+  window.addEventListener('kemmei:menuCheckForUpdates', async () => {
+    try {
+      localStorage.removeItem('kemmei:certPresence');
+      const fresh = await fetchCardPresenceForCerts(certIds, domainMaps, subdomainMaps);
+      setCachedCertPresence(fresh);
+      // re-render using updated cache
+      try { await renderProgressTree(userProgress, domainMap, unlocks, testCompletions, domainErrMsg); } catch (e) {}
+    } catch (e) { /* ignore */ }
+  });
 
   // If domainMap is effectively empty, show a small hint rather than throwing
   if (Object.keys(certNames).length === 0) {
@@ -1185,15 +1210,57 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
 
     const titleHeader = document.createElement("div");
     titleHeader.className = "title-header";
-    
+
   const titleText = document.createElement("h3");
     // Add percentage indicators for cert level (all domains)
     const certIndicators = getPercentIndicators(certId);
-    titleText.innerHTML = `📘 ${certId}: ${certNames[certId]} <span class='percent-indicators'>${certIndicators}</span>`;
-    // If we detected no cards for this cert, mark it so CSS can grey it out
-    if (certHasCards && certHasCards[certId] === false) {
-      titleText.classList.add('no-cards');
-    }
+
+    // Compute domain-level completion count: a domain is considered complete
+    // when all of its subdomains have Easy >=90% OR the domain-level Test >=90%.
+    const domainsForCert = domainMaps[certId] || {};
+    const domainIds = Object.keys(domainsForCert || {});
+    let completedDomains = 0;
+    try {
+      for (const dId of domainIds) {
+        // Check domain-level Test first
+        const domPercentHtml = getPercentIndicators(certId, dId) || '';
+        const domMatch = String(domPercentHtml).match(/(\d{1,3})%/);
+        const domScore = domMatch ? Number(domMatch[1]) : null;
+        if (domScore !== null && !isNaN(domScore) && domScore >= 90) { completedDomains++; continue; }
+
+        // Otherwise check all subdomains
+        const subMapLocal = subdomainMaps[certId]?.[dId] || {};
+        const sIds = Object.keys(subMapLocal || {});
+        if (sIds.length === 0) continue;
+        let allSubsPassed = true;
+        for (const sId of sIds) {
+          try {
+            const indHtml = getPercentIndicators(certId, `${dId}:${sId}`) || '';
+            const m = String(indHtml).match(/(\d{1,3})%/);
+            const score = m ? Number(m[1]) : 0;
+            if (isNaN(score) || score < 90) { allSubsPassed = false; break; }
+          } catch (e) { allSubsPassed = false; break; }
+        }
+        if (allSubsPassed) completedDomains++;
+      }
+    } catch (e) { /* ignore */ }
+
+    const certSubsText = domainIds.length > 0 ? `(${completedDomains}/${domainIds.length})` : '';
+
+    titleText.innerHTML = `📘 ${certId}: ${certNames[certId]} <span class='submastery-count'>${certSubsText}</span> <span class='percent-indicators'>${certIndicators}</span>`;
+    // If we detected no cards for this cert (or probe returned nothing), mark it so CSS can grey it out.
+    // Apply the class to both the header and the title so visual styling and unlock-buttons are affected.
+    try {
+      // Default to active (no .no-cards). Only apply .no-cards when the presence
+      // probe explicitly reported false for this cert.
+      if (certHasCards && Object.prototype.hasOwnProperty.call(certHasCards, certId) && certHasCards[certId] === false) {
+        titleText.classList.add('no-cards');
+        titleHeader.classList.add('no-cards');
+      } else {
+        titleText.classList.remove('no-cards');
+        titleHeader.classList.remove('no-cards');
+      }
+    } catch (e) { /* ignore */ }
     titleText.style.cursor = "pointer";
     
     const titleUnlocks = document.createElement("div");
@@ -1261,7 +1328,27 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
   const domainText = document.createElement("h4");
       // Add percentage indicators for domain level
       const domainIndicators = getPercentIndicators(certId, domainId);
-      domainText.innerHTML = `📂 ${domainId} ${domainTitle} <span class='percent-indicators'>${domainIndicators}</span>`;
+      // Compute subdomain mastery count: subs with Easy test >= 90%
+      const subMapForCount = subdomainMaps[certId]?.[domainId] || {};
+      const subIds = Object.keys(subMapForCount || {});
+      let completedSubs = 0;
+      try {
+        for (const sId of subIds) {
+          try {
+            // Reuse getPercentIndicators to compute the subdomain easy percent and
+            // parse the first numeric percentage we find in the returned HTML.
+            const indHtml = getPercentIndicators(certId, `${domainId}:${sId}`) || '';
+            const m = String(indHtml).match(/(\d{1,3})%/);
+            const score = m ? Number(m[1]) : 0;
+            if (!isNaN(score) && score >= 90) completedSubs++;
+          } catch (e) {
+            // ignore per-sub errors and continue
+          }
+        }
+      } catch (e) { /* ignore count errors */ }
+
+      const subsText = subIds.length > 0 ? `(${completedSubs}/${subIds.length})` : '';
+      domainText.innerHTML = `📂 ${domainId} ${domainTitle} <span class='submastery-count'>${subsText}</span> <span class='percent-indicators'>${domainIndicators}</span>`;
       // If cert has no cards at all, mark domain as no-cards. Otherwise we could
       // optionally probe domain-level presence in future iterations.
       if (certHasCards && certHasCards[certId] === false) {
@@ -1356,7 +1443,7 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
     setTimeout(() => {
       const certPercentSpans = titleText.querySelectorAll('.percent-indicator.easy, .percent-indicator.medium');
       certPercentSpans.forEach(span => {
-        span.dataset.tooltip = 'Completing decks in Test mode will unlock next level for this section';
+        span.dataset.tooltip = 'Test-mode domain-level completions (>=90%) unlock the next difficulty for that domain; subdomain scores are recorded but do not automatically unlock the whole domain.';
         span.classList.add('has-tooltip');
       });
     }, 0);
@@ -1366,8 +1453,8 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
   setTimeout(() => {
     const domainPercentSpans = document.querySelectorAll('.domain-header .percent-indicator.easy, .domain-header .percent-indicator.medium');
     domainPercentSpans.forEach(span => {
-    span.dataset.tooltip = 'Completing decks in Test mode will unlock next level for this section';
-    span.classList.add('has-tooltip');
+      span.dataset.tooltip = 'Run subdomain Tests: (x/total) shows how many subdomains you have >=90% on; run a domain-level Test in Test mode to record a domain percent result.';
+      span.classList.add('has-tooltip');
     });
   }, 0);
 

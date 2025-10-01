@@ -167,6 +167,7 @@
   <!-- Dashboard redirect -->
   <script>
     function goBack() {
+      try { console.info('goBack -> navigating to dashboard', { userId: localStorage.getItem('userId') }); } catch (e) {}
       window.location.href = "dashboard.html";
     }
   </script>
