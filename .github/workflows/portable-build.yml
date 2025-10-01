@@ -2,8 +2,6 @@ name: Portable builds
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ desktop-offline ]
 
 jobs:
   build-windows:
