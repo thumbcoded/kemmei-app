@@ -11,14 +11,8 @@
 </head>
 <body class="flashcards-page">
 
-  <!-- Floating Dark Mode Toggle (top-right corner) -->
-  <div class="floating-dark-toggle">
-    <label class="dark-mode-toggle">
-      <input type="checkbox" id="darkModeToggle" />
-      <span class="toggle-slider"></span>
-      <span class="toggle-label">🌙</span>
-    </label>
-  </div>
+  <!-- Floating dark-mode toggle intentionally removed from this page;
+       theme is controlled on landing/dashboard and inherited here. -->
 
   <div class="flashcards-layout">
 
@@ -171,6 +165,9 @@
       window.location.href = "dashboard.html";
     }
   </script>
+
+  <!-- Apply shared UI behaviors (dark-mode toggle, user sync) -->
+  <script src="js/shared-ui.js"></script>
 
 </body>
 </html>

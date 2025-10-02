@@ -397,7 +397,6 @@ End of release notes and packaging recommendations.
 ## 2025-09-23 — Today’s edits
 
 - Finalized parent -> child propagation for force-unlocks in the Progress UI (`js/progress.js`): title-level and domain-level toggles now iterate child domain/subdomain buttons, persist each child unlock (IPC / RPC / network fallback), mirror to `localStorage`, and update child button UI optimistically.
- 
 
 ## 2025-09-29 — Finish button freeze fix
 
@@ -508,10 +507,37 @@ What I validated locally
 Remaining suspected race and next step
 - A small timing window can remain when the renderer rebuilds the difficulty dropdown before the mirrored/unlock data is available. If you still see the Medium -> Easy revert after these edits, I'll implement a lightweight startup sync: an idempotent read (GET `user-unlocks/{userId}`) before the first `updateDifficultyDropdown()` so the unlock mirror is primed and the dropdown can correctly honor saved difficulty. Alternatively I can add a short retry that re-applies the saved difficulty once unlocks arrive.
 
-If you can reproduce the issue, please run this exact sequence with DevTools Console open (clear console first) and paste the resulting console block here:
-1) Open Flashcards.
-2) Select Medium (observe "difficulty-select change" and "saveLastSelection").
-3) Click Dashboard (observe `visibilitychange: hidden` and `saveLastSelection`).
-4) Return to Flashcards and paste the console output covering the initial selection, the visibility/unload logs, and the `updateDifficultyDropdown` / restore logs shown when Flashcards reload.
+## 2025-10-02 — Today's edits (brief)
 
-I can then either land the startup unlock-read fix or add a small retry based on what the traces show.
+- Fixed several Flashcards UX regressions related to Mode/Difficulty persistence and counts:
+	- Reordered fetch flow so the difficulty dropdown is rebuilt from the current unlocks before we fetch cards. This prevents stale 'All' counts and ensures the card counter matches the selected difficulty.
+	- Improved `getUnlockedDifficulties()` and mirror handling so manual/cert-level unlocks are honored but do not leak across unrelated certs/domains.
+	- When domain changes, the UI now forces the difficulty to a valid unlocked level (prefer Medium → Hard → Easy) before fetching cards so the app never offers a start for a truly-locked difficulty.
+	- Added a visibility refresh so returning from Dashboard forces a recompute of unlocks/dropdowns and refetches cards to avoid stale state.
+
+- Cleaned up tooltip and interaction issues that could block selectors: floating tooltips were made non-interactive and double-wrapping guards were added so overlays no longer intercept clicks.
+
+- Silenced and removed leftover debug logging around Mode/Difficulty persistence; kept only useful warnings/errors.
+
+- Tightened local mirror unlock merging: mirror entries are now applied only when their cert/domain match the current selection (prevents unrelated unlocks from enabling levels elsewhere).
+
+- Misc: added guards for programmatic dropdown rebuilds (`isRebuildingDifficulty`), improved navigation-safe saves (`visibilitychange` / `beforeunload`), and ensured no syntax errors were introduced during edits.
+
+These edits aim to make Mode/Difficulty selection stable, immediate, and consistent with the user's explicit unlocks and last-saved preferences. If you want I can (a) add a lightweight startup-sync to prime the unlock mirror before the first dropdown rebuild, or (b) run an end-to-end repro in Electron and capture logs/screenshots.
+
+Removed dark mode toggle from progress and flashcards pages.
+
+UI scoping verification note
+
+I inspected and adjusted the UI wiring to meet the requested scoping rules:
+
+- Theme control: `js/shared-ui.js` centralizes theme application by reading `localStorage.darkMode` and toggling `document.body.classList`. Only pages with the floating toggle markup (`index.html`, `dashboard.html`) render the toggle control; other pages inherit the saved theme via `shared-ui.js`.
+- Flashcards decorations: floating kanji words are now created only on pages whose body contains `index-page` or `dashboard-page` (guard added in `js/shared-ui.js`), preventing decorative elements and accidental scrollbars on Flashcards/Progress pages.
+- Page includes:
+	- `index.html` — includes `js/shared-ui.js` and the floating dark-mode toggle (source of truth for theme)
+	- `dashboard.html` — includes `js/shared-ui.js` and the floating dark-mode toggle (source of truth for theme)
+	- `progress.html` — includes `js/shared-ui.js` but does NOT include toggle markup (inherits theme)
+	- `flashcards.html` — includes `js/shared-ui.js` but does NOT include toggle markup (inherits theme) and does NOT receive floating decorations
+
+Status: verified. The shared UI script contains only the needed wiring: it syncs current user id into localStorage when available, applies theme on load, wires the toggle only when present, and scopes decorations to index/dashboard only.
+ 

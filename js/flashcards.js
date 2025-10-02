@@ -3,21 +3,73 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('kemmei:unlockToggled', (ev) => {
     try {
       // Invalidate any cached unlocked difficulties
-      if (typeof computedUnlocked !== 'undefined') computedUnlocked = null;
+      try { if (typeof computedUnlocked !== 'undefined') computedUnlocked = null; } catch (e) {}
     } catch (e) {}
     // Optionally update difficulty select so user sees new options immediately
     try {
       const difficultySelect = document.getElementById('difficulty-select');
       if (difficultySelect) {
         // Recompute unlocked difficulties and adjust selection options
-        getUnlockedDifficulties().then(diffs => {
-          // If current selected difficulty is no longer allowed, set to first allowed
-          const current = difficultySelect.value;
-          if (!diffs.includes(current)) {
-            difficultySelect.value = diffs[0] || 'easy';
-            difficultySelect.dispatchEvent(new Event('change'));
-          }
+  getUnlockedDifficulties().then(async (diffs) => {
+          try {
+            // Normalize both sets for case-insensitive comparison
+            const allowed = (diffs || []).map(d => (d || '').toString().toLowerCase());
+            const current = (difficultySelect.value || '').toString().toLowerCase();
+
+            // If mirror says an unlock exists, ensure it's included in allowed
+            try {
+              const userId = localStorage.getItem('userId');
+              if (userId) {
+                const mirrorRaw = localStorage.getItem(`user:${userId}:unlocks`);
+                if (mirrorRaw) {
+                  const mirrorObj = JSON.parse(mirrorRaw || '{}');
+                  // Determine current cert and domain for relevance checks
+                  const certVal = (document.getElementById('deck-select')?.value || '').toString().trim();
+                  const domainValFull = (document.getElementById('domain-select')?.value || '').toString().trim();
+                  const domainKeyCurrent = domainValFull === 'All' ? 'all' : (domainValFull || '').split(' ')[0];
+                  const certKeySafe = (certVal || '').replace(/\./g, '_');
+                  for (const k of Object.keys(mirrorObj || {})) {
+                    if (!k || typeof k !== 'string') continue;
+                    const parts = k.split(':');
+                    const diffKey = parts[parts.length - 1];
+                    if (!diffKey) continue;
+                    const low = diffKey.toString().toLowerCase();
+                    if (low !== 'medium' && low !== 'hard') continue;
+
+                    // If the mirror key is domain-specific (3 parts), include only if cert+domain match
+                    if (parts.length === 3) {
+                      const mirrorCert = parts[0];
+                      const mirrorDomain = parts[1];
+                      if (mirrorCert === certKeySafe && mirrorDomain === (domainKeyCurrent || 'all')) {
+                        if (!allowed.includes(low)) allowed.push(low);
+                      }
+                    } else if (parts.length === 2) {
+                      // Cert-level unlock (e.g., cert:medium) - include when cert matches
+                      const mirrorCert = parts[0];
+                      if (mirrorCert === certKeySafe) {
+                        if (!allowed.includes(low)) allowed.push(low);
+                      }
+                    }
+                  }
+                }
+              }
+            } catch (e) { /* ignore mirror parse errors */ }
+
+            if (!allowed.includes(current)) {
+              const desired = allowed[0] || 'easy';
+              // Find the actual option value that matches case-insensitively
+              const opt = Array.from(difficultySelect.options).find(o => (o.value || '').toString().toLowerCase() === desired);
+              if (opt) {
+                difficultySelect.value = opt.value;
+              } else {
+                difficultySelect.value = desired;
+              }
+              difficultySelect.dispatchEvent(new Event('change'));
+            }
+          } catch (e) { /* silent */ }
         }).catch(() => {});
+        // Force a refresh so counts and difficulty options reflect the new unlock
+        try { fetchCardsAndUpdateCount(); } catch (e) {}
       }
 
       // Network fallback if necessary
@@ -104,63 +156,9 @@ function unlockValue(unlocks, key) {
 }
 
 // Hide floating toggle when it would overlap header controls.
-function setupToggleOverlapWatcher() {
-  const toggle = document.querySelector('.floating-dark-toggle');
-  const header = document.querySelector('.flashcards-header');
-  if (!toggle || !header) return;
-
-  function checkOverlap() {
-    const t = toggle.getBoundingClientRect();
-    const h = header.getBoundingClientRect();
-
-    // Hide only when the header's right edge is within the toggle width + buffer
-    // of the viewport right edge. This prevents accidental hiding at wide sizes.
-    const toggleWidth = Math.max(t.width || 56, 56);
-    const buffer = 12; // pixels of breathing room
-    const shouldHide = (h.right > (window.innerWidth - (toggleWidth + buffer)));
-
-    // Animate fade then remove from layout (display:none) to guarantee no
-    // residual reserved space can cause horizontal scrollbars.
-    if (shouldHide) {
-      if (!toggle.classList.contains('hidden-by-overlap')) {
-        // start fade
-        toggle.classList.add('hidden-by-overlap');
-
-        // after transition, remove from layout to avoid any subtle reserved space
-        const cleanup = () => {
-          try { toggle.style.display = 'none'; } catch (e) {}
-          toggle.removeEventListener('transitionend', cleanup);
-        };
-        toggle.addEventListener('transitionend', cleanup);
-
-        // fallback in case transitionend doesn't fire
-        setTimeout(() => { if (toggle.style.display !== 'none') toggle.style.display = 'none'; }, 350);
-      }
-    } else {
-      // ensure it's part of layout before removing the hidden class so the
-      // reveal transition runs. If it was display:none, reset it first.
-      if (toggle.style.display === 'none') {
-        toggle.style.display = '';
-        // force a reflow so the transition will run when we remove the class
-        // (read a layout property)
-        // eslint-disable-next-line no-unused-expressions
-        toggle.offsetWidth;
-      }
-      toggle.classList.remove('hidden-by-overlap');
-    }
-  }
-
-  // Run on resize and on DOM mutations that may change layout
-  window.addEventListener('resize', checkOverlap);
-  const ro = new MutationObserver(checkOverlap);
-  ro.observe(header, { attributes: true, childList: true, subtree: true });
-
-  // initial check
-  setTimeout(checkOverlap, 120);
-}
-
-// initialize overlap watcher now that we're inside the main DOMContentLoaded handler
-setTimeout(setupToggleOverlapWatcher, 300);
+// Floating dark-mode toggle handled only on landing/dashboard pages; removed
+// per-page overlap watcher from flashcards so the toggle's presence and
+// visibility is not manipulated here.
 
 // Cache helpers: store and retrieve domainmap and cert presence info in localStorage
 function getCachedDomainMap() {
@@ -501,6 +499,10 @@ document.getElementById('deck-select').addEventListener('change', () => {
     }
   } catch (e) { /* ignore */ }
 
+  // Ensure a synchronous localStorage copy exists so unload/visibility handlers
+  // can save per-user selections without needing to await preload helpers.
+  try { if (currentUserId) localStorage.setItem('userId', currentUserId); } catch (e) {}
+
   // Diagnostic logging: temporary - helps trace why stale last* values are used
   // debug logs removed
 
@@ -521,17 +523,19 @@ document.getElementById('deck-select').addEventListener('change', () => {
       if (!progress || Object.keys(progress).length === 0) {
         try {
           // Remove legacy global keys which may have leaked between installs
+          // NOTE: do NOT remove `lastMode` here — keep the renderer-local
+          // mode preference intact so Flashcards will restore the mode
+          // selected on the Dashboard/index pages.
           localStorage.removeItem('lastDeck');
           localStorage.removeItem('lastDomain');
           localStorage.removeItem('lastSub');
           localStorage.removeItem('lastDifficulty');
-          localStorage.removeItem('lastMode');
-          // Also remove any per-user keys for this user to ensure a fresh start
+          // Also remove per-user last* keys EXCEPT lastMode so we don't wipe
+          // a locally-selected mode when a fresh-start is requested.
           localStorage.removeItem(`user:${currentUserId}:lastDeck`);
           localStorage.removeItem(`user:${currentUserId}:lastDomain`);
           localStorage.removeItem(`user:${currentUserId}:lastSub`);
           localStorage.removeItem(`user:${currentUserId}:lastDifficulty`);
-          localStorage.removeItem(`user:${currentUserId}:lastMode`);
         } catch (e) {}
       } else {
         // user has progress; leave last* keys intact
@@ -589,13 +593,13 @@ document.getElementById('deck-select').addEventListener('change', () => {
       if (res && res.cleared) {
         // Clear saved users and selections in renderer storage
         try {
-          // remove global legacy keys
+          // remove global legacy keys (preserve lastMode so local preference
+          // survives and Flashcards can restore the mode selected on dashboard)
           localStorage.removeItem('userId')
           localStorage.removeItem('lastDeck')
           localStorage.removeItem('lastDomain')
           localStorage.removeItem('lastSub')
           localStorage.removeItem('lastDifficulty')
-          localStorage.removeItem('lastMode')
           // remove any per-user last* keys for the current user if available
           if (currentUserId) {
             localStorage.removeItem(`user:${currentUserId}:lastDeck`);
@@ -663,7 +667,9 @@ document.getElementById('deck-select').addEventListener('change', () => {
   const savedDomain = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastDomain`) || null) : null;
   const savedSub = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastSub`) || null) : null;
   const savedDifficulty = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastDifficulty`) || null) : null;
-  const savedMode = currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastMode`) || null) : null;
+  // Prefer a global (renderer-local) lastMode so mode selection is remembered
+  // across navigations without requiring per-user persistence.
+  const savedMode = (localStorage.getItem('lastMode') || (currentUserId ? (localStorage.getItem(`user:${currentUserId}:lastMode`) || null) : null) || null);
 
   // ✅ Populate deck dropdown without triggering events
   // Use the certNames exposed by loadDomainMap; if empty, show a friendly placeholder
@@ -875,9 +881,10 @@ function saveLastSelection() {
   // Save per-user when possible to avoid leaking selections across users.
   let userId = null;
   try { userId = localStorage.getItem('userId'); } catch (e) {}
-  if (!userId && window.userApi && typeof window.userApi.getCurrentUserId === 'function') {
-    try { userId = window.userApi.getCurrentUserId(); } catch (e) {}
-  }
+  // IMPORTANT: do not call async preload helpers here (e.g. window.userApi.getCurrentUserId)
+  // because this function may be invoked from synchronous unload/visibility handlers.
+  // Rely on the renderer-local copy in localStorage; if not present, fall back to
+  // legacy global keys to avoid writing per-user keys under a Promise value.
 
   const deckVal = document.getElementById("deck-select").value;
   const domainVal = document.getElementById("domain-select").value;
@@ -904,10 +911,14 @@ function saveLastSelection() {
       if (diffVal) {
         localStorage.setItem(`user:${userId}:lastDifficulty`, diffVal);
       } else {
-        try { console.info('saveLastSelection: skipping invalid/empty difficulty save', { userId, diffVal }); } catch (e) {}
+        try { /* debug: saveLastSelection skipped invalid/empty difficulty (removed) */ } catch (e) {}
       }
-      localStorage.setItem(`user:${userId}:lastMode`, modeVal);
-      try { console.info('saveLastSelection (per-user)', { userId, deckVal, domainVal, subVal, diffVal, modeVal }); } catch (e) {}
+  try { localStorage.setItem(`user:${userId}:lastMode`, modeVal); } catch (e) {}
+  // Also persist a global renderer-local lastMode so the selection is
+  // restored even when per-user keys are not present or when a simple
+  // machine-local preference is desired.
+  try { localStorage.setItem('lastMode', modeVal); } catch (e) {}
+  try { /* debug: saveLastSelection (per-user) removed */ } catch (e) {}
     } else {
       // Fallback for legacy behavior when no user is available
       localStorage.setItem("lastDeck", deckVal);
@@ -916,10 +927,10 @@ function saveLastSelection() {
       if (diffVal) {
         localStorage.setItem("lastDifficulty", diffVal);
       } else {
-        try { console.info('saveLastSelection (legacy): skipping invalid/empty difficulty save', { diffVal }); } catch (e) {}
+  try { /* debug: saveLastSelection (legacy) skipped invalid save (removed) */ } catch (e) {}
       }
-      localStorage.setItem("lastMode", modeVal);
-      try { console.info('saveLastSelection (legacy)', { deckVal, domainVal, subVal, diffVal, modeVal }); } catch (e) {}
+  try { localStorage.setItem("lastMode", modeVal); } catch (e) {}
+  try { /* debug: saveLastSelection (legacy) removed */ } catch (e) {}
     }
   } catch (e) {
     // Ignore storage errors
@@ -937,22 +948,22 @@ function restoreLastSelection() {
   const difficulty = (userId && localStorage.getItem(`user:${userId}:lastDifficulty`)) || localStorage.getItem("lastDifficulty") || (window._fc_initialDefaults && window._fc_initialDefaults.difficulty) || null;
 
   if (deck) document.getElementById("deck-select").value = deck;
-  try { console.info('restoreLastSelection initial', { userId, deck, domain, sub, difficulty }); } catch (e) {}
+  try { /* debug: restoreLastSelection initial (removed) */ } catch (e) {}
   document.getElementById("deck-select").dispatchEvent(new Event("change"));
 
   setTimeout(() => {
     if (domain) document.getElementById("domain-select").value = domain;
     document.getElementById("domain-select").dispatchEvent(new Event("change"));
-    try { console.info('restoreLastSelection after deck/domain dispatch', { domain }); } catch (e) {}
+  try { /* debug: restoreLastSelection after deck/domain dispatch (removed) */ } catch (e) {}
 
     setTimeout(() => {
       if (sub) document.getElementById("subdomain-select").value = sub;
       document.getElementById("subdomain-select").dispatchEvent(new Event("change"));
-      try { console.info('restoreLastSelection after sub dispatch', { sub }); } catch (e) {}
+  try { /* debug: restoreLastSelection after sub dispatch (removed) */ } catch (e) {}
 
       if (difficulty) document.getElementById("difficulty-select").value = difficulty;
       document.getElementById("difficulty-select").dispatchEvent(new Event("change"));
-      try { console.info('restoreLastSelection applied difficulty dispatch', { difficulty }); } catch (e) {}
+  try { /* debug: restoreLastSelection applied difficulty (removed) */ } catch (e) {}
     }, 150);
   }, 150);
 }
@@ -960,17 +971,30 @@ function restoreLastSelection() {
 // Log visibility/unload so we can trace navigation between Dashboard and Flashcards
 try {
   window.addEventListener('beforeunload', (ev) => {
-    try { console.info('flashcards beforeunload', { userId: localStorage.getItem('userId') }); } catch (e) {}
+    try { /* flashcards beforeunload log removed */ } catch (e) {}
     try { saveLastSelection(); } catch (e) {}
   });
 } catch (e) {}
 
 try {
   document.addEventListener('visibilitychange', () => {
-    try { console.info('flashcards visibilitychange', { visibilityState: document.visibilityState, userId: localStorage.getItem('userId') }); } catch (e) {}
+  try { /* flashcards visibilitychange log removed */ } catch (e) {}
     if (document.visibilityState === 'hidden') {
       try { saveLastSelection(); } catch (e) {}
     }
+  });
+} catch (e) {}
+
+// When the page becomes visible again (for example after returning from Dashboard),
+// force a full refresh so selectors, unlocks and card counts are recomputed.
+try {
+  document.addEventListener('visibilitychange', () => {
+    try {
+      if (document.visibilityState === 'visible') {
+        // Force a full refresh of cards and dropdowns
+        try { fetchCardsAndUpdateCount(); } catch (e) { /* silent */ }
+      }
+    } catch (e) {}
   });
 } catch (e) {}
 
@@ -1331,6 +1355,20 @@ async function getUnlockedDifficulties() {
           }
         }
       }
+      // Also honor any explicit unlocks present in the 'unlocks' mirror so
+      // that a difficulty manually unlocked in Casual mode remains available
+      // when the user switches to Test mode. This ensures the UI doesn't
+      // 'forget' unlocked levels when changing modes.
+      try {
+        const certKey = cert.replace(/\./g, '_');
+        const domainKeySafe = (domain === 'All' ? 'all' : (domain || '').split(' ')[0] || '').replace(/\./g, '_');
+        if (!mediumUnlocked) {
+          mediumUnlocked = unlockValue(unlocks, `${certKey}:${domainKeySafe}:medium`) || unlockValue(unlocks, `${certKey}:medium`) || mediumUnlocked;
+        }
+        if (!hardUnlocked) {
+          hardUnlocked = unlockValue(unlocks, `${certKey}:${domainKeySafe}:hard`) || unlockValue(unlocks, `${certKey}:hard`) || hardUnlocked;
+        }
+      } catch (e) { /* silent */ }
     }
     
     // Return array of unlocked difficulties
@@ -1616,8 +1654,63 @@ document.getElementById("domain-select").addEventListener("change", () => {
     });
   }
 
-  saveLastSelection();
-  fetchCardsAndUpdateCount();
+  // After changing domain, ensure the currently-selected difficulty is valid
+  // for the new domain. If not, pick the first allowed difficulty (prefer
+  // Medium then Hard then Easy) based on the user's unlocks and local mirror.
+  (async () => {
+    try {
+      const unlocked = await getUnlockedDifficulties();
+      const allowed = (unlocked || []).map(d => (d || '').toString().toLowerCase());
+      // Merge local mirror unlocks (if any) to avoid forgetting manual unlocks
+      try {
+        const userId = localStorage.getItem('userId');
+        if (userId) {
+          const mirrorRaw = localStorage.getItem(`user:${userId}:unlocks`);
+          if (mirrorRaw) {
+            const mirrorObj = JSON.parse(mirrorRaw || '{}');
+            const certKeySafe = (certId || '').replace(/\./g, '_');
+            const domainKeyCurrent = (domainSelect.value || 'All') === 'All' ? 'all' : (domainSelect.value || '').split(' ')[0];
+            for (const k of Object.keys(mirrorObj || {})) {
+              if (!k || typeof k !== 'string') continue;
+              const parts = k.split(':');
+              const diffKey = parts[parts.length - 1];
+              if (!diffKey) continue;
+              const low = diffKey.toString().toLowerCase();
+              if (low !== 'medium' && low !== 'hard') continue;
+
+              if (parts.length === 3) {
+                const mirrorCert = parts[0];
+                const mirrorDomain = parts[1];
+                if (mirrorCert === certKeySafe && mirrorDomain === domainKeyCurrent) {
+                  if (!allowed.includes(low)) allowed.push(low);
+                }
+              } else if (parts.length === 2) {
+                const mirrorCert = parts[0];
+                if (mirrorCert === certKeySafe) {
+                  if (!allowed.includes(low)) allowed.push(low);
+                }
+              }
+            }
+          }
+        }
+      } catch (e) { /* ignore mirror parse errors */ }
+
+      const diffEl = document.getElementById('difficulty-select');
+      const current = (diffEl && diffEl.value) ? diffEl.value.toString().toLowerCase() : '';
+      if (!allowed.includes(current)) {
+        // prefer Medium then Hard then Easy when available
+        let pick = 'easy';
+        if (allowed.includes('medium')) pick = 'Medium';
+        else if (allowed.includes('hard')) pick = 'Hard';
+        else pick = 'Easy';
+        // find actual option value matching case-insensitively
+        const opt = Array.from(diffEl.options).find(o => (o.value || '').toString().toLowerCase() === pick.toString().toLowerCase());
+        if (opt) diffEl.value = opt.value; else diffEl.value = pick;
+      }
+    } catch (e) { /* ignore */ }
+    try { saveLastSelection(); } catch (e) {}
+    try { await fetchCardsAndUpdateCount(); } catch (e) {}
+  })();
 });
 
 
@@ -1634,14 +1727,16 @@ document.getElementById("domain-select").addEventListener("change", () => {
     try {
       // Get unlocked difficulties once and pass to both functions
       const unlockedDifficulties = await getUnlockedDifficulties();
-      
+
+      // Rebuild difficulty dropdown first so the UI reflects the current unlocks
+      // and any local mirror unlocks before we fetch cards. This prevents a
+      // race where a stale dropdown or transient 'All' selection causes the
+      // fetch to return an incorrect card set/count.
+      await updateDifficultyDropdown(unlockedDifficulties);
+
+      // Now fetch cards with the up-to-date unlocked difficulties
       await fetchCards(unlockedDifficulties);
       updateCardCount();
-
-        // debug overlay update removed
-      
-      // Update difficulty dropdown based on unlock status, passing the already-fetched data
-      await updateDifficultyDropdown(unlockedDifficulties);
     } catch (err) {
       console.error("Error in fetchCardsAndUpdateCount:", err);
     } finally {
@@ -1652,15 +1747,14 @@ document.getElementById("domain-select").addEventListener("change", () => {
   }
 
   async function updateDifficultyDropdown(unlockedDifficulties = null) {
-    // Set flag to prevent difficulty change events during rebuild
+    // Prevent difficulty change handlers from reacting while we rebuild options
     isRebuildingDifficulty = true;
-    
-    // Fetch user progress and test completions to update difficulty dropdown
-    const userId = localStorage.getItem("userId");
+
     const difficultySelect = document.getElementById("difficulty-select");
-    
+    const userId = localStorage.getItem("userId");
+
+    // If there's no logged-in user, show Easy and locked Medium/Hard
     if (!userId) {
-      // Show Easy + locked Medium/Hard when no user is logged in so the UI matches expectations
       difficultySelect.innerHTML = "";
       const easyOption = document.createElement("option");
       easyOption.value = "Easy";
@@ -1680,49 +1774,38 @@ document.getElementById("domain-select").addEventListener("change", () => {
       difficultySelect.appendChild(hardOption);
 
       difficultySelect.value = "Easy";
-
       isRebuildingDifficulty = false;
       return;
     }
 
     try {
-      // Use pre-fetched data if available, otherwise fetch it
       const unlocked = unlockedDifficulties || await getUnlockedDifficulties();
-      // Debug: show context for restore decisions
-      try {
-        const storageKey = `user:${localStorage.getItem('userId')}:lastDifficulty`;
-        const savedDiffRaw = (localStorage.getItem(storageKey) || localStorage.getItem('lastDifficulty') || null);
-        console.info('updateDifficultyDropdown', { userId: localStorage.getItem('userId'), savedDiff: savedDiffRaw, unlocked });
-      } catch (e) { console.info('updateDifficultyDropdown: unable to read savedDiff', e && e.message); }
-      
-      const currentDifficulty = difficultySelect.value; // Store current selection before clearing
-      difficultySelect.innerHTML = ""; // Clear existing options
-      
-      // Determine unlock status from the array
+
+      // preserve current selection to try to reuse it if still valid
+      const currentDifficulty = difficultySelect.value;
+      difficultySelect.innerHTML = "";
+
       const mediumUnlocked = unlocked.includes("medium");
       const hardUnlocked = unlocked.includes("hard");
-      
-      // Add "Easy" option
+
+      // Build options
       const easyOption = document.createElement("option");
       easyOption.value = "Easy";
       easyOption.textContent = "Easy";
       difficultySelect.appendChild(easyOption);
 
-      // Add "Medium" option (locked if not unlocked in test mode)
       const mediumOption = document.createElement("option");
       mediumOption.value = "Medium";
       mediumOption.textContent = mediumUnlocked ? "Medium" : "🔒 Medium";
       mediumOption.disabled = !mediumUnlocked;
       difficultySelect.appendChild(mediumOption);
 
-      // Add "Hard" option (locked if not unlocked in test mode)
       const hardOption = document.createElement("option");
       hardOption.value = "Hard";
       hardOption.textContent = hardUnlocked ? "Hard" : "🔒 Hard";
       hardOption.disabled = !hardUnlocked;
       difficultySelect.appendChild(hardOption);
 
-      // Add "All" option only if more than one level is unlocked
       if (mediumUnlocked || hardUnlocked) {
         const allOption = document.createElement("option");
         allOption.value = "All";
@@ -1730,11 +1813,7 @@ document.getElementById("domain-select").addEventListener("change", () => {
         difficultySelect.appendChild(allOption);
       }
 
-      // Fallback: if a saved difficulty exists but was marked disabled by the
-      // computed unlocks, check the localStorage mirror for a persisted
-      // domain-level unlock and enable it if present. This handles timing
-      // windows where the backend unlocks are mirrored locally but the
-      // computed 'unlocked' array didn't include them yet.
+      // If a saved difficulty exists but was marked disabled, consult the local mirror
       try {
         const storageKey = `user:${userId}:lastDifficulty`;
         const savedDiffRaw = localStorage.getItem(storageKey) || localStorage.getItem('lastDifficulty') || null;
@@ -1742,7 +1821,6 @@ document.getElementById("domain-select").addEventListener("change", () => {
           const savedDiff = (savedDiffRaw || '').toString().trim();
           const savedLower = savedDiff.toLowerCase();
           if ((savedLower === 'medium' || savedLower === 'hard')) {
-            // If the option exists but is disabled, check local mirror for domain unlock key
             const opt = Array.from(difficultySelect.options).find(o => (o.value || '').toString().toLowerCase() === savedLower);
             if (opt && opt.disabled) {
               try {
@@ -1755,127 +1833,100 @@ document.getElementById("domain-select").addEventListener("change", () => {
                 const domainKeySafe = (domainKey || '').replace(/\./g, '_');
                 const unlockKey = `${certKeySafe}:${domainKeySafe}:${savedLower}`;
                 if (mirrorObj && Object.prototype.hasOwnProperty.call(mirrorObj, unlockKey)) {
-                  // enable the option and update its label
                   opt.disabled = false;
                   opt.textContent = savedDiff;
-                  // Also update mediumUnlocked/hardUnlocked local flags for later logic
                 }
-              } catch (e) { /* ignore JSON parse errors */ }
+              } catch (e) {
+                // ignore JSON parse or mirror errors
+              }
             }
           }
         }
-      } catch (e) {}
+      } catch (e) {
+        // silent
+      }
 
-      // Restore previous selection with this priority:
-      // 1) per-user saved lastDifficulty (preferred),
-      // 2) current in-DOM selection if still valid,
-      // 3) default to Easy.
+      // Try to restore saved preference first
       let restored = false;
       try {
         const storageKey = `user:${userId}:lastDifficulty`;
         const savedDiff = localStorage.getItem(storageKey) || localStorage.getItem('lastDifficulty') || null;
         if (savedDiff) {
-          // Match case-insensitively to handle legacy saved values like 'medium'
-          // Prefer an exact case-insensitive match even if the option is currently disabled
           const match = Array.from(difficultySelect.options).find(opt => (opt.value || '').toString().toLowerCase() === (savedDiff || '').toString().toLowerCase());
           if (match) {
-            // Use the actual option value to restore (preserves capitalization)
             difficultySelect.value = match.value;
             restored = true;
             if (!match.disabled) {
-              // Only persist when the restored option is enabled
-              try { saveLastSelection(); } catch (e) {}
-              console.info('updateDifficultyDropdown: restored from savedDiff and persisted', { savedDiff, restoredValue: match.value });
-            } else {
-              console.info('updateDifficultyDropdown: restored from savedDiff but option currently disabled (will not persist)', { savedDiff, restoredValue: match.value });
+              try { saveLastSelection(); } catch (e) { /* silent */ }
             }
-          } else {
-            console.info('updateDifficultyDropdown: savedDiff exists but no matching option found', { savedDiff });
           }
         }
-      } catch (e) { console.info('updateDifficultyDropdown: error reading savedDiff', e && e.message); }
+      } catch (e) {
+        // silent
+      }
 
-      if (!restored && currentDifficulty) {
-        // Do not honor a transient 'All' selection as the default after unlocks
-        // unless it was the user's explicitly saved preference (handled above).
-        if (currentDifficulty !== 'All') {
-          const match = Array.from(difficultySelect.options).find(opt => (opt.value || '').toString().toLowerCase() === (currentDifficulty || '').toString().toLowerCase() && !opt.disabled);
-          if (match) {
-            difficultySelect.value = match.value;
-            restored = true;
-            console.info('updateDifficultyDropdown: restored from current DOM selection', { currentDifficulty, restoredValue: match.value });
-          } else {
-            console.info('updateDifficultyDropdown: currentDifficulty present but not a valid enabled option', { currentDifficulty });
-          }
+      // If not restored, try to keep the current in-DOM selection if valid
+      if (!restored && currentDifficulty && currentDifficulty !== 'All') {
+        const match = Array.from(difficultySelect.options).find(opt => (opt.value || '').toString().toLowerCase() === (currentDifficulty || '').toString().toLowerCase() && !opt.disabled);
+        if (match) {
+          difficultySelect.value = match.value;
+          restored = true;
         }
       }
 
+      // Final fallback to Easy
       if (!restored) {
-        // Default to Easy unless a valid last selection was restored
         difficultySelect.value = "Easy";
-        console.info('updateDifficultyDropdown: defaulting to Easy');
       }
 
-      // Persist the restored selection so future visits use this value.
-      // Avoid persisting when we fell back to the default Easy during a
-      // transient rebuild (for example when toggling Mode) because that can
-      // overwrite the user's explicit saved choice. Only persist when we
-      // actually restored a non-default selection (restored === true).
+      // Persist only if we restored a non-default selection
       try {
         if (restored) {
           saveLastSelection();
-          console.info('updateDifficultyDropdown: persisted restored selection');
-        } else {
-          console.info('updateDifficultyDropdown: no restored selection, skipping persist');
         }
-      } catch (e) {}
-      
+      } catch (e) { /* silent */ }
+
     } catch (err) {
-      console.error("❌ Failed to fetch user progress:", err);
-      
-      // Fallback: show only Easy difficulty for both modes when there's an error
-      const currentDifficulty = difficultySelect.value; // Store current selection before clearing
-      difficultySelect.innerHTML = "";
-      
-      const easyOption = document.createElement("option");
-      easyOption.value = "Easy";
-      easyOption.textContent = "Easy";
-      difficultySelect.appendChild(easyOption);
-      
-      // In error state, lock Medium and Hard regardless of mode
-      const mediumOption = document.createElement("option");
-      mediumOption.value = "Medium";
-      mediumOption.textContent = "🔒 Medium";
-      mediumOption.disabled = true;
-      difficultySelect.appendChild(mediumOption);
-      
-      const hardOption = document.createElement("option");
-      hardOption.value = "Hard";
-      hardOption.textContent = "🔒 Hard";
-      hardOption.disabled = true;
-      difficultySelect.appendChild(hardOption);
+      // On error, show only Easy and disable others
+      try {
+        difficultySelect.innerHTML = "";
+        const easyOption = document.createElement("option");
+        easyOption.value = "Easy";
+        easyOption.textContent = "Easy";
+        difficultySelect.appendChild(easyOption);
 
-      // In error state, only Easy is available, so default to Easy
-      difficultySelect.value = "Easy";
+        const mediumOption = document.createElement("option");
+        mediumOption.value = "Medium";
+        mediumOption.textContent = "🔒 Medium";
+        mediumOption.disabled = true;
+        difficultySelect.appendChild(mediumOption);
+
+        const hardOption = document.createElement("option");
+        hardOption.value = "Hard";
+        hardOption.textContent = "🔒 Hard";
+        hardOption.disabled = true;
+        difficultySelect.appendChild(hardOption);
+
+        difficultySelect.value = "Easy";
+      } catch (e) { /* silent */ }
     } finally {
-      // Always reset the flag, even if there was an error
       isRebuildingDifficulty = false;
-        // Ensure tooltip attributes are present on the difficulty control
-        try {
-          const modeSelect = document.getElementById('mode-select');
-          if (modeSelect) {
-            modeSelect.setAttribute('title', 'Mode: Casual shows learning decks; Test runs a scored test to unlock next levels');
-            modeSelect.classList.add('has-tooltip');
-          }
-
-          const diffSelect = document.getElementById('difficulty-select');
-          if (diffSelect) {
-            diffSelect.setAttribute('title', 'Difficulty: choose the level to study; locked levels show a 🔒 and are disabled');
-            diffSelect.classList.add('has-tooltip');
-          }
-        } catch (e) {
-          // no-op if DOM not ready
+      // Ensure tooltip attributes are present on the controls
+      try {
+        const modeSelect = document.getElementById('mode-select');
+        if (modeSelect) {
+          modeSelect.setAttribute('title', 'Mode: Casual shows learning decks; Test runs a scored test to unlock next levels');
+          modeSelect.classList.add('has-tooltip');
         }
+
+        const diffSelect = document.getElementById('difficulty-select');
+        if (diffSelect) {
+          diffSelect.setAttribute('title', 'Difficulty: choose the level to study; locked levels show a 🔒 and are disabled');
+          diffSelect.classList.add('has-tooltip');
+        }
+      } catch (e) {
+        // no-op if DOM not ready
+      }
     }
   }
 
@@ -2475,26 +2526,23 @@ function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.
   if (cardUtils) cardUtils.classList.add("hidden");
   endMessage.classList.add("hidden");
 
-  // Dark Mode Toggle Functionality
-  const darkModeToggle = document.getElementById("darkModeToggle");
-
-  // Load saved dark mode preference
-  const savedDarkMode = localStorage.getItem("darkMode") === "true";
-  if (savedDarkMode) {
-    document.body.classList.add("dark-theme");
-    darkModeToggle.checked = true;
-  }
-
-  // Toggle dark mode
-  darkModeToggle.addEventListener("change", () => {
-    const isDark = darkModeToggle.checked;
-    document.body.classList.toggle("dark-theme", isDark);
-    localStorage.setItem("darkMode", isDark);
-  });
+  // Dark mode is controlled on index and dashboard pages only; flashcards
+  // inherits the current theme via `localStorage['darkMode']` and does not
+  // manage the toggle UI here.
   
   // Small helper: attach a hover tooltip to a select element by creating an overlay div.
   function attachSelectTooltip(selectEl, text) {
     if (!selectEl) return;
+    // Prevent double-wrapping the same select element which can create
+    // nested wrappers and duplicate event listeners (causes odd click behavior).
+    try {
+      if (selectEl.dataset && selectEl.dataset.kemmeiTooltipAttached) return;
+      if (selectEl.parentNode && selectEl.parentNode.classList && selectEl.parentNode.classList.contains('select-tooltip-wrapper')) {
+        // mark as attached and bail
+        selectEl.dataset.kemmeiTooltipAttached = '1';
+        return;
+      }
+    } catch (e) {}
     // Create wrapper so we can position tooltip relative to the select
     const wrapper = document.createElement('div');
     wrapper.style.display = 'inline-block';
@@ -2502,10 +2550,11 @@ function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.
     wrapper.className = 'select-tooltip-wrapper';
     selectEl.parentNode.insertBefore(wrapper, selectEl);
     wrapper.appendChild(selectEl);
+    try { selectEl.dataset.kemmeiTooltipAttached = '1'; } catch (e) {}
 
     // Create tooltip element but attach to document.body to avoid parent clipping
     const tip = document.createElement('div');
-    tip.className = 'select-tooltip';
+  tip.className = 'select-tooltip';
     tip.textContent = text;
     tip.style.position = 'fixed';
     tip.style.background = 'rgba(0,0,0,0.9)';
@@ -2518,8 +2567,14 @@ function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.
     tip.style.maxWidth = 'min(90vw, 640px)';
     tip.style.overflowWrap = 'break-word';
     tip.style.wordBreak = 'break-word';
-    tip.style.zIndex = 99999;
-    tip.style.pointerEvents = 'auto';
+  // Keep tooltip non-interactive and low enough in z-order to avoid
+  // accidentally overlaying interactive controls.
+  tip.style.zIndex = 100;
+  tip.setAttribute('aria-hidden', 'true');
+  // Start with pointer events disabled so an invisible tooltip never
+  // blocks clicks on the underlying control. We'll enable pointer
+  // events only while the tooltip is visible on hover.
+  tip.style.pointerEvents = 'none';
     tip.style.opacity = 0;
     tip.style.transition = 'opacity 120ms ease, transform 120ms ease';
     tip.style.maxHeight = '70vh';
@@ -2528,7 +2583,8 @@ function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.
 
     // On hover, show tooltip and compute a fixed position so it never gets clipped
     wrapper.addEventListener('mouseenter', () => {
-      // Make visible to measure
+      // Tooltips are non-interactive; keep pointer-events disabled so they
+      // never intercept clicks on the underlying control. Just show visually.
       tip.style.opacity = 1;
       tip.style.transform = 'translateY(0)';
 
@@ -2562,6 +2618,7 @@ function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.
     });
 
     wrapper.addEventListener('mouseleave', () => {
+      // Hide tooltip visually; pointer-events remains none.
       tip.style.opacity = 0;
     });
   }

@@ -65,5 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
       createKanji();
     });
   }
-  for (let i = 0; i < 7; i++) createKanji();
+  // Only show floating kanji on the landing/index and dashboard pages.
+  // These animations are decorative and cause layout overflow on other
+  // pages (like Flashcards), so guard their creation by page class.
+  try {
+    const bodyCls = document.body && document.body.classList ? document.body.classList : [];
+    if (bodyCls.contains && (bodyCls.contains('index-page') || bodyCls.contains('dashboard-page'))) {
+      for (let i = 0; i < 7; i++) createKanji();
+    }
+  } catch (e) {
+    // safe-fail: if anything goes wrong, don't create kanji
+  }
 });
