@@ -1915,14 +1915,16 @@ document.getElementById("domain-select").addEventListener("change", () => {
       try {
         const modeSelect = document.getElementById('mode-select');
         if (modeSelect) {
-          modeSelect.setAttribute('title', 'Mode: Casual shows learning decks; Test runs a scored test to unlock next levels');
+          // Remove native/title tooltip to avoid duplicate native browser tooltip.
+          try { modeSelect.removeAttribute('title'); } catch (e) {}
           modeSelect.classList.add('has-tooltip');
         }
 
         const diffSelect = document.getElementById('difficulty-select');
         if (diffSelect) {
-          diffSelect.setAttribute('title', 'Difficulty: choose the level to study; locked levels show a 🔒 and are disabled');
-          diffSelect.classList.add('has-tooltip');
+          // Disable native/title tooltip for difficulty (we don't want a tooltip for now).
+          try { diffSelect.removeAttribute('title'); } catch (e) {}
+          // Intentionally do not attach any floating tooltip for difficulty.
         }
       } catch (e) {
         // no-op if DOM not ready
@@ -2623,9 +2625,9 @@ function capitalize(s) { if (!s) return s; return s.charAt(0).toUpperCase() + s.
     });
   }
 
-  // Attach hover tooltips to Mode and Difficulty selects (user-requested wording)
-  attachSelectTooltip(document.getElementById('mode-select'), 'Run through selected filters freely at any time. Scores are not recorded.');
-  attachSelectTooltip(document.getElementById('difficulty-select'), 'Test mode: a domain-level Test (>=90%) unlocks the next difficulty for that domain. Subdomain tests are recorded but do not unlock the whole domain.');
+  // Attach hover tooltips: one for Mode (shorter wording) and one for Difficulty (unlock instructions).
+  attachSelectTooltip(document.getElementById('mode-select'), 'Casual: train at any time, scores are not recorded. Test: challenge yourself with a subdomain or domain (or even title) level test, with best result recorded.');
+  attachSelectTooltip(document.getElementById('difficulty-select'), 'You can unlock next level for this section by completing decks in Test mode with over 90% correct answers (next difficulty for domain requires a successful domain level test or all subdomains completed separately), or manually from the progress page.');
 document.getElementById("mode-select").addEventListener("change", async (event) => {
   // Prevent event bubbling that might trigger other dropdowns
   event.stopPropagation();

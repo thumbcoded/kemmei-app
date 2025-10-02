@@ -1274,7 +1274,7 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
     const mediumBtn = document.createElement("button");
     mediumBtn.className = `unlock-btn ${mediumUnlocked ? 'unlocked' : 'locked'}`;
     mediumBtn.innerHTML = `${mediumUnlocked ? '🔓' : '🔒'} Medium`;
-  mediumBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  mediumBtn.dataset.tooltip = 'This button unlocks the relevant difficulty decks for this section and what it may include.';
   mediumBtn.classList.add('has-tooltip');
     mediumBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -1284,7 +1284,7 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
     const hardBtn = document.createElement("button");
     hardBtn.className = `unlock-btn ${hardUnlocked ? 'unlocked' : 'locked'}`;
     hardBtn.innerHTML = `${hardUnlocked ? '🔓' : '🔒'} Hard`;
-  hardBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  hardBtn.dataset.tooltip = 'This button unlocks the relevant difficulty decks for this section and what it may include.';
   hardBtn.classList.add('has-tooltip');
     hardBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -1367,7 +1367,7 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
       const domainMediumBtn = document.createElement("button");
       domainMediumBtn.className = `unlock-btn ${domainMediumUnlocked ? 'unlocked' : 'locked'}`;
       domainMediumBtn.innerHTML = `${domainMediumUnlocked ? '🔓' : '🔒'} Medium`;
-  domainMediumBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  domainMediumBtn.dataset.tooltip = 'This button unlocks the relevant difficulty decks for this section and what it may include.';
   domainMediumBtn.classList.add('has-tooltip');
       domainMediumBtn.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -1377,7 +1377,7 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
       const domainHardBtn = document.createElement("button");
       domainHardBtn.className = `unlock-btn ${domainHardUnlocked ? 'unlocked' : 'locked'}`;
       domainHardBtn.innerHTML = `${domainHardUnlocked ? '🔓' : '🔒'} Hard`;
-  domainHardBtn.dataset.tooltip = 'This button unlocks the relevant level cards for this title and all sections it includes';
+  domainHardBtn.dataset.tooltip = 'This button unlocks the relevant difficulty decks for this section and what it may include.';
   domainHardBtn.classList.add('has-tooltip');
       domainHardBtn.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -1443,7 +1443,7 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
     setTimeout(() => {
       const certPercentSpans = titleText.querySelectorAll('.percent-indicator.easy, .percent-indicator.medium');
       certPercentSpans.forEach(span => {
-        span.dataset.tooltip = 'Test-mode domain-level completions (>=90%) unlock the next difficulty for that domain; subdomain scores are recorded but do not automatically unlock the whole domain.';
+        span.dataset.tooltip = 'Completing domain scores adds to your total title score.';
         span.classList.add('has-tooltip');
       });
     }, 0);
@@ -1453,7 +1453,7 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
   setTimeout(() => {
     const domainPercentSpans = document.querySelectorAll('.domain-header .percent-indicator.easy, .domain-header .percent-indicator.medium');
     domainPercentSpans.forEach(span => {
-      span.dataset.tooltip = 'Run subdomain Tests: (x/total) shows how many subdomains you have >=90% on; run a domain-level Test in Test mode to record a domain percent result.';
+      span.dataset.tooltip = 'Completing subdomain decks in Test mode with over 90% correct answers adds to your total domain score; you can do a domain level deck too to record your best result.';
       span.classList.add('has-tooltip');
     });
   }, 0);
