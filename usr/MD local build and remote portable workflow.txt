@@ -1,0 +1,179 @@
+## Local build + GitHub portable-build workflow — everything you need
+
+This file is a concise, actionable reference for: (A) building and smoke-testing locally, and (B) adding a GitHub Actions workflow that produces portable artifacts for Windows, macOS, and Linux.
+
+## 1) Quick local smoke-build (PowerShell)
+
+Open PowerShell in the repository root (example path used in this project):
+
+```powershell
+cd C:\Dev\Kemmei-desktop
+```
+
+Install dependencies (reproducible install):
+
+```powershell
+npm ci
+```
+
+Run tests (if present):
+
+```powershell
+npm test
+```
+
+Build locally (uses your `package.json` scripts — this repo uses electron-builder in `npm run build`):
+
+```powershell
+npm run build
+# or run electron-builder directly to target a platform (example: Windows NSIS)
+npx electron-builder --win nsis --x64
+```
+
+Check the produced artifacts in the usual output folders (this repo historically produced `build\` and `dist\`):
+
+- `build\` (legacy/unpacked outputs)
+- `dist\` (electron-builder default: installers, AppImage, dmg, zip, etc.)
+
+Smoke-check the app or DB (if you have the check script):
+
+```powershell
+# quick DB sanity check (project includes a helper)
+node scripts/check-db.js
+
+# run any small smoke helpers you added
+node scripts/seed-local.js --dry-run
+```
+
+If something fails locally, fix it before pushing — it's much faster to iterate locally.
+
+## 2) GitHub Actions — produce portables for Windows, macOS, Linux
+
+Create a workflow file at `.github/workflows/portable-build.yml`. The example below:
+
+```yaml
+name: Build Portables
+
+on:
+	push:
+		tags:
+			- 'v*'
+	workflow_dispatch:
+
+jobs:
+	build-portable:
+		strategy:
+			matrix:
+				include:
+					- os: windows-latest
+						target: win
+						args: '--win portable'
+					- os: macos-latest
+						target: mac
+						args: '--mac portable'
+					- os: ubuntu-latest
+						target: linux
+						args: '--linux portable'
+		runs-on: ${{ matrix.os }}
+		steps:
+			- uses: actions/checkout@v4
+
+			- name: Setup Node
+				uses: actions/setup-node@v4
+				with:
+					node-version: '20'
+
+			- name: Cache npm
+				uses: actions/cache@v4
+				with:
+					path: ~/.npm
+					key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+					restore-keys: |
+						${{ runner.os }}-node-
+
+			- name: Install deps
+				run: npm ci
+
+			- name: Build portable
+				run: npx electron-builder ${{ matrix.args }} --x64 --publish never
+				env:
+					CI: true
+
+			- name: Upload artifacts
+				uses: actions/upload-artifact@v4
+				with:
+					name: kemmei-portable-${{ matrix.target }}
+					path: |
+						dist/**/*
+						build/**/*
+
+```
+
+Notes about the workflow above:
+
+- It runs on `workflow_dispatch` (manual run) and on tag pushes `v*` (recommended to trigger releases).
+- `--publish never` prevents electron-builder from attempting to publish; adapt if you want automated releases.
+- The `args` matrix entry shows a flexible place to tweak builder flags per-platform.
+
+## 3) How to trigger builds on GitHub
+
+- Manual: Actions → this workflow → Run workflow (workflow_dispatch). No tag required.
+- Tag-based (recommended for releases):
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+The workflow triggers on tag push and will upload artifacts for each platform.
+
+## 4) Optional: publish artifacts to GitHub Releases (post-build)
+
+If you prefer artifacts attached to a GitHub Release instead of Actions artifacts, add steps using `actions/create-release` and `actions/upload-release-asset` after the build to create a Release and attach files. This requires a GITHUB_TOKEN (provided automatically in Actions) and potentially additional secrets for signing.
+
+## 5) Important practical notes and gotchas
+
+- sql.js WASM: This project uses `sql.js` (WASM). When packaging with `electron-builder`, ensure you have an `asarUnpack` entry for the WASM path (example `node_modules/sql.js/dist/sql-wasm.wasm`) so the binary is readable at runtime inside the ASAR.
+- Native module compilation: CI runners will attempt to build native modules if present. The repo already uses the WASM path to avoid native sqlite3 issues for packaged builds.
+- Signing: CI will produce unsigned binaries unless you add code signing steps and secrets. For macOS notarization and Windows signing, configure secrets (CERT, PASSWORD, etc.) and add appropriate electron-builder configuration.
+- Runner limits: macOS runners are slower/limited — test locally first. If you need universal macOS (arm64) builds, add `--arm64` or additional build matrix entries.
+- Artifacts retention: GitHub Actions stores artifacts for a limited time (defaults to 90 days unless changed in the upload step).
+- Cache key: caching `~/.npm` is helpful; alternatively cache `node_modules` or the package manager's cache depending on CI policy.
+
+## 6) Minimal checklist before pushing the workflow
+
+- [ ] Confirm `package.json` contains the `build` configuration expected by electron-builder (appId, files, asarUnpack if needed).
+- [ ] Confirm `npm ci` installs cleanly on your machine and on a CI runner (locally test `npm ci` in a clean clone or container).
+- [ ] Run `npm run build` locally and confirm `dist/` or `build/` contains the expected outputs.
+- [ ] Add the workflow file to `.github/workflows/portable-build.yml`, commit, and push.
+
+## 7) Commands to commit & push the workflow file
+
+```powershell
+git add .github/workflows/portable-build.yml
+git commit -m "ci: add portable build workflow"
+git push origin desktop-offline
+```
+
+Or, if you want to trigger immediately with a tag after pushing the workflow commit:
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+## 8) Troubleshooting tips (common failures)
+
+- Build fails on CI with native module errors: prefer the `sql.js` WASM path or configure `npm rebuild --arch=x64 --platform=...` as needed. Prefer pure-js/WASM libs for packaging ease.
+- Missing WASM at runtime: add `asarUnpack` for the WASM file and verify `electron/main.js` uses the unpacked path when `app.isPackaged`.
+- Artifacts not uploaded: confirm the `path:` in `actions/upload-artifact` matches the builder output (check runner logs to see where `electron-builder` wrote files).
+- Permissions/locked files on Windows: remove existing `build\win-unpacked` or stop running instances before rebuilding on CI/local.
+
+---
+
+If you want, I can:
+
+- Add the exact `.github/workflows/portable-build.yml` file to this repo (I can create the file and commit it on your branch), or
+- Add a Release-publish variant that creates a GitHub Release and attaches the built artifacts automatically.
+
+Tell me which you prefer and I'll apply the change.
