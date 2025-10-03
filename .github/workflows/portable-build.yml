@@ -1,5 +1,6 @@
 name: Portable builds
 
+# Triggered manually
 on:
   workflow_dispatch:
 
