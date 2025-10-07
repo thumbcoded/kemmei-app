@@ -82,3 +82,52 @@ body.index-page {
   .hidden {
     display: none !important;
   }
+
+  .input-with-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-icon {
+  font-size: 0.75em;
+  vertical-align: super;
+  color: #ccc;
+  cursor: pointer;
+  margin-left: 4px;
+  position: absolute;
+  top: 8px;
+  right: -20px;
+}
+
+.tooltip-icon:focus .tooltip-text,
+.tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 220px;
+  background-color: #222;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 10;
+  top: -5px;
+  left: 120%;
+  transition: opacity 0.2s;
+  font-size: 0.9em;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #222 transparent transparent;
+}
