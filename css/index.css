@@ -105,6 +105,16 @@ body.index-page {
   opacity: 1;
 }
 
+.tooltip-svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.tooltip-icon:focus .tooltip-svg text,
+.tooltip-icon:hover .tooltip-svg text {
+  fill: #074ea8; /* slightly darker on hover/focus */
+}
+
 .tooltip-text {
   visibility: hidden;
   opacity: 0;

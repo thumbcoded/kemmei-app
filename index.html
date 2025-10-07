@@ -26,7 +26,12 @@
 
   <div class="input-with-tooltip">
   <input type="text" id="username-input" placeholder="Username">
-  <span class="tooltip-icon" tabindex="0" aria-label="What is the username for">?
+  <span class="tooltip-icon" tabindex="0" aria-label="What is the username for">
+    <!-- Inline SVG question icon -->
+    <svg class="tooltip-svg" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="10" fill="#e6eefc" />
+      <text x="12" y="16" font-family="Segoe UI, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0c5fb8">?</text>
+    </svg>
     <span class="tooltip-text">Choose a short name that you remember. It will help keep your records and settings.</span>
   </span>
 </div>
