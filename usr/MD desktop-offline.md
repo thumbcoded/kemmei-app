@@ -398,6 +398,8 @@ End of release notes and packaging recommendations.
 
 - Finalized parent -> child propagation for force-unlocks in the Progress UI (`js/progress.js`): title-level and domain-level toggles now iterate child domain/subdomain buttons, persist each child unlock (IPC / RPC / network fallback), mirror to `localStorage`, and update child button UI optimistically.
 
+
+
 ## 2025-09-29 — Finish button freeze fix
 
 - Issue: In certain runs clicking the final "Finish" (Next on last card) caused the renderer to become unresponsive — clicks, DevTools console, and reloads would not respond. This occurred in both Casual and Test modes.
@@ -541,3 +543,12 @@ I inspected and adjusted the UI wiring to meet the requested scoping rules:
 
 Status: verified. The shared UI script contains only the needed wiring: it syncs current user id into localStorage when available, applies theme on load, wires the toggle only when present, and scopes decorations to index/dashboard only.
  
+## 2025-10-09 — Today’s quick summary
+
+- Fixed a propagation/persistence bug in `js/progress.js` where child unlock/lock keys were built from the wrong header token; child keys are now normalized consistently (emoji/token handling fixed) so propagated changes persist correctly.
+- Added `saveAndMirror(...)` helper to persist individual child unlocks via IPC/RPC/fetch and mirror them to localStorage and the runtime mirror so UI and other pages reflect updates immediately.
+- Improved the toggle logic to treat inherited unlocks (cert-level/domain-level and natural progress) as effectively unlocked so the UI no longer shows redundant "unlocked" toasts for children covered by a parent unlock.
+- Enforced the parent-authoritative rule: if a parent section is unlocked (manually or via natural progress), attempts to lock descendants are blocked and a clear red toast is shown: "Cannot lock with parent section unlocked." This prevents hidden override states.
+- Verified basic flows: title-level unlock → child visuals update immediately; attempting to lock child when parent unlocked shows error; locking parent then child persists and remains after reload.
+
+If you'd like, I can also add a small "inherited" badge/tooltip on child buttons to make the source of the state more explicit to users. 
