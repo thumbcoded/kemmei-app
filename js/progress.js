@@ -533,6 +533,111 @@ async function toggleUnlock(certId, domainId, level, btn) {
       } catch (e) {}
     }
 
+    // Helper: determine whether a child (domain) has "natural" progress
+    // (test completions or flashcard progress) that should prevent us from
+    // force-locking it. Returns true if natural progress exists for the
+    // given certId/domainKey at the requested difficulty level.
+    async function hasNaturalUnlockForChild(userIdLocal, certIdLocal, domainKeyLocal, levelLocal) {
+      try {
+        // Try test completions first
+        let tcs = {};
+        try {
+          if (window.api && typeof window.api.getTestCompletions === 'function') {
+            const r = await window.api.getTestCompletions(userIdLocal);
+            if (r && r.status >= 200 && r.status < 300) tcs = r.body || {};
+            else if (r && typeof r === 'object') tcs = r;
+          } else if (window.api && typeof window.api.rpc === 'function') {
+            const r = await window.api.rpc(`test-completions/${userIdLocal}`, 'GET');
+            if (r && r.status >= 200 && r.status < 300) tcs = r.body || {};
+          } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+            try {
+              const r = await fetch(`/api/test-completions/${userIdLocal}`);
+              if (r && r.ok) tcs = await r.json();
+            } catch (e) {}
+          }
+        } catch (e) { tcs = {}; }
+
+        function normalizeToken(t) { if (!t && t !== 0) return ''; return String(t).replace(/_/g, '.').trim(); }
+
+        for (const [k, v] of Object.entries(tcs || {})) {
+          try {
+            const parts = String(k || '').split(':').map(p => p.trim());
+            if (parts.length < 4) continue;
+            const [kc, kd, ks, kdiff] = parts;
+            if (normalizeToken(kc) !== normalizeToken(certIdLocal)) continue;
+            // domainKeyLocal should match kd (domain token) for domain-level
+            // completions. Accept either exact match or numeric-prefix match.
+            const kdNorm = normalizeToken(kd).split(' ')[0];
+            const domainNorm = normalizeToken(domainKeyLocal).split(' ')[0];
+            if (kdNorm !== domainNorm) continue;
+            if (String(kdiff || '').toLowerCase() !== String(levelLocal || '').toLowerCase()) continue;
+            // found a test completion entry for this difficulty -> treat as natural
+            return true;
+          } catch (e) { continue; }
+        }
+
+        // Fallback: check flashcard-derived progress (userProgress)
+        try {
+          let up = {};
+          if (window.api && typeof window.api.getUserProgress === 'function') {
+            const r = await window.api.getUserProgress(userIdLocal);
+            if (r && r.status >= 200 && r.status < 300) up = r.body || {};
+            else if (r && typeof r === 'object') up = r;
+          } else if (window.api && typeof window.api.rpc === 'function') {
+            const r = await window.api.rpc(`user-progress/${userIdLocal}`, 'GET');
+            if (r && r.status >= 200 && r.status < 300) up = r.body || {};
+          } else if (document.location.protocol !== 'file:' && typeof fetch === 'function') {
+            try {
+              const r = await fetch(`/api/user-progress/${userIdLocal}`);
+              if (r && r.ok) up = await r.json();
+            } catch (e) {}
+          }
+
+          for (const [k, v] of Object.entries(up || {})) {
+            try {
+              const parts = String(k || '').split(':').map(p => p.trim());
+              // expecting cert:domain:sub:diff or cert:domain:sub (various shapes)
+              const kc = parts[0] || '';
+              const kd = parts[1] || '';
+              const kdiff = parts[3] || 'easy';
+              if (normalizeToken(kc) !== normalizeToken(certIdLocal)) continue;
+              const kdNorm = normalizeToken(kd).split(' ')[0];
+              const domainNorm = normalizeToken(domainKeyLocal).split(' ')[0];
+              if (kdNorm !== domainNorm) continue;
+              if (String(kdiff || '').toLowerCase() !== String(levelLocal || '').toLowerCase()) continue;
+              const entry = v && v[0] ? v[0] : v;
+              if (entry && typeof entry.total === 'number' && entry.total > 0) return true;
+            } catch (e) { continue; }
+          }
+        } catch (e) {}
+      } catch (e) {}
+      return false;
+    }
+
+    // Helper to propagate unlock/lock to child buttons but avoid locking
+    // children that have natural progress recorded.
+    async function propagateToChildren(certIdLocal, domainIdLocal, levelLocal, desiredUnlocked) {
+      try {
+        const children = (domainIdLocal === null || typeof domainIdLocal === 'undefined') ? findChildButtons(certIdLocal, null, levelLocal) : findChildButtons(certIdLocal, domainIdLocal, levelLocal);
+        for (const c of children) {
+          try {
+            const domainText = c.domainBlock?.querySelector('h4')?.textContent || '';
+            const domainKey = (domainText.split(' ')[0] || '') ;
+            const childKey = `${certIdLocal}:${domainKey}:${levelLocal}`;
+            const payloadChild = { certId: certIdLocal, domainId: domainIdLocal, level: levelLocal, unlocked: desiredUnlocked };
+            // If we're locking, skip children that have natural progress
+            if (!desiredUnlocked) {
+              try {
+                const natural = await hasNaturalUnlockForChild(userId, certIdLocal, domainKey, levelLocal);
+                if (natural) continue;
+              } catch (e) {}
+            }
+            await saveAndMirror(userId, childKey, payloadChild, c.btn);
+          } catch (e) { /* ignore child-specific errors */ }
+        }
+      } catch (e) {}
+    }
+
     // Save via IPC helper if available (direct saveUserUnlock returns plain object)
     // Helper to ensure the key was actually persisted; if not, attempt alternate save paths.
     async function ensureSaved(userIdLocal, keyLocal, payloadLocal) {
@@ -609,26 +714,9 @@ async function toggleUnlock(certId, domainId, level, btn) {
             const label = (level && level[0].toUpperCase() + level.slice(1)) || '';
             btn.innerHTML = `${desiredUnlocked ? '🔓' : '🔒'} ${label}`;
           }
-          // If toggling at title/domain level, propagate to child domain/subdomain buttons
-          if (domainId === null || typeof domainId === 'undefined') {
-            // title-level toggle -> propagate to all domain and subdomain child buttons
-            const children = findChildButtons(certId, null, level);
-            for (const c of children) {
-              try { saveAndMirror(userId, `${certId}:${(c.domainBlock ? (c.domainBlock.querySelector('h4')?.textContent || '').split(' ')[0] : '')}:${level}`, { certId, domainId: null, level, unlocked: desiredUnlocked }, c.btn); } catch (e) {}
-            }
-          } else {
-            // domain-level toggle -> propagate to subdomains under this domain
-            const children = findChildButtons(certId, domainId, level);
-            for (const c of children) {
-              try {
-                const domainText = c.domainBlock?.querySelector('h4')?.textContent || '';
-                const domainKey = domainText.split(' ')[0] || domainId;
-                const payloadChild = { certId, domainId, level, unlocked: desiredUnlocked };
-                const childKey = `${certId}:${domainKey}:${level}`;
-                saveAndMirror(userId, childKey, payloadChild, c.btn);
-              } catch (e) {}
-            }
-          }
+          // Propagate to children, respecting any "natural" progress which
+          // should prevent force-locking them back.
+          try { await propagateToChildren(certId, domainId, level, desiredUnlocked); } catch (e) {}
         } catch (e) {}
 
         try {
@@ -692,26 +780,7 @@ async function toggleUnlock(certId, domainId, level, btn) {
               try { mirrorUnlockToLocal(userId, mediumKey, { unlocked: true }); } catch (e) {}
             } catch (e) {}
           }
-          // propagate to children similar to IPC path
-          try {
-            if (domainId === null || typeof domainId === 'undefined') {
-              const children = findChildButtons(certId, null, level);
-              for (const c of children) {
-                try { saveAndMirror(userId, `${certId}:${(c.domainBlock ? (c.domainBlock.querySelector('h4')?.textContent || '').split(' ')[0] : '')}:${level}`, { certId, domainId: null, level, unlocked: desiredUnlocked }, c.btn); } catch (e) {}
-              }
-            } else {
-              const children = findChildButtons(certId, domainId, level);
-              for (const c of children) {
-                try {
-                  const domainText = c.domainBlock?.querySelector('h4')?.textContent || '';
-                  const domainKey = domainText.split(' ')[0] || domainId;
-                  const payloadChild = { certId, domainId, level, unlocked: desiredUnlocked };
-                  const childKey = `${certId}:${domainKey}:${level}`;
-                  saveAndMirror(userId, childKey, payloadChild, c.btn);
-                } catch (e) {}
-              }
-            }
-          } catch (e) {}
+          try { await propagateToChildren(certId, domainId, level, desiredUnlocked); } catch (e) {}
         } catch (e) {}
         try {
           const persisted = await ensureSaved(userId, key, payload);
