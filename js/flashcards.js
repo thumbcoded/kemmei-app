@@ -1697,13 +1697,16 @@ document.getElementById("domain-select").addEventListener("change", () => {
 
       const diffEl = document.getElementById('difficulty-select');
       const current = (diffEl && diffEl.value) ? diffEl.value.toString().toLowerCase() : '';
-      if (!allowed.includes(current)) {
-        // prefer Medium then Hard then Easy when available
-        let pick = 'easy';
-        if (allowed.includes('medium')) pick = 'Medium';
-        else if (allowed.includes('hard')) pick = 'Hard';
-        else pick = 'Easy';
-        // find actual option value matching case-insensitively
+      // Determine whether an 'All' option should be considered valid here.
+      // Treat 'All' as valid when the computed unlocked set contains more than one level
+      const allowsAll = (unlocked || []).length > 1;
+
+      if (current === 'all' && allowsAll) {
+        // Keep the user's explicit 'All' choice — it means "all unlocked difficulties"
+      } else if (!allowed.includes(current)) {
+        // If the current selection is invalid for the new domain, fall back to Easy
+        // (user preference: prefer Easy as the safe default rather than promoting to Medium).
+        const pick = 'Easy';
         const opt = Array.from(diffEl.options).find(o => (o.value || '').toString().toLowerCase() === pick.toString().toLowerCase());
         if (opt) diffEl.value = opt.value; else diffEl.value = pick;
       }
