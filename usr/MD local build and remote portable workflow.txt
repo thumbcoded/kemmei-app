@@ -1,3 +1,14 @@
+## Deployment / test workflow (how this repo is currently used)
+
+My current release/test process for every version is:
+
+1. Run a local build to sanity-check the UI and packaging (example: `npm run build`).
+2. If the build looks and behaves correctly, commit and push the changes to the repository.
+3. Trigger the private GitHub Actions workflow which produces portables for Linux, macOS and Windows.
+4. Share the produced artifacts (exe/dmg/AppImage/zip) privately with a tester (friend) for manual verification. There is no public release at this stage.
+
+This document provides the exact commands and a sample Actions workflow used to produce those portable artifacts.
+
 ## Local build + GitHub portable-build workflow — everything you need
 
 This file is a concise, actionable reference for: (A) building and smoke-testing locally, and (B) adding a GitHub Actions workflow that produces portable artifacts for Windows, macOS, and Linux.

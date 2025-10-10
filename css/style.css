@@ -61,6 +61,31 @@ a:hover {
   opacity: 0.95;
 }
 
+/* Secondary / outline button variants */
+.btn-outline {
+  background: transparent;
+  color: #0c84ec; /* visible blue for both themes */
+  border: 2px solid rgba(12,132,236,0.22);
+  min-width: 84px;
+}
+.btn-secondary {
+  background: #6c757d;
+  color: #fff;
+}
+
+/* Ensure secondary button remains visible in light theme: use darker text on light backgrounds */
+:not(.dark-theme) .btn-secondary {
+  background: #e9eef6;
+  color: #0b3d91;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05) inset;
+  border: 1px solid rgba(11,61,145,0.08);
+}
+
+/* Light theme tweak: slightly stronger border */
+:not(.dark-theme) .btn-outline {
+  border-color: rgba(12,132,236,0.28);
+}
+
 /* -------- FORM ELEMENTS -------- */
 input, button, select, textarea {
   font-family: inherit;

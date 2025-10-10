@@ -1,8 +1,9 @@
-body.index-page {
+  body.index-page {
     background-color: #f0f2f5;
     min-height: 100vh;
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Prevent kanji from enlarging the page */
@@ -141,3 +142,33 @@ body.index-page {
   border-style: solid;
   border-color: transparent #222 transparent transparent;
 }
+
+/* Help modal styles */
+.help-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.help-modal {
+  background: #ffffff;
+  color: #111;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  max-width: 680px;
+  width: calc(100% - 64px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  outline: none;
+}
+.help-body { font-size: 0.95rem; line-height: 1.45; }
+.help-actions { text-align: right; margin-top: 0.75rem; }
+.help-actions .btn { padding: 0.5rem 0.8rem; }
+
+/* small utility to prevent background scroll when modal is open */
+.no-scroll { overflow: hidden !important; }
