@@ -55,11 +55,13 @@
   <div class="help-modal" role="document">
     <h3 id="help-title">Kemmei — Quick Help</h3>
     <div class="help-body">
-      <p><strong>What is Kemmei?</strong> Kemmei is an offline-first flashcard study/test app for CompTIA certifications. Right now, it covers A+ Core 1 (220-1201).</p>
-      <p><strong>How your data is stored:</strong> User progress and small metadata are stored locally (localStorage and packaged user DB). Test results and unlocks are saved per-user and mirrored locally for quick UI updates.</p>
-      <p><strong>Flashcards structure:</strong> Kemmei contains flashcard decks for each domain and subdomain as listed in relevant CompTIA Objectives.</p>
-      <p><strong>Deck selection & Test mode:</strong> Choose a deck, pick domain/subdomain and select Mode: <em>Casual</em> or <em>Test</em>. Test mode records results; completing a deck in Test mode gets your best result recorded and unlocks higher difficulties (see tooltips). Casual mode preserves unlocked difficulties but does not record deck completion results.</p>
-      <p><strong>Quick tips:</strong> Use <em>All</em> to see all unlocked difficulties (the UI preserves this when meaningful). If a difficulty is unavailable the UI will fall back to Easy.</p>
+      <p><strong>What is Kemmei?</strong> Kemmei is an offline desktop flashcard study/test app for CompTIA certifications. Currently, it covers A+ Core 1 (220-1201), with plans to expand to Core 2 and other titles depending on user feedback and demand.</p>
+      <p><strong>How your data is stored:</strong> User progress and metadata are stored locally using localStorage and a packaged user database. Test results, deck completions, and unlocks are tied to your chosen username and saved per-user.</p>
+      <p><strong>Flashcards structure:</strong> Kemmei flashcards are organized by domain and subdomain, following the official CompTIA exam objectives.</p>
+      <p><strong>Deck selection & Test mode:</strong> Choose a deck by domain and subdomain, then select a Mode: <em>Casual</em> or <em>Test</em>. Test mode records your result; completing a deck with at least 90% correct answers unlocks the next difficulty level. Casual mode does not record results but preserves your current unlocks.</p>
+      <p><strong>General advice:</strong> Start with Easy decks to build foundational understanding of each concept. Once you’re consistently scoring 90% or higher, move on to Medium and then Hard. Completing all difficulties across all subdomains prepares you for real-world troubleshooting — and the actual exam. <br><br>
+While Kemmei is designed to be a powerful study companion, no single tool can fully prepare you alone.  
+Use it alongside any other resources you trust and find effective — books, videos, practice labs, or real-world experience all count.</p>
     </div>
     <div class="help-actions">
       <button id="help-close" class="btn btn-secondary">Close</button>
