@@ -61,3 +61,6 @@ clear-*.js
 query-*.js
 check-*.js
 cleanup-*.js
+
+# Local-only user files
+usr/
