@@ -71,30 +71,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build macOS DMGs (arm64, x64, and universal)
+      - name: Build universal macOS DMG
         run: |
-          echo "🔨 Building Apple Silicon (arm64)..."
-          npx electron-builder --mac --arm64 --publish never \
-            --config.mac.artifactName="Kemmei-${version}-arm64.dmg" \
-            --config.directories.output=build/arm64
-
-          echo "🔨 Building Intel (x64)..."
-          npx electron-builder --mac --x64 --publish never \
-            --config.mac.artifactName="Kemmei-${version}-x64.dmg" \
-            --config.directories.output=build/x64
-
-          echo "🔨 Building Universal (arm64 + x64)..."
+          echo "🔨 Building Universal DMG (arm64 + x64)..."
           npx electron-builder --mac --universal --publish never \
             --config.mac.artifactName="Kemmei-${version}-universal.dmg" \
             --config.directories.output=build/universal
         env:
           CI: true
 
-      - name: Upload macOS artifacts
+      - name: Upload macOS artifact
         uses: actions/upload-artifact@v4
         with:
-          name: kemmei-macos-builds
-          path: |
-            build/arm64/*.dmg
-            build/x64/*.dmg
-            build/universal/*.dmg
+          name: kemmei-macos-universal
+          path: build/universal/*.dmg
