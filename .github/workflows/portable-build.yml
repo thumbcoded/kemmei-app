@@ -52,16 +52,33 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install deps
+
+      - name: Install dependencies
         run: npm ci
-      - name: Build dmg
-        run: npm run build:portable:mac
-      - name: Upload artifact
+
+      - name: Build macOS DMGs (arm64, x64, and universal)
+        run: |
+          echo "🔨 Building Apple Silicon (arm64)..."
+          npx electron-builder --mac dmg --arch arm64 --publish never
+          echo "🔨 Building Intel (x64)..."
+          npx electron-builder --mac dmg --arch x64 --publish never
+          echo "🔨 Building Universal (arm64 + x64)..."
+          npx electron-builder --mac universal --publish never
+        env:
+          # optional: ensure consistent environment
+          CI: true
+
+      - name: Upload all macOS DMGs
         uses: actions/upload-artifact@v4
         with:
-          name: kemmei-macos-dmg
-          path: build/*.dmg
+          name: kemmei-macos-builds
+          path: |
+            build/*-arm64.dmg
+            build/*-x64.dmg
+            build/*-universal.dmg
+
