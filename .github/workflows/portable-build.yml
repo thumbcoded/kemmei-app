@@ -74,12 +74,12 @@ jobs:
       - name: Build macOS DMGs (arm64, x64, and universal)
         run: |
           echo "🔨 Building Apple Silicon (arm64)..."
-          npx electron-builder --mac dmg --arch arm64 --publish never \
+          npx electron-builder --mac dmg=arm64 --publish never \
             --config.mac.artifactName="Kemmei-${version}-arm64.dmg" \
             --config.directories.output=build/arm64
 
           echo "🔨 Building Intel (x64)..."
-          npx electron-builder --mac dmg --arch x64 --publish never \
+          npx electron-builder --mac dmg=x64 --publish never \
             --config.mac.artifactName="Kemmei-${version}-x64.dmg" \
             --config.directories.output=build/x64
 
