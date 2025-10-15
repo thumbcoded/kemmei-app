@@ -64,13 +64,12 @@ jobs:
       - name: Build macOS DMGs (arm64, x64, and universal)
         run: |
           echo "🔨 Building Apple Silicon (arm64)..."
-          npx electron-builder --mac dmg --arch arm64 --publish never
+          npx electron-builder --mac arm64 --publish never
           echo "🔨 Building Intel (x64)..."
-          npx electron-builder --mac dmg --arch x64 --publish never
+          npx electron-builder --mac x64 --publish never
           echo "🔨 Building Universal (arm64 + x64)..."
           npx electron-builder --mac universal --publish never
         env:
-          # optional: ensure consistent environment
           CI: true
 
       - name: Upload all macOS DMGs
