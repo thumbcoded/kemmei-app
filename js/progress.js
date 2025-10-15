@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
   // Resolve current user id (same strategy as refreshProgress)
   let userId = localStorage.getItem("userId");
-  if (!userId && window.userApi) {
+      if (!userId && window.userApi) {
     try {
       if (typeof window.userApi.getCurrentUserId === 'function') {
         const cur = await window.userApi.getCurrentUserId();
@@ -1427,8 +1427,13 @@ async function renderProgressTree(userProgress, domainMap, unlocks, testCompleti
 
   // Helper to get percentage indicators for a given key
   function getPercentIndicators(certId, domainId = null) {
-    const difficulties = ["easy", "medium", "hard"];
-    const colors = { easy: "🟢", medium: "🟡", hard: "🔴" };
+  const difficulties = ["easy", "medium", "hard"];
+  // Build emoji strings from codepoints to avoid file encoding/display issues.
+  const colors = {
+    easy: String.fromCodePoint(0x1F529),
+    medium: String.fromCodePoint(0x1F527),
+    hard: String.fromCodePoint(0x1F6E0, 0xFE0F)
+  };
     let indicators = "";
 
     // Helper: normalize a token (cert/domain/sub) for comparison.
@@ -1956,3 +1961,5 @@ function getPrettyUnlockMessage(certId, domainId, level, action) {
     return `${emoji} ${level.charAt(0).toUpperCase() + level.slice(1)} difficulty for ${certName} ${actionText}.`;
   }
 }
+
+// (Removed the DOM-fixer now that color emojis are built from codepoints.)
