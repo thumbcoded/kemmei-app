@@ -2282,19 +2282,65 @@ function loadCard() {
     if (cardUtils) cardUtils.classList.add("hidden");
     endMessage.classList.remove("hidden");
 
-    const percent = Math.round((correctCount / questions.length) * 100);
-    let finalMessage = `Correct: ${correctCount} / ${questions.length} (${percent}%)`;
+  const percent = Math.round((correctCount / questions.length) * 100);
+  // Build structured end-message DOM instead of one joined string so we can
+  // show scoped pass/fail text and a collapsible details area for long copy.
+  const finalStatsEl = document.getElementById("finalStats");
+  finalStatsEl.innerHTML = '';
+  const scoreEl = document.createElement('div');
+  scoreEl.className = 'final-score';
+  scoreEl.textContent = `Correct: ${correctCount} / ${questions.length} (${percent}%)`;
+  finalStatsEl.appendChild(scoreEl);
+  let outcomeEl = document.createElement('div');
+  outcomeEl.className = 'final-outcome';
     
   dbg("🔍 About to check test mode completion, isTestMode && testStartData:", isTestMode && testStartData);
     
     // Handle test mode completion
     if (isTestMode && testStartData) {
       const passed = percent >= 90; // 90% passing requirement
-      
+
+      // Determine scope: subdomain vs domain vs certification
+      const isSubdomain = !!testStartData.subdomain;
+      const isDomain = !testStartData.subdomain && testStartData.domain && testStartData.domain !== 'All';
+      const isCert = !isSubdomain && !isDomain;
+
       if (passed) {
-        finalMessage += "\n🎉 Test PASSED! Next difficulty level unlocked.";
+        // PASS messages per scope (exact phrasing requested)
+        if (isSubdomain) {
+          // Short preview + hidden long advisory revealed by See more
+          outcomeEl.textContent = '🎉 Test PASSED — Subdomain mastery unlocked. See more for details.';
+          const details = document.createElement('div');
+          details.className = 'outcome-details hidden';
+          details.textContent = "🎉 PASS — Subdomain test passed. Your score shows mastery for this specific subdomain only. This may not immediately unlock higher-level domain difficulty unless you also demonstrate mastery across other subdomains. Consider running additional subdomain tests or a full domain test to progress your overall domain-level proficiency.";
+          const toggle = document.createElement('button');
+          toggle.type = 'button';
+          toggle.className = 'outcome-toggle';
+          toggle.textContent = 'See more';
+          toggle.addEventListener('click', function () {
+            const isHidden = details.classList.toggle('hidden');
+            toggle.textContent = isHidden ? 'See more' : 'Show less';
+          });
+          finalStatsEl.appendChild(outcomeEl);
+          finalStatsEl.appendChild(toggle);
+          finalStatsEl.appendChild(details);
+        } else if (isDomain) {
+          outcomeEl.textContent = '🎉 Test PASSED! Domain-level advancement recorded.';
+          finalStatsEl.appendChild(outcomeEl);
+        } else if (isCert) {
+          outcomeEl.textContent = `🎉 Test PASSED! Certification-level progress saved for ${testStartData.cert}.`;
+          finalStatsEl.appendChild(outcomeEl);
+        }
       } else {
-        finalMessage += "\n❌ Test FAILED. Need 90% to unlock next level.";
+        // FAIL messages per scope
+        if (isSubdomain) {
+          outcomeEl.textContent = '❌ Test FAILED. Need 90% to unlock next level.';
+        } else if (isDomain) {
+          outcomeEl.textContent = '❌ Test FAILED. Need 90% to unlock the next domain difficulty.';
+        } else if (isCert) {
+          outcomeEl.textContent = '❌ Test FAILED. Need 90% to unlock certification-level advancement.';
+        }
+        finalStatsEl.appendChild(outcomeEl);
       }
       
       // Record test completion and progress
@@ -2389,7 +2435,14 @@ function loadCard() {
       }
     }
     
-    document.getElementById("finalStats").textContent = finalMessage;
+    // If not in test mode, ensure the score is still shown
+    if (!isTestMode || !testStartData) {
+      finalStatsEl.innerHTML = '';
+      const scoreOnly = document.createElement('div');
+      scoreOnly.className = 'final-score';
+      scoreOnly.textContent = `Correct: ${correctCount} / ${questions.length} (${percent}%)`;
+      finalStatsEl.appendChild(scoreOnly);
+    }
   }
 
   function resetCard() {
