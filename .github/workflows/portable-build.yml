@@ -1,6 +1,6 @@
 name: Portable builds
 
-# Triggered manually
+# Trigger manually from the Actions tab
 on:
   workflow_dispatch:
 
@@ -9,22 +9,28 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install deps
+
+      - name: Install dependencies
         run: npm ci
+
       - name: Build portable Windows
         run: npm run build:portable:win
+
       - name: List build output
         run: dir build\win-unpacked
+
       - name: Run smoke test (packaged EXE)
         run: |
           $exe = Get-ChildItem -Path build\win-unpacked -Filter *.exe | Select-Object -First 1 | Select-Object -ExpandProperty FullName
           Write-Host "Running smoke exe: $exe"
           & $exe --smoke
-      - name: Upload artifact
+
+      - name: Upload Windows artifact
         uses: actions/upload-artifact@v4
         with:
           name: kemmei-windows-portable
@@ -34,15 +40,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install deps
+
+      - name: Install dependencies
         run: npm ci
+
       - name: Build AppImage
         run: npm run build:portable:linux
-      - name: Upload artifact
+
+      - name: Upload Linux artifact
         uses: actions/upload-artifact@v4
         with:
           name: kemmei-linux-appimage
@@ -64,12 +74,12 @@ jobs:
       - name: Build macOS DMGs (arm64, x64, and universal)
         run: |
           echo "🔨 Building Apple Silicon (arm64)..."
-          npx electron-builder --mac arm64 --publish never \
+          npx electron-builder --mac dmg --arch arm64 --publish never \
             --config.mac.artifactName="Kemmei-${version}-arm64.dmg" \
             --config.directories.output=build/arm64
 
           echo "🔨 Building Intel (x64)..."
-          npx electron-builder --mac x64 --publish never \
+          npx electron-builder --mac dmg --arch x64 --publish never \
             --config.mac.artifactName="Kemmei-${version}-x64.dmg" \
             --config.directories.output=build/x64
 
@@ -80,7 +90,7 @@ jobs:
         env:
           CI: true
 
-      - name: Upload all macOS DMGs
+      - name: Upload macOS artifacts
         uses: actions/upload-artifact@v4
         with:
           name: kemmei-macos-builds
@@ -88,5 +98,3 @@ jobs:
             build/arm64/*.dmg
             build/x64/*.dmg
             build/universal/*.dmg
-
-
