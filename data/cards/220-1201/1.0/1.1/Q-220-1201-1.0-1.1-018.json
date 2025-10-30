@@ -8,7 +8,7 @@
   "subdomain_id": "1.1",
   "difficulty": "hard",
   "question_type": "multiple_choice",
-  "question_text": "A laptop uses a battery with a soft outer casing, making it lighter and more flexible in terms of shape. Based on the transcript, which battery type is most likely being used?",
+  "question_text": "A laptop uses a battery with a soft outer casing, making it lighter and more flexible in terms of shape. Which battery type is most likely being used?",
   "answer_options": [
     "Nickel-cadmium",
     "Lithium polymer (LiPo)",

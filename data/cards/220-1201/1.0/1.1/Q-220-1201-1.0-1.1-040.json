@@ -8,7 +8,7 @@
   "subdomain_id": "1.1",
   "difficulty": "hard",
   "question_type": "select_multiple",
-  "question_text": "A technician is asked to repair a numeric key that frequently sticks after use. Select two possible root causes based on the transcript.",
+  "question_text": "A technician is asked to repair a numeric key that frequently sticks after use. Select two possible root causes.",
   "answer_options": [
     "Contaminant buildup under the keycap",
     "Driver conflict in Windows Device Manager",
