@@ -1,3 +1,6 @@
+> 📘 **Please read this first:** [READ_FIRST.md](READ_FIRST.md)  
+> Context, disclaimers, and the story behind Kemmei.
+
 # Kemmei — Flashcard app (Dev / Test notes)
 
 Short description
