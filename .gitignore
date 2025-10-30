@@ -21,7 +21,6 @@ node_modules/
 scripts/
 app-data/
 temp/
-Transcripts/
 *.log
 *.bak
 *.tmp
