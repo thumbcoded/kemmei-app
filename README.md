@@ -7,6 +7,8 @@ Short description
 
 Kemmei is an offline-first flashcard and test application (Electron) designed to help with certification study. This repository contains the app source, packaging configuration, and CI workflows used to produce portable artifacts (exe/dmg/AppImage/zip) for manual testing.
 
+Currently, Kemmei covers CompTIA A+ Core 1 (220-1201) with 2811 cards across 3 levels of difficulty.
+
 ## 🚀 Latest Build Artifacts
 
 You can download the most recent unsigned portable builds from GitHub Actions:
