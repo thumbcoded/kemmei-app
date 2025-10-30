@@ -4,6 +4,19 @@ Short description
 
 Kemmei is an offline-first flashcard and test application (Electron) designed to help with certification study. This repository contains the app source, packaging configuration, and CI workflows used to produce portable artifacts (exe/dmg/AppImage/zip) for manual testing.
 
+## 🚀 Latest Build Artifacts
+
+You can download the most recent unsigned portable builds from GitHub Actions:
+
+➡️ [Download latest build artifacts](https://github.com/thumbcoded/kemmei-app/actions/runs/18932724333)
+
+These include:
+- **Windows:** `.exe` / `.zip`
+- **macOS:** `.dmg` / `.zip`
+- **Linux:** `.AppImage`
+
+> ⚠️ These builds are unsigned test versions for QA.
+
 Primary (artifact-first) workflow
 
 - Owners build locally (optional) to smoke-check the UI and package output with `npm run build`.
