@@ -13,7 +13,8 @@ Currently, Kemmei covers CompTIA A+ Core 1 (220-1201) with 2811 cards across 3 l
 
 You can download the most recent unsigned portable builds from GitHub Actions:
 
-➡️ [Download latest build artifacts](https://github.com/thumbcoded/kemmei-app/actions/runs/18932724333)
+➡️ [Download latest build artifacts](https://github.com/thumbcoded/kemmei-app/actions/workflows/portable-build.yml
+)
 
 These include:
 - **Windows:** `.exe` / `.zip`
